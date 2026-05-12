@@ -20,12 +20,12 @@ const config: QuartzConfig = {
     ignorePatterns: ["private", "templates", ".obsidian", ".opencode", "node_modules", "wiki/entities/**", "wiki/sources/**", "wiki/index*", "wiki/index", "wiki/QUICK-REFERENCE*", "wiki/STARTUP-GUIDE*", "wiki/workflow-daily-update*", "快捷键速查*", "AGENTS*", "GitHub Trending 采集提示词（混合方案v2）*", "Obsidian同步配置指南*"],
     defaultDateType: "modified",
     theme: {
-      fontOrigin: "googleFonts",
-      cdnCaching: true,
+      fontOrigin: "systemFonts",
+      cdnCaching: false,
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
-        code: "IBM Plex Mono",
+        header: "system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
+        body: "system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
+        code: "SF Mono, Menlo, Consolas, monospace",
       },
       colors: {
         lightMode: {
@@ -89,7 +89,7 @@ const config: QuartzConfig = {
       Plugin.Favicon(),
       Plugin.NotFoundPage(),
       // Comment out CustomOgImages to speed up build time
-      Plugin.CustomOgImages(),
+      // Plugin.CustomOgImages(),
     ],
   },
 }
