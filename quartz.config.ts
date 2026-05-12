@@ -16,8 +16,8 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "zh-CN",
-    baseUrl: "localhost",
-    ignorePatterns: ["private", "templates", ".obsidian", ".opencode", "node_modules", "*wiki/entities*", "*wiki/sources*", "*wiki/index*", "*wiki/QUICK-REFERENCE*", "*wiki/STARTUP-GUIDE*", "*wiki/workflow-daily-update*", "*快捷键速查*", "*AGENTS*", "*GitHub Trending 采集提示词（混合方案v2）*", "*Obsidian同步配置指南*"],
+    baseUrl: "fdogelover.github.io/Quart",
+    ignorePatterns: ["private", "templates", ".obsidian", ".opencode", "node_modules", "wiki/entities", "wiki/sources", "wiki/index", "wiki/QUICK-REFERENCE", "wiki/STARTUP-GUIDE", "wiki/workflow-daily-update", "快捷键速查", "AGENTS", "GitHub Trending 采集提示词（混合方案v2）", "Obsidian同步配置指南"],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
