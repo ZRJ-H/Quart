@@ -1,7 +1,6 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import { resolveRelative } from "../util/path"
 import { classNames } from "../util/lang"
-import style from "./styles/recentNotes.scss"
 
 interface Category {
   slug: string
@@ -29,40 +28,57 @@ export default (() => {
     const categories = defaultCategories()
 
     return (
-      <div class={classNames(displayClass, "recent-notes")}>
-        <h3>📅 今日内容</h3>
-        <ul class="recent-ul">
-          {categories.map((cat) => {
-            const latest = allFiles
-              .filter((f) => f.slug?.startsWith(cat.slug as any) && f.slug !== cat.slug)
-              .sort((a, b) => slugDate(b.slug!) - slugDate(a.slug!))[0]
+      <div class={classNames(displayClass, "latest-by-category")}>
+        <span class="lbc-label">📅</span>
+        {categories.map((cat) => {
+          const latest = allFiles
+            .filter((f) => f.slug?.startsWith(cat.slug as any) && f.slug !== cat.slug)
+            .sort((a, b) => slugDate(b.slug!) - slugDate(a.slug!))[0]
 
-            if (!latest) return null
+          if (!latest) return null
 
-            const title = (latest.frontmatter?.title ?? latest.slug?.split("/").pop() ?? "").slice(-5)
+          const title = (latest.frontmatter?.title ?? latest.slug?.split("/").pop() ?? "").slice(-5)
 
-            return (
-              <li class="recent-li">
-                <div class="section">
-                  <div class="desc">
-                    <h3>
-                      <a
-                        href={resolveRelative(fileData.slug!, latest.slug!)}
-                        class="internal"
-                      >
-                        {cat.icon} {cat.label} · {title}
-                      </a>
-                    </h3>
-                  </div>
-                </div>
-              </li>
-            )
-          })}
-        </ul>
+          return (
+            <a
+              href={resolveRelative(fileData.slug!, latest.slug!)}
+              class="lbc-link internal"
+            >
+              {cat.icon} {cat.label} · {title}
+            </a>
+          )
+        })}
       </div>
     )
   }
 
-  LatestByCategory.css = style
+  LatestByCategory.css = `
+  .latest-by-category {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 4px 0 6px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--lightgray);
+    margin-bottom: 10px;
+  }
+  .lbc-label {
+    font-size: 0.85rem;
+    color: var(--gray);
+    flex-shrink: 0;
+  }
+  .lbc-link {
+    color: var(--darkgray);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .lbc-link:hover {
+    color: var(--secondary);
+  }
+  @media (max-width: 800px) {
+    .latest-by-category { font-size: 0.82rem; gap: 8px; }
+  }
+  `
   return LatestByCategory
 }) satisfies QuartzComponentConstructor
