@@ -7,7 +7,7 @@ interface Options {
 
 const defaultOptions: Options = {
   days: 5,
-  paths: ["AI科技动态", "GitHub Trending", "时政要闻"],
+  paths: ["AI科技动态", "GitHub-Trending", "时政要闻"],
 }
 
 export const RemoveOldNotes: QuartzFilterPlugin<Partial<Options>> = (userOpts) => {
