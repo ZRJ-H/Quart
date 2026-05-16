@@ -27,7 +27,7 @@ export const RemoveOldNotes: QuartzFilterPlugin<Partial<Options>> = (userOpts) =
 
       const cutoff = new Date()
       cutoff.setDate(cutoff.getDate() - opts.days)
-      return fileDate >= cutoff
+      return fileDate > cutoff
     },
   }
 }
