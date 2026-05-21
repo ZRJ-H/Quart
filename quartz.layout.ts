@@ -22,7 +22,7 @@ export const defaultContentPageLayout: PageLayout = {
       condition: (page) => page.fileData.slug === "index",
     }),
     Component.ConditionalRender({
-      component: Component.SearchAI({ workerUrl: "https://doge-wiki-search.FDogeLover.workers.dev" }),
+      component: Component.SearchAI({ workerUrl: "https://doge-wiki-search.zstufjj2004.workers.dev" }),
       condition: (page) => page.fileData.slug === "index",
     }),
     Component.ConditionalRender({
