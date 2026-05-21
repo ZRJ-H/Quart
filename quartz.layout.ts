@@ -1,5 +1,9 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
+import { FileTrieNode } from "./quartz/util/fileTrie"
+
+const explorerFilter = (node: FileTrieNode) =>
+  node.slugSegment !== "tags" && node.slugSegment !== "GitHub项目档案"
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
@@ -46,7 +50,7 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({ filterFn: explorerFilter }),
   ],
   right: [
     Component.DesktopOnly(Component.TableOfContents()),
@@ -69,7 +73,7 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({ filterFn: explorerFilter }),
   ],
   right: [],
 }
