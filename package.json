@@ -18,7 +18,7 @@
     "format": "npx prettier . --write",
     "test": "tsx --test",
     "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
-    "postinstall": "python3 scripts/filter-old-content.py vault-content"
+    "postinstall": "bash scripts/postinstall.sh"
   },
   "engines": {
     "npm": ">=10.9.2",

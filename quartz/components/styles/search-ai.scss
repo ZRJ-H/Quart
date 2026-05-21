@@ -1,0 +1,121 @@
+.search-ai {
+  margin: 12px 0 16px;
+}
+
+.ai-search-box {
+  display: flex;
+  gap: 0;
+  border: 1.5px solid var(--lightgray);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.15s;
+  background: var(--light);
+}
+.ai-search-box:focus-within {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 2px rgba(132, 165, 157, 0.15);
+}
+
+.ai-search-input {
+  flex: 1;
+  padding: 9px 14px;
+  border: none;
+  outline: none;
+  font-size: 0.92rem;
+  background: transparent;
+  color: var(--dark);
+  font-family: inherit;
+}
+.ai-search-input::placeholder {
+  color: var(--gray);
+}
+
+.ai-search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 14px;
+  border: none;
+  background: var(--secondary);
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.ai-search-btn:hover {
+  opacity: 0.85;
+}
+.ai-search-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ai-search-status {
+  font-size: 0.8rem;
+  color: var(--gray);
+  margin-top: 6px;
+  min-height: 18px;
+}
+
+.ai-search-result {
+  margin-top: 10px;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--dark);
+}
+.ai-search-result h1,
+.ai-search-result h2,
+.ai-search-result h3 {
+  font-size: 1rem;
+  margin: 10px 0 4px;
+}
+.ai-search-result p {
+  margin: 4px 0 8px;
+}
+.ai-search-result ul,
+.ai-search-result ol {
+  margin: 4px 0 8px;
+  padding-left: 18px;
+}
+.ai-search-result li {
+  margin: 2px 0;
+}
+.ai-search-result code {
+  background: var(--lightgray);
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 0.85em;
+}
+.ai-search-result blockquote {
+  border-left: 3px solid var(--secondary);
+  margin: 6px 0;
+  padding: 4px 12px;
+  color: var(--gray);
+  font-size: 0.88rem;
+}
+
+.ai-sources {
+  margin-top: 12px;
+  padding-top: 8px;
+  border-top: 1px solid var(--lightgray);
+  font-size: 0.8rem;
+  color: var(--gray);
+}
+.ai-sources span {
+  display: inline-block;
+  background: var(--lightgray);
+  padding: 2px 8px;
+  border-radius: 12px;
+  margin: 2px 4px 2px 0;
+  font-size: 0.75rem;
+}
+
+.ai-error {
+  color: #c44;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 800px) {
+  .search-ai { margin: 8px 0 12px; }
+  .ai-search-input { font-size: 0.85rem; padding: 8px 10px; }
+  .ai-search-btn { padding: 8px 10px; }
+}
