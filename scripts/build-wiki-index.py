@@ -113,7 +113,7 @@ def build_index(vault_dir):
             if not fname.endswith(".md"):
                 continue
             filepath = os.path.join(path, fname)
-            with open(filepath, encoding="utf-8") as f:
+            with open(filepath, encoding="utf-8", errors="replace") as f:
                 raw = f.read()
 
             fm, body = parse_frontmatter(raw)
