@@ -31,24 +31,31 @@ function searchIndex(query, limit = 5) {
 
   return scored
     .filter((e) => e.score > 0)
-    .sort((a, b) => b.score - a.score)
+    .sort((a, b) => {
+      if (b.score !== a.score) return b.score - a.score
+      const da = a.last_updated || "1970-01-01"
+      const db = b.last_updated || "1970-01-01"
+      return db.localeCompare(da)
+    })
     .slice(0, limit)
 }
 
 function buildPrompt(query, results) {
+  const today = new Date().toJSON().slice(0, 10)
   const ctx = results
-    .map((r) => `### ${r.name} (${r.type})\n标签: ${(r.tags || []).join(", ")}\n${r.content}`)
+    .map((r) => `### ${r.name} (${r.type} | ${r.last_updated || "?"})\n标签: ${(r.tags || []).join(", ")}\n${r.content}`)
     .join("\n\n")
 
-  return `你是一位知识库助手，基于以下资料回答用户问题。
+  return `你是一位知识库助手。今天是 ${today}。基于以下资料回答用户问题。
 
 规则:
 - 只根据提供的资料回答，不要编造
 - 资料中没有的信息，直接说"资料中未提及"
 - 引用具体来源（页面名称）
+- 用户问"今日/今天"时，结合资料标注的日期和实际日期 ${today} 判断
 - 回答简洁有条理，中文
 
-资料:
+资料（每条目标注了最后更新日期）:
 ${ctx}
 
 用户问题: ${query}`
