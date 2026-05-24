@@ -41,6 +41,11 @@
 ### [2026-05-24] 项目记忆层初始化
 - 完成:
   - 创建 AGENTS.md + MEMORY.md
+
+### [2026-05-24] 方案 B：vault 结构优化 + ignorePatterns
+- 完成:
+  - `quartz.config.ts` ignorePatterns 新增 `.claude/`、`raw/`、`MEMORY*`、`GitHub项目档案/**`
+  - 移除冗余的逐条 prompt 文件模式（已由 `templates/` 覆盖）
 - 待办:
   - [无]
 
