@@ -3,8 +3,29 @@ import wikiData from "./wiki-data.json"
 const DEEPSEEK_URL = "https://api.deepseek.com/v1/chat/completions"
 
 function searchIndex(query, limit = 5) {
-  const q = query.toLowerCase()
-  const scored = wikiData.map((entry) => {
+  const today = new Date().toJSON().slice(0, 10)
+
+  let cleanQuery = query
+  let timeFilter = null
+
+  if (/今日|今天/.test(cleanQuery)) {
+    timeFilter = (d) => d === today
+    cleanQuery = cleanQuery.replace(/今日|今天/g, "").trim()
+  }
+
+  const candidates = timeFilter
+    ? wikiData.filter((e) => timeFilter(e.last_updated))
+    : wikiData
+
+  if (timeFilter && !cleanQuery) {
+    return candidates
+      .sort((a, b) => (b.last_updated || "").localeCompare(a.last_updated || ""))
+      .slice(0, limit)
+      .map((e) => ({ ...e, score: 1 }))
+  }
+
+  const q = cleanQuery.toLowerCase()
+  const scored = candidates.map((entry) => {
     let score = 0
     const name = (entry.name || "").toLowerCase()
     const content = (entry.content || "").toLowerCase()
