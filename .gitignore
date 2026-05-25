@@ -1,2 +1,7 @@
 worker/wiki-data.json
 .wrangler
+.DS_Store
+node_modules/
+public/
+quartz/.quartz-cache/
+quartz-test/

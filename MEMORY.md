@@ -46,8 +46,22 @@
 - 完成:
   - `quartz.config.ts` ignorePatterns 新增 `.claude/`、`raw/`、`MEMORY*`、`GitHub项目档案/**`
   - 移除冗余的逐条 prompt 文件模式（已由 `templates/` 覆盖）
-- 待办:
-  - [无]
+
+### [2026-05-24] Worker 搜索优化 + 自动部署
+- 完成:
+  - Worker 自动部署接入 deploy.yaml（CF_API_TOKEN secret）
+  - 搜索 prompt 注入当前日期 + 每条结果标注 last_updated（方案 A）
+  - 搜索结果按 last_updated 降序排列（方案 B）
+  - 时间查询预处理：「今日/今天」直接按日期过滤，不依赖关键词匹配
+
+### [2026-05-24] AGENTS.md 完善 + 项目自检
+- 完成:
+  - AGENTS.md 补充 Strategies + Skills 章节
+  - 约束 #1 修正：Content API → Git Data API / Web editor
+  - 约束 #3 Worker 大小更新（496KB → 706KB）
+  - 约束 #6 Worker 自动化已实现 → 合并入 #1
+  - 自检修复：.gitignore 缺失条目、清理 8 组 " 2" 重复目录
+  - `.DS_Store`、`node_modules/`、`public/`、`quartz/.quartz-cache/` 加入 gitignore
 
 ## Progress
 - 构建部署: GH Actions 每日自动 + 手动触发 — OK
@@ -55,5 +69,4 @@
 - KaTeX 溢出: v7 最终修复 — OK
 - 编码问题: 已加固 — OK
 - 内容过滤: 7天自动清理 — OK
-- Worker 自动化: 阻塞（OAuth token 无 workflow scope）— ❌
-- GH Actions schedule: 未观察到定时触发事件 — ⚠️
+- Worker 自动化: deploy.yaml + CF_API_TOKEN — ✅

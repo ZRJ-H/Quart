@@ -37,13 +37,13 @@
 ## 约束
 
 1. **OAuth Token**: GitHub OAuth token 无 `workflow` scope
-   - Workflow 文件修改 → GitHub Content API (`gh api repos/.../contents/...`)
-   - 其他文件 → git push + `gh pr create/merge`
-   - Worker 自动化部署不可行，需手动执行
+   - Workflow 文件修改 → GitHub Web 编辑器手动编辑 / Git Data API（blob → tree → commit → ref）
+   - 非 workflow 文件 → fresh clone + git push
+   - Worker 部署 → 已通过 deploy.yaml + CF_API_TOKEN secret 自动化，不受此限制
 
 2. **编码问题**: `scripts/build-wiki-index.py` 已用 `errors="replace"` 加固
 
-3. **Worker 限制**: 脚本和数据合计必须 <1MB（当前约 496KB，gzip 105KB）
+3. **Worker 限制**: 脚本和数据合计必须 <1MB（当前约 706KB，gzip 149KB）
 
 4. **KaTeX**: CDN CSS `position: relative` 会导致溢出；`custom.scss` 用 `display: contents` 修复
 
