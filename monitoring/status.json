@@ -1,17 +1,37 @@
 {
-  "lastUpdate": "",
+  "lastUpdate": "2026-06-03T12:18:34Z",
   "monitors": [
     {
-      "id": 1,
-      "friendly_name": "Wiki 网站",
-      "status": 1,
-      "last_check": 1717416000
+      "id": 803217155,
+      "friendly_name": "Quartz Website",
+      "url": "https://fdogelover.github.io/Quart/",
+      "type": 1,
+      "sub_type": "",
+      "keyword_type": 0,
+      "keyword_case_type": 0,
+      "keyword_value": "",
+      "port": "",
+      "interval": 600,
+      "timeout": 30,
+      "status": 2,
+      "create_datetime": 1780517112,
+      "logs": []
     },
     {
-      "id": 2,
-      "friendly_name": "Cloudflare Worker",
-      "status": 1,
-      "last_check": 1717416000
+      "id": 803217136,
+      "friendly_name": "Worker Health",
+      "url": "https://doge-wiki-search.zstufjj2004.workers.dev/api/health",
+      "type": 1,
+      "sub_type": "",
+      "keyword_type": 0,
+      "keyword_case_type": 0,
+      "keyword_value": "",
+      "port": "",
+      "interval": 600,
+      "timeout": 30,
+      "status": 2,
+      "create_datetime": 1780516847,
+      "logs": []
     }
   ],
   "events": []
