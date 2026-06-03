@@ -1,4 +1,7 @@
 worker/wiki-data.json
+worker/wiki-data-full.json
+worker/wiki-index-light.json
+worker/kv-bulk-upload.json
 .wrangler
 .DS_Store
 node_modules/

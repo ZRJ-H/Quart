@@ -1,3 +1,7 @@
 name = "doge-wiki-search"
 main = "index.js"
 compatibility_date = "2025-05-20"
+
+[[kv_namespaces]]
+binding = "WIKI_DATA"
+id = "d61189e9b8314bd48a975bb878392614"
