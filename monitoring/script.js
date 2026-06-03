@@ -24,7 +24,7 @@ async function fetchStatus() {
     // 转换为显示器格式
     const monitors = data.monitors.map(monitor => ({
       name: monitor.friendly_name,
-      status: monitor.status === 1 ? 'up' : monitor.status === 2 ? 'down' : 'paused',
+      status: monitor.status,
       lastCheck: new Date((monitor.last_check || monitor.create_datetime) * 1000).toISOString(),
     }));
 
