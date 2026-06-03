@@ -39,6 +39,10 @@ jobs:
             -o worker/wiki-data.json
           cd worker && python3 ../scripts/upload-to-kv.py wiki-data-full.json
           npx wrangler deploy
+      - name: Copy monitoring dashboard
+        run: |
+          mkdir -p public/monitoring
+          cp -r monitoring/* public/monitoring/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
