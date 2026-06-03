@@ -76,8 +76,8 @@ def parse_frontmatter(text):
     return data, body
 
 
-def clean_content(text, max_len=800):
-    """Strip markdown markup, truncate."""
+def clean_content(text, max_len=800, summary_len=30):
+    """Strip markdown markup, truncate to full and summary lengths."""
     # wikilinks: [[page]] or [[page|alias]]
     text = re.sub(r"\[\[([^\]|]+)(?:\|[^\]]*)?\]\]", r"\1", text)
     # markdown links: [text](url)
@@ -94,16 +94,17 @@ def clean_content(text, max_len=800):
     text = re.sub(r"\n{3,}", "\n\n", text)
     text = text.replace("---", " ")
     text = text.strip()
-    return text[:max_len]
+    return text[:max_len], text[:summary_len]
 
 
 def build_index(vault_dir):
     wiki_dir = os.path.join(vault_dir, "wiki")
-    entries = []
+    light_entries = []
+    full_entries = []
 
     if not os.path.isdir(wiki_dir):
         print(f"Wiki dir not found: {wiki_dir}", file=sys.stderr)
-        return entries
+        return light_entries, full_entries
 
     for subdir in ["entities", "concepts", "sources", "synthesis"]:
         path = os.path.join(wiki_dir, subdir)
@@ -125,37 +126,70 @@ def build_index(vault_dir):
             if isinstance(tags, str):
                 tags = [t.strip() for t in tags.split(",")]
 
-            entry = {
-                "id": f"{subdir}/{fname.replace('.md', '')}",
-                "type": fm.get("type", subdir.rstrip("s")),
-                "name": str(name),
-                "category": fm.get("category", ""),
-                "tags": tags,
-                "content": clean_content(body),
-                "first_seen": fm.get("first_seen", ""),
-                "last_updated": fm.get("last_updated", ""),
-                "source_type": fm.get("source_type", ""),
-            }
-            entries.append(entry)
+            entry_id = f"{subdir}/{fname.replace('.md', '')}"
+            entry_type = fm.get("type", subdir.rstrip("s"))
+            category = fm.get("category", "")
+            first_seen = fm.get("first_seen", "")
+            last_updated = fm.get("last_updated", "")
+            source_type = fm.get("source_type", "")
 
-    return entries
+            full_content, summary = clean_content(body)
+
+            light_entry = {
+                "id": entry_id,
+                "name": str(name),
+                "type": entry_type,
+                "category": category,
+                "tags": tags,
+                "last_updated": last_updated,
+                "summary": summary,
+            }
+            light_entries.append(light_entry)
+
+            full_entry = {
+                "id": entry_id,
+                "type": entry_type,
+                "name": str(name),
+                "category": category,
+                "tags": tags,
+                "content": full_content,
+                "first_seen": first_seen,
+                "last_updated": last_updated,
+                "source_type": source_type,
+            }
+            full_entries.append(full_entry)
+
+    return light_entries, full_entries
 
 
 def main():
     parser = argparse.ArgumentParser(description="Build wiki search index")
     parser.add_argument("vault_dir", nargs="?", default="vault-content")
     parser.add_argument("-o", "--output", default="worker/wiki-data.json")
+    parser.add_argument("--light-output", default="worker/wiki-index-light.json")
+    parser.add_argument("--full-output", default="worker/wiki-data-full.json")
     args = parser.parse_args()
 
-    entries = build_index(args.vault_dir)
-    print(f"Indexed {len(entries)} wiki pages from {args.vault_dir}/wiki/")
+    light_entries, full_entries = build_index(args.vault_dir)
+    print(f"Indexed {len(full_entries)} wiki pages from {args.vault_dir}/wiki/")
 
-    os.makedirs(os.path.dirname(args.output) or ".", exist_ok=True)
+    os.makedirs(os.path.dirname(args.light_output) or ".", exist_ok=True)
+
+    with open(args.light_output, "w", encoding="utf-8") as f:
+        json.dump(light_entries, f, ensure_ascii=False, separators=(",", ":"))
+    light_kb = os.path.getsize(args.light_output) / 1024
+    print(f"Light index: {len(light_entries)} pages, {light_kb:.1f} KB")
+
+    with open(args.full_output, "w", encoding="utf-8") as f:
+        json.dump(full_entries, f, ensure_ascii=False, separators=(",", ":"))
+    full_kb = os.path.getsize(args.full_output) / 1024
+    print(f"Full index: {len(full_entries)} pages, {full_kb:.1f} KB")
+
     with open(args.output, "w", encoding="utf-8") as f:
-        json.dump(entries, f, ensure_ascii=False, separators=(",", ":"))
-
+        json.dump(full_entries, f, ensure_ascii=False, separators=(",", ":"))
     size_kb = os.path.getsize(args.output) / 1024
-    print(f"Written {args.output} ({size_kb:.1f} KB)")
+    print(f"Legacy output: {args.output} ({size_kb:.1f} KB)")
+
     return 0
 
 
