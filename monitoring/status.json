@@ -1,0 +1,16 @@
+{
+  "monitors": [
+    {
+      "id": 1,
+      "friendly_name": "Wiki 网站",
+      "status": 1,
+      "last_check": 1717416000
+    },
+    {
+      "id": 2,
+      "friendly_name": "Cloudflare Worker",
+      "status": 1,
+      "last_check": 1717416000
+    }
+  ]
+}
