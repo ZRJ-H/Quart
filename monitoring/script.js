@@ -6,12 +6,12 @@ const CONFIG = {
   updateInterval: 5 * 60 * 1000, // 5 分钟
 };
 
-// 状态映射
+// 状态映射（UptimeRobot API 状态码）
 const STATUS_MAP = {
   0: { name: '暂停', icon: '⏸️', class: 'paused' },
-  1: { name: '正常', icon: '✅', class: 'up' },
-  2: { name: '异常', icon: '❌', class: 'down' },
-  8: { name: '异常', icon: '❌', class: 'down' },
+  1: { name: '未检查', icon: '⏳', class: 'pending' },
+  2: { name: '正常', icon: '✅', class: 'up' },
+  8: { name: '似乎异常', icon: '⚠️', class: 'warning' },
   9: { name: '异常', icon: '❌', class: 'down' },
 };
 
