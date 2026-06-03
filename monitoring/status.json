@@ -1,4 +1,5 @@
 {
+  "lastUpdate": "",
   "monitors": [
     {
       "id": 1,
@@ -12,5 +13,6 @@
       "status": 1,
       "last_check": 1717416000
     }
-  ]
+  ],
+  "events": []
 }

@@ -1,0 +1,38 @@
+name: Update Monitoring Data
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Update monitoring data
+        env:
+          UPTIMEROBOT_API_KEY: ${{ secrets.UPTIMEROBOT_API_KEY }}
+        run: |
+          # 从 UptimeRobot API 获取监控数据，组装为 {lastUpdate, monitors} 结构
+          curl -s -X POST https://api.uptimerobot.com/v2/getMonitors \
+            -H "Content-Type: application/x-www-form-urlencoded" \
+            -d "api_key=$UPTIMEROBOT_API_KEY&format=json&logs=1" \
+            | jq '{
+                lastUpdate: (now | strftime("%Y-%m-%dT%H:%M:%SZ")),
+                monitors: .monitors,
+                events: []
+              }' > monitoring/status.json
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add monitoring/status.json
+          git diff --cached --quiet || git commit -m "chore: 更新监控数据"
+          git push
