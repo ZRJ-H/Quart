@@ -17,6 +17,63 @@ function findByName(name) {
   return wikiIndex.find(e => e.name === name || e.id.endsWith("/" + name))
 }
 
+function filterResults(results, filters) {
+  let filtered = results
+
+  if (filters.tags && filters.tags.length > 0) {
+    filtered = filtered.filter(entry => 
+      filters.tags.includes(entry.category) ||
+      (entry.tags && entry.tags.some(tag => filters.tags.includes(tag)))
+    )
+  }
+
+  if (filters.time && filters.time !== 'all') {
+    const days = filters.time === '7d' ? 7 : 30
+    const cutoff = new Date()
+    cutoff.setDate(cutoff.getDate() - days)
+    const cutoffStr = cutoff.toISOString().slice(0, 10)
+    filtered = filtered.filter(entry => 
+      (entry.last_updated || "") >= cutoffStr
+    )
+  }
+
+  return filtered
+}
+
+function sortResults(results, sort) {
+  switch (sort) {
+    case 'time':
+      return [...results].sort((a, b) => 
+        (b.last_updated || "").localeCompare(a.last_updated || "")
+      )
+    case 'popularity':
+      return [...results].sort((a, b) => 
+        (b.reference_count || 0) - (a.reference_count || 0)
+      )
+    case 'relevance':
+    default:
+      return [...results].sort((a, b) => b.score - a.score)
+  }
+}
+
+function detectQueryType(query) {
+  const q = query.toLowerCase()
+  
+  if ((q.includes('和') && q.includes('区别')) || q.includes('vs') || q.includes('对比')) {
+    return 'comparison'
+  }
+  
+  if (q.includes('历史') || q.includes('发展') || q.includes('时间线') || q.includes('事件')) {
+    return 'timeline'
+  }
+  
+  if (q.includes('是什么') || q.includes('介绍') || q.includes('概述')) {
+    return 'overview'
+  }
+  
+  return 'comprehensive'
+}
+
 function searchIndex(query, limit = 10) {
   const today = new Date().toJSON().slice(0, 10)
 
@@ -89,30 +146,41 @@ async function fetchFullData(kv, ids) {
   return data
 }
 
-function buildPrompt(query, results, fullData) {
+function buildPrompt(query, results, fullData, queryType) {
   const today = new Date().toJSON().slice(0, 10)
-  const ctx = results
-    .map((r) => {
-      const full = fullData[r.id]
-      const content = full ? full.content : r.summary
-      return `### ${r.name} (${r.type} | ${r.last_updated || "?"})\n标签: ${(r.tags || []).join(", ")}\n${content}`
+  const sources = results
+    .map((r, i) => {
+      const data = fullData[r.id]
+      return `[${i + 1}] ${r.name} (${r.category || r.type})
+摘要: ${data?.summary || r.summary}
+标签: ${(data?.tags || r.tags || []).join(', ')}
+更新时间: ${r.last_updated || "?"}`
     })
     .join("\n\n")
 
-  return `你是一位知识库助手。今天是 ${today}。基于以下资料回答用户问题。
+  const structureGuide = {
+    overview: '使用结构化回答：开头概述 → 分点列出核心要点 → 总结',
+    comparison: '使用对比分析：开头说明对比对象 → 表格对比关键维度 → 总结建议',
+    timeline: '使用时间线：开头概述 → 按时间顺序列出关键事件 → 趋势分析',
+    comprehensive: '使用混合结构：开头概述 → 根据内容选择合适结构 → 总结'
+  }
 
-规则:
-- 仔细阅读资料中的所有内容，尽可能从中提取回答
-- 只有当资料中确实没有任何相关信息时，才说"资料中未提及"
-- 引用具体来源（页面名称）
-- 用户问"今日/今天"时，结合资料标注的日期和实际日期 ${today} 判断
-- 回答简洁有条理，中文
-- 如果多个页面有关联，综合分析它们的关系
+  return `你是知识库助手。今天是 ${today}。根据查询类型，选择最合适的回答结构。
 
-资料（每条目标注了最后更新日期）:
-${ctx}
+查询类型：${queryType}
+回答指导：${structureGuide[queryType] || structureGuide.comprehensive}
 
-用户问题: ${query}`
+要求：
+1. 回答要有条理、有逻辑
+2. 在回答中标注来源编号 [1][2]
+3. 使用 Markdown 格式
+4. 保持简洁，避免冗余
+5. 只有当资料中确实没有任何相关信息时，才说"资料中未提及"
+
+可用来源：
+${sources}
+
+用户查询：${query}`
 }
 
 async function callDeepSeek(prompt, apiKey) {
@@ -195,6 +263,9 @@ export default {
       try {
         const body = await request.json()
         const query = (body.query || "").trim()
+        const filters = body.filters || {}
+        const sort = body.sort || 'relevance'
+        const limit = body.limit || 10
         if (!query) {
           return new Response(JSON.stringify({ error: "query required" }), {
             status: 400,
@@ -243,25 +314,40 @@ export default {
           allResults = [...keywordResults, ...relatedPages]
         }
 
-        // 5. 从 KV 读取所有结果的完整内容
+        // 5. 过滤和排序
+        allResults = filterResults(allResults, filters)
+        allResults = sortResults(allResults, sort)
+        allResults = allResults.slice(0, limit)
+
+        // 6. 从 KV 读取所有结果的完整内容
         const allIds = allResults.map(r => r.id)
         const existingData = keywordData
         const newIds = allIds.filter(id => !existingData[id])
         const newData = await fetchFullData(env.WIKI_DATA, newIds)
         const fullData = { ...existingData, ...newData }
 
-        // 6. 构建 prompt 并调用 DeepSeek
-        const prompt = buildPrompt(query, allResults, fullData)
+        // 7. 构建 prompt 并调用 DeepSeek
+        const queryType = detectQueryType(query)
+        const prompt = buildPrompt(query, allResults, fullData, queryType)
         const answer = await callDeepSeek(prompt, env.DEEPSEEK_API_KEY)
 
         return new Response(
           JSON.stringify({
             answer,
             sources: allResults.map((r) => ({
+              id: r.id,
               name: r.name,
-              type: r.type,
-              tags: r.tags,
+              category: r.category || r.type,
+              summary: fullData[r.id]?.summary || r.summary,
+              last_updated: r.last_updated,
+              tags: fullData[r.id]?.tags || r.tags || [],
+              score: r.score,
+              reference_count: fullData[r.id]?.reference_count || 0
             })),
+            metadata: {
+              total: allResults.length,
+              query_type: queryType
+            }
           }),
           { headers }
         )
