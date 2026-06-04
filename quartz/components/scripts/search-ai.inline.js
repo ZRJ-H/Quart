@@ -16,6 +16,91 @@
   let currentSort = 'relevance'
   let currentQuery = ''
 
+  // 搜索建议数据（从 wiki-index-light.json 加载）
+  let suggestionsData = []
+
+  // 加载搜索建议数据
+  async function loadSuggestionsData() {
+    try {
+      const response = await fetch('/wiki-index-light.json')
+      suggestionsData = await response.json()
+    } catch (error) {
+      console.error('加载搜索建议数据失败:', error)
+    }
+  }
+
+  // 获取搜索建议
+  function getSuggestions(query) {
+    if (!query || query.length < 2) return []
+
+    const q = query.toLowerCase()
+    return suggestionsData
+      .filter(entry => entry.name.toLowerCase().includes(q))
+      .slice(0, 5)
+      .map(entry => ({
+        name: entry.name,
+        category: entry.category,
+        icon: getCategoryIcon(entry.category)
+      }))
+  }
+
+  // 渲染搜索建议
+  function renderSuggestions(suggestions) {
+    const container = document.querySelector('.search-suggestions')
+    const list = container.querySelector('.suggestions-list')
+
+    if (suggestions.length === 0) {
+      container.style.display = 'none'
+      return
+    }
+
+    list.innerHTML = suggestions.map(s => `
+      <div class="suggestion-item" data-name="${s.name}">
+        <span class="suggestion-icon">${s.icon}</span>
+        <div class="suggestion-content">
+          <div class="suggestion-name">${s.name}</div>
+          <div class="suggestion-category">${s.category}</div>
+        </div>
+      </div>
+    `).join('')
+
+    container.style.display = 'block'
+
+    // 绑定点击事件
+    list.querySelectorAll('.suggestion-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const name = item.dataset.name
+        const input = document.querySelector('.ai-search-input')
+        input.value = name
+        container.style.display = 'none'
+        doSearch()
+      })
+    })
+  }
+
+  // 初始化搜索建议
+  function initSuggestions() {
+    const container = document.querySelector('.search-suggestions')
+
+    let debounceTimer = null
+
+    input.addEventListener('input', () => {
+      clearTimeout(debounceTimer)
+      debounceTimer = setTimeout(() => {
+        const query = input.value.trim()
+        const suggestions = getSuggestions(query)
+        renderSuggestions(suggestions)
+      }, 300)
+    })
+
+    // 点击外部关闭建议
+    document.addEventListener('click', (e) => {
+      if (!container.contains(e.target) && e.target !== input) {
+        container.style.display = 'none'
+      }
+    })
+  }
+
   const CATEGORY_ICONS = {
     'companies': '🏢',
     'people': '👤',
@@ -26,6 +111,10 @@
     'tools': '🔧',
     'markets': '📈',
     'ai-agents': '🤖'
+  }
+
+  function getCategoryIcon(category) {
+    return CATEGORY_ICONS[category] || '📄'
   }
 
   function simpleMarkdown(text) {
@@ -188,4 +277,6 @@
   })
 
   initFilters()
+  loadSuggestionsData()
+  initSuggestions()
 })()

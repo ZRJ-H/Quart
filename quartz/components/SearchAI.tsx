@@ -18,7 +18,7 @@ export default ((userOpts?: Partial<SearchAIOptions>) => {
   const SearchAI: QuartzComponent = ({ displayClass }: QuartzComponentProps) => {
     return (
       <div class={classNames(displayClass, "search-ai")}>
-        <div class="ai-search-box">
+        <div class="ai-search-box" style="position: relative;">
           <input
             type="text"
             class="ai-search-input"
@@ -35,6 +35,9 @@ export default ((userOpts?: Partial<SearchAIOptions>) => {
               <line x1="7" y1="10" x2="7" y2="10" />
             </svg>
           </button>
+          <div class="search-suggestions" style="display: none;">
+            <div class="suggestions-list"></div>
+          </div>
         </div>
         <div class="ai-search-status" id="ai-search-status"></div>
         <div class="ai-search-results" id="ai-search-results" style="display: none;">
