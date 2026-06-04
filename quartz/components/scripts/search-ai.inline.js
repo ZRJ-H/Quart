@@ -211,9 +211,7 @@
         return
       }
 
-      status.textContent = data.sources?.length
-        ? `从 ${data.sources.length} 个相关页面生成回答`
-        : ""
+      status.textContent = ""
 
       answer.innerHTML = simpleMarkdown(data.answer)
       if (data.sources && data.sources.length > 0) {
