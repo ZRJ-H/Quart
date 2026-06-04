@@ -29,6 +29,7 @@ export const defaultContentPageLayout: PageLayout = {
       component: Component.SearchAI({ workerUrl: "https://doge-wiki-search.zstufjj2004.workers.dev" }),
       condition: (page) => page.fileData.slug === "index",
     }),
+    Component.SourceCard(),
     Component.ConditionalRender({
       component: Component.Breadcrumbs(),
       condition: (page) => page.fileData.slug !== "index",

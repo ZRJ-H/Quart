@@ -25,6 +25,7 @@ import Breadcrumbs from "./Breadcrumbs"
 import Comments from "./Comments"
 import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
+import SourceCard from "./SourceCard"
 
 export {
   ArticleTitle,
@@ -54,4 +55,5 @@ export {
   Comments,
   Flex,
   ConditionalRender,
+  SourceCard,
 }
