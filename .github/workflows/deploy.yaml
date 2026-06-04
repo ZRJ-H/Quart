@@ -29,6 +29,10 @@ jobs:
         run: npm ci
       - name: Build Quartz
         run: npx quartz build --directory vault-content
+      - name: Generate search suggestions index
+        run: |
+          python3 scripts/build-wiki-index.py vault-content \
+            --light-output public/wiki-index-light.json
       - name: Deploy Cloudflare Worker
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}

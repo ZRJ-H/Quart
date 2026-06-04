@@ -70,7 +70,6 @@
     list.querySelectorAll('.suggestion-item').forEach(item => {
       item.addEventListener('click', () => {
         const name = item.dataset.name
-        const input = document.querySelector('.ai-search-input')
         input.value = name
         container.style.display = 'none'
         doSearch()
@@ -140,6 +139,16 @@
     return html
   }
 
+  function escapeHtml(text) {
+    if (!text) return ""
+    return text
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;")
+  }
+
   function renderSourceCards(sourceList) {
     if (!sourceList || !sourceList.length) return ""
     return `
@@ -149,18 +158,18 @@
           <div class="source-card">
             <div class="source-card-header">
               <span class="source-card-icon">${CATEGORY_ICONS[s.category] || '📄'}</span>
-              <span class="source-card-name">${s.name}</span>
-              <span class="source-card-category">${s.category || ''}</span>
+              <span class="source-card-name">${escapeHtml(s.name)}</span>
+              <span class="source-card-category">${escapeHtml(s.category)}</span>
             </div>
             <div class="source-card-meta">
-              <span class="source-card-date">${s.last_updated || ''}</span>
+              <span class="source-card-date">${escapeHtml(s.last_updated)}</span>
               ${(s.tags && s.tags.length > 0) ? `
                 <span class="source-card-tags">
-                  ${s.tags.slice(0, 3).map(tag => `#${tag}`).join(' ')}
+                  ${s.tags.slice(0, 3).map(tag => `#${escapeHtml(tag)}`).join(' ')}
                 </span>
               ` : ''}
             </div>
-            <div class="source-card-summary">${s.summary || ''}</div>
+            <div class="source-card-summary">${escapeHtml(s.summary)}</div>
           </div>
         `).join('')}
       </div>
