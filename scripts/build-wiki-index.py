@@ -186,7 +186,7 @@ def main():
     print(f"Full index: {len(full_entries)} pages, {full_kb:.1f} KB")
 
     with open(args.output, "w", encoding="utf-8") as f:
-        json.dump(full_entries, f, ensure_ascii=False, separators=(",", ":"))
+        json.dump(light_entries, f, ensure_ascii=False, separators=(",", ":"))
     size_kb = os.path.getsize(args.output) / 1024
     print(f"Legacy output: {args.output} ({size_kb:.1f} KB)")
 

@@ -2,6 +2,14 @@ import wikiIndex from "./wiki-index-light.json"
 
 const DEEPSEEK_URL = "https://api.deepseek.com/v1/chat/completions"
 
+// 评分阈值配置
+const SCORE_CONFIG = {
+  MIN_THRESHOLD: 8,        // 最低入选分数
+  HIGH_RELEVANCE: 20,      // 高相关性阈值
+  MAX_RESULTS: 15,         // 最大结果数
+  DYNAMIC_RATIO: 0.4,      // 动态阈值比例（最高分的40%）
+}
+
 function extractLinkedPages(content) {
   if (!content) return []
   const links = []
@@ -52,7 +60,16 @@ function sortResults(results, sort) {
       )
     case 'relevance':
     default:
-      return [...results].sort((a, b) => b.score - a.score)
+      return [...results].sort((a, b) => {
+        // 先按主分数排序
+        if (b.score !== a.score) return b.score - a.score
+        // 分数相同时按质量分数排序
+        const aQuality = a.quality_score || 0
+        const bQuality = b.quality_score || 0
+        if (bQuality !== aQuality) return bQuality - aQuality
+        // 最后按更新时间排序
+        return (b.last_updated || "").localeCompare(a.last_updated || "")
+      })
   }
 }
 
@@ -125,9 +142,64 @@ function searchIndex(query, limit = 10) {
       if (b.score !== a.score) return b.score - a.score
       return (b.last_updated || "").localeCompare(a.last_updated || "")
     })
-    .slice(0, 5)
 
   return keywordResults
+}
+
+/**
+ * 智能选择相关页面
+ * 基于分数阈值和动态比例选择最优结果集
+ */
+function selectRelevantResults(scoredResults) {
+  if (scoredResults.length === 0) return []
+
+  // 按分数降序排序
+  const sorted = [...scoredResults].sort((a, b) => b.score - a.score)
+  const maxScore = sorted[0].score
+
+  // 动态阈值：最高分的一定比例，但不低于最低阈值
+  const dynamicThreshold = Math.max(
+    SCORE_CONFIG.MIN_THRESHOLD,
+    Math.floor(maxScore * SCORE_CONFIG.DYNAMIC_RATIO)
+  )
+
+  // 选择所有超过阈值的结果
+  let selected = sorted.filter(r => r.score >= dynamicThreshold)
+
+  // 如果高相关性结果太少，放宽阈值
+  if (selected.length < 3) {
+    selected = sorted.filter(r => r.score >= SCORE_CONFIG.MIN_THRESHOLD)
+  }
+
+  // 硬上限
+  if (selected.length > SCORE_CONFIG.MAX_RESULTS) {
+    selected = selected.slice(0, SCORE_CONFIG.MAX_RESULTS)
+  }
+
+  return selected
+}
+
+/**
+ * 计算页面质量分数（用于辅助排序）
+ */
+function calculateQualityScore(entry) {
+  let quality = 0
+
+  // 引用次数权重
+  quality += Math.min((entry.reference_count || 0) * 2, 20)
+
+  // 内容长度权重（有详细内容的页面更有价值）
+  if (entry.content_length > 1000) quality += 5
+  if (entry.content_length > 3000) quality += 5
+
+  // 更新时间权重（近期更新的页面略优先）
+  if (entry.last_updated) {
+    const daysSinceUpdate = (Date.now() - new Date(entry.last_updated).getTime()) / (1000 * 60 * 60 * 24)
+    if (daysSinceUpdate < 7) quality += 3
+    else if (daysSinceUpdate < 30) quality += 1
+  }
+
+  return quality
 }
 
 async function fetchFullData(kv, ids) {
@@ -273,7 +345,7 @@ export default {
           })
         }
 
-        // 1. 关键词匹配
+        // 1. 关键词匹配（返回所有匹配结果）
         const keywordResults = searchIndex(query)
         if (!keywordResults.length) {
           return new Response(
@@ -285,36 +357,45 @@ export default {
           )
         }
 
-        // 2. 从 KV 读取关键词匹配结果的完整内容
-        const keywordData = await fetchFullData(env.WIKI_DATA, keywordResults.map(r => r.id))
+        // 2. 智能选择相关页面（基于评分阈值）
+        let selectedResults = selectRelevantResults(keywordResults)
 
-        // 3. 提取关联页面
+        // 3. 从 KV 读取关键词匹配结果的完整内容
+        const keywordData = await fetchFullData(env.WIKI_DATA, selectedResults.map(r => r.id))
+
+        // 4. 提取关联页面（从高分页面中提取）
         const relatedIds = new Set()
-        for (const r of keywordResults) {
+        const highScoreResults = selectedResults.filter(r => r.score >= SCORE_CONFIG.HIGH_RELEVANCE)
+        for (const r of highScoreResults) {
           const full = keywordData[r.id]
           if (full && full.content) {
             const linked = extractLinkedPages(full.content)
             for (const name of linked) {
               const page = findByName(name)
-              if (page && !keywordResults.some(kr => kr.id === page.id)) {
+              if (page && !selectedResults.some(kr => kr.id === page.id)) {
                 relatedIds.add(page.id)
               }
             }
           }
         }
 
-        // 4. 合并结果：关键词结果 + 关联页面（最多 10 个）
-        let allResults = [...keywordResults]
+        // 5. 合并结果：关键词结果 + 关联页面
+        let allResults = [...selectedResults]
         if (relatedIds.size > 0) {
           const relatedPages = [...relatedIds]
             .map(id => wikiIndex.find(e => e.id === id))
             .filter(Boolean)
-            .slice(0, 10 - keywordResults.length)
-            .map(e => ({ ...e, score: 0 }))
-          allResults = [...keywordResults, ...relatedPages]
+            .slice(0, 5)  // 关联页面最多5个
+            .map(e => ({ 
+              ...e, 
+              score: 0,
+              quality_score: calculateQualityScore(e),
+              is_related: true
+            }))
+          allResults = [...selectedResults, ...relatedPages]
         }
 
-        // 5. 过滤和排序
+        // 6. 过滤和排序
         allResults = filterResults(allResults, filters)
         allResults = sortResults(allResults, sort)
         allResults = allResults.slice(0, limit)
@@ -342,11 +423,18 @@ export default {
               last_updated: r.last_updated,
               tags: fullData[r.id]?.tags || r.tags || [],
               score: r.score,
-              reference_count: fullData[r.id]?.reference_count || 0
+              quality_score: r.quality_score || calculateQualityScore(r),
+              reference_count: fullData[r.id]?.reference_count || 0,
+              is_related: r.is_related || false
             })),
             metadata: {
               total: allResults.length,
-              query_type: queryType
+              query_type: queryType,
+              scoring: {
+                max_score: allResults.length > 0 ? Math.max(...allResults.map(r => r.score)) : 0,
+                min_score: allResults.length > 0 ? Math.min(...allResults.map(r => r.score)) : 0,
+                threshold_used: SCORE_CONFIG.MIN_THRESHOLD
+              }
             }
           }),
           { headers }
