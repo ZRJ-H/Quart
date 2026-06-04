@@ -356,6 +356,78 @@
   }
 }
 
+.search-history {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: var(--light);
+  border-radius: 8px;
+
+  .history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+
+    h3 {
+      font-size: 1rem;
+      color: var(--dark);
+      margin: 0;
+    }
+
+    .history-clear {
+      font-size: 0.85rem;
+      color: var(--gray);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+
+      &:hover {
+        background: var(--lightgray);
+      }
+    }
+  }
+
+  .history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .history-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.2s;
+
+    &:hover {
+      background: var(--lightgray);
+    }
+  }
+
+  .history-icon {
+    color: var(--gray);
+  }
+
+  .history-content {
+    flex: 1;
+  }
+
+  .history-query {
+    font-weight: 500;
+    color: var(--dark);
+  }
+
+  .history-time {
+    font-size: 0.8rem;
+    color: var(--gray);
+  }
+}
+
 @media (max-width: 800px) {
   .search-ai { margin: 8px 0 12px; }
   .ai-search-input { font-size: 0.85rem; padding: 8px 10px; }

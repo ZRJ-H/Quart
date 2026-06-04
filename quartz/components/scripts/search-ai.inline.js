@@ -271,6 +271,101 @@
     })
   }
 
+  const HISTORY_KEY = 'wiki-search-history'
+  const MAX_HISTORY = 10
+
+  function getSearchHistory() {
+    const history = localStorage.getItem(HISTORY_KEY)
+    return history ? JSON.parse(history) : []
+  }
+
+  function addSearchHistory(query) {
+    const history = getSearchHistory()
+    const newHistory = [
+      { query, timestamp: Date.now() },
+      ...history.filter(h => h.query !== query)
+    ].slice(0, MAX_HISTORY)
+    localStorage.setItem(HISTORY_KEY, JSON.stringify(newHistory))
+    renderHistory()
+  }
+
+  function clearSearchHistory() {
+    localStorage.removeItem(HISTORY_KEY)
+    renderHistory()
+  }
+
+  function formatTime(timestamp) {
+    const now = Date.now()
+    const diff = now - timestamp
+
+    if (diff < 60 * 60 * 1000) {
+      const minutes = Math.floor(diff / (60 * 1000))
+      return `${minutes}分钟前`
+    }
+
+    if (diff < 24 * 60 * 60 * 1000) {
+      const hours = Math.floor(diff / (60 * 60 * 1000))
+      return `${hours}小时前`
+    }
+
+    const days = Math.floor(diff / (24 * 60 * 60 * 1000))
+    return `${days}天前`
+  }
+
+  function renderHistory() {
+    const container = document.querySelector('.search-history')
+    if (!container) return
+
+    const history = getSearchHistory()
+    const list = container.querySelector('.history-list')
+
+    if (history.length === 0) {
+      container.style.display = 'none'
+      return
+    }
+
+    container.style.display = 'block'
+
+    list.innerHTML = history.map(item => {
+      const time = formatTime(item.timestamp)
+      return `
+        <div class="history-item" data-query="${item.query}">
+          <span class="history-icon">🔍</span>
+          <div class="history-content">
+            <div class="history-query">${item.query}</div>
+            <div class="history-time">${time}</div>
+          </div>
+        </div>
+      `
+    }).join('')
+
+    list.querySelectorAll('.history-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const query = item.dataset.query
+        input.value = query
+        doSearch()
+      })
+    })
+  }
+
+  function initHistory() {
+    const clearBtn = document.querySelector('.history-clear')
+    if (clearBtn) {
+      clearBtn.addEventListener('click', clearSearchHistory)
+    }
+    renderHistory()
+  }
+
+  const _originalDoSearch = doSearch
+  doSearch = async function() {
+    const query = input.value.trim()
+    if (!query || query.length < 2) return
+    await _originalDoSearch()
+    if (!answer.querySelector('.ai-error')) {
+      addSearchHistory(query)
+    }
+  }
+
   btn.addEventListener("click", doSearch)
   input.addEventListener("keydown", (e) => {
     if (e.key === "Enter") doSearch()
@@ -279,4 +374,5 @@
   initFilters()
   loadSuggestionsData()
   initSuggestions()
+  initHistory()
 })()

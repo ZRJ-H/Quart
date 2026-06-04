@@ -48,6 +48,13 @@ export default ((userOpts?: Partial<SearchAIOptions>) => {
             <div class="ai-search-sources" id="ai-search-sources"></div>
           </div>
         </div>
+        <div class="search-history" style="display: none;">
+          <div class="history-header">
+            <h3>最近搜索</h3>
+            <button class="history-clear">清除</button>
+          </div>
+          <div class="history-list"></div>
+        </div>
       </div>
     )
   }
