@@ -22,7 +22,7 @@
   // 加载搜索建议数据
   async function loadSuggestionsData() {
     try {
-      const response = await fetch('/wiki-index-light.json')
+      const response = await fetch('/worker/wiki-index-light.json')
       suggestionsData = await response.json()
     } catch (error) {
       console.error('加载搜索建议数据失败:', error)
