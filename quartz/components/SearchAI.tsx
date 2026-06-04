@@ -37,7 +37,14 @@ export default ((userOpts?: Partial<SearchAIOptions>) => {
           </button>
         </div>
         <div class="ai-search-status" id="ai-search-status"></div>
-        <div class="ai-search-result" id="ai-search-result"></div>
+        <div class="ai-search-results" id="ai-search-results" style="display: none;">
+          <div class="ai-search-main">
+            <div class="ai-search-answer" id="ai-search-answer"></div>
+          </div>
+          <div class="ai-search-sidebar">
+            <div class="ai-search-sources" id="ai-search-sources"></div>
+          </div>
+        </div>
       </div>
     )
   }

@@ -21,6 +21,7 @@ import MobileOnly from "./MobileOnly"
 import RecentNotes from "./RecentNotes"
 import LatestByCategory from "./LatestByCategory"
 import SearchAI from "./SearchAI"
+import SearchFilters from "./SearchFilters"
 import Breadcrumbs from "./Breadcrumbs"
 import Comments from "./Comments"
 import Flex from "./Flex"
@@ -50,6 +51,7 @@ export {
   RecentNotes,
   LatestByCategory,
   SearchAI,
+  SearchFilters,
   NotFound,
   Breadcrumbs,
   Comments,
