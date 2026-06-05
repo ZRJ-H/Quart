@@ -21,12 +21,24 @@ async function loadSynonyms(kv) {
         if (!Array.isArray(values)) continue
 
         const allWords = [key, ...values].map(w => w.toLowerCase())
+        // 对包含空格的词进行分词，把每个单词都加入索引
+        const allTokens = new Set()
         for (const word of allWords) {
-          if (!reverseIndex[word]) {
-            reverseIndex[word] = new Set()
+          allTokens.add(word)
+          // 分词：把 "ai agent" 拆分成 "ai" 和 "agent"
+          if (word.includes(' ')) {
+            for (const token of word.split(/\s+/)) {
+              if (token.length >= 2) allTokens.add(token)
+            }
+          }
+        }
+        
+        for (const token of allTokens) {
+          if (!reverseIndex[token]) {
+            reverseIndex[token] = new Set()
           }
           for (const related of allWords) {
-            reverseIndex[word].add(related.toLowerCase())
+            reverseIndex[token].add(related.toLowerCase())
           }
         }
       }
