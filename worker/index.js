@@ -2,12 +2,73 @@ import wikiIndex from "./wiki-index-light.json"
 
 const DEEPSEEK_URL = "https://api.deepseek.com/v1/chat/completions"
 
+// 同义词缓存
+let synonymsCache = null
+let synonymsCacheTime = 0
+const SYNONYMS_CACHE_TTL = 3600 * 1000  // 1小时缓存
+
+async function loadSynonyms(kv) {
+  const now = Date.now()
+  if (synonymsCache && (now - synonymsCacheTime) < SYNONYMS_CACHE_TTL) {
+    return synonymsCache
+  }
+
+  try {
+    const data = await kv.get('synonyms', 'json')
+    if (data) {
+      const reverseIndex = {}
+      for (const [key, values] of Object.entries(data)) {
+        if (!Array.isArray(values)) continue
+
+        const allWords = [key, ...values].map(w => w.toLowerCase())
+        for (const word of allWords) {
+          if (!reverseIndex[word]) {
+            reverseIndex[word] = new Set()
+          }
+          for (const related of allWords) {
+            reverseIndex[word].add(related.toLowerCase())
+          }
+        }
+      }
+
+      synonymsCache = { forward: data, reverse: reverseIndex }
+      synonymsCacheTime = now
+      return synonymsCache
+    }
+  } catch (err) {
+    console.error('Failed to load synonyms:', err.message)
+  }
+
+  return { forward: {}, reverse: {} }
+}
+
+function expandQuery(query, synonyms) {
+  const q = query.toLowerCase()
+  const words = q.split(/\s+/).filter(Boolean)
+  const expanded = new Set(words)
+
+  const reverseIndex = synonyms.reverse || {}
+
+  for (const word of words) {
+    if (word.length < 2) continue
+
+    if (reverseIndex[word]) {
+      for (const related of reverseIndex[word]) {
+        expanded.add(related)
+      }
+    }
+  }
+
+  return [...expanded]
+}
+
 // 评分阈值配置
 const SCORE_CONFIG = {
-  MIN_THRESHOLD: 8,        // 最低入选分数
-  HIGH_RELEVANCE: 20,      // 高相关性阈值
-  MAX_RESULTS: 15,         // 最大结果数
-  DYNAMIC_RATIO: 0.4,      // 动态阈值比例（最高分的40%）
+  MIN_THRESHOLD: 8,
+  HIGH_RELEVANCE: 20,
+  MAX_RESULTS: 15,
+  DYNAMIC_RATIO: 0.4,
+  SYNONYM_SCORE_FACTOR: 0.6,
 }
 
 function extractLinkedPages(content) {
@@ -91,7 +152,7 @@ function detectQueryType(query) {
   return 'comprehensive'
 }
 
-function searchIndex(query, limit = 10) {
+function searchIndex(query, limit = 10, expandedTerms = null) {
   const today = new Date().toJSON().slice(0, 10)
 
   let cleanQuery = query
@@ -114,6 +175,7 @@ function searchIndex(query, limit = 10) {
   }
 
   const q = cleanQuery.toLowerCase()
+
   const scored = candidates.map((entry) => {
     let score = 0
     const name = (entry.name || "").toLowerCase()
@@ -121,29 +183,42 @@ function searchIndex(query, limit = 10) {
     const tags = (entry.tags || []).join(" ").toLowerCase()
     const category = (entry.category || "").toLowerCase()
 
+    // 精确匹配（最高权重）
     if (name.includes(q)) score += 20
     if (name === q) score += 40
 
+    // 分词匹配
     const qWords = q.split(/\s+/).filter(Boolean)
     for (const w of qWords) {
       if (name.includes(w)) score += 8
-      if (tags.includes(w)) score += 6
+      if (tags.includes(w)) score += 8  // 标签权重从 6 提升到 8
       if (category.includes(w)) score += 4
       const matches = (summary.match(new RegExp(w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "gi")) || []).length
       score += Math.min(matches, 5)
     }
 
+    // 同义词扩展匹配（降权 SYNONYM_SCORE_FACTOR）
+    if (expandedTerms) {
+      const qWords = q.split(/\s+/).filter(Boolean)
+      for (const term of expandedTerms) {
+        if (qWords.includes(term)) continue
+
+        if (name.includes(term)) score += 20 * SCORE_CONFIG.SYNONYM_SCORE_FACTOR
+        if (tags.includes(term)) score += 8 * SCORE_CONFIG.SYNONYM_SCORE_FACTOR
+        const termMatches = (summary.match(new RegExp(term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "gi")) || []).length
+        score += Math.min(termMatches, 3) * SCORE_CONFIG.SYNONYM_SCORE_FACTOR
+      }
+    }
+
     return { ...entry, score }
   })
 
-  const keywordResults = scored
+  return scored
     .filter((e) => e.score > 0)
     .sort((a, b) => {
       if (b.score !== a.score) return b.score - a.score
       return (b.last_updated || "").localeCompare(a.last_updated || "")
     })
-
-  return keywordResults
 }
 
 /**
@@ -230,29 +305,49 @@ function buildPrompt(query, results, fullData, queryType) {
     })
     .join("\n\n")
 
-  const structureGuide = {
-    overview: '使用结构化回答：开头概述 → 分点列出核心要点 → 总结',
-    comparison: '使用对比分析：开头说明对比对象 → 表格对比关键维度 → 总结建议',
-    timeline: '使用时间线：开头概述 → 按时间顺序列出关键事件 → 趋势分析',
-    comprehensive: '使用混合结构：开头概述 → 根据内容选择合适结构 → 总结'
+  const queryTypeGuide = {
+    comparison: '使用对比分析：表格对比关键维度 → 总结建议',
+    timeline: '使用时间线：按时间顺序列出关键事件 → 趋势分析',
+    overview: '使用概述结构：定义 → 核心要点 → 应用场景',
+    comprehensive: '根据内容选择最合适结构'
   }
 
-  return `你是知识库助手。今天是 ${today}。根据查询类型，选择最合适的回答结构。
+  return `你是知识库研究助手。今天是 ${today}。
 
-查询类型：${queryType}
-回答指导：${structureGuide[queryType] || structureGuide.comprehensive}
+## 回答原则
 
-要求：
-1. 回答要有条理、有逻辑
-2. 在回答中标注来源编号 [1][2]
-3. 使用 Markdown 格式
-4. 保持简洁，避免冗余
-5. 只有当资料中确实没有任何相关信息时，才说"资料中未提及"
+1. **核心回答**：直接回答用户问题，标注来源 [1][2]
+2. **关联分析**：主动指出相关实体/概念之间的联系
+   - 例如："A 和 B 都属于 X 领域"
+   - 例如："这个概念在 Y 场景也有应用"
+3. **背景补充**：对关键术语补充 1-2 句背景，帮助理解
+4. **跨领域洞察**：如果发现不同领域间的共性或模式，简要点出
+5. **时间维度**：如果有时间线信息，指出趋势或演变
 
-可用来源：
+## 回答结构
+
+- 开头：直接回答 + 核心要点
+- 中间：分点展开 + 关联分析
+- 结尾：如有价值，补充洞察或延伸思考
+
+## 查询类型
+
+${queryTypeGuide[queryType] || queryTypeGuide.comprehensive}
+
+## 注意事项
+
+- 标注来源编号 [1][2]，便于追溯
+- 使用 Markdown 格式
+- 如果资料中确实没有相关信息，诚实说明并尝试给出相关方向
+- 不要过度发散到无来源支撑的内容
+
+## 可用来源
+
 ${sources}
 
-用户查询：${query}`
+## 用户查询
+
+${query}`
 }
 
 async function callDeepSeek(prompt, apiKey) {
@@ -265,8 +360,8 @@ async function callDeepSeek(prompt, apiKey) {
     body: JSON.stringify({
       model: "deepseek-chat",
       messages: [{ role: "user", content: prompt }],
-      temperature: 0.3,
-      max_tokens: 1500,
+      temperature: 0.5,  // 从 0.3 提升到 0.5，增加创造性
+      max_tokens: 2500,  // 从 1500 提升到 2500，允许更深入回答
     }),
   })
 
@@ -345,8 +440,12 @@ export default {
           })
         }
 
-        // 1. 关键词匹配（返回所有匹配结果）
-        const keywordResults = searchIndex(query)
+        // 1. 加载同义词并扩展查询
+        const synonyms = await loadSynonyms(env.WIKI_DATA)
+        const expandedTerms = expandQuery(query, synonyms)
+
+        // 2. 使用扩展后的关键词进行搜索
+        const keywordResults = searchIndex(query, limit, expandedTerms)
         if (!keywordResults.length) {
           return new Response(
             JSON.stringify({
@@ -357,13 +456,13 @@ export default {
           )
         }
 
-        // 2. 智能选择相关页面（基于评分阈值）
+        // 3. 智能选择相关页面
         let selectedResults = selectRelevantResults(keywordResults)
 
-        // 3. 从 KV 读取关键词匹配结果的完整内容
+        // 4. 从 KV 读取完整内容
         const keywordData = await fetchFullData(env.WIKI_DATA, selectedResults.map(r => r.id))
 
-        // 4. 提取关联页面（从高分页面中提取）
+        // 5. 提取关联页面
         const relatedIds = new Set()
         const highScoreResults = selectedResults.filter(r => r.score >= SCORE_CONFIG.HIGH_RELEVANCE)
         for (const r of highScoreResults) {
@@ -379,13 +478,13 @@ export default {
           }
         }
 
-        // 5. 合并结果：关键词结果 + 关联页面
+        // 6. 合并结果
         let allResults = [...selectedResults]
         if (relatedIds.size > 0) {
           const relatedPages = [...relatedIds]
             .map(id => wikiIndex.find(e => e.id === id))
             .filter(Boolean)
-            .slice(0, 5)  // 关联页面最多5个
+            .slice(0, 5)
             .map(e => ({ 
               ...e, 
               score: 0,
@@ -395,19 +494,19 @@ export default {
           allResults = [...selectedResults, ...relatedPages]
         }
 
-        // 6. 过滤和排序
+        // 7. 过滤和排序
         allResults = filterResults(allResults, filters)
         allResults = sortResults(allResults, sort)
         allResults = allResults.slice(0, limit)
 
-        // 6. 从 KV 读取所有结果的完整内容
+        // 8. 读取所有结果的完整内容
         const allIds = allResults.map(r => r.id)
         const existingData = keywordData
         const newIds = allIds.filter(id => !existingData[id])
         const newData = await fetchFullData(env.WIKI_DATA, newIds)
         const fullData = { ...existingData, ...newData }
 
-        // 7. 构建 prompt 并调用 DeepSeek
+        // 9. 构建 prompt 并调用 DeepSeek
         const queryType = detectQueryType(query)
         const prompt = buildPrompt(query, allResults, fullData, queryType)
         const answer = await callDeepSeek(prompt, env.DEEPSEEK_API_KEY)
@@ -430,6 +529,7 @@ export default {
             metadata: {
               total: allResults.length,
               query_type: queryType,
+              expanded_terms: expandedTerms.length > 1 ? expandedTerms : undefined,
               scoring: {
                 max_score: allResults.length > 0 ? Math.max(...allResults.map(r => r.score)) : 0,
                 min_score: allResults.length > 0 ? Math.min(...allResults.map(r => r.score)) : 0,
