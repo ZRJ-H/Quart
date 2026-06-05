@@ -18,7 +18,9 @@
     "format": "npx prettier . --write",
     "test": "tsx --test",
     "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
-    "postinstall": "bash scripts/postinstall.sh"
+    "postinstall": "bash scripts/postinstall.sh",
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev"
   },
   "engines": {
     "npm": ">=10.9.2",
@@ -110,6 +112,7 @@
     "esbuild": "^0.27.2",
     "prettier": "^3.8.1",
     "tsx": "^4.21.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "wrangler": "^4.98.0"
   }
 }

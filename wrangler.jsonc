@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "jackyzha0-quartz",
+  "compatibility_date": "2026-06-05",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "monitoring"
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
+}
