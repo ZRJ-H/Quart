@@ -234,6 +234,93 @@ function searchIndex(query, limit = 10, expandedTerms = null) {
 }
 
 /**
+ * 向量搜索：调用 Vectorize API
+ * @param {string} query - 用户查询
+ * @param {object} vectorize - Vectorize 绑定
+ * @param {number} topK - 返回结果数量
+ * @returns {Array} 向量搜索结果
+ */
+async function vectorSearch(query, vectorize, topK = 10) {
+  try {
+    // 调用 Vectorize 查询
+    const result = await vectorize.query(query, {
+      topK,
+      returnMetadata: "all",
+    })
+
+    // 转换结果格式
+    return result.matches.map(match => ({
+      id: match.id,
+      score: match.score,
+      metadata: match.metadata,
+    }))
+  } catch (err) {
+    console.error('Vector search failed:', err.message)
+    return []
+  }
+}
+
+/**
+ * 混合搜索：融合关键词和向量搜索结果
+ * 使用 RRF (Reciprocal Rank Fusion) 算法
+ * @param {string} query - 用户查询
+ * @param {Array} keywordResults - 关键词搜索结果
+ * @param {Array} vectorResults - 向量搜索结果
+ * @param {number} rrfK - RRF 参数（默认 60）
+ * @returns {Array} 融合后的结果
+ */
+function hybridSearch(query, keywordResults, vectorResults, rrfK = 60) {
+  const scores = new Map()
+  const keywordRank = new Map()
+  const vectorRank = new Map()
+
+  // 记录关键词搜索排名
+  keywordResults.forEach((result, index) => {
+    keywordRank.set(result.id, index + 1)
+  })
+
+  // 记录向量搜索排名
+  vectorResults.forEach((result, index) => {
+    vectorRank.set(result.id, index + 1)
+  })
+
+  // 计算 RRF 分数
+  const allIds = new Set([...keywordRank.keys(), ...vectorRank.keys()])
+
+  for (const id of allIds) {
+    const keywordScore = keywordRank.has(id) ? 1 / (rrfK + keywordRank.get(id)) : 0
+    const vectorScore = vectorRank.has(id) ? 1 / (rrfK + vectorRank.get(id)) : 0
+    scores.set(id, keywordScore + vectorScore)
+  }
+
+  // 按 RRF 分数排序
+  const sortedIds = [...scores.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .map(([id]) => id)
+
+  // 构建结果
+  const keywordMap = new Map(keywordResults.map(r => [r.id, r]))
+  const vectorMap = new Map(vectorResults.map(r => [r.id, r]))
+
+  return sortedIds.map(id => {
+    const keywordResult = keywordMap.get(id)
+    const vectorResult = vectorMap.get(id)
+
+    return {
+      id,
+      name: keywordResult?.name || vectorResult?.metadata?.name || id,
+      category: keywordResult?.category || vectorResult?.metadata?.category || '',
+      summary: keywordResult?.summary || vectorResult?.metadata?.summary || '',
+      last_updated: keywordResult?.last_updated || vectorResult?.metadata?.last_updated || '',
+      tags: keywordResult?.tags || vectorResult?.metadata?.tags || [],
+      score: scores.get(id),
+      keyword_rank: keywordRank.get(id) || null,
+      vector_rank: vectorRank.get(id) || null,
+    }
+  })
+}
+
+/**
  * 智能选择相关页面
  * 基于分数阈值和动态比例选择最优结果集
  */
@@ -406,7 +493,8 @@ export default {
         JSON.stringify({
           ok: true,
           pages: wikiIndex.length,
-          mode: "light-index + kv",
+          mode: "light-index + kv + vectorize",
+          vectorize: !!env.VECTORIZE,
         }),
         { headers }
       )
@@ -456,9 +544,28 @@ export default {
         const synonyms = await loadSynonyms(env.WIKI_DATA)
         const expandedTerms = expandQuery(query, synonyms)
 
-        // 2. 使用扩展后的关键词进行搜索
-        const keywordResults = searchIndex(query, limit, expandedTerms)
-        if (!keywordResults.length) {
+        // 2. 关键词搜索
+        const keywordResults = searchIndex(query, limit * 2, expandedTerms)
+
+        // 3. 向量搜索（如果 Vectorize 可用）
+        let vectorResults = []
+        if (env.VECTORIZE) {
+          try {
+            vectorResults = await vectorSearch(query, env.VECTORIZE, limit * 2)
+          } catch (err) {
+            console.error('Vector search error:', err.message)
+          }
+        }
+
+        // 4. 混合搜索（融合关键词和向量结果）
+        let searchResults
+        if (vectorResults.length > 0) {
+          searchResults = hybridSearch(query, keywordResults, vectorResults)
+        } else {
+          searchResults = keywordResults
+        }
+
+        if (!searchResults.length) {
           return new Response(
             JSON.stringify({
               answer: "知识库中未找到相关内容。",
@@ -468,13 +575,13 @@ export default {
           )
         }
 
-        // 3. 智能选择相关页面
-        let selectedResults = selectRelevantResults(keywordResults)
+        // 5. 智能选择相关页面
+        let selectedResults = selectRelevantResults(searchResults)
 
-        // 4. 从 KV 读取完整内容
+        // 6. 从 KV 读取完整内容
         const keywordData = await fetchFullData(env.WIKI_DATA, selectedResults.map(r => r.id))
 
-        // 5. 提取关联页面
+        // 7. 提取关联页面
         const relatedIds = new Set()
         const highScoreResults = selectedResults.filter(r => r.score >= SCORE_CONFIG.HIGH_RELEVANCE)
         for (const r of highScoreResults) {
@@ -490,7 +597,7 @@ export default {
           }
         }
 
-        // 6. 合并结果
+        // 8. 合并结果
         let allResults = [...selectedResults]
         if (relatedIds.size > 0) {
           const relatedPages = [...relatedIds]
@@ -506,19 +613,19 @@ export default {
           allResults = [...selectedResults, ...relatedPages]
         }
 
-        // 7. 过滤和排序
+        // 9. 过滤和排序
         allResults = filterResults(allResults, filters)
         allResults = sortResults(allResults, sort)
         allResults = allResults.slice(0, limit)
 
-        // 8. 读取所有结果的完整内容
+        // 10. 读取所有结果的完整内容
         const allIds = allResults.map(r => r.id)
         const existingData = keywordData
         const newIds = allIds.filter(id => !existingData[id])
         const newData = await fetchFullData(env.WIKI_DATA, newIds)
         const fullData = { ...existingData, ...newData }
 
-        // 9. 构建 prompt 并调用 DeepSeek
+        // 11. 构建 prompt 并调用 DeepSeek
         const queryType = detectQueryType(query)
         const prompt = buildPrompt(query, allResults, fullData, queryType)
         const answer = await callDeepSeek(prompt, env.DEEPSEEK_API_KEY)
@@ -542,6 +649,7 @@ export default {
               total: allResults.length,
               query_type: queryType,
               expanded_terms: expandedTerms.length > 1 ? expandedTerms : undefined,
+              vector_search: vectorResults.length > 0,
               scoring: {
                 max_score: allResults.length > 0 ? Math.max(...allResults.map(r => r.score)) : 0,
                 min_score: allResults.length > 0 ? Math.min(...allResults.map(r => r.score)) : 0,
