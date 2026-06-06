@@ -6,3 +6,7 @@ account_id = "c77c864374991dbca0e56a3eacb94174"
 [[kv_namespaces]]
 binding = "WIKI_DATA"
 id = "d61189e9b8314bd48a975bb878392614"
+
+[[vectorize]]
+binding = "VECTORIZE"
+index_name = "wiki-embeddings"
