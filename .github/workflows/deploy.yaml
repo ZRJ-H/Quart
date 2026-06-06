@@ -50,7 +50,7 @@ jobs:
           DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
         run: |
           pip install dashscope
-          python3 scripts/build-embeddings.py worker/wiki-data-full.json -o embeddings.json
+          python3 vault-content/scripts/build-embeddings.py worker/wiki-data-full.json -o embeddings.json
           python3 -c "
           import json
           with open('embeddings.json') as f:
