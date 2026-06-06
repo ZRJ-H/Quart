@@ -9,9 +9,9 @@ interface Category {
 }
 
 const defaultCategories = (): Category[] => [
-  { slug: "AI科技动态", icon: "🤖", label: "AI动态" },
-  { slug: "GitHub-Trending", icon: "💻", label: "GitHub" },
-  { slug: "时政要闻", icon: "📰", label: "时政" },
+  { slug: "AI科技动态", icon: "", label: "AI动态" },
+  { slug: "GitHub-Trending", icon: "", label: "GitHub" },
+  { slug: "时政要闻", icon: "", label: "时政" },
 ]
 
 const slugDate = (s: string): number => {
@@ -29,7 +29,7 @@ export default (() => {
 
     return (
       <div class={classNames(displayClass, "latest-by-category")}>
-        <span class="lbc-label">📅</span>
+        <span class="lbc-label"></span>
         {categories.map((cat) => {
           const latest = allFiles
             .filter((f) => f.slug?.startsWith(cat.slug as any) && f.slug !== cat.slug)

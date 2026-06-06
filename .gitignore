@@ -13,3 +13,4 @@ quartz-test/
 !.dev.vars.example
 .env*
 !.env.example
+server.py
