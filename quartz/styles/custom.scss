@@ -367,6 +367,37 @@ img:hover {
   background: var(--primary);
 }
 
+/* ============================================
+   滚动动画初始化（需配合 JS）
+   ============================================ */
+
+/* 为 Quartz 组件添加动画类 */
+.page-header, .article-title {
+  animation: fadeIn var(--transition-slow) ease-out forwards;
+}
+
+.content-meta, .tag-list {
+  animation: fadeIn var(--transition-slow) ease-out forwards;
+  animation-delay: 100ms;
+}
+
+.toc, .backlinks {
+  animation: fadeIn var(--transition-slow) ease-out forwards;
+  animation-delay: 200ms;
+}
+
+/* 移动端优化 */
+@media (max-width: 768px) {
+  :root {
+    --space-xl: 1.5rem;
+    --space-2xl: 2rem;
+  }
+  
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.2rem; }
+}
+
 // put your custom CSS here!
 
 // === 防止内容溢出到侧边栏 ===
