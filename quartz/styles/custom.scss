@@ -189,6 +189,84 @@ tbody tr:last-child td {
   border-bottom: none;
 }
 
+/* ============================================
+   卡片组件样式
+   ============================================ */
+
+/* 通用卡片 */
+.card, .backlinks-card, .recent-notes-card {
+  background: white;
+  border-radius: 8px;
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  transition: all var(--transition-normal);
+}
+
+.card:hover, .backlinks-card:hover, .recent-notes-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+
+/* 标签 */
+.tag {
+  display: inline-block;
+  padding: var(--space-xs) var(--space-sm);
+  background: var(--bg-secondary);
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-right: var(--space-xs);
+  transition: background var(--transition-fast);
+}
+
+.tag:hover {
+  background: var(--accent);
+  color: white;
+}
+
+/* ============================================
+   搜索框样式
+   ============================================ */
+
+.search-input, #search-input {
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  padding: var(--space-md) var(--space-lg);
+  font-size: 1rem;
+  transition: all var(--transition-fast);
+  width: 100%;
+}
+
+.search-input:focus, #search-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.2);
+}
+
+/* ============================================
+   导航和 Explorer 样式
+   ============================================ */
+
+/* Explorer 树状线条 */
+.explorer-node {
+  border-left: 1px solid var(--border);
+  padding-left: var(--space-md);
+  margin-left: var(--space-sm);
+}
+
+.explorer-node:hover {
+  border-left-color: var(--accent);
+}
+
+/* 悬停状态 */
+.explorer-item:hover, .nav-link:hover {
+  color: var(--accent);
+  background: var(--bg-secondary);
+  border-radius: 4px;
+}
+
 // put your custom CSS here!
 
 // === 防止内容溢出到侧边栏 ===
