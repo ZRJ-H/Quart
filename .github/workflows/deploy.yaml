@@ -36,6 +36,7 @@ jobs:
       - name: Deploy Cloudflare Worker
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
         run: |
           python3 scripts/build-wiki-index.py vault-content \
             --light-output worker/wiki-index-light.json \
@@ -43,6 +44,25 @@ jobs:
             -o worker/wiki-data.json
           cd worker && python3 ../scripts/upload-to-kv.py wiki-data-full.json
           npx wrangler deploy
+      - name: Generate and upload embeddings
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
+        run: |
+          pip install dashscope
+          python3 scripts/build-embeddings.py worker/wiki-data-full.json -o embeddings.json
+          python3 -c "
+          import json
+          with open('embeddings.json') as f:
+              embeddings = json.load(f)
+          ndjson_lines = []
+          for page_id, vector in embeddings.items():
+              truncated_id = page_id.encode('utf-8')[:64].decode('utf-8', errors='ignore')
+              ndjson_lines.append(json.dumps({'id': truncated_id, 'values': vector}))
+          with open('/tmp/embeddings.ndjson', 'w') as f:
+              f.write('\n'.join(ndjson_lines))
+          "
+          cd worker && npx wrangler vectorize insert wiki-embeddings --file=/tmp/embeddings.ndjson
       - name: Copy monitoring dashboard
         run: |
           mkdir -p public/monitoring
