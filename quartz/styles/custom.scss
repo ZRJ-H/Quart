@@ -121,6 +121,74 @@ hr {
   margin: var(--space-xl) 0;
 }
 
+/* ============================================
+   代码块样式
+   ============================================ */
+
+/* 代码块 */
+pre {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: var(--space-lg);
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: var(--space-md) 0;
+  box-shadow: var(--shadow-sm);
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  font-size: inherit;
+  color: inherit;
+}
+
+/* 行内代码 */
+code {
+  font-family: var(--code-font);
+  background: var(--bg-secondary);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: var(--primary-dark);
+}
+
+/* ============================================
+   表格样式
+   ============================================ */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-md) 0;
+  box-shadow: var(--shadow-sm);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: var(--space-md);
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  font-weight: 600;
+  color: var(--primary);
+  background: var(--bg-secondary);
+}
+
+tbody tr:hover {
+  background: var(--bg-secondary);
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
 // put your custom CSS here!
 
 // === 防止内容溢出到侧边栏 ===
