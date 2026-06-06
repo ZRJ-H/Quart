@@ -9,6 +9,20 @@
 
 ## Decision Log
 
+### 2026-06-06: 前端设计升级（Editorial/Magazine 风格）
+- **问题**: 默认 Quartz 样式较保守，缺乏视觉特色
+- **方案**: 采用 Editorial/Magazine（杂志风）设计风格，渐进式增强
+- **设计规范**:
+  - 配色：蓝灰色系 + 金色点缀 (#c9a84c)
+  - 排版：Noto Serif SC（标题）+ Inter（正文）
+  - 动效：微妙悬停 + 滚动淡入 + 平滑过渡
+  - 质感：阴影 + 圆角 + 呼吸感间距
+- **改动范围**:
+  - `quartz.config.ts`: 字体配置（Google Fonts）
+  - `quartz/styles/custom.scss`: CSS 变量主题系统、排版、组件样式、动效
+- **实施方式**: Subagent-Driven Development（8 个任务，每个任务含规范审查 + 代码质量审查）
+- **验证**: 构建成功，CSS 变量正确使用，字体加载正常
+
 ### 2026-06-03: Worker KV 存储架构升级
 - **问题**: Worker 内嵌索引已达 706KB（接近 1MB 限制），无法继续扩展
 - **方案**: 将完整数据存储到 Cloudflare KV，Worker 仅保留轻量索引（名称+摘要+标签）
@@ -46,6 +60,32 @@
 - **影响范围**: package.json, scripts/postinstall.sh, scripts/filter-old-content.py
 
 ## Session Log
+
+### [2026-06-06] 前端设计升级（Editorial/Magazine 风格）
+- 完成:
+  - 配置字体系统（Google Fonts: Noto Serif SC + Inter）
+  - 定义 CSS 变量主题系统（颜色、阴影、过渡、间距）
+  - 增强排版样式（标题、段落、链接、引用块、列表、分隔线）
+  - 增强代码块和表格样式
+  - 增强组件样式（卡片、标签、搜索框、Explorer）
+  - 添加动效系统（淡入动画、悬停效果、滚动触发）
+  - 添加滚动动画脚本和移动端优化
+  - 最终验证和清理
+- 文件变更:
+  - `quartz.config.ts`: 字体配置
+  - `quartz/styles/custom.scss`: 所有自定义样式
+  - `design-preview.html`: 设计预览文件
+  - `docs/superpowers/specs/2026-06-06-frontend-design-upgrade.md`: 设计规范
+  - `docs/superpowers/plans/2026-06-06-frontend-design-upgrade.md`: 实施计划
+- 提交记录:
+  - `config: switch to Google Fonts (Noto Serif SC + Inter)`
+  - `style: add CSS variables theme system`
+  - `style: enhance typography with serif headers and improved spacing`
+  - `style: enhance code blocks and tables`
+  - `style: enhance component styles (cards, search, explorer)`
+  - `style: add animation system and micro-interactions`
+  - `style: add scroll animations and mobile optimizations`
+  - `feat: complete frontend design upgrade (Editorial/Magazine style)`
 
 ### [2026-06-03] Worker KV 存储架构升级
 - 完成:
@@ -88,3 +128,4 @@
 - 内容过滤: 7天自动清理 — OK
 - Worker 自动化: deploy.yaml + CF_API_TOKEN — ✅
 - KV 存储架构: 轻量索引 + KV 完整数据 — ✅
+- 前端设计升级: Editorial/Magazine 风格 — ✅

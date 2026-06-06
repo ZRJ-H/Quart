@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🧠 DogeLover 知识库",
+    pageTitle: "DogeLover 知识库",
     pageTitleSuffix: " | DogeLover Wiki",
     enableSPA: true,
     enablePopovers: true,
@@ -20,11 +20,11 @@ const config: QuartzConfig = {
     ignorePatterns: ["private", "templates", ".obsidian", ".opencode", ".claude", "node_modules", "docs/**", "wiki/entities/**", "wiki/sources/**", "wiki/concepts/**", "wiki/synthesis/**", "wiki/log*", "wiki/index*", "wiki/index", "wiki/QUICK-REFERENCE*", "wiki/STARTUP-GUIDE*", "wiki/workflow-daily-update*", "raw/**", "快捷键速查*", "AGENTS*", "MEMORY*", "GitHub项目档案/**", "GitHub 项目档案/**", "🏠 我的主页*"],
     defaultDateType: "created",
     theme: {
-      fontOrigin: "systemFonts",
-      cdnCaching: false,
+      fontOrigin: "googleFonts",
+      cdnCaching: true,
       typography: {
-        header: "system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
-        body: "system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
+        header: "Noto Serif SC, serif",
+        body: "Inter, system-ui, -apple-system, sans-serif",
         code: "SF Mono, Menlo, Consolas, monospace",
       },
       colors: {

@@ -1,5 +1,96 @@
-@use "./base.scss";
+# 前端设计升级实施计划
 
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+
+**Goal:** 将 Quartz 网站从默认样式升级为 Editorial/Magazine（杂志风）设计风格
+
+**Architecture:** 通过覆盖 `custom.scss` 添加 CSS 变量主题系统、排版增强、组件样式、动效系统；修改 `quartz.config.ts` 配置字体和主题
+
+**Tech Stack:** SCSS, CSS Variables, Google Fonts (Noto Serif SC + Inter), Intersection Observer API
+
+---
+
+## 文件结构
+
+| 文件 | 职责 | 改动类型 |
+|------|------|---------|
+| `quartz/styles/custom.scss` | 所有自定义样式覆盖 | 主要修改 |
+| `quartz.config.ts` | 字体、主题配置 | 配置修改 |
+
+---
+
+## Task 1: 配置字体系统
+
+**Files:**
+- Modify: `quartz.config.ts:22-30`
+
+- [ ] **Step 1: 读取当前配置**
+
+```bash
+cat quartz.config.ts | head -30
+```
+
+- [ ] **Step 2: 修改字体配置**
+
+将 `quartz.config.ts` 中的字体配置：
+
+```typescript
+theme: {
+  fontOrigin: "systemFonts",
+  cdnCaching: false,
+  typography: {
+    header: "system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
+    body: "system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
+    code: "SF Mono, Menlo, Consolas, monospace",
+  },
+```
+
+修改为：
+
+```typescript
+theme: {
+  fontOrigin: "googleFonts",
+  cdnCaching: true,
+  typography: {
+    header: "Noto Serif SC, serif",
+    body: "Inter, system-ui, -apple-system, sans-serif",
+    code: "SF Mono, Menlo, Consolas, monospace",
+  },
+```
+
+- [ ] **Step 3: 验证配置**
+
+```bash
+grep -A 8 "typography:" quartz.config.ts
+```
+
+Expected: 看到新的字体配置
+
+- [ ] **Step 4: Commit**
+
+```bash
+git add quartz.config.ts
+git commit -m "config: switch to Google Fonts (Noto Serif SC + Inter)"
+```
+
+---
+
+## Task 2: 定义 CSS 变量主题系统
+
+**Files:**
+- Modify: `quartz/styles/custom.scss`
+
+- [ ] **Step 1: 读取当前 custom.scss**
+
+```bash
+cat quartz/styles/custom.scss
+```
+
+- [ ] **Step 2: 添加 CSS 变量主题系统**
+
+在 `quartz/styles/custom.scss` 文件顶部添加：
+
+```scss
 /* ============================================
    CSS 变量主题系统
    ============================================ */
@@ -40,7 +131,35 @@
   --space-xl: 2rem;
   --space-2xl: 3rem;
 }
+```
 
+- [ ] **Step 3: 验证语法**
+
+```bash
+npx quartz build --directory vault-content 2>&1 | head -20
+```
+
+Expected: 构建成功，无 SCSS 语法错误
+
+- [ ] **Step 4: Commit**
+
+```bash
+git add quartz/styles/custom.scss
+git commit -m "style: add CSS variables theme system"
+```
+
+---
+
+## Task 3: 增强排版样式
+
+**Files:**
+- Modify: `quartz/styles/custom.scss`
+
+- [ ] **Step 1: 添加排版增强样式**
+
+在 `quartz/styles/custom.scss` 的 CSS 变量之后添加：
+
+```scss
 /* ============================================
    排版增强
    ============================================ */
@@ -120,7 +239,35 @@ hr {
   border: none;
   margin: var(--space-xl) 0;
 }
+```
 
+- [ ] **Step 2: 验证构建**
+
+```bash
+npx quartz build --directory vault-content 2>&1 | tail -5
+```
+
+Expected: 构建成功
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add quartz/styles/custom.scss
+git commit -m "style: enhance typography with serif headers and improved spacing"
+```
+
+---
+
+## Task 4: 增强代码块和表格样式
+
+**Files:**
+- Modify: `quartz/styles/custom.scss`
+
+- [ ] **Step 1: 添加代码块样式**
+
+在 `quartz/styles/custom.scss` 中添加：
+
+```scss
 /* ============================================
    代码块样式
    ============================================ */
@@ -148,7 +295,7 @@ pre code {
 
 /* 行内代码 */
 code {
-  font-family: monospace;
+  font-family: var(--code-font);
   background: var(--bg-secondary);
   padding: 0.15em 0.4em;
   border-radius: 4px;
@@ -188,7 +335,35 @@ tbody tr:hover {
 tbody tr:last-child td {
   border-bottom: none;
 }
+```
 
+- [ ] **Step 2: 验证构建**
+
+```bash
+npx quartz build --directory vault-content 2>&1 | tail -5
+```
+
+Expected: 构建成功
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add quartz/styles/custom.scss
+git commit -m "style: enhance code blocks and tables"
+```
+
+---
+
+## Task 5: 增强组件样式
+
+**Files:**
+- Modify: `quartz/styles/custom.scss`
+
+- [ ] **Step 1: 添加卡片组件样式**
+
+在 `quartz/styles/custom.scss` 中添加：
+
+```scss
 /* ============================================
    卡片组件样式
    ============================================ */
@@ -266,7 +441,35 @@ tbody tr:last-child td {
   background: var(--bg-secondary);
   border-radius: 4px;
 }
+```
 
+- [ ] **Step 2: 验证构建**
+
+```bash
+npx quartz build --directory vault-content 2>&1 | tail -5
+```
+
+Expected: 构建成功
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add quartz/styles/custom.scss
+git commit -m "style: enhance component styles (cards, search, explorer)"
+```
+
+---
+
+## Task 6: 添加动效系统
+
+**Files:**
+- Modify: `quartz/styles/custom.scss`
+
+- [ ] **Step 1: 添加动效样式**
+
+在 `quartz/styles/custom.scss` 中添加：
+
+```scss
 /* ============================================
    动效系统
    ============================================ */
@@ -359,14 +562,42 @@ img:hover {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--text-muted);
+  background: var(--gray);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary);
 }
+```
 
+- [ ] **Step 2: 验证构建**
+
+```bash
+npx quartz build --directory vault-content 2>&1 | tail -5
+```
+
+Expected: 构建成功
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add quartz/styles/custom.scss
+git commit -m "style: add animation system and micro-interactions"
+```
+
+---
+
+## Task 7: 添加滚动动画脚本
+
+**Files:**
+- Modify: `quartz/styles/custom.scss`
+
+- [ ] **Step 1: 添加滚动动画初始化脚本**
+
+在 `quartz/styles/custom.scss` 末尾添加：
+
+```scss
 /* ============================================
    滚动动画初始化（需配合 JS）
    ============================================ */
@@ -397,70 +628,86 @@ img:hover {
   h2 { font-size: 1.5rem; }
   h3 { font-size: 1.2rem; }
 }
+```
 
-// put your custom CSS here!
+- [ ] **Step 2: 验证最终构建**
 
-// === 防止内容溢出到侧边栏 ===
-// 必须匹配 base.scss 的 .page > #quartz-body .center 特异性
-// 否则会被 min-width: 100% 覆盖
-.page > #quartz-body .center {
-  min-width: 0;
-}
+```bash
+npx quartz build --directory vault-content 2>&1 | tail -10
+```
 
-article {
-  min-width: 0;
-  overflow-wrap: anywhere;
-  word-break: break-word;
-}
+Expected: 构建成功，无错误
 
-// 长链接全局断行（不在 @media 内）
-a {
-  word-break: break-word;
-}
+- [ ] **Step 3: 本地预览测试**
 
-// KaTeX 正文段落内：覆盖 .katex .base { white-space:nowrap; width:min-content }
-// 特异性 0,0,2,1 正好压过 KaTeX 的 0,0,2,0
-p .katex .base,
-li .katex .base,
-p .katex .strut,
-li .katex .strut {
-  display: contents;
-}
+```bash
+npx quartz build --serve --directory vault-content &
+sleep 5
+echo "预览地址: http://localhost:8080"
+```
 
-// KaTeX 内文本断行（$...$ 包裹的中英文混排）
-.katex,
-.katex * {
-  word-break: break-word;
-  overflow-wrap: anywhere;
-}
+- [ ] **Step 4: Commit**
 
-// === 移动端表格横滑 ===
-@media (max-width: 768px) {
-  table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-}
+```bash
+git add quartz/styles/custom.scss
+git commit -m "style: add scroll animations and mobile optimizations"
+```
 
-// === 手机端适配 (< 800px) ===
-@media (max-width: 800px) {
-  .article-title { font-size: 1.3rem; }
-  #quartz-body { padding: 0 0.4rem; }
-  #quartz-root .center { padding: 0 0.3rem; }
-  table { font-size: 0.78rem; }
-  td, th { padding: 4px 6px; }
-  pre, code { font-size: 0.78rem; max-width: 100%; overflow-x: auto; }
-  .breadcrumb-container { font-size: 0.82rem; }
-  footer {
-    flex-direction: column;
-    text-align: center;
-    padding: 0.8rem 0.5rem;
-    font-size: 0.78rem;
-    gap: 0.3rem;
-  }
-  .search-container { max-width: 92vw; left: 0; }
-  a { word-break: break-word; }
-  .explorer .folder-button { font-size: 0.85rem; }
-  .content-meta { font-size: 0.78rem; }
-}
+---
+
+## Task 8: 最终验证和清理
+
+**Files:**
+- None (verification only)
+
+- [ ] **Step 1: 完整构建测试**
+
+```bash
+npm ci && npx quartz build --directory vault-content
+```
+
+Expected: 构建成功，无错误
+
+- [ ] **Step 2: 检查生成的 CSS**
+
+```bash
+grep -r "var(--accent)" public/ | head -5
+```
+
+Expected: 看到 CSS 变量被正确使用
+
+- [ ] **Step 3: 检查字体加载**
+
+```bash
+grep -r "Noto Serif SC" public/ | head -3
+```
+
+Expected: 看到字体配置
+
+- [ ] **Step 4: 最终 Commit**
+
+```bash
+git add -A
+git commit -m "feat: complete frontend design upgrade (Editorial/Magazine style)"
+```
+
+---
+
+## 验证清单
+
+- [ ] 构建成功：`npm ci && npx quartz build --directory vault-content`
+- [ ] 字体加载：Noto Serif SC + Inter 正确加载
+- [ ] 配色正确：金色点缀 (#c9a84c) 出现在标签、链接悬停等位置
+- [ ] 动效正常：卡片悬停有阴影和上移效果
+- [ ] 移动端兼容：响应式布局正常
+- [ ] 功能完整：搜索、Explorer、Graph 等组件正常工作
+
+---
+
+## 风险和回退
+
+| 风险 | 影响 | 回退方案 |
+|------|------|---------|
+| 字体加载慢 | 首屏性能 | 改回 `fontOrigin: "systemFonts"` |
+| CSS 变量不兼容 | 旧浏览器 | 提供静态回退值 |
+| 样式冲突 | 组件异常 | 删除 `custom.scss` 中的对应样式 |

@@ -37,5 +37,65 @@ export default (() => {
     )
   }
 
+  SearchFilters.css = `
+  .search-filters {
+    background: var(--light);
+    border-radius: 8px;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    display: flex;
+  }
+  @media (max-width: 800px) {
+    .search-filters {
+      flex-direction: column;
+      gap: .75rem;
+    }
+  }
+  .search-filters .filter-group {
+    align-items: center;
+    gap: .5rem;
+    display: flex;
+  }
+  .search-filters .filter-group label {
+    color: var(--gray);
+    white-space: nowrap;
+    font-size: .9rem;
+  }
+  .search-filters .filter-tags,
+  .search-filters .filter-time,
+  .search-filters .filter-sort {
+    flex-wrap: wrap;
+    gap: .25rem;
+    display: flex;
+  }
+  .search-filters .filter-tag,
+  .search-filters .filter-time-btn,
+  .search-filters .filter-sort-btn {
+    border: 1px solid var(--lightgray);
+    cursor: pointer;
+    background: var(--light);
+    border-radius: 4px;
+    padding: .25rem .75rem;
+    font-size: .85rem;
+    transition: all .2s;
+    color: var(--darkgray);
+  }
+  .search-filters .filter-tag:hover,
+  .search-filters .filter-time-btn:hover,
+  .search-filters .filter-sort-btn:hover {
+    border-color: var(--secondary);
+    color: var(--secondary);
+  }
+  .search-filters .filter-tag.active,
+  .search-filters .filter-time-btn.active,
+  .search-filters .filter-sort-btn.active {
+    background: var(--secondary);
+    color: #fff;
+    border-color: var(--secondary);
+  }
+  `
+
   return SearchFilters
 }) satisfies QuartzComponentConstructor
