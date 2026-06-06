@@ -1,5 +1,46 @@
 @use "./base.scss";
 
+/* ============================================
+   CSS 变量主题系统
+   ============================================ */
+:root {
+  /* 主色调 - 蓝灰色系 */
+  --primary: #284b63;
+  --primary-light: #3a6a8a;
+  --primary-dark: #1a3446;
+  
+  /* 金色点缀 */
+  --accent: #c9a84c;
+  --accent-light: #d4b86a;
+  --accent-dark: #b0903a;
+  
+  /* 中性色 */
+  --bg: #faf8f8;
+  --bg-secondary: #f5f3f3;
+  --text: #2b2b2b;
+  --text-secondary: #4e4e4e;
+  --text-muted: #8a8a8a;
+  --border: #e5e5e5;
+  
+  /* 阴影 */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.07);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+  
+  /* 过渡 */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 400ms ease;
+  
+  /* 间距 */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+}
+
 // put your custom CSS here!
 
 // === 防止内容溢出到侧边栏 ===
