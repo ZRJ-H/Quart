@@ -129,3 +129,10 @@
 - Worker 自动化: deploy.yaml + CF_API_TOKEN — ✅
 - KV 存储架构: 轻量索引 + KV 完整数据 — ✅
 - 前端设计升级: Editorial/Magazine 风格 — ✅
+
+### [2026-06-13] 基础设施清理
+- **背景**: 项目重构 Phase 3，清理残留测试目录和旧数据文件
+- 删除 `quartz-test/` 目录（31MB 测试构建残留）
+- 删除 `worker/kv-bulk-upload.json`（1.1MB 旧 KV 批量上传文件）
+- 新建 `refactor/infra-cleanup` 分支
+- 关联仓库: Obsidian `refactor/project-restructure`（Phase 1-4 重构）
