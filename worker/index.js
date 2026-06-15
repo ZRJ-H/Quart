@@ -164,6 +164,26 @@ function detectQueryType(query) {
   return 'comprehensive'
 }
 
+// Chinese-friendly tokenizer: keep latin/digit runs whole; split CJK runs into full term plus bigrams.
+function tokenize(query) {
+  const q = (query || "").toLowerCase()
+  const tokens = new Set()
+  const segments = q.match(/[一-龥]+|[a-z0-9]+/g) || []
+  for (const seg of segments) {
+    if (/^[a-z0-9]+$/.test(seg)) {
+      tokens.add(seg)
+    } else if (seg.length <= 2) {
+      tokens.add(seg)
+    } else {
+      tokens.add(seg)
+      for (let i = 0; i < seg.length - 1; i++) {
+        tokens.add(seg.slice(i, i + 2))
+      }
+    }
+  }
+  return [...tokens].filter(Boolean)
+}
+
 function searchIndex(query, limit = 10, expandedTerms = null) {
   const today = new Date().toJSON().slice(0, 10)
 
@@ -187,6 +207,7 @@ function searchIndex(query, limit = 10, expandedTerms = null) {
   }
 
   const q = cleanQuery.toLowerCase()
+  const qWords = tokenize(cleanQuery)
 
   const scored = candidates.map((entry) => {
     let score = 0
@@ -200,7 +221,6 @@ function searchIndex(query, limit = 10, expandedTerms = null) {
     if (name === q) score += 40
 
     // 分词匹配
-    const qWords = q.split(/\s+/).filter(Boolean)
     for (const w of qWords) {
       if (name.includes(w)) score += 8
       if (tags.includes(w)) score += 8  // 标签权重从 6 提升到 8
@@ -211,7 +231,6 @@ function searchIndex(query, limit = 10, expandedTerms = null) {
 
     // 同义词扩展匹配（降权 SYNONYM_SCORE_FACTOR）
     if (expandedTerms) {
-      const qWords = q.split(/\s+/).filter(Boolean)
       for (const term of expandedTerms) {
         if (qWords.includes(term)) continue
 
@@ -397,8 +416,10 @@ function buildPrompt(query, results, fullData, queryType) {
   const sources = results
     .map((r, i) => {
       const data = fullData[r.id]
+      // 优先使用 KV full_entry 的完整正文（~800字），回退到轻量摘要（30字）
+      const body = data?.content || data?.summary || r.summary || ""
       return `[${i + 1}] ${r.name} (${r.category || r.type})
-摘要: ${data?.summary || r.summary}
+正文: ${body}
 标签: ${(data?.tags || r.tags || []).join(', ')}
 更新时间: ${r.last_updated || "?"}`
     })
@@ -628,6 +649,30 @@ export default {
         // 11. 构建 prompt 并调用 DeepSeek
         const queryType = detectQueryType(query)
         const prompt = buildPrompt(query, allResults, fullData, queryType)
+
+        // Debug: 返回结构化召回诊断（不调用 DeepSeek），用于本地评价搜索召回/排序/泛化
+        if (body.debug === true) {
+          return new Response(
+            JSON.stringify({
+              query,
+              query_type: queryType,
+              expanded_terms: expandedTerms,
+              result_count: allResults.length,
+              prompt_length: prompt.length,
+              sources: allResults.map((r) => ({
+                id: r.id,
+                name: r.name,
+                category: r.category || r.type,
+                score: Math.round((r.score || 0) * 100) / 100,
+                last_updated: r.last_updated,
+                is_related: r.is_related || false,
+                content_length: (fullData[r.id]?.content || "").length,
+              })),
+            }),
+            { headers }
+          )
+        }
+
         const answer = await callDeepSeek(prompt, env.DEEPSEEK_API_KEY)
 
         return new Response(
