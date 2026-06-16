@@ -164,31 +164,52 @@ function detectQueryType(query) {
   return 'comprehensive'
 }
 
+// Chinese-friendly tokenizer: keep latin/digit runs whole; split CJK runs into full term plus bigrams.
+function tokenize(query) {
+  const q = (query || "").toLowerCase()
+  const tokens = new Set()
+  const segments = q.match(/[一-龥]+|[a-z0-9]+/g) || []
+  for (const seg of segments) {
+    if (/^[a-z0-9]+$/.test(seg)) {
+      tokens.add(seg)
+    } else if (seg.length <= 2) {
+      tokens.add(seg)
+    } else {
+      tokens.add(seg)
+      for (let i = 0; i < seg.length - 1; i++) {
+        tokens.add(seg.slice(i, i + 2))
+      }
+    }
+  }
+  return [...tokens].filter(Boolean)
+}
+
 function searchIndex(query, limit = 10, expandedTerms = null) {
   const today = new Date().toJSON().slice(0, 10)
+  const todayMs = Date.parse(today)
 
   let cleanQuery = query
-  let timeFilter = null
+  let recencyBoost = false
 
-  if (/今日|今天/.test(cleanQuery)) {
-    timeFilter = (d) => d === today
-    cleanQuery = cleanQuery.replace(/今日|今天/g, "").trim()
+  // 时间意图：今日/今天/最新/最近/近期/这几天/本周 等 → 开启"最近度加权"
+  // 不再硬过滤+严格等于（数据稍旧即 0 召回），改为优先把近期内容排到前面
+  if (/今日|今天|最新|最近|近期|这几天|近几天|本周|这周/.test(cleanQuery)) {
+    recencyBoost = true
+    cleanQuery = cleanQuery.replace(/今日|今天|最新|最近|近期|这几天|近几天|本周|这周/g, "").trim()
   }
 
-  const candidates = timeFilter
-    ? wikiIndex.filter((e) => timeFilter(e.last_updated))
-    : wikiIndex
-
-  if (timeFilter && !cleanQuery) {
-    return candidates
+  // 纯时间查询（去掉时间词后已无关键词）：直接返回最新更新的条目
+  if (recencyBoost && !cleanQuery) {
+    return [...wikiIndex]
       .sort((a, b) => (b.last_updated || "").localeCompare(a.last_updated || ""))
       .slice(0, limit)
-      .map((e) => ({ ...e, score: 1 }))
+      .map((e, i) => ({ ...e, score: 100 - i }))
   }
 
   const q = cleanQuery.toLowerCase()
+  const qWords = tokenize(cleanQuery)
 
-  const scored = candidates.map((entry) => {
+  const scored = wikiIndex.map((entry) => {
     let score = 0
     const name = (entry.name || "").toLowerCase()
     const summary = (entry.summary || "").toLowerCase()
@@ -200,7 +221,6 @@ function searchIndex(query, limit = 10, expandedTerms = null) {
     if (name === q) score += 40
 
     // 分词匹配
-    const qWords = q.split(/\s+/).filter(Boolean)
     for (const w of qWords) {
       if (name.includes(w)) score += 8
       if (tags.includes(w)) score += 8  // 标签权重从 6 提升到 8
@@ -211,7 +231,6 @@ function searchIndex(query, limit = 10, expandedTerms = null) {
 
     // 同义词扩展匹配（降权 SYNONYM_SCORE_FACTOR）
     if (expandedTerms) {
-      const qWords = q.split(/\s+/).filter(Boolean)
       for (const term of expandedTerms) {
         if (qWords.includes(term)) continue
 
@@ -220,6 +239,13 @@ function searchIndex(query, limit = 10, expandedTerms = null) {
         const termMatches = (summary.match(new RegExp(term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "gi")) || []).length
         score += Math.min(termMatches, 3) * SCORE_CONFIG.SYNONYM_SCORE_FACTOR
       }
+    }
+
+    // 时间意图：对已匹配关键词的条目按更新时间加权，近期内容排前
+    if (recencyBoost && score > 0 && entry.last_updated) {
+      const daysAgo = (todayMs - Date.parse(entry.last_updated)) / 86400000
+      if (daysAgo <= 7) score += 10
+      else if (daysAgo <= 30) score += 4
     }
 
     return { ...entry, score }
@@ -397,8 +423,10 @@ function buildPrompt(query, results, fullData, queryType) {
   const sources = results
     .map((r, i) => {
       const data = fullData[r.id]
+      // 优先使用 KV full_entry 的完整正文（~800字），回退到轻量摘要（30字）
+      const body = data?.content || data?.summary || r.summary || ""
       return `[${i + 1}] ${r.name} (${r.category || r.type})
-摘要: ${data?.summary || r.summary}
+正文: ${body}
 标签: ${(data?.tags || r.tags || []).join(', ')}
 更新时间: ${r.last_updated || "?"}`
     })
@@ -628,6 +656,30 @@ export default {
         // 11. 构建 prompt 并调用 DeepSeek
         const queryType = detectQueryType(query)
         const prompt = buildPrompt(query, allResults, fullData, queryType)
+
+        // Debug: 返回结构化召回诊断（不调用 DeepSeek），用于本地评价搜索召回/排序/泛化
+        if (body.debug === true) {
+          return new Response(
+            JSON.stringify({
+              query,
+              query_type: queryType,
+              expanded_terms: expandedTerms,
+              result_count: allResults.length,
+              prompt_length: prompt.length,
+              sources: allResults.map((r) => ({
+                id: r.id,
+                name: r.name,
+                category: r.category || r.type,
+                score: Math.round((r.score || 0) * 100) / 100,
+                last_updated: r.last_updated,
+                is_related: r.is_related || false,
+                content_length: (fullData[r.id]?.content || "").length,
+              })),
+            }),
+            { headers }
+          )
+        }
+
         const answer = await callDeepSeek(prompt, env.DEEPSEEK_API_KEY)
 
         return new Response(
