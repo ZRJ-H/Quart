@@ -27,6 +27,8 @@ import Comments from "./Comments"
 import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
 import SourceCard from "./SourceCard"
+import ReadingProgress from "./ReadingProgress"
+import CalendarHeatmap from "./CalendarHeatmap"
 
 export {
   ArticleTitle,
@@ -58,4 +60,6 @@ export {
   Flex,
   ConditionalRender,
   SourceCard,
+  ReadingProgress,
+  CalendarHeatmap,
 }

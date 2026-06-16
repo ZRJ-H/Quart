@@ -9,6 +9,7 @@ public/
 quartz/.quartz-cache/
 quartz-test/
 tsconfig.tsbuildinfo
+vault-content/
 
 .dev.vars*
 !.dev.vars.example

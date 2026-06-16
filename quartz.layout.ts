@@ -10,7 +10,7 @@ export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
   afterBody: [],
-    footer: Component.Footer({
+  footer: Component.Footer({
     links: {
       GitHub: "https://github.com/FDogeLover/Quart",
       知识库: "https://fdogelover.github.io/Quart/",
@@ -22,11 +22,21 @@ export const sharedPageComponents: SharedLayout = {
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.ConditionalRender({
+      component: Component.ReadingProgress(),
+      condition: (page) => page.fileData.slug !== "index",
+    }),
+    Component.ConditionalRender({
       component: Component.LatestByCategory(),
       condition: (page) => page.fileData.slug === "index",
     }),
     Component.ConditionalRender({
-      component: Component.SearchAI({ workerUrl: "https://doge-wiki-search.zstufjj2004.workers.dev" }),
+      component: Component.CalendarHeatmap(),
+      condition: (page) => page.fileData.slug === "index",
+    }),
+    Component.ConditionalRender({
+      component: Component.SearchAI({
+        workerUrl: "https://doge-wiki-search.zstufjj2004.workers.dev",
+      }),
       condition: (page) => page.fileData.slug === "index",
     }),
     Component.ConditionalRender({
@@ -66,10 +76,7 @@ export const defaultContentPageLayout: PageLayout = {
     }),
     Component.Explorer({ filterFn: explorerFilter }),
   ],
-  right: [
-    Component.DesktopOnly(Component.TableOfContents()),
-    Component.Backlinks(),
-  ],
+  right: [Component.DesktopOnly(Component.TableOfContents()), Component.Backlinks()],
 }
 
 // components for pages that display lists of pages  (e.g. tags or folders)

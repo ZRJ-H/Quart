@@ -1,6 +1,15 @@
 @use "./base.scss";
 
 /* ============================================
+   页面切换动效（原生 View Transitions API）
+   SPA 已关闭（修复子路径链接 404），用浏览器原生跨文档过渡找回切换流畅感，
+   零 JS、不影响路由；不支持的浏览器（Safari/Firefox）忽略此规则，无副作用。
+   ============================================ */
+@view-transition {
+  navigation: auto;
+}
+
+/* ============================================
    CSS 变量主题系统
    ============================================ */
 :root {
@@ -8,12 +17,12 @@
   --primary: #284b63;
   --primary-light: #3a6a8a;
   --primary-dark: #1a3446;
-  
+
   /* 金色点缀 */
   --accent: #c9a84c;
   --accent-light: #d4b86a;
   --accent-dark: #b0903a;
-  
+
   /* 中性色 */
   --bg: #faf8f8;
   --bg-secondary: #f5f3f3;
@@ -21,17 +30,17 @@
   --text-secondary: #4e4e4e;
   --text-muted: #8a8a8a;
   --border: #e5e5e5;
-  
+
   /* 阴影 */
-  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
-  --shadow-md: 0 4px 6px rgba(0,0,0,0.07);
-  --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
-  
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
   /* 过渡 */
   --transition-fast: 150ms ease;
   --transition-normal: 250ms ease;
   --transition-slow: 400ms ease;
-  
+
   /* 间距 */
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
@@ -46,7 +55,12 @@
    ============================================ */
 
 /* 标题样式 */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   letter-spacing: 0.02em;
   line-height: 1.3;
   margin-top: var(--space-xl);
@@ -103,7 +117,8 @@ blockquote p {
 }
 
 /* 列表 */
-ul, ol {
+ul,
+ol {
   padding-left: var(--space-lg);
   margin-bottom: var(--space-md);
 }
@@ -169,7 +184,8 @@ table {
   overflow: hidden;
 }
 
-th, td {
+th,
+td {
   padding: var(--space-md);
   text-align: left;
   border-bottom: 1px solid var(--border);
@@ -194,7 +210,9 @@ tbody tr:last-child td {
    ============================================ */
 
 /* 通用卡片 */
-.card, .backlinks-card, .recent-notes-card {
+.card,
+.backlinks-card,
+.recent-notes-card {
   background: var(--bg-secondary);
   border-radius: 8px;
   padding: var(--space-lg);
@@ -203,7 +221,9 @@ tbody tr:last-child td {
   transition: all var(--transition-normal);
 }
 
-.card:hover, .backlinks-card:hover, .recent-notes-card:hover {
+.card:hover,
+.backlinks-card:hover,
+.recent-notes-card:hover {
   box-shadow: var(--shadow-lg);
   transform: translateY(-2px);
   border-color: var(--accent);
@@ -230,7 +250,8 @@ tbody tr:last-child td {
    搜索框样式
    ============================================ */
 
-.search-input, #search-input {
+.search-input,
+#search-input {
   border: 2px solid var(--border);
   border-radius: 8px;
   padding: var(--space-md) var(--space-lg);
@@ -239,7 +260,8 @@ tbody tr:last-child td {
   width: 100%;
 }
 
-.search-input:focus, #search-input:focus {
+.search-input:focus,
+#search-input:focus {
   outline: none;
   border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.2);
@@ -261,7 +283,8 @@ tbody tr:last-child td {
 }
 
 /* 悬停状态 */
-.explorer-item:hover, .nav-link:hover {
+.explorer-item:hover,
+.nav-link:hover {
   color: var(--accent);
   background: var(--bg-secondary);
   border-radius: 4px;
@@ -295,20 +318,30 @@ tbody tr:last-child td {
 }
 
 /* 应用动画 */
-.article-card, .backlinks-card, .recent-notes-card {
+.article-card,
+.backlinks-card,
+.recent-notes-card {
   animation: fadeIn var(--transition-slow) ease-out forwards;
 }
 
 /* 延迟动画 */
-.delay-1 { animation-delay: 100ms; }
-.delay-2 { animation-delay: 200ms; }
-.delay-3 { animation-delay: 300ms; }
+.delay-1 {
+  animation-delay: 100ms;
+}
+.delay-2 {
+  animation-delay: 200ms;
+}
+.delay-3 {
+  animation-delay: 300ms;
+}
 
 /* 滚动触发动画（配合 Intersection Observer） */
 .animate-on-scroll {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
 }
 
 .animate-on-scroll.visible {
@@ -317,23 +350,29 @@ tbody tr:last-child td {
 }
 
 /* 按钮悬停效果 */
-.btn, button {
+.btn,
+button {
   transition: all var(--transition-fast);
 }
 
-.btn:hover, button:hover {
+.btn:hover,
+button:hover {
   transform: translateY(-1px);
   box-shadow: var(--shadow-md);
 }
 
 /* 链接悬停效果 */
 a {
-  transition: color var(--transition-fast), border-color var(--transition-fast);
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast);
 }
 
 /* 图片悬停效果 */
 img {
-  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  transition:
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
   border-radius: 8px;
 }
 
@@ -372,16 +411,19 @@ img:hover {
    ============================================ */
 
 /* 为 Quartz 组件添加动画类 */
-.page-header, .article-title {
+.page-header,
+.article-title {
   animation: fadeIn var(--transition-slow) ease-out forwards;
 }
 
-.content-meta, .tag-list {
+.content-meta,
+.tag-list {
   animation: fadeIn var(--transition-slow) ease-out forwards;
   animation-delay: 100ms;
 }
 
-.toc, .backlinks {
+.toc,
+.backlinks {
   animation: fadeIn var(--transition-slow) ease-out forwards;
   animation-delay: 200ms;
 }
@@ -392,10 +434,16 @@ img:hover {
     --space-xl: 1.5rem;
     --space-2xl: 2rem;
   }
-  
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.5rem; }
-  h3 { font-size: 1.2rem; }
+
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
 }
 
 // put your custom CSS here!
@@ -445,13 +493,31 @@ li .katex .strut {
 
 // === 手机端适配 (< 800px) ===
 @media (max-width: 800px) {
-  .article-title { font-size: 1.3rem; }
-  #quartz-body { padding: 0 0.4rem; }
-  #quartz-root .center { padding: 0 0.3rem; }
-  table { font-size: 0.78rem; }
-  td, th { padding: 4px 6px; }
-  pre, code { font-size: 0.78rem; max-width: 100%; overflow-x: auto; }
-  .breadcrumb-container { font-size: 0.82rem; }
+  .article-title {
+    font-size: 1.3rem;
+  }
+  #quartz-body {
+    padding: 0 0.4rem;
+  }
+  #quartz-root .center {
+    padding: 0 0.3rem;
+  }
+  table {
+    font-size: 0.78rem;
+  }
+  td,
+  th {
+    padding: 4px 6px;
+  }
+  pre,
+  code {
+    font-size: 0.78rem;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  .breadcrumb-container {
+    font-size: 0.82rem;
+  }
   footer {
     flex-direction: column;
     text-align: center;
@@ -459,10 +525,19 @@ li .katex .strut {
     font-size: 0.78rem;
     gap: 0.3rem;
   }
-  .search-container { max-width: 92vw; left: 0; }
-  a { word-break: break-word; }
-  .explorer .folder-button { font-size: 0.85rem; }
-  .content-meta { font-size: 0.78rem; }
+  .search-container {
+    max-width: 92vw;
+    left: 0;
+  }
+  a {
+    word-break: break-word;
+  }
+  .explorer .folder-button {
+    font-size: 0.85rem;
+  }
+  .content-meta {
+    font-size: 0.78rem;
+  }
 }
 
 /* ============================================
@@ -470,11 +545,11 @@ li .katex .strut {
    修复浅色卡片/callout 在深色页面上的突兀，并营造背景分层 + 提升弱文本对比
    ============================================ */
 :root[saved-theme="dark"] {
-  --bg: #0e1116;            /* 提亮的近黑基底 */
-  --bg-secondary: #1a1f27;  /* 卡片/callout 表面层，比基底亮一档，营造纵深 */
+  --bg: #0e1116; /* 提亮的近黑基底 */
+  --bg-secondary: #1a1f27; /* 卡片/callout 表面层，比基底亮一档，营造纵深 */
   --text: #e6e8eb;
-  --text-secondary: #c5cad3;/* 提升 ~12% */
-  --text-muted: #a8aeb8;    /* 提升显著（原 #9197a0），确保标签/日期/摘要清晰 WCAG AA+ */
+  --text-secondary: #c5cad3; /* 提升 ~12% */
+  --text-muted: #a8aeb8; /* 提升显著（原 #9197a0），确保标签/日期/摘要清晰 WCAG AA+ */
   --border: #2a313b;
   /* --primary/--primary-dark 原为浅色背景设计的深蓝色，深色模式下提亮，
      否则链接、正文行内代码（如 wikilink 代码片段）几乎融进背景 */
