@@ -127,32 +127,38 @@ export default (() => {
   CalendarHeatmap.css = `
   .calendar-heatmap {
     margin-bottom: 14px;
+    width: 100%;
   }
   .cal-heatmap-grid {
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: 5px;
+    width: 100%;
   }
   .cal-heatmap-row {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
+    width: 100%;
   }
   .cal-heatmap-label {
-    font-size: 0.78rem;
+    font-size: 0.8rem;
     color: var(--gray);
-    width: 42px;
+    width: 48px;
     flex-shrink: 0;
     text-align: right;
   }
   .cal-heatmap-cells {
     display: flex;
-    gap: 3px;
+    gap: 6px;
+    flex: 1 1 auto;
+    min-width: 0;
   }
   .cal-heatmap-cell {
-    width: 22px;
-    height: 18px;
-    border-radius: 3px;
+    flex: 1 1 0;
+    min-width: 0;
+    height: 26px;
+    border-radius: 4px;
     display: inline-block;
     background: var(--lightgray);
     opacity: 0.5;
@@ -162,7 +168,7 @@ export default (() => {
     cursor: pointer;
   }
   a.cal-heatmap-cell:hover {
-    transform: scale(1.15);
+    transform: scaleY(1.15);
     opacity: 1;
   }
   .cal-heatmap-cell[data-level="0"] { background: var(--accent); opacity: 0.18; }
@@ -171,18 +177,20 @@ export default (() => {
   .cal-heatmap-cell[data-level="3"] { background: var(--accent); opacity: 0.8; }
   .cal-heatmap-cell[data-level="4"] { background: var(--accent); opacity: 1; }
   .cal-heatmap-date {
-    width: 22px;
-    font-size: 0.68rem;
+    flex: 1 1 0;
+    min-width: 0;
+    font-size: 0.72rem;
     color: var(--gray);
     text-align: center;
-    flex-shrink: 0;
+    white-space: nowrap;
   }
   .cal-heatmap-dates {
     margin-top: 1px;
   }
   @media (max-width: 800px) {
-    .cal-heatmap-cell, .cal-heatmap-date { width: 16px; }
-    .cal-heatmap-label { width: 34px; font-size: 0.72rem; }
+    .cal-heatmap-cell { height: 20px; }
+    .cal-heatmap-date { font-size: 0.62rem; }
+    .cal-heatmap-label { width: 36px; font-size: 0.72rem; }
   }
   `
   return CalendarHeatmap
