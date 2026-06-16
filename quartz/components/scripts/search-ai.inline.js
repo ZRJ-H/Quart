@@ -19,14 +19,21 @@
   // 搜索建议数据（从 wiki-index-light.json 加载）
   let suggestionsData = []
 
-  // 加载搜索建议数据
+  // 加载搜索建议数据（部署生成在站点根 /Quart/wiki-index-light.json，含 reference_count）
   async function loadSuggestionsData() {
-    try {
-      const response = await fetch('/worker/wiki-index-light.json')
-      suggestionsData = await response.json()
-    } catch (error) {
-      console.error('加载搜索建议数据失败:', error)
+    // 兼容不同基路径：优先站点根，回退旧路径
+    const candidates = ['/Quart/wiki-index-light.json', '/wiki-index-light.json', '/worker/wiki-index-light.json']
+    for (const url of candidates) {
+      try {
+        const response = await fetch(url)
+        if (!response.ok) continue
+        suggestionsData = await response.json()
+        if (Array.isArray(suggestionsData) && suggestionsData.length) return
+      } catch (error) {
+        // 尝试下一个候选路径
+      }
     }
+    console.error('加载搜索建议数据失败：所有候选路径均不可用')
   }
 
   // 获取搜索建议
