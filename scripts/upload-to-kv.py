@@ -49,7 +49,7 @@ def main():
 
     try:
         result = subprocess.run(
-            ["npx", "wrangler", "kv", "bulk", "put", tmp_path, "--namespace-id", "d61189e9b8314bd48a975bb878392614"],
+            ["npx", "wrangler", "kv", "bulk", "put", tmp_path, "--namespace-id", "d61189e9b8314bd48a975bb878392614", "--remote"],
             capture_output=True, text=True, timeout=300,
         )
         if result.returncode != 0:
