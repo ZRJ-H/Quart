@@ -476,6 +476,10 @@ li .katex .strut {
   --text-secondary: #c5cad3;/* 提升 ~12% */
   --text-muted: #a8aeb8;    /* 提升显著（原 #9197a0），确保标签/日期/摘要清晰 WCAG AA+ */
   --border: #2a313b;
+  /* --primary/--primary-dark 原为浅色背景设计的深蓝色，深色模式下提亮，
+     否则链接、正文行内代码（如 wikilink 代码片段）几乎融进背景 */
+  --primary: #8fc1e8;
+  --primary-dark: #bcd9f0;
 }
 
 /* 金色点缀扩展：链接 hover + 当前导航/目录项 */
