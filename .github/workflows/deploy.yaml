@@ -42,8 +42,8 @@ jobs:
             --light-output worker/wiki-index-light.json \
             --full-output worker/wiki-data-full.json \
             -o worker/wiki-data.json
-          cd worker && python3 ../scripts/upload-to-kv.py wiki-data-full.json
-          npx wrangler deploy
+          python3 scripts/upload-to-kv.py worker/wiki-data-full.json
+          npx wrangler deploy --config worker/wrangler.toml
       - name: Generate and upload embeddings
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
@@ -63,10 +63,6 @@ jobs:
               f.write('\n'.join(ndjson_lines))
           "
           cd worker && npx wrangler vectorize insert wiki-embeddings --file=/tmp/embeddings.ndjson
-      - name: Copy monitoring dashboard
-        run: |
-          mkdir -p public/monitoring
-          cp -r monitoring/* public/monitoring/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
