@@ -379,7 +379,8 @@
 
     container.style.display = 'block'
 
-    list.innerHTML = history.map(item => {
+    // 首页只展示最近 3 条，避免搜索历史占满首屏、压住内容入口
+    list.innerHTML = history.slice(0, 3).map(item => {
       const time = formatTime(item.timestamp)
       return `
         <div class="history-item" data-query="${item.query}">

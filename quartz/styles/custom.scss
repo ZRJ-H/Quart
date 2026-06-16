@@ -195,7 +195,7 @@ tbody tr:last-child td {
 
 /* 通用卡片 */
 .card, .backlinks-card, .recent-notes-card {
-  background: white;
+  background: var(--bg-secondary);
   border-radius: 8px;
   padding: var(--space-lg);
   box-shadow: var(--shadow-sm);
@@ -463,4 +463,29 @@ li .katex .strut {
   a { word-break: break-word; }
   .explorer .folder-button { font-size: 0.85rem; }
   .content-meta { font-size: 0.78rem; }
+}
+
+/* ============================================
+   深色模式：覆盖自定义变量
+   修复浅色卡片/callout 在深色页面上的突兀，并营造背景分层 + 提升弱文本对比
+   ============================================ */
+:root[saved-theme="dark"] {
+  --bg: #0e1116;            /* 提亮的近黑基底 */
+  --bg-secondary: #1a1f27;  /* 卡片/callout 表面层，比基底亮一档，营造纵深 */
+  --text: #e6e8eb;
+  --text-secondary: #b6bbc2;
+  --text-muted: #9197a0;    /* 比原 #8a8a8a 略提，改善标签/日期等弱文本可读性 */
+  --border: #2a313b;
+}
+
+/* 金色点缀扩展：链接 hover + 当前导航/目录项 */
+a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+.explorer a.active,
+.explorer .folder-button.active,
+.toc a.in-view,
+.toc a.active {
+  color: var(--accent);
 }
