@@ -473,8 +473,8 @@ li .katex .strut {
   --bg: #0e1116;            /* 提亮的近黑基底 */
   --bg-secondary: #1a1f27;  /* 卡片/callout 表面层，比基底亮一档，营造纵深 */
   --text: #e6e8eb;
-  --text-secondary: #b6bbc2;
-  --text-muted: #9197a0;    /* 比原 #8a8a8a 略提，改善标签/日期等弱文本可读性 */
+  --text-secondary: #c5cad3;/* 提升 ~12% */
+  --text-muted: #a8aeb8;    /* 提升显著（原 #9197a0），确保标签/日期/摘要清晰 WCAG AA+ */
   --border: #2a313b;
 }
 
