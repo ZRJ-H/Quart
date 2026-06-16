@@ -424,6 +424,17 @@ async function fetchFullData(kv, ids) {
   return data
 }
 
+// 卡片摘要：去掉与标题重复的首行、前导空行，保留换行结构（前端用 pre-line 渲染）
+function cardSnippet(content, name, limit = 150) {
+  if (!content) return ""
+  const lines = content.split("\n")
+  if (lines.length && lines[0].trim() === (name || "").trim()) {
+    lines.shift()
+  }
+  while (lines.length && !lines[0].trim()) lines.shift()
+  return lines.join("\n").replace(/\n{2,}/g, "\n").trim().slice(0, limit)
+}
+
 function buildPrompt(query, results, fullData, queryType) {
   const today = new Date().toJSON().slice(0, 10)
   const sources = results
@@ -695,7 +706,7 @@ export default {
               id: r.id,
               name: r.name,
               category: r.category || r.type,
-              summary: (fullData[r.id]?.content || "").slice(0, 120) || r.summary,
+              summary: cardSnippet(fullData[r.id]?.content, r.name) || r.summary,
               last_updated: r.last_updated,
               tags: fullData[r.id]?.tags || r.tags || [],
               score: r.score,

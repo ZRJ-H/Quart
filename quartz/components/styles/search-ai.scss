@@ -240,9 +240,15 @@
   }
 
   .source-card-summary {
-    font-size: 0.9rem;
-    color: var(--dark);
-    line-height: 1.5;
+    font-size: 0.85rem;
+    color: var(--gray);
+    line-height: 1.55;
+    margin-top: 8px;
+    white-space: pre-line;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 }
 
