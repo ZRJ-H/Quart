@@ -541,6 +541,7 @@ export default {
       return new Response(
         JSON.stringify({
           ok: true,
+          version: "2026-06-16-d",
           pages: wikiIndex.length,
           mode: "light-index + kv + vectorize",
           vectorize: !!env.VECTORIZE,

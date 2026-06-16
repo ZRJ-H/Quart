@@ -141,7 +141,13 @@ def build_index(vault_dir):
             # 分类缺失时回退到类型，避免空分类导致筛选/图标失效
             category = fm.get("category", "") or entry_type
             first_seen = fm.get("first_seen", "")
-            last_updated = fm.get("last_updated", "")
+            # last_updated 回退链：frontmatter → first_seen → 文件名内日期
+            # （新闻类 source 常无 last_updated 字段，但文件名含 YYYY-MM-DD）
+            last_updated = fm.get("last_updated", "") or first_seen
+            if not last_updated:
+                date_match = re.search(r"\d{4}-\d{2}-\d{2}", fname)
+                if date_match:
+                    last_updated = date_match.group(0)
             source_type = fm.get("source_type", "")
 
             full_content, summary = clean_content(body)
