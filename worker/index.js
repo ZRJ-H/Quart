@@ -247,11 +247,15 @@ function searchIndex(query, limit = 10, expandedTerms = null) {
       }
     }
 
-    // 时间意图：对已匹配关键词的条目按更新时间加权，近期内容排前
+    // 时间意图：对已匹配关键词的条目按更新时间梯度加权，越新越靠前
+    // 强梯度确保「今日/昨日」内容压过仅名称含关键词的旧条目（如老的"新闻机构"）
     if (recencyBoost && score > 0 && entry.last_updated) {
       const daysAgo = (todayMs - Date.parse(entry.last_updated)) / 86400000
-      if (daysAgo <= 7) score += 10
-      else if (daysAgo <= 30) score += 4
+      if (daysAgo <= 1) score += 40
+      else if (daysAgo <= 2) score += 28
+      else if (daysAgo <= 4) score += 16
+      else if (daysAgo <= 7) score += 8
+      else if (daysAgo <= 30) score += 3
     }
 
     return { ...entry, score }
