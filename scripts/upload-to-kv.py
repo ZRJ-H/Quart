@@ -53,6 +53,11 @@ def main():
             capture_output=True, text=True, timeout=300,
         )
         if result.returncode != 0:
+            # KV 免费版每日写入额度（code 10048）属可恢复错误：
+            # 降级为警告，不阻断后续的 worker 部署（KV 数据将在额度重置后的下次部署更新）
+            if "usage limit" in result.stderr or "10048" in result.stderr:
+                print(f"WARNING: KV 写入触达每日额度，跳过本次 KV 更新（worker 仍会部署）:\n{result.stderr}", file=sys.stderr)
+                return
             print(f"ERROR: wrangler kv bulk put failed:\n{result.stderr}", file=sys.stderr)
             sys.exit(1)
         print(f"Successfully uploaded {len(entries)} entries to KV")
