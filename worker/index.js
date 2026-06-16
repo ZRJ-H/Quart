@@ -541,7 +541,7 @@ export default {
       return new Response(
         JSON.stringify({
           ok: true,
-          version: "2026-06-16-d",
+          version: "2026-06-16-e",
           pages: wikiIndex.length,
           mode: "light-index + kv + vectorize",
           vectorize: !!env.VECTORIZE,
@@ -711,7 +711,7 @@ export default {
               id: r.id,
               name: r.name,
               category: r.category || r.type,
-              summary: cardSnippet(fullData[r.id]?.content, r.name) || r.summary,
+              summary: cardSnippet(fullData[r.id]?.content || r.summary, r.name),
               last_updated: r.last_updated,
               tags: fullData[r.id]?.tags || r.tags || [],
               score: r.score,
