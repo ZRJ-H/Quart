@@ -81,14 +81,21 @@ def main():
     unchanged = len(entries) - len(kv_entries)
     print(f"共 {len(entries)} 条；需上传 {len(kv_entries)} 条（变化/新增），跳过 {unchanged} 条未变")
 
-    if not kv_entries:
-        print("KV 已是最新，无需上传。")
-        return
-
     if len(kv_entries) > MAX_WRITES_PER_RUN:
         print(f"变化 {len(kv_entries)} 条超过单次上限 {MAX_WRITES_PER_RUN}（免费版每日额度），"
               f"本次只传前 {MAX_WRITES_PER_RUN} 条，其余下次部署继续")
         kv_entries = kv_entries[:MAX_WRITES_PER_RUN]
+
+    # 写出本次处理的变化 id 列表（供增量嵌入步骤复用，只嵌变化条目）；空也写便于下游判断
+    changed_out = os.environ.get("CHANGED_IDS_OUT")
+    if changed_out:
+        with open(changed_out, "w", encoding="utf-8") as cf:
+            json.dump([e["key"] for e in kv_entries], cf, ensure_ascii=False)
+        print(f"已写出 {len(kv_entries)} 个变化 id → {changed_out}（供增量嵌入）")
+
+    if not kv_entries:
+        print("KV 已是最新，无需上传。")
+        return
 
     with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False, encoding="utf-8") as tmp:
         json.dump(kv_entries, tmp, ensure_ascii=False)

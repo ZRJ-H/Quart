@@ -37,6 +37,7 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
           DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
+          CHANGED_IDS_OUT: /tmp/changed-ids.json
         run: |
           python3 scripts/build-wiki-index.py vault-content \
             --light-output worker/wiki-index-light.json \
@@ -49,20 +50,17 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
           DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
         run: |
-          pip install dashscope
-          python3 vault-content/scripts/build-embeddings.py worker/wiki-data-full.json -o embeddings.json
-          python3 -c "
-          import json
-          with open('embeddings.json') as f:
-              embeddings = json.load(f)
-          ndjson_lines = []
-          for page_id, vector in embeddings.items():
-              truncated_id = page_id.encode('utf-8')[:64].decode('utf-8', errors='ignore')
-              ndjson_lines.append(json.dumps({'id': truncated_id, 'values': vector}))
-          with open('/tmp/embeddings.ndjson', 'w') as f:
-              f.write('\n'.join(ndjson_lines))
-          "
-          cd worker && npx wrangler vectorize insert wiki-embeddings --file=/tmp/embeddings.ndjson
+          # 增量嵌入：只对本次变化条目（upload-to-kv 写出的 id 列表）重算向量
+          COUNT=$(python3 scripts/filter-changed.py worker/wiki-data-full.json /tmp/changed-ids.json /tmp/changed-data.json)
+          echo "本次需嵌入变化条目: $COUNT"
+          if [ "$COUNT" -eq 0 ]; then
+            echo "无变化条目，跳过嵌入与向量更新"
+          else
+            pip install dashscope
+            python3 vault-content/scripts/build-embeddings.py /tmp/changed-data.json -o embeddings.json
+            python3 scripts/embeddings-to-ndjson.py embeddings.json /tmp/embeddings.ndjson
+            cd worker && npx wrangler vectorize upsert wiki-embeddings --file=/tmp/embeddings.ndjson
+          fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
