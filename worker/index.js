@@ -186,30 +186,30 @@ function tokenize(query) {
 
 function searchIndex(query, limit = 10, expandedTerms = null) {
   const today = new Date().toJSON().slice(0, 10)
+  const todayMs = Date.parse(today)
 
   let cleanQuery = query
-  let timeFilter = null
+  let recencyBoost = false
 
-  if (/今日|今天/.test(cleanQuery)) {
-    timeFilter = (d) => d === today
-    cleanQuery = cleanQuery.replace(/今日|今天/g, "").trim()
+  // 时间意图：今日/今天/最新/最近/近期/这几天/本周 等 → 开启"最近度加权"
+  // 不再硬过滤+严格等于（数据稍旧即 0 召回），改为优先把近期内容排到前面
+  if (/今日|今天|最新|最近|近期|这几天|近几天|本周|这周/.test(cleanQuery)) {
+    recencyBoost = true
+    cleanQuery = cleanQuery.replace(/今日|今天|最新|最近|近期|这几天|近几天|本周|这周/g, "").trim()
   }
 
-  const candidates = timeFilter
-    ? wikiIndex.filter((e) => timeFilter(e.last_updated))
-    : wikiIndex
-
-  if (timeFilter && !cleanQuery) {
-    return candidates
+  // 纯时间查询（去掉时间词后已无关键词）：直接返回最新更新的条目
+  if (recencyBoost && !cleanQuery) {
+    return [...wikiIndex]
       .sort((a, b) => (b.last_updated || "").localeCompare(a.last_updated || ""))
       .slice(0, limit)
-      .map((e) => ({ ...e, score: 1 }))
+      .map((e, i) => ({ ...e, score: 100 - i }))
   }
 
   const q = cleanQuery.toLowerCase()
   const qWords = tokenize(cleanQuery)
 
-  const scored = candidates.map((entry) => {
+  const scored = wikiIndex.map((entry) => {
     let score = 0
     const name = (entry.name || "").toLowerCase()
     const summary = (entry.summary || "").toLowerCase()
@@ -239,6 +239,13 @@ function searchIndex(query, limit = 10, expandedTerms = null) {
         const termMatches = (summary.match(new RegExp(term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "gi")) || []).length
         score += Math.min(termMatches, 3) * SCORE_CONFIG.SYNONYM_SCORE_FACTOR
       }
+    }
+
+    // 时间意图：对已匹配关键词的条目按更新时间加权，近期内容排前
+    if (recencyBoost && score > 0 && entry.last_updated) {
+      const daysAgo = (todayMs - Date.parse(entry.last_updated)) / 86400000
+      if (daysAgo <= 7) score += 10
+      else if (daysAgo <= 30) score += 4
     }
 
     return { ...entry, score }
