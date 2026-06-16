@@ -9,6 +9,24 @@
 
 ## Decision Log
 
+### 2026-06-16: 搜索质量优化 + 部署管道修复
+- **背景**: 线上搜索对中文连写词/时间词大面积 0 召回；排查发现部署管道根本没更新搜索 worker
+- **搜索优化**:
+  - 中文分词 `tokenize()`: 英文/数字段整体 + 中文段 bigram 滑窗，修复「AI项目」「claude动态」连写 0 召回
+  - 时间意图: 今日/最新/最近/本周 → 最近度加权（非严格等于），修复「今日」0 召回
+  - `buildPrompt` 改用 KV 完整正文（~800字）替代恒为 undefined 的 30 字 summary
+  - 内嵌同义词词典 `worker/synonyms.json`（AI/人工智能、Claude/Anthropic 等），KV 可叠加
+  - `reference_count` 按反向链接统计（build-wiki-index 两遍扫描），激活质量排序
+  - category 缺失回退到 type；源卡片摘要改用 KV 正文片段（120字）
+  - 前端: 空结果显示热门主题建议 + 补全分类图标
+- **部署管道 4 个隐藏 bug（关键，易复踩）**:
+  1. 根目录 `wrangler.jsonc`(jackyzha0-quartz，Quartz 模板残留)被 git 跟踪后，CI 的 `wrangler deploy` 一直部署它而非 worker/wrangler.toml 的 doge-wiki-search → **删除根 wrangler.jsonc**
+  2. `upload-to-kv.py` 缺 `--remote`，wrangler 4.x 默认写 CI 本地模拟 KV → 加 `--remote`
+  3. KV 免费版每日写入额度(code 10048)失败 + `set -e` 会阻断后续 worker 部署 → upload-to-kv 把额度类错误降级为警告
+  4. 前端建议 fetch `/worker/wiki-index-light.json` 在 /Quart/ 基路径下 404 → 改为站点根候选路径
+- **约束**: deploy.yaml 是 workflow 文件，OAuth/gh token 无 workflow scope 无法 push；上述修复均走非 workflow 文件
+- **影响范围**: worker/index.js, worker/synonyms.json, scripts/build-wiki-index.py, scripts/upload-to-kv.py, quartz/components/scripts/search-ai.inline.js, 删除根 wrangler.jsonc
+
 ### 2026-06-06: 前端设计升级（Editorial/Magazine 风格）
 - **问题**: 默认 Quartz 样式较保守，缺乏视觉特色
 - **方案**: 采用 Editorial/Magazine（杂志风）设计风格，渐进式增强
