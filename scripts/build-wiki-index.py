@@ -106,6 +106,10 @@ def build_index(vault_dir):
         print(f"Wiki dir not found: {wiki_dir}", file=sys.stderr)
         return light_entries, full_entries
 
+    link_re = re.compile(r"\[\[([^\]|]+)(?:\|[^\]]*)?\]\]")
+    link_counter = {}
+    staged = []  # (light_entry, full_entry, name)
+
     for subdir in ["entities", "concepts", "sources", "synthesis"]:
         path = os.path.join(wiki_dir, subdir)
         if not os.path.isdir(path):
@@ -121,6 +125,12 @@ def build_index(vault_dir):
             if len(body) < 20:
                 continue
 
+            # 统计出链，用于按反向链接数计算 reference_count
+            for target in link_re.findall(body):
+                t = target.strip()
+                if t:
+                    link_counter[t] = link_counter.get(t, 0) + 1
+
             name = fm.get("name", fm.get("title", fname.replace(".md", "")))
             tags = fm.get("tags", [])
             if isinstance(tags, str):
@@ -128,7 +138,8 @@ def build_index(vault_dir):
 
             entry_id = f"{subdir}/{fname.replace('.md', '')}"
             entry_type = fm.get("type", subdir.rstrip("s"))
-            category = fm.get("category", "")
+            # 分类缺失时回退到类型，避免空分类导致筛选/图标失效
+            category = fm.get("category", "") or entry_type
             first_seen = fm.get("first_seen", "")
             last_updated = fm.get("last_updated", "")
             source_type = fm.get("source_type", "")
@@ -144,8 +155,6 @@ def build_index(vault_dir):
                 "last_updated": last_updated,
                 "summary": summary,
             }
-            light_entries.append(light_entry)
-
             full_entry = {
                 "id": entry_id,
                 "type": entry_type,
@@ -157,7 +166,15 @@ def build_index(vault_dir):
                 "last_updated": last_updated,
                 "source_type": source_type,
             }
-            full_entries.append(full_entry)
+            staged.append((light_entry, full_entry, str(name)))
+
+    # 第二遍：reference_count = 指向该页面名称的反向链接数
+    for light_entry, full_entry, name in staged:
+        rc = link_counter.get(name, 0)
+        light_entry["reference_count"] = rc
+        full_entry["reference_count"] = rc
+        light_entries.append(light_entry)
+        full_entries.append(full_entry)
 
     return light_entries, full_entries
 

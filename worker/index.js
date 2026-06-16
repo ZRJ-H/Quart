@@ -1,4 +1,5 @@
 import wikiIndex from "./wiki-index-light.json"
+import bundledSynonyms from "./synonyms.json"
 
 const DEEPSEEK_URL = "https://api.deepseek.com/v1/chat/completions"
 
@@ -7,51 +8,56 @@ let synonymsCache = null
 let synonymsCacheTime = 0
 const SYNONYMS_CACHE_TTL = 3600 * 1000  // 1小时缓存
 
+function buildReverseIndex(data) {
+  const reverseIndex = {}
+  for (const [key, values] of Object.entries(data)) {
+    if (!Array.isArray(values)) continue
+
+    const allWords = [key, ...values].map(w => w.toLowerCase())
+    // 对包含空格的词进行分词，把每个单词都加入索引
+    const allTokens = new Set()
+    for (const word of allWords) {
+      allTokens.add(word)
+      // 分词：把 "ai agent" 拆分成 "ai" 和 "agent"
+      if (word.includes(' ')) {
+        for (const token of word.split(/\s+/)) {
+          if (token.length >= 2) allTokens.add(token)
+        }
+      }
+    }
+
+    for (const token of allTokens) {
+      if (!reverseIndex[token]) {
+        reverseIndex[token] = new Set()
+      }
+      for (const related of allWords) {
+        reverseIndex[token].add(related.toLowerCase())
+      }
+    }
+  }
+  return reverseIndex
+}
+
 async function loadSynonyms(kv) {
   const now = Date.now()
   if (synonymsCache && (now - synonymsCacheTime) < SYNONYMS_CACHE_TTL) {
     return synonymsCache
   }
 
+  // 以内嵌词典为基础，KV 中的自定义同义词可叠加覆盖（KV 为空也能工作）
+  let forward = { ...bundledSynonyms }
   try {
-    const data = await kv.get('synonyms', 'json')
-    if (data) {
-      const reverseIndex = {}
-      for (const [key, values] of Object.entries(data)) {
-        if (!Array.isArray(values)) continue
-
-        const allWords = [key, ...values].map(w => w.toLowerCase())
-        // 对包含空格的词进行分词，把每个单词都加入索引
-        const allTokens = new Set()
-        for (const word of allWords) {
-          allTokens.add(word)
-          // 分词：把 "ai agent" 拆分成 "ai" 和 "agent"
-          if (word.includes(' ')) {
-            for (const token of word.split(/\s+/)) {
-              if (token.length >= 2) allTokens.add(token)
-            }
-          }
-        }
-        
-        for (const token of allTokens) {
-          if (!reverseIndex[token]) {
-            reverseIndex[token] = new Set()
-          }
-          for (const related of allWords) {
-            reverseIndex[token].add(related.toLowerCase())
-          }
-        }
-      }
-
-      synonymsCache = { forward: data, reverse: reverseIndex }
-      synonymsCacheTime = now
-      return synonymsCache
+    const kvData = kv ? await kv.get('synonyms', 'json') : null
+    if (kvData && typeof kvData === 'object') {
+      forward = { ...forward, ...kvData }
     }
   } catch (err) {
-    console.error('Failed to load synonyms:', err.message)
+    console.error('Failed to load synonyms from KV:', err.message)
   }
 
-  return { forward: {}, reverse: {} }
+  synonymsCache = { forward, reverse: buildReverseIndex(forward) }
+  synonymsCacheTime = now
+  return synonymsCache
 }
 
 function expandQuery(query, synonyms) {
@@ -689,7 +695,7 @@ export default {
               id: r.id,
               name: r.name,
               category: r.category || r.type,
-              summary: fullData[r.id]?.summary || r.summary,
+              summary: (fullData[r.id]?.content || "").slice(0, 120) || r.summary,
               last_updated: r.last_updated,
               tags: fullData[r.id]?.tags || r.tags || [],
               score: r.score,

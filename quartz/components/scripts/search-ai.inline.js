@@ -102,14 +102,25 @@
 
   const CATEGORY_ICONS = {
     'companies': '🏢',
+    'organizations': '🏢',
+    'business': '💼',
     'people': '👤',
     'projects': '📦',
     'technologies': '⚙️',
+    'technical': '⚙️',
+    'tools': '🔧',
     'events': '📅',
     'policies': '📜',
-    'tools': '🔧',
+    'policy': '📜',
     'markets': '📈',
-    'ai-agents': '🤖'
+    'trend': '📈',
+    'ai-agents': '🤖',
+    'concepts': '💡',
+    'concept': '💡',
+    'entity': '🔖',
+    'source': '📰',
+    'sources': '📰',
+    'synthesis': '🧩'
   }
 
   function getCategoryIcon(category) {
@@ -177,6 +188,30 @@
     `
   }
 
+  function renderEmptyState() {
+    let picks = []
+    if (suggestionsData && suggestionsData.length) {
+      picks = [...suggestionsData]
+        .sort((a, b) => (b.reference_count || 0) - (a.reference_count || 0))
+        .slice(0, 8)
+        .map(e => e.name)
+    }
+    if (!picks.length) return ""
+    const chips = picks.map(n =>
+      `<button class="empty-suggestion" data-q="${escapeHtml(n)}" style="margin:4px;padding:6px 12px;border:1px solid var(--lightgray,#ccc);border-radius:16px;background:transparent;color:inherit;cursor:pointer;font-size:0.85em;">${escapeHtml(n)}</button>`
+    ).join('')
+    return `<div class="ai-empty-state" style="padding:8px 0;"><p style="opacity:0.7;margin-bottom:8px;">换个说法，或试试这些热门主题：</p><div>${chips}</div></div>`
+  }
+
+  function bindEmptySuggestions() {
+    document.querySelectorAll('.empty-suggestion').forEach(b => {
+      b.addEventListener('click', () => {
+        input.value = b.dataset.q
+        doSearch()
+      })
+    })
+  }
+
   async function doSearch() {
     const query = input.value.trim()
     if (!query) return
@@ -217,6 +252,9 @@
       answer.innerHTML = simpleMarkdown(data.answer)
       if (data.sources && data.sources.length > 0) {
         sources.innerHTML = renderSourceCards(data.sources)
+      } else {
+        sources.innerHTML = renderEmptyState()
+        bindEmptySuggestions()
       }
       results.style.display = "grid"
     } catch (err) {
