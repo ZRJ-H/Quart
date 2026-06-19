@@ -308,6 +308,8 @@
     })
   }
 
+  let currentAbortController = null
+
   async function doSearch() {
     const query = input.value.trim()
     if (!query) return
@@ -315,6 +317,9 @@
       status.textContent = "请至少输入2个字"
       return
     }
+
+    if (currentAbortController) currentAbortController.abort()
+    currentAbortController = new AbortController()
 
     currentQuery = query
     btn.disabled = true
@@ -327,38 +332,77 @@
       const resp = await fetch(`${workerUrl}/api/search`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          query,
-          filters: currentFilters,
-          sort: currentSort,
-        }),
+        body: JSON.stringify({ query, filters: currentFilters, sort: currentSort }),
+        signal: currentAbortController.signal,
       })
-      const data = await resp.json()
 
-      if (data.error) {
+      if (!resp.ok) {
         status.textContent = ""
-        answer.innerHTML = `<div class="ai-error">${data.error}</div>`
+        answer.innerHTML = `<div class="ai-error">请求失败: ${resp.status}</div>`
         results.style.display = "grid"
-        btn.disabled = false
         return
+      }
+
+      const reader = resp.body.getReader()
+      const decoder = new TextDecoder()
+      let buffer = '', answerText = '', renderPending = false
+
+      function scheduleRender() {
+        if (renderPending) return
+        renderPending = true
+        requestAnimationFrame(() => {
+          answer.innerHTML = simpleMarkdown(answerText) + '<span class="stream-cursor">▌</span>'
+          renderPending = false
+        })
       }
 
       status.textContent = ""
 
-      answer.innerHTML = simpleMarkdown(data.answer)
-      if (data.sources && data.sources.length > 0) {
-        sources.innerHTML = renderSourceCards(data.sources)
-      } else {
-        sources.innerHTML = renderEmptyState()
-        bindEmptySuggestions()
+      while (true) {
+        const { done, value } = await reader.read()
+        if (done) break
+        buffer += decoder.decode(value, { stream: true })
+        const lines = buffer.split('\n')
+        buffer = lines.pop()
+
+        for (const line of lines) {
+          if (!line.startsWith('data: ')) continue
+          try {
+            const event = JSON.parse(line.slice(6).trim())
+            if (event.type === 'sources') {
+              if (event.sources && event.sources.length > 0) {
+                sources.innerHTML = renderSourceCards(event.sources)
+              } else {
+                sources.innerHTML = renderEmptyState()
+                bindEmptySuggestions()
+              }
+              results.style.display = 'grid'
+              answer.innerHTML = '<p class="stream-generating">正在生成回答...</p>'
+            } else if (event.type === 'chunk') {
+              answerText += event.text
+              scheduleRender()
+            } else if (event.type === 'done') {
+              answer.innerHTML = simpleMarkdown(answerText)
+              addSearchHistory(query)
+            } else if (event.type === 'error') {
+              answer.innerHTML = `<div class="ai-error">${escapeHtml(event.message)}</div>`
+            }
+          } catch {}
+        }
       }
-      results.style.display = "grid"
+
+      if (answerText && !answer.querySelector('.ai-error') && !answer.querySelector('.stream-cursor')) {
+        answer.innerHTML = simpleMarkdown(answerText)
+      }
+
     } catch (err) {
+      if (err.name === 'AbortError') return
       status.textContent = ""
       answer.innerHTML = `<div class="ai-error">请求失败: ${err.message}</div>`
       results.style.display = "grid"
     } finally {
       btn.disabled = false
+      currentAbortController = null
     }
   }
 
@@ -507,9 +551,6 @@
     const query = input.value.trim()
     if (!query || query.length < 2) return
     await _originalDoSearch()
-    if (!answer.querySelector(".ai-error")) {
-      addSearchHistory(query)
-    }
   }
 
   btn.addEventListener("click", doSearch)

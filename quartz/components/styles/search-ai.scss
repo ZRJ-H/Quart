@@ -467,3 +467,18 @@
     padding: 8px 10px;
   }
 }
+
+.stream-cursor {
+  display: inline-block;
+  animation: stream-blink 0.9s step-end infinite;
+  opacity: 1;
+}
+
+@keyframes stream-blink {
+  50% { opacity: 0; }
+}
+
+.stream-generating {
+  opacity: 0.5;
+  font-style: italic;
+}

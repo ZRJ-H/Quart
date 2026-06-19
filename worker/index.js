@@ -522,6 +522,71 @@ async function callDeepSeek(prompt, apiKey) {
   return data.choices[0].message.content
 }
 
+async function streamDeepSeek(prompt, apiKey, writer, encoder) {
+  try {
+    const resp = await fetch(DEEPSEEK_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({
+        model: "deepseek-chat",
+        messages: [{ role: "user", content: prompt }],
+        temperature: 0.5,
+        max_tokens: 2500,
+        stream: true,
+      }),
+    })
+
+    if (!resp.ok) {
+      const err = await resp.text()
+      await writer.write(encoder.encode(
+        `data: ${JSON.stringify({ type: 'error', message: `DeepSeek ${resp.status}` })}\n\n`
+      ))
+      return
+    }
+
+    const reader = resp.body.getReader()
+    const decoder = new TextDecoder()
+    let buffer = ''
+
+    while (true) {
+      const { done, value } = await reader.read()
+      if (done) break
+      buffer += decoder.decode(value, { stream: true })
+      const lines = buffer.split('\n')
+      buffer = lines.pop()
+
+      for (const line of lines) {
+        if (!line.startsWith('data: ')) continue
+        const data = line.slice(6).trim()
+        if (data === '[DONE]') {
+          await writer.write(encoder.encode(`data: ${JSON.stringify({ type: 'done' })}\n\n`))
+          return
+        }
+        try {
+          const delta = JSON.parse(data).choices?.[0]?.delta?.content
+          if (delta) {
+            await writer.write(encoder.encode(
+              `data: ${JSON.stringify({ type: 'chunk', text: delta })}\n\n`
+            ))
+          }
+        } catch {}
+      }
+    }
+    await writer.write(encoder.encode(`data: ${JSON.stringify({ type: 'done' })}\n\n`))
+  } catch (err) {
+    try {
+      await writer.write(encoder.encode(
+        `data: ${JSON.stringify({ type: 'error', message: err.message })}\n\n`
+      ))
+    } catch {}
+  } finally {
+    try { await writer.close() } catch {}
+  }
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url)
@@ -702,11 +767,14 @@ export default {
           )
         }
 
-        const answer = await callDeepSeek(prompt, env.DEEPSEEK_API_KEY)
+        // SSE streaming: send sources immediately, stream answer
+        const { readable, writable } = new TransformStream()
+        const writer = writable.getWriter()
+        const encoder = new TextEncoder()
 
-        return new Response(
-          JSON.stringify({
-            answer,
+        await writer.write(encoder.encode(
+          `data: ${JSON.stringify({
+            type: 'sources',
             sources: allResults.map((r) => ({
               id: r.id,
               name: r.name,
@@ -718,21 +786,21 @@ export default {
               quality_score: r.quality_score || calculateQualityScore(r),
               reference_count: fullData[r.id]?.reference_count || 0,
               is_related: r.is_related || false
-            })),
-            metadata: {
-              total: allResults.length,
-              query_type: queryType,
-              expanded_terms: expandedTerms.length > 1 ? expandedTerms : undefined,
-              vector_search: vectorResults.length > 0,
-              scoring: {
-                max_score: allResults.length > 0 ? Math.max(...allResults.map(r => r.score)) : 0,
-                min_score: allResults.length > 0 ? Math.min(...allResults.map(r => r.score)) : 0,
-                threshold_used: SCORE_CONFIG.MIN_THRESHOLD
-              }
-            }
-          }),
-          { headers }
-        )
+            }))
+          })}\n\n`
+        ))
+
+        streamDeepSeek(prompt, env.DEEPSEEK_API_KEY, writer, encoder)
+          .catch(err => writer.abort(err))
+
+        return new Response(readable, {
+          headers: {
+            'Content-Type': 'text/event-stream',
+            'Cache-Control': 'no-cache',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Headers': 'Content-Type',
+          }
+        })
       } catch (err) {
         return new Response(
           JSON.stringify({ error: err.message }),
