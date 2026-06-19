@@ -176,6 +176,39 @@
     return svgIcon(CATEGORY_ICONS[category] || "file")
   }
 
+  function convertMarkdownTables(text) {
+    const lines = text.split('\n')
+    const result = []
+    let i = 0
+    while (i < lines.length) {
+      const line = lines[i]
+      if (i + 1 < lines.length &&
+          line.trim().startsWith('|') && line.trim().endsWith('|') &&
+          /^\|[\s|:\-]+\|$/.test(lines[i + 1].trim())) {
+        const tableLines = []
+        while (i < lines.length && lines[i].trim().startsWith('|')) {
+          tableLines.push(lines[i])
+          i++
+        }
+        const sepIdx = tableLines.findIndex(l => /^\|[\s|:\-]+\|$/.test(l.trim()))
+        if (sepIdx >= 0) {
+          const parseRow = (l) => l.trim().replace(/^\||\|$/g, '').split('|').map(c => c.trim())
+          const thead = tableLines.slice(0, sepIdx)
+            .map(l => `<tr>${parseRow(l).map(h => `<th>${h}</th>`).join('')}</tr>`).join('')
+          const tbody = tableLines.slice(sepIdx + 1).filter(l => l.trim())
+            .map(l => `<tr>${parseRow(l).map(c => `<td>${c}</td>`).join('')}</tr>`).join('')
+          result.push(`<table><thead>${thead}</thead><tbody>${tbody}</tbody></table>`)
+        } else {
+          result.push(...tableLines)
+        }
+      } else {
+        result.push(line)
+        i++
+      }
+    }
+    return result.join('\n')
+  }
+
   function simpleMarkdown(text) {
     if (!text) return ""
     let html = text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
@@ -187,11 +220,14 @@
     html = html.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
     html = html.replace(/\*(.+?)\*/g, "<em>$1</em>")
     html = html.replace(/`([^`]+)`/g, "<code>$1</code>")
+    html = convertMarkdownTables(html)
     html = html.replace(/^- (.+)$/gm, "<li>$1</li>")
     html = html.replace(/((?:<li>.*<\/li>\n?)+)/g, "<ul>$1</ul>")
     html = html.replace(/^\d+\.\s+(.+)$/gm, "<li>$1</li>")
     html = html.replace(/\n\n/g, "</p><p>")
     html = "<p>" + html + "</p>"
+    html = html.replace(/<p>(\s*<(?:table|h[1-6]|ul|ol))/g, '$1')
+    html = html.replace(/(<\/(?:table|h[1-6]|ul|ol)>\s*)<\/p>/g, '$1')
     html = html.replace(/<p>\s*<\/p>/g, "")
     html = html.replace(/<p><\/p>/g, "")
     return html
