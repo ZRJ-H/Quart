@@ -345,14 +345,15 @@
 
       const reader = resp.body.getReader()
       const decoder = new TextDecoder()
-      let buffer = '', answerText = '', renderPending = false
+      let buffer = '', answerText = '', renderPending = false, rafId = null
 
       function scheduleRender() {
         if (renderPending) return
         renderPending = true
-        requestAnimationFrame(() => {
+        rafId = requestAnimationFrame(() => {
           answer.innerHTML = simpleMarkdown(answerText) + '<span class="stream-cursor">▌</span>'
           renderPending = false
+          rafId = null
         })
       }
 
@@ -382,6 +383,8 @@
               answerText += event.text
               scheduleRender()
             } else if (event.type === 'done') {
+              if (rafId) { cancelAnimationFrame(rafId); rafId = null }
+              renderPending = false
               answer.innerHTML = simpleMarkdown(answerText)
               addSearchHistory(query)
             } else if (event.type === 'error') {
