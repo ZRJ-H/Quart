@@ -7,10 +7,10 @@ const explorerFilter = (node: FileTrieNode) =>
   node.slugSegment !== "GitHub项目档案" &&
   node.slugSegment !== "wiki"
 
-const folderOrder = ["AI科技动态", "时政要闻", "GitHub-Trending", "AI论文日报", "Hacker-News", "周报"]
 const explorerSort = (a: FileTrieNode, b: FileTrieNode): number => {
-  const ai = folderOrder.indexOf(a.slugSegment)
-  const bi = folderOrder.indexOf(b.slugSegment)
+  const order = ["AI科技动态", "时政要闻", "GitHub-Trending", "AI论文日报", "Hacker-News", "周报"]
+  const ai = order.indexOf(a.slugSegment)
+  const bi = order.indexOf(b.slugSegment)
   if (ai === -1 && bi === -1) return a.displayName.localeCompare(b.displayName, "zh")
   if (ai === -1) return 1
   if (bi === -1) return -1
