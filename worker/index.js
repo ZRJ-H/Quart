@@ -767,31 +767,35 @@ export default {
           )
         }
 
-        // SSE streaming: send sources immediately, stream answer
+        // SSE streaming: return readable immediately, write in background IIFE
         const { readable, writable } = new TransformStream()
         const writer = writable.getWriter()
         const encoder = new TextEncoder()
+        const sourcesPayload = JSON.stringify({
+          type: 'sources',
+          sources: allResults.map((r) => ({
+            id: r.id,
+            name: r.name,
+            category: r.category || r.type,
+            summary: cardSnippet(fullData[r.id]?.content || r.summary, r.name),
+            last_updated: r.last_updated,
+            tags: fullData[r.id]?.tags || r.tags || [],
+            score: r.score,
+            quality_score: r.quality_score || calculateQualityScore(r),
+            reference_count: fullData[r.id]?.reference_count || 0,
+            is_related: r.is_related || false
+          }))
+        });
 
-        await writer.write(encoder.encode(
-          `data: ${JSON.stringify({
-            type: 'sources',
-            sources: allResults.map((r) => ({
-              id: r.id,
-              name: r.name,
-              category: r.category || r.type,
-              summary: cardSnippet(fullData[r.id]?.content || r.summary, r.name),
-              last_updated: r.last_updated,
-              tags: fullData[r.id]?.tags || r.tags || [],
-              score: r.score,
-              quality_score: r.quality_score || calculateQualityScore(r),
-              reference_count: fullData[r.id]?.reference_count || 0,
-              is_related: r.is_related || false
-            }))
-          })}\n\n`
-        ))
-
-        streamDeepSeek(prompt, env.DEEPSEEK_API_KEY, writer, encoder)
-          .catch(err => writer.abort(err))
+        // IIFE not awaited: Consumer reads readable, producer writes writable
+        (async () => {
+          try {
+            await writer.write(encoder.encode('data: ' + sourcesPayload + '\n\n'))
+            await streamDeepSeek(prompt, env.DEEPSEEK_API_KEY, writer, encoder)
+          } catch (err) {
+            try { await writer.abort(err) } catch {}
+          }
+        })()
 
         return new Response(readable, {
           headers: {
