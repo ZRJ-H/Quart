@@ -3,7 +3,19 @@ import * as Component from "./quartz/components"
 import { FileTrieNode } from "./quartz/util/fileTrie"
 
 const explorerFilter = (node: FileTrieNode) =>
-  node.slugSegment !== "tags" && node.slugSegment !== "GitHub项目档案"
+  node.slugSegment !== "tags" &&
+  node.slugSegment !== "GitHub项目档案" &&
+  node.slugSegment !== "wiki"
+
+const folderOrder = ["AI科技动态", "时政要闻", "GitHub-Trending", "AI论文日报", "Hacker-News", "周报"]
+const explorerSort = (a: FileTrieNode, b: FileTrieNode): number => {
+  const ai = folderOrder.indexOf(a.slugSegment)
+  const bi = folderOrder.indexOf(b.slugSegment)
+  if (ai === -1 && bi === -1) return a.displayName.localeCompare(b.displayName, "zh")
+  if (ai === -1) return 1
+  if (bi === -1) return -1
+  return ai - bi
+}
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
@@ -74,7 +86,7 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer({ filterFn: explorerFilter }),
+    Component.Explorer({ filterFn: explorerFilter, sortFn: explorerSort }),
   ],
   right: [Component.DesktopOnly(Component.TableOfContents()), Component.Backlinks()],
 }
@@ -94,7 +106,7 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer({ filterFn: explorerFilter }),
+    Component.Explorer({ filterFn: explorerFilter, sortFn: explorerSort }),
   ],
   right: [],
 }
