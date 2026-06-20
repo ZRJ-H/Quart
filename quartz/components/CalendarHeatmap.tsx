@@ -12,6 +12,8 @@ const categories = (): Category[] => [
   { slug: "AI科技动态", label: "AI动态" },
   { slug: "时政要闻", label: "时政" },
   { slug: "GitHub-Trending", label: "GitHub" },
+  { slug: "AI论文日报", label: "论文" },
+  { slug: "Hacker-News", label: "HN" },
 ]
 
 const DAYS_SHOWN = 7

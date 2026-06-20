@@ -568,3 +568,24 @@ a:hover {
 .toc a.active {
   color: var(--accent);
 }
+
+/* 文章条目卡片：h3 作标题栏，紧随的 ul 作正文区 */
+article h3 {
+  background: var(--bg-secondary);
+  border-left: 3px solid var(--secondary);
+  padding: 0.4em 0.8em;
+  border-radius: 6px 6px 0 0;
+  margin-bottom: 0;
+  margin-top: 1.4em;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+article h3 + ul {
+  border: 1px solid var(--border);
+  border-top: none;
+  padding: 0.5em 0.8em 0.5em 1.8em;
+  border-radius: 0 0 6px 6px;
+  margin-top: 0;
+  margin-bottom: 0.4em;
+}
