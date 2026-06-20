@@ -572,7 +572,7 @@ a:hover {
 /* 文章条目卡片：h3 作标题栏，紧随的 ul 作正文区 */
 article h3 {
   background: var(--bg-secondary);
-  border-left: 3px solid var(--secondary);
+  border-left: 3px solid var(--accent);
   padding: 0.4em 0.8em;
   border-radius: 6px 6px 0 0;
   margin-bottom: 0;
@@ -588,4 +588,39 @@ article h3 + ul {
   border-radius: 0 0 6px 6px;
   margin-top: 0;
   margin-bottom: 0.4em;
+}
+
+/* 内联字段标签（**字段**: 值 → chip 样式） */
+article h3 + ul li > strong:first-child {
+  display: inline-block;
+  font-size: 0.74em;
+  font-weight: 600;
+  padding: 0.04em 0.36em;
+  margin-right: 0.2em;
+  border-radius: 3px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  white-space: nowrap;
+  vertical-align: baseline;
+  line-height: 1.6;
+}
+
+/* 价值点：推荐理由框（卡片内最后一条 li） */
+article h3 + ul li:last-child {
+  list-style: none;
+  margin-top: 0.55em;
+  padding: 0.28em 0.5em 0.28em 0.7em;
+  border-left: 3px solid var(--accent);
+  background: var(--bg-secondary);
+  border-radius: 0 4px 4px 0;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+article h3 + ul li:last-child > strong:first-child {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  font-style: normal;
 }
