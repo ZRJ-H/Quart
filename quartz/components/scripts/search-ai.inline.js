@@ -167,6 +167,13 @@
     synthesis: "layers",
   }
 
+  const CAT_LABELS = {
+    'ai-news': 'AI动态', 'daily-news': '时政', 'github-trending': 'GitHub',
+    'hn-daily': 'HN', 'arxiv-daily': '论文', 'entities': '实体',
+    'sources': '来源', 'ai-agents': 'Agent', 'projects': '项目',
+    'events': '事件', 'companies': '公司', 'people': '人物', 'technologies': '技术',
+  }
+
   function svgIcon(name) {
     const inner = ICON_PATHS[name] || ICON_PATHS.file
     return `<svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${inner}</svg>`
@@ -245,43 +252,52 @@
 
   function renderSourceCards(sourceList) {
     if (!sourceList || !sourceList.length) return ""
-    return `
-      <h3>📚 参考来源 (${sourceList.length})</h3>
-      <div class="source-card-list">
-        ${sourceList
-          .map(
-            (s) => `
-          <div class="source-card">
-            <div class="source-card-header">
-              <span class="source-card-icon">${getCategoryIcon(s.category)}</span>
-              <span class="source-card-name">${escapeHtml(s.name)}</span>
-              <span class="source-card-category">${escapeHtml(s.category)}</span>
-            </div>
-            <div class="source-card-meta">
-              <span class="source-card-date">${escapeHtml(s.last_updated)}</span>
-              ${
-                s.tags && s.tags.length > 0
-                  ? `
-                <span class="source-card-tags">
-                  ${s.tags
-                    .slice(0, 3)
-                    .map((tag) => `#${escapeHtml(tag)}`)
-                    .join(" ")}
-                </span>
-              `
-                  : ""
-              }
-            </div>
-            <div class="source-card-summary">${escapeHtml(s.summary)}</div>
-          </div>
-        `,
-          )
-          .join("")}
-      </div>
-    `
+
+    function getBase() {
+      const p = window.location.pathname.split('/')
+      return window.location.origin + '/' + (p[1] || '') + '/'
+    }
+
+    function buildCardUrl(s) {
+      const base = getBase()
+      if (s.source_file) {
+        return base + s.source_file.split('/').map(encodeURIComponent).join('/')
+      }
+      if (s.id && (s.id.startsWith('entities/') || s.id.startsWith('sources/'))) {
+        return base + 'wiki/' + s.id
+      }
+      return null
+    }
+
+    function extractSummary(raw) {
+      if (!raw) return ''
+      const m = raw.match(/摘要[：:]\s*([^
+]+)/)
+      if (m) return m[1].trim()
+      const lines = raw.split('\n').filter(l => l.trim())
+      return lines.length ? lines[0].replace(/^-\s+\S+[：:]\s*/, '').trim() : ''
+    }
+
+    const cards = sourceList.map(s => {
+      const url = buildCardUrl(s)
+      const summary = extractSummary(s.summary)
+      const catLabel = CAT_LABELS[s.category] || s.category
+      const footer = '<div class="source-card-footer">'
+        + '<span class="source-cat-chip">' + escapeHtml(catLabel) + '</span>'
+        + (s.last_updated ? '<span class="source-card-date">' + escapeHtml(s.last_updated) + '</span>' : '')
+        + '</div>'
+      const body = '<div class="source-card-title">' + escapeHtml(s.name) + '</div>'
+        + (summary ? '<div class="source-card-excerpt">' + escapeHtml(summary) + '</div>' : '')
+        + footer
+      return url
+        ? '<a class="source-card" href="' + escapeHtml(url) + '" target="_blank" rel="noopener">' + body + '</a>'
+        : '<div class="source-card">' + body + '</div>'
+    }).join('')
+
+    return '<h3>📚 参考来源 (' + sourceList.length + ')</h3><div class="source-card-list">' + cards + '</div>'
   }
 
-  function renderEmptyState() {
+    function renderEmptyState() {
     let picks = []
     if (suggestionsData && suggestionsData.length) {
       picks = [...suggestionsData]
