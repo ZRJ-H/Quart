@@ -88,7 +88,7 @@ export const defaultContentPageLayout: PageLayout = {
     }),
     Component.Explorer({ filterFn: explorerFilter, sortFn: explorerSort }),
   ],
-  right: [Component.DesktopOnly(Component.TableOfContents()), Component.Backlinks()],
+  right: [Component.SearchAI({ workerUrl: "https://doge-wiki-search.zstufjj2004.workers.dev" }), Component.DesktopOnly(Component.TableOfContents()), Component.Backlinks()],
 }
 
 // components for pages that display lists of pages  (e.g. tags or folders)
@@ -108,5 +108,5 @@ export const defaultListPageLayout: PageLayout = {
     }),
     Component.Explorer({ filterFn: explorerFilter, sortFn: explorerSort }),
   ],
-  right: [],
+  right: [Component.SearchAI({ workerUrl: "https://doge-wiki-search.zstufjj2004.workers.dev" })],
 }

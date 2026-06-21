@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Extract Obsidian wiki content into a searchable JSON index.
+"""Extract Obsidian wiki + daily content into a searchable JSON index.
 
 Zero dependencies - uses only Python stdlib.
 """
@@ -9,6 +9,59 @@ import json
 import os
 import re
 import sys
+
+
+def _strip_emoji(text):
+    """Remove emoji/special chars, keep CJK, ASCII word chars, slash."""
+    return re.sub(r"[^一-鿿a-zA-Z0-9/\s_-]", "", text).strip()
+
+
+# Config keys:
+#   use_denylist (bool)  – True: include all H2 except those in 'exclude' / 'exclude_if_contains'
+#                          False: include only H2 in 'allow'
+#   allow (set)          – allowlist mode: exact match after emoji strip
+#   exclude (set)        – denylist mode: exact match after emoji strip
+#   exclude_if_contains  – denylist mode: substring match against raw H2 title
+DAILY_DIRS = {
+    "AI科技动态": {
+        "category": "ai-news",
+        "use_denylist": True,
+        "exclude": {
+            "今日概览", "趋势观察", "信息来源说明", "与其他线的关联",
+            "今日关键词", "近期重要事件预告", "今日日历",
+        },
+        "exclude_if_contains": ["GitHub AI", "arXiv"],
+    },
+    "时政要闻": {
+        "category": "daily-news",
+        "use_denylist": True,
+        "exclude": {
+            "今日概览", "信息来源说明", "趋势观察", "今日日历",
+            "与其他线的关联", "今日关键词",
+        },
+        "exclude_if_contains": [],
+    },
+    "GitHub Trending": {
+        "category": "github-trending",
+        "use_denylist": True,
+        "exclude": {
+            "今日概览", "今日速览", "今日增量", "数据说明", "数据质量说明",
+            "补充数据", "统计", "趋势观察", "连续在榜项目",
+            "项目进出榜追踪", "常驻观察", "与其他线的关联", "重大数据源发现",
+        },
+        "exclude_if_contains": [],
+    },
+    "Hacker News": {
+        "category": "hn-daily",
+        "use_denylist": False,
+        "allow": {"今日精选"},
+    },
+    "AI论文日报": {
+        "category": "arxiv-daily",
+        "use_denylist": False,
+        "allow": {"今日精选"},
+    },
+}
 
 
 def parse_frontmatter(text):
@@ -31,7 +84,6 @@ def parse_frontmatter(text):
         if not line:
             continue
 
-        # list items under a key (tags: [...])
         if current_list:
             m = re.match(r"^\s*-\s+(.+)$", line)
             if m:
@@ -42,7 +94,6 @@ def parse_frontmatter(text):
                 current_list = None
                 current_key = None
 
-        # key: value
         m = re.match(r"^(\w[\w_-]*)\s*:\s*(.+)$", line)
         if not m:
             continue
@@ -50,11 +101,9 @@ def parse_frontmatter(text):
         key = m.group(1)
         val = m.group(2).strip()
 
-        # list start: [...]
         if val == "[" or val.startswith("["):
             current_list = []
             current_key = key
-            # inline list [a, b]
             list_match = re.match(r"^\[(.*)\]$", val)
             if list_match:
                 items = re.findall(r"'([^']*)'|\"([^\"]*)\"|([^,\s]+)", list_match.group(1))
@@ -64,7 +113,6 @@ def parse_frontmatter(text):
                 current_key = None
             continue
 
-        # quoted string
         if (val.startswith('"') and val.endswith('"')) or (val.startswith("'") and val.endswith("'")):
             data[key] = val[1:-1]
         else:
@@ -78,23 +126,142 @@ def parse_frontmatter(text):
 
 def clean_content(text, max_len=800, summary_len=30):
     """Strip markdown markup, truncate to full and summary lengths."""
-    # wikilinks: [[page]] or [[page|alias]]
     text = re.sub(r"\[\[([^\]|]+)(?:\|[^\]]*)?\]\]", r"\1", text)
-    # markdown links: [text](url)
     text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", text)
-    # headers
     text = re.sub(r"#{1,6}\s*", "", text)
-    # bold/italic
     text = re.sub(r"\*{1,3}([^*]+)\*{1,3}", r"\1", text)
-    # inline code
     text = re.sub(r"`{1,3}[^`]+`{1,3}", "", text)
-    # table rows
     text = re.sub(r"\|[^|]+\|", " ", text)
-    # horizontal rules and excess newlines
     text = re.sub(r"\n{3,}", "\n\n", text)
     text = text.replace("---", " ")
     text = text.strip()
     return text[:max_len], text[:summary_len]
+
+
+def parse_h3_blocks(body, config):
+    """Extract (title, content) pairs for H3 blocks under eligible H2 sections."""
+    use_denylist = config.get("use_denylist", False)
+    allow = config.get("allow", set())
+    exclude = config.get("exclude", set())
+    exclude_if_contains = config.get("exclude_if_contains", [])
+
+    articles = []
+    current_h2_allowed = False
+    current_h3_title = None
+    current_lines = []
+
+    for line in body.split("\n"):
+        if line.startswith("## "):
+            if current_h3_title and current_h2_allowed:
+                articles.append((current_h3_title, "\n".join(current_lines)))
+            current_h3_title = None
+            current_lines = []
+
+            h2_raw = line[3:].strip()
+            h2 = _strip_emoji(h2_raw)
+
+            if use_denylist:
+                in_exclude = h2 in exclude or any(k in h2_raw for k in exclude_if_contains)
+                current_h2_allowed = not in_exclude and bool(h2)
+            else:
+                current_h2_allowed = h2 in allow
+
+        elif line.startswith("### ") and current_h2_allowed:
+            if current_h3_title:
+                articles.append((current_h3_title, "\n".join(current_lines)))
+            current_h3_title = line[4:].strip()
+            current_lines = []
+        elif current_h3_title and current_h2_allowed:
+            current_lines.append(line)
+
+    if current_h3_title and current_h2_allowed:
+        articles.append((current_h3_title, "\n".join(current_lines)))
+
+    return articles
+
+
+def slugify_title(text):
+    slug = re.sub(r"[^一-鿿a-zA-Z0-9]", "-", text.lower())
+    slug = re.sub(r"-+", "-", slug).strip("-")
+    return slug[:60]
+
+
+def build_daily_index(vault_dir):
+    """Build article-level index entries from daily content directories."""
+    light_entries = []
+    full_entries = []
+
+    for dir_name, config in DAILY_DIRS.items():
+        dir_path = os.path.join(vault_dir, dir_name)
+        if not os.path.isdir(dir_path):
+            print(f"Daily dir not found: {dir_path}", file=sys.stderr)
+            continue
+
+        category = config["category"]
+        file_count = 0
+        article_count = 0
+
+        for fname in sorted(os.listdir(dir_path)):
+            if not fname.endswith(".md"):
+                continue
+            date_match = re.search(r"(\d{4}-\d{2}-\d{2})", fname)
+            if not date_match:
+                continue
+            date_str = date_match.group(1)
+
+            filepath = os.path.join(dir_path, fname)
+            with open(filepath, encoding="utf-8", errors="replace") as f:
+                raw = f.read()
+
+            fm, body = parse_frontmatter(raw)
+            tags = fm.get("tags", [])
+            if isinstance(tags, str):
+                tags = [t.strip() for t in tags.split(",")]
+            if date_str not in tags:
+                tags = list(tags) + [date_str]
+
+            articles = parse_h3_blocks(body, config)
+            if not articles:
+                continue
+
+            file_count += 1
+            source_file = f"{dir_name}/{date_str}"
+
+            for title_raw, content_text in articles:
+                # Clean title: strip markdown links, bold, emoji
+                title = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", title_raw)
+                title = re.sub(r"\*{1,3}([^*]+)\*{1,3}", r"\1", title).strip()
+                full_content, summary = clean_content(content_text)
+                entry_id = f"daily/{dir_name}/{date_str}#{slugify_title(title)}"
+
+                light_entries.append({
+                    "id": entry_id,
+                    "name": title,
+                    "type": "daily",
+                    "category": category,
+                    "tags": tags,
+                    "last_updated": date_str,
+                    "summary": summary,
+                    "reference_count": 0,
+                })
+                full_entries.append({
+                    "id": entry_id,
+                    "name": title,
+                    "type": "daily",
+                    "category": category,
+                    "tags": tags,
+                    "content": full_content,
+                    "first_seen": date_str,
+                    "last_updated": date_str,
+                    "source_type": "daily",
+                    "source_file": source_file,
+                    "reference_count": 0,
+                })
+                article_count += 1
+
+        print(f"  {dir_name}: {file_count} files, {article_count} articles")
+
+    return light_entries, full_entries
 
 
 def build_index(vault_dir):
@@ -108,7 +275,7 @@ def build_index(vault_dir):
 
     link_re = re.compile(r"\[\[([^\]|]+)(?:\|[^\]]*)?\]\]")
     link_counter = {}
-    staged = []  # (light_entry, full_entry, name)
+    staged = []
 
     for subdir in ["entities", "concepts", "sources", "synthesis"]:
         path = os.path.join(wiki_dir, subdir)
@@ -125,7 +292,6 @@ def build_index(vault_dir):
             if len(body) < 20:
                 continue
 
-            # 统计出链，用于按反向链接数计算 reference_count
             for target in link_re.findall(body):
                 t = target.strip()
                 if t:
@@ -138,11 +304,8 @@ def build_index(vault_dir):
 
             entry_id = f"{subdir}/{fname.replace('.md', '')}"
             entry_type = fm.get("type", subdir.rstrip("s"))
-            # 分类缺失时回退到类型，避免空分类导致筛选/图标失效
             category = fm.get("category", "") or entry_type
             first_seen = fm.get("first_seen", "")
-            # last_updated 回退链：frontmatter → first_seen → 文件名内日期
-            # （新闻类 source 常无 last_updated 字段，但文件名含 YYYY-MM-DD）
             last_updated = fm.get("last_updated", "") or first_seen
             if not last_updated:
                 date_match = re.search(r"\d{4}-\d{2}-\d{2}", fname)
@@ -174,7 +337,6 @@ def build_index(vault_dir):
             }
             staged.append((light_entry, full_entry, str(name)))
 
-    # 第二遍：reference_count = 指向该页面名称的反向链接数
     for light_entry, full_entry, name in staged:
         rc = link_counter.get(name, 0)
         light_entry["reference_count"] = rc
@@ -196,17 +358,25 @@ def main():
     light_entries, full_entries = build_index(args.vault_dir)
     print(f"Indexed {len(full_entries)} wiki pages from {args.vault_dir}/wiki/")
 
+    print("Indexing daily content...")
+    daily_light, daily_full = build_daily_index(args.vault_dir)
+    print(f"Indexed {len(daily_full)} daily articles total")
+    light_entries.extend(daily_light)
+    full_entries.extend(daily_full)
+
+    print(f"Total entries: {len(full_entries)}")
+
     os.makedirs(os.path.dirname(args.light_output) or ".", exist_ok=True)
 
     with open(args.light_output, "w", encoding="utf-8") as f:
         json.dump(light_entries, f, ensure_ascii=False, separators=(",", ":"))
     light_kb = os.path.getsize(args.light_output) / 1024
-    print(f"Light index: {len(light_entries)} pages, {light_kb:.1f} KB")
+    print(f"Light index: {len(light_entries)} entries, {light_kb:.1f} KB")
 
     with open(args.full_output, "w", encoding="utf-8") as f:
         json.dump(full_entries, f, ensure_ascii=False, separators=(",", ":"))
     full_kb = os.path.getsize(args.full_output) / 1024
-    print(f"Full index: {len(full_entries)} pages, {full_kb:.1f} KB")
+    print(f"Full index: {len(full_entries)} entries, {full_kb:.1f} KB")
 
     with open(args.output, "w", encoding="utf-8") as f:
         json.dump(light_entries, f, ensure_ascii=False, separators=(",", ":"))
