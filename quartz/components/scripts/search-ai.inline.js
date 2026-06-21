@@ -279,8 +279,11 @@
       if (!raw) return ''
       var m = raw.match(/摘要[：:]\s*([^\n]+)/)
       if (m) return m[1].trim()
-      var flines = raw.split('\n').filter(function(l) { return l.trim() })
-      return flines.length ? flines[0].replace(/^-\s+\S+[：:]\s*/, '').trim() : ''
+      // Skip header-only lines (≤4 chars like "定义" "来源" "基本信息")
+      var flines = raw.split('\n').map(function(l) {
+        return l.replace(/^[-#*>\s]+/, '').replace(/^-\s+\S+[：:]\s*/, '').trim()
+      }).filter(function(l) { return l.length > 4 })
+      return flines.length ? flines[0] : ''
     }
 
     const cards = sourceList.map(s => {
