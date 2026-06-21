@@ -110,6 +110,12 @@
   }
 }
 
+// Right sidebar: force single-column to prevent overflow into main content
+.sidebar .ai-search-results {
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
 .ai-search-main {
   min-width: 0;
 }
