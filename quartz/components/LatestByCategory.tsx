@@ -12,6 +12,8 @@ const defaultCategories = (): Category[] => [
   { slug: "AI科技动态", icon: "", label: "AI动态" },
   { slug: "GitHub-Trending", icon: "", label: "GitHub" },
   { slug: "时政要闻", icon: "", label: "时政" },
+  { slug: "AI论文日报", icon: "", label: "论文" },
+  { slug: "Hacker-News", icon: "", label: "HN" },
 ]
 
 const slugDate = (s: string): number => {
