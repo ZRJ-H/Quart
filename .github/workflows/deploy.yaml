@@ -25,24 +25,27 @@ jobs:
           repository: FDogeLover/Obsidian
           path: vault-content
           token: ${{ secrets.GH_PAT }}
+      - name: Pre-index full vault (before filter-old-content removes old files)
+        run: |
+          python3 scripts/build-wiki-index.py vault-content \
+            --light-output /tmp/wiki-index-light.json \
+            --full-output /tmp/wiki-data-full.json \
+            -o /tmp/wiki-data.json
       - name: Install dependencies
         run: npm ci
       - name: Build Quartz
         run: npx quartz build --directory vault-content
       - name: Generate search suggestions index
-        run: |
-          python3 scripts/build-wiki-index.py vault-content \
-            --light-output public/wiki-index-light.json
+        run: cp /tmp/wiki-index-light.json public/wiki-index-light.json
       - name: Deploy Cloudflare Worker
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
           DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
           CHANGED_IDS_OUT: /tmp/changed-ids.json
         run: |
-          python3 scripts/build-wiki-index.py vault-content \
-            --light-output worker/wiki-index-light.json \
-            --full-output worker/wiki-data-full.json \
-            -o worker/wiki-data.json
+          cp /tmp/wiki-index-light.json worker/wiki-index-light.json
+          cp /tmp/wiki-data-full.json worker/wiki-data-full.json
+          cp /tmp/wiki-data.json worker/wiki-data.json
           python3 scripts/upload-to-kv.py worker/wiki-data-full.json
           npx wrangler deploy --config worker/wrangler.toml
       - name: Generate and upload embeddings
