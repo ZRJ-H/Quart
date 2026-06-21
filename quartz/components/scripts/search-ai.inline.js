@@ -285,7 +285,11 @@
       if (m) return m[1].trim()
       // Skip header-only lines (≤4 chars like "定义" "来源" "基本信息")
       var flines = raw.split('\n').map(function(l) {
-        return l.replace(/^[-#*>\s]+/, '').replace(/^-\s+\S+[：:]\s*/, '').trim()
+        return l
+          .replace(/^[-#*>\s]+/, '')            // strip markdown prefix
+          .replace(/^-\s+\S+[：:]\s*/, '')       // strip "- label:" prefix
+          .replace(/^[一-鿿]{1,4}[：:]\s*/, '') // strip "类型:" "来源:" style labels
+          .trim()
       }).filter(function(l) { return l.length > 4 })
       return flines.length ? flines[0] : ''
     }
