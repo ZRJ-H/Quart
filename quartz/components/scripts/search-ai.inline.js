@@ -782,6 +782,28 @@
       if (e.key === 'Escape' && modal.style.display !== 'none') closeModal()
     })
 
+    // ⌘K / Ctrl+K: open/close modal from anywhere
+    document.addEventListener('keydown', e => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+        const active = document.activeElement
+        const tag = active ? active.tagName.toLowerCase() : ''
+        if ((tag === 'input' && !active.hasAttribute('readonly')) || tag === 'textarea' || (active && active.isContentEditable)) return
+        e.preventDefault()
+        modal.style.display !== 'none' ? closeModal() : openModal()
+      }
+    })
+
+    // Mobile FAB
+    ;(function () {
+      const fab = document.createElement('button')
+      fab.id = 'search-fab'
+      fab.className = 'search-fab'
+      fab.setAttribute('aria-label', '搜索知识库')
+      fab.innerHTML = '<svg viewBox=0 0 24 24 fill=none stroke=currentColor stroke-width=2.5 stroke-linecap=round stroke-linejoin=round aria-hidden=true><circle cx=11 cy=11 r=8/><path d=m21 21-4.3-4.3/></svg>'
+      fab.addEventListener('click', openModal)
+      document.body.appendChild(fab)
+    })()
+
     // Make sidebar search boxes into triggers
     document.querySelectorAll('.sidebar .ai-search-box').forEach(box => {
       box.addEventListener('click', e => {
@@ -792,8 +814,13 @@
       const sidebarInput = box.querySelector('.ai-search-input')
       if (sidebarInput) {
         sidebarInput.setAttribute('readonly', 'readonly')
-        sidebarInput.setAttribute('placeholder', '点击搜索知识库...')
+        sidebarInput.setAttribute('placeholder', '搜索知识库...')
       }
+      // ⌘K hint badge
+      const hint = document.createElement('kbd')
+      hint.className = 'search-kbd-hint'
+      hint.textContent = /Mac|iPhone|iPad/.test(navigator.userAgent) ? '⌘K' : 'Ctrl K'
+      box.appendChild(hint)
     })
   }
 

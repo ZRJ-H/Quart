@@ -621,3 +621,58 @@
 .modal-history {
   margin-top: 8px;
 }
+
+// ===== Mobile FAB (floating action button) =====
+// Shown on tablet + mobile (max 1199px) where right sidebar is hidden
+.search-fab {
+  display: none;
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--secondary);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.22);
+  z-index: 8000;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+  svg {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.28);
+  }
+
+  &:active {
+    transform: scale(0.94);
+  }
+
+  @media (max-width: 1199px) {
+    display: flex;
+  }
+}
+
+// ===== Sidebar ⌘K hint badge =====
+.search-kbd-hint {
+  font-size: 0.7rem;
+  font-family: inherit;
+  padding: 2px 5px;
+  border: 1px solid var(--lightgray);
+  border-radius: 4px;
+  color: var(--gray);
+  background: var(--light);
+  line-height: 1.4;
+  white-space: nowrap;
+  flex-shrink: 0;
+  pointer-events: none;
+}
