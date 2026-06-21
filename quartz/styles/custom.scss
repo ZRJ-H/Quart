@@ -626,3 +626,71 @@ article h3 + ul li:last-child > strong:first-child {
   font-style: normal;
 }
 
+
+
+/* ============================================
+   周报美化（scope 到 周报/* 页面）
+   第一层：顶部 meta 卡 + 标题视觉系统 + 分隔线收敛
+   同时 override 日报为 h3+ul 设计的卡片样式（周报 h3 后跟段落）
+   ============================================ */
+body[data-slug^="周报"] {
+  /* 顶部 meta 卡：article 第一个 blockquote（日期范围·AI 生成） */
+  & article > blockquote:first-of-type {
+    border-left: none;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    padding: 0.7em 1.1em;
+    text-align: center;
+    font-size: 0.9rem;
+    font-style: normal;
+    color: var(--text-secondary);
+    margin: 0.5rem 0 2rem;
+  }
+
+  /* H2 分区标题：左金色块 + 底细线，强化"章节"感 */
+  & article h2 {
+    border-left: 4px solid var(--accent);
+    border-radius: 0;
+    padding: 0.05em 0 0.32em 0.6em;
+    border-bottom: 1px solid var(--border);
+    margin-top: 2.5rem;
+    margin-bottom: 1.2rem;
+  }
+
+  /* H3 事件标题：取消日报半截卡片，改干净左边框（后接段落） */
+  & article h3 {
+    background: transparent;
+    border-left: 3px solid var(--secondary);
+    border-radius: 0;
+    padding: 0.08em 0 0.08em 0.7em;
+    margin-top: 1.9rem;
+    margin-bottom: 0.85rem;
+    font-weight: 600;
+  }
+
+  /* reset 日报的 h3+ul 卡片化（三条线摘要/追踪清单回归普通列表） */
+  & article h3 + ul {
+    border: none;
+    border-radius: 0;
+    padding: 0.4em 0 0.4em 1.6em;
+    margin-top: 0.5em;
+  }
+  & article h3 + ul li:last-child {
+    list-style: inherit;
+    margin-top: 0;
+    padding: 0;
+    border-left: none;
+    background: transparent;
+    border-radius: 0;
+    color: inherit;
+    font-style: normal;
+  }
+
+  /* 分隔线收敛：周报 hr 过多，改为轻量居中短线 */
+  & article hr {
+    width: 36%;
+    margin: 1.6rem auto;
+    height: 1px;
+    background: var(--border);
+  }
+}
