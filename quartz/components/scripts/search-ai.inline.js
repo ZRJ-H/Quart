@@ -799,7 +799,21 @@
       fab.id = 'search-fab'
       fab.className = 'search-fab'
       fab.setAttribute('aria-label', '搜索知识库')
-      fab.innerHTML = '<svg viewBox=0 0 24 24 fill=none stroke=currentColor stroke-width=2.5 stroke-linecap=round stroke-linejoin=round aria-hidden=true><circle cx=11 cy=11 r=8/><path d=m21 21-4.3-4.3/></svg>'
+      const NS = 'http://www.w3.org/2000/svg'
+      const svg = document.createElementNS(NS, 'svg')
+      svg.setAttribute('viewBox', '0 0 24 24')
+      svg.setAttribute('fill', 'none')
+      svg.setAttribute('stroke', 'currentColor')
+      svg.setAttribute('stroke-width', '2.5')
+      svg.setAttribute('stroke-linecap', 'round')
+      svg.setAttribute('stroke-linejoin', 'round')
+      svg.setAttribute('aria-hidden', 'true')
+      const circle = document.createElementNS(NS, 'circle')
+      circle.setAttribute('cx', '11'); circle.setAttribute('cy', '11'); circle.setAttribute('r', '8')
+      const line = document.createElementNS(NS, 'path')
+      line.setAttribute('d', 'm21 21-4.3-4.3')
+      svg.appendChild(circle); svg.appendChild(line)
+      fab.appendChild(svg)
       fab.addEventListener('click', openModal)
       document.body.appendChild(fab)
     })()
