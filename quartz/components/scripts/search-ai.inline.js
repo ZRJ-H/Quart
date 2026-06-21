@@ -504,6 +504,7 @@
   function renderHistory() {
     const container = document.querySelector(".search-history")
     if (!container) return
+    if (container.closest('.sidebar')) return // shown in modal instead
 
     const history = getSearchHistory()
     const list = container.querySelector(".history-list")
@@ -551,6 +552,7 @@
 
   const _originalDoSearch = doSearch
   doSearch = async function () {
+    if (input.hasAttribute('readonly')) return // sidebar mode — modal handles it
     const query = input.value.trim()
     if (!query || query.length < 2) return
     await _originalDoSearch()
@@ -565,4 +567,236 @@
   loadSuggestionsData()
   initSuggestions()
   initHistory()
+
+  // ===== Spotlight Modal =====
+
+  function createModalDOM() {
+    const backdrop = document.createElement('div')
+    backdrop.id = 'search-modal-backdrop'
+    backdrop.className = 'search-modal-backdrop'
+    backdrop.style.display = 'none'
+    backdrop.innerHTML = `
+      <div class="search-modal-panel" role="dialog" aria-label="知识库搜索">
+        <div class="search-modal-input-row">
+          <svg class="modal-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <input id="modal-search-input" class="modal-search-input" type="text" placeholder="向知识库提问..." autocomplete="off" />
+          <button id="modal-search-btn" class="modal-search-btn" aria-label="搜索">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          </button>
+          <button id="modal-close-btn" class="modal-close-btn" aria-label="关闭">✕</button>
+        </div>
+        <div id="modal-search-status" class="ai-search-status"></div>
+        <div id="modal-search-results" class="ai-search-results modal-results" style="display:none">
+          <div class="ai-search-main">
+            <div id="modal-ai-answer" class="ai-search-answer"></div>
+          </div>
+          <div class="ai-search-sidebar">
+            <div id="modal-ai-sources" class="ai-search-sources"></div>
+          </div>
+        </div>
+        <div id="modal-search-history" class="search-history modal-history" style="display:none">
+          <div class="history-header">
+            <h3>最近搜索</h3>
+            <button class="modal-history-clear history-clear">清除</button>
+          </div>
+          <div class="history-list modal-history-list"></div>
+        </div>
+      </div>
+    `
+    document.body.appendChild(backdrop)
+    return backdrop
+  }
+
+  let _modal = null
+  function getModal() {
+    if (!_modal) _modal = createModalDOM()
+    return _modal
+  }
+
+  function openModal() {
+    const modal = getModal()
+    modal.style.display = 'flex'
+    document.body.style.overflow = 'hidden'
+    const modalInput = document.getElementById('modal-search-input')
+    modalInput.focus()
+    renderModalHistory()
+  }
+
+  function closeModal() {
+    const modal = getModal()
+    modal.style.display = 'none'
+    document.body.style.overflow = ''
+  }
+
+  function renderModalHistory() {
+    const history = getSearchHistory()
+    const container = document.getElementById('modal-search-history')
+    const list = container ? container.querySelector('.modal-history-list') : null
+    if (!container || !list) return
+
+    if (history.length === 0) {
+      container.style.display = 'none'
+      return
+    }
+
+    container.style.display = 'block'
+    list.innerHTML = history.slice(0, 5).map(item => `
+      <div class="history-item" data-query="${escapeHtml(item.query)}">
+        <span class="history-icon">🔍</span>
+        <div class="history-content">
+          <div class="history-query">${escapeHtml(item.query)}</div>
+          <div class="history-time">${formatTime(item.timestamp)}</div>
+        </div>
+      </div>
+    `).join('')
+
+    list.querySelectorAll('.history-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const mi = document.getElementById('modal-search-input')
+        if (mi) { mi.value = item.dataset.query; doModalSearch() }
+      })
+    })
+
+    const clearBtn = container.querySelector('.modal-history-clear')
+    if (clearBtn) {
+      clearBtn.onclick = () => { clearSearchHistory(); renderModalHistory() }
+    }
+  }
+
+  let _modalAbort = null
+
+  async function doModalSearch() {
+    const mi = document.getElementById('modal-search-input')
+    const mb = document.getElementById('modal-search-btn')
+    const ms = document.getElementById('modal-search-status')
+    const mr = document.getElementById('modal-search-results')
+    const ma = document.getElementById('modal-ai-answer')
+    const mc = document.getElementById('modal-ai-sources')
+    const mh = document.getElementById('modal-search-history')
+    if (!mi) return
+
+    const query = mi.value.trim()
+    if (!query || query.length < 2) {
+      if (ms) ms.textContent = '请至少输入2个字'
+      return
+    }
+
+    if (_modalAbort) _modalAbort.abort()
+    _modalAbort = new AbortController()
+
+    if (mb) mb.disabled = true
+    if (ms) ms.textContent = '正在检索知识库...'
+    if (mr) mr.style.display = 'none'
+    if (mh) mh.style.display = 'none'
+    if (ma) ma.innerHTML = ''
+    if (mc) mc.innerHTML = ''
+
+    try {
+      const resp = await fetch(`${workerUrl}/api/search`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query }),
+        signal: _modalAbort.signal,
+      })
+
+      if (!resp.ok) {
+        if (ms) ms.textContent = ''
+        if (ma) ma.innerHTML = `<div class="ai-error">请求失败: ${resp.status}</div>`
+        if (mr) mr.style.display = 'grid'
+        return
+      }
+
+      const reader = resp.body.getReader()
+      const decoder = new TextDecoder()
+      let buffer = '', answerText = '', renderPending = false, rafId = null
+
+      function scheduleRender() {
+        if (renderPending) return
+        renderPending = true
+        rafId = requestAnimationFrame(() => {
+          if (ma) ma.innerHTML = simpleMarkdown(answerText) + '<span class="stream-cursor">▌</span>'
+          renderPending = false; rafId = null
+        })
+      }
+
+      if (ms) ms.textContent = ''
+
+      while (true) {
+        const { done, value } = await reader.read()
+        if (done) break
+        buffer += decoder.decode(value, { stream: true })
+        const lines = buffer.split('\n'); buffer = lines.pop()
+        for (const line of lines) {
+          if (!line.startsWith('data: ')) continue
+          try {
+            const event = JSON.parse(line.slice(6).trim())
+            if (event.type === 'sources') {
+              if (mc) mc.innerHTML = event.sources && event.sources.length > 0
+                ? renderSourceCards(event.sources)
+                : renderEmptyState()
+              if (mr) mr.style.display = 'grid'
+              if (ma) ma.innerHTML = '<p class="stream-generating">正在生成回答...</p>'
+            } else if (event.type === 'chunk') {
+              answerText += event.text; scheduleRender()
+            } else if (event.type === 'done') {
+              if (rafId) { cancelAnimationFrame(rafId); rafId = null }
+              renderPending = false
+              if (ma) ma.innerHTML = simpleMarkdown(answerText)
+              addSearchHistory(query)
+              renderModalHistory()
+            } else if (event.type === 'error') {
+              if (ma) ma.innerHTML = `<div class="ai-error">${escapeHtml(event.message)}</div>`
+            }
+          } catch {}
+        }
+      }
+    } catch (err) {
+      if (err.name === 'AbortError') return
+      if (ms) ms.textContent = ''
+      if (ma) ma.innerHTML = `<div class="ai-error">请求失败: ${err.message}</div>`
+      if (mr) mr.style.display = 'grid'
+    } finally {
+      if (mb) mb.disabled = false
+      _modalAbort = null
+    }
+  }
+
+  function initModal() {
+    const modal = getModal()
+
+    // Backdrop click closes
+    modal.addEventListener('click', e => { if (e.target === modal) closeModal() })
+
+    // Close / search buttons
+    document.getElementById('modal-close-btn').addEventListener('click', closeModal)
+    document.getElementById('modal-search-btn').addEventListener('click', doModalSearch)
+
+    // Modal input: Enter = search, Esc = close
+    document.getElementById('modal-search-input').addEventListener('keydown', e => {
+      if (e.key === 'Enter') doModalSearch()
+      if (e.key === 'Escape') closeModal()
+    })
+
+    // Global ESC
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && modal.style.display !== 'none') closeModal()
+    })
+
+    // Make sidebar search boxes into triggers
+    document.querySelectorAll('.sidebar .ai-search-box').forEach(box => {
+      box.addEventListener('click', e => {
+        e.preventDefault()
+        e.stopPropagation()
+        openModal()
+      })
+      const sidebarInput = box.querySelector('.ai-search-input')
+      if (sidebarInput) {
+        sidebarInput.setAttribute('readonly', 'readonly')
+        sidebarInput.setAttribute('placeholder', '点击搜索知识库...')
+      }
+    })
+  }
+
+  initModal()
+
 })()

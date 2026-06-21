@@ -491,3 +491,133 @@
   opacity: 0.5;
   font-style: italic;
 }
+
+// ===== Sidebar trigger mode =====
+.sidebar .ai-search-input {
+  cursor: pointer;
+}
+.sidebar .search-history,
+.sidebar .search-suggestions {
+  display: none !important;
+}
+
+// ===== Spotlight Modal =====
+.search-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 9000;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 10vh;
+  animation: modal-fade-in 0.15s ease;
+}
+
+@keyframes modal-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.search-modal-panel {
+  background: var(--light);
+  border-radius: 12px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.22);
+  width: 90%;
+  max-width: 780px;
+  max-height: 78vh;
+  overflow-y: auto;
+  padding: 20px 24px;
+}
+
+.search-modal-input-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid var(--secondary);
+  border-radius: 8px;
+  padding: 6px 10px;
+  background: var(--light);
+  margin-bottom: 14px;
+
+  &:focus-within {
+    border-color: var(--tertiary, var(--secondary));
+    box-shadow: 0 0 0 3px rgba(var(--secondary-rgb, 100, 100, 200), 0.15);
+  }
+}
+
+.modal-search-icon {
+  color: var(--gray);
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.modal-search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1.05rem;
+  background: transparent;
+  color: var(--dark);
+  padding: 4px 0;
+  font-family: inherit;
+
+  &::placeholder {
+    color: var(--gray);
+  }
+}
+
+.modal-search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--secondary);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  flex-shrink: 0;
+
+  &:hover  { opacity: 0.85; }
+  &:disabled { opacity: 0.5; cursor: not-allowed; }
+}
+
+.modal-close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--gray);
+  font-size: 1rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  line-height: 1;
+  flex-shrink: 0;
+  transition: background 0.1s, color 0.1s;
+
+  &:hover {
+    background: var(--lightgray);
+    color: var(--dark);
+  }
+}
+
+// Modal results: restore 2-column layout (overrides the .sidebar 1-col override)
+.modal-results {
+  grid-template-columns: 1fr 320px !important;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+// Show AI answer in modal
+.search-modal-panel .ai-search-main {
+  display: block !important;
+}
+
+// Modal history
+.modal-history {
+  margin-top: 8px;
+}
