@@ -271,11 +271,10 @@
 
     function extractSummary(raw) {
       if (!raw) return ''
-      const m = raw.match(/摘要[：:]\s*([^
-]+)/)
+      var m = raw.match(/摘要[：:]\s*([^\n]+)/)
       if (m) return m[1].trim()
-      const lines = raw.split('\n').filter(l => l.trim())
-      return lines.length ? lines[0].replace(/^-\s+\S+[：:]\s*/, '').trim() : ''
+      var flines = raw.split('\n').filter(function(l) { return l.trim() })
+      return flines.length ? flines[0].replace(/^-\s+\S+[：:]\s*/, '').trim() : ''
     }
 
     const cards = sourceList.map(s => {
