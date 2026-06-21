@@ -170,7 +170,7 @@
   const CAT_LABELS = {
     'ai-news': 'AI动态', 'daily-news': '时政', 'github-trending': 'GitHub',
     'hn-daily': 'HN', 'arxiv-daily': '论文', 'entities': '实体',
-    'sources': '来源', 'ai-agents': 'Agent', 'projects': '项目',
+    'source': '来源', 'sources': '来源', 'ai-agents': 'Agent', 'projects': '项目',
     'events': '事件', 'companies': '公司', 'people': '人物', 'technologies': '技术',
   }
 
@@ -262,6 +262,11 @@
       const base = getBase()
       if (s.source_file) {
         return base + s.source_file.split('/').map(encodeURIComponent).join('/')
+      }
+      if (s.id && s.id.startsWith('daily/')) {
+        // id = "daily/AI科技动态/2026-06-21#slug" → base + AI科技动态/2026-06-21
+        const path = s.id.slice(6).split('#')[0]
+        return base + path.split('/').map(encodeURIComponent).join('/')
       }
       if (s.id && (s.id.startsWith('entities/') || s.id.startsWith('sources/'))) {
         return base + 'wiki/' + s.id
