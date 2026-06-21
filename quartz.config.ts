@@ -73,7 +73,7 @@ const config: QuartzConfig = {
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
     ],
-    filters: [Plugin.RemoveDrafts(), Plugin.RemoveOldNotes({ days: 7, paths: ["时政要闻", "AI科技动态", "GitHub-Trending", "Hacker-News", "AI论文日报"] })],
+    filters: [Plugin.RemoveDrafts(), Plugin.RemoveOldNotes({ days: 6, paths: ["时政要闻", "AI科技动态", "GitHub-Trending", "Hacker-News", "AI论文日报"] })],
     emitters: [
       Plugin.AliasRedirects(),
       Plugin.ComponentResources(),
