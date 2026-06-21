@@ -624,3 +624,14 @@ article h3 + ul li:last-child > strong:first-child {
   color: #fff;
   font-style: normal;
 }
+
+
+/* ============================================
+   Desktop layout: narrow sidebars → wider center
+   原 sidePanelWidth 320px → 260px，center 多出约 120px
+   ============================================ */
+@media (min-width: 1200px) {
+  .page > #quartz-body {
+    grid-template-columns: 260px auto 260px;
+  }
+}

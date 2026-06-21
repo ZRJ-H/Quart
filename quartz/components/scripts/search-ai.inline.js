@@ -265,7 +265,11 @@
         return base + s.source_file.split('/').map(encodeURIComponent).join('/')
       }
       if (s.id && s.id.startsWith('daily/')) {
-        // id = "daily/AI科技动态/2026-06-21#slug" → base + AI科技动态/2026-06-21
+        // Only link if within 7 days — older pages are filtered from build
+        if (s.last_updated) {
+          const age = (Date.now() - new Date(s.last_updated)) / 86400000
+          if (age > 7) return null
+        }
         const path = s.id.slice(6).split('#')[0]
         return base + path.split('/').map(encodeURIComponent).join('/')
       }
@@ -293,13 +297,14 @@
       const footer = '<div class="source-card-footer">'
         + '<span class="source-cat-chip">' + escapeHtml(catLabel) + '</span>'
         + (s.last_updated ? '<span class="source-card-date">' + escapeHtml(s.last_updated) + '</span>' : '')
+        + (url ? '' : '<span class="source-card-archived">已归档</span>')
         + '</div>'
       const body = '<div class="source-card-title">' + escapeHtml(s.name) + '</div>'
         + (summary ? '<div class="source-card-excerpt">' + escapeHtml(summary) + '</div>' : '')
         + footer
       return url
         ? '<a class="source-card" href="' + escapeHtml(url) + '" target="_blank" rel="noopener">' + body + '</a>'
-        : '<div class="source-card">' + body + '</div>'
+        : '<div class="source-card source-card--archived">' + body + '</div>'
     }).join('')
 
     return '<h3>📚 参考来源 (' + sourceList.length + ')</h3><div class="source-card-list">' + cards + '</div>'

@@ -263,6 +263,24 @@
     font-size: 0.72rem;
     color: var(--gray);
   }
+
+  // Archived cards (old daily entries whose pages are filtered from build)
+  div.source-card.source-card--archived {
+    opacity: 0.5;
+    cursor: default;
+    border-style: dashed;
+    &:hover {
+      border-color: var(--lightgray);
+      background: transparent;
+    }
+  }
+
+  .source-card-archived {
+    font-size: 0.67rem;
+    color: var(--gray);
+    font-style: italic;
+    margin-left: auto;
+  }
 }
 
 .ai-error {
