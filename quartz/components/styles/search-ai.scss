@@ -110,10 +110,13 @@
   }
 }
 
-// Right sidebar: force single-column to prevent overflow into main content
+// Right sidebar: single-column, hide AI answer (too narrow), show sources only
 .sidebar .ai-search-results {
   grid-template-columns: 1fr;
   gap: 0.75rem;
+}
+.sidebar .ai-search-main {
+  display: none;
 }
 
 .ai-search-main {
