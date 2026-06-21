@@ -694,3 +694,65 @@ body[data-slug^="周报"] {
     background: var(--border);
   }
 }
+
+
+/* ============================================
+   周报美化第二层（scope 到 周报/* 页面）
+   接住 SKILL.md 的三个结构化锚点：
+   ①本周速览表 ②事件元信息条(h3+blockquote) ③时间线表
+   ============================================ */
+body[data-slug^="周报"] {
+  /* 锚点①③：速览表 + 时间线表 → 简洁横线卡片表格 */
+  & article table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.88rem;
+    margin: 0.8rem 0 1.4rem;
+  }
+  & article thead th {
+    text-align: left;
+    padding: 0.4em 0.7em;
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-bottom: 2px solid var(--border);
+  }
+  & article tbody td {
+    padding: 0.42em 0.7em;
+    border-bottom: 1px solid var(--border);
+  }
+  & article tbody tr:hover {
+    background: var(--bg-secondary);
+  }
+  /* 首列（线 / 时间）加重、不换行 */
+  & article tbody td:first-child {
+    font-weight: 600;
+    white-space: nowrap;
+    color: var(--text);
+  }
+
+  /* 锚点②：事件元信息条 = h3 紧跟的 blockquote → 横向标签条 */
+  & article h3 + blockquote {
+    border-left: none;
+    background: var(--bg-secondary);
+    border-radius: 6px;
+    margin: -0.35rem 0 1rem;
+    padding: 0.35em 0.85em;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    font-style: normal;
+  }
+  & article h3 + blockquote p {
+    margin: 0;
+  }
+  /* 元信息条里的 `分类`（反引号→code）做成实心色标签 */
+  & article h3 + blockquote code {
+    background: var(--primary);
+    color: #fff;
+    padding: 0.06em 0.55em;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.92em;
+  }
+}
