@@ -273,9 +273,7 @@
         const path = s.id.slice(6).split('#')[0]
         return base + path.split('/').map(encodeURIComponent).join('/')
       }
-      if (s.id && s.id.includes('/')) {
-        return base + 'wiki/' + s.id
-      }
+      // wiki entries (entities/concepts/sources) have no Quartz pages yet
       return null
     }
 
