@@ -452,7 +452,8 @@ img:hover {
 // 必须匹配 base.scss 的 .page > #quartz-body .center 特异性
 // 否则会被 min-width: 100% 覆盖
 .page > #quartz-body .center {
-  min-width: 0;
+  min-width: 0;   // prevent overflow into sidebar
+  width: 100%;    // fill grid cell (overrides margin:0 auto shrink behavior)
 }
 
 article {
@@ -625,13 +626,3 @@ article h3 + ul li:last-child > strong:first-child {
   font-style: normal;
 }
 
-
-/* ============================================
-   Desktop layout: narrow sidebars → wider center
-   原 sidePanelWidth 320px → 260px，center 多出约 120px
-   ============================================ */
-@media (min-width: 1200px) {
-  .page > #quartz-body {
-    grid-template-columns: 260px auto 260px;
-  }
-}
