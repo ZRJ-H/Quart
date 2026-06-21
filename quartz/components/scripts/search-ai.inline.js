@@ -172,6 +172,7 @@
     'hn-daily': 'HN', 'arxiv-daily': '论文', 'entities': '实体',
     'source': '来源', 'sources': '来源', 'ai-agents': 'Agent', 'projects': '项目',
     'events': '事件', 'companies': '公司', 'people': '人物', 'technologies': '技术',
+    'technical': '技术', 'concepts': '概念',
   }
 
   function svgIcon(name) {
@@ -268,7 +269,7 @@
         const path = s.id.slice(6).split('#')[0]
         return base + path.split('/').map(encodeURIComponent).join('/')
       }
-      if (s.id && (s.id.startsWith('entities/') || s.id.startsWith('sources/'))) {
+      if (s.id && s.id.includes('/')) {
         return base + 'wiki/' + s.id
       }
       return null
