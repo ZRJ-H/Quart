@@ -1,27 +1,21 @@
 #!/usr/bin/env python3
-"""Extract Obsidian wiki + daily content into a searchable JSON index.
+"""从 content/ 解析 Markdown 文件 → 写入 SQLite wiki.db（FTS5 全文索引）
 
-Zero dependencies - uses only Python stdlib.
+Zero dependencies - uses only Python stdlib (sqlite3).
 """
 
 import argparse
 import json
 import os
 import re
+import sqlite3
 import sys
 
 
 def _strip_emoji(text):
-    """Remove emoji/special chars, keep CJK, ASCII word chars, slash."""
     return re.sub(r"[^一-鿿a-zA-Z0-9/\s_-]", "", text).strip()
 
 
-# Config keys:
-#   use_denylist (bool)  – True: include all H2 except those in 'exclude' / 'exclude_if_contains'
-#                          False: include only H2 in 'allow'
-#   allow (set)          – allowlist mode: exact match after emoji strip
-#   exclude (set)        – denylist mode: exact match after emoji strip
-#   exclude_if_contains  – denylist mode: substring match against raw H2 title
 DAILY_DIRS = {
     "AI科技动态": {
         "category": "ai-news",
@@ -41,7 +35,7 @@ DAILY_DIRS = {
         },
         "exclude_if_contains": [],
     },
-    "GitHub Trending": {
+    "GitHub-Trending": {
         "category": "github-trending",
         "use_denylist": True,
         "exclude": {
@@ -51,7 +45,7 @@ DAILY_DIRS = {
         },
         "exclude_if_contains": [],
     },
-    "Hacker News": {
+    "Hacker-News": {
         "category": "hn-daily",
         "use_denylist": False,
         "allow": {"今日精选"},
@@ -65,25 +59,20 @@ DAILY_DIRS = {
 
 
 def parse_frontmatter(text):
-    """Parse simple YAML-like frontmatter without external libraries."""
     if not text.startswith("---"):
         return {}, text
-
     parts = text.split("---", 2)
     if len(parts) < 3:
         return {}, text
-
     fm_text = parts[1]
     body = parts[2].strip()
-
     data = {}
     current_list = None
-
+    current_key = None
     for line in fm_text.split("\n"):
         line = line.strip()
         if not line:
             continue
-
         if current_list:
             m = re.match(r"^\s*-\s+(.+)$", line)
             if m:
@@ -93,14 +82,11 @@ def parse_frontmatter(text):
                 data[current_key] = current_list
                 current_list = None
                 current_key = None
-
         m = re.match(r"^(\w[\w_-]*)\s*:\s*(.+)$", line)
         if not m:
             continue
-
         key = m.group(1)
         val = m.group(2).strip()
-
         if val == "[" or val.startswith("["):
             current_list = []
             current_key = key
@@ -112,20 +98,16 @@ def parse_frontmatter(text):
                 current_list = None
                 current_key = None
             continue
-
         if (val.startswith('"') and val.endswith('"')) or (val.startswith("'") and val.endswith("'")):
             data[key] = val[1:-1]
         else:
             data[key] = val
-
     if current_list and current_key:
         data[current_key] = current_list
-
     return data, body
 
 
 def clean_content(text, max_len=800, summary_len=30):
-    """Strip markdown markup, truncate to full and summary lengths."""
     text = re.sub(r"\[\[([^\]|]+)(?:\|[^\]]*)?\]\]", r"\1", text)
     text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", text)
     text = re.sub(r"#{1,6}\s*", "", text)
@@ -139,7 +121,6 @@ def clean_content(text, max_len=800, summary_len=30):
 
 
 def parse_h3_blocks(body, config):
-    """Extract (title, content) pairs for H3 blocks under eligible H2 sections."""
     use_denylist = config.get("use_denylist", False)
     allow = config.get("allow", set())
     exclude = config.get("exclude", set())
@@ -186,15 +167,15 @@ def slugify_title(text):
     return slug[:60]
 
 
-def build_daily_index(vault_dir):
-    """Build article-level index entries from daily content directories."""
-    light_entries = []
-    full_entries = []
+def build_daily_index(vault_dir, conn):
+    """解析每日内容 → 写入 SQLite"""
+    c = conn.cursor()
+    count = 0
 
     for dir_name, config in DAILY_DIRS.items():
         dir_path = os.path.join(vault_dir, dir_name)
         if not os.path.isdir(dir_path):
-            print(f"Daily dir not found: {dir_path}", file=sys.stderr)
+            print(f"  SKIP: {dir_path} (not found)")
             continue
 
         category = config["category"]
@@ -210,8 +191,12 @@ def build_daily_index(vault_dir):
             date_str = date_match.group(1)
 
             filepath = os.path.join(dir_path, fname)
-            with open(filepath, encoding="utf-8", errors="replace") as f:
-                raw = f.read()
+            try:
+                with open(filepath, encoding="utf-8", errors="replace") as f:
+                    raw = f.read()
+            except Exception as e:
+                print(f"  WARN: cannot read {filepath}: {e}", file=sys.stderr)
+                continue
 
             fm, body = parse_frontmatter(raw)
             tags = fm.get("tags", [])
@@ -225,54 +210,40 @@ def build_daily_index(vault_dir):
                 continue
 
             file_count += 1
-            source_file = f"{dir_name}/{date_str}"
 
             for title_raw, content_text in articles:
-                # Clean title: strip markdown links, bold, emoji
                 title = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", title_raw)
                 title = re.sub(r"\*{1,3}([^*]+)\*{1,3}", r"\1", title).strip()
                 full_content, summary = clean_content(content_text)
                 entry_id = f"daily/{dir_name}/{date_str}#{slugify_title(title)}"
 
-                light_entries.append({
-                    "id": entry_id,
-                    "name": title,
-                    "type": "daily",
-                    "category": category,
-                    "tags": tags,
-                    "last_updated": date_str,
-                    "summary": summary,
-                    "reference_count": 0,
-                })
-                full_entries.append({
-                    "id": entry_id,
-                    "name": title,
-                    "type": "daily",
-                    "category": category,
-                    "tags": tags,
-                    "content": full_content,
-                    "first_seen": date_str,
-                    "last_updated": date_str,
-                    "source_type": "daily",
-                    "source_file": source_file,
-                    "reference_count": 0,
-                })
+                c.execute("""
+                    INSERT OR REPLACE INTO entries
+                    (id, name, type, category, tags, summary, content,
+                     last_updated, content_length, reference_count)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """, (
+                    entry_id, title, "daily", category,
+                    json.dumps(tags, ensure_ascii=False),
+                    summary, full_content,
+                    date_str, len(full_content), 0,
+                ))
                 article_count += 1
+                count += 1
 
         print(f"  {dir_name}: {file_count} files, {article_count} articles")
 
-    return light_entries, full_entries
+    return count
 
 
-def build_index(vault_dir):
+def build_wiki_index(vault_dir, conn):
+    """解析 wiki/ 目录 → 写入 SQLite"""
     wiki_dir = os.path.join(vault_dir, "wiki")
-    light_entries = []
-    full_entries = []
-
     if not os.path.isdir(wiki_dir):
-        print(f"Wiki dir not found: {wiki_dir}", file=sys.stderr)
-        return light_entries, full_entries
+        print(f"Wiki dir not found: {wiki_dir}")
+        return 0
 
+    c = conn.cursor()
     link_re = re.compile(r"\[\[([^\]|]+)(?:\|[^\]]*)?\]\]")
     link_counter = {}
     staged = []
@@ -285,8 +256,12 @@ def build_index(vault_dir):
             if not fname.endswith(".md"):
                 continue
             filepath = os.path.join(path, fname)
-            with open(filepath, encoding="utf-8", errors="replace") as f:
-                raw = f.read()
+            try:
+                with open(filepath, encoding="utf-8", errors="replace") as f:
+                    raw = f.read()
+            except Exception as e:
+                print(f"  WARN: cannot read {filepath}: {e}", file=sys.stderr)
+                continue
 
             fm, body = parse_frontmatter(raw)
             if len(body) < 20:
@@ -311,78 +286,128 @@ def build_index(vault_dir):
                 date_match = re.search(r"\d{4}-\d{2}-\d{2}", fname)
                 if date_match:
                     last_updated = date_match.group(0)
-            source_type = fm.get("source_type", "")
 
             full_content, summary = clean_content(body)
 
-            light_entry = {
-                "id": entry_id,
-                "name": str(name),
-                "type": entry_type,
-                "category": category,
-                "tags": tags,
-                "last_updated": last_updated,
-                "summary": summary,
-            }
-            full_entry = {
-                "id": entry_id,
-                "type": entry_type,
-                "name": str(name),
-                "category": category,
-                "tags": tags,
-                "content": full_content,
-                "first_seen": first_seen,
-                "last_updated": last_updated,
-                "source_type": source_type,
-            }
-            staged.append((light_entry, full_entry, str(name)))
+            staged.append({
+                "id": entry_id, "name": str(name), "type": entry_type,
+                "category": category, "tags": tags, "summary": summary,
+                "content": full_content, "last_updated": last_updated,
+                "content_length": len(full_content),
+            })
 
-    for light_entry, full_entry, name in staged:
-        rc = link_counter.get(name, 0)
-        light_entry["reference_count"] = rc
-        full_entry["reference_count"] = rc
-        light_entries.append(light_entry)
-        full_entries.append(full_entry)
+    count = 0
+    for entry in staged:
+        rc = link_counter.get(entry["name"], 0)
+        entry["reference_count"] = rc
 
-    return light_entries, full_entries
+        c.execute("""
+            INSERT OR REPLACE INTO entries
+            (id, name, type, category, tags, summary, content,
+             last_updated, content_length, reference_count)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """, (
+            entry["id"], entry["name"], entry["type"], entry["category"],
+            json.dumps(entry["tags"], ensure_ascii=False),
+            entry["summary"], entry["content"],
+            entry["last_updated"], entry["content_length"],
+            entry["reference_count"],
+        ))
+        count += 1
+
+    return count
+
+
+def init_db(db_path):
+    """创建 SQLite 数据库和 FTS5 表"""
+    conn = sqlite3.connect(db_path)
+    conn.execute("PRAGMA journal_mode=WAL")
+    conn.execute("PRAGMA busy_timeout=5000")
+
+    conn.executescript("""
+        CREATE TABLE IF NOT EXISTS entries (
+            id          TEXT PRIMARY KEY,
+            name        TEXT NOT NULL,
+            type        TEXT DEFAULT '',
+            category    TEXT DEFAULT '',
+            tags        TEXT DEFAULT '[]',
+            summary     TEXT DEFAULT '',
+            content     TEXT DEFAULT '',
+            last_updated TEXT DEFAULT '',
+            content_length INTEGER DEFAULT 0,
+            reference_count INTEGER DEFAULT 0
+        );
+
+        -- FTS5 全文索引（内容表）
+        CREATE VIRTUAL TABLE IF NOT EXISTS entries_fts USING fts5(
+            name,
+            summary,
+            content,
+            tags,
+            category,
+            content=entries,
+            content_rowid=rowid,
+            tokenize='unicode61'
+        );
+
+        -- FTS5 同步触发器
+        CREATE TRIGGER IF NOT EXISTS entries_ai AFTER INSERT ON entries BEGIN
+            INSERT INTO entries_fts(rowid, name, summary, content, tags, category)
+            VALUES (new.rowid, new.name, new.summary, new.content, new.tags, new.category);
+        END;
+        CREATE TRIGGER IF NOT EXISTS entries_ad AFTER DELETE ON entries BEGIN
+            INSERT INTO entries_fts(entries_fts, rowid, name, summary, content, tags, category)
+            VALUES ('delete', old.rowid, old.name, old.summary, old.content, old.tags, old.category);
+        END;
+        CREATE TRIGGER IF NOT EXISTS entries_au AFTER UPDATE ON entries BEGIN
+            INSERT INTO entries_fts(entries_fts, rowid, name, summary, content, tags, category)
+            VALUES ('delete', old.rowid, old.name, old.summary, old.content, old.tags, old.category);
+            INSERT INTO entries_fts(rowid, name, summary, content, tags, category)
+            VALUES (new.rowid, new.name, new.summary, new.content, new.tags, new.category);
+        END;
+    """)
+
+    return conn
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Build wiki search index")
-    parser.add_argument("vault_dir", nargs="?", default="vault-content")
-    parser.add_argument("-o", "--output", default="worker/wiki-data.json")
-    parser.add_argument("--light-output", default="worker/wiki-index-light.json")
-    parser.add_argument("--full-output", default="worker/wiki-data-full.json")
+    parser = argparse.ArgumentParser(description="Build wiki search index → SQLite")
+    parser.add_argument("vault_dir", nargs="?", default="content")
+    parser.add_argument("-o", "--output", default="server/wiki.db",
+                        help="SQLite database path (default: server/wiki.db)")
     args = parser.parse_args()
 
-    light_entries, full_entries = build_index(args.vault_dir)
-    print(f"Indexed {len(full_entries)} wiki pages from {args.vault_dir}/wiki/")
+    vault_dir = args.vault_dir
+    db_path = args.output
 
+    # 初始化数据库
+    os.makedirs(os.path.dirname(db_path) or ".", exist_ok=True)
+    conn = init_db(db_path)
+
+    # 清空旧数据
+    conn.execute("DELETE FROM entries")
+    print(f"Cleared old entries from {db_path}")
+
+    # 构建 wiki 索引
+    print("Indexing wiki pages...")
+    wiki_count = build_wiki_index(vault_dir, conn)
+    print(f"  Wiki pages: {wiki_count}")
+
+    # 构建每日内容索引
     print("Indexing daily content...")
-    daily_light, daily_full = build_daily_index(args.vault_dir)
-    print(f"Indexed {len(daily_full)} daily articles total")
-    light_entries.extend(daily_light)
-    full_entries.extend(daily_full)
+    daily_count = build_daily_index(vault_dir, conn)
+    print(f"  Daily articles: {daily_count}")
 
-    print(f"Total entries: {len(full_entries)}")
+    # 提交
+    conn.commit()
 
-    os.makedirs(os.path.dirname(args.light_output) or ".", exist_ok=True)
+    # 统计
+    total = conn.execute("SELECT COUNT(*) FROM entries").fetchone()[0]
+    fts_count = conn.execute("SELECT COUNT(*) FROM entries_fts").fetchone()[0]
+    db_size = os.path.getsize(db_path) / 1024
+    print(f"\nTotal: {total} entries ({fts_count} FTS indexed), DB size: {db_size:.1f} KB")
 
-    with open(args.light_output, "w", encoding="utf-8") as f:
-        json.dump(light_entries, f, ensure_ascii=False, separators=(",", ":"))
-    light_kb = os.path.getsize(args.light_output) / 1024
-    print(f"Light index: {len(light_entries)} entries, {light_kb:.1f} KB")
-
-    with open(args.full_output, "w", encoding="utf-8") as f:
-        json.dump(full_entries, f, ensure_ascii=False, separators=(",", ":"))
-    full_kb = os.path.getsize(args.full_output) / 1024
-    print(f"Full index: {len(full_entries)} entries, {full_kb:.1f} KB")
-
-    with open(args.output, "w", encoding="utf-8") as f:
-        json.dump(light_entries, f, ensure_ascii=False, separators=(",", ":"))
-    size_kb = os.path.getsize(args.output) / 1024
-    print(f"Legacy output: {args.output} ({size_kb:.1f} KB)")
-
+    conn.close()
     return 0
 
 
