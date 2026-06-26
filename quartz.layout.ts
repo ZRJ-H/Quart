@@ -1,0 +1,102 @@
+import { PageLayout, SharedLayout } from "./quartz/cfg"
+import * as Component from "./quartz/components"
+import { FileTrieNode } from "./quartz/util/fileTrie"
+
+const explorerFilter = (node: FileTrieNode) =>
+  node.slugSegment !== "tags" &&
+  node.slugSegment !== "GitHub项目档案" &&
+  node.slugSegment !== "wiki"
+
+const explorerSort = (a: FileTrieNode, b: FileTrieNode): number => {
+  const order = ["AI科技动态", "时政要闻", "GitHub-Trending", "AI论文日报", "Hacker-News", "周报"]
+  const ai = order.indexOf(a.slugSegment)
+  const bi = order.indexOf(b.slugSegment)
+  if (ai === -1 && bi === -1) return a.displayName.localeCompare(b.displayName, "zh")
+  if (ai === -1) return 1
+  if (bi === -1) return -1
+  return ai - bi
+}
+
+// components shared across all pages
+export const sharedPageComponents: SharedLayout = {
+  head: Component.Head(),
+  header: [],
+  afterBody: [],
+  footer: Component.Footer({
+    links: {
+      GitHub: "https://github.com/FDogeLover/Quart",
+      知识库: "/",
+    },
+  }),
+}
+
+// components for pages that display a single page (e.g. a single note)
+export const defaultContentPageLayout: PageLayout = {
+  beforeBody: [
+    Component.ConditionalRender({
+      component: Component.ReadingProgress(),
+      condition: (page) => page.fileData.slug !== "index",
+    }),
+    Component.ConditionalRender({
+      component: Component.LatestByCategory(),
+      condition: (page) => page.fileData.slug === "index",
+    }),
+    Component.ConditionalRender({
+      component: Component.CalendarHeatmap(),
+      condition: (page) => page.fileData.slug === "index",
+    }),
+    Component.SourceCard(),
+    Component.ConditionalRender({
+      component: Component.Breadcrumbs(),
+      condition: (page) => page.fileData.slug !== "index",
+    }),
+    Component.ConditionalRender({
+      component: Component.ArticleTitle(),
+      condition: (page) => page.fileData.slug !== "index",
+    }),
+    Component.ConditionalRender({
+      component: Component.ContentMeta(),
+      condition: (page) => page.fileData.slug !== "index",
+    }),
+    Component.ConditionalRender({
+      component: Component.TagList(),
+      condition: (page) => page.fileData.slug !== "index",
+    }),
+  ],
+  left: [
+    Component.PageTitle(),
+    Component.MobileOnly(Component.Spacer()),
+    Component.Flex({
+      components: [
+        {
+          Component: Component.Search(),
+          grow: true,
+        },
+        { Component: Component.Darkmode() },
+        { Component: Component.ReaderMode() },
+      ],
+    }),
+    Component.Explorer({ filterFn: explorerFilter, sortFn: explorerSort }),
+  ],
+  right: [Component.SearchAI({ workerUrl: "/api" }), Component.DesktopOnly(Component.TableOfContents()), Component.Backlinks()],
+}
+
+// components for pages that display lists of pages  (e.g. tags or folders)
+export const defaultListPageLayout: PageLayout = {
+  beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
+  left: [
+    Component.PageTitle(),
+    Component.MobileOnly(Component.Spacer()),
+    Component.Flex({
+      components: [
+        {
+          Component: Component.Search(),
+          grow: true,
+        },
+        { Component: Component.Darkmode() },
+      ],
+    }),
+    Component.Explorer({ filterFn: explorerFilter, sortFn: explorerSort }),
+  ],
+  right: [Component.SearchAI({ workerUrl: "/api" })],
+}
