@@ -1,0 +1,18 @@
+{
+  "name": "wiki-crawlers",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "crawl:github": "node github-trending.js",
+    "crawl:hn": "node hacker-news.js",
+    "crawl:arxiv": "node arxiv-papers.js",
+    "crawl:ai-news": "node ai-news.js",
+    "crawl:affairs": "node current-affairs.js",
+    "crawl:weekly": "node weekly-report.js",
+    "crawl:all": "node github-trending.js && node hacker-news.js && node ai-news.js && node current-affairs.js && node arxiv-papers.js"
+  },
+  "dependencies": {
+    "rss-parser": "^3.13.0"
+  }
+}
