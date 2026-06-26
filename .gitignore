@@ -1,0 +1,34 @@
+# 依赖
+node_modules/
+
+# 构建产物
+public/
+
+# 数据库文件
+server/wiki.db
+server/data/
+
+# 环境变量（含 API Key）
+.env
+
+# 日志
+*.log
+
+# Quartz 缓存
+.quartz-cache/
+
+# 爬虫生成的每日内容（不提交，自动生成）
+content/AI科技动态/
+content/时政要闻/
+content/GitHub-Trending/
+content/AI论文日报/
+content/Hacker-News/
+content/周报/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
