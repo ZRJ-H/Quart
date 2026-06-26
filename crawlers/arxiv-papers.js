@@ -15,7 +15,7 @@ const DEEPSEEK_API_KEY =
 // arXiv API 查询
 function arxivApi(query) {
   return new Promise((resolve, reject) => {
-    const url = `http://export.arxiv.org/api/query?${query}`;
+    const url = `https://export.arxiv.org/api/query?${query}`;
     https
       .get(url, { headers: { "User-Agent": "wiki-crawler/1.0" } }, (res) => {
         let data = "";
@@ -37,7 +37,7 @@ function parseArxivXml(xml) {
     const entry = match[1];
     const idMatch = entry.match(/<id>(.*?)<\/id>/);
     const titleMatch = entry.match(
-      /<title>(.*?)<\/title>/
+      /<title[^>]*>([\s\S]*?)<\/title>/
     );
     const summaryMatch = entry.match(
       /<summary>(.*?)<\/summary>/

@@ -29,7 +29,7 @@ function parseRSS(xml) {
   while ((match = itemRegex.exec(xml)) !== null) {
     const item = match[1];
     const titleMatch = item.match(/<title><!\[CDATA\[(.*?)\]\]><\/title>|<title>(.*?)<\/title>/);
-    const linkMatch = item.match(/<link>(.*?)<\/link>/);
+    const linkMatch = item.match(/<link><!\[CDATA\[(.*?)\]\]><\/link>|<link>(.*?)<\/link>/);
     const descMatch = item.match(/<description><!\[CDATA\[(.*?)\]\]><\/description>|<description>(.*?)<\/description>/);
     const dateMatch = item.match(/<pubDate>(.*?)<\/pubDate>/);
 
