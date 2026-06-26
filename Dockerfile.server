@@ -1,0 +1,16 @@
+FROM node:22-alpine
+WORKDIR /home/wiki/server
+
+# better-sqlite3 需要编译工具
+RUN apk add --no-cache python3 make g++
+
+COPY server/package.json .
+RUN npm ci --production
+
+COPY server/search.js .
+COPY server/deepseek.js .
+COPY server/synonyms.json .
+COPY server/index.js .
+
+EXPOSE 3000
+CMD ["node", "index.js"]
