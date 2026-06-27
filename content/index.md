@@ -3,7 +3,7 @@ created: 2026-05-12
 tags: [home, 导航]
 ---
 
-# DogeLover 知识库
+# Otae 知识库
 
 > 个人知识管理系统
 
