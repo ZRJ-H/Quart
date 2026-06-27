@@ -8,15 +8,15 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "DogeLover 知识库",
-    pageTitleSuffix: " | DogeLover Wiki",
+    pageTitle: "Otae 知识库",
+    pageTitleSuffix: " | Otae Wiki",
     enableSPA: false,
     enablePopovers: true,
     analytics: {
       provider: "plausible",
     },
     locale: "zh-CN",
-    baseUrl: "fdogelover.github.io/Quart",
+    baseUrl: "ZRJ-H.github.io/Quart",
     ignorePatterns: ["private", "templates", ".obsidian", ".opencode", ".claude", "node_modules", "docs/**", "wiki/entities/**", "wiki/sources/**", "wiki/concepts/**", "wiki/synthesis/**", "wiki/log*", "wiki/index*", "wiki/index", "wiki/QUICK-REFERENCE*", "wiki/STARTUP-GUIDE*", "wiki/workflow-daily-update*", "raw/**", "快捷键速查*", "AGENTS*", "MEMORY*", "GitHub项目档案/**", "GitHub 项目档案/**", "🏠 我的主页*"],
     defaultDateType: "created",
     theme: {

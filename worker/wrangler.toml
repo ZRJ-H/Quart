@@ -1,11 +1,11 @@
 name = "doge-wiki-search"
 main = "index.js"
 compatibility_date = "2025-05-20"
-account_id = "c77c864374991dbca0e56a3eacb94174"
+account_id = "d3b7958872c07dfef0e812907804f275"
 
 [[kv_namespaces]]
 binding = "WIKI_DATA"
-id = "d61189e9b8314bd48a975bb878392614"
+id = "b58f4f4e48384627bcc36d76f7f0ae92"
 
 [[vectorize]]
 binding = "VECTORIZE"
