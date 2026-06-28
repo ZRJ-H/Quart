@@ -44,6 +44,20 @@ jobs:
       - name: Add search suggestions index
         run: cp /tmp/wiki-index-light.json public/wiki-index-light.json
 
+      - name: Sync Cloudflare search backend
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
+            echo "CF_API_TOKEN is not configured; skip Cloudflare KV upload and Worker deploy."
+            exit 0
+          fi
+          cp /tmp/wiki-index-light.json worker/wiki-index-light.json
+          cp /tmp/wiki-data-full.json worker/wiki-data-full.json
+          cp /tmp/wiki-data.json worker/wiki-data.json
+          python3 scripts/upload-to-kv.py worker/wiki-data-full.json
+          npx wrangler deploy --config worker/wrangler.toml
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:

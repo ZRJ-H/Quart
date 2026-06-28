@@ -14,11 +14,19 @@ Requires CLOUDFLARE_API_TOKEN environment variable. Uses wrangler CLI.
 import hashlib
 import json
 import os
+import shutil
 import subprocess
 import sys
 import tempfile
 
-NAMESPACE_ID = "d61189e9b8314bd48a975bb878392614"
+NAMESPACE_ID = "b58f4f4e48384627bcc36d76f7f0ae92"
+
+
+def wrangler_cmd():
+    npx = shutil.which('npx') or shutil.which('npx.cmd') or 'npx'
+    return [npx, 'wrangler']
+
+
 MAX_WRITES_PER_RUN = 900  # 保守低于免费版每日 1000 次写入额度；超出部分下次部署继续（首次全量会分几天收敛）
 
 
@@ -30,9 +38,9 @@ def list_remote_hashes():
     """返回 {key: hash}（来自 KV metadata）。失败时返回 {} → 退化为全量上传。"""
     try:
         result = subprocess.run(
-            ["npx", "wrangler", "kv", "key", "list",
+            [*wrangler_cmd(), "kv", "key", "list",
              "--namespace-id", NAMESPACE_ID, "--remote"],
-            capture_output=True, text=True, timeout=180,
+            capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=180,
         )
         if result.returncode != 0:
             print(f"WARNING: kv key list 失败，退化为全量比对:\n{result.stderr}", file=sys.stderr)
@@ -103,9 +111,9 @@ def main():
 
     try:
         result = subprocess.run(
-            ["npx", "wrangler", "kv", "bulk", "put", tmp_path,
+            [*wrangler_cmd(), "kv", "bulk", "put", tmp_path,
              "--namespace-id", NAMESPACE_ID, "--remote"],
-            capture_output=True, text=True, timeout=300,
+            capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=300,
         )
         if result.returncode != 0:
             # KV 免费版每日写入额度（code 10048）属可恢复错误：
@@ -116,10 +124,13 @@ def main():
             print(f"ERROR: wrangler kv bulk put failed:\n{result.stderr}", file=sys.stderr)
             sys.exit(1)
         print(f"成功上传 {len(kv_entries)} 条变化条目到 KV")
-        print(result.stdout.strip())
+        if result.stdout:
+            print(result.stdout.strip())
     finally:
         os.unlink(tmp_path)
 
 
 if __name__ == "__main__":
     main()
+
+

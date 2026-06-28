@@ -791,6 +791,19 @@ export default {
         (async () => {
           try {
             await writer.write(encoder.encode('data: ' + sourcesPayload + '\n\n'))
+            if (!env.DEEPSEEK_API_KEY) {
+              const fallbackText = allResults.length > 0
+                ? [
+                    "已找到相关资料，但当前未配置 DeepSeek API Key，因此暂时只显示检索结果，不生成 AI 总结。",
+                    "",
+                    "请在 Cloudflare Worker 中设置 `DEEPSEEK_API_KEY` 后重新部署或直接刷新页面。"
+                  ].join("\n")
+                : "没有找到相关资料。"
+              await writer.write(encoder.encode(`data: ${JSON.stringify({ type: 'chunk', text: fallbackText })}\n\n`))
+              await writer.write(encoder.encode(`data: ${JSON.stringify({ type: 'done' })}\n\n`))
+              await writer.close()
+              return
+            }
             await streamDeepSeek(prompt, env.DEEPSEEK_API_KEY, writer, encoder)
           } catch (err) {
             try { await writer.abort(err) } catch {}
