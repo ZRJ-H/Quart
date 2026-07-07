@@ -1,0 +1,22 @@
+---
+first_seen: 2026-07-07
+last_seen: 2026-07-07
+language: Python
+tags: [github, trending]
+---
+
+# TheAlgorithms/Python
+
+> All Algorithms implemented in Python
+
+## 基本信息
+
+- **GitHub**: https://github.com/TheAlgorithms/Python
+- **语言**: Python
+- **总星数**: 222,465
+
+## 历史趋势
+
+| 日期 | 排名 | 星数 | 增量 | 类型 |
+|---|---:|---:|---:|---|
+| 2026-07-07 | #10 | 222,465 | +222,465⭐ | 新晋 |
