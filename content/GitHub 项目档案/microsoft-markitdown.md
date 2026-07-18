@@ -1,0 +1,22 @@
+---
+first_seen: 2026-07-18
+last_seen: 2026-07-18
+language: Python
+tags: [github, trending]
+---
+
+# microsoft/markitdown
+
+> Python tool for converting files and office documents to Markdown.
+
+## 基本信息
+
+- **GitHub**: https://github.com/microsoft/markitdown
+- **语言**: Python
+- **总星数**: 166,902
+
+## 历史趋势
+
+| 日期 | 排名 | 星数 | 增量 | 类型 |
+|---|---:|---:|---:|---|
+| 2026-07-18 | #19 | 166,902 | +166,902⭐ | 新晋 |
