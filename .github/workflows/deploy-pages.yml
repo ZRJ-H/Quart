@@ -69,6 +69,20 @@ jobs:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         run: node crawlers/arxiv-papers.js content
 
+      - name: Protect history when every crawler fails
+        id: refresh_guard
+        shell: bash
+        run: |
+          today="$(date -u +%F)"
+          fresh_count="$(find content -mindepth 2 -maxdepth 2 -type f -name "$today.md" | wc -l)"
+          if [ "$fresh_count" -eq 0 ]; then
+            echo "::warning::No fresh daily content was produced; keeping historical pages"
+            echo "has_fresh=false" >> "$GITHUB_OUTPUT"
+            echo "CONTENT_RETENTION_DAYS=36500" >> "$GITHUB_ENV"
+          else
+            echo "has_fresh=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Build Sunday weekly report
         shell: bash
         run: |
@@ -77,6 +91,7 @@ jobs:
           fi
 
       - name: Remove expired daily content
+        if: steps.refresh_guard.outputs.has_fresh == 'true'
         run: python scripts/filter-old-content.py content
 
       - name: Commit refreshed content

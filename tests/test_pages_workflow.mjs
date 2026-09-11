@@ -40,6 +40,14 @@ test("deploy workflow refreshes content and publishes a Pages artifact", async (
   assert.equal(crawlerSteps.length, 5)
   assert.ok(crawlerSteps.every((step) => step["continue-on-error"] === true))
 
+  const refreshGuard = findStep(steps, "Protect history when every crawler fails")
+  assert.equal(refreshGuard.id, "refresh_guard")
+  assert.match(refreshGuard.run, /CONTENT_RETENTION_DAYS=36500/)
+  assert.match(
+    findStep(steps, "Remove expired daily content").if,
+    /steps\.refresh_guard\.outputs\.has_fresh == 'true'/,
+  )
+
   assert.match(findStep(steps, "Commit refreshed content").run, /git push/)
   assert.match(findStep(steps, "Build Quartz site").run, /build:pages/)
   assert.match(findStep(steps, "Generate browser search indexes").run, /index:pages/)
