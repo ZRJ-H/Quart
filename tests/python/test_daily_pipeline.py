@@ -132,8 +132,7 @@ class DailyPipelineTests(unittest.TestCase):
             self.assertIn("已核验的中文标题", text)
             self.assertIn("摘要：这是一段用于周报的中文简要描述", text)
             excerpt = next(line for line in text.splitlines() if line.strip().startswith("- 摘要："))
-            self.assertGreaterEqual(len(excerpt.removeprefix("    - 摘要：")), 120)
-            self.assertLessEqual(len(excerpt.removeprefix("    - 摘要：")), 180)
+            self.assertEqual(excerpt.removeprefix("    - 摘要："), long_summary)
             self.assertIn("https://example.com/", text)
 
 
@@ -174,6 +173,9 @@ class DailyPipelineTests(unittest.TestCase):
             excerpt = next(line for line in text.splitlines() if line.strip().startswith("- 摘要："))
             self.assertIn("影响：", excerpt)
             self.assertNotIn("不应优先拼进周报", excerpt)
+            self.assertIn(core, excerpt)
+            self.assertIn(impact, excerpt)
+            self.assertNotIn("…", excerpt)
 
 if __name__ == "__main__":
     unittest.main()

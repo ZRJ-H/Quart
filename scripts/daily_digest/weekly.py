@@ -17,11 +17,8 @@ SUMMARY_FIELD = re.compile(
 BLOCKQUOTE = re.compile(r"^> (?!来源：)(.+)$", re.MULTILINE)
 
 
-def _excerpt(value: str, limit: int = 160) -> str:
-    normalized = re.sub(r"\s+", " ", value).strip()
-    if len(normalized) <= limit:
-        return normalized
-    return normalized[: limit - 1].rstrip(" ,;:，；：。") + "…"
+def _excerpt(value: str) -> str:
+    return re.sub(r"\s+", " ", value).strip()
 
 
 def _compose_summary(fields: list[tuple[str, str]]) -> str:
@@ -41,10 +38,8 @@ def _compose_summary(fields: list[tuple[str, str]]) -> str:
             secondary_label = label
             break
     if primary and secondary:
-        first = _excerpt(primary, 112)
-        prefix = f" {secondary_label}："
-        return first + prefix + _excerpt(secondary, 180 - len(first) - len(prefix))
-    return _excerpt(primary or secondary, 180)
+        return f"{_excerpt(primary)} {secondary_label}：{_excerpt(secondary)}"
+    return _excerpt(primary or secondary)
 
 
 def _daily_items(text: str) -> list[tuple[str, str, str]]:

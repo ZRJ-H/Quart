@@ -106,7 +106,7 @@ class DailyRenderingTests(unittest.TestCase):
         result = summarize("AI科技动态", articles, api_key="key", go_key=None, request=fake_short_request)
 
         self.assertEqual(result.mode, "evidence-only")
-    def test_overlong_model_fields_are_clipped_without_discarding_the_summary(self):
+    def test_model_fields_are_preserved_in_full_without_programmatic_ellipsis(self):
         articles = PAPERS[:3]
         payload = {
             "items": [
@@ -135,15 +135,46 @@ class DailyRenderingTests(unittest.TestCase):
 
         self.assertEqual(result.mode, "model")
         for item in result.items:
-            self.assertLessEqual(len(item.summary), 140)
-            self.assertLessEqual(len(item.background), 110)
-            self.assertLessEqual(len(item.impact), 100)
-            self.assertLessEqual(len(item.watch), 80)
-            self.assertLessEqual(len(item.value), 70)
-            total = sum(len(getattr(item, name)) for name in ("summary", "background", "impact", "watch", "value"))
-            self.assertGreaterEqual(total, 350)
-            self.assertLessEqual(total, 500)
+            self.assertEqual(item.summary, "摘" * 180)
+            self.assertEqual(item.background, "背" * 150)
+            self.assertEqual(item.impact, "影" * 140)
+            self.assertEqual(item.watch, "观" * 120)
+            self.assertEqual(item.value, "值" * 100)
+            self.assertNotIn("…", "".join((item.summary, item.background, item.impact, item.watch, item.value)))
 
+    def test_model_ellipsis_is_repaired_before_publishing(self):
+        articles = PAPERS[:3]
+        complete_items = [
+            {
+                "index": index,
+                "title_zh": f"中文标题 {index}",
+                "summary": "完整核心事实。" * 18,
+                "background": "完整背景信息。" * 12,
+                "impact": "完整影响判断。" * 10,
+                "watch": "完整后续观察。" * 8,
+                "value": "完整阅读价值。" * 7,
+            }
+            for index in range(3)
+        ]
+        trends = [
+            {"fact": "来源发布信息。", "inference": "仍需观察。"},
+            {"fact": "来源提供摘要。", "inference": "影响待验证。"},
+            {"fact": "条目附有链接。", "inference": "可以继续核验。"},
+        ]
+        incomplete_items = [dict(item) for item in complete_items]
+        incomplete_items[0]["summary"] = complete_items[0]["summary"][:-1] + "…"
+        responses = [
+            {"items": incomplete_items, "trends": trends},
+            {"items": complete_items, "trends": trends},
+        ]
+
+        def fake_request(url, headers, body):
+            return {"choices": [{"message": {"content": json.dumps(responses.pop(0), ensure_ascii=False)}}]}
+
+        result = summarize("AI科技动态", articles, api_key="key", go_key=None, require_model=True, request=fake_request)
+
+        self.assertEqual(result.items[0].summary, complete_items[0]["summary"])
+        self.assertEqual(responses, [])
     def test_near_minimum_quick_item_gets_an_evidence_boundary(self):
         articles = PAPERS[:4]
         payload = {

@@ -175,6 +175,7 @@ def _prompt(category: str, articles: list[Article]) -> str:
 5. AI论文日报必须填写 research_problem、method、results、limitations、engineering_value。
 6. Hacker News 必须依据 top_comments 填写 discussion_focus；没有评论证据时明确写“暂无足够评论证据”。
 7. trends 恰好三条；fact 只能复述证据，inference 必须使用审慎措辞并明确是判断。
+8. 所有字段必须以完整句子结束，禁止使用“…”或“...”省略内容；如果需要控制长度，应删减次要信息并重写完整句子。
 
 证据 JSON：
 {json.dumps(evidence, ensure_ascii=False)}"""
@@ -196,31 +197,35 @@ def _parse_content(content: str, category: str, articles: list[Article]) -> Dige
     items: list[ItemSummary] = []
     for index, raw in enumerate(raw_items):
         raw = dict(raw)
-        budgets = (
-            {"summary": 140, "background": 110, "impact": 100, "watch": 80, "value": 70}
+        text_fields = (
+            ("summary", "background", "impact", "watch", "value")
             if index < 3
-            else {"summary": 220, "value": 100}
+            else ("summary", "value")
         )
-        for name, limit in budgets.items():
-            raw[name] = _clip(str(raw.get(name, "")), limit)
+        for name in text_fields:
+            raw[name] = re.sub(r"\s+", " ", str(raw.get(name, ""))).strip()
         if index >= 3:
             quick_length = len(raw["summary"]) + len(raw["value"])
             if 180 <= quick_length < 220:
-                raw["summary"] = _clip(
+                raw["summary"] = re.sub(
+                    r"\s+",
+                    " ",
                     raw["summary"] + "；证据边界：具体适用范围、数据口径与后续变化仍应以原始来源的完整说明为准。",
-                    220,
-                )
+                ).strip()
+        returned_text = " ".join(str(raw.get(name, "")) for name in fields if name != "index")
+        if re.search(r"…|\.{3}", returned_text):
+            raise ValueError(f"Model item {index} contains an ellipsis or incomplete sentence")
         if not all(str(raw.get(name, "")).strip() for name in ("title_zh", "summary", "value")):
             raise ValueError(f"Model item {index} lacks required text")
         if index < 3 and not all(str(raw.get(name, "")).strip() for name in ("background", "impact", "watch")):
             raise ValueError(f"Model detail item {index} is incomplete")
         detail_length = sum(len(str(raw.get(name, "")).strip()) for name in ("summary", "background", "impact", "watch", "value"))
-        if index < 3 and not 350 <= detail_length <= 500:
-            raise ValueError(f"Model detail item {index} must contain 350-500 characters; got {detail_length}")
+        if index < 3 and not 350 <= detail_length <= 1000:
+            raise ValueError(f"Model detail item {index} must contain 350-1000 characters; got {detail_length}")
         if index >= 3:
             quick_length = sum(len(str(raw.get(name, "")).strip()) for name in ("summary", "value"))
-            if not 220 <= quick_length <= 320:
-                raise ValueError(f"Model quick item {index} must contain 220-320 characters; got {quick_length}")
+            if not 220 <= quick_length <= 600:
+                raise ValueError(f"Model quick item {index} must contain 220-600 characters; got {quick_length}")
         if category == "AI论文日报" and not all(
             str(raw.get(name, "")).strip()
             for name in ("research_problem", "method", "results", "limitations", "engineering_value")
@@ -289,6 +294,7 @@ def summarize(
                                 "请以各字段上限为目标补写。前三条分别写到 summary 120–140 字、"
                                 "background 100–110 字、impact 90–100 字、watch 70–80 字、"
                                 "value 60–70 字；其余条目写到 summary 200–220 字、value 90–100 字。"
+                                "所有句子必须写完整，禁止使用‘…’或‘...’省略内容。"
                             ),
                         },
                     ]
