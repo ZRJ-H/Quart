@@ -107,7 +107,7 @@ def parse_frontmatter(text):
     return data, body
 
 
-def clean_content(text, max_len=800, summary_len=30):
+def clean_content(text, max_len=1200, summary_len=200):
     text = re.sub(r"\[\[([^\]|]+)(?:\|[^\]]*)?\]\]", r"\1", text)
     text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", text)
     text = re.sub(r"#{1,6}\s*", "", text)
@@ -167,10 +167,15 @@ def slugify_title(text):
     return slug[:60]
 
 
-def build_daily_index(vault_dir, conn):
-    """解析每日内容 → 写入 SQLite"""
-    c = conn.cursor()
-    count = 0
+def extract_links(text):
+    """Extract unique wikilink targets before Markdown cleanup removes them."""
+    link_re = re.compile(r"\[\[([^\]|]+)(?:\|[^\]]*)?\]\]")
+    return list(dict.fromkeys(target.strip() for target in link_re.findall(text) if target.strip()))
+
+
+def collect_daily_entries(vault_dir):
+    """Parse daily Markdown files into portable search entry dictionaries."""
+    entries = []
 
     for dir_name, config in DAILY_DIRS.items():
         dir_path = os.path.join(vault_dir, dir_name)
@@ -217,35 +222,34 @@ def build_daily_index(vault_dir, conn):
                 full_content, summary = clean_content(content_text)
                 entry_id = f"daily/{dir_name}/{date_str}#{slugify_title(title)}"
 
-                c.execute("""
-                    INSERT OR REPLACE INTO entries
-                    (id, name, type, category, tags, summary, content,
-                     last_updated, content_length, reference_count)
-                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                """, (
-                    entry_id, title, "daily", category,
-                    json.dumps(tags, ensure_ascii=False),
-                    summary, full_content,
-                    date_str, len(full_content), 0,
-                ))
+                entries.append({
+                    "id": entry_id,
+                    "name": title,
+                    "type": "daily",
+                    "category": category,
+                    "tags": tags,
+                    "summary": summary,
+                    "content": full_content,
+                    "last_updated": date_str,
+                    "content_length": len(full_content),
+                    "reference_count": 0,
+                    "links": extract_links(content_text),
+                    "page_path": f"{dir_name}/{date_str}",
+                })
                 article_count += 1
-                count += 1
 
         print(f"  {dir_name}: {file_count} files, {article_count} articles")
 
-    return count
+    return entries
 
 
-def build_wiki_index(vault_dir, conn):
-    """解析 wiki/ 目录 → 写入 SQLite"""
+def collect_wiki_entries(vault_dir):
+    """Parse private wiki records into portable search entry dictionaries."""
     wiki_dir = os.path.join(vault_dir, "wiki")
     if not os.path.isdir(wiki_dir):
         print(f"Wiki dir not found: {wiki_dir}")
-        return 0
+        return []
 
-    c = conn.cursor()
-    link_re = re.compile(r"\[\[([^\]|]+)(?:\|[^\]]*)?\]\]")
-    link_counter = {}
     staged = []
 
     for subdir in ["entities", "concepts", "sources", "synthesis"]:
@@ -266,11 +270,6 @@ def build_wiki_index(vault_dir, conn):
             fm, body = parse_frontmatter(raw)
             if len(body) < 20:
                 continue
-
-            for target in link_re.findall(body):
-                t = target.strip()
-                if t:
-                    link_counter[t] = link_counter.get(t, 0) + 1
 
             name = fm.get("name", fm.get("title", fname.replace(".md", "")))
             tags = fm.get("tags", [])
@@ -294,14 +293,32 @@ def build_wiki_index(vault_dir, conn):
                 "category": category, "tags": tags, "summary": summary,
                 "content": full_content, "last_updated": last_updated,
                 "content_length": len(full_content),
+                "reference_count": 0,
+                "links": extract_links(body),
+                "page_path": None,
             })
 
-    count = 0
-    for entry in staged:
-        rc = link_counter.get(entry["name"], 0)
-        entry["reference_count"] = rc
+    return staged
 
-        c.execute("""
+
+def collect_entries(vault_dir):
+    """Collect every searchable wiki and daily entry with link metadata."""
+    entries = collect_wiki_entries(vault_dir) + collect_daily_entries(vault_dir)
+    link_counter = {}
+    for entry in entries:
+        for target in entry.get("links", []):
+            link_counter[target] = link_counter.get(target, 0) + 1
+    for entry in entries:
+        entry["reference_count"] = link_counter.get(entry["name"], 0)
+    return entries
+
+
+def write_entries_to_db(conn, entries):
+    """Replace SQLite entries with a previously collected portable index."""
+    cursor = conn.cursor()
+    cursor.execute("DELETE FROM entries")
+    for entry in entries:
+        cursor.execute("""
             INSERT OR REPLACE INTO entries
             (id, name, type, category, tags, summary, content,
              last_updated, content_length, reference_count)
@@ -313,9 +330,33 @@ def build_wiki_index(vault_dir, conn):
             entry["last_updated"], entry["content_length"],
             entry["reference_count"],
         ))
-        count += 1
 
-    return count
+
+def atomic_write_json(path, payload):
+    """Write JSON through a sibling temporary file and atomically replace it."""
+    os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
+    temp_path = f"{path}.tmp"
+    try:
+        with open(temp_path, "w", encoding="utf-8", newline="\n") as handle:
+            json.dump(payload, handle, ensure_ascii=False, separators=(",", ":"))
+        os.replace(temp_path, path)
+    finally:
+        if os.path.exists(temp_path):
+            os.remove(temp_path)
+
+
+def write_json_indexes(entries, full_path, light_path):
+    """Write full Worker data and a smaller browser suggestion index."""
+    atomic_write_json(full_path, entries)
+    light_fields = (
+        "id", "name", "type", "category", "tags", "summary",
+        "last_updated", "reference_count", "links", "page_path",
+    )
+    light_entries = [
+        {key: entry.get(key) for key in light_fields}
+        for entry in entries
+    ]
+    atomic_write_json(light_path, light_entries)
 
 
 def init_db(db_path):
@@ -371,43 +412,49 @@ def init_db(db_path):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Build wiki search index → SQLite")
+    parser = argparse.ArgumentParser(description="Build wiki search indexes")
     parser.add_argument("vault_dir", nargs="?", default="content")
     parser.add_argument("-o", "--output", default="server/wiki.db",
                         help="SQLite database path (default: server/wiki.db)")
+    parser.add_argument("--json-output",
+                        help="Full JSON index path for the AI Worker")
+    parser.add_argument("--light-output",
+                        help="Light JSON index path for browser search")
+    parser.add_argument("--no-sqlite", action="store_true",
+                        help="Skip the compatibility SQLite index")
     args = parser.parse_args()
 
     vault_dir = args.vault_dir
     db_path = args.output
+    if bool(args.json_output) != bool(args.light_output):
+        parser.error("--json-output and --light-output must be used together")
 
-    # 初始化数据库
-    os.makedirs(os.path.dirname(db_path) or ".", exist_ok=True)
-    conn = init_db(db_path)
-
-    # 清空旧数据
-    conn.execute("DELETE FROM entries")
-    print(f"Cleared old entries from {db_path}")
-
-    # 构建 wiki 索引
-    print("Indexing wiki pages...")
-    wiki_count = build_wiki_index(vault_dir, conn)
+    print("Collecting wiki and daily entries...")
+    entries = collect_entries(vault_dir)
+    wiki_count = sum(entry["type"] != "daily" for entry in entries)
+    daily_count = len(entries) - wiki_count
     print(f"  Wiki pages: {wiki_count}")
-
-    # 构建每日内容索引
-    print("Indexing daily content...")
-    daily_count = build_daily_index(vault_dir, conn)
     print(f"  Daily articles: {daily_count}")
 
-    # 提交
-    conn.commit()
+    if not args.no_sqlite:
+        os.makedirs(os.path.dirname(db_path) or ".", exist_ok=True)
+        conn = init_db(db_path)
+        write_entries_to_db(conn, entries)
+        conn.commit()
+        fts_count = conn.execute("SELECT COUNT(*) FROM entries_fts").fetchone()[0]
+        db_size = os.path.getsize(db_path) / 1024
+        print(
+            f"SQLite: {len(entries)} entries "
+            f"({fts_count} FTS indexed), DB size: {db_size:.1f} KB"
+        )
+        conn.close()
 
-    # 统计
-    total = conn.execute("SELECT COUNT(*) FROM entries").fetchone()[0]
-    fts_count = conn.execute("SELECT COUNT(*) FROM entries_fts").fetchone()[0]
-    db_size = os.path.getsize(db_path) / 1024
-    print(f"\nTotal: {total} entries ({fts_count} FTS indexed), DB size: {db_size:.1f} KB")
+    if args.json_output:
+        write_json_indexes(entries, args.json_output, args.light_output)
+        print(f"Full JSON: {args.json_output}")
+        print(f"Light JSON: {args.light_output}")
 
-    conn.close()
+    print(f"Total: {len(entries)} entries")
     return 0
 
 
