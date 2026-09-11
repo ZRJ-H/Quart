@@ -79,10 +79,24 @@ class DailyCollectorTests(unittest.TestCase):
         self.assertEqual(papers[0].extra["categories"], ["cs.AI"])
         self.assertIn("cat%3Acs.AI", seen_urls[0])
 
+    def test_arxiv_falls_back_to_official_rss_when_api_is_unavailable(self):
+        seen_urls = []
+
+        def fake_fetch(url):
+            seen_urls.append(url)
+            if "api/query" in url:
+                raise OSError("API unavailable")
+            return ARXIV_FIXTURE
+
+        papers = collect_arxiv(NOW, limit=5, fetch_text=fake_fetch)
+
+        self.assertEqual([paper.id for paper in papers], ["2609.00001", "2609.00002"])
+        self.assertTrue(any("rss.arxiv.org/rss/cs.AI" in url for url in seen_urls))
+
     def test_hacker_news_collects_ranked_stories_and_discussion_evidence(self):
         story_time = int(datetime(2026, 9, 11, 1, tzinfo=timezone.utc).timestamp())
         payloads = {
-            "topstories.json": [101, 102],
+            "topstories.json": [101, 102, 103],
             "item/101.json": {
                 "id": 101,
                 "type": "story",
@@ -104,10 +118,23 @@ class DailyCollectorTests(unittest.TestCase):
                 "kids": [],
             },
             "item/201.json": {"id": 201, "type": "comment", "text": "<p>First discussion point</p>"},
+            "item/103.json": {
+                "id": 103,
+                "type": "story",
+                "title": "Low ranked story",
+                "url": "https://example.com/low",
+                "time": story_time - 120,
+                "score": 1,
+                "descendants": 1,
+                "kids": [203],
+            },
+            "item/203.json": {"id": 203, "type": "comment", "text": "This should not be fetched."},
         }
+        requested = []
 
         def fake_fetch(url):
             key = url.split("/v0/")[1]
+            requested.append(key)
             return json.loads(json.dumps(payloads[key]))
 
         items = collect_hacker_news(NOW, limit=2, fetch_json=fake_fetch)
@@ -115,6 +142,7 @@ class DailyCollectorTests(unittest.TestCase):
         self.assertEqual([(item.score, item.comments) for item in items], [(420, 88), (200, 30)])
         self.assertEqual(items[0].discussion_url, "https://news.ycombinator.com/item?id=101")
         self.assertEqual(items[0].extra["top_comments"], ["First discussion point"])
+        self.assertNotIn("item/203.json", requested)
 
 
 if __name__ == "__main__":

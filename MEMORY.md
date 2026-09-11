@@ -4,12 +4,21 @@
 
 - 当前阶段: 生产运行
 - 活跃分支: main
-- 网站 URL: https://fdogelover.github.io/Quart/
+- 网站 URL: https://zrj-h.github.io/Quart/
 - Worker URL: https://doge-wiki-search.zstufjj2004.workers.dev
-- 构建状态: 正常（每日 GH Actions 自动构建）
+- 构建状态: 正常（每日内容采集成功后自动部署 GitHub Pages）
 
 ## Decision Log
 
+### 2026-09-11: 每日知识采集与分层摘要
+
+- **问题**: AI 科技、时政、AI 论文和 Hacker News 长期无新数据，7 天内容过滤后栏目入口直接 404。
+- **方案**: 统一 Python 采集管道，每日 08:30（Asia/Shanghai）抓取公开源；同日不足时最多回退 48 小时，任一栏目未达最低数量则整批不写入。
+- **数量**: AI 科技 8、时政 8、AI 论文 5、Hacker News 8；GitHub Trending 延续 25 条。
+- **摘要规范**: 每栏前 3 条 250–400 字，其余 80–150 字；输出 3 条趋势判断并明确区分事实与推断；论文补充问题、方法、结果、局限、工程价值，HN 补充讨论焦点。
+- **证据约束**: 模型只可基于采集到的标题、正文摘要、作者、指标和评论生成；结构或长度校验失败时自动使用确定性证据摘要。
+- **容错**: RSS 源并发抓取且单源失败不影响栏目；arXiv API 失败时并发回退到 cs.AI、cs.LG、cs.CL 官方 RSS；HN 仅为最终入选项目抓评论。
+- **部署**: `Collect Daily Knowledge` 一次提交所有当天内容，成功完成后由 `workflow_run` 触发 GitHub Pages 部署。
 ### 2026-06-16: 搜索质量优化 + 部署管道修复
 
 - **背景**: 线上搜索对中文连写词/时间词大面积 0 召回；排查发现部署管道根本没更新搜索 worker
@@ -177,4 +186,11 @@
 - **问题**: 内容采集工作流通过默认 `GITHUB_TOKEN` 推送提交，这类提交不会再次触发 `push` 部署工作流，Pages 因而没有随每日内容更新。
 - **方案**: `deploy.yaml` 监听 `Collect GitHub Trending` 的成功 `workflow_run`，并补齐 `configure-pages`、`.nojekyll` 与当前 Pages action 版本。
 - **验证**: 工作流回归测试 2/2 通过；本地生成 4539 条轻量索引并完成 Quartz 生产构建，Pages 四项必需产物齐全。
-- **待办**: 仓库当前未启用 GitHub Pages；首次部署若仍提示未配置，需要在 Settings → Pages 中将 Source 设为 GitHub Actions。
+- **验证**: 仓库已公开并启用 GitHub Pages；Actions 运行 #34577937532 成功，线上地址为 https://zrj-h.github.io/Quart/。
+### [2026-09-11] 每日知识自动采集与摘要重构
+
+- 完成四类缺失数据的真实来源采集、48 小时回退、数量门槛和原子写入。
+- 完成分层详细摘要、论文专用字段、HN 讨论焦点、事实/判断分离和模型输出校验。
+- 每日工作流合并采集、测试、周报与一次性提交，时间为北京时间 08:30。
+- 首页周报入口改为稳定目录页，避免继续指向过期周次。
+- arXiv 增加 API→官方 RSS 容错；RSS 与 HN 抓取并发化以限制运行时间。

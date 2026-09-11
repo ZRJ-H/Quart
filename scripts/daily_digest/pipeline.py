@@ -47,7 +47,9 @@ def run_pipeline(
 
     collected: dict[str, list[Article]] = {}
     for category in LIMITS:
+        print(f"Collecting {category}...", flush=True)
         rows = collectors[category](now)[: LIMITS[category]]
+        print(f"Collected {category}: {len(rows)} items", flush=True)
         if len(rows) < MINIMUMS[category]:
             raise CollectionError(f"{category} returned {len(rows)} items; minimum is {MINIMUMS[category]}")
         collected[category] = rows
