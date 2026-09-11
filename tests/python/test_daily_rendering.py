@@ -57,6 +57,8 @@ class DailyRenderingTests(unittest.TestCase):
         self.assertIn("## 深度解读", markdown)
         self.assertIn("## 快速浏览", markdown)
         self.assertIn("**研究问题**", markdown)
+        self.assertEqual(markdown.count("**研究问题**"), 3)
+        self.assertEqual(markdown.count("**核心摘要**"), 2)
         self.assertIn("**实验结果**", markdown)
         self.assertIn("**局限**", markdown)
         self.assertIn("https://arxiv.org/abs/2609.00001", markdown)

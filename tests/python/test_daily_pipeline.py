@@ -78,6 +78,25 @@ class DailyPipelineTests(unittest.TestCase):
             for relative in expected:
                 self.assertIn("https://example.com/", (root / relative).read_text(encoding="utf-8"))
 
+    def test_pipeline_preserves_codex_reviewed_note_when_sources_change(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            run_pipeline(root, RUN_DATE, fixture_collectors(), fallback_summarizer)
+            reviewed = root / "AI科技动态" / "2026-09-11.md"
+            reviewed.write_text("摘要模式：Codex 中文精修\n人工核验内容\n", encoding="utf-8")
+            changed = articles("AI科技动态", 8)
+            changed[0] = Article(
+                "changed",
+                "Changed source",
+                "https://example.com/changed",
+                "Fixture Source",
+                datetime(2026, 9, 11, 10, tzinfo=timezone.utc),
+                "Changed evidence.",
+            )
+
+            run_pipeline(root, RUN_DATE, fixture_collectors({"AI科技动态": changed}), fallback_summarizer)
+
+            self.assertEqual(reviewed.read_text(encoding="utf-8"), "摘要模式：Codex 中文精修\n人工核验内容\n")
     def test_failed_category_leaves_existing_files_unchanged(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

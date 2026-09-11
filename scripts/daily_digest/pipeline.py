@@ -71,8 +71,9 @@ def run_pipeline(
         fingerprint = _fingerprint(rows)
         target = content_root / category / f"{run_date.isoformat()}.md"
         marker = f"<!-- source-fingerprint: {fingerprint} -->"
-        if target.exists() and marker in target.read_text(encoding="utf-8", errors="replace"):
-            outputs[category] = target.read_text(encoding="utf-8", errors="replace")
+        existing_text = target.read_text(encoding="utf-8", errors="replace") if target.exists() else ""
+        if "摘要模式：Codex 中文精修" in existing_text or marker in existing_text:
+            outputs[category] = existing_text
             continue
         digest = summarizer(category, rows)
         outputs[category] = render_digest(category, run_date, rows, digest).rstrip() + f"\n\n{marker}\n"

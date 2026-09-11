@@ -32,16 +32,21 @@ def _details(category: str, article: Article, item: ItemSummary, detailed: bool)
     if category == "AI论文日报":
         authors = "、".join(article.extra.get("authors", [])) or "来源未列出"
         categories = "、".join(article.extra.get("categories", [])) or "来源未列出"
-        lines.extend(
-            [
-                f"- **作者/分类**：{authors} · {categories}",
-                f"- **研究问题**：{item.research_problem}",
-                f"- **方法**：{item.method}",
-                f"- **实验结果**：{item.results}",
-                f"- **局限**：{item.limitations}",
-                f"- **工程价值**：{item.engineering_value}",
-            ]
-        )
+        lines.append(f"- **作者/分类**：{authors} · {categories}")
+        if detailed:
+            lines.extend(
+                [
+                    f"- **研究问题**：{item.research_problem}",
+                    f"- **方法**：{item.method}",
+                    f"- **实验结果**：{item.results}",
+                    f"- **局限**：{item.limitations}",
+                    f"- **工程价值**：{item.engineering_value}",
+                    f"- **价值点**：{item.value}",
+                ]
+            )
+        else:
+            lines.extend([f"- **核心摘要**：{item.summary}", f"- **价值点**：{item.value}"])
+        return "\n".join(lines)
     lines.append(f"- **核心摘要**：{item.summary}")
     if detailed:
         lines.extend(
