@@ -11,7 +11,9 @@ export interface SearchIndexEntry {
 }
 
 export function normalizeEndpoint(value: unknown): string {
-  return String(value || "").trim().replace(/\/+$/, "")
+  return String(value || "")
+    .trim()
+    .replace(/\/+$/, "")
 }
 
 export function resolveIndexUrl(relativeRoot: unknown, filename: unknown): string {
@@ -29,7 +31,9 @@ export function escapeHtml(value: unknown): string {
 }
 
 function tokenize(query: unknown): string[] {
-  const normalized = String(query || "").toLowerCase().trim()
+  const normalized = String(query || "")
+    .toLowerCase()
+    .trim()
   const tokens = new Set(normalized.match(/[一-鿿]+|[a-z0-9]+/g) || [])
   for (const token of [...tokens]) {
     if (/^[一-鿿]{3,}$/.test(token)) {
@@ -68,7 +72,9 @@ export function scoreLocalEntries(
   entries: SearchIndexEntry[],
   limit = 10,
 ): SearchIndexEntry[] {
-  const exactQuery = String(query || "").toLowerCase().trim()
+  const exactQuery = String(query || "")
+    .toLowerCase()
+    .trim()
   const terms = tokenize(exactQuery)
   if (!exactQuery || terms.length === 0 || !Array.isArray(entries)) return []
 

@@ -24,10 +24,12 @@
 ### Task 1: Generate portable static indexes
 
 **Files:**
+
 - Modify: `scripts/build-wiki-index.py`
 - Create: `tests/test_build_wiki_index.py`
 
 **Interfaces:**
+
 - Produces: `collect_entries(vault_dir) -> list[dict]`, `write_json_indexes(entries, full_path, light_path) -> None`, CLI flags `--json-output`, `--light-output`, and `--no-sqlite`.
 - Entry fields: `id`, `name`, `type`, `category`, `tags`, `summary`, `content`, `last_updated`, `content_length`, `reference_count`, `links`, `page_path`.
 
@@ -88,6 +90,7 @@ git commit -m "feat: generate static wiki search indexes"
 ### Task 2: Make the browser search endpoint-safe and resilient
 
 **Files:**
+
 - Create: `quartz/components/scripts/search-ai.core.js`
 - Create: `quartz/components/scripts/search-ai.core.test.ts`
 - Modify: `quartz/components/SearchAI.tsx`
@@ -95,6 +98,7 @@ git commit -m "feat: generate static wiki search indexes"
 - Modify: `quartz.layout.ts`
 
 **Interfaces:**
+
 - Produces: `normalizeEndpoint(value)`, `scoreLocalEntries(query, entries, limit)`, `resolveIndexUrl(relativeRoot, filename)`, and `escapeHtml(value)`.
 - `SearchAIOptions`: `{ endpoint: string }`.
 - DOM data: `data-endpoint`, `data-index-light`, and `data-index-full`.
@@ -103,12 +107,18 @@ git commit -m "feat: generate static wiki search indexes"
 
 ```typescript
 test("keeps a complete worker endpoint unchanged", () => {
-  assert.equal(normalizeEndpoint("https://worker.example/api/search"),
-    "https://worker.example/api/search")
+  assert.equal(
+    normalizeEndpoint("https://worker.example/api/search"),
+    "https://worker.example/api/search",
+  )
 })
 
 test("static search finds summary and escapes rendered data", () => {
-  const rows = scoreLocalEntries("量子模型", [{ name: "安全标题", summary: "量子模型进展", tags: [] }], 5)
+  const rows = scoreLocalEntries(
+    "量子模型",
+    [{ name: "安全标题", summary: "量子模型进展", tags: [] }],
+    5,
+  )
   assert.equal(rows.length, 1)
   assert.equal(escapeHtml('<img onerror="x">'), "&lt;img onerror=&quot;x&quot;&gt;")
 })
@@ -123,12 +133,15 @@ Expected: FAIL because the core module does not exist.
 
 ```javascript
 export function normalizeEndpoint(value) {
-  return String(value || "").trim().replace(/\/+$/, "")
+  return String(value || "")
+    .trim()
+    .replace(/\/+$/, "")
 }
 
 export function scoreLocalEntries(query, entries, limit = 10) {
   const terms = tokenize(query)
-  return entries.map((entry) => ({ ...entry, score: scoreEntry(entry, terms) }))
+  return entries
+    .map((entry) => ({ ...entry, score: scoreEntry(entry, terms) }))
     .filter((entry) => entry.score > 0)
     .sort((a, b) => b.score - a.score)
     .slice(0, limit)
@@ -152,6 +165,7 @@ git commit -m "fix: make AI search Pages-safe with static fallback"
 ### Task 3: Implement the Cloudflare Worker search API
 
 **Files:**
+
 - Create: `worker/package.json`
 - Create: `worker/wrangler.jsonc`
 - Create: `worker/src/search.js`
@@ -162,6 +176,7 @@ git commit -m "fix: make AI search Pages-safe with static fallback"
 - Modify: `.gitignore`
 
 **Interfaces:**
+
 - Consumes: `env.DEEPSEEK_API_KEY`, `env.SITE_ORIGIN`, `env.INDEX_URL`.
 - Produces: `searchEntries(entries, query, options)`, `buildPrompt(query, results)`, and default module Worker `{ fetch(request, env, ctx) }`.
 
@@ -216,12 +231,14 @@ git commit -m "feat: add Cloudflare Worker AI search API"
 ### Task 4: Automate content updates and GitHub Pages deployment
 
 **Files:**
+
 - Create: `.github/workflows/deploy-pages.yml`
 - Create: `tests/test_pages_workflow.mjs`
 - Modify: `package.json`
 - Modify: `.env.example`
 
 **Interfaces:**
+
 - Workflow inputs: repository variables `SITE_DOMAIN`, `AI_SEARCH_ENDPOINT`; secret `DEEPSEEK_API_KEY` for crawler summaries.
 - Workflow outputs: deployed Pages URL and committed generated files under `content/`.
 
@@ -275,10 +292,12 @@ git commit -m "feat: automate GitHub Pages publishing"
 ### Task 5: Document deployment and run full verification
 
 **Files:**
+
 - Create: `README.md`
 - Modify: `docs/superpowers/plans/2026-09-11-github-pages-auto-wiki.md`
 
 **Interfaces:**
+
 - Documents exact GitHub Pages settings, repository variables/secrets, Worker secret setup, local build, and failure fallback.
 
 - [ ] **Step 1: Write the deployment guide**

@@ -1,6 +1,10 @@
 function detectQueryType(query) {
   const value = String(query || "").toLowerCase()
-  if ((value.includes("和") && value.includes("区别")) || value.includes("vs") || value.includes("对比")) {
+  if (
+    (value.includes("和") && value.includes("区别")) ||
+    value.includes("vs") ||
+    value.includes("对比")
+  ) {
     return "使用对比结构：关键维度对比，然后总结建议。"
   }
   if (value.includes("历史") || value.includes("发展") || value.includes("时间线")) {
@@ -17,10 +21,21 @@ export function buildPrompt(query, results) {
   const sources = results
     .map((entry, index) => {
       return (
-        "[" + (index + 1) + "] " + entry.name + " (" + (entry.category || entry.type || "未分类") + ")\n" +
-        "正文: " + (entry.content || entry.summary || "") + "\n" +
-        "标签: " + (Array.isArray(entry.tags) ? entry.tags.join(", ") : "") + "\n" +
-        "更新时间: " + (entry.last_updated || "?")
+        "[" +
+        (index + 1) +
+        "] " +
+        entry.name +
+        " (" +
+        (entry.category || entry.type || "未分类") +
+        ")\n" +
+        "正文: " +
+        (entry.content || entry.summary || "") +
+        "\n" +
+        "标签: " +
+        (Array.isArray(entry.tags) ? entry.tags.join(", ") : "") +
+        "\n" +
+        "更新时间: " +
+        (entry.last_updated || "?")
       )
     })
     .join("\n\n")

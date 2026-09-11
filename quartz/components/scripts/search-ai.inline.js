@@ -4,7 +4,6 @@ import {
   resolveIndexUrl,
   scoreLocalEntries,
 } from "./search-ai.core"
-
 ;(function () {
   const input = document.getElementById("ai-search-input")
   const btn = document.getElementById("ai-search-btn")
@@ -15,8 +14,7 @@ import {
   if (!input || !btn || !status || !results || !answer || !sources) return
 
   const endpoint = normalizeEndpoint(input.dataset.endpoint)
-  const lightIndexUrl =
-    input.dataset.indexLight || resolveIndexUrl(".", "wiki-index-light.json")
+  const lightIndexUrl = input.dataset.indexLight || resolveIndexUrl(".", "wiki-index-light.json")
 
   let currentFilters = {
     tags: [],
@@ -174,11 +172,22 @@ import {
   }
 
   const CAT_LABELS = {
-    'ai-news': 'AI动态', 'daily-news': '时政', 'github-trending': 'GitHub',
-    'hn-daily': 'HN', 'arxiv-daily': '论文', 'entities': '实体',
-    'source': '来源', 'sources': '来源', 'ai-agents': 'Agent', 'projects': '项目',
-    'events': '事件', 'companies': '公司', 'people': '人物', 'technologies': '技术',
-    'technical': '技术', 'concepts': '概念',
+    "ai-news": "AI动态",
+    "daily-news": "时政",
+    "github-trending": "GitHub",
+    "hn-daily": "HN",
+    "arxiv-daily": "论文",
+    entities: "实体",
+    source: "来源",
+    sources: "来源",
+    "ai-agents": "Agent",
+    projects: "项目",
+    events: "事件",
+    companies: "公司",
+    people: "人物",
+    technologies: "技术",
+    technical: "技术",
+    concepts: "概念",
   }
 
   function svgIcon(name) {
@@ -191,26 +200,49 @@ import {
   }
 
   function convertMarkdownTables(text) {
-    const lines = text.split('\n')
+    const lines = text.split("\n")
     const result = []
     let i = 0
     while (i < lines.length) {
       const line = lines[i]
-      if (i + 1 < lines.length &&
-          line.trim().startsWith('|') && line.trim().endsWith('|') &&
-          /^\|[\s|:\-]+\|$/.test(lines[i + 1].trim())) {
+      if (
+        i + 1 < lines.length &&
+        line.trim().startsWith("|") &&
+        line.trim().endsWith("|") &&
+        /^\|[\s|:\-]+\|$/.test(lines[i + 1].trim())
+      ) {
         const tableLines = []
-        while (i < lines.length && lines[i].trim().startsWith('|')) {
+        while (i < lines.length && lines[i].trim().startsWith("|")) {
           tableLines.push(lines[i])
           i++
         }
-        const sepIdx = tableLines.findIndex(l => /^\|[\s|:\-]+\|$/.test(l.trim()))
+        const sepIdx = tableLines.findIndex((l) => /^\|[\s|:\-]+\|$/.test(l.trim()))
         if (sepIdx >= 0) {
-          const parseRow = (l) => l.trim().replace(/^\||\|$/g, '').split('|').map(c => c.trim())
-          const thead = tableLines.slice(0, sepIdx)
-            .map(l => `<tr>${parseRow(l).map(h => `<th>${h}</th>`).join('')}</tr>`).join('')
-          const tbody = tableLines.slice(sepIdx + 1).filter(l => l.trim())
-            .map(l => `<tr>${parseRow(l).map(c => `<td>${c}</td>`).join('')}</tr>`).join('')
+          const parseRow = (l) =>
+            l
+              .trim()
+              .replace(/^\||\|$/g, "")
+              .split("|")
+              .map((c) => c.trim())
+          const thead = tableLines
+            .slice(0, sepIdx)
+            .map(
+              (l) =>
+                `<tr>${parseRow(l)
+                  .map((h) => `<th>${h}</th>`)
+                  .join("")}</tr>`,
+            )
+            .join("")
+          const tbody = tableLines
+            .slice(sepIdx + 1)
+            .filter((l) => l.trim())
+            .map(
+              (l) =>
+                `<tr>${parseRow(l)
+                  .map((c) => `<td>${c}</td>`)
+                  .join("")}</tr>`,
+            )
+            .join("")
           result.push(`<table><thead>${thead}</thead><tbody>${tbody}</tbody></table>`)
         } else {
           result.push(...tableLines)
@@ -220,7 +252,7 @@ import {
         i++
       }
     }
-    return result.join('\n')
+    return result.join("\n")
   }
 
   function simpleMarkdown(text) {
@@ -240,8 +272,8 @@ import {
     html = html.replace(/^\d+\.\s+(.+)$/gm, "<li>$1</li>")
     html = html.replace(/\n\n/g, "</p><p>")
     html = "<p>" + html + "</p>"
-    html = html.replace(/<p>(\s*<(?:table|h[1-6]|ul|ol))/g, '$1')
-    html = html.replace(/(<\/(?:table|h[1-6]|ul|ol)>\s*)<\/p>/g, '$1')
+    html = html.replace(/<p>(\s*<(?:table|h[1-6]|ul|ol))/g, "$1")
+    html = html.replace(/(<\/(?:table|h[1-6]|ul|ol)>\s*)<\/p>/g, "$1")
     html = html.replace(/<p>\s*<\/p>/g, "")
     html = html.replace(/<p><\/p>/g, "")
     return html
@@ -256,50 +288,72 @@ import {
 
     function buildCardUrl(s) {
       if (!s.page_path) return null
-      const encodedPath = s.page_path
-        .split("/")
-        .map(encodeURIComponent)
-        .join("/")
+      const encodedPath = s.page_path.split("/").map(encodeURIComponent).join("/")
       const indexUrl = new URL(lightIndexUrl, window.location.href)
       return new URL(encodedPath + "/", indexUrl).href
     }
 
     function extractSummary(raw) {
-      if (!raw) return ''
+      if (!raw) return ""
       var m = raw.match(/摘要[：:]\s*([^\n]+)/)
       if (m) return m[1].trim()
       // Skip header-only lines (≤4 chars like "定义" "来源" "基本信息")
-      var flines = raw.split('\n').map(function(l) {
-        return l
-          .replace(/^[-#*>\s]+/, '')            // strip markdown prefix
-          .replace(/^-\s+\S+[：:]\s*/, '')       // strip "- label:" prefix
-          .replace(/^[一-鿿]{1,4}[：:]\s*/, '') // strip "类型:" "来源:" style labels
-          .trim()
-      }).filter(function(l) { return l.length > 4 })
-      return flines.length ? flines[0] : ''
+      var flines = raw
+        .split("\n")
+        .map(function (l) {
+          return l
+            .replace(/^[-#*>\s]+/, "") // strip markdown prefix
+            .replace(/^-\s+\S+[：:]\s*/, "") // strip "- label:" prefix
+            .replace(/^[一-鿿]{1,4}[：:]\s*/, "") // strip "类型:" "来源:" style labels
+            .trim()
+        })
+        .filter(function (l) {
+          return l.length > 4
+        })
+      return flines.length ? flines[0] : ""
     }
 
-    const cards = sourceList.map(s => {
-      const url = buildCardUrl(s)
-      const summary = extractSummary(s.summary)
-      const catLabel = CAT_LABELS[s.category] || s.category
-      const footer = '<div class="source-card-footer">'
-        + '<span class="source-cat-chip">' + escapeHtml(catLabel) + '</span>'
-        + (s.last_updated ? '<span class="source-card-date">' + escapeHtml(s.last_updated) + '</span>' : '')
-        + (url ? '' : '<span class="source-card-archived">已归档</span>')
-        + '</div>'
-      const body = '<div class="source-card-title">' + escapeHtml(s.name) + '</div>'
-        + (summary ? '<div class="source-card-excerpt">' + escapeHtml(summary) + '</div>' : '')
-        + footer
-      return url
-        ? '<a class="source-card" href="' + escapeHtml(url) + '" target="_blank" rel="noopener">' + body + '</a>'
-        : '<div class="source-card source-card--archived">' + body + '</div>'
-    }).join('')
+    const cards = sourceList
+      .map((s) => {
+        const url = buildCardUrl(s)
+        const summary = extractSummary(s.summary)
+        const catLabel = CAT_LABELS[s.category] || s.category
+        const footer =
+          '<div class="source-card-footer">' +
+          '<span class="source-cat-chip">' +
+          escapeHtml(catLabel) +
+          "</span>" +
+          (s.last_updated
+            ? '<span class="source-card-date">' + escapeHtml(s.last_updated) + "</span>"
+            : "") +
+          (url ? "" : '<span class="source-card-archived">已归档</span>') +
+          "</div>"
+        const body =
+          '<div class="source-card-title">' +
+          escapeHtml(s.name) +
+          "</div>" +
+          (summary ? '<div class="source-card-excerpt">' + escapeHtml(summary) + "</div>" : "") +
+          footer
+        return url
+          ? '<a class="source-card" href="' +
+              escapeHtml(url) +
+              '" target="_blank" rel="noopener">' +
+              body +
+              "</a>"
+          : '<div class="source-card source-card--archived">' + body + "</div>"
+      })
+      .join("")
 
-    return '<h3>📚 参考来源 (' + sourceList.length + ')</h3><div class="source-card-list">' + cards + '</div>'
+    return (
+      "<h3>📚 参考来源 (" +
+      sourceList.length +
+      ')</h3><div class="source-card-list">' +
+      cards +
+      "</div>"
+    )
   }
 
-    function renderEmptyState() {
+  function renderEmptyState() {
     let picks = []
     if (suggestionsData && suggestionsData.length) {
       picks = [...suggestionsData]
@@ -333,9 +387,7 @@ import {
     statusEl.textContent = "AI 服务不可用，已显示本地搜索结果"
     answerEl.innerHTML =
       '<p class="static-search-note">当前使用浏览器内的静态索引，不会影响知识库浏览。</p>'
-    sourcesEl.innerHTML = localResults.length
-      ? renderSourceCards(localResults)
-      : renderEmptyState()
+    sourcesEl.innerHTML = localResults.length ? renderSourceCards(localResults) : renderEmptyState()
     resultsEl.style.display = "grid"
     if (!localResults.length) bindEmptySuggestions()
     addSearchHistory(query)
@@ -383,7 +435,10 @@ import {
 
       const reader = resp.body.getReader()
       const decoder = new TextDecoder()
-      let buffer = '', answerText = '', renderPending = false, rafId = null
+      let buffer = "",
+        answerText = "",
+        renderPending = false,
+        rafId = null
 
       function scheduleRender() {
         if (renderPending) return
@@ -401,43 +456,49 @@ import {
         const { done, value } = await reader.read()
         if (done) break
         buffer += decoder.decode(value, { stream: true })
-        const lines = buffer.split('\n')
+        const lines = buffer.split("\n")
         buffer = lines.pop()
 
         for (const line of lines) {
-          if (!line.startsWith('data: ')) continue
+          if (!line.startsWith("data: ")) continue
           try {
             const event = JSON.parse(line.slice(6).trim())
-            if (event.type === 'sources') {
+            if (event.type === "sources") {
               if (event.sources && event.sources.length > 0) {
                 sources.innerHTML = renderSourceCards(event.sources)
               } else {
                 sources.innerHTML = renderEmptyState()
                 bindEmptySuggestions()
               }
-              results.style.display = 'grid'
+              results.style.display = "grid"
               answer.innerHTML = '<p class="stream-generating">正在生成回答...</p>'
-            } else if (event.type === 'chunk') {
+            } else if (event.type === "chunk") {
               answerText += event.text
               scheduleRender()
-            } else if (event.type === 'done') {
-              if (rafId) { cancelAnimationFrame(rafId); rafId = null }
+            } else if (event.type === "done") {
+              if (rafId) {
+                cancelAnimationFrame(rafId)
+                rafId = null
+              }
               renderPending = false
               answer.innerHTML = simpleMarkdown(answerText)
               addSearchHistory(query)
-            } else if (event.type === 'error') {
+            } else if (event.type === "error") {
               answer.innerHTML = `<div class="ai-error">${escapeHtml(event.message)}</div>`
             }
           } catch {}
         }
       }
 
-      if (answerText && !answer.querySelector('.ai-error') && !answer.querySelector('.stream-cursor')) {
+      if (
+        answerText &&
+        !answer.querySelector(".ai-error") &&
+        !answer.querySelector(".stream-cursor")
+      ) {
         answer.innerHTML = simpleMarkdown(answerText)
       }
-
     } catch (err) {
-      if (err.name === 'AbortError') return
+      if (err.name === "AbortError") return
       await renderStaticSearch(query, answer, sources, results, status)
     } finally {
       btn.disabled = false
@@ -540,7 +601,7 @@ import {
   function renderHistory() {
     const container = document.querySelector(".search-history")
     if (!container) return
-    if (container.closest('.sidebar')) return // shown in modal instead
+    if (container.closest(".sidebar")) return // shown in modal instead
 
     const history = getSearchHistory()
     const list = container.querySelector(".history-list")
@@ -588,7 +649,7 @@ import {
 
   const _originalDoSearch = doSearch
   doSearch = async function () {
-    if (input.hasAttribute('readonly')) return // sidebar mode — modal handles it
+    if (input.hasAttribute("readonly")) return // sidebar mode — modal handles it
     const query = input.value.trim()
     if (!query || query.length < 2) return
     await _originalDoSearch()
@@ -607,10 +668,10 @@ import {
   // ===== Spotlight Modal =====
 
   function createModalDOM() {
-    const backdrop = document.createElement('div')
-    backdrop.id = 'search-modal-backdrop'
-    backdrop.className = 'search-modal-backdrop'
-    backdrop.style.display = 'none'
+    const backdrop = document.createElement("div")
+    backdrop.id = "search-modal-backdrop"
+    backdrop.className = "search-modal-backdrop"
+    backdrop.style.display = "none"
     backdrop.innerHTML = `
       <div class="search-modal-panel" role="dialog" aria-label="知识库搜索">
         <div class="search-modal-input-row">
@@ -651,32 +712,35 @@ import {
 
   function openModal() {
     const modal = getModal()
-    modal.style.display = 'flex'
-    document.body.style.overflow = 'hidden'
-    const modalInput = document.getElementById('modal-search-input')
+    modal.style.display = "flex"
+    document.body.style.overflow = "hidden"
+    const modalInput = document.getElementById("modal-search-input")
     modalInput.focus()
     renderModalHistory()
   }
 
   function closeModal() {
     const modal = getModal()
-    modal.style.display = 'none'
-    document.body.style.overflow = ''
+    modal.style.display = "none"
+    document.body.style.overflow = ""
   }
 
   function renderModalHistory() {
     const history = getSearchHistory()
-    const container = document.getElementById('modal-search-history')
-    const list = container ? container.querySelector('.modal-history-list') : null
+    const container = document.getElementById("modal-search-history")
+    const list = container ? container.querySelector(".modal-history-list") : null
     if (!container || !list) return
 
     if (history.length === 0) {
-      container.style.display = 'none'
+      container.style.display = "none"
       return
     }
 
-    container.style.display = 'block'
-    list.innerHTML = history.slice(0, 5).map(item => `
+    container.style.display = "block"
+    list.innerHTML = history
+      .slice(0, 5)
+      .map(
+        (item) => `
       <div class="history-item" data-query="${escapeHtml(item.query)}">
         <span class="history-icon">🔍</span>
         <div class="history-content">
@@ -684,36 +748,44 @@ import {
           <div class="history-time">${formatTime(item.timestamp)}</div>
         </div>
       </div>
-    `).join('')
+    `,
+      )
+      .join("")
 
-    list.querySelectorAll('.history-item').forEach(item => {
-      item.addEventListener('click', () => {
-        const mi = document.getElementById('modal-search-input')
-        if (mi) { mi.value = item.dataset.query; doModalSearch() }
+    list.querySelectorAll(".history-item").forEach((item) => {
+      item.addEventListener("click", () => {
+        const mi = document.getElementById("modal-search-input")
+        if (mi) {
+          mi.value = item.dataset.query
+          doModalSearch()
+        }
       })
     })
 
-    const clearBtn = container.querySelector('.modal-history-clear')
+    const clearBtn = container.querySelector(".modal-history-clear")
     if (clearBtn) {
-      clearBtn.onclick = () => { clearSearchHistory(); renderModalHistory() }
+      clearBtn.onclick = () => {
+        clearSearchHistory()
+        renderModalHistory()
+      }
     }
   }
 
   let _modalAbort = null
 
   async function doModalSearch() {
-    const mi = document.getElementById('modal-search-input')
-    const mb = document.getElementById('modal-search-btn')
-    const ms = document.getElementById('modal-search-status')
-    const mr = document.getElementById('modal-search-results')
-    const ma = document.getElementById('modal-ai-answer')
-    const mc = document.getElementById('modal-ai-sources')
-    const mh = document.getElementById('modal-search-history')
+    const mi = document.getElementById("modal-search-input")
+    const mb = document.getElementById("modal-search-btn")
+    const ms = document.getElementById("modal-search-status")
+    const mr = document.getElementById("modal-search-results")
+    const ma = document.getElementById("modal-ai-answer")
+    const mc = document.getElementById("modal-ai-sources")
+    const mh = document.getElementById("modal-search-history")
     if (!mi || !ms || !mr || !ma || !mc) return
 
     const query = mi.value.trim()
     if (!query || query.length < 2) {
-      if (ms) ms.textContent = '请至少输入2个字'
+      if (ms) ms.textContent = "请至少输入2个字"
       return
     }
 
@@ -721,11 +793,11 @@ import {
     _modalAbort = new AbortController()
 
     if (mb) mb.disabled = true
-    if (ms) ms.textContent = '正在检索知识库...'
-    if (mr) mr.style.display = 'none'
-    if (mh) mh.style.display = 'none'
-    if (ma) ma.innerHTML = ''
-    if (mc) mc.innerHTML = ''
+    if (ms) ms.textContent = "正在检索知识库..."
+    if (mr) mr.style.display = "none"
+    if (mh) mh.style.display = "none"
+    if (ma) ma.innerHTML = ""
+    if (mc) mc.innerHTML = ""
 
     if (!endpoint) {
       await renderStaticSearch(query, ma, mc, mr, ms)
@@ -736,8 +808,8 @@ import {
 
     try {
       const resp = await fetch(endpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ query }),
         signal: _modalAbort.signal,
       })
@@ -749,50 +821,61 @@ import {
 
       const reader = resp.body.getReader()
       const decoder = new TextDecoder()
-      let buffer = '', answerText = '', renderPending = false, rafId = null
+      let buffer = "",
+        answerText = "",
+        renderPending = false,
+        rafId = null
 
       function scheduleRender() {
         if (renderPending) return
         renderPending = true
         rafId = requestAnimationFrame(() => {
           if (ma) ma.innerHTML = simpleMarkdown(answerText) + '<span class="stream-cursor">▌</span>'
-          renderPending = false; rafId = null
+          renderPending = false
+          rafId = null
         })
       }
 
-      if (ms) ms.textContent = ''
+      if (ms) ms.textContent = ""
 
       while (true) {
         const { done, value } = await reader.read()
         if (done) break
         buffer += decoder.decode(value, { stream: true })
-        const lines = buffer.split('\n'); buffer = lines.pop()
+        const lines = buffer.split("\n")
+        buffer = lines.pop()
         for (const line of lines) {
-          if (!line.startsWith('data: ')) continue
+          if (!line.startsWith("data: ")) continue
           try {
             const event = JSON.parse(line.slice(6).trim())
-            if (event.type === 'sources') {
-              if (mc) mc.innerHTML = event.sources && event.sources.length > 0
-                ? renderSourceCards(event.sources)
-                : renderEmptyState()
-              if (mr) mr.style.display = 'grid'
+            if (event.type === "sources") {
+              if (mc)
+                mc.innerHTML =
+                  event.sources && event.sources.length > 0
+                    ? renderSourceCards(event.sources)
+                    : renderEmptyState()
+              if (mr) mr.style.display = "grid"
               if (ma) ma.innerHTML = '<p class="stream-generating">正在生成回答...</p>'
-            } else if (event.type === 'chunk') {
-              answerText += event.text; scheduleRender()
-            } else if (event.type === 'done') {
-              if (rafId) { cancelAnimationFrame(rafId); rafId = null }
+            } else if (event.type === "chunk") {
+              answerText += event.text
+              scheduleRender()
+            } else if (event.type === "done") {
+              if (rafId) {
+                cancelAnimationFrame(rafId)
+                rafId = null
+              }
               renderPending = false
               if (ma) ma.innerHTML = simpleMarkdown(answerText)
               addSearchHistory(query)
               renderModalHistory()
-            } else if (event.type === 'error') {
+            } else if (event.type === "error") {
               if (ma) ma.innerHTML = `<div class="ai-error">${escapeHtml(event.message)}</div>`
             }
           } catch {}
         }
       }
     } catch (err) {
-      if (err.name === 'AbortError') return
+      if (err.name === "AbortError") return
       await renderStaticSearch(query, ma, mc, mr, ms)
     } finally {
       if (mb) mb.disabled = false
@@ -804,79 +887,88 @@ import {
     const modal = getModal()
 
     // Backdrop click closes
-    modal.addEventListener('click', e => { if (e.target === modal) closeModal() })
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) closeModal()
+    })
 
     // Close / search buttons
-    document.getElementById('modal-close-btn').addEventListener('click', closeModal)
-    document.getElementById('modal-search-btn').addEventListener('click', doModalSearch)
+    document.getElementById("modal-close-btn").addEventListener("click", closeModal)
+    document.getElementById("modal-search-btn").addEventListener("click", doModalSearch)
 
     // Modal input: Enter = search, Esc = close
-    document.getElementById('modal-search-input').addEventListener('keydown', e => {
-      if (e.key === 'Enter') doModalSearch()
-      if (e.key === 'Escape') closeModal()
+    document.getElementById("modal-search-input").addEventListener("keydown", (e) => {
+      if (e.key === "Enter") doModalSearch()
+      if (e.key === "Escape") closeModal()
     })
 
     // Global ESC
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape' && modal.style.display !== 'none') closeModal()
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && modal.style.display !== "none") closeModal()
     })
 
     // ⌘K / Ctrl+K: open/close modal from anywhere
-    document.addEventListener('keydown', e => {
-      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+    document.addEventListener("keydown", (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
         const active = document.activeElement
-        const tag = active ? active.tagName.toLowerCase() : ''
-        if ((tag === 'input' && !active.hasAttribute('readonly')) || tag === 'textarea' || (active && active.isContentEditable)) return
+        const tag = active ? active.tagName.toLowerCase() : ""
+        if (
+          (tag === "input" && !active.hasAttribute("readonly")) ||
+          tag === "textarea" ||
+          (active && active.isContentEditable)
+        )
+          return
         e.preventDefault()
-        modal.style.display !== 'none' ? closeModal() : openModal()
+        modal.style.display !== "none" ? closeModal() : openModal()
       }
     })
 
     // Mobile FAB
     ;(function () {
-      const fab = document.createElement('button')
-      fab.id = 'search-fab'
-      fab.className = 'search-fab'
-      fab.setAttribute('aria-label', '搜索知识库')
-      const NS = 'http://www.w3.org/2000/svg'
-      const svg = document.createElementNS(NS, 'svg')
-      svg.setAttribute('viewBox', '0 0 24 24')
-      svg.setAttribute('fill', 'none')
-      svg.setAttribute('stroke', 'currentColor')
-      svg.setAttribute('stroke-width', '2.5')
-      svg.setAttribute('stroke-linecap', 'round')
-      svg.setAttribute('stroke-linejoin', 'round')
-      svg.setAttribute('aria-hidden', 'true')
-      const circle = document.createElementNS(NS, 'circle')
-      circle.setAttribute('cx', '11'); circle.setAttribute('cy', '11'); circle.setAttribute('r', '8')
-      const line = document.createElementNS(NS, 'path')
-      line.setAttribute('d', 'm21 21-4.3-4.3')
-      svg.appendChild(circle); svg.appendChild(line)
+      const fab = document.createElement("button")
+      fab.id = "search-fab"
+      fab.className = "search-fab"
+      fab.setAttribute("aria-label", "搜索知识库")
+      const NS = "http://www.w3.org/2000/svg"
+      const svg = document.createElementNS(NS, "svg")
+      svg.setAttribute("viewBox", "0 0 24 24")
+      svg.setAttribute("fill", "none")
+      svg.setAttribute("stroke", "currentColor")
+      svg.setAttribute("stroke-width", "2.5")
+      svg.setAttribute("stroke-linecap", "round")
+      svg.setAttribute("stroke-linejoin", "round")
+      svg.setAttribute("aria-hidden", "true")
+      const circle = document.createElementNS(NS, "circle")
+      circle.setAttribute("cx", "11")
+      circle.setAttribute("cy", "11")
+      circle.setAttribute("r", "8")
+      const line = document.createElementNS(NS, "path")
+      line.setAttribute("d", "m21 21-4.3-4.3")
+      svg.appendChild(circle)
+      svg.appendChild(line)
       fab.appendChild(svg)
-      fab.addEventListener('click', openModal)
+      fab.addEventListener("click", openModal)
       document.body.appendChild(fab)
     })()
 
     // Make sidebar search boxes into triggers
-    document.querySelectorAll('.sidebar .ai-search-box').forEach(box => {
-      box.addEventListener('click', e => {
+    document.querySelectorAll(".sidebar .ai-search-box").forEach((box) => {
+      box.addEventListener("click", (e) => {
         e.preventDefault()
         e.stopPropagation()
         openModal()
       })
-      const sidebarInput = box.querySelector('.ai-search-input')
+      const sidebarInput = box.querySelector(".ai-search-input")
       if (sidebarInput) {
-        sidebarInput.setAttribute('readonly', 'readonly')
-        sidebarInput.setAttribute('placeholder', '搜索知识库...')
+        sidebarInput.setAttribute("readonly", "readonly")
+        sidebarInput.setAttribute("placeholder", "搜索知识库...")
       }
       // ⌘K hint badge
-      const hint = document.createElement('kbd')
-      hint.className = 'search-kbd-hint'
-      hint.textContent = /Mac|iPhone|iPad/.test(navigator.userAgent) ? '⌘K' : 'Ctrl K'
+      const hint = document.createElement("kbd")
+      hint.className = "search-kbd-hint"
+      hint.textContent = /Mac|iPhone|iPad/.test(navigator.userAgent) ? "⌘K" : "Ctrl K"
       box.appendChild(hint)
     })
   }
 
   initModal()
-
 })()

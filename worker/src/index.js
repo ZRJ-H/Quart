@@ -109,7 +109,9 @@ function streamDeepSeek(upstream, results, headers) {
   const decoder = new TextDecoder()
   const stream = new ReadableStream({
     async start(controller) {
-      controller.enqueue(encoder.encode(sseEvent({ type: "sources", sources: sourcePayload(results) })))
+      controller.enqueue(
+        encoder.encode(sseEvent({ type: "sources", sources: sourcePayload(results) })),
+      )
       const reader = upstream.body.getReader()
       let buffer = ""
       let completed = false
@@ -130,7 +132,8 @@ function streamDeepSeek(upstream, results, headers) {
             }
             try {
               const chunk = JSON.parse(data).choices?.[0]?.delta?.content
-              if (chunk) controller.enqueue(encoder.encode(sseEvent({ type: "chunk", text: chunk })))
+              if (chunk)
+                controller.enqueue(encoder.encode(sseEvent({ type: "chunk", text: chunk })))
             } catch {
               // Ignore a malformed provider line and continue the stream.
             }
@@ -211,7 +214,9 @@ async function handleSearch(request, env, fetchImpl) {
     }
     return streamDeepSeek(upstream, results, headers)
   } catch (error) {
-    console.error(JSON.stringify({ event: "search_failed", message: String(error?.message || error) }))
+    console.error(
+      JSON.stringify({ event: "search_failed", message: String(error?.message || error) }),
+    )
     return json({ error: "search_unavailable" }, 503, headers)
   }
 }

@@ -1,5 +1,7 @@
 function tokenize(query) {
-  const normalized = String(query || "").toLowerCase().trim()
+  const normalized = String(query || "")
+    .toLowerCase()
+    .trim()
   const tokens = new Set(normalized.match(/[一-鿿]+|[a-z0-9]+/g) || [])
   for (const token of [...tokens]) {
     if (/^[一-鿿]{3,}$/.test(token)) {
@@ -47,10 +49,7 @@ function scoreEntry(entry, terms, exactQuery) {
 function matchesFilters(entry, filters = {}) {
   if (Array.isArray(filters.tags) && filters.tags.length > 0) {
     const tags = Array.isArray(entry.tags) ? entry.tags : []
-    if (
-      !filters.tags.includes(entry.category) &&
-      !tags.some((tag) => filters.tags.includes(tag))
-    ) {
+    if (!filters.tags.includes(entry.category) && !tags.some((tag) => filters.tags.includes(tag))) {
       return false
     }
   }
@@ -99,7 +98,8 @@ export function searchEntries(entries, query, options = {}) {
   for (const entry of primary) {
     for (const target of Array.isArray(entry.links) ? entry.links : []) {
       const linked = byName.get(text(target))
-      if (!linked || selectedIds.has(linked.id) || !matchesFilters(linked, options.filters)) continue
+      if (!linked || selectedIds.has(linked.id) || !matchesFilters(linked, options.filters))
+        continue
       selectedIds.add(linked.id)
       related.push({ ...linked, score: 0, is_related: true })
       if (primary.length + related.length >= limit) break

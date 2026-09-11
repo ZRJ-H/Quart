@@ -48,7 +48,10 @@ test("static search finds summary, tags, and title with deterministic ranking", 
 
   const rows = scoreLocalEntries("量子模型", entries, 5)
 
-  assert.deepEqual(rows.map((entry) => entry.id), ["title", "summary"])
+  assert.deepEqual(
+    rows.map((entry) => entry.id),
+    ["title", "summary"],
+  )
 })
 
 test("escapes untrusted titles and history before innerHTML rendering", () => {

@@ -32,7 +32,10 @@ test("title matches rank ahead of summary matches", () => {
     "量子模型",
   )
 
-  assert.deepEqual(results.map((entry) => entry.id), ["title", "summary"])
+  assert.deepEqual(
+    results.map((entry) => entry.id),
+    ["title", "summary"],
+  )
 })
 
 test("linked entries are included once as related results", () => {
@@ -58,6 +61,9 @@ test("linked entries are included once as related results", () => {
     "目标主题",
   )
 
-  assert.deepEqual(results.map((entry) => entry.id), ["alpha", "beta"])
+  assert.deepEqual(
+    results.map((entry) => entry.id),
+    ["alpha", "beta"],
+  )
   assert.equal(results[1].is_related, true)
 })
