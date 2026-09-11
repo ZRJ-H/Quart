@@ -21,6 +21,8 @@ tsconfig.tsbuildinfo
 # IDE
 .vscode/
 .idea/
+.dev.vars
+.wrangler/
 
 # OS
 .DS_Store
