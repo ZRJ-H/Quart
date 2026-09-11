@@ -16,5 +16,12 @@ export const write = async ({ ctx, slug, ext, content }: WriteOptions): Promise<
   const dir = path.dirname(pathToPage)
   await fs.promises.mkdir(dir, { recursive: true })
   await fs.promises.writeFile(pathToPage, content)
+
+  if (ext === ".html" && slug !== "index" && !slug.endsWith("/index")) {
+    const directoryIndexPath = joinSegments(ctx.argv.output, slug, "index.html") as FilePath
+    await fs.promises.mkdir(path.dirname(directoryIndexPath), { recursive: true })
+    await fs.promises.writeFile(directoryIndexPath, content)
+  }
+
   return pathToPage
 }

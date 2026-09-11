@@ -1,6 +1,8 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
 
+const dailyRetentionDays = Number(process.env.CONTENT_RETENTION_DAYS ?? 30)
+
 /**
  * Quartz 4 Configuration
  *
@@ -14,8 +16,33 @@ const config: QuartzConfig = {
     enablePopovers: true,
     analytics: null,
     locale: "zh-CN",
-    baseUrl: "your-domain.com",
-    ignorePatterns: ["private", "templates", ".obsidian", ".opencode", ".claude", "node_modules", "docs/**", "wiki/entities/**", "wiki/sources/**", "wiki/concepts/**", "wiki/synthesis/**", "wiki/log*", "wiki/index*", "wiki/index", "wiki/QUICK-REFERENCE*", "wiki/STARTUP-GUIDE*", "wiki/workflow-daily-update*", "raw/**", "快捷键速查*", "AGENTS*", "MEMORY*", "GitHub项目档案/**", "GitHub 项目档案/**", "🏠 我的主页*"],
+    baseUrl: process.env.SITE_DOMAIN ?? "localhost:8080",
+    ignorePatterns: [
+      "private",
+      "templates",
+      ".obsidian",
+      ".opencode",
+      ".claude",
+      "node_modules",
+      "docs/**",
+      "wiki/entities/**",
+      "wiki/sources/**",
+      "wiki/concepts/**",
+      "wiki/synthesis/**",
+      "wiki/log*",
+      "wiki/index*",
+      "wiki/index",
+      "wiki/QUICK-REFERENCE*",
+      "wiki/STARTUP-GUIDE*",
+      "wiki/workflow-daily-update*",
+      "raw/**",
+      "快捷键速查*",
+      "AGENTS*",
+      "MEMORY*",
+      "GitHub项目档案/**",
+      "GitHub 项目档案/**",
+      "🏠 我的主页*",
+    ],
     defaultDateType: "created",
     theme: {
       fontOrigin: "googleFonts",
@@ -67,11 +94,17 @@ const config: QuartzConfig = {
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),
-      Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
+      Plugin.CrawlLinks({ markdownLinkResolution: "shortest", openLinksInNewTab: true }),
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
     ],
-    filters: [Plugin.RemoveDrafts(), Plugin.RemoveOldNotes({ days: 7, paths: ["时政要闻", "AI科技动态", "GitHub-Trending", "Hacker-News", "AI论文日报"] })],
+    filters: [
+      Plugin.RemoveDrafts(),
+      Plugin.RemoveOldNotes({
+        days: dailyRetentionDays,
+        paths: ["时政要闻", "AI科技动态", "GitHub-Trending", "Hacker-News", "AI论文日报"],
+      }),
+    ],
     emitters: [
       Plugin.AliasRedirects(),
       Plugin.ComponentResources(),
