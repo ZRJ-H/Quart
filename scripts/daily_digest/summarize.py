@@ -51,31 +51,86 @@ def _post_json(url: str, headers: dict[str, str], body: dict[str, Any]) -> dict[
         return json.loads(response.read().decode("utf-8"))
 
 
+def _clip(value: str, limit: int) -> str:
+    value = re.sub(r"\s+", " ", value or "").strip()
+    if len(value) <= limit:
+        return value
+    return value[: limit - 1].rstrip(" ,;:，；：") + "…"
+
+
+def _sentences(value: str) -> list[str]:
+    return [part.strip() for part in re.split(r"(?<=[.!?。！？])\s+", value) if part.strip()]
+
+
+def _matching_sentence(sentences: list[str], keywords: tuple[str, ...], fallback: str) -> str:
+    for sentence in sentences:
+        lowered = sentence.casefold()
+        if any(keyword in lowered for keyword in keywords):
+            return sentence
+    return fallback
+
+
 def _fallback(category: str, articles: list[Article]) -> DigestSummary:
     items: list[ItemSummary] = []
     for index, article in enumerate(articles):
         source_date = article.published_at.date().isoformat()
-        evidence = article.summary or article.title
+        evidence = re.sub(r"\s+", " ", article.summary or article.title).strip()
+        if index < 3:
+            summary = _clip(f"来源直接提供的核心信息是：{evidence}", 110)
+            background = _clip(
+                f"{article.source} 于 {source_date} 发布此条目。当前记录只采用标题、发布时间与来源摘要，未读取到的正文背景不作补写。",
+                72,
+            )
+            impact = _clip(
+                f"从现有证据可确认，该条目聚焦“{article.title}”；对行业、政策或用户的实际影响仍缺少可量化材料。",
+                82,
+            )
+            watch = "后续应核验原文更新、方法或数据披露，并观察是否出现独立来源的交叉印证，同时记录不同来源间的事实冲突或口径变化。"
+            value = "本条提供当天主题线索和可追溯原文，适合继续阅读，不把尚未披露的信息写成结论。"
+        else:
+            summary = _clip(
+                f"{article.source} 于 {source_date} 发布“{article.title}”。来源可核验信息：{evidence}",
+                98,
+            )
+            background = impact = watch = ""
+            value = "提供当天线索与原文入口；更多背景、结果和影响需回到来源核验，当前不作证据之外的推断。"
+
         common = {
             "index": index,
             "title_zh": article.title,
-            "summary": evidence,
-            "background": f"该信息由 {article.source} 于 {source_date} 发布，当前仅使用来源提供的内容。",
-            "impact": "来源没有提供足够证据支持进一步影响判断，请以原文后续更新为准。",
-            "watch": "关注原始页面更新及其他独立来源的后续印证。",
-            "value": "保留来源、时间和原文链接，便于直接核验。",
+            "summary": summary,
+            "background": background,
+            "impact": impact,
+            "watch": watch,
+            "value": value,
         }
         if category == "AI论文日报":
+            sentences = _sentences(evidence)
+            first = sentences[0] if sentences else article.title
+            method_sentence = _matching_sentence(
+                sentences,
+                ("we propose", "we present", "method", "framework", "approach", "using"),
+                first,
+            )
+            result_sentence = _matching_sentence(
+                sentences,
+                ("result", "achieve", "outperform", "improve", "reduce", "faster", "%"),
+                "作者摘要未给出可单独提取的量化结果。",
+            )
             common.update(
-                research_problem=evidence,
-                method="来源摘要未提供可安全扩写的完整方法细节，请查阅论文原文。",
-                results="当前仅保留作者摘要中明确报告的结果。",
-                limitations="自动采集无法替代对论文实验设计和附录的完整审阅。",
-                engineering_value="需要完成独立复现后再判断工程适用性。",
+                research_problem=_clip(f"研究问题线索：{first}", 150),
+                method=_clip(f"方法线索：{method_sentence}", 150),
+                results=_clip(f"结果线索：{result_sentence}", 130),
+                limitations="作者摘要没有系统披露全部实验边界、失败案例与外部有效性；自动日报也不能替代阅读全文和附录审查。",
+                engineering_value="可作为复现和技术选型线索；进入生产前仍需核对代码、数据、成本、许可与目标场景的一致性。",
             )
         if category == "Hacker News":
-            comments = article.extra.get("top_comments", [])
-            common["discussion_focus"] = " ".join(comments) if comments else "暂无可用的高赞评论证据。"
+            comments = [re.sub(r"\s+", " ", str(comment)).strip() for comment in article.extra.get("top_comments", [])]
+            focus = "；".join(comment for comment in comments if comment)
+            common["discussion_focus"] = _clip(
+                f"高赞评论主要讨论：{focus}" if focus else "暂无可用的高赞评论证据。",
+                180,
+            )
         items.append(ItemSummary(**common))
 
     trends = []
@@ -83,11 +138,10 @@ def _fallback(category: str, articles: list[Article]) -> DigestSummary:
         trends.append(
             TrendSummary(
                 fact=f"{article.source} 发布了《{article.title}》。",
-                inference="该主题的重要性仍需结合更多来源和后续进展判断。",
+                inference="编辑判断：该主题是否形成持续趋势，仍需更多来源、后续数据或实际采用情况验证。",
             )
         )
-    return DigestSummary(tuple(items), tuple(trends[:3]), "deterministic")
-
+    return DigestSummary(tuple(items), tuple(trends[:3]), "evidence-only")
 
 def _prompt(category: str, articles: list[Article]) -> str:
     evidence = []
@@ -158,6 +212,7 @@ def summarize(
     articles: list[Article],
     api_key: str | None,
     go_key: str | None,
+    github_token: str | None = None,
     *,
     request: Callable[[str, dict[str, str], dict[str, Any]], dict[str, Any]] = _post_json,
 ) -> DigestSummary:
@@ -166,6 +221,8 @@ def summarize(
         providers.append(("https://api.deepseek.com/chat/completions", api_key, "deepseek-chat"))
     if go_key:
         providers.append(("https://opencode.ai/zen/go/v1/chat/completions", go_key, "deepseek-v4-pro"))
+    if github_token:
+        providers.append(("https://models.github.ai/inference/chat/completions", github_token, "openai/gpt-4o"))
     prompt = _prompt(category, articles)
     for url, key, model in providers:
         try:

@@ -18,6 +18,7 @@ from .summarize import DigestSummary
 
 LIMITS = {"AI科技动态": 8, "时政要闻": 8, "AI论文日报": 5, "Hacker News": 8}
 MINIMUMS = {"AI科技动态": 3, "时政要闻": 3, "AI论文日报": 3, "Hacker News": 5}
+SUMMARY_SCHEMA_VERSION = 2
 
 
 def _article_dict(article: Article) -> dict:
@@ -27,7 +28,8 @@ def _article_dict(article: Article) -> dict:
 
 
 def _fingerprint(articles: list[Article]) -> str:
-    encoded = json.dumps([_article_dict(article) for article in articles], ensure_ascii=False, sort_keys=True).encode("utf-8")
+    payload = {"summary_schema_version": SUMMARY_SCHEMA_VERSION, "articles": [_article_dict(article) for article in articles]}
+    encoded = json.dumps(payload, ensure_ascii=False, sort_keys=True).encode("utf-8")
     return hashlib.sha256(encoded).hexdigest()
 
 

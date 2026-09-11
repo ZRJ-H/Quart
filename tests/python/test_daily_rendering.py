@@ -72,7 +72,7 @@ class DailyRenderingTests(unittest.TestCase):
         result = summarize("AI科技动态", articles, api_key="key", go_key=None, request=fake_invalid_request)
         markdown = render_digest("AI科技动态", RUN_DATE, articles, result)
 
-        self.assertEqual(result.mode, "deterministic")
+        self.assertEqual(result.mode, "evidence-only")
         self.assertIn(articles[0].summary, markdown)
         self.assertIn(articles[0].url, markdown)
 
@@ -103,7 +103,66 @@ class DailyRenderingTests(unittest.TestCase):
 
         result = summarize("AI科技动态", articles, api_key="key", go_key=None, request=fake_short_request)
 
-        self.assertEqual(result.mode, "deterministic")
+        self.assertEqual(result.mode, "evidence-only")
+    def test_github_models_is_used_without_external_api_keys(self):
+        calls = []
+
+        def fake_request(url, headers, body):
+            calls.append((url, headers, body))
+            raise OSError("simulated provider failure")
+
+        result = summarize(
+            "AI科技动态",
+            PAPERS[:3],
+            api_key=None,
+            go_key=None,
+            github_token="github-token",
+            request=fake_request,
+        )
+
+        self.assertEqual(result.mode, "evidence-only")
+        self.assertEqual(calls[0][0], "https://models.github.ai/inference/chat/completions")
+        self.assertEqual(calls[0][2]["model"], "openai/gpt-4o")
+
+    def test_deterministic_fallback_obeys_detail_and_quick_reading_budgets(self):
+        result = summarize("AI科技动态", PAPERS, api_key=None, go_key=None)
+
+        for item in result.items[:3]:
+            detail_length = sum(len(getattr(item, name)) for name in ("summary", "background", "impact", "watch", "value"))
+            self.assertGreaterEqual(detail_length, 250)
+            self.assertLessEqual(detail_length, 400)
+        for item in result.items[3:]:
+            quick_length = len(item.summary) + len(item.value)
+            self.assertGreaterEqual(quick_length, 80)
+            self.assertLessEqual(quick_length, 150)
+
+    def test_deterministic_fallback_clips_long_paper_and_comment_evidence(self):
+        long_paper = Article(
+            "2609.99999",
+            "Long paper",
+            "https://arxiv.org/abs/2609.99999",
+            "arXiv",
+            datetime(2026, 9, 11, 1, tzinfo=timezone.utc),
+            "We propose a method. We evaluate it on twelve tasks. Results improve by 30 percent. " * 30,
+        )
+        paper_item = summarize("AI论文日报", [long_paper], api_key=None, go_key=None).items[0]
+        self.assertLessEqual(len(paper_item.summary), 120)
+        self.assertLessEqual(len(paper_item.research_problem), 180)
+
+        long_comment = "Users discuss deployment cost, reliability, and benchmark quality. " * 30
+        hn_article = Article(
+            "999",
+            "A launch",
+            "https://example.com/launch",
+            "Hacker News",
+            datetime(2026, 9, 11, 1, tzinfo=timezone.utc),
+            "A launch was announced.",
+            discussion_url="https://news.ycombinator.com/item?id=999",
+            extra={"top_comments": [long_comment]},
+        )
+        hn_item = summarize("Hacker News", [hn_article], api_key=None, go_key=None).items[0]
+        self.assertLessEqual(len(hn_item.discussion_focus), 180)
+
     def test_hacker_news_renders_heat_and_discussion_focus(self):
         article = Article(
             "101",

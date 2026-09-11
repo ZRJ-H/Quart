@@ -15,6 +15,7 @@ ARXIV_FIXTURE = """<?xml version="1.0" encoding="UTF-8"?>
     <id>http://arxiv.org/abs/2609.00001v1</id>
     <title>Reliable Agents</title>
     <link rel="alternate" href="https://arxiv.org/abs/2609.00001" />
+    <link rel="related" href="https://arxiv.org/pdf/2609.00001v1" />
     <published>2026-09-11T01:00:00Z</published>
     <updated>2026-09-11T01:00:00Z</updated>
     <summary>We evaluate reliable agents on 12 tasks.</summary>

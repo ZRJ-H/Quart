@@ -63,7 +63,9 @@ def _normalize_arxiv(xml_text: str) -> list[Article]:
             if name in {"id", "guid"}:
                 entry_id = (child.text or "").strip()
             elif name == "link":
-                entry_link = (child.attrib.get("href") or child.text or "").strip()
+                candidate_link = (child.attrib.get("href") or child.text or "").strip()
+                if child.attrib.get("rel", "alternate") == "alternate" or not entry_link:
+                    entry_link = candidate_link
             elif name == "author":
                 authors.extend("".join(node.itertext()).strip() for node in child if _local_name(node.tag) == "name")
             elif name == "creator" and (child.text or "").strip():
