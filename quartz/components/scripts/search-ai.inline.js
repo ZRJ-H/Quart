@@ -1,3 +1,10 @@
+import {
+  escapeHtml as escapeUntrusted,
+  normalizeEndpoint,
+  resolveIndexUrl,
+  scoreLocalEntries,
+} from "./search-ai.core"
+
 ;(function () {
   const input = document.getElementById("ai-search-input")
   const btn = document.getElementById("ai-search-btn")
@@ -7,7 +14,9 @@
   const sources = document.getElementById("ai-search-sources")
   if (!input || !btn || !status || !results || !answer || !sources) return
 
-  const workerUrl = input.dataset.worker || "https://doge-wiki-search.YOUR_SUBDOMAIN.workers.dev"
+  const endpoint = normalizeEndpoint(input.dataset.endpoint)
+  const lightIndexUrl =
+    input.dataset.indexLight || resolveIndexUrl(".", "wiki-index-light.json")
 
   let currentFilters = {
     tags: [],
@@ -18,15 +27,12 @@
 
   // 搜索建议数据（从 wiki-index-light.json 加载）
   let suggestionsData = []
+  let suggestionsLoadPromise = null
 
   // 加载搜索建议数据（部署生成在站点根 /Quart/wiki-index-light.json，含 reference_count）
   async function loadSuggestionsData() {
     // 兼容不同基路径：优先站点根，回退旧路径
-    const candidates = [
-      "/Quart/wiki-index-light.json",
-      "/wiki-index-light.json",
-      "/worker/wiki-index-light.json",
-    ]
+    const candidates = [lightIndexUrl]
     for (const url of candidates) {
       try {
         const response = await fetch(url)
@@ -68,11 +74,11 @@
     list.innerHTML = suggestions
       .map(
         (s) => `
-      <div class="suggestion-item" data-name="${s.name}">
+      <div class="suggestion-item" data-name="${escapeHtml(s.name)}">
         <span class="suggestion-icon">${s.icon}</span>
         <div class="suggestion-content">
-          <div class="suggestion-name">${s.name}</div>
-          <div class="suggestion-category">${s.category}</div>
+          <div class="suggestion-name">${escapeHtml(s.name)}</div>
+          <div class="suggestion-category">${escapeHtml(s.category)}</div>
         </div>
       </div>
     `,
@@ -242,39 +248,20 @@
   }
 
   function escapeHtml(text) {
-    if (!text) return ""
-    return text
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;")
-      .replace(/'/g, "&#039;")
+    return escapeUntrusted(text)
   }
 
   function renderSourceCards(sourceList) {
     if (!sourceList || !sourceList.length) return ""
 
-    function getBase() {
-      const p = window.location.pathname.split('/')
-      return window.location.origin + '/' + (p[1] || '') + '/'
-    }
-
     function buildCardUrl(s) {
-      const base = getBase()
-      if (s.source_file) {
-        return base + s.source_file.split('/').map(encodeURIComponent).join('/')
-      }
-      if (s.id && s.id.startsWith('daily/')) {
-        // Only link if within 7 days — older pages are filtered from build
-        if (s.last_updated) {
-          const age = (Date.now() - new Date(s.last_updated)) / 86400000
-          if (age > 7) return null
-        }
-        const path = s.id.slice(6).split('#')[0]
-        return base + path.split('/').map(encodeURIComponent).join('/')
-      }
-      // wiki entries (entities/concepts/sources) have no Quartz pages yet
-      return null
+      if (!s.page_path) return null
+      const encodedPath = s.page_path
+        .split("/")
+        .map(encodeURIComponent)
+        .join("/")
+      const indexUrl = new URL(lightIndexUrl, window.location.href)
+      return new URL(encodedPath + "/", indexUrl).href
     }
 
     function extractSummary(raw) {
@@ -339,6 +326,21 @@
     })
   }
 
+  async function renderStaticSearch(query, answerEl, sourcesEl, resultsEl, statusEl) {
+    if (!suggestionsLoadPromise) suggestionsLoadPromise = loadSuggestionsData()
+    await suggestionsLoadPromise
+    const localResults = scoreLocalEntries(query, suggestionsData, 10)
+    statusEl.textContent = "AI 服务不可用，已显示本地搜索结果"
+    answerEl.innerHTML =
+      '<p class="static-search-note">当前使用浏览器内的静态索引，不会影响知识库浏览。</p>'
+    sourcesEl.innerHTML = localResults.length
+      ? renderSourceCards(localResults)
+      : renderEmptyState()
+    resultsEl.style.display = "grid"
+    if (!localResults.length) bindEmptySuggestions()
+    addSearchHistory(query)
+  }
+
   let currentAbortController = null
 
   async function doSearch() {
@@ -359,8 +361,15 @@
     answer.innerHTML = ""
     sources.innerHTML = ""
 
+    if (!endpoint) {
+      await renderStaticSearch(query, answer, sources, results, status)
+      btn.disabled = false
+      currentAbortController = null
+      return
+    }
+
     try {
-      const resp = await fetch(`${workerUrl}/api/search`, {
+      const resp = await fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ query, filters: currentFilters, sort: currentSort }),
@@ -368,9 +377,7 @@
       })
 
       if (!resp.ok) {
-        status.textContent = ""
-        answer.innerHTML = `<div class="ai-error">请求失败: ${resp.status}</div>`
-        results.style.display = "grid"
+        await renderStaticSearch(query, answer, sources, results, status)
         return
       }
 
@@ -431,9 +438,7 @@
 
     } catch (err) {
       if (err.name === 'AbortError') return
-      status.textContent = ""
-      answer.innerHTML = `<div class="ai-error">请求失败: ${err.message}</div>`
-      results.style.display = "grid"
+      await renderStaticSearch(query, answer, sources, results, status)
     } finally {
       btn.disabled = false
       currentAbortController = null
@@ -553,10 +558,10 @@
       .map((item) => {
         const time = formatTime(item.timestamp)
         return `
-        <div class="history-item" data-query="${item.query}">
+        <div class="history-item" data-query="${escapeHtml(item.query)}">
           <span class="history-icon">🔍</span>
           <div class="history-content">
-            <div class="history-query">${item.query}</div>
+            <div class="history-query">${escapeHtml(item.query)}</div>
             <div class="history-time">${time}</div>
           </div>
         </div>
@@ -595,7 +600,7 @@
   })
 
   initFilters()
-  loadSuggestionsData()
+  suggestionsLoadPromise = loadSuggestionsData()
   initSuggestions()
   initHistory()
 
@@ -704,7 +709,7 @@
     const ma = document.getElementById('modal-ai-answer')
     const mc = document.getElementById('modal-ai-sources')
     const mh = document.getElementById('modal-search-history')
-    if (!mi) return
+    if (!mi || !ms || !mr || !ma || !mc) return
 
     const query = mi.value.trim()
     if (!query || query.length < 2) {
@@ -722,8 +727,15 @@
     if (ma) ma.innerHTML = ''
     if (mc) mc.innerHTML = ''
 
+    if (!endpoint) {
+      await renderStaticSearch(query, ma, mc, mr, ms)
+      if (mb) mb.disabled = false
+      _modalAbort = null
+      return
+    }
+
     try {
-      const resp = await fetch(`${workerUrl}/api/search`, {
+      const resp = await fetch(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ query }),
@@ -731,9 +743,7 @@
       })
 
       if (!resp.ok) {
-        if (ms) ms.textContent = ''
-        if (ma) ma.innerHTML = `<div class="ai-error">请求失败: ${resp.status}</div>`
-        if (mr) mr.style.display = 'grid'
+        await renderStaticSearch(query, ma, mc, mr, ms)
         return
       }
 
@@ -783,9 +793,7 @@
       }
     } catch (err) {
       if (err.name === 'AbortError') return
-      if (ms) ms.textContent = ''
-      if (ma) ma.innerHTML = `<div class="ai-error">请求失败: ${err.message}</div>`
-      if (mr) mr.style.display = 'grid'
+      await renderStaticSearch(query, ma, mc, mr, ms)
     } finally {
       if (mb) mb.disabled = false
       _modalAbort = null

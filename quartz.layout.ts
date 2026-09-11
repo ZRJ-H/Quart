@@ -2,6 +2,8 @@ import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
 import { FileTrieNode } from "./quartz/util/fileTrie"
 
+const aiSearchEndpoint = process.env.AI_SEARCH_ENDPOINT ?? ""
+
 const explorerFilter = (node: FileTrieNode) =>
   node.slugSegment !== "tags" &&
   node.slugSegment !== "GitHub项目档案" &&
@@ -78,7 +80,11 @@ export const defaultContentPageLayout: PageLayout = {
     }),
     Component.Explorer({ filterFn: explorerFilter, sortFn: explorerSort }),
   ],
-  right: [Component.SearchAI({ workerUrl: "/api" }), Component.DesktopOnly(Component.TableOfContents()), Component.Backlinks()],
+  right: [
+    Component.SearchAI({ endpoint: aiSearchEndpoint }),
+    Component.DesktopOnly(Component.TableOfContents()),
+    Component.Backlinks(),
+  ],
 }
 
 // components for pages that display lists of pages  (e.g. tags or folders)
@@ -98,5 +104,5 @@ export const defaultListPageLayout: PageLayout = {
     }),
     Component.Explorer({ filterFn: explorerFilter, sortFn: explorerSort }),
   ],
-  right: [Component.SearchAI({ workerUrl: "/api" })],
+  right: [Component.SearchAI({ endpoint: aiSearchEndpoint })],
 }
