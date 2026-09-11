@@ -16,3 +16,5 @@ vault-content/
 .env*
 !.env.example
 server.py
+__pycache__/
+*.py[cod]
