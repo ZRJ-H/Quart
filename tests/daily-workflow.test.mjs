@@ -23,13 +23,11 @@ test("daily collection runs on schedule, manual dispatch, and collector changes"
 
 test("daily workflow tests, collects, summarizes, and commits once", async () => {
   const workflow = await load(collectUrl)
-  assert.equal(workflow.permissions.models, "read")
   const steps = workflow.jobs.collect.steps
   const run = (name) => steps.find((step) => step.name === name)?.run || ""
 
   assert.match(run("Test daily collectors"), /unittest discover/)
   assert.match(run("Collect daily knowledge"), /collect-daily-content\.py/)
-  assert.equal(steps.find((step) => step.name === "Collect daily knowledge").env.GITHUB_MODELS_TOKEN, "${{ github.token }}")
   assert.match(run("Collect daily knowledge"), /generate-github-trending\.js/)
   assert.match(run("Generate weekly report"), /generate-weekly-report\.py/)
   assert.match(run("Commit and push notes"), /git add content/)

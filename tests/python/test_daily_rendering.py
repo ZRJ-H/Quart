@@ -72,7 +72,7 @@ class DailyRenderingTests(unittest.TestCase):
         result = summarize("AI科技动态", articles, api_key="key", go_key=None, request=fake_invalid_request)
         markdown = render_digest("AI科技动态", RUN_DATE, articles, result)
 
-        self.assertTrue(result.mode.startswith("evidence-only"))
+        self.assertEqual(result.mode, "evidence-only")
         self.assertIn(articles[0].summary, markdown)
         self.assertIn(articles[0].url, markdown)
 
@@ -103,30 +103,7 @@ class DailyRenderingTests(unittest.TestCase):
 
         result = summarize("AI科技动态", articles, api_key="key", go_key=None, request=fake_short_request)
 
-        self.assertTrue(result.mode.startswith("evidence-only"))
-    def test_github_models_is_used_without_external_api_keys(self):
-        calls = []
-
-        def fake_request(url, headers, body):
-            calls.append((url, headers, body))
-            raise OSError("simulated provider failure")
-
-        result = summarize(
-            "AI科技动态",
-            PAPERS[:3],
-            api_key=None,
-            go_key=None,
-            github_token="github-token",
-            request=fake_request,
-        )
-
-        self.assertTrue(result.mode.startswith("evidence-only"))
-        self.assertEqual(calls[0][0], "https://models.github.ai/inference/chat/completions")
-        self.assertEqual(calls[0][2]["model"], "openai/gpt-5-mini")
-        self.assertEqual(calls[0][2]["max_completion_tokens"], 6000)
-        self.assertNotIn("max_tokens", calls[0][2])
-        self.assertIn("simulated provider failure", result.mode)
-
+        self.assertEqual(result.mode, "evidence-only")
     def test_deterministic_fallback_obeys_detail_and_quick_reading_budgets(self):
         result = summarize("AI科技动态", PAPERS, api_key=None, go_key=None)
 

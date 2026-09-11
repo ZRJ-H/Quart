@@ -27,12 +27,11 @@ def main() -> None:
     }
     deepseek_key = None if args.no_model else os.environ.get("DEEPSEEK_API_KEY")
     go_key = None if args.no_model else os.environ.get("GO_API_KEY")
-    github_token = None if args.no_model else os.environ.get("GITHUB_MODELS_TOKEN")
     paths = run_pipeline(
         args.content_root,
         args.date,
         collectors,
-        lambda category, rows: summarize(category, rows, deepseek_key, go_key, github_token),
+        lambda category, rows: summarize(category, rows, deepseek_key, go_key),
         args.raw_dir,
     )
     for path in paths:

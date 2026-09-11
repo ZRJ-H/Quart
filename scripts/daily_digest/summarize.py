@@ -70,7 +70,7 @@ def _matching_sentence(sentences: list[str], keywords: tuple[str, ...], fallback
     return fallback
 
 
-def _fallback(category: str, articles: list[Article], diagnostic: str = "") -> DigestSummary:
+def _fallback(category: str, articles: list[Article]) -> DigestSummary:
     items: list[ItemSummary] = []
     for index, article in enumerate(articles):
         source_date = article.published_at.date().isoformat()
@@ -141,8 +141,7 @@ def _fallback(category: str, articles: list[Article], diagnostic: str = "") -> D
                 inference="编辑判断：该主题是否形成持续趋势，仍需更多来源、后续数据或实际采用情况验证。",
             )
         )
-    mode = "evidence-only" + (f" · {_clip(diagnostic, 120)}" if diagnostic else "")
-    return DigestSummary(tuple(items), tuple(trends[:3]), mode)
+    return DigestSummary(tuple(items), tuple(trends[:3]), "evidence-only")
 
 def _prompt(category: str, articles: list[Article]) -> str:
     evidence = []
@@ -213,7 +212,6 @@ def summarize(
     articles: list[Article],
     api_key: str | None,
     go_key: str | None,
-    github_token: str | None = None,
     *,
     request: Callable[[str, dict[str, str], dict[str, Any]], dict[str, Any]] = _post_json,
 ) -> DigestSummary:
@@ -222,9 +220,6 @@ def summarize(
         providers.append(("https://api.deepseek.com/chat/completions", api_key, "deepseek-chat"))
     if go_key:
         providers.append(("https://opencode.ai/zen/go/v1/chat/completions", go_key, "deepseek-v4-pro"))
-    if github_token:
-        for model in ("openai/gpt-5-mini", "openai/gpt-5-nano"):
-            providers.append(("https://models.github.ai/inference/chat/completions", github_token, model))
     prompt = _prompt(category, articles)
     failures: list[str] = []
     for url, key, model in providers:
@@ -250,4 +245,4 @@ def summarize(
             failure = f"{model}: {type(error).__name__}: {error}"
             failures.append(re.sub(r"\s+", " ", failure).strip())
             print(f"Summary provider failed for {category}: {error}")
-    return _fallback(category, articles, failures[-1] if failures else "")
+    return _fallback(category, articles)

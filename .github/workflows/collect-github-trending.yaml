@@ -14,7 +14,6 @@ on:
 
 permissions:
   contents: write
-  models: read
 
 jobs:
   collect:
@@ -51,7 +50,6 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           GO_API_KEY: ${{ secrets.GO_API_KEY }}
-          GITHUB_MODELS_TOKEN: ${{ github.token }}
         run: |
           export RUN_DATE="$(TZ=Asia/Shanghai date +%F)"
           python3 scripts/collect-daily-content.py --content-root content --date "$RUN_DATE" --raw-dir /tmp/daily-raw
