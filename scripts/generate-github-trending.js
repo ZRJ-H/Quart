@@ -1,7 +1,7 @@
 import fs from "fs"
 import path from "path"
 
-const today = new Date().toISOString().slice(0, 10)
+const today = process.env.RUN_DATE || new Date().toISOString().slice(0, 10)
 const rawPath = process.env.TRENDING_JSON || "/tmp/trending.json"
 const contentRoot = process.env.CONTENT_ROOT || "content"
 const trendingDir = path.join(contentRoot, "GitHub Trending")
@@ -100,18 +100,25 @@ ${table}
 ### 趋势脉动
 ### 项目生态关联`
 
-  const request =
-    deepseekKey
-      ? {
-          url: "https://api.deepseek.com/chat/completions",
-          headers: { Authorization: `Bearer ${deepseekKey}` },
-          body: { model: "deepseek-chat", messages: [{ role: "user", content: prompt }], max_tokens: 1200 },
-        }
-      : {
-          url: "https://opencode.ai/zen/go/v1/chat/completions",
-          headers: { Authorization: `Bearer ${goKey}` },
-          body: { model: "deepseek-v4-pro", messages: [{ role: "user", content: prompt }], max_tokens: 1200 },
-        }
+  const request = deepseekKey
+    ? {
+        url: "https://api.deepseek.com/chat/completions",
+        headers: { Authorization: `Bearer ${deepseekKey}` },
+        body: {
+          model: "deepseek-chat",
+          messages: [{ role: "user", content: prompt }],
+          max_tokens: 1200,
+        },
+      }
+    : {
+        url: "https://opencode.ai/zen/go/v1/chat/completions",
+        headers: { Authorization: `Bearer ${goKey}` },
+        body: {
+          model: "deepseek-v4-pro",
+          messages: [{ role: "user", content: prompt }],
+          max_tokens: 1200,
+        },
+      }
 
   try {
     const response = await fetch(request.url, {
@@ -119,7 +126,8 @@ ${table}
       headers: { "Content-Type": "application/json", ...request.headers },
       body: JSON.stringify(request.body),
     })
-    if (!response.ok) throw new Error(`AI HTTP ${response.status}: ${(await response.text()).slice(0, 200)}`)
+    if (!response.ok)
+      throw new Error(`AI HTTP ${response.status}: ${(await response.text()).slice(0, 200)}`)
     const data = await response.json()
     return data.choices?.[0]?.message?.content || fallbackAnalysis()
   } catch (error) {

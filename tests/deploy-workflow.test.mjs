@@ -9,7 +9,7 @@ const workflowUrl = new URL("../.github/workflows/deploy.yaml", import.meta.url)
 test("content collection completion triggers a Pages deployment", async () => {
   const workflow = yaml.load(await readFile(workflowUrl, "utf8"))
 
-  assert.deepEqual(workflow.on.workflow_run.workflows, ["Collect GitHub Trending"])
+  assert.deepEqual(workflow.on.workflow_run.workflows, ["Collect Daily Knowledge"])
   assert.deepEqual(workflow.on.workflow_run.types, ["completed"])
   assert.match(workflow.jobs.build.if, /workflow_run\.conclusion == 'success'/)
 })
