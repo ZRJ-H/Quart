@@ -7,7 +7,7 @@ tags: [github, trending]
 
 # TheAlgorithms/Python
 
-> 用 Python 实现各类经典算法的教学仓库，适合算法学习、面试准备和需要参考标准实现的开发者。
+> 用 Python 实现各类经典算法的教学合集，涵盖排序、搜索、图论等，适合学习算法原理和准备面试的开发者。
 
 ## 基本信息
 
