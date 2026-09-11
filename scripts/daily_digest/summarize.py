@@ -70,7 +70,7 @@ def _matching_sentence(sentences: list[str], keywords: tuple[str, ...], fallback
     return fallback
 
 
-def _fallback(category: str, articles: list[Article]) -> DigestSummary:
+def _fallback(category: str, articles: list[Article], diagnostic: str = "") -> DigestSummary:
     items: list[ItemSummary] = []
     for index, article in enumerate(articles):
         source_date = article.published_at.date().isoformat()
@@ -141,7 +141,8 @@ def _fallback(category: str, articles: list[Article]) -> DigestSummary:
                 inference="编辑判断：该主题是否形成持续趋势，仍需更多来源、后续数据或实际采用情况验证。",
             )
         )
-    return DigestSummary(tuple(items), tuple(trends[:3]), "evidence-only")
+    mode = "evidence-only" + (f" · {_clip(diagnostic, 120)}" if diagnostic else "")
+    return DigestSummary(tuple(items), tuple(trends[:3]), mode)
 
 def _prompt(category: str, articles: list[Article]) -> str:
     evidence = []
@@ -224,6 +225,7 @@ def summarize(
     if github_token:
         providers.append(("https://models.github.ai/inference/chat/completions", github_token, "openai/gpt-4o"))
     prompt = _prompt(category, articles)
+    failures: list[str] = []
     for url, key, model in providers:
         try:
             response = request(
@@ -240,5 +242,7 @@ def summarize(
             content = response.get("choices", [{}])[0].get("message", {}).get("content", "")
             return _parse_content(content, category, articles)
         except Exception as error:
+            failure = f"{model}: {type(error).__name__}: {error}"
+            failures.append(re.sub(r"\s+", " ", failure).strip())
             print(f"Summary provider failed for {category}: {error}")
-    return _fallback(category, articles)
+    return _fallback(category, articles, failures[-1] if failures else "")

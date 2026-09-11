@@ -72,7 +72,7 @@ class DailyRenderingTests(unittest.TestCase):
         result = summarize("AI科技动态", articles, api_key="key", go_key=None, request=fake_invalid_request)
         markdown = render_digest("AI科技动态", RUN_DATE, articles, result)
 
-        self.assertEqual(result.mode, "evidence-only")
+        self.assertTrue(result.mode.startswith("evidence-only"))
         self.assertIn(articles[0].summary, markdown)
         self.assertIn(articles[0].url, markdown)
 
@@ -103,7 +103,7 @@ class DailyRenderingTests(unittest.TestCase):
 
         result = summarize("AI科技动态", articles, api_key="key", go_key=None, request=fake_short_request)
 
-        self.assertEqual(result.mode, "evidence-only")
+        self.assertTrue(result.mode.startswith("evidence-only"))
     def test_github_models_is_used_without_external_api_keys(self):
         calls = []
 
@@ -120,9 +120,10 @@ class DailyRenderingTests(unittest.TestCase):
             request=fake_request,
         )
 
-        self.assertEqual(result.mode, "evidence-only")
+        self.assertTrue(result.mode.startswith("evidence-only"))
         self.assertEqual(calls[0][0], "https://models.github.ai/inference/chat/completions")
         self.assertEqual(calls[0][2]["model"], "openai/gpt-4o")
+        self.assertIn("simulated provider failure", result.mode)
 
     def test_deterministic_fallback_obeys_detail_and_quick_reading_budgets(self):
         result = summarize("AI科技动态", PAPERS, api_key=None, go_key=None)
