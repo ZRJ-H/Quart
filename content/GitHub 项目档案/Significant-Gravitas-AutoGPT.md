@@ -7,7 +7,7 @@ tags: [github, trending]
 
 # Significant-Gravitas/AutoGPT
 
-> 让 AI 对每个人都可及、可构建的开源项目，提供自动化任务与智能体工具链，适合想探索自主 Agent 应用与自动化流程的开发者。
+> 致力于让 AI 人人可用的开源项目，提供构建自主代理的工具与平台，适合探索自动化任务与 AI 应用开发。
 
 ## 基本信息
 

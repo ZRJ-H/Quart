@@ -7,7 +7,7 @@ tags: [github, trending]
 
 # react/react
 
-> 用于构建 Web 与原生用户界面的 JavaScript 库，生态成熟、组件化思路清晰，适合从前端页面到跨端应用的各类 UI 开发场景。
+> 用于构建 Web 与原生用户界面的 JavaScript 库，适合开发交互式前端应用、组件化 UI 与跨平台界面。
 
 ## 基本信息
 
