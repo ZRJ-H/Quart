@@ -131,6 +131,13 @@ def _parse_content(content: str, category: str, articles: list[Article]) -> Dige
             raise ValueError(f"Model item {index} lacks required text")
         if index < 3 and not all(str(raw.get(name, "")).strip() for name in ("background", "impact", "watch")):
             raise ValueError(f"Model detail item {index} is incomplete")
+        detail_length = sum(len(str(raw.get(name, "")).strip()) for name in ("summary", "background", "impact", "watch", "value"))
+        if index < 3 and not 250 <= detail_length <= 400:
+            raise ValueError(f"Model detail item {index} must contain 250-400 characters")
+        if index >= 3:
+            quick_length = sum(len(str(raw.get(name, "")).strip()) for name in ("summary", "value"))
+            if not 80 <= quick_length <= 150:
+                raise ValueError(f"Model quick item {index} must contain 80-150 characters")
         if category == "AI论文日报" and not all(
             str(raw.get(name, "")).strip()
             for name in ("research_problem", "method", "results", "limitations", "engineering_value")

@@ -1,3 +1,4 @@
+import json
 import unittest
 from datetime import date, datetime, timezone
 
@@ -75,6 +76,34 @@ class DailyRenderingTests(unittest.TestCase):
         self.assertIn(articles[0].summary, markdown)
         self.assertIn(articles[0].url, markdown)
 
+    def test_model_detail_that_is_too_short_is_rejected(self):
+        articles = PAPERS[:3]
+        payload = {
+            "items": [
+                {
+                    "index": index,
+                    "title_zh": "短标题",
+                    "summary": "太短",
+                    "background": "太短",
+                    "impact": "太短",
+                    "watch": "太短",
+                    "value": "太短",
+                }
+                for index in range(3)
+            ],
+            "trends": [
+                {"fact": "来源发布了信息。", "inference": "仍需继续观察。"},
+                {"fact": "来源提供了摘要。", "inference": "影响尚不确定。"},
+                {"fact": "条目附有链接。", "inference": "可以进一步核验。"},
+            ],
+        }
+
+        def fake_short_request(url, headers, body):
+            return {"choices": [{"message": {"content": json.dumps(payload, ensure_ascii=False)}}]}
+
+        result = summarize("AI科技动态", articles, api_key="key", go_key=None, request=fake_short_request)
+
+        self.assertEqual(result.mode, "deterministic")
     def test_hacker_news_renders_heat_and_discussion_focus(self):
         article = Article(
             "101",
