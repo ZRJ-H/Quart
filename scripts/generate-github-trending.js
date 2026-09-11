@@ -15,9 +15,10 @@ function readPreviousStars(key) {
 
   const content = fs.readFileSync(file, "utf-8")
   const rows = content.match(/\| \d{4}-\d{2}-\d{2} \|[^\n]+/g) || []
-  if (!rows.length) return { file, stars: 0, exists: true }
+  const priorRows = rows.filter((row) => !row.startsWith(`| ${today} |`))
+  if (!priorRows.length) return { file, stars: 0, exists: false }
 
-  const cells = rows[rows.length - 1]
+  const cells = priorRows[priorRows.length - 1]
     .split("|")
     .map((cell) => cell.trim())
     .filter(Boolean)
@@ -59,6 +60,13 @@ const groups = {
 function formatDelta(delta) {
   return delta >= 0 ? `+${delta.toLocaleString()}` : delta.toLocaleString()
 }
+function visibleDescription(item) {
+  const translated = (item.descriptionZh || "").trim()
+  if (translated) return translated
+  const original = (item.description || "").trim()
+  if (/[㐀-鿿]/u.test(original)) return original
+  return "暂无中文简介，请查看项目主页。"
+}
 
 function fallbackAnalysis() {
   const top = [...items].sort((a, b) => b.delta - a.delta)[0]
@@ -67,7 +75,7 @@ function fallbackAnalysis() {
 
 ### 本日之星：${top ? top.name : "暂无"}
 
-${top ? `${top.name} 当前总星数 ${top.stars.toLocaleString()}，本次记录增量 ${formatDelta(top.delta)}。${top.description || ""}` : "今日没有拿到可分析项目。"}
+${top ? `${top.name} 当前总星数 ${top.stars.toLocaleString()}，本次记录增量 ${formatDelta(top.delta)}。${visibleDescription(top)}` : "今日没有拿到可分析项目。"}
 
 ### 趋势脉动
 
@@ -76,29 +84,35 @@ ${hot.length ? hot.map((item) => `- **${item.name}**：${item.type}，${item.lan
 > 未配置 AI Key，本段为规则生成。`
 }
 
-async function aiAnalysis() {
+async function aiEnrichment() {
   const deepseekKey = process.env.DEEPSEEK_API_KEY
   const goKey = process.env.GO_API_KEY
-  if (!deepseekKey && !goKey) return fallbackAnalysis()
+  const fallback = { descriptions: {}, analysis: fallbackAnalysis() }
+  if (!deepseekKey && !goKey) return fallback
 
-  const table = items
-    .map(
-      (item) =>
-        `| ${item.type} | #${item.rank} | ${item.name} | ${item.stars} | ${formatDelta(item.delta)} | ${item.language || "-"} | ${(item.description || "").slice(0, 100)} |`,
-    )
-    .join("\n")
+  const rows = items.map((item) => ({
+    name: item.name,
+    rank: item.rank,
+    stars: item.stars,
+    delta: item.delta,
+    type: item.type,
+    language: item.language || "-",
+    description: (item.description || "").slice(0, 180),
+  }))
+  const prompt = `请基于以下 GitHub Trending 数据生成严格 JSON，不要输出代码围栏，不得虚构原始数据。
 
-  const prompt = `请基于今天 GitHub Trending 数据写一段中文 Markdown 分析，不要泛泛而谈，要引用项目名和数字。
+${JSON.stringify(rows)}
 
-| 类型 | 排名 | 项目 | 总星 | 增量 | 语言 | 描述 |
-|---|---:|---|---:|---:|---|---|
-${table}
+JSON 结构：
+{
+  "descriptions": {"owner/repo": "中文简介"},
+  "analysis": "中文 Markdown"
+}
 
-输出结构：
-## 深度解读
-### 本日之星
-### 趋势脉动
-### 项目生态关联`
+要求：
+1. descriptions 必须覆盖每个项目，每条用 45—90 个中文字符说明项目解决什么问题、适合什么场景；保留项目名、框架名等必要英文专名，但不要整句英文。
+2. analysis 为 350—550 字，结构必须包含“## 深度解读”“### 本日之星”“### 趋势脉动”“### 项目生态关联”，引用项目名、排名、星数或增量。
+3. 对数据不足之处明确说明，不得猜测未提供的功能或趋势。`
 
   const request = deepseekKey
     ? {
@@ -107,7 +121,7 @@ ${table}
         body: {
           model: "deepseek-chat",
           messages: [{ role: "user", content: prompt }],
-          max_tokens: 1200,
+          max_tokens: 3000,
         },
       }
     : {
@@ -116,7 +130,7 @@ ${table}
         body: {
           model: "deepseek-v4-pro",
           messages: [{ role: "user", content: prompt }],
-          max_tokens: 1200,
+          max_tokens: 3000,
         },
       }
 
@@ -129,10 +143,21 @@ ${table}
     if (!response.ok)
       throw new Error(`AI HTTP ${response.status}: ${(await response.text()).slice(0, 200)}`)
     const data = await response.json()
-    return data.choices?.[0]?.message?.content || fallbackAnalysis()
+    const raw = data.choices?.[0]?.message?.content || ""
+    const parsed = JSON.parse(raw.replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/, ""))
+    const descriptions = Object.fromEntries(
+      Object.entries(parsed.descriptions || {}).filter(
+        ([name, value]) => items.some((item) => item.name === name) && typeof value === "string" && /[㐀-鿿]/u.test(value),
+      ),
+    )
+    const analysis =
+      typeof parsed.analysis === "string" && parsed.analysis.includes("## 深度解读")
+        ? parsed.analysis
+        : fallback.analysis
+    return { descriptions, analysis }
   } catch (error) {
-    console.error(`AI analysis failed: ${error.message}`)
-    return fallbackAnalysis()
+    console.error(`AI enrichment failed: ${error.message}`)
+    return fallback
   }
 }
 
@@ -142,7 +167,7 @@ function section(title, list) {
     .map(
       (item) => `### [${item.owner}/${item.repo}](${item.url})
 
-> ${item.description || "暂无描述"}
+> ${visibleDescription(item)}
 
 - **排名**: #${item.rank}
 - **语言**: ${item.language || "-"}
@@ -157,7 +182,11 @@ function section(title, list) {
 fs.mkdirSync(trendingDir, { recursive: true })
 fs.mkdirSync(archiveDir, { recursive: true })
 
-const analysis = await aiAnalysis()
+const enrichment = await aiEnrichment()
+for (const item of items) {
+  item.descriptionZh = enrichment.descriptions[item.name] || ""
+}
+const analysis = enrichment.analysis
 const top5 = [...items].sort((a, b) => b.delta - a.delta).slice(0, 5)
 
 const markdown = `# GitHub Trending - ${today}
@@ -179,9 +208,9 @@ ${section("热度回落", groups.回落)}
 
 ## 今日增长 TOP 5
 
-| 排名 | 项目 | 增量 | 类型 |
-|---:|---|---:|---|
-${top5.map((item, index) => `| ${index + 1} | [${item.name}](${item.url}) | ${formatDelta(item.delta)}⭐ | ${item.type} |`).join("\n")}
+| 排名 | 项目 | 中文简介 | 增量 | 类型 |
+|---:|---|---|---:|---|
+${top5.map((item, index) => `| ${index + 1} | [${item.name}](${item.url}) | ${visibleDescription(item)} | ${formatDelta(item.delta)}⭐ | ${item.type} |`).join("\n")}
 
 ---
 
@@ -212,7 +241,7 @@ tags: [github, trending]
 
 # ${item.owner}/${item.repo}
 
-> ${item.description || "暂无描述"}
+> ${visibleDescription(item)}
 
 ## 基本信息
 
@@ -229,17 +258,17 @@ ${row}
     )
   } else {
     let content = fs.readFileSync(file, "utf-8")
+    content = content.replace(/^> .*$/m, `> ${visibleDescription(item)}`)
     content = content.replace(/last_seen:.*/, `last_seen: ${today}`)
-    if (!content.includes(row)) {
-      const marker = "\n## 历史趋势"
-      const tableIndex = content.indexOf(marker)
-      if (tableIndex >= 0) {
-        const nextSection = content.indexOf("\n## ", tableIndex + marker.length)
-        const insertAt = nextSection >= 0 ? nextSection : content.length
-        content = `${content.slice(0, insertAt).trimEnd()}\n${row}\n${content.slice(insertAt)}`
-      } else {
-        content += `\n\n## 历史趋势\n\n| 日期 | 排名 | 星数 | 增量 | 类型 |\n|---|---:|---:|---:|---|\n${row}\n`
-      }
+    content = content.replace(new RegExp(`^\\| ${today} \\|.*(?:\\r?\\n|$)`, "gm"), "")
+    const marker = "\n## 历史趋势"
+    const tableIndex = content.indexOf(marker)
+    if (tableIndex >= 0) {
+      const nextSection = content.indexOf("\n## ", tableIndex + marker.length)
+      const insertAt = nextSection >= 0 ? nextSection : content.length
+      content = `${content.slice(0, insertAt).trimEnd()}\n${row}\n${content.slice(insertAt)}`
+    } else {
+      content += `\n\n## 历史趋势\n\n| 日期 | 排名 | 星数 | 增量 | 类型 |\n|---|---:|---:|---:|---|\n${row}\n`
     }
     fs.writeFileSync(file, content)
   }

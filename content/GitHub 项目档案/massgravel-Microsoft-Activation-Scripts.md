@@ -7,7 +7,7 @@ tags: [github, trending]
 
 # massgravel/Microsoft-Activation-Scripts
 
-> Open-source Windows and Office activator featuring HWID, Ohook, TSforge, and Online KMS activation methods, along with advanced troubleshooting.
+> 开源 Windows 与 Office 激活脚本集合，提供多种激活方式与故障排查，适合需要离线或批量处理激活问题的个人用户与 IT 运维人员。
 
 ## 基本信息
 
@@ -20,10 +20,4 @@ tags: [github, trending]
 | 日期 | 排名 | 星数 | 增量 | 类型 |
 |---|---:|---:|---:|---|
 | 2026-07-05 | #14 | 181,842 | +181,842⭐ | 新晋 |
-| 2026-09-11 | #18 | 190,096 | +8,254⭐ | 爆火 |
-| 2026-09-11 | #18 | 190,128 | +32⭐ | 常驻 |
-| 2026-09-11 | #18 | 190,128 | +0⭐ | 常驻 |
-| 2026-09-11 | #18 | 190,129 | +1⭐ | 常驻 |
-| 2026-09-11 | #18 | 190,131 | +2⭐ | 常驻 |
-| 2026-09-11 | #18 | 190,133 | +2⭐ | 常驻 |
-| 2026-09-11 | #18 | 190,135 | +2⭐ | 常驻 |
+| 2026-09-11 | #18 | 190,150 | +8,308⭐ | 爆火 |

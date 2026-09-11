@@ -3,7 +3,13 @@ import unittest
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 
-from scripts.daily_digest.collectors import collect_arxiv, collect_feed_category, collect_hacker_news
+from scripts.daily_digest.collectors import (
+    collect_arxiv,
+    collect_feed_category,
+    collect_hacker_news,
+    collect_news_category,
+    collect_xinhua_politics,
+)
 from scripts.daily_digest.sources import FeedSource
 
 
@@ -50,6 +56,58 @@ RSS_FIXTURE = """<?xml version="1.0"?><rss version="2.0"><channel>
 
 
 class DailyCollectorTests(unittest.TestCase):
+    def test_news_category_keeps_five_domestic_items_in_an_eight_item_digest(self):
+        domestic = (FeedSource("国内来源", "https://domestic.example/feed"),)
+        international = (FeedSource("国际来源", "https://international.example/feed"),)
+
+        def rss(prefix, count, minute_offset):
+            items = "".join(
+                f"<item><guid>{prefix}-{index}</guid><title>{prefix} {index}</title>"
+                f"<link>https://example.com/{prefix}/{index}</link>"
+                f"<pubDate>Fri, 11 Sep 2026 0{(index + minute_offset) % 8}:00:00 GMT</pubDate>"
+                f"<description>{prefix} evidence {index}</description></item>"
+                for index in range(count)
+            )
+            return f'<?xml version="1.0"?><rss version="2.0"><channel>{items}</channel></rss>'
+
+        def fake_fetch(url):
+            return rss("国内", 7, 0) if "domestic" in url else rss("国际", 7, 1)
+
+        items = collect_news_category(domestic, international, NOW, limit=8, domestic_minimum=5, fetch_text=fake_fetch)
+
+        self.assertEqual(len(items), 8)
+        self.assertEqual(sum(item.source == "国内来源" for item in items), 5)
+        self.assertTrue(all(item.source == "国内来源" for item in items[:5]))
+
+    def test_xinhua_page_collector_reads_current_links_and_article_descriptions(self):
+        source = FeedSource("新华网时政", "https://www.news.cn/politics/", "xinhua-politics")
+        listing = """
+        <div id="recommendDepth">
+          <a href='https://www.news.cn/politics/20260911/first/c.html'>国内政策新进展</a>
+          <a href='https://www.news.cn/politics/20260910/second/c.html'>民生保障新措施</a>
+          <a href='https://www.news.cn/politics/20260901/old/c.html'>过期内容</a>
+        </div>
+        """
+        details = {
+            "https://www.news.cn/politics/20260911/first/c.html":
+                '<meta name="description" content="有关部门公布政策执行范围、关键措施和后续安排。">'
+                '<p>发布会介绍了政策覆盖对象、执行部门和正式实施时间，并披露了首批工作安排。</p>'
+                '<p>有关部门表示将继续公布配套细则，并根据执行情况开展后续评估。</p>',
+            "https://www.news.cn/politics/20260910/second/c.html":
+                '<meta name="description" content="报道介绍民生保障措施及其适用对象。">',
+        }
+
+        def fake_fetch(url):
+            return listing if url.endswith("/politics/") else details[url]
+
+        items = collect_xinhua_politics(source, NOW, limit=5, fetch_text=fake_fetch)
+
+        self.assertEqual([item.title for item in items], ["国内政策新进展", "民生保障新措施"])
+        self.assertIn("有关部门公布政策执行范围、关键措施和后续安排。", items[0].summary)
+        self.assertIn("发布会介绍了政策覆盖对象、执行部门和正式实施时间", items[0].summary)
+        self.assertIn("有关部门表示将继续公布配套细则", items[0].summary)
+        self.assertEqual(items[0].published_at.date().isoformat(), "2026-09-11")
+
     def test_feed_category_survives_one_broken_source(self):
         sources = (
             FeedSource("Broken", "https://broken.example/feed"),

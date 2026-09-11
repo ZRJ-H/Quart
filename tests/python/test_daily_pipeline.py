@@ -78,7 +78,7 @@ class DailyPipelineTests(unittest.TestCase):
             for relative in expected:
                 self.assertIn("https://example.com/", (root / relative).read_text(encoding="utf-8"))
 
-    def test_pipeline_preserves_codex_reviewed_note_when_sources_change(self):
+    def test_pipeline_replaces_local_codex_note_when_sources_change(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             run_pipeline(root, RUN_DATE, fixture_collectors(), fallback_summarizer)
@@ -96,7 +96,9 @@ class DailyPipelineTests(unittest.TestCase):
 
             run_pipeline(root, RUN_DATE, fixture_collectors({"AI科技动态": changed}), fallback_summarizer)
 
-            self.assertEqual(reviewed.read_text(encoding="utf-8"), "摘要模式：Codex 中文精修\n人工核验内容\n")
+            updated = reviewed.read_text(encoding="utf-8")
+            self.assertNotIn("摘要模式：Codex 中文精修", updated)
+            self.assertIn("https://example.com/changed", updated)
     def test_failed_category_leaves_existing_files_unchanged(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -113,11 +115,12 @@ class DailyPipelineTests(unittest.TestCase):
     def test_weekly_report_uses_current_iso_week_and_daily_links(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
+            long_summary = "这是一段用于周报的中文简要描述，说明事件发生了什么、关键事实是什么以及后续值得关注的影响。" * 5
             for category in FIXTURES:
                 folder = root / category
                 folder.mkdir(parents=True)
                 (folder / "2026-09-10.md").write_text(
-                    f"# {category}\n\n### [Verified headline](https://example.com/{category})\n\n- **核心摘要**：Evidence.\n",
+                    f"# {category}\n\n### [已核验的中文标题](https://example.com/{category})\n\n- **原标题**：Verified headline\n- **核心摘要**：{long_summary}\n",
                     encoding="utf-8",
                 )
 
@@ -126,9 +129,51 @@ class DailyPipelineTests(unittest.TestCase):
 
             self.assertEqual(report.relative_to(root).as_posix(), "周报/2026-W37.md")
             self.assertIn("[[AI科技动态/2026-09-10]]", text)
-            self.assertIn("Verified headline", text)
+            self.assertIn("已核验的中文标题", text)
+            self.assertIn("摘要：这是一段用于周报的中文简要描述", text)
+            excerpt = next(line for line in text.splitlines() if line.strip().startswith("- 摘要："))
+            self.assertGreaterEqual(len(excerpt.removeprefix("    - 摘要：")), 120)
+            self.assertLessEqual(len(excerpt.removeprefix("    - 摘要：")), 180)
             self.assertIn("https://example.com/", text)
 
+
+    def test_weekly_report_does_not_repeat_english_trending_description(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            folder = root / "GitHub Trending"
+            folder.mkdir(parents=True)
+            (folder / "2026-09-11.md").write_text(
+                "# GitHub Trending\n\n"
+                "### [owner/repo](https://github.com/owner/repo)\n\n"
+                "> An English-only project description.\n",
+                encoding="utf-8",
+            )
+
+            text = generate_weekly_report(root, RUN_DATE).read_text(encoding="utf-8")
+
+            self.assertNotIn("An English-only project description", text)
+            self.assertIn("项目简介为英文，详情请查看 GitHub 项目主页", text)
+    def test_weekly_report_composes_summary_from_core_and_impact(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            folder = root / "AI科技动态"
+            folder.mkdir(parents=True)
+            core = "核心事实完整交代事件主体、动作、关键数据和直接结果。" * 3
+            impact = "影响判断说明为什么值得关注以及下一步观察方向。" * 3
+            (folder / "2026-09-11.md").write_text(
+                "# AI科技动态\n\n"
+                "### [中文标题](https://example.com/story)\n\n"
+                f"- **核心摘要**：{core}\n"
+                "- **背景**：不应优先拼进周报。\n"
+                f"- **影响**：{impact}\n",
+                encoding="utf-8",
+            )
+
+            text = generate_weekly_report(root, RUN_DATE).read_text(encoding="utf-8")
+
+            excerpt = next(line for line in text.splitlines() if line.strip().startswith("- 摘要："))
+            self.assertIn("影响：", excerpt)
+            self.assertNotIn("不应优先拼进周报", excerpt)
 
 if __name__ == "__main__":
     unittest.main()

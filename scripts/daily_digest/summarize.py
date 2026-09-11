@@ -76,24 +76,36 @@ def _fallback(category: str, articles: list[Article]) -> DigestSummary:
         source_date = article.published_at.date().isoformat()
         evidence = re.sub(r"\s+", " ", article.summary or article.title).strip()
         if index < 3:
-            summary = _clip(f"来源直接提供的核心信息是：{evidence}", 110)
+            summary = _clip(
+                f"核心结论：{evidence}。这段概述仅整理来源直接提供的信息，不把未披露的背景、因果关系或预测补写成事实。",
+                170,
+            )
             background = _clip(
-                f"{article.source} 于 {source_date} 发布此条目。当前记录只采用标题、发布时间与来源摘要，未读取到的正文背景不作补写。",
-                72,
+                f"{article.source} 于 {source_date} 发布“{article.title}”。当前记录依据标题、发布时间与来源摘要建立事件脉络；若原文后续更新，具体表述和数据可能随之变化。",
+                105,
             )
             impact = _clip(
-                f"从现有证据可确认，该条目聚焦“{article.title}”；对行业、政策或用户的实际影响仍缺少可量化材料。",
-                82,
+                f"现有证据表明这项信息值得继续跟踪，但对政策、行业、研究或用户的实际影响仍需结合完整原文、量化数据和独立来源判断，不能仅凭标题外推。",
+                105,
             )
-            watch = "后续应核验原文更新、方法或数据披露，并观察是否出现独立来源的交叉印证，同时记录不同来源间的事实冲突或口径变化。"
-            value = "本条提供当天主题线索和可追溯原文，适合继续阅读，不把尚未披露的信息写成结论。"
+            watch = _clip(
+                "后续观察重点包括原始来源的补充说明、关键数据或方法披露、相关机构的正式回应，以及是否出现能够相互印证或纠正当前信息的独立报道。",
+                95,
+            )
+            value = _clip(
+                "本条将当天线索、可确认事实和不确定边界放在一起，便于快速理解事件并决定是否阅读全文，同时避免把编辑判断误作已经发生的事实。",
+                90,
+            )
         else:
             summary = _clip(
-                f"{article.source} 于 {source_date} 发布“{article.title}”。来源可核验信息：{evidence}",
-                98,
+                f"核心结论：{article.source} 于 {source_date} 发布“{article.title}”。来源摘要直接说明：{evidence}。当前可确认范围限于来源已经公开的内容，尚未披露的背景、数字和因果关系不作补写。",
+                205,
             )
             background = impact = watch = ""
-            value = "提供当天线索与原文入口；更多背景、结果和影响需回到来源核验，当前不作证据之外的推断。"
+            value = _clip(
+                "这条记录补充了事件的来源、时间和事实边界，可用于快速判断是否需要阅读全文。后续应核验原文更新、关键数据与独立来源，避免依据单一标题形成过度结论；阅读时还应区分已证实事实、来源解释与面向未来的判断。",
+                105,
+            )
 
         common = {
             "index": index,
@@ -157,10 +169,12 @@ def _prompt(category: str, articles: list[Article]) -> str:
 
 要求：
 1. items 数量和 index 必须与输入完全一致，保留原顺序。
-2. 前三条的 summary、background、impact、watch、value 合计 250–400 个中文字符；其余条目的 summary 和 value 合计 80–150 字。
-3. AI论文日报必须填写 research_problem、method、results、limitations、engineering_value。
-4. Hacker News 必须依据 top_comments 填写 discussion_focus；没有评论证据时明确写“暂无足够评论证据”。
-5. trends 恰好三条；fact 只能复述证据，inference 必须使用审慎措辞并明确是判断。
+2. title_zh 必须是自然、准确的中文标题；品牌名、产品名、论文缩写可保留英文，其余内容不得直接照抄英文标题。
+3. 前三条按“核心结论、事件详情、影响与看点、后续观察”分层撰写，并以区间上沿为目标：summary 120–140 字、background 100–110 字、impact 90–100 字、watch 70–80 字、value 60–70 字；五项合计目标 440–500 个中文字符。
+4. 其余条目也必须给出足够上下文并以区间上沿为目标：summary 200–220 字、value 90–100 字；两项合计目标 290–320 个中文字符，不能只有一句泛泛概括。
+5. AI论文日报必须填写 research_problem、method、results、limitations、engineering_value。
+6. Hacker News 必须依据 top_comments 填写 discussion_focus；没有评论证据时明确写“暂无足够评论证据”。
+7. trends 恰好三条；fact 只能复述证据，inference 必须使用审慎措辞并明确是判断。
 
 证据 JSON：
 {json.dumps(evidence, ensure_ascii=False)}"""
@@ -181,17 +195,32 @@ def _parse_content(content: str, category: str, articles: list[Article]) -> Dige
     fields = tuple(ItemSummary.__dataclass_fields__)
     items: list[ItemSummary] = []
     for index, raw in enumerate(raw_items):
+        raw = dict(raw)
+        budgets = (
+            {"summary": 140, "background": 110, "impact": 100, "watch": 80, "value": 70}
+            if index < 3
+            else {"summary": 220, "value": 100}
+        )
+        for name, limit in budgets.items():
+            raw[name] = _clip(str(raw.get(name, "")), limit)
+        if index >= 3:
+            quick_length = len(raw["summary"]) + len(raw["value"])
+            if 180 <= quick_length < 220:
+                raw["summary"] = _clip(
+                    raw["summary"] + "；证据边界：具体适用范围、数据口径与后续变化仍应以原始来源的完整说明为准。",
+                    220,
+                )
         if not all(str(raw.get(name, "")).strip() for name in ("title_zh", "summary", "value")):
             raise ValueError(f"Model item {index} lacks required text")
         if index < 3 and not all(str(raw.get(name, "")).strip() for name in ("background", "impact", "watch")):
             raise ValueError(f"Model detail item {index} is incomplete")
         detail_length = sum(len(str(raw.get(name, "")).strip()) for name in ("summary", "background", "impact", "watch", "value"))
-        if index < 3 and not 250 <= detail_length <= 400:
-            raise ValueError(f"Model detail item {index} must contain 250-400 characters")
+        if index < 3 and not 350 <= detail_length <= 500:
+            raise ValueError(f"Model detail item {index} must contain 350-500 characters; got {detail_length}")
         if index >= 3:
             quick_length = sum(len(str(raw.get(name, "")).strip()) for name in ("summary", "value"))
-            if not 80 <= quick_length <= 150:
-                raise ValueError(f"Model quick item {index} must contain 80-150 characters")
+            if not 220 <= quick_length <= 320:
+                raise ValueError(f"Model quick item {index} must contain 220-320 characters; got {quick_length}")
         if category == "AI论文日报" and not all(
             str(raw.get(name, "")).strip()
             for name in ("research_problem", "method", "results", "limitations", "engineering_value")
@@ -213,6 +242,7 @@ def summarize(
     api_key: str | None,
     go_key: str | None,
     *,
+    require_model: bool = False,
     request: Callable[[str, dict[str, str], dict[str, Any]], dict[str, Any]] = _post_json,
 ) -> DigestSummary:
     providers: list[tuple[str, str, str]] = []
@@ -233,16 +263,40 @@ def summarize(
                 body["max_completion_tokens"] = 6000
             else:
                 body["temperature"] = 0.1
-                body["max_tokens"] = 6000
-            response = request(
-                url,
-                {"Authorization": f"Bearer {key}"},
-                body,
-            )
-            content = response.get("choices", [{}])[0].get("message", {}).get("content", "")
-            return _parse_content(content, category, articles)
+                body["max_tokens"] = 9000
+            messages = body["messages"]
+            for attempt in range(3):
+                body["messages"] = messages
+                response = request(
+                    url,
+                    {"Authorization": f"Bearer {key}"},
+                    body,
+                )
+                content = response.get("choices", [{}])[0].get("message", {}).get("content", "")
+                try:
+                    return _parse_content(content, category, articles)
+                except ValueError as parse_error:
+                    if attempt == 2:
+                        raise
+                    messages = [
+                        {"role": "user", "content": prompt},
+                        {"role": "assistant", "content": content},
+                        {
+                            "role": "user",
+                            "content": (
+                                f"上次 JSON 未通过程序校验：{parse_error}。"
+                                "请只返回完整修正后的 JSON；保持 items 数量、index 和事实内容不变。"
+                                "请以各字段上限为目标补写。前三条分别写到 summary 120–140 字、"
+                                "background 100–110 字、impact 90–100 字、watch 70–80 字、"
+                                "value 60–70 字；其余条目写到 summary 200–220 字、value 90–100 字。"
+                            ),
+                        },
+                    ]
         except Exception as error:
             failure = f"{model}: {type(error).__name__}: {error}"
             failures.append(re.sub(r"\s+", " ", failure).strip())
             print(f"Summary provider failed for {category}: {error}")
+    if require_model:
+        reason = "; ".join(failures) if failures else "no cloud model API key is configured"
+        raise RuntimeError(f"Cloud summarization is required for {category}: {reason}")
     return _fallback(category, articles)

@@ -7,6 +7,7 @@ from dataclasses import dataclass
 class FeedSource:
     name: str
     url: str
+    kind: str = "feed"
 
 
 AI_SOURCES = (
@@ -17,8 +18,12 @@ AI_SOURCES = (
     FeedSource("Google Research", "https://research.google/blog/rss/"),
 )
 
-NEWS_SOURCES = (
-    FeedSource("UN News", "https://news.un.org/feed/subscribe/en/news/all/rss.xml"),
+DOMESTIC_NEWS_SOURCES = (
+    FeedSource("新华网时政", "https://www.news.cn/politics/", "xinhua-politics"),
+)
+
+INTERNATIONAL_NEWS_SOURCES = (
+    FeedSource("联合国新闻", "https://news.un.org/feed/subscribe/zh/news/all/rss.xml"),
     FeedSource("BBC World", "https://feeds.bbci.co.uk/news/world/rss.xml"),
     FeedSource("NPR World", "https://feeds.npr.org/1004/rss.xml"),
 )

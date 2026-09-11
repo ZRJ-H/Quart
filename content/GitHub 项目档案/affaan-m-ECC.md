@@ -7,7 +7,7 @@ tags: [github, trending]
 
 # affaan-m/ECC
 
-> The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.
+> 针对多种 AI 编程工具的代理性能优化系统，涵盖技能、记忆与安全等维度，适合重度使用 Claude Code、Codex、Cursor 的开发者提升协作效果。
 
 ## 基本信息
 
@@ -74,10 +74,4 @@ tags: [github, trending]
 | 2026-09-08 | #5 | 253,040 | +2,957⭐ | 爆火 |
 | 2026-09-09 | #6 | 254,451 | +1,411⭐ | 爆火 |
 | 2026-09-10 | #6 | 255,300 | +849⭐ | 爆火 |
-| 2026-09-11 | #8 | 255,982 | +682⭐ | 爆火 |
-| 2026-09-11 | #8 | 256,134 | +152⭐ | 常驻 |
-| 2026-09-11 | #8 | 256,147 | +13⭐ | 常驻 |
-| 2026-09-11 | #8 | 256,152 | +5⭐ | 常驻 |
-| 2026-09-11 | #8 | 256,154 | +2⭐ | 常驻 |
-| 2026-09-11 | #8 | 256,155 | +1⭐ | 常驻 |
-| 2026-09-11 | #8 | 256,166 | +11⭐ | 常驻 |
+| 2026-09-11 | #8 | 256,210 | +910⭐ | 爆火 |

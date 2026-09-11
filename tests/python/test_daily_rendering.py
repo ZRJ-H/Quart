@@ -106,17 +106,146 @@ class DailyRenderingTests(unittest.TestCase):
         result = summarize("AI科技动态", articles, api_key="key", go_key=None, request=fake_short_request)
 
         self.assertEqual(result.mode, "evidence-only")
+    def test_overlong_model_fields_are_clipped_without_discarding_the_summary(self):
+        articles = PAPERS[:3]
+        payload = {
+            "items": [
+                {
+                    "index": index,
+                    "title_zh": f"中文标题 {index}",
+                    "summary": "摘" * 180,
+                    "background": "背" * 150,
+                    "impact": "影" * 140,
+                    "watch": "观" * 120,
+                    "value": "值" * 100,
+                }
+                for index in range(3)
+            ],
+            "trends": [
+                {"fact": "来源发布信息。", "inference": "仍需观察。"},
+                {"fact": "来源提供摘要。", "inference": "影响待验证。"},
+                {"fact": "条目附有链接。", "inference": "可以继续核验。"},
+            ],
+        }
+
+        def fake_request(url, headers, body):
+            return {"choices": [{"message": {"content": json.dumps(payload, ensure_ascii=False)}}]}
+
+        result = summarize("AI科技动态", articles, api_key="key", go_key=None, require_model=True, request=fake_request)
+
+        self.assertEqual(result.mode, "model")
+        for item in result.items:
+            self.assertLessEqual(len(item.summary), 140)
+            self.assertLessEqual(len(item.background), 110)
+            self.assertLessEqual(len(item.impact), 100)
+            self.assertLessEqual(len(item.watch), 80)
+            self.assertLessEqual(len(item.value), 70)
+            total = sum(len(getattr(item, name)) for name in ("summary", "background", "impact", "watch", "value"))
+            self.assertGreaterEqual(total, 350)
+            self.assertLessEqual(total, 500)
+
+    def test_near_minimum_quick_item_gets_an_evidence_boundary(self):
+        articles = PAPERS[:4]
+        payload = {
+            "items": [
+                {
+                    "index": index,
+                    "title_zh": f"中文标题 {index}",
+                    "summary": "摘" * 100,
+                    "background": "背" * 70,
+                    "impact": "影" * 70,
+                    "watch": "观" * 70,
+                    "value": "值" * 70,
+                }
+                for index in range(3)
+            ]
+            + [
+                {
+                    "index": 3,
+                    "title_zh": "中文标题 3",
+                    "summary": "摘" * 128,
+                    "value": "值" * 64,
+                }
+            ],
+            "trends": [
+                {"fact": "来源发布信息。", "inference": "仍需观察。"},
+                {"fact": "来源提供摘要。", "inference": "影响待验证。"},
+                {"fact": "条目附有链接。", "inference": "可以继续核验。"},
+            ],
+        }
+
+        def fake_request(url, headers, body):
+            return {"choices": [{"message": {"content": json.dumps(payload, ensure_ascii=False)}}]}
+
+        result = summarize("AI科技动态", articles, api_key="key", go_key=None, require_model=True, request=fake_request)
+        quick = result.items[3]
+
+        self.assertGreaterEqual(len(quick.summary) + len(quick.value), 220)
+        self.assertLessEqual(len(quick.summary) + len(quick.value), 320)
+        self.assertIn("原始来源", quick.summary + quick.value)
+
+    def test_short_model_output_is_repaired_up_to_two_times(self):
+        articles = PAPERS[:3]
+        short_payload = {
+            "items": [
+                {
+                    "index": index,
+                    "title_zh": f"中文标题 {index}",
+                    "summary": "太短",
+                    "background": "太短",
+                    "impact": "太短",
+                    "watch": "太短",
+                    "value": "太短",
+                }
+                for index in range(3)
+            ],
+            "trends": [
+                {"fact": "来源发布信息。", "inference": "仍需观察。"},
+                {"fact": "来源提供摘要。", "inference": "影响待验证。"},
+                {"fact": "条目附有链接。", "inference": "可以继续核验。"},
+            ],
+        }
+        repaired_payload = {
+            "items": [
+                {
+                    "index": index,
+                    "title_zh": f"中文标题 {index}",
+                    "summary": "摘" * 100,
+                    "background": "背" * 70,
+                    "impact": "影" * 70,
+                    "watch": "观" * 70,
+                    "value": "值" * 70,
+                }
+                for index in range(3)
+            ],
+            "trends": short_payload["trends"],
+        }
+        responses = [short_payload, short_payload, repaired_payload]
+
+        def fake_request(url, headers, body):
+            payload = responses.pop(0)
+            return {"choices": [{"message": {"content": json.dumps(payload, ensure_ascii=False)}}]}
+
+        result = summarize("AI科技动态", articles, api_key="key", go_key=None, require_model=True, request=fake_request)
+
+        self.assertEqual(result.mode, "model")
+        self.assertEqual(responses, [])
+
     def test_deterministic_fallback_obeys_detail_and_quick_reading_budgets(self):
         result = summarize("AI科技动态", PAPERS, api_key=None, go_key=None)
 
         for item in result.items[:3]:
             detail_length = sum(len(getattr(item, name)) for name in ("summary", "background", "impact", "watch", "value"))
-            self.assertGreaterEqual(detail_length, 250)
-            self.assertLessEqual(detail_length, 400)
+            self.assertGreaterEqual(detail_length, 350)
+            self.assertLessEqual(detail_length, 500)
         for item in result.items[3:]:
             quick_length = len(item.summary) + len(item.value)
-            self.assertGreaterEqual(quick_length, 80)
-            self.assertLessEqual(quick_length, 150)
+            self.assertGreaterEqual(quick_length, 220)
+            self.assertLessEqual(quick_length, 320)
+
+    def test_required_cloud_summary_rejects_evidence_only_fallback(self):
+        with self.assertRaisesRegex(RuntimeError, "Cloud summarization is required"):
+            summarize("AI科技动态", PAPERS[:3], api_key=None, go_key=None, require_model=True)
 
     def test_deterministic_fallback_clips_long_paper_and_comment_evidence(self):
         long_paper = Article(
@@ -128,7 +257,7 @@ class DailyRenderingTests(unittest.TestCase):
             "We propose a method. We evaluate it on twelve tasks. Results improve by 30 percent. " * 30,
         )
         paper_item = summarize("AI论文日报", [long_paper], api_key=None, go_key=None).items[0]
-        self.assertLessEqual(len(paper_item.summary), 120)
+        self.assertLessEqual(len(paper_item.summary), 205)
         self.assertLessEqual(len(paper_item.research_problem), 180)
 
         long_comment = "Users discuss deployment cost, reliability, and benchmark quality. " * 30

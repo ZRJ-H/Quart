@@ -7,7 +7,7 @@ tags: [github, trending]
 
 # ohmyzsh/ohmyzsh
 
-> 🙃   A delightful community-driven (with 2,500+ contributors) framework for managing your zsh configuration. Includes 300+ optional plugins (rails, git, macOS, hub, docker, homebrew, node, php, python, etc), 140+ themes to spice up your morning, and an auto-update tool that makes it easy to keep up with the latest updates from the community.
+> 社区驱动的 zsh 配置管理框架，内置大量插件与主题，解决终端配置繁琐的问题，适合命令行重度用户、运维与开发者提升 shell 效率。
 
 ## 基本信息
 
@@ -60,6 +60,4 @@ tags: [github, trending]
 | 2026-09-08 | #15 | 189,623 | +20⭐ | 常驻 |
 | 2026-09-09 | #16 | 189,640 | +17⭐ | 常驻 |
 | 2026-09-10 | #16 | 189,647 | +7⭐ | 常驻 |
-| 2026-09-11 | #19 | 189,658 | +11⭐ | 常驻 |
-| 2026-09-11 | #19 | 189,667 | +9⭐ | 常驻 |
-| 2026-09-11 | #19 | 189,667 | +0⭐ | 常驻 |
+| 2026-09-11 | #19 | 189,666 | +19⭐ | 常驻 |

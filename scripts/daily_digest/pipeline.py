@@ -18,7 +18,7 @@ from .summarize import DigestSummary
 
 LIMITS = {"AI科技动态": 8, "时政要闻": 8, "AI论文日报": 5, "Hacker News": 8}
 MINIMUMS = {"AI科技动态": 3, "时政要闻": 3, "AI论文日报": 3, "Hacker News": 5}
-SUMMARY_SCHEMA_VERSION = 5
+SUMMARY_SCHEMA_VERSION = 6
 
 
 def _article_dict(article: Article) -> dict:
@@ -72,7 +72,7 @@ def run_pipeline(
         target = content_root / category / f"{run_date.isoformat()}.md"
         marker = f"<!-- source-fingerprint: {fingerprint} -->"
         existing_text = target.read_text(encoding="utf-8", errors="replace") if target.exists() else ""
-        if "摘要模式：Codex 中文精修" in existing_text or marker in existing_text:
+        if marker in existing_text:
             outputs[category] = existing_text
             continue
         digest = summarizer(category, rows)

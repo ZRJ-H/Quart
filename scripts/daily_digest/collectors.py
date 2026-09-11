@@ -5,6 +5,7 @@ import re
 import xml.etree.ElementTree as ET
 from dataclasses import replace
 from datetime import datetime, timezone
+from html.parser import HTMLParser
 from typing import Any, Callable
 from urllib.parse import urlencode
 
@@ -17,6 +18,82 @@ from .sources import FeedSource
 
 class CollectionError(RuntimeError):
     pass
+
+
+class _MetadataParser(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.description = ""
+        self.paragraphs: list[str] = []
+        self._paragraph_parts: list[str] | None = None
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag.casefold() == "p":
+            self._paragraph_parts = []
+            return
+        if tag.casefold() != "meta" or self.description:
+            return
+        values = {key.casefold(): value or "" for key, value in attrs}
+        name = (values.get("name") or values.get("property") or "").casefold()
+        if name in {"description", "og:description"}:
+            self.description = clean_html(values.get("content", ""))
+
+    def handle_data(self, data: str) -> None:
+        if self._paragraph_parts is not None:
+            self._paragraph_parts.append(data)
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag.casefold() != "p" or self._paragraph_parts is None:
+            return
+        paragraph = clean_html(" ".join(self._paragraph_parts))
+        if len(paragraph) >= 20:
+            self.paragraphs.append(paragraph)
+        self._paragraph_parts = None
+
+
+def collect_xinhua_politics(
+    source: FeedSource,
+    now: datetime,
+    limit: int = 8,
+    *,
+    fetch_text: Callable[[str], str] = default_fetch_text,
+) -> list[Article]:
+    listing = fetch_text(source.url)
+    link_pattern = re.compile(
+        r"<a\b[^>]*\bhref\s*=\s*(['\"])(https?://www\.news\.cn/(?:politics/)?(\d{8})/[^'\"]+/c\.html)\1[^>]*>(.*?)</a>",
+        re.IGNORECASE | re.DOTALL,
+    )
+    candidates: list[Article] = []
+    for match in link_pattern.finditer(listing):
+        url, raw_date, raw_title = match.group(2), match.group(3), match.group(4)
+        title = clean_html(raw_title)
+        if not title:
+            continue
+        try:
+            published = datetime.strptime(raw_date, "%Y%m%d").replace(tzinfo=timezone.utc)
+            candidates.append(Article(url, title, url, source.name, published, title))
+        except ValueError:
+            continue
+
+    recent = select_recent(deduplicate(candidates), now, max(limit * 2, limit))
+
+    def add_description(article: Article) -> Article:
+        try:
+            parser = _MetadataParser()
+            parser.feed(fetch_text(article.url))
+            title_key = re.sub(r"\W+", "", article.title)
+            description_key = re.sub(r"\W+", "", parser.description)
+            evidence = []
+            if parser.description and len(description_key) > len(title_key) + 10:
+                evidence.append(parser.description)
+            evidence.extend(parser.paragraphs)
+            summary = clean_html(" ".join(dict.fromkeys(evidence)))[:1600] or article.title
+            return replace(article, summary=summary)
+        except Exception:
+            return article
+
+    with ThreadPoolExecutor(max_workers=min(8, max(1, len(recent)))) as executor:
+        return list(executor.map(add_description, recent[:limit]))
 
 
 def collect_feed_category(
@@ -40,6 +117,51 @@ def collect_feed_category(
         raise CollectionError("All configured feeds failed: " + "; ".join(errors))
     ordered = sorted(articles, key=lambda article: article.published_at, reverse=True)
     return select_recent(deduplicate(ordered), now, limit)
+
+
+def collect_news_category(
+    domestic_sources: tuple[FeedSource, ...],
+    international_sources: tuple[FeedSource, ...],
+    now: datetime,
+    limit: int = 8,
+    domestic_minimum: int = 5,
+    *,
+    fetch_text: Callable[[str], str] = default_fetch_text,
+) -> list[Article]:
+    if not 0 <= domestic_minimum <= limit:
+        raise ValueError("domestic_minimum must be between zero and limit")
+
+    domestic: list[Article] = []
+    feed_sources = tuple(source for source in domestic_sources if source.kind == "feed")
+    if feed_sources:
+        domestic.extend(collect_feed_category(feed_sources, now, limit, fetch_text=fetch_text))
+    for source in domestic_sources:
+        if source.kind == "xinhua-politics":
+            domestic.extend(collect_xinhua_politics(source, now, limit, fetch_text=fetch_text))
+        elif source.kind != "feed":
+            raise ValueError(f"Unsupported domestic news source kind: {source.kind}")
+    domestic = select_recent(deduplicate(domestic), now, limit)
+    if len(domestic) < domestic_minimum:
+        raise CollectionError(
+            f"Domestic official news returned {len(domestic)} items; minimum is {domestic_minimum}"
+        )
+
+    international_limit = limit - domestic_minimum
+    try:
+        international = collect_feed_category(
+            international_sources,
+            now,
+            international_limit,
+            fetch_text=fetch_text,
+        )
+    except CollectionError:
+        international = []
+
+    selected = domestic[:domestic_minimum] + international[:international_limit]
+    if len(selected) < limit:
+        selected.extend(domestic[domestic_minimum : domestic_minimum + limit - len(selected)])
+    return selected[:limit]
+
 
 def _local_name(tag: str) -> str:
     return tag.rsplit("}", 1)[-1]
