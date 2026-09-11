@@ -2,6 +2,9 @@ name: Deploy Quartz to GitHub Pages
 
 on:
   workflow_dispatch:
+  workflow_run:
+    workflows: ["Collect GitHub Trending"]
+    types: [completed]
   push:
     branches:
       - main
@@ -17,16 +20,22 @@ concurrency:
 
 jobs:
   build:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: npm
+
+      - name: Setup Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
 
       - name: Install dependencies
         run: npm ci --ignore-scripts
@@ -44,6 +53,9 @@ jobs:
       - name: Add search suggestions index
         run: cp /tmp/wiki-index-light.json public/wiki-index-light.json
 
+      - name: Prepare Pages artifact
+        run: touch public/.nojekyll
+
       - name: Sync Cloudflare search backend
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
@@ -58,8 +70,11 @@ jobs:
           python3 scripts/upload-to-kv.py worker/wiki-data-full.json
           npx wrangler deploy --config worker/wrangler.toml
 
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: public
 
