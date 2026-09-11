@@ -452,8 +452,8 @@ img:hover {
 // 必须匹配 base.scss 的 .page > #quartz-body .center 特异性
 // 否则会被 min-width: 100% 覆盖
 .page > #quartz-body .center {
-  min-width: 0;   // prevent overflow into sidebar
-  width: 100%;    // fill grid cell (overrides margin:0 auto shrink behavior)
+  min-width: 0; // prevent overflow into sidebar
+  width: 100%; // fill grid cell (overrides margin:0 auto shrink behavior)
 }
 
 article {
@@ -626,8 +626,6 @@ article h3 + ul li:last-child > strong:first-child {
   font-style: normal;
 }
 
-
-
 /* ============================================
    周报美化（scope 到 周报/* 页面）
    第一层：顶部 meta 卡 + 标题视觉系统 + 分隔线收敛
@@ -694,7 +692,6 @@ body[data-slug^="周报"] {
     background: var(--border);
   }
 }
-
 
 /* ============================================
    周报美化第二层（scope 到 周报/* 页面）

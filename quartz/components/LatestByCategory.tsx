@@ -42,10 +42,7 @@ export default (() => {
           const title = (latest.frontmatter?.title ?? latest.slug?.split("/").pop() ?? "").slice(-5)
 
           return (
-            <a
-              href={resolveRelative(fileData.slug!, latest.slug!)}
-              class="lbc-link internal"
-            >
+            <a href={resolveRelative(fileData.slug!, latest.slug!)} class="lbc-link internal">
               {cat.icon} {cat.label} · {title}
             </a>
           )

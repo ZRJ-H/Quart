@@ -1,6 +1,6 @@
 # GitHub Pages Auto Wiki Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [x]`) syntax for tracking.
 
 **Goal:** Publish the Quartz wiki automatically on GitHub Pages with generated static search indexes and an optional Cloudflare Worker-backed DeepSeek answer stream.
 
@@ -33,7 +33,7 @@
 - Produces: `collect_entries(vault_dir) -> list[dict]`, `write_json_indexes(entries, full_path, light_path) -> None`, CLI flags `--json-output`, `--light-output`, and `--no-sqlite`.
 - Entry fields: `id`, `name`, `type`, `category`, `tags`, `summary`, `content`, `last_updated`, `content_length`, `reference_count`, `links`, `page_path`.
 
-- [ ] **Step 1: Write failing Python tests**
+- [x] **Step 1: Write failing Python tests**
 
 ```python
 def test_collect_entries_preserves_links_and_page_path(tmp_path):
@@ -51,12 +51,12 @@ def test_write_json_indexes_uses_atomic_replace(tmp_path):
     assert not list(full.parent.glob("*.tmp"))
 ```
 
-- [ ] **Step 2: Run tests and verify RED**
+- [x] **Step 2: Run tests and verify RED**
 
 Run: `python -m unittest tests.test_build_wiki_index -v`
 Expected: FAIL because `collect_entries` and `write_json_indexes` do not exist.
 
-- [ ] **Step 3: Implement collection and JSON outputs**
+- [x] **Step 3: Implement collection and JSON outputs**
 
 ```python
 def atomic_write_json(path, payload):
@@ -75,12 +75,12 @@ def write_json_indexes(entries, full_path, light_path):
 
 Refactor daily and wiki parsing to populate the shared entry dictionaries before optionally writing SQLite.
 
-- [ ] **Step 4: Run tests and verify GREEN**
+- [x] **Step 4: Run tests and verify GREEN**
 
 Run: `python -m unittest tests.test_build_wiki_index -v`
 Expected: all static index tests pass.
 
-- [ ] **Step 5: Commit task changes**
+- [x] **Step 5: Commit task changes**
 
 ```bash
 git add scripts/build-wiki-index.py tests/test_build_wiki_index.py
@@ -91,7 +91,7 @@ git commit -m "feat: generate static wiki search indexes"
 
 **Files:**
 
-- Create: `quartz/components/scripts/search-ai.core.js`
+- Create: `quartz/components/scripts/search-ai.core.ts`
 - Create: `quartz/components/scripts/search-ai.core.test.ts`
 - Modify: `quartz/components/SearchAI.tsx`
 - Modify: `quartz/components/scripts/search-ai.inline.js`
@@ -103,7 +103,7 @@ git commit -m "feat: generate static wiki search indexes"
 - `SearchAIOptions`: `{ endpoint: string }`.
 - DOM data: `data-endpoint`, `data-index-light`, and `data-index-full`.
 
-- [ ] **Step 1: Write failing browser-core tests**
+- [x] **Step 1: Write failing browser-core tests**
 
 ```typescript
 test("keeps a complete worker endpoint unchanged", () => {
@@ -124,12 +124,12 @@ test("static search finds summary and escapes rendered data", () => {
 })
 ```
 
-- [ ] **Step 2: Run tests and verify RED**
+- [x] **Step 2: Run tests and verify RED**
 
 Run: `npx tsx --test quartz/components/scripts/search-ai.core.test.ts`
 Expected: FAIL because the core module does not exist.
 
-- [ ] **Step 3: Implement core functions and integrate UI**
+- [x] **Step 3: Implement core functions and integrate UI**
 
 ```javascript
 export function normalizeEndpoint(value) {
@@ -150,15 +150,15 @@ export function scoreLocalEntries(query, entries, limit = 10) {
 
 Render relative index paths with Quartz `pathToRoot(fileData.slug)` and call `fetch(endpoint)` directly. On missing endpoint or request failure, render local results and an explicit “AI 服务不可用，已显示本地结果” status. Escape suggestions and history before assigning `innerHTML`.
 
-- [ ] **Step 4: Run tests and verify GREEN**
+- [x] **Step 4: Run tests and verify GREEN**
 
 Run: `npx tsx --test quartz/components/scripts/search-ai.core.test.ts`
 Expected: all browser-core tests pass.
 
-- [ ] **Step 5: Commit task changes**
+- [x] **Step 5: Commit task changes**
 
 ```bash
-git add quartz.layout.ts quartz/components/SearchAI.tsx quartz/components/scripts/search-ai.inline.js quartz/components/scripts/search-ai.core.js quartz/components/scripts/search-ai.core.test.ts
+git add quartz.layout.ts quartz/components/SearchAI.tsx quartz/components/scripts/search-ai.inline.js quartz/components/scripts/search-ai.core.ts quartz/components/scripts/search-ai.core.test.ts
 git commit -m "fix: make AI search Pages-safe with static fallback"
 ```
 
@@ -180,7 +180,7 @@ git commit -m "fix: make AI search Pages-safe with static fallback"
 - Consumes: `env.DEEPSEEK_API_KEY`, `env.SITE_ORIGIN`, `env.INDEX_URL`.
 - Produces: `searchEntries(entries, query, options)`, `buildPrompt(query, results)`, and default module Worker `{ fetch(request, env, ctx) }`.
 
-- [ ] **Step 1: Write failing Worker tests**
+- [x] **Step 1: Write failing Worker tests**
 
 ```javascript
 test("body-only matches survive scoring", () => {
@@ -194,12 +194,12 @@ test("rejects an unapproved browser origin", async () => {
 })
 ```
 
-- [ ] **Step 2: Run tests and verify RED**
+- [x] **Step 2: Run tests and verify RED**
 
 Run: `npm --prefix worker test`
 Expected: FAIL because Worker modules do not exist.
 
-- [ ] **Step 3: Implement Worker modules**
+- [x] **Step 3: Implement Worker modules**
 
 ```javascript
 export default {
@@ -216,12 +216,12 @@ export default {
 
 Validate origin, content length, JSON type, and query length. Cache `INDEX_URL` responses briefly through the Cache API, send `sources` as the first SSE event, then transform DeepSeek SSE chunks into the existing `sources/chunk/done/error` protocol.
 
-- [ ] **Step 4: Run tests and verify GREEN**
+- [x] **Step 4: Run tests and verify GREEN**
 
 Run: `npm --prefix worker test`
 Expected: all Worker tests pass without network access.
 
-- [ ] **Step 5: Commit task changes**
+- [x] **Step 5: Commit task changes**
 
 ```bash
 git add worker .gitignore
@@ -242,7 +242,7 @@ git commit -m "feat: add Cloudflare Worker AI search API"
 - Workflow inputs: repository variables `SITE_DOMAIN`, `AI_SEARCH_ENDPOINT`; secret `DEEPSEEK_API_KEY` for crawler summaries.
 - Workflow outputs: deployed Pages URL and committed generated files under `content/`.
 
-- [ ] **Step 1: Write a failing workflow structure test**
+- [x] **Step 1: Write a failing workflow structure test**
 
 ```javascript
 test("Pages workflow schedules, builds, persists content, and deploys", () => {
@@ -254,19 +254,19 @@ test("Pages workflow schedules, builds, persists content, and deploys", () => {
 })
 ```
 
-- [ ] **Step 2: Run test and verify RED**
+- [x] **Step 2: Run test and verify RED**
 
 Run: `node --test tests/test_pages_workflow.mjs`
 Expected: FAIL because the workflow file does not exist.
 
-- [ ] **Step 3: Implement the Pages workflow**
+- [x] **Step 3: Implement the Pages workflow**
 
 ```yaml
 on:
   push:
     branches: [master, main]
   schedule:
-    - cron: "15 18 * * *"
+    - cron: "15 0 * * *"
   workflow_dispatch:
 
 permissions:
@@ -275,14 +275,14 @@ permissions:
   id-token: write
 ```
 
-Use `actions/checkout@v6`, `actions/setup-node@v5`, `actions/setup-python@v6`, `actions/configure-pages@v5`, `actions/upload-pages-artifact@v4`, and `actions/deploy-pages@v4`. Run each crawler without stopping sibling crawlers, run weekly report only on Sunday, clean old content, commit `content/`, build Quartz, generate both JSON indexes into `public/`, create `public/.nojekyll`, and upload the artifact.
+Use `actions/checkout@v6`, `actions/setup-node@v7`, `actions/setup-python@v7`, `actions/configure-pages@v5`, `actions/upload-pages-artifact@v4`, and `actions/deploy-pages@v4`. Run each crawler without stopping sibling crawlers, run weekly report only on Sunday, clean old content, commit `content/`, build Quartz, generate both JSON indexes into `public/`, create `public/.nojekyll`, and upload the artifact.
 
-- [ ] **Step 4: Run test and verify GREEN**
+- [x] **Step 4: Run test and verify GREEN**
 
 Run: `node --test tests/test_pages_workflow.mjs`
 Expected: workflow assertions pass.
 
-- [ ] **Step 5: Commit task changes**
+- [x] **Step 5: Commit task changes**
 
 ```bash
 git add .github/workflows/deploy-pages.yml tests/test_pages_workflow.mjs package.json .env.example
@@ -300,11 +300,11 @@ git commit -m "feat: automate GitHub Pages publishing"
 
 - Documents exact GitHub Pages settings, repository variables/secrets, Worker secret setup, local build, and failure fallback.
 
-- [ ] **Step 1: Write the deployment guide**
+- [x] **Step 1: Write the deployment guide**
 
 Document selecting “GitHub Actions” under Pages settings, setting `AI_SEARCH_ENDPOINT`, configuring `SITE_ORIGIN` and `INDEX_URL`, running `npx wrangler secret put DEEPSEEK_API_KEY`, deploying with `npm --prefix worker run deploy`, and running all local tests.
 
-- [ ] **Step 2: Run all project tests**
+- [x] **Step 2: Run all project tests**
 
 Run: `python -m unittest discover -s tests -p "test_*.py" -v`
 Expected: all Python tests pass.
@@ -315,7 +315,7 @@ Expected: all Quartz/TypeScript tests pass.
 Run: `npm --prefix worker test`
 Expected: all Worker tests pass.
 
-- [ ] **Step 3: Run static checks and a production build**
+- [x] **Step 3: Run static checks and a production build**
 
 Run: `npx tsc --noEmit --incremental false`
 Expected: exit 0.
@@ -329,7 +329,7 @@ Expected: Quartz build exits 0.
 Run: `python scripts/build-wiki-index.py content --no-sqlite --json-output public/wiki-index.json --light-output public/wiki-index-light.json`
 Expected: both indexes are generated and the command exits 0.
 
-- [ ] **Step 4: Verify deployment artifacts**
+- [x] **Step 4: Verify deployment artifacts**
 
 ```powershell
 @("public/index.html", "public/static/contentIndex.json", "public/wiki-index.json", "public/wiki-index-light.json", "public/.nojekyll") |
@@ -338,7 +338,7 @@ Expected: both indexes are generated and the command exits 0.
 
 Expected: no missing artifact error.
 
-- [ ] **Step 5: Commit documentation and plan completion**
+- [x] **Step 5: Commit documentation and plan completion**
 
 ```bash
 git add README.md docs/superpowers/plans/2026-09-11-github-pages-auto-wiki.md
