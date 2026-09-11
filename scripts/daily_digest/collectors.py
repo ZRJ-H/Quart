@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from concurrent.futures import ThreadPoolExecutor
+import json
 import re
 import xml.etree.ElementTree as ET
 from dataclasses import replace
@@ -206,6 +207,54 @@ def _normalize_arxiv(xml_text: str) -> list[Article]:
     return normalized
 
 
+def _normalize_hugging_face_papers(json_text: str) -> list[Article]:
+    payload = json.loads(json_text)
+    if not isinstance(payload, list):
+        raise ValueError("Hugging Face daily papers response must be a list")
+    normalized: list[Article] = []
+    for row in payload:
+        if not isinstance(row, dict):
+            continue
+        paper = row.get("paper")
+        if not isinstance(paper, dict):
+            continue
+        paper_id = str(paper.get("id") or "").strip()
+        title = clean_html(str(paper.get("title") or row.get("title") or ""))
+        summary = clean_html(str(paper.get("summary") or row.get("summary") or ""))
+        surfaced_at = str(
+            paper.get("submittedOnDailyAt")
+            or row.get("submittedOnDailyAt")
+            or row.get("publishedAt")
+            or paper.get("publishedAt")
+            or ""
+        ).strip()
+        if not paper_id or not title or not surfaced_at:
+            continue
+        try:
+            published_at = datetime.fromisoformat(surfaced_at.replace("Z", "+00:00"))
+            authors = [
+                clean_html(str(author.get("name") or ""))
+                for author in paper.get("authors", [])
+                if isinstance(author, dict) and author.get("name")
+            ]
+            score = int(row.get("upvotes") or paper.get("upvotes") or 0)
+            normalized.append(
+                Article(
+                    paper_id,
+                    title,
+                    f"https://arxiv.org/abs/{paper_id}",
+                    "Hugging Face Daily Papers / arXiv",
+                    published_at,
+                    summary or title,
+                    score=score,
+                    extra={"authors": authors, "categories": []},
+                )
+            )
+        except (TypeError, ValueError, OverflowError):
+            continue
+    return normalized
+
+
 def collect_arxiv(
     now: datetime,
     limit: int = 5,
@@ -240,7 +289,17 @@ def collect_arxiv(
         normalized = [paper for rows, _error in results for paper in rows]
         if not normalized:
             rss_errors = "; ".join(error for _rows, error in results if error)
-            raise CollectionError(f"arXiv API and RSS feeds failed: {api_error}; {rss_errors}") from api_error
+            backup_params = urlencode({"date": now.date().isoformat(), "limit": max(20, limit * 4)})
+            backup_url = f"https://huggingface.co/api/daily_papers?{backup_params}"
+            try:
+                normalized = _normalize_hugging_face_papers(fetch_text(backup_url))
+                if not normalized:
+                    raise CollectionError("Hugging Face daily papers returned no papers")
+            except Exception as backup_error:
+                raise CollectionError(
+                    f"arXiv API and RSS feeds failed: {api_error}; {rss_errors}; "
+                    f"Hugging Face backup failed: {backup_error}"
+                ) from api_error
 
     ordered = sorted(normalized, key=lambda article: article.published_at, reverse=True)
     return select_recent(deduplicate(ordered), now, limit)

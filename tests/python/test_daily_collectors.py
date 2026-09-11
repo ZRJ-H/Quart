@@ -152,6 +152,37 @@ class DailyCollectorTests(unittest.TestCase):
         self.assertEqual([paper.id for paper in papers], ["2609.00001", "2609.00002"])
         self.assertTrue(any("rss.arxiv.org/rss/cs.AI" in url for url in seen_urls))
 
+    def test_arxiv_falls_back_to_hugging_face_daily_papers_when_official_feeds_are_unavailable(self):
+        seen_urls = []
+
+        def fake_fetch(url):
+            seen_urls.append(url)
+            if "huggingface.co/api/daily_papers" in url:
+                return json.dumps(
+                    [
+                        {
+                            "paper": {
+                                "id": "2609.12345",
+                                "title": "Reliable Daily Paper Backup",
+                                "summary": "A complete abstract supplied by the daily papers API.",
+                                "authors": [{"name": "Alice Example"}],
+                                "publishedAt": "2026-09-10T00:00:00Z",
+                                "submittedOnDailyAt": "2026-09-11T00:00:00Z",
+                            },
+                            "upvotes": 42,
+                        }
+                    ]
+                )
+            raise OSError("arXiv unavailable")
+
+        papers = collect_arxiv(NOW, limit=5, fetch_text=fake_fetch)
+
+        self.assertEqual([paper.id for paper in papers], ["2609.12345"])
+        self.assertEqual(papers[0].source, "Hugging Face Daily Papers / arXiv")
+        self.assertEqual(papers[0].extra["authors"], ["Alice Example"])
+        self.assertEqual(papers[0].score, 42)
+        self.assertTrue(any("huggingface.co/api/daily_papers" in url for url in seen_urls))
+
     def test_hacker_news_collects_ranked_stories_and_discussion_evidence(self):
         story_time = int(datetime(2026, 9, 11, 1, tzinfo=timezone.utc).timestamp())
         payloads = {
