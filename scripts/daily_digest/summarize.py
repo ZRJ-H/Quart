@@ -223,21 +223,26 @@ def summarize(
     if go_key:
         providers.append(("https://opencode.ai/zen/go/v1/chat/completions", go_key, "deepseek-v4-pro"))
     if github_token:
-        providers.append(("https://models.github.ai/inference/chat/completions", github_token, "openai/gpt-4o"))
+        for model in ("openai/gpt-5-mini", "openai/gpt-5-nano"):
+            providers.append(("https://models.github.ai/inference/chat/completions", github_token, model))
     prompt = _prompt(category, articles)
     failures: list[str] = []
     for url, key, model in providers:
         try:
+            body: dict[str, Any] = {
+                "model": model,
+                "messages": [{"role": "user", "content": prompt}],
+                "response_format": {"type": "json_object"},
+            }
+            if model.startswith("openai/gpt-5"):
+                body["max_completion_tokens"] = 6000
+            else:
+                body["temperature"] = 0.1
+                body["max_tokens"] = 6000
             response = request(
                 url,
                 {"Authorization": f"Bearer {key}"},
-                {
-                    "model": model,
-                    "messages": [{"role": "user", "content": prompt}],
-                    "temperature": 0.1,
-                    "max_tokens": 6000,
-                    "response_format": {"type": "json_object"},
-                },
+                body,
             )
             content = response.get("choices", [{}])[0].get("message", {}).get("content", "")
             return _parse_content(content, category, articles)

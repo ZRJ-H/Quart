@@ -18,7 +18,7 @@ from .summarize import DigestSummary
 
 LIMITS = {"AI科技动态": 8, "时政要闻": 8, "AI论文日报": 5, "Hacker News": 8}
 MINIMUMS = {"AI科技动态": 3, "时政要闻": 3, "AI论文日报": 3, "Hacker News": 5}
-SUMMARY_SCHEMA_VERSION = 3
+SUMMARY_SCHEMA_VERSION = 4
 
 
 def _article_dict(article: Article) -> dict:

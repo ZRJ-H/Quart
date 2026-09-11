@@ -122,7 +122,9 @@ class DailyRenderingTests(unittest.TestCase):
 
         self.assertTrue(result.mode.startswith("evidence-only"))
         self.assertEqual(calls[0][0], "https://models.github.ai/inference/chat/completions")
-        self.assertEqual(calls[0][2]["model"], "openai/gpt-4o")
+        self.assertEqual(calls[0][2]["model"], "openai/gpt-5-mini")
+        self.assertEqual(calls[0][2]["max_completion_tokens"], 6000)
+        self.assertNotIn("max_tokens", calls[0][2])
         self.assertIn("simulated provider failure", result.mode)
 
     def test_deterministic_fallback_obeys_detail_and_quick_reading_budgets(self):
