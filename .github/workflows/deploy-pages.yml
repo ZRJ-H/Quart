@@ -1,0 +1,136 @@
+name: Refresh and deploy wiki
+
+on:
+  push:
+    branches: [master, main]
+  schedule:
+    # 08:15 in Asia/Shanghai. UTC is used so generated dates stay on the same day.
+    - cron: "15 0 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          cache: npm
+          package-manager-cache: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Install site dependencies
+        run: npm ci
+
+      - name: Install crawler dependencies
+        run: npm ci --prefix crawlers
+
+      - name: Crawl GitHub Trending
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node crawlers/github-trending.js content
+
+      - name: Crawl Hacker News
+        continue-on-error: true
+        run: node crawlers/hacker-news.js content
+
+      - name: Crawl AI news
+        continue-on-error: true
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: node crawlers/ai-news.js content
+
+      - name: Crawl current affairs
+        continue-on-error: true
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: node crawlers/current-affairs.js content
+
+      - name: Crawl arXiv papers
+        continue-on-error: true
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: node crawlers/arxiv-papers.js content
+
+      - name: Build Sunday weekly report
+        shell: bash
+        run: |
+          if [ "$(date -u +%u)" = "7" ]; then
+            node crawlers/weekly-report.js content
+          fi
+
+      - name: Remove expired daily content
+        run: python scripts/filter-old-content.py content
+
+      - name: Commit refreshed content
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: refresh wiki content"
+            git push
+          fi
+
+      - name: Resolve Pages base URL
+        shell: bash
+        env:
+          SITE_DOMAIN_OVERRIDE: ${{ vars.SITE_DOMAIN }}
+        run: |
+          repository_name="${GITHUB_REPOSITORY#*/}"
+          if [ -n "$SITE_DOMAIN_OVERRIDE" ]; then
+            site_domain="$SITE_DOMAIN_OVERRIDE"
+          elif [ "$repository_name" = "${GITHUB_REPOSITORY_OWNER}.github.io" ]; then
+            site_domain="${GITHUB_REPOSITORY_OWNER}.github.io"
+          else
+            site_domain="${GITHUB_REPOSITORY_OWNER}.github.io/${repository_name}"
+          fi
+          echo "SITE_DOMAIN=$site_domain" >> "$GITHUB_ENV"
+
+      - name: Build Quartz site
+        env:
+          AI_SEARCH_ENDPOINT: ${{ vars.AI_SEARCH_ENDPOINT }}
+        run: npm run build:pages
+
+      - name: Generate browser search indexes
+        run: npm run index:pages
+
+      - name: Prepare Pages artifact
+        run: touch public/.nojekyll
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

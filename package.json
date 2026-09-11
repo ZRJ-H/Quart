@@ -14,6 +14,8 @@
   "scripts": {
     "quartz": "./quartz/bootstrap-cli.mjs",
     "docs": "npx quartz build --serve -d docs",
+    "build:pages": "node quartz/bootstrap-cli.mjs build -o public",
+    "index:pages": "python scripts/build-wiki-index.py content --no-sqlite --json-output public/wiki-index.json --light-output public/wiki-index-light.json",
     "check": "tsc --noEmit && npx prettier . --check",
     "format": "npx prettier . --write",
     "test": "tsx --test",
