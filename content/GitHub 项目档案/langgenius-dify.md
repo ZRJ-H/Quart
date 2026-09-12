@@ -1,13 +1,13 @@
 ---
 first_seen: 2026-06-28
-last_seen: 2026-09-09
+last_seen: 2026-09-12
 language: TypeScript
 tags: [github, trending]
 ---
 
 # langgenius/dify
 
-> Production-ready platform for agentic workflow development.
+> 支持构建智能体工作流与 RAG 管线的协作平台，集成丰富模型和工具，可云端、VPC 或自托管部署，适合团队从原型走向生产。
 
 ## 基本信息
 
@@ -69,3 +69,4 @@ tags: [github, trending]
 | 2026-09-07 | #19 | 154,669 | +116⭐ | 常驻 |
 | 2026-09-08 | #23 | 154,905 | +236⭐ | 跃升 |
 | 2026-09-09 | #25 | 155,106 | +201⭐ | 跃升 |
+| 2026-09-12 | #25 | 155,474 | +368⭐ | 跃升 |

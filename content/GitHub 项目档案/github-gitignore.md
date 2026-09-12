@@ -1,13 +1,13 @@
 ---
 first_seen: 2026-07-24
-last_seen: 2026-09-09
+last_seen: 2026-09-12
 language: 
 tags: [github, trending]
 ---
 
 # github/gitignore
 
-> A collection of useful .gitignore templates
+> 收集各类实用的 .gitignore 模板，帮助开发者按语言和工具忽略不应提交的文件，适合所有使用 Git 的团队。
 
 ## 基本信息
 
@@ -25,3 +25,4 @@ tags: [github, trending]
 | 2026-09-02 | #23 | 175,541 | +51⭐ | 常驻 |
 | 2026-09-05 | #24 | 175,596 | +55⭐ | 常驻 |
 | 2026-09-09 | #22 | 175,674 | +78⭐ | 常驻 |
+| 2026-09-12 | #22 | 175,723 | +49⭐ | 常驻 |

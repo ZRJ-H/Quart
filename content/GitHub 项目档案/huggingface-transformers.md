@@ -1,13 +1,13 @@
 ---
 first_seen: 2026-06-28
-last_seen: 2026-09-10
+last_seen: 2026-09-12
 language: Python
 tags: [github, trending]
 ---
 
 # huggingface/transformers
 
-> 🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. 
+> 面向文本、视觉、音频和多模态的先进机器学习模型定义框架，兼顾推理与训练，适合 AI 研究和工程应用。
 
 ## 基本信息
 
@@ -88,3 +88,4 @@ tags: [github, trending]
 | 2026-09-08 | #22 | 164,972 | +49⭐ | 常驻 |
 | 2026-09-09 | #24 | 165,018 | +46⭐ | 常驻 |
 | 2026-09-10 | #25 | 165,053 | +35⭐ | 常驻 |
+| 2026-09-12 | #24 | 165,136 | +83⭐ | 常驻 |
