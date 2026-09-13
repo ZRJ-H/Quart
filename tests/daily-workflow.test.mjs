@@ -35,8 +35,9 @@ test("daily workflow tests, collects, summarizes, and commits once", async () =>
   assert.match(run("Collect daily knowledge"), /collect-daily-content\.py/)
   assert.match(run("Collect daily knowledge"), /generate-github-trending\.js/)
   assert.match(run("Generate weekly report"), /generate-weekly-report\.py/)
-  assert.match(run("Collect daily knowledge"), /--require-model/)
-  assert.match(run("Commit and push notes"), /git add content/)
+  assert.doesNotMatch(run("Collect daily knowledge"), /--require-model/)
+  assert.match(run("Collect daily knowledge"), /--raw-dir data\/daily-cache/)
+  assert.match(run("Commit and push notes"), /git add content data\/daily-cache/)
   assert.equal(steps.filter((step) => step.name === "Commit and push notes").length, 1)
 })
 

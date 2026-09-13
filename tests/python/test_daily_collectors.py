@@ -263,6 +263,48 @@ class DailyCollectorTests(unittest.TestCase):
         self.assertTrue(any("date=2026-09-12" in url for url in seen_urls))
         self.assertTrue(any("date=2026-09-11" in url for url in seen_urls))
 
+    def test_arxiv_keeps_falling_back_when_official_sources_are_nonempty_but_below_minimum(self):
+        weekend_now = datetime(2026, 9, 13, 13, 6, tzinfo=ZoneInfo("Asia/Shanghai"))
+        seen_urls = []
+
+        def atom(paper_id, hour):
+            return f"""<?xml version="1.0" encoding="UTF-8"?>
+            <feed xmlns="http://www.w3.org/2005/Atom">
+              <entry><id>http://arxiv.org/abs/{paper_id}v1</id><title>Paper {paper_id}</title>
+              <link rel="alternate" href="https://arxiv.org/abs/{paper_id}" />
+              <published>2026-09-11T{hour}:00:00Z</published><summary>Evidence {paper_id}.</summary></entry>
+            </feed>"""
+
+        def fake_fetch(url):
+            seen_urls.append(url)
+            if "api/query" in url:
+                return atom("2609.13001", "04")
+            if "rss.arxiv.org/rss/cs.AI" in url:
+                return atom("2609.13002", "03")
+            if "rss.arxiv.org" in url:
+                return '<feed xmlns="http://www.w3.org/2005/Atom"></feed>'
+            if "huggingface.co/api/daily_papers" in url:
+                return json.dumps(
+                    [
+                        {
+                            "paper": {
+                                "id": f"2609.1300{index}",
+                                "title": f"Backup paper {index}",
+                                "summary": f"Backup evidence {index}.",
+                                "submittedOnDailyAt": f"2026-09-11T0{index}:00:00Z",
+                            }
+                        }
+                        for index in range(3, 6)
+                    ]
+                )
+            raise AssertionError(url)
+
+        papers = collect_arxiv(weekend_now, limit=5, minimum=3, fetch_text=fake_fetch)
+
+        self.assertGreaterEqual(len(papers), 3)
+        self.assertTrue(any("rss.arxiv.org" in url for url in seen_urls))
+        self.assertTrue(any("huggingface.co/api/daily_papers" in url for url in seen_urls))
+
     def test_arxiv_expands_freshness_window_when_weekend_has_no_new_submissions(self):
         weekend_now = datetime(2026, 9, 13, 13, 6, tzinfo=ZoneInfo("Asia/Shanghai"))
         feed = """<?xml version="1.0" encoding="UTF-8"?>

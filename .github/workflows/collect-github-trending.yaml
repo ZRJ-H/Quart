@@ -52,7 +52,7 @@ jobs:
           GO_API_KEY: ${{ secrets.GO_API_KEY }}
         run: |
           export RUN_DATE="$(TZ=Asia/Shanghai date +%F)"
-          python3 scripts/collect-daily-content.py --content-root content --date "$RUN_DATE" --raw-dir /tmp/daily-raw --require-model
+          python3 scripts/collect-daily-content.py --content-root content --date "$RUN_DATE" --raw-dir data/daily-cache
           python3 scripts/github_trending.py --period daily --limit 25 --json --output /tmp/trending.json
           node scripts/generate-github-trending.js
 
@@ -66,6 +66,6 @@ jobs:
           export RUN_DATE="$(TZ=Asia/Shanghai date +%F)"
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add content
+          git add content data/daily-cache
           git diff --staged --quiet || git commit -m "docs: daily knowledge $RUN_DATE"
           git push

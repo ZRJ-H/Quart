@@ -132,6 +132,51 @@ class DailyPipelineTests(unittest.TestCase):
             annotation = output.getvalue()
             self.assertIn("::error title=Daily summarization failed::时政要闻: provider timed out%0Aretry exhausted", annotation)
 
+    def test_pipeline_uses_persisted_sources_when_live_collection_is_temporarily_unavailable(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            content_root = root / "content"
+            cache_root = root / "data" / "daily-cache"
+            run_pipeline(content_root, RUN_DATE, fixture_collectors(), fallback_summarizer, cache_root)
+
+            def unavailable(_now):
+                raise OSError("upstream temporarily unavailable")
+
+            failed_collectors = {category: unavailable for category in FIXTURES}
+            output = io.StringIO()
+            with redirect_stdout(output):
+                paths = run_pipeline(
+                    content_root,
+                    date(2026, 9, 12),
+                    failed_collectors,
+                    fallback_summarizer,
+                    cache_root,
+                )
+
+            self.assertEqual(len(paths), 4)
+            self.assertTrue(all(path.exists() for path in paths))
+            self.assertIn("::warning title=Using cached daily sources::AI科技动态", output.getvalue())
+            self.assertIn("https://example.com/", paths[0].read_text(encoding="utf-8"))
+
+    def test_pipeline_rejects_a_source_cache_older_than_seven_days(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            content_root = root / "content"
+            cache_root = root / "data" / "daily-cache"
+            run_pipeline(content_root, RUN_DATE, fixture_collectors(), fallback_summarizer, cache_root)
+
+            def unavailable(_now):
+                raise OSError("upstream still unavailable")
+
+            with self.assertRaisesRegex(OSError, "upstream still unavailable"):
+                run_pipeline(
+                    content_root,
+                    date(2026, 9, 19),
+                    {category: unavailable for category in FIXTURES},
+                    fallback_summarizer,
+                    cache_root,
+                )
+
     def test_weekly_report_uses_current_iso_week_and_daily_links(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

@@ -278,11 +278,23 @@ def collect_arxiv(
         }
     )
     api_url = f"https://export.arxiv.org/api/query?{params}"
+    target_count = minimum or 1
+    normalized: list[Article] = []
+    source_errors: list[str] = []
+
+    def selected() -> list[Article]:
+        ordered = sorted(deduplicate(normalized), key=lambda article: article.published_at, reverse=True)
+        return select_recent(ordered, now, limit, minimum=minimum)
+
     try:
-        normalized = _normalize_arxiv(fetch_text(api_url))
-        if not normalized:
-            raise CollectionError("arXiv API returned no papers")
-    except Exception as api_error:
+        api_papers = _normalize_arxiv(fetch_text(api_url))
+        normalized.extend(api_papers)
+        if not api_papers:
+            source_errors.append("arXiv API returned no papers")
+    except Exception as error:
+        source_errors.append(f"arXiv API failed: {error}")
+
+    if len(selected()) < target_count:
         rss_urls = tuple(f"https://rss.arxiv.org/rss/{category}" for category in ("cs.AI", "cs.LG", "cs.CL"))
 
         def load_rss(url: str) -> tuple[list[Article], str]:
@@ -293,31 +305,33 @@ def collect_arxiv(
 
         with ThreadPoolExecutor(max_workers=len(rss_urls)) as executor:
             results = list(executor.map(load_rss, rss_urls))
-        normalized = [paper for rows, _error in results for paper in rows]
-        if not normalized:
-            rss_errors = "; ".join(error for _rows, error in results if error)
-            backup_errors: list[str] = []
-            target_count = minimum or 1
-            for days_back in range(7):
-                backup_date = (now.date() - timedelta(days=days_back)).isoformat()
-                backup_params = urlencode({"date": backup_date, "limit": max(20, limit * 4)})
-                backup_url = f"https://huggingface.co/api/daily_papers?{backup_params}"
-                try:
-                    normalized.extend(_normalize_hugging_face_papers(fetch_text(backup_url)))
-                    normalized = deduplicate(normalized)
-                    if len(normalized) >= target_count:
-                        break
-                except Exception as error:
-                    backup_errors.append(f"{backup_date}: {error}")
-            if not normalized:
-                backup_detail = "; ".join(backup_errors) or "no papers in the latest 7 days"
-                raise CollectionError(
-                    f"arXiv API and RSS feeds failed: {api_error}; {rss_errors}; "
-                    f"Hugging Face backup failed: {backup_detail}"
-                ) from api_error
+        normalized.extend(paper for rows, _error in results for paper in rows)
+        source_errors.extend(error for _rows, error in results if error)
+        if not any(rows for rows, _error in results):
+            source_errors.append("arXiv RSS feeds returned no papers")
 
-    ordered = sorted(normalized, key=lambda article: article.published_at, reverse=True)
-    return select_recent(deduplicate(ordered), now, limit, minimum=minimum)
+    if len(selected()) < target_count:
+        hugging_face_found = False
+        for days_back in range(7):
+            backup_date = (now.date() - timedelta(days=days_back)).isoformat()
+            backup_params = urlencode({"date": backup_date, "limit": max(20, limit * 4)})
+            backup_url = f"https://huggingface.co/api/daily_papers?{backup_params}"
+            try:
+                backup_papers = _normalize_hugging_face_papers(fetch_text(backup_url))
+                normalized.extend(backup_papers)
+                hugging_face_found = hugging_face_found or bool(backup_papers)
+                if len(selected()) >= target_count:
+                    break
+            except Exception as error:
+                source_errors.append(f"Hugging Face {backup_date}: {error}")
+        if not hugging_face_found:
+            source_errors.append("Hugging Face returned no papers in the latest 7 days")
+
+    result = selected()
+    if len(result) < target_count:
+        detail = "; ".join(source_errors) or "all paper sources returned too few recent papers"
+        raise CollectionError(f"Paper sources returned {len(result)} items; minimum is {target_count}: {detail}")
+    return result
 
 def collect_hacker_news(
     now: datetime,
