@@ -21,6 +21,11 @@ MINIMUMS = {"AI科技动态": 3, "时政要闻": 3, "AI论文日报": 3, "Hacker
 SUMMARY_SCHEMA_VERSION = 7
 
 
+def _github_error(title: str, detail: str) -> None:
+    escaped = str(detail).replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")
+    print(f"::error title={title}::{escaped}", flush=True)
+
+
 def _article_dict(article: Article) -> dict:
     value = asdict(article)
     value["published_at"] = article.published_at.isoformat()
@@ -50,10 +55,14 @@ def run_pipeline(
     collected: dict[str, list[Article]] = {}
     for category in LIMITS:
         print(f"Collecting {category}...", flush=True)
-        rows = collectors[category](now)[: LIMITS[category]]
-        print(f"Collected {category}: {len(rows)} items", flush=True)
-        if len(rows) < MINIMUMS[category]:
-            raise CollectionError(f"{category} returned {len(rows)} items; minimum is {MINIMUMS[category]}")
+        try:
+            rows = collectors[category](now)[: LIMITS[category]]
+            print(f"Collected {category}: {len(rows)} items", flush=True)
+            if len(rows) < MINIMUMS[category]:
+                raise CollectionError(f"{category} returned {len(rows)} items; minimum is {MINIMUMS[category]}")
+        except Exception as error:
+            _github_error("Daily collection failed", str(error))
+            raise
         collected[category] = rows
 
     if raw_dir:
@@ -75,7 +84,11 @@ def run_pipeline(
         if marker in existing_text:
             outputs[category] = existing_text
             continue
-        digest = summarizer(category, rows)
+        try:
+            digest = summarizer(category, rows)
+        except Exception as error:
+            _github_error("Daily summarization failed", f"{category}: {error}")
+            raise
         outputs[category] = render_digest(category, run_date, rows, digest).rstrip() + f"\n\n{marker}\n"
 
     written: list[Path] = []

@@ -1,5 +1,7 @@
+import io
 import tempfile
 import unittest
+from contextlib import redirect_stdout
 from datetime import date, datetime, timezone
 from pathlib import Path
 
@@ -107,10 +109,28 @@ class DailyPipelineTests(unittest.TestCase):
             existing.write_text("existing", encoding="utf-8")
             before = snapshot(root)
 
-            with self.assertRaisesRegex(CollectionError, "AI论文日报"):
+            output = io.StringIO()
+            with redirect_stdout(output), self.assertRaisesRegex(CollectionError, "AI论文日报"):
                 run_pipeline(root, RUN_DATE, fixture_collectors({"AI论文日报": []}), fallback_summarizer)
 
             self.assertEqual(snapshot(root), before)
+            self.assertIn("::error title=Daily collection failed::AI论文日报 returned 0 items", output.getvalue())
+
+    def test_failed_summary_reports_the_category_to_github_actions(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+
+            def failed_summarizer(category, rows):
+                if category == "时政要闻":
+                    raise RuntimeError("provider timed out\nretry exhausted")
+                return fallback_summarizer(category, rows)
+
+            output = io.StringIO()
+            with redirect_stdout(output), self.assertRaisesRegex(RuntimeError, "provider timed out"):
+                run_pipeline(root, RUN_DATE, fixture_collectors(), failed_summarizer)
+
+            annotation = output.getvalue()
+            self.assertIn("::error title=Daily summarization failed::时政要闻: provider timed out%0Aretry exhausted", annotation)
 
     def test_weekly_report_uses_current_iso_week_and_daily_links(self):
         with tempfile.TemporaryDirectory() as directory:
