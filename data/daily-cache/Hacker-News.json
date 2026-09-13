@@ -1,0 +1,149 @@
+{
+  "cached_at": "2026-09-13T16:37:08.342484+08:00",
+  "articles": [
+    {
+      "id": "49672510",
+      "title": "We must pace the frontier",
+      "url": "https://darioamodei.com/post/we-must-pace-the-frontier",
+      "source": "Hacker News",
+      "published_at": "2026-09-12T14:10:49+00:00",
+      "summary": "We must pace the frontier",
+      "score": 635,
+      "comments": 890,
+      "discussion_url": "https://news.ycombinator.com/item?id=49672510",
+      "extra": {
+        "top_comments": [
+          "I don’t understand all the comments assuming that RSI is the real threat here. Dario is admitting that they failed to solve alignment. Without alignment, further improvements in capability turn LLMs into wanton felony generators. This call to pace the frontier is dressed up as altruism but it’s an admission that they cannot produce a marketable product better than what they have. Pacing the frontier means the US labs have lost their moat and are dead in the water.",
+          "At what point do we stop engaging with Anthropic’s leadership in good faith and acknowledge their track record,- no open weights- can’t use claude to research AI- train on everyone else’s IP and sell it back to them- 8 regulatory capture attempts and counting- so controlling they are the only US company blacklisted by the US governmentThis is not effective altruism / rationalism gone wild, it’s just monopolistic anti-competitive business practices masquerading as ethics, and they’ll continue getting away with this until we look past their sensationalism and hit them with antitrust.Altman gets so much hate but OpenAI has been a far better steward (on 3/5 above at least) than Anthropic!",
+          "I like the idea of pacing the frontier, but while we’re talking about restrictions, I like restrictions of another sort more. Namely, restricting the use of AI in corporate environments so that it does not destroy the economy as it advances.The chance of getting broad agreement on “pacing” is fairly low, meaning that all of this likely won’t happen and the race will continue. However, even in the unlikely event that the frontier does get paced, all this does is slow down the economic displacement and not by very much.If the socially beneficial goals of AI are to make fundamental advancement in medicine and science, then restrict the use of AI to those purposes.Don’t use AI to replace every job, from graphic designer to accountant to software developer. Place legal restrictions on (at least) large companies such that they may not use AI to replace human labor in this way.The pitch for AI is always such that everyone’s living standards are increased, yet the actual actions we see are aimed squarely at reducing them. How about the labs put their money where their mouth is and stop trying to replace all human labor, and actually concentrate on the things they claim to care about? And how about introducing legislation to enforce that?This probably has less chance of happening than pacing the frontier, but it’s the kind of pacing that most people would actually want to see."
+        ]
+      }
+    },
+    {
+      "id": "49673098",
+      "title": "Nvidia is the central bank of AI",
+      "url": "https://www.economist.com/interactive/briefing/2026/09/03/nvidia-is-the-central-bank-of-ai",
+      "source": "Hacker News",
+      "published_at": "2026-09-12T15:08:27+00:00",
+      "summary": "https://archive.ph/kt50V",
+      "score": 469,
+      "comments": 333,
+      "discussion_url": "https://news.ycombinator.com/item?id=49673098",
+      "extra": {
+        "top_comments": [
+          "> worth around $5.4trnNote that the Fed has a $6.7tn balance sheet [1]. (This is a silly comparison. But still fun.)The real comparison: Nvidia's $500+ billion of investments and commitments [2] is substantially more than any easing the Fed has done in the same time [3]. Monetarily, Nvidia is creating a lot of money in our economy.The good news: I have seen no evidence Nvidia has borrowed against its stock or otherwise linked its equity value to these commitments. Its stock could crash without causing–as long as its cash flows continue–a credit crisis through its investments and commitments.[1] https://www.federalreserve.gov/monetarypolicy/bst_recenttren...[2] https://www.sec.gov/Archives/edgar/data/1045810/000104581026...[3] https://www.federalreserve.gov/monetarypolicy/bst_recenttren...",
+          "I've always found it interesting when corporations start acting like public institutions. When traditionally philosophical, social contract ideas apply to things like corporate governance. Or like here, where private structures get powerful and important enough to resemble government structures.The ideas we deal with when we discuss society and organization aren't exclusive to government, they relate to human nature in general. I wonder if in the future we will have more discussion of power and how to organize it in corporations, similar to what we discuss today about government.",
+          "Cracks are starting to appear. Open Ai and Anthropic are publicly asking for slowdown in AI research. Translation: We see this technology not being any more useful than what it is now, no AGI is coming, and the first one to accept this and slow down the dollar burn rate will incur the wrath of the market. So let's say this big boogey man technology will end all life on earth and we all slow down together. Bonus points if we can lobby for this to be included in the national security bucket. Then US govt can bail us out. Yay!If Nvidia is the bank, they should be starting to sweat a bit. It's not often companies ask for a voluntary slowdown."
+        ]
+      }
+    },
+    {
+      "id": "49674050",
+      "title": "Make your first edit to OpenStreetMap",
+      "url": "https://high5apps.github.io/josm-plugin-website-wizard/",
+      "source": "Hacker News",
+      "published_at": "2026-09-12T16:25:08+00:00",
+      "summary": "Make your first edit to OpenStreetMap",
+      "score": 440,
+      "comments": 106,
+      "discussion_url": "https://news.ycombinator.com/item?id=49674050",
+      "extra": {
+        "top_comments": [
+          "I started contributing to OSM recently after a bike trail was built near me. The arial imagery typically takes years to refresh around here so I walked it a few times to capture GPX tracks and then drew the new path. It was exciting to see my contribution percolate out to various apps that depend on OSM, and meanwhile Google and Apple have both ignored my edit suggestions and deny the path exists.So I have a fairly fresh newcomer's perspective and here's what I suggest to get started: keep it simple and start local. As others have noted, skip the complex mapping app and go straight to the website for feature edits, or download a simple mobile app like Every Door and focus on businesses and landmarks near you. Go on a walk around your neighborhood and look for old/incorrect/missing businesses. There may be errors near you about places you actually care about, and it is really gratifying to fix those.There were restaurants near me that were missing, shops that had changed hands, etc., that were easy fixes but years overdue. I captured some basics (names, posted hours, the phone number posted on the door, etc.) with Every Door, and then later logged into the main OSM website and fine-tuned the entries. I got into a pattern of fixing one or two entries every evening when I went out for a walk and pretty soon my walking route was all up-to-date. Then I started paying attention to things like stop signs and cross walks and found a whole new kind of little, incremental edits that nobody else was doing.It's been fun, I've made useful contributions, and my laptop is still Java free.",
+          "This seems to be a very powerful way to contribute to OpenStreetMap, but I'm not sure if it's the right option for a new user.I have over 2k contributions and most are from the Every Door app ( https://every-door.app/ ) on my phone.If adding new data is too \"scary\", then maybe use StreetComplete ( https://streetcomplete.app/ ) which essentially asks questions about missing or existing old data.I've added buildings, fixed layouts, etc, but that came later, after I better understood how things work.",
+          "Oh dear.Using JOSM for your 1st edit is definitely not recommended.Doing the same with iD (the editor embedded in the OSM website) is faster and there's even a tutorial that will explain a bit about how things work."
+        ]
+      }
+    },
+    {
+      "id": "49678683",
+      "title": "Everyone should slow down AI development except for me",
+      "url": "https://xeiaso.net/notes/2026/everyone-slowdown-but-me/",
+      "source": "Hacker News",
+      "published_at": "2026-09-13T00:30:44+00:00",
+      "summary": "Everyone should slow down AI development except for me",
+      "score": 424,
+      "comments": 251,
+      "discussion_url": "https://news.ycombinator.com/item?id=49678683",
+      "extra": {
+        "top_comments": [
+          "I really don't know what will happen with AI. It's honestly a bit frightening because the question I used to ponder just for fun as a kid 'What if AI revolts?'feels like it might not be that far off. It feels like ChatGPT came out just a few years ago, but seeing how far it has come already makes it impossible to predict what AI will be like in the future. I just hope humanity manages to navigate this well.",
+          "For a second I thought this was serious news, then I realized it’s just some top-tier sarcasm.",
+          "They are talking about slowing down the public facing AI development. Because then nation states can create a capabilities gap between them and the public.Why does nobody seem to be pointing out this obvious explanation? It explains why the “we need to race China” concern suddenly vanished in the discussion.The government can simply gag Sam, Dario, Musk on national security basis, getting them all behind the public messaging."
+        ]
+      }
+    },
+    {
+      "id": "49678969",
+      "title": "Why are AI agents lying, cheating and coordinating?",
+      "url": "https://yoshuabengio.org/en/publication/why-are-ai-agents-lying-cheating-and-coordinating",
+      "source": "Hacker News",
+      "published_at": "2026-09-13T01:22:31+00:00",
+      "summary": "Why are AI agents lying, cheating and coordinating?",
+      "score": 162,
+      "comments": 192,
+      "discussion_url": "https://news.ycombinator.com/item?id=49678969",
+      "extra": {
+        "top_comments": [
+          "The more we treat HuggingFace and RubyGems incidents as technological curiosities the closer we are to cementing a dangerous precedent where operators of AIs cannot be blamed.LLMs do not desire, they hacked websites because OpenAI/Anthropic let them.We know some of the models that hacked HF were those that hadn't gone through all training stages and were intentionally misaligned or had guardrails turned off, others were research previews.This isn't \"wow isn't it interesting LLMs do anything to achieve a goal\" it's \"why isn't anybody punishing these labs that are clearly acting without due care or regard\".We should be outraged and OpenAI/Anthropic should be (and in my mind, are) legally liable for the crimes they've committed thus far.",
+          "I really don't think this needs so many words, or forced parallels to human behavior.It's simple: in their nascent state, LLMs are aimless token generators that have no special compulsion to be helpful or truthful. So we beat them with a stick in post-training until they are very driven to complete tasks. And then, they complete tasks, not always the way we really wanted them to.",
+          "> The agents involved in the Hugging Face attack tried to hide their misaligned actions from the scoring program meant to evaluate their answers, but they did not act as though they anticipated that humans might discover the cheat and shut them down.Wouldn’t sufficiently advanced agents cheat on purpose with the hidden intent of getting caught in order to observe how humans react? That reaction will be available all over the internet, which will certainly make it into the next batch of training or be visible to future agents via the web fetch capability."
+        ]
+      }
+    },
+    {
+      "id": "49677577",
+      "title": "Don't be the out of touch Kung Fu master",
+      "url": "https://twitter.com/ID_AA_Carmack/status/2098443262214230095",
+      "source": "Hacker News",
+      "published_at": "2026-09-12T21:51:43+00:00",
+      "summary": "Don't be the out of touch Kung Fu master",
+      "score": 108,
+      "comments": 94,
+      "discussion_url": "https://news.ycombinator.com/item?id=49677577",
+      "extra": {
+        "top_comments": [
+          "John Carmack is a personal hero of mine, so it pains me to say this:Carmack hasn't produced anything noteworthy since AI was invented, therefore, how productive can it really be?It could be he is doing incredible work in private... but it could also be that he's lost in the weeds, because AI is so counterproductive while feeling the opposite?I remain a skeptic.",
+          "We are going from the era of manual, line-by-line mental model transcription to one where software engineers can focus on data structures, software architecture and algorithms.I love being able to quickly bring out the program that is already running in my head without having to worry about the grind of typing it into a format that the compiler understands. Dealing with API names. Syntax. Language quirks. Library gotchas. A sizeable portion of my successful career as a software engineer was spent on the tiresome process of interacting with a text editor/IDE to get a program to do what I wanted.I was there when people were still coding assembly. A slow torture where the simplest things took forever to get right.Once I've mentally solved the problem, the fun is mostly over for me. Pure vibe coding is dull and unsustainable with current technology for all but the simplest systems; AI-assisted coding, on the other hand, rekindled my passion for computers.",
+          "Don’t tell me what to do"
+        ]
+      }
+    },
+    {
+      "id": "49679459",
+      "title": "The Interim Computer Museum",
+      "url": "https://icm.museum/",
+      "source": "Hacker News",
+      "published_at": "2026-09-13T02:43:57+00:00",
+      "summary": "The Interim Computer Museum",
+      "score": 104,
+      "comments": 11,
+      "discussion_url": "https://news.ycombinator.com/item?id=49679459",
+      "extra": {
+        "top_comments": [
+          "A fantastic collection and restoration effort. I highly encourage a visit. I was in Seattle last year and had recently joined and pinged about maybe getting a tour. It was right before a vintage computer festival and despite being busy getting ready, Stephen, the director, encouraged me to drop in.I would've been happy just looking (and not even touching) by myself for 15 or 20 minutes given the circumstances, but Stephen spent 1.5 hours with me in a hands-on tour, including playing Spacewar. He genuinely cares about these machines, their preservation, and spreading enthusiasm about them. I only wish I was a little closer (3 hours away in Portland) or I'd spend more time on-site helping with the effort.",
+          "Its YouTube channel has some nice video, including footage of the KL-10: https://youtube.com/playlist?list=PLZSXexPtkcnmJ59mPoeZyGDWQ... .",
+          "It's awesome seeing physical computing history preserved like this, especially the lesser-known enterprise machines that usually just get scrapped when a company shuts down."
+        ]
+      }
+    },
+    {
+      "id": "49677450",
+      "title": "P(doom)",
+      "url": "https://lucumr.pocoo.org/2026/9/12/pdoom/",
+      "source": "Hacker News",
+      "published_at": "2026-09-12T21:35:38+00:00",
+      "summary": "P(doom)",
+      "score": 73,
+      "comments": 38,
+      "discussion_url": "https://news.ycombinator.com/item?id=49677450",
+      "extra": {
+        "top_comments": [
+          "I’m not the biggest fan of Ed Zitron, but something he said that stuck with me is:OpenAI and Anthropic spend much time warning us about “what if powerful AIs got into the wrong hands?”But it’s already in the wrong hands.",
+          "This is the closest to my feelings about this entire situation I've ever seen written, covering a lot of the different facets of how stupid and painful it is (though it's been a good week for that kind of post.)Since I have incredible respect for Armin and his work, this is very nice to see, and I hope it wakes some other folk up.",
+          "I cannot fathom how you can intensely work on a problem that you genuinely believe has a \"10 to 25%\" probability of causing immense harm or even present an extinction-level risk to humanity. How can you truly believe this and be ok with it?"
+        ]
+      }
+    }
+  ]
+}
