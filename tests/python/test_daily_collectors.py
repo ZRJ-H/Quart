@@ -231,6 +231,38 @@ class DailyCollectorTests(unittest.TestCase):
         self.assertEqual(papers[0].score, 42)
         self.assertTrue(any("huggingface.co/api/daily_papers" in url for url in seen_urls))
 
+    def test_arxiv_hugging_face_backup_walks_back_to_the_latest_nonempty_weekday(self):
+        weekend_now = datetime(2026, 9, 13, 13, 6, tzinfo=ZoneInfo("Asia/Shanghai"))
+        seen_urls = []
+
+        def fake_fetch(url):
+            seen_urls.append(url)
+            if "huggingface.co/api/daily_papers" not in url:
+                raise OSError("arXiv unavailable")
+            if "date=2026-09-11" not in url:
+                return "[]"
+            return json.dumps(
+                [
+                    {
+                        "paper": {
+                            "id": f"2609.1200{index}",
+                            "title": f"Friday paper {index}",
+                            "summary": f"Complete Friday abstract {index}.",
+                            "authors": [{"name": "Alice Example"}],
+                            "submittedOnDailyAt": f"2026-09-11T0{index}:00:00Z",
+                        }
+                    }
+                    for index in range(1, 4)
+                ]
+            )
+
+        papers = collect_arxiv(weekend_now, limit=5, minimum=3, fetch_text=fake_fetch)
+
+        self.assertEqual(len(papers), 3)
+        self.assertTrue(any("date=2026-09-13" in url for url in seen_urls))
+        self.assertTrue(any("date=2026-09-12" in url for url in seen_urls))
+        self.assertTrue(any("date=2026-09-11" in url for url in seen_urls))
+
     def test_arxiv_expands_freshness_window_when_weekend_has_no_new_submissions(self):
         weekend_now = datetime(2026, 9, 13, 13, 6, tzinfo=ZoneInfo("Asia/Shanghai"))
         feed = """<?xml version="1.0" encoding="UTF-8"?>

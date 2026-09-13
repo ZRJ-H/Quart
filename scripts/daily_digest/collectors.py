@@ -5,7 +5,7 @@ import json
 import re
 import xml.etree.ElementTree as ET
 from dataclasses import replace
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from html.parser import HTMLParser
 from typing import Any, Callable
 from urllib.parse import urlencode
@@ -296,16 +296,24 @@ def collect_arxiv(
         normalized = [paper for rows, _error in results for paper in rows]
         if not normalized:
             rss_errors = "; ".join(error for _rows, error in results if error)
-            backup_params = urlencode({"date": now.date().isoformat(), "limit": max(20, limit * 4)})
-            backup_url = f"https://huggingface.co/api/daily_papers?{backup_params}"
-            try:
-                normalized = _normalize_hugging_face_papers(fetch_text(backup_url))
-                if not normalized:
-                    raise CollectionError("Hugging Face daily papers returned no papers")
-            except Exception as backup_error:
+            backup_errors: list[str] = []
+            target_count = minimum or 1
+            for days_back in range(7):
+                backup_date = (now.date() - timedelta(days=days_back)).isoformat()
+                backup_params = urlencode({"date": backup_date, "limit": max(20, limit * 4)})
+                backup_url = f"https://huggingface.co/api/daily_papers?{backup_params}"
+                try:
+                    normalized.extend(_normalize_hugging_face_papers(fetch_text(backup_url)))
+                    normalized = deduplicate(normalized)
+                    if len(normalized) >= target_count:
+                        break
+                except Exception as error:
+                    backup_errors.append(f"{backup_date}: {error}")
+            if not normalized:
+                backup_detail = "; ".join(backup_errors) or "no papers in the latest 7 days"
                 raise CollectionError(
                     f"arXiv API and RSS feeds failed: {api_error}; {rss_errors}; "
-                    f"Hugging Face backup failed: {backup_error}"
+                    f"Hugging Face backup failed: {backup_detail}"
                 ) from api_error
 
     ordered = sorted(normalized, key=lambda article: article.published_at, reverse=True)
