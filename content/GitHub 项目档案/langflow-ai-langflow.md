@@ -1,13 +1,13 @@
 ---
 first_seen: 2026-06-28
-last_seen: 2026-09-08
+last_seen: 2026-09-13
 language: Python
 tags: [github, trending]
 ---
 
 # langflow-ai/langflow
 
-> Langflow is a powerful tool for building and deploying AI-powered agents and workflows.
+> 用于构建和部署 AI 代理与工作流的可视化工具，降低编排门槛。适合快速试验代理逻辑并发布应用。
 
 ## 基本信息
 
@@ -74,3 +74,4 @@ tags: [github, trending]
 | 2026-09-06 | #23 | 154,304 | +363⭐ | 跃升 |
 | 2026-09-07 | #20 | 154,357 | +53⭐ | 常驻 |
 | 2026-09-08 | #24 | 154,426 | +69⭐ | 常驻 |
+| 2026-09-13 | #25 | 154,698 | +272⭐ | 跃升 |
