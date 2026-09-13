@@ -54,6 +54,7 @@ class DailyRenderingTests(unittest.TestCase):
     def test_layered_digest_keeps_sources_and_category_fields(self):
         markdown = render_digest("AI论文日报", RUN_DATE, PAPERS, VALID_SUMMARY)
 
+        self.assertIn("常规取最近 48 小时，不足时依次扩至 72 小时和 7 天", markdown)
         self.assertIn("## 深度解读", markdown)
         self.assertIn("## 快速浏览", markdown)
         self.assertIn("**研究问题**", markdown)

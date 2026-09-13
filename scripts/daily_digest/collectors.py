@@ -57,6 +57,7 @@ def collect_xinhua_politics(
     now: datetime,
     limit: int = 8,
     *,
+    minimum: int | None = None,
     fetch_text: Callable[[str], str] = default_fetch_text,
 ) -> list[Article]:
     listing = fetch_text(source.url)
@@ -76,7 +77,7 @@ def collect_xinhua_politics(
         except ValueError:
             continue
 
-    recent = select_recent(deduplicate(candidates), now, max(limit * 2, limit))
+    recent = select_recent(deduplicate(candidates), now, max(limit * 2, limit), minimum=minimum)
 
     def add_description(article: Article) -> Article:
         try:
@@ -102,6 +103,7 @@ def collect_feed_category(
     now: datetime,
     limit: int,
     *,
+    minimum: int | None = None,
     fetch_text: Callable[[str], str] = default_fetch_text,
 ) -> list[Article]:
     def load(source: FeedSource) -> tuple[list[Article], str]:
@@ -117,7 +119,7 @@ def collect_feed_category(
     if not articles:
         raise CollectionError("All configured feeds failed: " + "; ".join(errors))
     ordered = sorted(articles, key=lambda article: article.published_at, reverse=True)
-    return select_recent(deduplicate(ordered), now, limit)
+    return select_recent(deduplicate(ordered), now, limit, minimum=minimum)
 
 
 def collect_news_category(
@@ -135,13 +137,17 @@ def collect_news_category(
     domestic: list[Article] = []
     feed_sources = tuple(source for source in domestic_sources if source.kind == "feed")
     if feed_sources:
-        domestic.extend(collect_feed_category(feed_sources, now, limit, fetch_text=fetch_text))
+        domestic.extend(
+            collect_feed_category(feed_sources, now, limit, minimum=domestic_minimum, fetch_text=fetch_text)
+        )
     for source in domestic_sources:
         if source.kind == "xinhua-politics":
-            domestic.extend(collect_xinhua_politics(source, now, limit, fetch_text=fetch_text))
+            domestic.extend(
+                collect_xinhua_politics(source, now, limit, minimum=domestic_minimum, fetch_text=fetch_text)
+            )
         elif source.kind != "feed":
             raise ValueError(f"Unsupported domestic news source kind: {source.kind}")
-    domestic = select_recent(deduplicate(domestic), now, limit)
+    domestic = select_recent(deduplicate(domestic), now, limit, minimum=domestic_minimum)
     if len(domestic) < domestic_minimum:
         raise CollectionError(
             f"Domestic official news returned {len(domestic)} items; minimum is {domestic_minimum}"
@@ -259,6 +265,7 @@ def collect_arxiv(
     now: datetime,
     limit: int = 5,
     *,
+    minimum: int | None = None,
     fetch_text: Callable[[str], str] = default_fetch_text,
 ) -> list[Article]:
     params = urlencode(
@@ -302,7 +309,7 @@ def collect_arxiv(
                 ) from api_error
 
     ordered = sorted(normalized, key=lambda article: article.published_at, reverse=True)
-    return select_recent(deduplicate(ordered), now, limit)
+    return select_recent(deduplicate(ordered), now, limit, minimum=minimum)
 
 def collect_hacker_news(
     now: datetime,

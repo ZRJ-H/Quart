@@ -108,6 +108,29 @@ class DailyCollectorTests(unittest.TestCase):
         self.assertIn("有关部门表示将继续公布配套细则", items[0].summary)
         self.assertEqual(items[0].published_at.date().isoformat(), "2026-09-11")
 
+    def test_xinhua_collector_expands_window_to_meet_domestic_minimum(self):
+        source = FeedSource("新华网时政", "https://www.news.cn/politics/", "xinhua-politics")
+        weekend_now = datetime(2026, 9, 13, 13, 6, tzinfo=ZoneInfo("Asia/Shanghai"))
+        listing = """
+        <div id="recommendDepth">
+          <a href='https://www.news.cn/politics/20260913/one/c.html'>政策一</a>
+          <a href='https://www.news.cn/politics/20260912/two/c.html'>政策二</a>
+          <a href='https://www.news.cn/politics/20260912/three/c.html'>政策三</a>
+          <a href='https://www.news.cn/politics/20260912/four/c.html'>政策四</a>
+          <a href='https://www.news.cn/politics/20260910/five/c.html'>政策五</a>
+        </div>
+        """
+
+        def fake_fetch(url):
+            if url.endswith("/politics/"):
+                return listing
+            return '<meta name="description" content="政策权威信息和后续执行安排。">'
+
+        items = collect_xinhua_politics(source, weekend_now, limit=5, minimum=5, fetch_text=fake_fetch)
+
+        self.assertEqual(len(items), 5)
+        self.assertEqual(items[-1].title, "政策五")
+
     def test_feed_category_survives_one_broken_source(self):
         sources = (
             FeedSource("Broken", "https://broken.example/feed"),
@@ -123,6 +146,31 @@ class DailyCollectorTests(unittest.TestCase):
 
         self.assertEqual([item.id for item in items], ["one"])
         self.assertEqual(items[0].source, "Working")
+
+    def test_feed_category_expands_freshness_window_when_weekend_items_are_below_minimum(self):
+        sources = (FeedSource("AI Source", "https://ai.example/feed"),)
+        weekend_now = datetime(2026, 9, 13, 13, 6, tzinfo=ZoneInfo("Asia/Shanghai"))
+        feed = """<?xml version="1.0"?><rss version="2.0"><channel>
+          <item><guid>recent-1</guid><title>Recent one</title><link>https://example.com/recent-1</link>
+          <pubDate>Sun, 13 Sep 2026 04:00:00 GMT</pubDate><description>Recent evidence.</description></item>
+          <item><guid>recent-2</guid><title>Recent two</title><link>https://example.com/recent-2</link>
+          <pubDate>Sat, 12 Sep 2026 12:00:00 GMT</pubDate><description>Recent evidence.</description></item>
+          <item><guid>fallback-3</guid><title>Fallback three</title><link>https://example.com/fallback-3</link>
+          <pubDate>Thu, 10 Sep 2026 22:50:00 GMT</pubDate><description>Fallback evidence.</description></item>
+          <item><guid>older-4</guid><title>Older four</title><link>https://example.com/older-4</link>
+          <pubDate>Tue, 08 Sep 2026 12:00:00 GMT</pubDate><description>Older evidence.</description></item>
+        </channel></rss>"""
+
+        items = collect_feed_category(
+            sources,
+            weekend_now,
+            limit=8,
+            minimum=3,
+            fetch_text=lambda _url: feed,
+        )
+
+        self.assertEqual([item.id for item in items], ["recent-1", "recent-2", "fallback-3"])
+        self.assertEqual(items[-1].published_at.isoformat(), "2026-09-10T22:50:00+00:00")
 
     def test_arxiv_combines_categories_and_removes_duplicate_papers(self):
         seen_urls = []
@@ -182,6 +230,25 @@ class DailyCollectorTests(unittest.TestCase):
         self.assertEqual(papers[0].extra["authors"], ["Alice Example"])
         self.assertEqual(papers[0].score, 42)
         self.assertTrue(any("huggingface.co/api/daily_papers" in url for url in seen_urls))
+
+    def test_arxiv_expands_freshness_window_when_weekend_has_no_new_submissions(self):
+        weekend_now = datetime(2026, 9, 13, 13, 6, tzinfo=ZoneInfo("Asia/Shanghai"))
+        feed = """<?xml version="1.0" encoding="UTF-8"?>
+        <feed xmlns="http://www.w3.org/2005/Atom">
+          <entry><id>http://arxiv.org/abs/2609.10001v1</id><title>Friday paper one</title>
+          <link rel="alternate" href="https://arxiv.org/abs/2609.10001" />
+          <published>2026-09-11T04:00:00Z</published><summary>Evidence one.</summary></entry>
+          <entry><id>http://arxiv.org/abs/2609.10002v1</id><title>Friday paper two</title>
+          <link rel="alternate" href="https://arxiv.org/abs/2609.10002" />
+          <published>2026-09-11T03:00:00Z</published><summary>Evidence two.</summary></entry>
+          <entry><id>http://arxiv.org/abs/2609.10003v1</id><title>Thursday paper</title>
+          <link rel="alternate" href="https://arxiv.org/abs/2609.10003" />
+          <published>2026-09-10T18:00:00Z</published><summary>Evidence three.</summary></entry>
+        </feed>"""
+
+        papers = collect_arxiv(weekend_now, limit=5, minimum=3, fetch_text=lambda _url: feed)
+
+        self.assertEqual([paper.id for paper in papers], ["2609.10001", "2609.10002", "2609.10003"])
 
     def test_hacker_news_collects_ranked_stories_and_discussion_evidence(self):
         story_time = int(datetime(2026, 9, 11, 1, tzinfo=timezone.utc).timestamp())

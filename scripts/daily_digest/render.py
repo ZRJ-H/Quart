@@ -77,7 +77,7 @@ tags: {TAGS.get(category, '[每日资讯]')}
 
 # {category} - {run_date.isoformat()}
 
-> 来源：{sources} · 共 {len(articles)} 条 · 优先当天内容，不足时回溯最近 48 小时 · 摘要模式：{summary.mode}
+> 来源：{sources} · 共 {len(articles)} 条 · 常规取最近 48 小时，不足时依次扩至 72 小时和 7 天 · 摘要模式：{summary.mode}
 
 ## 今日概览
 

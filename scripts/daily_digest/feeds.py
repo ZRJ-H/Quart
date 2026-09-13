@@ -105,9 +105,31 @@ def deduplicate(articles: list[Article]) -> list[Article]:
     return result
 
 
-def select_recent(articles: list[Article], now: datetime, limit: int, window_hours: int = 48) -> list[Article]:
+def select_recent(
+    articles: list[Article],
+    now: datetime,
+    limit: int,
+    window_hours: int = 48,
+    *,
+    minimum: int | None = None,
+    fallback_window_hours: tuple[int, ...] = (72, 168),
+) -> list[Article]:
     if now.tzinfo is None:
         raise ValueError("now must be timezone-aware")
-    cutoff = now.astimezone(timezone.utc) - timedelta(hours=window_hours)
-    recent = [article for article in articles if cutoff <= article.published_at.astimezone(timezone.utc) <= now.astimezone(timezone.utc)]
-    return sorted(recent, key=lambda article: article.published_at, reverse=True)[:limit]
+    utc_now = now.astimezone(timezone.utc)
+
+    def select(window: int) -> list[Article]:
+        cutoff = utc_now - timedelta(hours=window)
+        recent = [article for article in articles if cutoff <= article.published_at.astimezone(timezone.utc) <= utc_now]
+        return sorted(recent, key=lambda article: article.published_at, reverse=True)[:limit]
+
+    selected = select(window_hours)
+    if minimum is None or len(selected) >= minimum:
+        return selected
+    for fallback_window in fallback_window_hours:
+        if fallback_window <= window_hours:
+            continue
+        selected = select(fallback_window)
+        if len(selected) >= minimum:
+            break
+    return selected

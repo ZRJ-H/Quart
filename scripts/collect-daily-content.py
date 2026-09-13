@@ -21,7 +21,7 @@ def main() -> None:
     parser.add_argument("--require-model", action="store_true")
     args = parser.parse_args()
     collectors = {
-        "AI科技动态": lambda now: collect_feed_category(AI_SOURCES, now, 8),
+        "AI科技动态": lambda now: collect_feed_category(AI_SOURCES, now, 8, minimum=3),
         "时政要闻": lambda now: collect_news_category(
             DOMESTIC_NEWS_SOURCES,
             INTERNATIONAL_NEWS_SOURCES,
@@ -29,7 +29,7 @@ def main() -> None:
             limit=8,
             domestic_minimum=5,
         ),
-        "AI论文日报": lambda now: collect_arxiv(now, 5),
+        "AI论文日报": lambda now: collect_arxiv(now, 5, minimum=3),
         "Hacker News": lambda now: collect_hacker_news(now, 8),
     }
     if args.no_model and args.require_model:

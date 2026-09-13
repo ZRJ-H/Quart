@@ -45,7 +45,7 @@ class DailyFeedTests(unittest.TestCase):
         self.assertEqual(atom[0].id, "2609.00001")
         self.assertEqual(atom[0].url, "https://arxiv.org/abs/2609.00001")
 
-    def test_select_recent_uses_48_hour_fallback_and_deduplicates(self):
+    def test_select_recent_keeps_48_hour_window_when_minimum_is_already_met(self):
         articles = [
             Article("today", "Today", "https://example.com/today", "Source", datetime(2026, 9, 11, 1, tzinfo=timezone.utc), "Today summary"),
             Article("duplicate", "Today duplicate", "https://example.com/today?utm_source=rss", "Source", datetime(2026, 9, 11, 0, tzinfo=timezone.utc), "Duplicate"),
@@ -54,7 +54,7 @@ class DailyFeedTests(unittest.TestCase):
         ]
         now = datetime(2026, 9, 11, 12, tzinfo=ZoneInfo("Asia/Shanghai"))
 
-        selected = select_recent(deduplicate(articles), now, limit=3)
+        selected = select_recent(deduplicate(articles), now, limit=3, minimum=2)
 
         self.assertEqual([article.id for article in selected], ["today", "yesterday"])
 
