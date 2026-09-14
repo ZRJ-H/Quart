@@ -50,13 +50,15 @@ test("watchdog has both UTC cron triggers and only non-secret configuration", as
 
 test("Cloudflare deployment securely synchronizes the optional watchdog token", async () => {
   const workflow = yaml.load(await readFile(workflowUrl, "utf8"))
-  const sync = workflow.jobs.build.steps.find(
-    (step) => step.name === "Sync Cloudflare search backend",
-  )
+  const steps = workflow.jobs.build.steps
+  const credentials = steps.find((step) => step.name === "Check Cloudflare credentials")
+  const sync = steps.find((step) => step.name === "Sync Cloudflare search backend")
 
+  assert.equal(credentials.env.CLOUDFLARE_API_TOKEN, "${{ secrets.CF_API_TOKEN }}")
+  assert.match(credentials.run, /configured=false.*GITHUB_OUTPUT/s)
+  assert.match(credentials.run, /::warning::CF_API_TOKEN/)
+  assert.equal(sync.if, "steps.cloudflare.outputs.configured == 'true'")
   assert.equal(sync.env.WATCHDOG_GITHUB_TOKEN, "${{ secrets.WATCHDOG_GITHUB_TOKEN }}")
-  assert.match(sync.run, /if \[ -z "\$CLOUDFLARE_API_TOKEN" \]/)
-  assert.match(sync.run, /::warning::CF_API_TOKEN/)
   assert.match(sync.run, /WATCHDOG_GITHUB_TOKEN/)
   assert.match(sync.run, /GITHUB_TOKEN/)
   assert.match(sync.run, /mktemp/)
