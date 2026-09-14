@@ -59,11 +59,35 @@ jobs:
       - name: Sync Cloudflare search backend
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          WATCHDOG_GITHUB_TOKEN: ${{ secrets.WATCHDOG_GITHUB_TOKEN }}
         run: |
           if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
             echo "CF_API_TOKEN is not configured; skip Cloudflare KV upload and Worker deploy."
             exit 0
           fi
+
+          WATCHDOG_SECRET_FILE=""
+          trap 'rm -f "$WATCHDOG_SECRET_FILE"' EXIT
+          if [ -z "$WATCHDOG_GITHUB_TOKEN" ]; then
+            echo "::warning::WATCHDOG_GITHUB_TOKEN is not configured; deploy Worker without updating its GitHub watchdog secret."
+          else
+            WATCHDOG_SECRET_FILE="$(mktemp)"
+            export WATCHDOG_SECRET_FILE
+            python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          secret_file = Path(os.environ["WATCHDOG_SECRET_FILE"])
+          secret_file.write_text(
+              json.dumps({"GITHUB_TOKEN": os.environ["WATCHDOG_GITHUB_TOKEN"]}),
+              encoding="utf-8",
+          )
+          secret_file.chmod(0o600)
+          PY
+            npx wrangler secret bulk "$WATCHDOG_SECRET_FILE" --config worker/wrangler.toml
+          fi
+
           cp /tmp/wiki-index-light.json worker/wiki-index-light.json
           cp /tmp/wiki-data-full.json worker/wiki-data-full.json
           cp /tmp/wiki-data.json worker/wiki-data.json
