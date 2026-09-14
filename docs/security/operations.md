@@ -19,7 +19,7 @@ The repository now defines these fail-closed controls:
 
 Cloudflare Rate Limiting is a burst control, not a global billing ceiling. The Durable Object is the authoritative daily paid-provider ceiling.
 
-## Read-only external snapshot
+## Pre-rollout external snapshot
 
 GitHub public API snapshot on 2026-09-14:
 
@@ -31,6 +31,22 @@ GitHub public API snapshot on 2026-09-14:
 - The daily collection workflow writes generated content directly to `main`; a blanket “pull request required” rule would break that automation unless an explicitly reviewed automation bypass or PR-based publishing flow is added first.
 
 Local Wrangler 4.131.2 dry-run successfully resolved `AI_BUDGET`, `WIKI_DATA`, `VECTORIZE`, `SEARCH_RATE_LIMITER`, all non-secret limits, and the Durable Object migration. Remote Cloudflare state was not readable in this workstation session because no `CLOUDFLARE_API_TOKEN` was available. This means repository configuration is ready, but the new Worker controls must not be described as active until an authorized deployment is verified.
+
+## Production rollout record
+
+Completed on 2026-09-14 (Asia/Shanghai):
+
+- Security release commit: `7f35b52ce1e83414234cff6381e4857990757d40`.
+- Initial push deployment: Actions run `34846322725`, successful; both the Cloudflare sync step and Pages deployment ran.
+- Daily collection compatibility check: Actions run `34846322679`, successful, including its normal fast-forward push to `main`.
+- Final content commit: `7739e057bb766fe4d8fa70c4aac9d11cd6bc1e9b`.
+- Final workflow-run deployment: Actions run `34846569585`, successful; Pages deployment `6437567214` published `https://zrj-h.github.io/Quart/`.
+- Current Worker version: `d1917cd2-b075-4797-bc06-753a1106719b`.
+- Rollback Worker version: `9d9bb744-4878-4226-89b9-f8b3833f77f2`.
+- Active repository Ruleset: `23305251` (`Protect main history`), targeting only `refs/heads/main` with `deletion` and `non_fast_forward` rules.
+- Production smoke checks passed for health without Origin, exact allowed Origin, denied foreign Origin, allowed preflight, removed `/api/debug`, rejected `debug` request fields, and static-site CSP without `unsafe-inline` or `unsafe-eval`.
+
+No separate staging Worker was deployed because this workstation had no direct Cloudflare credential or isolated staging bindings. The production release therefore used the reviewed GitHub workflow after local tests, dependency audits, a full Quartz build, and a Wrangler dry-run. Do not destructively exercise the production daily budget or force-push protection merely to prove a denial; verify those controls with an isolated staging namespace when one is available.
 
 ## Approval-gated production rollout
 
