@@ -238,6 +238,6 @@
 - **Session Log**: GitHub Actions 固定到已核验的完整提交 SHA，新增 CODEOWNERS；npm 完整及生产审计均由 16/13 个漏洞降至 0。
 - **Session Log**: JavaScript/TypeScript 测试 111/111、Python 测试 37/37、TypeScript 类型检查、本次改动文件格式检查、Quartz 生产构建和 Wrangler 干跑通过；全仓库 Prettier 仍有 2,583 个历史格式告警，与本次安全改动无关。
 - **Session Log**: 安全提交 `7f35b52` 已于 2026-09-14 部署；首次发布运行 `34846322725` 成功，日报采集运行 `34846322679` 成功并快进 `main` 到 `7739e057`，其后最终发布运行 `34846569585` 与 Pages deployment `6437567214` 成功。
-- **Session Log**: 线上 Worker 当前版本 `d1917cd2-b075-4797-bc06-753a1106719b`，安全发布前回滚目标 `9d9bb744-4878-4226-89b9-f8b3833f77f2`；合法/非法 Origin、预检、移除 `/api/debug`、非法 `debug` 字段和首页 CSP 冒烟验证通过。
+- **Session Log**: 安全内容发布对应 Worker 版本 `d1917cd2-b075-4797-bc06-753a1106719b`，安全发布前回滚目标 `9d9bb744-4878-4226-89b9-f8b3833f77f2`；合法/非法 Origin、预检、移除 `/api/debug`、非法 `debug` 字段和首页 CSP 冒烟验证通过。
 - **Decision Log**: GitHub Ruleset `23305251`（`Protect main history`）已启用，仅覆盖 `main` 并禁止删除与非快进更新；暂不要求 PR，以保持日报工作流的普通快进提交可用。
 - **待办**: 在 Cloudflare 控制台配置持续安全告警；若将来要求所有更新必须经 PR，应先把日报发布改造成自动 PR，不给现有工作流宽泛 bypass。

@@ -41,7 +41,7 @@ Completed on 2026-09-14 (Asia/Shanghai):
 - Daily collection compatibility check: Actions run `34846322679`, successful, including its normal fast-forward push to `main`.
 - Final content commit: `7739e057bb766fe4d8fa70c4aac9d11cd6bc1e9b`.
 - Final workflow-run deployment: Actions run `34846569585`, successful; Pages deployment `6437567214` published `https://zrj-h.github.io/Quart/`.
-- Current Worker version: `d1917cd2-b075-4797-bc06-753a1106719b`.
+- Security content rollout Worker version: `d1917cd2-b075-4797-bc06-753a1106719b`.
 - Rollback Worker version: `9d9bb744-4878-4226-89b9-f8b3833f77f2`.
 - Active repository Ruleset: `23305251` (`Protect main history`), targeting only `refs/heads/main` with `deletion` and `non_fast_forward` rules.
 - Production smoke checks passed for health without Origin, exact allowed Origin, denied foreign Origin, allowed preflight, removed `/api/debug`, rejected `debug` request fields, and static-site CSP without `unsafe-inline` or `unsafe-eval`.
