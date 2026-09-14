@@ -37,6 +37,7 @@ async function getWorkflowRuns(fetchImpl, env) {
     headers: {
       Accept: "application/vnd.github+json",
       Authorization: `Bearer ${env.GITHUB_TOKEN}`,
+      "User-Agent": "Quart-Daily-Watchdog",
       "X-GitHub-Api-Version": "2022-11-28",
     },
   })
@@ -60,9 +61,10 @@ async function dispatchWorkflow(fetchImpl, env) {
       Accept: "application/vnd.github+json",
       Authorization: `Bearer ${env.GITHUB_TOKEN}`,
       "Content-Type": "application/json",
+      "User-Agent": "Quart-Daily-Watchdog",
       "X-GitHub-Api-Version": "2022-11-28",
     },
-    body: JSON.stringify({ ref: "main" }),
+    body: JSON.stringify({ ref: env.GITHUB_BRANCH || "main" }),
   })
   if (response.status !== 204) throw new Error(`workflow dispatch failed: ${response.status}`)
 }

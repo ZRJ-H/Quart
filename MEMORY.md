@@ -225,4 +225,4 @@
 - 缺页时先读取 `Collect Daily Knowledge` 最近运行；只有没有活动任务时才补发一次 `workflow_dispatch`，避免重复采集。
 - 部署工作流安全同步 `WATCHDOG_GITHUB_TOKEN` 到 Worker 的 `GITHUB_TOKEN` secret；`/api/health` 的 `watchdog_configured` 可确认线上是否已加载该 secret。
 - 排障顺序：先看四个当天页面是否为 200，再看 GitHub Actions 是否已有 queued/in_progress 采集，再看 Worker `/api/health` 的 `watchdog_configured`，最后检查 `Sync Cloudflare search backend` 步骤和 Cloudflare Cron 日志。
-- 恢复方式：若 `watchdog_configured` 为 false，确认仓库同时存在 `CF_API_TOKEN` 与 `WATCHDOG_GITHUB_TOKEN`，然后手动运行 `Deploy Quartz to GitHub Pages` 重新同步；若 Pages 已发布而 Worker 部署失败，Pages 不受影响，可单独重跑部署工作流。
+- 恢复方式：若 `watchdog_configured` 为 false，确认仓库同时存在 `CF_API_TOKEN` 与 `WATCHDOG_GITHUB_TOKEN`，然后手动运行 `Deploy Quartz to GitHub Pages` 重新同步。仅 watchdog secret 同步失败会降级为 warning 并继续 Pages；原有 KV 上传或 Worker 部署失败仍可能阻断本轮新 Pages 发布，但既有线上页面不受影响。

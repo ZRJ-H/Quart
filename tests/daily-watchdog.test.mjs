@@ -58,6 +58,8 @@ test("returns collection-active when a page is missing and a run is queued", asy
   assert.equal(result.status, "collection-active")
   assert.deepEqual(result.missing, ["AI科技动态"])
   assert.equal(transport.calls.filter(({ init }) => init.method === "POST").length, 0)
+  const runsQuery = transport.calls.find(({ url }) => url.includes("api.github.com"))
+  assert.equal(runsQuery.init.headers["User-Agent"], "Quart-Daily-Watchdog")
 })
 
 test("dispatches the workflow once on main when a page is missing and no run is active", async () => {
@@ -93,6 +95,7 @@ test("dispatches the workflow once on main when a page is missing and no run is 
   )
   assert.deepEqual(JSON.parse(dispatch.init.body), { ref: "main" })
   assert.equal(dispatch.init.headers.Authorization, "Bearer test-token")
+  assert.equal(dispatch.init.headers["User-Agent"], "Quart-Daily-Watchdog")
 })
 
 test("fails closed when a page check returns a server error", async () => {

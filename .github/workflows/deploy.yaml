@@ -85,7 +85,9 @@ jobs:
           )
           secret_file.chmod(0o600)
           PY
-            npx wrangler secret bulk "$WATCHDOG_SECRET_FILE" --config worker/wrangler.toml
+            if ! npx wrangler secret bulk "$WATCHDOG_SECRET_FILE" --config worker/wrangler.toml; then
+              echo "::warning::Failed to sync WATCHDOG_GITHUB_TOKEN; existing Worker secret unchanged. Continue Pages deployment."
+            fi
           fi
 
           cp /tmp/wiki-index-light.json worker/wiki-index-light.json

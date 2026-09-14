@@ -60,6 +60,7 @@ test("Cloudflare deployment securely synchronizes the optional watchdog token", 
   assert.match(sync.run, /GITHUB_TOKEN/)
   assert.match(sync.run, /mktemp/)
   assert.match(sync.run, /trap .*rm -f/)
-  assert.match(sync.run, /wrangler secret bulk/)
+  assert.match(sync.run, /if ! npx wrangler secret bulk/)
+  assert.match(sync.run, /existing Worker secret unchanged/i)
   assert.match(sync.run, /warning/i)
 })
