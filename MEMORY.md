@@ -226,3 +226,12 @@
 - 部署工作流安全同步 `WATCHDOG_GITHUB_TOKEN` 到 Worker 的 `GITHUB_TOKEN` secret；`/api/health` 的 `watchdog_configured` 可确认线上是否已加载该 secret。
 - 排障顺序：先看四个当天页面是否为 200，再看 GitHub Actions 是否已有 queued/in_progress 采集，再看 Worker `/api/health` 的 `watchdog_configured`，最后检查 `Sync Cloudflare search backend` 步骤和 Cloudflare Cron 日志。
 - 恢复方式：若 `watchdog_configured` 为 false，确认仓库同时存在 `CF_API_TOKEN` 与 `WATCHDOG_GITHUB_TOKEN`，然后手动运行 `Deploy Quartz to GitHub Pages` 重新同步。仅 watchdog secret 同步失败会降级为 warning 并继续 Pages；原有 KV 上传或 Worker 部署失败仍可能阻断本轮新 Pages 发布，但既有线上页面不受影响。
+
+### [2026-09-14] 公开仓库安全加固
+
+- **Decision Log**: AI 搜索采用精确 Origin、8 KiB 请求体、500 字查询、10 次/60 秒边缘速率限制、Durable Object 每 UTC 日 100 次硬额度、48 KiB prompt 来源上下文、2,000 输出 token 和 30 秒上游超时；关键绑定缺失时失败关闭。
+- **Decision Log**: Quartz 保留受控原始 HTML 能力，但所有 `rehypeRaw` 路径随后执行统一净化；静态页面 CSP 使用内联脚本 SHA-256，不允许脚本 `unsafe-inline`/`unsafe-eval`。
+- **Session Log**: 删除公开 `/api/debug`，统一安全响应头与脱敏结构化日志，修复 AI 搜索、标准搜索和自动日报的存储型 XSS/Markdown URL 注入。
+- **Session Log**: GitHub Actions 固定到已核验的完整提交 SHA，新增 CODEOWNERS；npm 完整及生产审计均由 16/13 个漏洞降至 0。
+- **Session Log**: JavaScript/TypeScript 测试 111/111、Python 测试 37/37、TypeScript 类型检查、本次改动文件格式检查、Quartz 生产构建和 Wrangler 干跑通过；全仓库 Prettier 仍有 2,583 个历史格式告警，与本次安全改动无关。
+- **待办**: 取得 Cloudflare 只读/部署凭据后，先盘点当前版本并在 staging 验证，再授权生产部署与告警；GitHub `main` 当前未保护且无 Ruleset，启用 PR 强制前必须先解决每日采集工作流直接写入 `main` 的兼容问题。

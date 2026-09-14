@@ -1,7 +1,9 @@
 import assert from "node:assert/strict"
 import test from "node:test"
 
-import worker from "../worker/index.js"
+import "./cloudflare-runtime-register.mjs"
+
+const worker = (await import("../worker/index.js")).default
 
 const env = {
   GITHUB_TOKEN: "test-token",

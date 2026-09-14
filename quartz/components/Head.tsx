@@ -1,3 +1,4 @@
+import { createHash } from "crypto"
 import { i18n } from "../i18n"
 import { FullSlug, getFileExtension, joinSegments, pathToRoot } from "../util/path"
 import { CSSResourceToStyleElement, JSResourceToScriptElement } from "../util/resources"
@@ -21,6 +22,25 @@ export default (() => {
       unescapeHTML(fileData.description?.trim() ?? i18n(cfg.locale).propertyDefaults.description)
 
     const { css, js, additionalHead } = externalResources
+    const inlineScriptHashes = js
+      .filter((resource) => resource.contentType === "inline")
+      .map(
+        (resource) => `'sha256-${createHash("sha256").update(resource.script).digest("base64")}'`,
+      )
+    const contentSecurityPolicy = [
+      "default-src 'self'",
+      `script-src 'self' https://plausible.io https://cdnjs.cloudflare.com ${inlineScriptHashes.join(" ")}`,
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+      "img-src 'self' data: https:",
+      "font-src 'self' data: https://fonts.gstatic.com",
+      "connect-src 'self' https://plausible.io https://doge-wiki-search.ruijiezhou22.workers.dev",
+      "worker-src 'self' blob:",
+      "frame-src https:",
+      "object-src 'none'",
+      "base-uri 'self'",
+      "form-action 'self'",
+      "upgrade-insecure-requests",
+    ].join("; ")
 
     const url = new URL(`https://${cfg.baseUrl ?? "example.com"}`)
     const path = url.pathname as FullSlug
@@ -40,6 +60,7 @@ export default (() => {
       <head>
         <title>{title}</title>
         <meta charSet="utf-8" />
+        <meta httpEquiv="Content-Security-Policy" content={contentSecurityPolicy} />
         {cfg.theme.cdnCaching && cfg.theme.fontOrigin === "googleFonts" && (
           <>
             <link rel="preconnect" href="https://fonts.googleapis.com" />

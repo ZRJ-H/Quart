@@ -1,0 +1,8 @@
+# Security-critical deployment and rendering surfaces.
+/.github/workflows/ @ZRJ-H
+/worker/ @ZRJ-H
+/package.json @ZRJ-H
+/package-lock.json @ZRJ-H
+/quartz/components/Head.tsx @ZRJ-H
+/quartz/plugins/transformers/ @ZRJ-H
+/scripts/daily_digest/ @ZRJ-H

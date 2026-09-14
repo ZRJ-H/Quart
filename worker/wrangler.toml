@@ -1,6 +1,6 @@
 name = "doge-wiki-search"
 main = "index.js"
-compatibility_date = "2025-05-20"
+compatibility_date = "2026-09-14"
 account_id = "d3b7958872c07dfef0e812907804f275"
 
 [[kv_namespaces]]
@@ -11,12 +11,36 @@ id = "b58f4f4e48384627bcc36d76f7f0ae92"
 binding = "VECTORIZE"
 index_name = "wiki-embeddings"
 
+[[ratelimits]]
+name = "SEARCH_RATE_LIMITER"
+namespace_id = "1001"
+
+  [ratelimits.simple]
+  limit = 10
+  period = 60
+
+[durable_objects]
+bindings = [
+  { name = "AI_BUDGET", class_name = "DailyAiBudget" },
+]
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["DailyAiBudget"]
+
 [triggers]
 crons = ["0 3 * * *", "0 6 * * *"]
 
 [vars]
+ALLOWED_ORIGINS = "https://zrj-h.github.io"
+AI_DAILY_LIMIT = "100"
+UPSTREAM_TIMEOUT_MS = "30000"
 GITHUB_OWNER = "ZRJ-H"
 GITHUB_REPO = "Quart"
 GITHUB_BRANCH = "main"
 GITHUB_WORKFLOW = "collect-github-trending.yaml"
 SITE_BASE_URL = "https://zrj-h.github.io/Quart"
+
+[observability]
+enabled = true
+head_sampling_rate = 1

@@ -1,6 +1,8 @@
 import { QuartzTransformerPlugin } from "../types"
 import rehypeRaw from "rehype-raw"
+import rehypeSanitize from "rehype-sanitize"
 import { PluggableList } from "unified"
+import { quartzSanitizeSchema, removeUnsafeMediaEmbeds } from "./sanitize"
 
 export interface Options {
   /** Replace {{ relref }} with quartz wikilinks []() */
@@ -105,7 +107,11 @@ export const OxHugoFlavouredMarkdown: QuartzTransformerPlugin<Partial<Options>> 
       return src
     },
     htmlPlugins() {
-      const plugins: PluggableList = [rehypeRaw]
+      const plugins: PluggableList = [
+        rehypeRaw,
+        removeUnsafeMediaEmbeds,
+        [rehypeSanitize, quartzSanitizeSchema],
+      ]
       return plugins
     },
   }

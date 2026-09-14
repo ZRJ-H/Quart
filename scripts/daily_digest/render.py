@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 from datetime import date
+from html import escape
+from urllib.parse import quote, urlsplit, urlunsplit
 
 from .models import Article
 from .summarize import DigestSummary, ItemSummary
@@ -14,59 +16,97 @@ TAGS = {
 }
 
 
+def _markdown_text(value: object) -> str:
+    text = escape(str(value), quote=False).replace("\r", " ").replace("\n", " ")
+    for character in ("\\", "[", "]", "*", "_", "(", ")"):
+        text = text.replace(character, f"\\{character}")
+    return text
+
+
+def _markdown_url(value: object) -> str:
+    raw = str(value).strip().replace("\r", "").replace("\n", "")
+    try:
+        parsed = urlsplit(raw)
+    except ValueError:
+        return "about:blank"
+    if parsed.scheme.lower() not in {"http", "https"} or not parsed.netloc:
+        return "about:blank"
+    try:
+        hostname = parsed.hostname
+        parsed.port
+    except ValueError:
+        return "about:blank"
+    if (
+        not hostname
+        or parsed.username is not None
+        or parsed.password is not None
+        or any(character.isspace() for character in parsed.netloc)
+        or any(character in parsed.netloc for character in '<>"\'\\')
+    ):
+        return "about:blank"
+
+    path = quote(parsed.path, safe="/:@-._~!$&'()*+,;=[]")
+    query = quote(parsed.query, safe="/?:@-._~!$&'()*+,;=[]")
+    fragment = quote(parsed.fragment, safe="/?:@-._~!$&'()*+,;=[]")
+    safe_url = urlunsplit((parsed.scheme.lower(), parsed.netloc, path, query, fragment))
+    for character in ("\\", "[", "]", "(", ")"):
+        safe_url = safe_url.replace(character, f"\\{character}")
+    return safe_url
+
+
 def _details(category: str, article: Article, item: ItemSummary, detailed: bool) -> str:
     lines = [
-        f"### [{item.title_zh}]({article.url})",
+        f"### [{_markdown_text(item.title_zh)}]({_markdown_url(article.url)})",
         "",
-        f"- **原标题**：{article.title}",
-        f"- **来源与时间**：{article.source} · {article.published_at.isoformat()}",
+        f"- **原标题**：{_markdown_text(article.title)}",
+        f"- **来源与时间**：{_markdown_text(article.source)} · {article.published_at.isoformat()}",
     ]
     if category == "Hacker News":
         lines.extend(
             [
                 f"- **社区热度**：⭐ {article.score} · 💬 {article.comments}",
-                f"- **讨论链接**：[Hacker News]({article.discussion_url})",
-                f"- **社区讨论焦点**：{item.discussion_focus}",
+                f"- **讨论链接**：[Hacker News]({_markdown_url(article.discussion_url)})",
+                f"- **社区讨论焦点**：{_markdown_text(item.discussion_focus)}",
             ]
         )
     if category == "AI论文日报":
-        authors = "、".join(article.extra.get("authors", [])) or "来源未列出"
-        categories = "、".join(article.extra.get("categories", [])) or "来源未列出"
+        authors = "、".join(_markdown_text(value) for value in article.extra.get("authors", [])) or "来源未列出"
+        categories = "、".join(_markdown_text(value) for value in article.extra.get("categories", [])) or "来源未列出"
         lines.append(f"- **作者/分类**：{authors} · {categories}")
         if detailed:
             lines.extend(
                 [
-                    f"- **研究问题**：{item.research_problem}",
-                    f"- **方法**：{item.method}",
-                    f"- **实验结果**：{item.results}",
-                    f"- **局限**：{item.limitations}",
-                    f"- **工程价值**：{item.engineering_value}",
-                    f"- **价值点**：{item.value}",
+                    f"- **研究问题**：{_markdown_text(item.research_problem)}",
+                    f"- **方法**：{_markdown_text(item.method)}",
+                    f"- **实验结果**：{_markdown_text(item.results)}",
+                    f"- **局限**：{_markdown_text(item.limitations)}",
+                    f"- **工程价值**：{_markdown_text(item.engineering_value)}",
+                    f"- **价值点**：{_markdown_text(item.value)}",
                 ]
             )
         else:
-            lines.extend([f"- **核心摘要**：{item.summary}", f"- **价值点**：{item.value}"])
+            lines.extend([f"- **核心摘要**：{_markdown_text(item.summary)}", f"- **价值点**：{_markdown_text(item.value)}"])
         return "\n".join(lines)
-    lines.append(f"- **核心摘要**：{item.summary}")
+    lines.append(f"- **核心摘要**：{_markdown_text(item.summary)}")
     if detailed:
         lines.extend(
             [
-                f"- **背景**：{item.background}",
-                f"- **影响**：{item.impact}",
-                f"- **后续观察**：{item.watch}",
+                f"- **背景**：{_markdown_text(item.background)}",
+                f"- **影响**：{_markdown_text(item.impact)}",
+                f"- **后续观察**：{_markdown_text(item.watch)}",
             ]
         )
-    lines.append(f"- **价值点**：{item.value}")
+    lines.append(f"- **价值点**：{_markdown_text(item.value)}")
     return "\n".join(lines)
 
 
 def render_digest(category: str, run_date: date, articles: list[Article], summary: DigestSummary) -> str:
-    sources = "、".join(dict.fromkeys(article.source for article in articles))
+    sources = "、".join(dict.fromkeys(_markdown_text(article.source) for article in articles))
     deep_count = min(3, len(articles))
     deep = "\n\n".join(_details(category, articles[index], summary.items[index], True) for index in range(deep_count))
     quick = "\n\n".join(_details(category, articles[index], summary.items[index], False) for index in range(deep_count, len(articles)))
     trends = "\n\n".join(
-        f"### 趋势 {index}\n\n- **事实依据**：{trend.fact}\n- **编辑判断**：{trend.inference}"
+        f"### 趋势 {index}\n\n- **事实依据**：{_markdown_text(trend.fact)}\n- **编辑判断**：{_markdown_text(trend.inference)}"
         for index, trend in enumerate(summary.trends, start=1)
     )
     quick_section = f"\n\n## 快速浏览\n\n{quick}" if quick else ""

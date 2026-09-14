@@ -24,13 +24,25 @@ test("deployment uses current official Pages actions and a complete artifact", a
   const use = (name) => steps.find((step) => step.name === name)?.uses
   const run = (name) => steps.find((step) => step.name === name)?.run || ""
 
-  assert.equal(use("Checkout repository"), "actions/checkout@v6")
-  assert.equal(use("Setup Node.js"), "actions/setup-node@v7")
-  assert.equal(use("Setup Python"), "actions/setup-python@v7")
-  assert.equal(use("Configure GitHub Pages"), "actions/configure-pages@v5")
-  assert.equal(use("Upload Pages artifact"), "actions/upload-pages-artifact@v4")
+  assert.equal(
+    use("Checkout repository"),
+    "actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+  )
+  assert.equal(use("Setup Node.js"), "actions/setup-node@820762786026740c76f36085b0efc47a31fe5020")
+  assert.equal(use("Setup Python"), "actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97")
+  assert.equal(
+    use("Configure GitHub Pages"),
+    "actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b",
+  )
+  assert.equal(
+    use("Upload Pages artifact"),
+    "actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b",
+  )
   assert.match(run("Prepare Pages artifact"), /\.nojekyll/)
-  assert.equal(workflow.jobs.deploy.steps[0].uses, "actions/deploy-pages@v4")
+  assert.equal(
+    workflow.jobs.deploy.steps[0].uses,
+    "actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e",
+  )
 })
 
 test("watchdog has both UTC cron triggers and only non-secret configuration", async () => {
@@ -40,6 +52,9 @@ test("watchdog has both UTC cron triggers and only non-secret configuration", as
   assert.deepEqual(
     { ...config.vars },
     {
+      ALLOWED_ORIGINS: "https://zrj-h.github.io",
+      AI_DAILY_LIMIT: "100",
+      UPSTREAM_TIMEOUT_MS: "30000",
       GITHUB_OWNER: "ZRJ-H",
       GITHUB_REPO: "Quart",
       GITHUB_BRANCH: "main",

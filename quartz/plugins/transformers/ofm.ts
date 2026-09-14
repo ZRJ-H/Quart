@@ -11,6 +11,7 @@ import {
 import { Element, Literal, Root as HtmlRoot } from "hast"
 import { ReplaceFunction, findAndReplace as mdastFindReplace } from "mdast-util-find-and-replace"
 import rehypeRaw from "rehype-raw"
+import rehypeSanitize from "rehype-sanitize"
 import { SKIP, visit } from "unist-util-visit"
 import path from "path"
 import { splitAnchor } from "../../util/path"
@@ -26,6 +27,7 @@ import { FilePath, pathToRoot, slugTag, slugifyFilePath } from "../../util/path"
 import { toHast } from "mdast-util-to-hast"
 import { toHtml } from "hast-util-to-html"
 import { capitalize } from "../../util/lang"
+import { quartzSanitizeSchema, removeUnsafeMediaEmbeds } from "./sanitize"
 import { PluggableList } from "unified"
 
 export interface Options {
@@ -541,7 +543,11 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
       return plugins
     },
     htmlPlugins() {
-      const plugins: PluggableList = [rehypeRaw]
+      const plugins: PluggableList = [
+        rehypeRaw,
+        removeUnsafeMediaEmbeds,
+        [rehypeSanitize, quartzSanitizeSchema],
+      ]
 
       if (opts.parseBlockReferences) {
         plugins.push(() => {

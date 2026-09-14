@@ -68,11 +68,11 @@
     list.innerHTML = suggestions
       .map(
         (s) => `
-      <div class="suggestion-item" data-name="${s.name}">
+      <div class="suggestion-item" data-name="${escapeHtml(s.name)}">
         <span class="suggestion-icon">${s.icon}</span>
         <div class="suggestion-content">
-          <div class="suggestion-name">${s.name}</div>
-          <div class="suggestion-category">${s.category}</div>
+          <div class="suggestion-name">${escapeHtml(s.name)}</div>
+          <div class="suggestion-category">${escapeHtml(s.category)}</div>
         </div>
       </div>
     `,
@@ -168,11 +168,22 @@
   }
 
   const CAT_LABELS = {
-    'ai-news': 'AI动态', 'daily-news': '时政', 'github-trending': 'GitHub',
-    'hn-daily': 'HN', 'arxiv-daily': '论文', 'entities': '实体',
-    'source': '来源', 'sources': '来源', 'ai-agents': 'Agent', 'projects': '项目',
-    'events': '事件', 'companies': '公司', 'people': '人物', 'technologies': '技术',
-    'technical': '技术', 'concepts': '概念',
+    "ai-news": "AI动态",
+    "daily-news": "时政",
+    "github-trending": "GitHub",
+    "hn-daily": "HN",
+    "arxiv-daily": "论文",
+    entities: "实体",
+    source: "来源",
+    sources: "来源",
+    "ai-agents": "Agent",
+    projects: "项目",
+    events: "事件",
+    companies: "公司",
+    people: "人物",
+    technologies: "技术",
+    technical: "技术",
+    concepts: "概念",
   }
 
   function svgIcon(name) {
@@ -185,26 +196,49 @@
   }
 
   function convertMarkdownTables(text) {
-    const lines = text.split('\n')
+    const lines = text.split("\n")
     const result = []
     let i = 0
     while (i < lines.length) {
       const line = lines[i]
-      if (i + 1 < lines.length &&
-          line.trim().startsWith('|') && line.trim().endsWith('|') &&
-          /^\|[\s|:\-]+\|$/.test(lines[i + 1].trim())) {
+      if (
+        i + 1 < lines.length &&
+        line.trim().startsWith("|") &&
+        line.trim().endsWith("|") &&
+        /^\|[\s|:\-]+\|$/.test(lines[i + 1].trim())
+      ) {
         const tableLines = []
-        while (i < lines.length && lines[i].trim().startsWith('|')) {
+        while (i < lines.length && lines[i].trim().startsWith("|")) {
           tableLines.push(lines[i])
           i++
         }
-        const sepIdx = tableLines.findIndex(l => /^\|[\s|:\-]+\|$/.test(l.trim()))
+        const sepIdx = tableLines.findIndex((l) => /^\|[\s|:\-]+\|$/.test(l.trim()))
         if (sepIdx >= 0) {
-          const parseRow = (l) => l.trim().replace(/^\||\|$/g, '').split('|').map(c => c.trim())
-          const thead = tableLines.slice(0, sepIdx)
-            .map(l => `<tr>${parseRow(l).map(h => `<th>${h}</th>`).join('')}</tr>`).join('')
-          const tbody = tableLines.slice(sepIdx + 1).filter(l => l.trim())
-            .map(l => `<tr>${parseRow(l).map(c => `<td>${c}</td>`).join('')}</tr>`).join('')
+          const parseRow = (l) =>
+            l
+              .trim()
+              .replace(/^\||\|$/g, "")
+              .split("|")
+              .map((c) => c.trim())
+          const thead = tableLines
+            .slice(0, sepIdx)
+            .map(
+              (l) =>
+                `<tr>${parseRow(l)
+                  .map((h) => `<th>${h}</th>`)
+                  .join("")}</tr>`,
+            )
+            .join("")
+          const tbody = tableLines
+            .slice(sepIdx + 1)
+            .filter((l) => l.trim())
+            .map(
+              (l) =>
+                `<tr>${parseRow(l)
+                  .map((c) => `<td>${c}</td>`)
+                  .join("")}</tr>`,
+            )
+            .join("")
           result.push(`<table><thead>${thead}</thead><tbody>${tbody}</tbody></table>`)
         } else {
           result.push(...tableLines)
@@ -214,7 +248,7 @@
         i++
       }
     }
-    return result.join('\n')
+    return result.join("\n")
   }
 
   function simpleMarkdown(text) {
@@ -234,8 +268,8 @@
     html = html.replace(/^\d+\.\s+(.+)$/gm, "<li>$1</li>")
     html = html.replace(/\n\n/g, "</p><p>")
     html = "<p>" + html + "</p>"
-    html = html.replace(/<p>(\s*<(?:table|h[1-6]|ul|ol))/g, '$1')
-    html = html.replace(/(<\/(?:table|h[1-6]|ul|ol)>\s*)<\/p>/g, '$1')
+    html = html.replace(/<p>(\s*<(?:table|h[1-6]|ul|ol))/g, "$1")
+    html = html.replace(/(<\/(?:table|h[1-6]|ul|ol)>\s*)<\/p>/g, "$1")
     html = html.replace(/<p>\s*<\/p>/g, "")
     html = html.replace(/<p><\/p>/g, "")
     return html
@@ -255,64 +289,89 @@
     if (!sourceList || !sourceList.length) return ""
 
     function getBase() {
-      const p = window.location.pathname.split('/')
-      return window.location.origin + '/' + (p[1] || '') + '/'
+      const p = window.location.pathname.split("/")
+      return window.location.origin + "/" + (p[1] || "") + "/"
     }
 
     function buildCardUrl(s) {
       const base = getBase()
       if (s.source_file) {
-        return base + s.source_file.split('/').map(encodeURIComponent).join('/')
+        return base + s.source_file.split("/").map(encodeURIComponent).join("/")
       }
-      if (s.id && s.id.startsWith('daily/')) {
+      if (s.id && s.id.startsWith("daily/")) {
         // Only link if within 7 days — older pages are filtered from build
         if (s.last_updated) {
           const age = (Date.now() - new Date(s.last_updated)) / 86400000
           if (age > 7) return null
         }
-        const path = s.id.slice(6).split('#')[0]
-        return base + path.split('/').map(encodeURIComponent).join('/')
+        const path = s.id.slice(6).split("#")[0]
+        return base + path.split("/").map(encodeURIComponent).join("/")
       }
       // wiki entries (entities/concepts/sources) have no Quartz pages yet
       return null
     }
 
     function extractSummary(raw) {
-      if (!raw) return ''
+      if (!raw) return ""
       var m = raw.match(/摘要[：:]\s*([^\n]+)/)
       if (m) return m[1].trim()
       // Skip header-only lines (≤4 chars like "定义" "来源" "基本信息")
-      var flines = raw.split('\n').map(function(l) {
-        return l
-          .replace(/^[-#*>\s]+/, '')            // strip markdown prefix
-          .replace(/^-\s+\S+[：:]\s*/, '')       // strip "- label:" prefix
-          .replace(/^[一-鿿]{1,4}[：:]\s*/, '') // strip "类型:" "来源:" style labels
-          .trim()
-      }).filter(function(l) { return l.length > 4 })
-      return flines.length ? flines[0] : ''
+      var flines = raw
+        .split("\n")
+        .map(function (l) {
+          return l
+            .replace(/^[-#*>\s]+/, "") // strip markdown prefix
+            .replace(/^-\s+\S+[：:]\s*/, "") // strip "- label:" prefix
+            .replace(/^[一-鿿]{1,4}[：:]\s*/, "") // strip "类型:" "来源:" style labels
+            .trim()
+        })
+        .filter(function (l) {
+          return l.length > 4
+        })
+      return flines.length ? flines[0] : ""
     }
 
-    const cards = sourceList.map(s => {
-      const url = buildCardUrl(s)
-      const summary = extractSummary(s.summary)
-      const catLabel = CAT_LABELS[s.category] || s.category
-      const footer = '<div class="source-card-footer">'
-        + '<span class="source-cat-chip">' + escapeHtml(catLabel) + '</span>'
-        + (s.last_updated ? '<span class="source-card-date">' + escapeHtml(s.last_updated) + '</span>' : '')
-        + (url ? '' : '<span class="source-card-archived">已归档</span>')
-        + '</div>'
-      const body = '<div class="source-card-title">' + escapeHtml(s.name) + '</div>'
-        + (summary ? '<div class="source-card-excerpt">' + escapeHtml(summary) + '</div>' : '')
-        + footer
-      return url
-        ? '<a class="source-card" href="' + escapeHtml(url) + '" target="_blank" rel="noopener">' + body + '</a>'
-        : '<div class="source-card source-card--archived">' + body + '</div>'
-    }).join('')
+    const cards = sourceList
+      .map((s) => {
+        const url = buildCardUrl(s)
+        const summary = extractSummary(s.summary)
+        const catLabel = CAT_LABELS[s.category] || s.category
+        const footer =
+          '<div class="source-card-footer">' +
+          '<span class="source-cat-chip">' +
+          escapeHtml(catLabel) +
+          "</span>" +
+          (s.last_updated
+            ? '<span class="source-card-date">' + escapeHtml(s.last_updated) + "</span>"
+            : "") +
+          (url ? "" : '<span class="source-card-archived">已归档</span>') +
+          "</div>"
+        const body =
+          '<div class="source-card-title">' +
+          escapeHtml(s.name) +
+          "</div>" +
+          (summary ? '<div class="source-card-excerpt">' + escapeHtml(summary) + "</div>" : "") +
+          footer
+        return url
+          ? '<a class="source-card" href="' +
+              escapeHtml(url) +
+              '" target="_blank" rel="noopener">' +
+              body +
+              "</a>"
+          : '<div class="source-card source-card--archived">' + body + "</div>"
+      })
+      .join("")
 
-    return '<h3>📚 参考来源 (' + sourceList.length + ')</h3><div class="source-card-list">' + cards + '</div>'
+    return (
+      "<h3>📚 参考来源 (" +
+      sourceList.length +
+      ')</h3><div class="source-card-list">' +
+      cards +
+      "</div>"
+    )
   }
 
-    function renderEmptyState() {
+  function renderEmptyState() {
     let picks = []
     if (suggestionsData && suggestionsData.length) {
       picks = [...suggestionsData]
@@ -376,7 +435,10 @@
 
       const reader = resp.body.getReader()
       const decoder = new TextDecoder()
-      let buffer = '', answerText = '', renderPending = false, rafId = null
+      let buffer = "",
+        answerText = "",
+        renderPending = false,
+        rafId = null
 
       function scheduleRender() {
         if (renderPending) return
@@ -394,43 +456,50 @@
         const { done, value } = await reader.read()
         if (done) break
         buffer += decoder.decode(value, { stream: true })
-        const lines = buffer.split('\n')
+        const lines = buffer.split("\n")
         buffer = lines.pop()
 
         for (const line of lines) {
-          if (!line.startsWith('data: ')) continue
+          if (!line.startsWith("data: ")) continue
           try {
             const event = JSON.parse(line.slice(6).trim())
-            if (event.type === 'sources') {
+            if (event.type === "sources") {
               if (event.sources && event.sources.length > 0) {
                 sources.innerHTML = renderSourceCards(event.sources)
               } else {
                 sources.innerHTML = renderEmptyState()
                 bindEmptySuggestions()
               }
-              results.style.display = 'grid'
+              results.style.display = "grid"
               answer.innerHTML = '<p class="stream-generating">正在生成回答...</p>'
-            } else if (event.type === 'chunk') {
+            } else if (event.type === "chunk") {
               answerText += event.text
               scheduleRender()
-            } else if (event.type === 'done') {
-              if (rafId) { cancelAnimationFrame(rafId); rafId = null }
+            } else if (event.type === "done") {
+              if (rafId) {
+                cancelAnimationFrame(rafId)
+                rafId = null
+              }
               renderPending = false
               answer.innerHTML = simpleMarkdown(answerText)
               addSearchHistory(query)
-            } else if (event.type === 'error') {
+            } else if (event.type === "error") {
               answer.innerHTML = `<div class="ai-error">${escapeHtml(event.message)}</div>`
             }
           } catch {}
         }
       }
 
-      if (answerText && !answer.querySelector('.ai-error') && !answer.querySelector('.stream-cursor')) {
+      if (
+        answerText &&
+        !answer.querySelector(".ai-error") &&
+        !answer.querySelector(".stream-cursor")
+      ) {
         answer.innerHTML = simpleMarkdown(answerText)
       }
-
     } catch (err) {
-      if (err.name === 'AbortError') return
+      if (err.name === "AbortError") return
+      err.message = escapeHtml(err.message)
       status.textContent = ""
       answer.innerHTML = `<div class="ai-error">请求失败: ${err.message}</div>`
       results.style.display = "grid"
@@ -535,7 +604,7 @@
   function renderHistory() {
     const container = document.querySelector(".search-history")
     if (!container) return
-    if (container.closest('.sidebar')) return // shown in modal instead
+    if (container.closest(".sidebar")) return // shown in modal instead
 
     const history = getSearchHistory()
     const list = container.querySelector(".history-list")
@@ -553,10 +622,10 @@
       .map((item) => {
         const time = formatTime(item.timestamp)
         return `
-        <div class="history-item" data-query="${item.query}">
+        <div class="history-item" data-query="${escapeHtml(item.query)}">
           <span class="history-icon">🔍</span>
           <div class="history-content">
-            <div class="history-query">${item.query}</div>
+            <div class="history-query">${escapeHtml(item.query)}</div>
             <div class="history-time">${time}</div>
           </div>
         </div>
@@ -583,7 +652,7 @@
 
   const _originalDoSearch = doSearch
   doSearch = async function () {
-    if (input.hasAttribute('readonly')) return // sidebar mode — modal handles it
+    if (input.hasAttribute("readonly")) return // sidebar mode — modal handles it
     const query = input.value.trim()
     if (!query || query.length < 2) return
     await _originalDoSearch()
@@ -602,10 +671,10 @@
   // ===== Spotlight Modal =====
 
   function createModalDOM() {
-    const backdrop = document.createElement('div')
-    backdrop.id = 'search-modal-backdrop'
-    backdrop.className = 'search-modal-backdrop'
-    backdrop.style.display = 'none'
+    const backdrop = document.createElement("div")
+    backdrop.id = "search-modal-backdrop"
+    backdrop.className = "search-modal-backdrop"
+    backdrop.style.display = "none"
     backdrop.innerHTML = `
       <div class="search-modal-panel" role="dialog" aria-label="知识库搜索">
         <div class="search-modal-input-row">
@@ -641,7 +710,7 @@
   let _modal = null
   function getModal() {
     if (!_modal || !_modal.isConnected) {
-      _modal = document.getElementById('search-modal-backdrop') || createModalDOM()
+      _modal = document.getElementById("search-modal-backdrop") || createModalDOM()
       bindModalControls(_modal)
     }
     return _modal
@@ -649,32 +718,35 @@
 
   function openModal() {
     const modal = getModal()
-    modal.style.display = 'flex'
-    document.body.style.overflow = 'hidden'
-    const modalInput = document.getElementById('modal-search-input')
+    modal.style.display = "flex"
+    document.body.style.overflow = "hidden"
+    const modalInput = document.getElementById("modal-search-input")
     modalInput.focus()
     renderModalHistory()
   }
 
   function closeModal() {
     const modal = getModal()
-    modal.style.display = 'none'
-    document.body.style.overflow = ''
+    modal.style.display = "none"
+    document.body.style.overflow = ""
   }
 
   function renderModalHistory() {
     const history = getSearchHistory()
-    const container = document.getElementById('modal-search-history')
-    const list = container ? container.querySelector('.modal-history-list') : null
+    const container = document.getElementById("modal-search-history")
+    const list = container ? container.querySelector(".modal-history-list") : null
     if (!container || !list) return
 
     if (history.length === 0) {
-      container.style.display = 'none'
+      container.style.display = "none"
       return
     }
 
-    container.style.display = 'block'
-    list.innerHTML = history.slice(0, 5).map(item => `
+    container.style.display = "block"
+    list.innerHTML = history
+      .slice(0, 5)
+      .map(
+        (item) => `
       <div class="history-item" data-query="${escapeHtml(item.query)}">
         <span class="history-icon">🔍</span>
         <div class="history-content">
@@ -682,36 +754,44 @@
           <div class="history-time">${formatTime(item.timestamp)}</div>
         </div>
       </div>
-    `).join('')
+    `,
+      )
+      .join("")
 
-    list.querySelectorAll('.history-item').forEach(item => {
-      item.addEventListener('click', () => {
-        const mi = document.getElementById('modal-search-input')
-        if (mi) { mi.value = item.dataset.query; doModalSearch() }
+    list.querySelectorAll(".history-item").forEach((item) => {
+      item.addEventListener("click", () => {
+        const mi = document.getElementById("modal-search-input")
+        if (mi) {
+          mi.value = item.dataset.query
+          doModalSearch()
+        }
       })
     })
 
-    const clearBtn = container.querySelector('.modal-history-clear')
+    const clearBtn = container.querySelector(".modal-history-clear")
     if (clearBtn) {
-      clearBtn.onclick = () => { clearSearchHistory(); renderModalHistory() }
+      clearBtn.onclick = () => {
+        clearSearchHistory()
+        renderModalHistory()
+      }
     }
   }
 
   let _modalAbort = null
 
   async function doModalSearch() {
-    const mi = document.getElementById('modal-search-input')
-    const mb = document.getElementById('modal-search-btn')
-    const ms = document.getElementById('modal-search-status')
-    const mr = document.getElementById('modal-search-results')
-    const ma = document.getElementById('modal-ai-answer')
-    const mc = document.getElementById('modal-ai-sources')
-    const mh = document.getElementById('modal-search-history')
+    const mi = document.getElementById("modal-search-input")
+    const mb = document.getElementById("modal-search-btn")
+    const ms = document.getElementById("modal-search-status")
+    const mr = document.getElementById("modal-search-results")
+    const ma = document.getElementById("modal-ai-answer")
+    const mc = document.getElementById("modal-ai-sources")
+    const mh = document.getElementById("modal-search-history")
     if (!mi) return
 
     const query = mi.value.trim()
     if (!query || query.length < 2) {
-      if (ms) ms.textContent = '请至少输入2个字'
+      if (ms) ms.textContent = "请至少输入2个字"
       return
     }
 
@@ -719,76 +799,88 @@
     _modalAbort = new AbortController()
 
     if (mb) mb.disabled = true
-    if (ms) ms.textContent = '正在检索知识库...'
-    if (mr) mr.style.display = 'none'
-    if (mh) mh.style.display = 'none'
-    if (ma) ma.innerHTML = ''
-    if (mc) mc.innerHTML = ''
+    if (ms) ms.textContent = "正在检索知识库..."
+    if (mr) mr.style.display = "none"
+    if (mh) mh.style.display = "none"
+    if (ma) ma.innerHTML = ""
+    if (mc) mc.innerHTML = ""
 
     try {
       const resp = await fetch(`${workerUrl}/api/search`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ query }),
         signal: _modalAbort.signal,
       })
 
       if (!resp.ok) {
-        if (ms) ms.textContent = ''
+        if (ms) ms.textContent = ""
         if (ma) ma.innerHTML = `<div class="ai-error">请求失败: ${resp.status}</div>`
-        if (mr) mr.style.display = 'grid'
+        if (mr) mr.style.display = "grid"
         return
       }
 
       const reader = resp.body.getReader()
       const decoder = new TextDecoder()
-      let buffer = '', answerText = '', renderPending = false, rafId = null
+      let buffer = "",
+        answerText = "",
+        renderPending = false,
+        rafId = null
 
       function scheduleRender() {
         if (renderPending) return
         renderPending = true
         rafId = requestAnimationFrame(() => {
           if (ma) ma.innerHTML = simpleMarkdown(answerText) + '<span class="stream-cursor">▌</span>'
-          renderPending = false; rafId = null
+          renderPending = false
+          rafId = null
         })
       }
 
-      if (ms) ms.textContent = ''
+      if (ms) ms.textContent = ""
 
       while (true) {
         const { done, value } = await reader.read()
         if (done) break
         buffer += decoder.decode(value, { stream: true })
-        const lines = buffer.split('\n'); buffer = lines.pop()
+        const lines = buffer.split("\n")
+        buffer = lines.pop()
         for (const line of lines) {
-          if (!line.startsWith('data: ')) continue
+          if (!line.startsWith("data: ")) continue
           try {
             const event = JSON.parse(line.slice(6).trim())
-            if (event.type === 'sources') {
-              if (mc) mc.innerHTML = event.sources && event.sources.length > 0
-                ? renderSourceCards(event.sources)
-                : renderEmptyState()
-              if (mr) mr.style.display = 'grid'
+            if (event.type === "sources") {
+              if (mc)
+                mc.innerHTML =
+                  event.sources && event.sources.length > 0
+                    ? renderSourceCards(event.sources)
+                    : renderEmptyState()
+              if (mr) mr.style.display = "grid"
               if (ma) ma.innerHTML = '<p class="stream-generating">正在生成回答...</p>'
-            } else if (event.type === 'chunk') {
-              answerText += event.text; scheduleRender()
-            } else if (event.type === 'done') {
-              if (rafId) { cancelAnimationFrame(rafId); rafId = null }
+            } else if (event.type === "chunk") {
+              answerText += event.text
+              scheduleRender()
+            } else if (event.type === "done") {
+              if (rafId) {
+                cancelAnimationFrame(rafId)
+                rafId = null
+              }
               renderPending = false
               if (ma) ma.innerHTML = simpleMarkdown(answerText)
               addSearchHistory(query)
               renderModalHistory()
-            } else if (event.type === 'error') {
+            } else if (event.type === "error") {
               if (ma) ma.innerHTML = `<div class="ai-error">${escapeHtml(event.message)}</div>`
             }
           } catch {}
         }
       }
     } catch (err) {
-      if (err.name === 'AbortError') return
-      if (ms) ms.textContent = ''
+      if (err.name === "AbortError") return
+      err.message = escapeHtml(err.message)
+      if (ms) ms.textContent = ""
       if (ma) ma.innerHTML = `<div class="ai-error">请求失败: ${err.message}</div>`
-      if (mr) mr.style.display = 'grid'
+      if (mr) mr.style.display = "grid"
     } finally {
       if (mb) mb.disabled = false
       _modalAbort = null
@@ -796,30 +888,32 @@
   }
 
   function bindModalControls(modal) {
-    if (modal.dataset.controlsBound === 'true') return
-    modal.dataset.controlsBound = 'true'
+    if (modal.dataset.controlsBound === "true") return
+    modal.dataset.controlsBound = "true"
 
-    modal.addEventListener('click', e => { if (e.target === modal) closeModal() })
-    modal.querySelector('#modal-close-btn').addEventListener('click', closeModal)
-    modal.querySelector('#modal-search-btn').addEventListener('click', doModalSearch)
-    modal.querySelector('#modal-search-input').addEventListener('keydown', e => {
-      if (e.key === 'Enter') doModalSearch()
-      if (e.key === 'Escape') closeModal()
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) closeModal()
+    })
+    modal.querySelector("#modal-close-btn").addEventListener("click", closeModal)
+    modal.querySelector("#modal-search-btn").addEventListener("click", doModalSearch)
+    modal.querySelector("#modal-search-input").addEventListener("keydown", (e) => {
+      if (e.key === "Enter") doModalSearch()
+      if (e.key === "Escape") closeModal()
     })
   }
 
   function prepareSearchLaunchers() {
-    document.querySelectorAll('.sidebar .ai-search-box').forEach(box => {
-      const sidebarInput = box.querySelector('.ai-search-input')
+    document.querySelectorAll(".sidebar .ai-search-box").forEach((box) => {
+      const sidebarInput = box.querySelector(".ai-search-input")
       if (sidebarInput) {
-        sidebarInput.setAttribute('readonly', 'readonly')
-        sidebarInput.setAttribute('placeholder', '向 AI 提问...')
+        sidebarInput.setAttribute("readonly", "readonly")
+        sidebarInput.setAttribute("placeholder", "向 AI 提问...")
       }
 
-      if (!box.querySelector('.search-kbd-hint')) {
-        const hint = document.createElement('kbd')
-        hint.className = 'search-kbd-hint'
-        hint.textContent = /Mac|iPhone|iPad/.test(navigator.userAgent) ? '⌘K' : 'Ctrl K'
+      if (!box.querySelector(".search-kbd-hint")) {
+        const hint = document.createElement("kbd")
+        hint.className = "search-kbd-hint"
+        hint.textContent = /Mac|iPhone|iPad/.test(navigator.userAgent) ? "⌘K" : "Ctrl K"
         box.appendChild(hint)
       }
     })
@@ -829,28 +923,34 @@
     getModal()
 
     // Global ESC
-    document.addEventListener('keydown', e => {
+    document.addEventListener("keydown", (e) => {
       const modal = getModal()
-      if (e.key === 'Escape' && modal.style.display !== 'none') closeModal()
+      if (e.key === "Escape" && modal.style.display !== "none") closeModal()
     })
 
     // ⌘K / Ctrl+K: open/close modal from anywhere
-    document.addEventListener('keydown', e => {
-      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+    document.addEventListener("keydown", (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
         const active = document.activeElement
-        const tag = active ? active.tagName.toLowerCase() : ''
-        if ((tag === 'input' && !active.hasAttribute('readonly')) || tag === 'textarea' || (active && active.isContentEditable)) return
+        const tag = active ? active.tagName.toLowerCase() : ""
+        if (
+          (tag === "input" && !active.hasAttribute("readonly")) ||
+          tag === "textarea" ||
+          (active && active.isContentEditable)
+        )
+          return
         e.preventDefault()
         const modal = getModal()
-        modal.style.display !== 'none' ? closeModal() : openModal()
+        modal.style.display !== "none" ? closeModal() : openModal()
       }
     })
 
     // Delegation keeps launchers working after Quartz swaps page content.
-    document.addEventListener('click', e => {
-      const target = e.target instanceof Element
-        ? e.target.closest('.search-fab, .sidebar .ai-search-box')
-        : null
+    document.addEventListener("click", (e) => {
+      const target =
+        e.target instanceof Element
+          ? e.target.closest(".search-fab, .sidebar .ai-search-box")
+          : null
       if (target) {
         e.preventDefault()
         e.stopPropagation()
@@ -859,9 +959,8 @@
     })
 
     prepareSearchLaunchers()
-    document.addEventListener('nav', prepareSearchLaunchers)
+    document.addEventListener("nav", prepareSearchLaunchers)
   }
 
   initModal()
-
 })()
