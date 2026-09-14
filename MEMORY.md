@@ -241,3 +241,9 @@
 - **Session Log**: 安全内容发布对应 Worker 版本 `d1917cd2-b075-4797-bc06-753a1106719b`，安全发布前回滚目标 `9d9bb744-4878-4226-89b9-f8b3833f77f2`；合法/非法 Origin、预检、移除 `/api/debug`、非法 `debug` 字段和首页 CSP 冒烟验证通过。
 - **Decision Log**: GitHub Ruleset `23305251`（`Protect main history`）已启用，仅覆盖 `main` 并禁止删除与非快进更新；暂不要求 PR，以保持日报工作流的普通快进提交可用。
 - **待办**: 在 Cloudflare 控制台配置持续安全告警；若将来要求所有更新必须经 PR，应先把日报发布改造成自动 PR，不给现有工作流宽泛 bypass。
+
+### [2026-09-14] Explorer 导航与严格 CSP 兼容性修复
+
+- **根因**: 安全加固移除 CSP 的 `unsafe-eval` 后，Explorer 仍通过 `new Function` 在浏览器恢复筛选、映射和排序回调；初始化在导航树生成与点击监听绑定前被 CSP 中断。
+- **修复**: Explorer 在 Quartz 构建阶段完成目录树筛选、映射、排序和 HTML 渲染；浏览器脚本只恢复折叠状态并绑定交互，不再动态执行代码。
+- **回归**: 新增服务端导航渲染测试；JavaScript/TypeScript 测试 112/112、TypeScript 类型检查和 Quartz 生产构建通过。Chrome 在 1600px 桌面视口加载生产产物后包含 32 个导航链接，连续点击“探索”可折叠并恢复展开，`aria-expanded` 同步切换且无运行时异常。
