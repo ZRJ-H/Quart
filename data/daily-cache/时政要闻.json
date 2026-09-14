@@ -1,6 +1,18 @@
 {
-  "cached_at": "2026-09-14T13:14:40.757283+08:00",
+  "cached_at": "2026-09-14T20:58:02.339992+08:00",
   "articles": [
+    {
+      "id": "https://www.news.cn/politics/20260914/250ef9aec34246eaa9d3cbe9746ac639/c.html",
+      "title": "工业和信息化部：健全行业账款支付规则",
+      "url": "https://www.news.cn/politics/20260914/250ef9aec34246eaa9d3cbe9746ac639/c.html",
+      "source": "新华网时政",
+      "published_at": "2026-09-14T00:00:00+00:00",
+      "summary": "9月14日，国务院新闻办公室举行国务院政策例行吹风会，介绍加强中小企业回款难问题治理有关工作情况，并答记者问。工业和信息化部副部长柯吉欣表示，健全行业账款支付规则。提出分行业明确合理账期，结合行业实际制定完善结算支付管理规定，明确“付款四项关键要素”；要求发布大型企业及时支付倡议，推动龙头企业率先践行“60日付现承诺”。",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
     {
       "id": "https://www.news.cn/politics/20260914/148fd317428541bdb516c720d76a7802/c.html",
       "title": "国家卫健委：进一步营造生育友好环境",
@@ -50,23 +62,11 @@
       "extra": {}
     },
     {
-      "id": "https://www.news.cn/politics/20260911/7a7c88d4e77d4d2c9a80d0718d52fd99/c.html",
-      "title": "中国知识产权行政执法十大案例发布",
-      "url": "https://www.news.cn/politics/20260911/7a7c88d4e77d4d2c9a80d0718d52fd99/c.html",
-      "source": "新华网时政",
-      "published_at": "2026-09-11T00:00:00+00:00",
-      "summary": "新华社长沙9月10日电（记者赵怡宁、戴小河）由国家市场监督管理总局与世界知识产权组织共同主办的第二届知识产权执法国际交流大会10日在湖南长沙开幕，会上发布了2025年—2026年中国知识产权行政执法十大案例，集中展现了中国市场监管部门加强知识产权执法的坚定决心和显著成效。 本次发布的十大案例涵盖商标、专利、商业秘密等领域，聚焦民生热点和中外品牌，具有很强的代表性和警示意义。其中包括浙江省杭州市上城区市场监管局查处曹某华伪造、变造专利证书及销售假冒专利产品案，江苏省苏州工业园区市场监管局查处张某楠等人销售侵犯爱马仕注册商标专用权的包具案，山东省淄博高新区市场监管局查处季某某侵犯商业秘密案，安徽省宁国市市场监管局查处李某销售侵犯20余个品牌注册商标专用权的化妆品案等案例。 江苏省苏州工业园区市场监管局查处张某楠等人销售侵犯爱马仕注册商标专用权的包具案中，苏州工业园区市场监管局根据线索查获大量标注爱马仕注册商标的包、鞋、饰品等侵权商品，全案涉案货值5000余万元。针对这一团伙利用云端存储、远程销毁等新型手段规避监管的难题，市场监管部门精准突破数字取证障碍，健全行刑双向衔接机制，10名犯罪嫌疑人落网，对主犯追究刑事责任。 据介绍，下一步市场监管总局将继续深入推进知识产权执法工作，严厉打击各类侵权假冒违法行为，依法平等保护各类经营主体知识产权，为创新创造和经济高质量发展营造良好环境。",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
       "id": "https://www.bbc.co.uk/news/articles/cy5zg41dkqwo#0",
       "title": "Russia hits Ukrainian train shortly after Boris Johnson and top European officials leave station",
       "url": "https://www.bbc.co.uk/news/articles/cy5zg41dkqwo?at_medium=RSS&at_campaign=rss",
       "source": "BBC World",
-      "published_at": "2026-09-14T03:38:13+00:00",
+      "published_at": "2026-09-14T12:18:13+00:00",
       "summary": "The former UK PM said: \"I don't know what warped logic drove Putin to blow up a stationary Ukrainian locomotive on the Polish border this morning\".",
       "score": 0,
       "comments": 0,
@@ -74,24 +74,24 @@
       "extra": {}
     },
     {
-      "id": "https://www.bbc.co.uk/news/articles/c0qx5d79kdeo#0",
-      "title": "Swedish left-wing bloc narrowly ahead with election too close to call",
-      "url": "https://www.bbc.co.uk/news/articles/c0qx5d79kdeo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "published_at": "2026-09-14T01:58:59+00:00",
-      "summary": "A preliminary count by Sweden's election authority projected that left-wing opposition bloc would win a three-seat majority.",
+      "id": "https://www.npr.org/2026/09/14/g-s1-143148/up-first-newsletter-ai-anthropic-openai-midterms-trump-oman-iran-talks",
+      "title": "Key leaders sound the alarm on AI. And, Iran-Gulf diplomacy hits a setback",
+      "url": "https://www.npr.org/2026/09/14/g-s1-143148/up-first-newsletter-ai-anthropic-openai-midterms-trump-oman-iran-talks",
+      "source": "NPR World",
+      "published_at": "2026-09-14T11:39:06+00:00",
+      "summary": "Some key leaders at artificial intelligence companies call for a slowdown in AI development. And, Iran-Gulf diplomacy hits a setback as talks in Oman are delayed.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {}
     },
     {
-      "id": "https://www.npr.org/2026/09/13/nx-s1-5967045/world-leaders-gathered-for-the-annual-brics-summit-here-are-the-takeaways",
-      "title": "World leaders gathered for the annual BRICS summit. Here are the takeaways",
-      "url": "https://www.npr.org/2026/09/13/nx-s1-5967045/world-leaders-gathered-for-the-annual-brics-summit-here-are-the-takeaways",
-      "source": "NPR World",
-      "published_at": "2026-09-13T21:03:15+00:00",
-      "summary": "India hosted the an annual summit which gathered leaders from 28 countries, including the presidents of China and Iran. Though, the U.S. was notably absent.",
+      "id": "https://www.bbc.co.uk/news/articles/ce8en6v3601o#1",
+      "title": "Zambians warned not to eat dead wildlife after anthrax kills dozens of animals",
+      "url": "https://www.bbc.co.uk/news/articles/ce8en6v3601o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "published_at": "2026-09-14T11:35:08+00:00",
+      "summary": "At least 12 people are being treated for anthrax after eating infected meat from wildlife carcasses.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",

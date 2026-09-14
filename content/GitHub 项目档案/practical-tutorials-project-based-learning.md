@@ -1,13 +1,13 @@
 ---
 first_seen: 2026-07-05
-last_seen: 2026-09-08
+last_seen: 2026-09-14
 language: Python
 tags: [github, trending]
 ---
 
 # practical-tutorials/project-based-learning
 
-> Curated list of project-based tutorials
+> 项目驱动式教程合集，通过动手做项目学习编程，适合偏好实践、想积累作品集的自学者和初学者。
 
 ## 基本信息
 
@@ -30,3 +30,4 @@ tags: [github, trending]
 | 2026-08-25 | #4 | 280,665 | +1,028⭐ | 爆火 |
 | 2026-09-01 | #4 | 281,569 | +904⭐ | 爆火 |
 | 2026-09-08 | #4 | 282,518 | +949⭐ | 爆火 |
+| 2026-09-14 | #7 | 283,258 | +740⭐ | 爆火 |
