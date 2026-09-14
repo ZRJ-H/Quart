@@ -20,4 +20,4 @@ echo "=== Deploying Worker ==="
 wrangler deploy
 
 echo ""
-echo "✓ Done. Worker live at: https://doge-wiki-search.zstufjj2004.workers.dev"
+echo "✓ Done. Worker live at: https://doge-wiki-search.ruijiezhou22.workers.dev"

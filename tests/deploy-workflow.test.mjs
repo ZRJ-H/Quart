@@ -7,6 +7,8 @@ import toml from "toml"
 
 const workflowUrl = new URL("../.github/workflows/deploy.yaml", import.meta.url)
 const wranglerUrl = new URL("../worker/wrangler.toml", import.meta.url)
+const memoryUrl = new URL("../MEMORY.md", import.meta.url)
+const deployScriptUrl = new URL("../scripts/deploy-worker.sh", import.meta.url)
 
 test("content collection completion triggers a Pages deployment", async () => {
   const workflow = yaml.load(await readFile(workflowUrl, "utf8"))
@@ -66,4 +68,17 @@ test("Cloudflare deployment securely synchronizes the optional watchdog token", 
   assert.match(sync.run, /if ! npx wrangler secret bulk/)
   assert.match(sync.run, /existing Worker secret unchanged/i)
   assert.match(sync.run, /warning/i)
+})
+
+test("Worker operations point to the same workers.dev host as the live site", async () => {
+  const expected = "https://doge-wiki-search.ruijiezhou22.workers.dev"
+  const [memory, deployScript] = await Promise.all([
+    readFile(memoryUrl, "utf8"),
+    readFile(deployScriptUrl, "utf8"),
+  ])
+
+  assert.match(memory, new RegExp(expected))
+  assert.match(deployScript, new RegExp(expected))
+  assert.doesNotMatch(memory, /zstufjj2004\.workers\.dev/)
+  assert.doesNotMatch(deployScript, /zstufjj2004\.workers\.dev/)
 })

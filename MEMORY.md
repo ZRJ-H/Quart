@@ -5,7 +5,7 @@
 - 当前阶段: 生产运行
 - 活跃分支: main
 - 网站 URL: https://zrj-h.github.io/Quart/
-- Worker URL: https://doge-wiki-search.zstufjj2004.workers.dev
+- Worker URL: https://doge-wiki-search.ruijiezhou22.workers.dev
 - 构建状态: 正常（每日内容采集成功后自动部署 GitHub Pages）
 
 ## Decision Log
