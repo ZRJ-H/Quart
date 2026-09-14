@@ -10,6 +10,13 @@
 
 ## Decision Log
 
+### 2026-09-14: Cloudflare 每日发布守望器
+
+- **问题**: GitHub Actions 的 `schedule` 可能延迟数小时甚至漏建运行；2026-09-14 的每日采集直到北京时间约 13:14 才启动，内部重试无法处理“定时事件没有发生”。
+- **方案**: 保留 GitHub Actions、Quartz 和 GitHub Pages，在现有 `doge-wiki-search` Worker 增加独立 Cron 守望器。北京时间 11:00、14:00 检查当天 `AI科技动态`、`时政要闻`、`AI论文日报`、`Hacker-News` 四个页面；页面缺失且采集工作流没有 `queued`/`in_progress` 运行时，通过 `workflow_dispatch` 补跑 `main`。
+- **安全**: 仓库 secret `WATCHDOG_GITHUB_TOKEN` 仅需 `ZRJ-H/Quart` 的 Actions 读写权限；部署时由 `CF_API_TOKEN` 将其同步为 Worker 加密 secret `GITHUB_TOKEN`。值不进入源码或日志，临时 JSON 文件权限为 0600，并由 shell EXIT trap 删除。
+- **降级**: 缺少 `WATCHDOG_GITHUB_TOKEN` 时只发出 warning，GitHub Pages 与搜索 Worker 仍继续部署，但自动补跑功能未启用；页面非 404、GitHub 状态未知或 dispatch 非 204 时 fail closed，不盲目重复触发。
+
 ### 2026-09-11: 每日知识采集与分层摘要
 
 - **问题**: AI 科技、时政、AI 论文和 Hacker News 长期无新数据，7 天内容过滤后栏目入口直接 404。
@@ -210,3 +217,12 @@
 - 首次部署后发现来源指纹未变化会复用旧日报，因此摘要规则变更必须同步升级 `SUMMARY_SCHEMA_VERSION`；本次从 6 升至 7 强制重建。
 - 生产摘要不再按字段字符数硬裁剪；若模型返回“…”或“...”，校验器会要求重写完整句子。
 - 周报完整保留核心摘要及影响/结果字段，避免信息在句子中间被切断。
+
+### [2026-09-14] 每日发布 Cloudflare 守望器
+
+- 确认 9 月 14 日未及时更新的根因是 GitHub `schedule` 延迟；该次运行北京时间约 13:14 才创建，完成后四个日报页面均恢复 200。
+- 现有搜索 Worker 增加 UTC 03:00、06:00 两条 Cron（北京时间 11:00、14:00），按上海日期检查四个真实页面路径。
+- 缺页时先读取 `Collect Daily Knowledge` 最近运行；只有没有活动任务时才补发一次 `workflow_dispatch`，避免重复采集。
+- 部署工作流安全同步 `WATCHDOG_GITHUB_TOKEN` 到 Worker 的 `GITHUB_TOKEN` secret；`/api/health` 的 `watchdog_configured` 可确认线上是否已加载该 secret。
+- 排障顺序：先看四个当天页面是否为 200，再看 GitHub Actions 是否已有 queued/in_progress 采集，再看 Worker `/api/health` 的 `watchdog_configured`，最后检查 `Sync Cloudflare search backend` 步骤和 Cloudflare Cron 日志。
+- 恢复方式：若 `watchdog_configured` 为 false，确认仓库同时存在 `CF_API_TOKEN` 与 `WATCHDOG_GITHUB_TOKEN`，然后手动运行 `Deploy Quartz to GitHub Pages` 重新同步；若 Pages 已发布而 Worker 部署失败，Pages 不受影响，可单独重跑部署工作流。
