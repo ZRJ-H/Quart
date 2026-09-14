@@ -1,25 +1,26 @@
 import wikiIndex from "./wiki-index-light.json"
 import bundledSynonyms from "./synonyms.json"
+import { runDailyWatchdog } from "./daily-watchdog.js"
 
 const DEEPSEEK_URL = "https://api.deepseek.com/v1/chat/completions"
 
 // 同义词缓存
 let synonymsCache = null
 let synonymsCacheTime = 0
-const SYNONYMS_CACHE_TTL = 3600 * 1000  // 1小时缓存
+const SYNONYMS_CACHE_TTL = 3600 * 1000 // 1小时缓存
 
 function buildReverseIndex(data) {
   const reverseIndex = {}
   for (const [key, values] of Object.entries(data)) {
     if (!Array.isArray(values)) continue
 
-    const allWords = [key, ...values].map(w => w.toLowerCase())
+    const allWords = [key, ...values].map((w) => w.toLowerCase())
     // 对包含空格的词进行分词，把每个单词都加入索引
     const allTokens = new Set()
     for (const word of allWords) {
       allTokens.add(word)
       // 分词：把 "ai agent" 拆分成 "ai" 和 "agent"
-      if (word.includes(' ')) {
+      if (word.includes(" ")) {
         for (const token of word.split(/\s+/)) {
           if (token.length >= 2) allTokens.add(token)
         }
@@ -40,19 +41,19 @@ function buildReverseIndex(data) {
 
 async function loadSynonyms(kv) {
   const now = Date.now()
-  if (synonymsCache && (now - synonymsCacheTime) < SYNONYMS_CACHE_TTL) {
+  if (synonymsCache && now - synonymsCacheTime < SYNONYMS_CACHE_TTL) {
     return synonymsCache
   }
 
   // 以内嵌词典为基础，KV 中的自定义同义词可叠加覆盖（KV 为空也能工作）
   let forward = { ...bundledSynonyms }
   try {
-    const kvData = kv ? await kv.get('synonyms', 'json') : null
-    if (kvData && typeof kvData === 'object') {
+    const kvData = kv ? await kv.get("synonyms", "json") : null
+    if (kvData && typeof kvData === "object") {
       forward = { ...forward, ...kvData }
     }
   } catch (err) {
-    console.error('Failed to load synonyms from KV:', err.message)
+    console.error("Failed to load synonyms from KV:", err.message)
   }
 
   synonymsCache = { forward, reverse: buildReverseIndex(forward) }
@@ -101,27 +102,26 @@ function extractLinkedPages(content) {
 }
 
 function findByName(name) {
-  return wikiIndex.find(e => e.name === name || e.id.endsWith("/" + name))
+  return wikiIndex.find((e) => e.name === name || e.id.endsWith("/" + name))
 }
 
 function filterResults(results, filters) {
   let filtered = results
 
   if (filters.tags && filters.tags.length > 0) {
-    filtered = filtered.filter(entry => 
-      filters.tags.includes(entry.category) ||
-      (entry.tags && entry.tags.some(tag => filters.tags.includes(tag)))
+    filtered = filtered.filter(
+      (entry) =>
+        filters.tags.includes(entry.category) ||
+        (entry.tags && entry.tags.some((tag) => filters.tags.includes(tag))),
     )
   }
 
-  if (filters.time && filters.time !== 'all') {
-    const days = filters.time === '7d' ? 7 : 30
+  if (filters.time && filters.time !== "all") {
+    const days = filters.time === "7d" ? 7 : 30
     const cutoff = new Date()
     cutoff.setDate(cutoff.getDate() - days)
     const cutoffStr = cutoff.toISOString().slice(0, 10)
-    filtered = filtered.filter(entry => 
-      (entry.last_updated || "") >= cutoffStr
-    )
+    filtered = filtered.filter((entry) => (entry.last_updated || "") >= cutoffStr)
   }
 
   return filtered
@@ -129,15 +129,11 @@ function filterResults(results, filters) {
 
 function sortResults(results, sort) {
   switch (sort) {
-    case 'time':
-      return [...results].sort((a, b) => 
-        (b.last_updated || "").localeCompare(a.last_updated || "")
-      )
-    case 'popularity':
-      return [...results].sort((a, b) => 
-        (b.reference_count || 0) - (a.reference_count || 0)
-      )
-    case 'relevance':
+    case "time":
+      return [...results].sort((a, b) => (b.last_updated || "").localeCompare(a.last_updated || ""))
+    case "popularity":
+      return [...results].sort((a, b) => (b.reference_count || 0) - (a.reference_count || 0))
+    case "relevance":
     default:
       return [...results].sort((a, b) => {
         // 先按主分数排序
@@ -154,20 +150,20 @@ function sortResults(results, sort) {
 
 function detectQueryType(query) {
   const q = query.toLowerCase()
-  
-  if ((q.includes('和') && q.includes('区别')) || q.includes('vs') || q.includes('对比')) {
-    return 'comparison'
+
+  if ((q.includes("和") && q.includes("区别")) || q.includes("vs") || q.includes("对比")) {
+    return "comparison"
   }
-  
-  if (q.includes('历史') || q.includes('发展') || q.includes('时间线') || q.includes('事件')) {
-    return 'timeline'
+
+  if (q.includes("历史") || q.includes("发展") || q.includes("时间线") || q.includes("事件")) {
+    return "timeline"
   }
-  
-  if (q.includes('是什么') || q.includes('介绍') || q.includes('概述')) {
-    return 'overview'
+
+  if (q.includes("是什么") || q.includes("介绍") || q.includes("概述")) {
+    return "overview"
   }
-  
-  return 'comprehensive'
+
+  return "comprehensive"
 }
 
 // Chinese-friendly tokenizer: keep latin/digit runs whole; split CJK runs into full term plus bigrams.
@@ -229,9 +225,11 @@ function searchIndex(query, limit = 10, expandedTerms = null) {
     // 分词匹配
     for (const w of qWords) {
       if (name.includes(w)) score += 8
-      if (tags.includes(w)) score += 8  // 标签权重从 6 提升到 8
+      if (tags.includes(w)) score += 8 // 标签权重从 6 提升到 8
       if (category.includes(w)) score += 4
-      const matches = (summary.match(new RegExp(w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "gi")) || []).length
+      const matches = (
+        summary.match(new RegExp(w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "gi")) || []
+      ).length
       score += Math.min(matches, 5)
     }
 
@@ -242,7 +240,9 @@ function searchIndex(query, limit = 10, expandedTerms = null) {
 
         if (name.includes(term)) score += 20 * SCORE_CONFIG.SYNONYM_SCORE_FACTOR
         if (tags.includes(term)) score += 8 * SCORE_CONFIG.SYNONYM_SCORE_FACTOR
-        const termMatches = (summary.match(new RegExp(term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "gi")) || []).length
+        const termMatches = (
+          summary.match(new RegExp(term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "gi")) || []
+        ).length
         score += Math.min(termMatches, 3) * SCORE_CONFIG.SYNONYM_SCORE_FACTOR
       }
     }
@@ -285,13 +285,13 @@ async function vectorSearch(query, vectorize, topK = 10) {
     })
 
     // 转换结果格式
-    return result.matches.map(match => ({
+    return result.matches.map((match) => ({
       id: match.id,
       score: match.score,
       metadata: match.metadata,
     }))
   } catch (err) {
-    console.error('Vector search failed:', err.message)
+    console.error("Vector search failed:", err.message)
     return []
   }
 }
@@ -330,24 +330,22 @@ function hybridSearch(query, keywordResults, vectorResults, rrfK = 60) {
   }
 
   // 按 RRF 分数排序
-  const sortedIds = [...scores.entries()]
-    .sort((a, b) => b[1] - a[1])
-    .map(([id]) => id)
+  const sortedIds = [...scores.entries()].sort((a, b) => b[1] - a[1]).map(([id]) => id)
 
   // 构建结果
-  const keywordMap = new Map(keywordResults.map(r => [r.id, r]))
-  const vectorMap = new Map(vectorResults.map(r => [r.id, r]))
+  const keywordMap = new Map(keywordResults.map((r) => [r.id, r]))
+  const vectorMap = new Map(vectorResults.map((r) => [r.id, r]))
 
-  return sortedIds.map(id => {
+  return sortedIds.map((id) => {
     const keywordResult = keywordMap.get(id)
     const vectorResult = vectorMap.get(id)
 
     return {
       id,
       name: keywordResult?.name || vectorResult?.metadata?.name || id,
-      category: keywordResult?.category || vectorResult?.metadata?.category || '',
-      summary: keywordResult?.summary || vectorResult?.metadata?.summary || '',
-      last_updated: keywordResult?.last_updated || vectorResult?.metadata?.last_updated || '',
+      category: keywordResult?.category || vectorResult?.metadata?.category || "",
+      summary: keywordResult?.summary || vectorResult?.metadata?.summary || "",
+      last_updated: keywordResult?.last_updated || vectorResult?.metadata?.last_updated || "",
       tags: keywordResult?.tags || vectorResult?.metadata?.tags || [],
       score: scores.get(id),
       keyword_rank: keywordRank.get(id) || null,
@@ -370,15 +368,15 @@ function selectRelevantResults(scoredResults) {
   // 动态阈值：最高分的一定比例，但不低于最低阈值
   const dynamicThreshold = Math.max(
     SCORE_CONFIG.MIN_THRESHOLD,
-    Math.floor(maxScore * SCORE_CONFIG.DYNAMIC_RATIO)
+    Math.floor(maxScore * SCORE_CONFIG.DYNAMIC_RATIO),
   )
 
   // 选择所有超过阈值的结果
-  let selected = sorted.filter(r => r.score >= dynamicThreshold)
+  let selected = sorted.filter((r) => r.score >= dynamicThreshold)
 
   // 如果高相关性结果太少，放宽阈值
   if (selected.length < 3) {
-    selected = sorted.filter(r => r.score >= SCORE_CONFIG.MIN_THRESHOLD)
+    selected = sorted.filter((r) => r.score >= SCORE_CONFIG.MIN_THRESHOLD)
   }
 
   // 硬上限
@@ -404,7 +402,8 @@ function calculateQualityScore(entry) {
 
   // 更新时间权重（近期更新的页面略优先）
   if (entry.last_updated) {
-    const daysSinceUpdate = (Date.now() - new Date(entry.last_updated).getTime()) / (1000 * 60 * 60 * 24)
+    const daysSinceUpdate =
+      (Date.now() - new Date(entry.last_updated).getTime()) / (1000 * 60 * 60 * 24)
     if (daysSinceUpdate < 7) quality += 3
     else if (daysSinceUpdate < 30) quality += 1
   }
@@ -436,7 +435,11 @@ function cardSnippet(content, name, limit = 150) {
     lines.shift()
   }
   while (lines.length && !lines[0].trim()) lines.shift()
-  return lines.join("\n").replace(/\n{2,}/g, "\n").trim().slice(0, limit)
+  return lines
+    .join("\n")
+    .replace(/\n{2,}/g, "\n")
+    .trim()
+    .slice(0, limit)
 }
 
 function buildPrompt(query, results, fullData, queryType) {
@@ -448,16 +451,16 @@ function buildPrompt(query, results, fullData, queryType) {
       const body = data?.content || data?.summary || r.summary || ""
       return `[${i + 1}] ${r.name} (${r.category || r.type})
 正文: ${body}
-标签: ${(data?.tags || r.tags || []).join(', ')}
+标签: ${(data?.tags || r.tags || []).join(", ")}
 更新时间: ${r.last_updated || "?"}`
     })
     .join("\n\n")
 
   const queryTypeGuide = {
-    comparison: '使用对比分析：表格对比关键维度 → 总结建议',
-    timeline: '使用时间线：按时间顺序列出关键事件 → 趋势分析',
-    overview: '使用概述结构：定义 → 核心要点 → 应用场景',
-    comprehensive: '根据内容选择最合适结构'
+    comparison: "使用对比分析：表格对比关键维度 → 总结建议",
+    timeline: "使用时间线：按时间顺序列出关键事件 → 趋势分析",
+    overview: "使用概述结构：定义 → 核心要点 → 应用场景",
+    comprehensive: "根据内容选择最合适结构",
   }
 
   return `你是知识库研究助手。今天是 ${today}。
@@ -508,8 +511,8 @@ async function callDeepSeek(prompt, apiKey) {
     body: JSON.stringify({
       model: "deepseek-chat",
       messages: [{ role: "user", content: prompt }],
-      temperature: 0.5,  // 从 0.3 提升到 0.5，增加创造性
-      max_tokens: 2500,  // 从 1500 提升到 2500，允许更深入回答
+      temperature: 0.5, // 从 0.3 提升到 0.5，增加创造性
+      max_tokens: 2500, // 从 1500 提升到 2500，允许更深入回答
     }),
   })
 
@@ -541,53 +544,61 @@ async function streamDeepSeek(prompt, apiKey, writer, encoder) {
 
     if (!resp.ok) {
       const err = await resp.text()
-      await writer.write(encoder.encode(
-        `data: ${JSON.stringify({ type: 'error', message: `DeepSeek ${resp.status}` })}\n\n`
-      ))
+      await writer.write(
+        encoder.encode(
+          `data: ${JSON.stringify({ type: "error", message: `DeepSeek ${resp.status}` })}\n\n`,
+        ),
+      )
       return
     }
 
     const reader = resp.body.getReader()
     const decoder = new TextDecoder()
-    let buffer = ''
+    let buffer = ""
 
     while (true) {
       const { done, value } = await reader.read()
       if (done) break
       buffer += decoder.decode(value, { stream: true })
-      const lines = buffer.split('\n')
+      const lines = buffer.split("\n")
       buffer = lines.pop()
 
       for (const line of lines) {
-        if (!line.startsWith('data: ')) continue
+        if (!line.startsWith("data: ")) continue
         const data = line.slice(6).trim()
-        if (data === '[DONE]') {
-          await writer.write(encoder.encode(`data: ${JSON.stringify({ type: 'done' })}\n\n`))
+        if (data === "[DONE]") {
+          await writer.write(encoder.encode(`data: ${JSON.stringify({ type: "done" })}\n\n`))
           return
         }
         try {
           const delta = JSON.parse(data).choices?.[0]?.delta?.content
           if (delta) {
-            await writer.write(encoder.encode(
-              `data: ${JSON.stringify({ type: 'chunk', text: delta })}\n\n`
-            ))
+            await writer.write(
+              encoder.encode(`data: ${JSON.stringify({ type: "chunk", text: delta })}\n\n`),
+            )
           }
         } catch {}
       }
     }
-    await writer.write(encoder.encode(`data: ${JSON.stringify({ type: 'done' })}\n\n`))
+    await writer.write(encoder.encode(`data: ${JSON.stringify({ type: "done" })}\n\n`))
   } catch (err) {
     try {
-      await writer.write(encoder.encode(
-        `data: ${JSON.stringify({ type: 'error', message: err.message })}\n\n`
-      ))
+      await writer.write(
+        encoder.encode(`data: ${JSON.stringify({ type: "error", message: err.message })}\n\n`),
+      )
     } catch {}
   } finally {
-    try { await writer.close() } catch {}
+    try {
+      await writer.close()
+    } catch {}
   }
 }
 
 export default {
+  scheduled(controller, env, ctx) {
+    ctx.waitUntil(runDailyWatchdog(env))
+  },
+
   async fetch(request, env) {
     const url = new URL(request.url)
 
@@ -610,8 +621,9 @@ export default {
           pages: wikiIndex.length,
           mode: "light-index + kv + vectorize",
           vectorize: !!env.VECTORIZE,
+          watchdog_configured: !!env.GITHUB_TOKEN,
         }),
-        { headers }
+        { headers },
       )
     }
 
@@ -627,7 +639,7 @@ export default {
             kv_result_exists: !!kvResult,
             kv_result_preview: kvResult ? JSON.stringify(kvResult).slice(0, 300) : null,
           }),
-          { headers }
+          { headers },
         )
       } catch (err) {
         return new Response(
@@ -636,7 +648,7 @@ export default {
             error: err.message,
             kv_binding_exists: !!env.WIKI_DATA,
           }),
-          { headers }
+          { headers },
         )
       }
     }
@@ -646,7 +658,7 @@ export default {
         const body = await request.json()
         const query = (body.query || "").trim()
         const filters = body.filters || {}
-        const sort = body.sort || 'relevance'
+        const sort = body.sort || "relevance"
         const limit = body.limit || 10
         if (!query) {
           return new Response(JSON.stringify({ error: "query required" }), {
@@ -668,7 +680,7 @@ export default {
           try {
             vectorResults = await vectorSearch(query, env.VECTORIZE, limit * 2)
           } catch (err) {
-            console.error('Vector search error:', err.message)
+            console.error("Vector search error:", err.message)
           }
         }
 
@@ -686,7 +698,7 @@ export default {
               answer: "知识库中未找到相关内容。",
               sources: [],
             }),
-            { headers }
+            { headers },
           )
         }
 
@@ -694,18 +706,23 @@ export default {
         let selectedResults = selectRelevantResults(searchResults)
 
         // 6. 从 KV 读取完整内容
-        const keywordData = await fetchFullData(env.WIKI_DATA, selectedResults.map(r => r.id))
+        const keywordData = await fetchFullData(
+          env.WIKI_DATA,
+          selectedResults.map((r) => r.id),
+        )
 
         // 7. 提取关联页面
         const relatedIds = new Set()
-        const highScoreResults = selectedResults.filter(r => r.score >= SCORE_CONFIG.HIGH_RELEVANCE)
+        const highScoreResults = selectedResults.filter(
+          (r) => r.score >= SCORE_CONFIG.HIGH_RELEVANCE,
+        )
         for (const r of highScoreResults) {
           const full = keywordData[r.id]
           if (full && full.content) {
             const linked = extractLinkedPages(full.content)
             for (const name of linked) {
               const page = findByName(name)
-              if (page && !selectedResults.some(kr => kr.id === page.id)) {
+              if (page && !selectedResults.some((kr) => kr.id === page.id)) {
                 relatedIds.add(page.id)
               }
             }
@@ -716,14 +733,14 @@ export default {
         let allResults = [...selectedResults]
         if (relatedIds.size > 0) {
           const relatedPages = [...relatedIds]
-            .map(id => wikiIndex.find(e => e.id === id))
+            .map((id) => wikiIndex.find((e) => e.id === id))
             .filter(Boolean)
             .slice(0, 5)
-            .map(e => ({ 
-              ...e, 
+            .map((e) => ({
+              ...e,
               score: 0,
               quality_score: calculateQualityScore(e),
-              is_related: true
+              is_related: true,
             }))
           allResults = [...selectedResults, ...relatedPages]
         }
@@ -734,9 +751,9 @@ export default {
         allResults = allResults.slice(0, limit)
 
         // 10. 读取所有结果的完整内容
-        const allIds = allResults.map(r => r.id)
+        const allIds = allResults.map((r) => r.id)
         const existingData = keywordData
-        const newIds = allIds.filter(id => !existingData[id])
+        const newIds = allIds.filter((id) => !existingData[id])
         const newData = await fetchFullData(env.WIKI_DATA, newIds)
         const fullData = { ...existingData, ...newData }
 
@@ -763,7 +780,7 @@ export default {
                 content_length: (fullData[r.id]?.content || "").length,
               })),
             }),
-            { headers }
+            { headers },
           )
         }
 
@@ -772,7 +789,7 @@ export default {
         const writer = writable.getWriter()
         const encoder = new TextEncoder()
         const sourcesPayload = JSON.stringify({
-          type: 'sources',
+          type: "sources",
           sources: allResults.map((r) => ({
             id: r.id,
             name: r.name,
@@ -783,46 +800,50 @@ export default {
             score: r.score,
             quality_score: r.quality_score || calculateQualityScore(r),
             reference_count: fullData[r.id]?.reference_count || 0,
-            is_related: r.is_related || false
-          }))
-        });
+            is_related: r.is_related || false,
+          })),
+        })
 
         // IIFE not awaited: Consumer reads readable, producer writes writable
-        (async () => {
+        ;(async () => {
           try {
-            await writer.write(encoder.encode('data: ' + sourcesPayload + '\n\n'))
+            await writer.write(encoder.encode("data: " + sourcesPayload + "\n\n"))
             if (!env.DEEPSEEK_API_KEY) {
-              const fallbackText = allResults.length > 0
-                ? [
-                    "已找到相关资料，但当前未配置 DeepSeek API Key，因此暂时只显示检索结果，不生成 AI 总结。",
-                    "",
-                    "请在 Cloudflare Worker 中设置 `DEEPSEEK_API_KEY` 后重新部署或直接刷新页面。"
-                  ].join("\n")
-                : "没有找到相关资料。"
-              await writer.write(encoder.encode(`data: ${JSON.stringify({ type: 'chunk', text: fallbackText })}\n\n`))
-              await writer.write(encoder.encode(`data: ${JSON.stringify({ type: 'done' })}\n\n`))
+              const fallbackText =
+                allResults.length > 0
+                  ? [
+                      "已找到相关资料，但当前未配置 DeepSeek API Key，因此暂时只显示检索结果，不生成 AI 总结。",
+                      "",
+                      "请在 Cloudflare Worker 中设置 `DEEPSEEK_API_KEY` 后重新部署或直接刷新页面。",
+                    ].join("\n")
+                  : "没有找到相关资料。"
+              await writer.write(
+                encoder.encode(
+                  `data: ${JSON.stringify({ type: "chunk", text: fallbackText })}\n\n`,
+                ),
+              )
+              await writer.write(encoder.encode(`data: ${JSON.stringify({ type: "done" })}\n\n`))
               await writer.close()
               return
             }
             await streamDeepSeek(prompt, env.DEEPSEEK_API_KEY, writer, encoder)
           } catch (err) {
-            try { await writer.abort(err) } catch {}
+            try {
+              await writer.abort(err)
+            } catch {}
           }
         })()
 
         return new Response(readable, {
           headers: {
-            'Content-Type': 'text/event-stream',
-            'Cache-Control': 'no-cache',
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Headers': 'Content-Type',
-          }
+            "Content-Type": "text/event-stream",
+            "Cache-Control": "no-cache",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Headers": "Content-Type",
+          },
         })
       } catch (err) {
-        return new Response(
-          JSON.stringify({ error: err.message }),
-          { status: 500, headers }
-        )
+        return new Response(JSON.stringify({ error: err.message }), { status: 500, headers })
       }
     }
 

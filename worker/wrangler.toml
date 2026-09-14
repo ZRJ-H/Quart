@@ -10,3 +10,13 @@ id = "b58f4f4e48384627bcc36d76f7f0ae92"
 [[vectorize]]
 binding = "VECTORIZE"
 index_name = "wiki-embeddings"
+
+[triggers]
+crons = ["0 3 * * *", "0 6 * * *"]
+
+[vars]
+GITHUB_OWNER = "ZRJ-H"
+GITHUB_REPO = "Quart"
+GITHUB_BRANCH = "main"
+GITHUB_WORKFLOW = "collect-github-trending.yaml"
+SITE_BASE_URL = "https://zrj-h.github.io/Quart"
