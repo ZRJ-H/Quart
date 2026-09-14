@@ -56,6 +56,7 @@ test("Cloudflare deployment securely synchronizes the optional watchdog token", 
 
   assert.equal(sync.env.WATCHDOG_GITHUB_TOKEN, "${{ secrets.WATCHDOG_GITHUB_TOKEN }}")
   assert.match(sync.run, /if \[ -z "\$CLOUDFLARE_API_TOKEN" \]/)
+  assert.match(sync.run, /::warning::CF_API_TOKEN/)
   assert.match(sync.run, /WATCHDOG_GITHUB_TOKEN/)
   assert.match(sync.run, /GITHUB_TOKEN/)
   assert.match(sync.run, /mktemp/)

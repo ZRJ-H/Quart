@@ -62,7 +62,7 @@ jobs:
           WATCHDOG_GITHUB_TOKEN: ${{ secrets.WATCHDOG_GITHUB_TOKEN }}
         run: |
           if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
-            echo "CF_API_TOKEN is not configured; skip Cloudflare KV upload and Worker deploy."
+            echo "::warning::CF_API_TOKEN is not configured; skip Cloudflare KV upload and Worker deploy. Pages deployment will continue."
             exit 0
           fi
 
