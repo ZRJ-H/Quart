@@ -1,13 +1,13 @@
 ---
 first_seen: 2026-06-29
-last_seen: 2026-09-08
+last_seen: 2026-09-14
 language: Python
 tags: [github, trending]
 ---
 
 # open-webui/open-webui
 
-> User-friendly AI Interface (Supports Ollama, OpenAI API, ...)
+> 友好的 AI 交互界面，支持 Ollama、OpenAI API 等后端，适合自建聊天入口、统一管理多模型对话体验。
 
 ## 基本信息
 
@@ -47,3 +47,4 @@ tags: [github, trending]
 | 2026-09-06 | #24 | 151,074 | +706⭐ | 爆火 |
 | 2026-09-07 | #21 | 151,158 | +84⭐ | 常驻 |
 | 2026-09-08 | #25 | 151,274 | +116⭐ | 常驻 |
+| 2026-09-14 | #25 | 151,922 | +648⭐ | 爆火 |

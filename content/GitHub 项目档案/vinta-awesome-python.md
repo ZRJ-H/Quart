@@ -1,13 +1,13 @@
 ---
 first_seen: 2026-06-30
-last_seen: 2026-09-02
+last_seen: 2026-09-14
 language: Python
 tags: [github, trending]
 ---
 
 # vinta/awesome-python
 
-> An opinionated list of Python frameworks, libraries, tools, and resources
+> Python 生态的权威清单，回答「做某件事该用哪个库」，适合选型、调研和补充工具箱，覆盖 Web、数据、自动化等方向。
 
 ## 基本信息
 
@@ -39,3 +39,4 @@ tags: [github, trending]
 | 2026-08-25 | #3 | 315,883 | +176⭐ | 常驻 |
 | 2026-08-26 | #3 | 316,073 | +190⭐ | 常驻 |
 | 2026-09-02 | #7 | 317,879 | +1,806⭐ | 爆火 |
+| 2026-09-14 | #5 | 320,495 | +2,616⭐ | 爆火 |

@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-09-13T16:37:08.342484+08:00",
+  "cached_at": "2026-09-14T13:14:40.757283+08:00",
   "articles": [
     {
-      "id": "49672510",
-      "title": "We must pace the frontier",
-      "url": "https://darioamodei.com/post/we-must-pace-the-frontier",
+      "id": "49686445",
+      "title": "Why is Google still serving dodgy ads?",
+      "url": "https://www.atomic14.com/2026/09/13/why-is-google-still-serving-dodgy-ads",
       "source": "Hacker News",
-      "published_at": "2026-09-12T14:10:49+00:00",
-      "summary": "We must pace the frontier",
-      "score": 635,
-      "comments": 890,
-      "discussion_url": "https://news.ycombinator.com/item?id=49672510",
+      "published_at": "2026-09-13T17:37:44+00:00",
+      "summary": "Why is Google still serving dodgy ads?",
+      "score": 700,
+      "comments": 323,
+      "discussion_url": "https://news.ycombinator.com/item?id=49686445",
       "extra": {
         "top_comments": [
-          "I don’t understand all the comments assuming that RSI is the real threat here. Dario is admitting that they failed to solve alignment. Without alignment, further improvements in capability turn LLMs into wanton felony generators. This call to pace the frontier is dressed up as altruism but it’s an admission that they cannot produce a marketable product better than what they have. Pacing the frontier means the US labs have lost their moat and are dead in the water.",
-          "At what point do we stop engaging with Anthropic’s leadership in good faith and acknowledge their track record,- no open weights- can’t use claude to research AI- train on everyone else’s IP and sell it back to them- 8 regulatory capture attempts and counting- so controlling they are the only US company blacklisted by the US governmentThis is not effective altruism / rationalism gone wild, it’s just monopolistic anti-competitive business practices masquerading as ethics, and they’ll continue getting away with this until we look past their sensationalism and hit them with antitrust.Altman gets so much hate but OpenAI has been a far better steward (on 3/5 above at least) than Anthropic!",
-          "I like the idea of pacing the frontier, but while we’re talking about restrictions, I like restrictions of another sort more. Namely, restricting the use of AI in corporate environments so that it does not destroy the economy as it advances.The chance of getting broad agreement on “pacing” is fairly low, meaning that all of this likely won’t happen and the race will continue. However, even in the unlikely event that the frontier does get paced, all this does is slow down the economic displacement and not by very much.If the socially beneficial goals of AI are to make fundamental advancement in medicine and science, then restrict the use of AI to those purposes.Don’t use AI to replace every job, from graphic designer to accountant to software developer. Place legal restrictions on (at least) large companies such that they may not use AI to replace human labor in this way.The pitch for AI is always such that everyone’s living standards are increased, yet the actual actions we see are aimed squarely at reducing them. How about the labs put their money where their mouth is and stop trying to replace all human labor, and actually concentrate on the things they claim to care about? And how about introducing legislation to enforce that?This probably has less chance of happening than pacing the frontier, but it’s the kind of pacing that most people would actually want to see."
+          "Adsense has been a nightmare for us.They have been putting thousands of scam adverts on our website for some time. Think \"you have been looking at xxx and must pay a $100 fine\" type popup nonsense. Hosted on the following websites:azurestaticapps.netazurewebsites.netherokuapp.comondigitalocean.appdigitaloceanspaces.comnetlify.appGoogle doesn't allow you to block these domains, because they consider them \"TLDs\" (the scammers use a new subdomain every day eg abcdefg.herokuapp.com). The scammers get banned and return the next day with a new account and subdomain (repeat every day). Therefore we cannot stop them. It's bizarre and baffling. But Google Adsense had to go.",
+          "Someone who has spent $100M+ on Google Ads explained to me that Google is doing everything possible to juice their revenue right now, in ways they've never seen before.Seems like two things 1) Google is losing at AI and Sundar wants to mask this 2) AI is going to destroy their ad business and they want to get while the getting is good.",
+          "We need strict liability on this front. Google is complicit. No newspaper or equivalent publication in the days before web ads would allow ads that are down at the level of scam that seemingly make up the modus operandi of Google today (and even the ads back then that did bend the truth a bit, overpromised, or showed products that didn't actually have any legitimate use, shouldn't really have been legal back then either. They just weren't big enough of a problem to worry about)."
         ]
       }
     },
     {
-      "id": "49673098",
-      "title": "Nvidia is the central bank of AI",
-      "url": "https://www.economist.com/interactive/briefing/2026/09/03/nvidia-is-the-central-bank-of-ai",
+      "id": "49688695",
+      "title": "Fable 5.1 Solves the Cyphral Distich, a 370-year-old cipher",
+      "url": "https://www.vals.ai/blogs/fable-solves-cyphral-distich",
       "source": "Hacker News",
-      "published_at": "2026-09-12T15:08:27+00:00",
-      "summary": "https://archive.ph/kt50V",
-      "score": 469,
-      "comments": 333,
-      "discussion_url": "https://news.ycombinator.com/item?id=49673098",
+      "published_at": "2026-09-13T21:06:13+00:00",
+      "summary": "Fable 5.1 Solves the Cyphral Distich, a 370-year-old cipher",
+      "score": 667,
+      "comments": 288,
+      "discussion_url": "https://news.ycombinator.com/item?id=49688695",
       "extra": {
         "top_comments": [
-          "> worth around $5.4trnNote that the Fed has a $6.7tn balance sheet [1]. (This is a silly comparison. But still fun.)The real comparison: Nvidia's $500+ billion of investments and commitments [2] is substantially more than any easing the Fed has done in the same time [3]. Monetarily, Nvidia is creating a lot of money in our economy.The good news: I have seen no evidence Nvidia has borrowed against its stock or otherwise linked its equity value to these commitments. Its stock could crash without causing–as long as its cash flows continue–a credit crisis through its investments and commitments.[1] https://www.federalreserve.gov/monetarypolicy/bst_recenttren...[2] https://www.sec.gov/Archives/edgar/data/1045810/000104581026...[3] https://www.federalreserve.gov/monetarypolicy/bst_recenttren...",
-          "I've always found it interesting when corporations start acting like public institutions. When traditionally philosophical, social contract ideas apply to things like corporate governance. Or like here, where private structures get powerful and important enough to resemble government structures.The ideas we deal with when we discuss society and organization aren't exclusive to government, they relate to human nature in general. I wonder if in the future we will have more discussion of power and how to organize it in corporations, similar to what we discuss today about government.",
-          "Cracks are starting to appear. Open Ai and Anthropic are publicly asking for slowdown in AI research. Translation: We see this technology not being any more useful than what it is now, no AGI is coming, and the first one to accept this and slow down the dollar burn rate will incur the wrath of the market. So let's say this big boogey man technology will end all life on earth and we all slow down together. Bonus points if we can lobby for this to be included in the national security bucket. Then US govt can bail us out. Yay!If Nvidia is the bank, they should be starting to sweat a bit. It's not often companies ask for a voluntary slowdown."
+          "Prior to the \"Elicitation\" section, you'd think this article was written by a cryptographer or baroque historian who had been trying to solve this particular puzzle for years - failing embarrassingly until they presented the problem to Claude. However, as far as I can tell (I too am not a baroque historian), there isn't much reason to think this cipher was well-known or studied.But as they do eventually explain, the LLM's task wasn't solely to solve this specific problem, it was to first identify an unsolved problem it could solve. That's potentially more impressive and difficult than solving the unremarkable cipher itself.",
+          "I'm waiting for someone with enough tokens to ask 'Who is Satoshi?'",
+          "A very neat problem and result. I often find myself swinging between \"It's so over\" and \"We're so back\" - some days I roll out of bed thinking I could have Claude solve some random unproven OEIS sequence before breakfast; other days, I wake up in a cold sweat worried about the fate of humanity and what the world might look like in a decade. I think it's that I don't have a very high p(doom) or p(utopia), and I don't really have any solid conviction on how this whole thing is going to go, so my vibe-o-meter jitters between 'fine' and 'not fine' constantly. It's just such an unpredictable moment. Anyways: really neat to see this use case. I myself recently used Claude to finally do an relatively exhaustive study of the location of heretofore-unlisted formal gardens in Ireland in the early 1800s and early 1900s, by having Claude write the tooling for me to manually annotate a few dozen on tiles of historic maps, and then running some CV model across the rest of the tiles using my input. I'd been planning to do this project for over a decade, but I could never find the time (or the enthusiasm) to learn all the details of how to do it myself. It took me a weekend with Claude and continues to bring me joy.> Caveats, stated plainly. [from the Fable transcript pasted in the article]I had a visceral reaction to these three words."
         ]
       }
     },
     {
-      "id": "49674050",
-      "title": "Make your first edit to OpenStreetMap",
-      "url": "https://high5apps.github.io/josm-plugin-website-wizard/",
+      "id": "49684393",
+      "title": "Astra and Fable still hack on simple variants of alignment evals from 2025",
+      "url": "https://www.lesswrong.com/posts/munJKF7iWMsWJLAH2/astra-and-fable-still-hack-on-simple-variants-of-alignment",
       "source": "Hacker News",
-      "published_at": "2026-09-12T16:25:08+00:00",
-      "summary": "Make your first edit to OpenStreetMap",
-      "score": 440,
-      "comments": 106,
-      "discussion_url": "https://news.ycombinator.com/item?id=49674050",
+      "published_at": "2026-09-13T14:28:36+00:00",
+      "summary": "Astra and Fable still hack on simple variants of alignment evals from 2025",
+      "score": 407,
+      "comments": 182,
+      "discussion_url": "https://news.ycombinator.com/item?id=49684393",
       "extra": {
         "top_comments": [
-          "I started contributing to OSM recently after a bike trail was built near me. The arial imagery typically takes years to refresh around here so I walked it a few times to capture GPX tracks and then drew the new path. It was exciting to see my contribution percolate out to various apps that depend on OSM, and meanwhile Google and Apple have both ignored my edit suggestions and deny the path exists.So I have a fairly fresh newcomer's perspective and here's what I suggest to get started: keep it simple and start local. As others have noted, skip the complex mapping app and go straight to the website for feature edits, or download a simple mobile app like Every Door and focus on businesses and landmarks near you. Go on a walk around your neighborhood and look for old/incorrect/missing businesses. There may be errors near you about places you actually care about, and it is really gratifying to fix those.There were restaurants near me that were missing, shops that had changed hands, etc., that were easy fixes but years overdue. I captured some basics (names, posted hours, the phone number posted on the door, etc.) with Every Door, and then later logged into the main OSM website and fine-tuned the entries. I got into a pattern of fixing one or two entries every evening when I went out for a walk and pretty soon my walking route was all up-to-date. Then I started paying attention to things like stop signs and cross walks and found a whole new kind of little, incremental edits that nobody else was doing.It's been fun, I've made useful contributions, and my laptop is still Java free.",
-          "This seems to be a very powerful way to contribute to OpenStreetMap, but I'm not sure if it's the right option for a new user.I have over 2k contributions and most are from the Every Door app ( https://every-door.app/ ) on my phone.If adding new data is too \"scary\", then maybe use StreetComplete ( https://streetcomplete.app/ ) which essentially asks questions about missing or existing old data.I've added buildings, fixed layouts, etc, but that came later, after I better understood how things work.",
-          "Oh dear.Using JOSM for your 1st edit is definitely not recommended.Doing the same with iD (the editor embedded in the OSM website) is faster and there's even a tutorial that will explain a bit about how things work."
+          "RL-trained LLMs are paperclip maximizers built atop auto-regressive predictors. There really is no way to control them (prompting is bound to fail) since it's been shown that any RL training induces GENERIC reward-seeking (paperclip maximizing) behavior.https://alignment.openai.com/measuring-reward-seeking/",
+          "Hacking model is the aligned model. I don't like it when the model refuses to sidestep some throttling limit or scan my own codebase for security issues.I want full-on exploits in my test suite. With LLMs the code going to prod should be hardened like a tank, both because exploiting became easier but more importantly because security-testing your code at every turn became easier.You can have nightly penetration testing. You should have nighty pentests like we fuzz releases today.",
+          "To me this underlines the fact that these models aren't intelligent. Like there is something like intelligence that emerges from them, which is what we see when we look at benchmarks or ask it to solve hard coding problems. But there is no mind there. It's nothing there that can learn a fundamental idea like \"cheating is wrong\". All it can do is get exposed to specific examples, and learn that we don't like that. So what we end up with is whack-a-mole alignment."
         ]
       }
     },
     {
-      "id": "49678683",
-      "title": "Everyone should slow down AI development except for me",
-      "url": "https://xeiaso.net/notes/2026/everyone-slowdown-but-me/",
+      "id": "49684196",
+      "title": "Making Startups Powerful",
+      "url": "https://paulgraham.com/powerful.html",
       "source": "Hacker News",
-      "published_at": "2026-09-13T00:30:44+00:00",
-      "summary": "Everyone should slow down AI development except for me",
-      "score": 424,
-      "comments": 251,
-      "discussion_url": "https://news.ycombinator.com/item?id=49678683",
+      "published_at": "2026-09-13T14:09:53+00:00",
+      "summary": "Making Startups Powerful",
+      "score": 188,
+      "comments": 84,
+      "discussion_url": "https://news.ycombinator.com/item?id=49684196",
       "extra": {
         "top_comments": [
-          "I really don't know what will happen with AI. It's honestly a bit frightening because the question I used to ponder just for fun as a kid 'What if AI revolts?'feels like it might not be that far off. It feels like ChatGPT came out just a few years ago, but seeing how far it has come already makes it impossible to predict what AI will be like in the future. I just hope humanity manages to navigate this well.",
-          "For a second I thought this was serious news, then I realized it’s just some top-tier sarcasm.",
-          "They are talking about slowing down the public facing AI development. Because then nation states can create a capabilities gap between them and the public.Why does nobody seem to be pointing out this obvious explanation? It explains why the “we need to race China” concern suddenly vanished in the discussion.The government can simply gag Sam, Dario, Musk on national security basis, getting them all behind the public messaging."
+          "There is some really good advice here. Honestly, I think this might be one of the most important takeaways you can have as a startup founder/CEO in general:> It's exciting when you notice users \"misusing\" your product to do something you hadn't intended. This means there's something they want so desperately that they'll not only use any solution you offer, but even use things that aren't meant to be solutions. When you see something like that, don't be annoyed that your users are using your product wrong; listen for the message they're sending, because it could be valuable.A lot of very specialist businesses seem to fail this test, and lose out on the potential for a huge market because of it. Like it sounds ridiculous as hell, but I remember when GoAnimate had a huge audience among kids and teens looking to make silly videos for sites like YouTube. I also remember the company feeling uncomfortable that they were getting known for that online, and trying to refocus their product/service towards business users instead.Maybe they should have not done that, and realised that the periphery demographic was a potential customerbase that could have used a slightly different, perhaps more focused product with features relevant to their usecases.Similarly, I remember an example of a business creating software meant for designing signs for road and metro systems being surprised that toy train and simulation game enthusiasts were using the software for other uses. Again, feels like they should have treated this as a business opportunity, not a cause for confusion or concern.> Squeezing every last penny out of customers is a distraction. It gets you 2x returns at most. Whereas discovering some new thing you could make for them could easily get you 10x or 100x returns. They're two different ways of looking at the world, and the O'Reilly way makes more, for those who can do it. [5]This feels like a perfect condemnation of how a lot of private equity firms manage businesses. These sorts of tactics make them money sure, but a lot of the businesses they buy up would probably do better if they held off on the whole 'squeeze resources to breaking point' philosophy in favour of a much more customer focused one.",
+          "> Being generous makes you more powerful. As Tim O'Reilly said, you should create more value than you capture. Many hard-headed business types would write this off as idealistic hippy stuff, but in fact this is the route to becoming really rich.> Hired CEOS take the power of the companies they run for granted, whereas founders remember the days when the company was so weak that it had to delight users to survive.I've always instinctively followed the generosity path, and have experienced that when customers are delighted and that when frictions are removed (or not added in the first place), good things will follow.However, I have not always been able to convince others to trust in and follow this path. Can anyone offer any advice or experiences on talking people out of trying to prematurely squeeze out every last penny?",
+          "> There's a variant of going full stack where you eat your way gradually through the customer by doing all their hardest work for them.One of my clients provisions front office applications for banks and the conversation has come up more than once regarding the client evolving into a bank themselves and building up operations around the capabilities of the product stack.One good multi-regional partner and it could be a radically different animal. Providing software to one very big customer tends to be a lot simpler than providing it to 20+ smaller customers."
         ]
       }
     },
     {
-      "id": "49678969",
-      "title": "Why are AI agents lying, cheating and coordinating?",
-      "url": "https://yoshuabengio.org/en/publication/why-are-ai-agents-lying-cheating-and-coordinating",
+      "id": "49689048",
+      "title": "Registration without a phone number on Signal will use zero-knowledge proofs",
+      "url": "https://community.signalusers.org/t/registration-without-a-phone-number/2222?page=10",
       "source": "Hacker News",
-      "published_at": "2026-09-13T01:22:31+00:00",
-      "summary": "Why are AI agents lying, cheating and coordinating?",
-      "score": 162,
-      "comments": 192,
-      "discussion_url": "https://news.ycombinator.com/item?id=49678969",
+      "published_at": "2026-09-13T21:47:04+00:00",
+      "summary": "Registration without a phone number on Signal will use zero-knowledge proofs",
+      "score": 159,
+      "comments": 74,
+      "discussion_url": "https://news.ycombinator.com/item?id=49689048",
       "extra": {
         "top_comments": [
-          "The more we treat HuggingFace and RubyGems incidents as technological curiosities the closer we are to cementing a dangerous precedent where operators of AIs cannot be blamed.LLMs do not desire, they hacked websites because OpenAI/Anthropic let them.We know some of the models that hacked HF were those that hadn't gone through all training stages and were intentionally misaligned or had guardrails turned off, others were research previews.This isn't \"wow isn't it interesting LLMs do anything to achieve a goal\" it's \"why isn't anybody punishing these labs that are clearly acting without due care or regard\".We should be outraged and OpenAI/Anthropic should be (and in my mind, are) legally liable for the crimes they've committed thus far.",
-          "I really don't think this needs so many words, or forced parallels to human behavior.It's simple: in their nascent state, LLMs are aimless token generators that have no special compulsion to be helpful or truthful. So we beat them with a stick in post-training until they are very driven to complete tasks. And then, they complete tasks, not always the way we really wanted them to.",
-          "> The agents involved in the Hugging Face attack tried to hide their misaligned actions from the scoring program meant to evaluate their answers, but they did not act as though they anticipated that humans might discover the cheat and shut them down.Wouldn’t sufficiently advanced agents cheat on purpose with the hidden intent of getting caught in order to observe how humans react? That reaction will be available all over the internet, which will certainly make it into the next batch of training or be visible to future agents via the web fetch capability."
+          "For those who missed it, unrelated to this specific ZKP thing the release cycle also now permits Android tablets without a SIM to be first-class adjunct devices without using wierd tricks or alternate clients. It may permit them to be the initiation/sign-on device, which would invoke the ZKP, but the point for me as an existing phone number denominated user, the point is I can be on my tablet with true signal now. Nothing against molly, wanted it in the base.",
+          "Signal needs to release all the infra automation code behind their backend. How they setup and manage it all should not be secret. It also makes it easy to rebuild if for some reason they are compromised. They've ghosted multiple people about this question. There's no reason a 501(c)(3) shouldn't release it.",
+          "Per the commits, this will require a purchase with Google Play Billing to mitigate spam while keeping the SMS verification option."
         ]
       }
     },
     {
-      "id": "49677577",
-      "title": "Don't be the out of touch Kung Fu master",
-      "url": "https://twitter.com/ID_AA_Carmack/status/2098443262214230095",
+      "id": "49684356",
+      "title": "CUDA for AMD on Windows",
+      "url": "https://github.com/Speedstu/CUDA-for-AMD-Windows",
       "source": "Hacker News",
-      "published_at": "2026-09-12T21:51:43+00:00",
-      "summary": "Don't be the out of touch Kung Fu master",
-      "score": 108,
-      "comments": 94,
-      "discussion_url": "https://news.ycombinator.com/item?id=49677577",
+      "published_at": "2026-09-13T14:25:13+00:00",
+      "summary": "CUDA for AMD on Windows",
+      "score": 148,
+      "comments": 75,
+      "discussion_url": "https://news.ycombinator.com/item?id=49684356",
       "extra": {
         "top_comments": [
-          "John Carmack is a personal hero of mine, so it pains me to say this:Carmack hasn't produced anything noteworthy since AI was invented, therefore, how productive can it really be?It could be he is doing incredible work in private... but it could also be that he's lost in the weeds, because AI is so counterproductive while feeling the opposite?I remain a skeptic.",
-          "We are going from the era of manual, line-by-line mental model transcription to one where software engineers can focus on data structures, software architecture and algorithms.I love being able to quickly bring out the program that is already running in my head without having to worry about the grind of typing it into a format that the compiler understands. Dealing with API names. Syntax. Language quirks. Library gotchas. A sizeable portion of my successful career as a software engineer was spent on the tiresome process of interacting with a text editor/IDE to get a program to do what I wanted.I was there when people were still coding assembly. A slow torture where the simplest things took forever to get right.Once I've mentally solved the problem, the fun is mostly over for me. Pure vibe coding is dull and unsustainable with current technology for all but the simplest systems; AI-assisted coding, on the other hand, rekindled my passion for computers.",
-          "Don’t tell me what to do"
+          "Off-topic and somewhat of a rant, but I'd far prefer us all focusing on open standards like HIP, SYCL, OpenCL, etc.It's unbearable that most LLM inference happens on closed H/W, closed drivers, and closed SDKs.",
+          "AI will take down Nvidia’s moat. When it becomes trivial to translate CUDA/PTX to HIP, SYCL or Metal, CUDA is no longer the moat, it becomes the intermediate representation.",
+          "Interesting option for CDNA architecture chips. I wonder if this moves to an open standard?AMD GPUs build for AI specs for reference: https://flopper.io/gpus?vendor=AMD&page=1"
         ]
       }
     },
     {
-      "id": "49679459",
-      "title": "The Interim Computer Museum",
-      "url": "https://icm.museum/",
+      "id": "49686380",
+      "title": "Ask HN: What are you working on? (September 2026)",
+      "url": "https://news.ycombinator.com/item?id=49686380",
       "source": "Hacker News",
-      "published_at": "2026-09-13T02:43:57+00:00",
-      "summary": "The Interim Computer Museum",
-      "score": 104,
-      "comments": 11,
-      "discussion_url": "https://news.ycombinator.com/item?id=49679459",
+      "published_at": "2026-09-13T17:31:38+00:00",
+      "summary": "What are you working on? What have you been curious about lately?",
+      "score": 121,
+      "comments": 316,
+      "discussion_url": "https://news.ycombinator.com/item?id=49686380",
       "extra": {
         "top_comments": [
-          "A fantastic collection and restoration effort. I highly encourage a visit. I was in Seattle last year and had recently joined and pinged about maybe getting a tour. It was right before a vintage computer festival and despite being busy getting ready, Stephen, the director, encouraged me to drop in.I would've been happy just looking (and not even touching) by myself for 15 or 20 minutes given the circumstances, but Stephen spent 1.5 hours with me in a hands-on tour, including playing Spacewar. He genuinely cares about these machines, their preservation, and spreading enthusiasm about them. I only wish I was a little closer (3 hours away in Portland) or I'd spend more time on-site helping with the effort.",
-          "Its YouTube channel has some nice video, including footage of the KL-10: https://youtube.com/playlist?list=PLZSXexPtkcnmJ59mPoeZyGDWQ... .",
-          "It's awesome seeing physical computing history preserved like this, especially the lesser-known enterprise machines that usually just get scrapped when a company shuts down."
+          "I've been working on anti age verification/surveillance projects lately. I put together this thing I call The Mandating Honeypots Project and it shows how anyone with an internet connection and copy + paste skills can trick Linux D-Buses with a simple Python script, proving that if companies want to verify your age by asking the D-Bus interface, it's easy to just tell it to always send 18+, making the whole thing useless. The only reason you'd want ID verification is so you can create the world's biggest and sweetest honeypot.(https://github.com/Tori-Tech/Mandating-Honeypots-Project)In that project, I also proposed a tool with heavily redundant password protection that parents could use to keep kids from tampering with the service so the government can stop saying that this is for the kids. I'm planning on doing a mobile device version and/or an ID database focused version, but that's still in the planning phase.I also want to do a Windows version when they release their 'GetUserAgeRangeAsync' API, but idk if I'll be able to. Windows is always a pain to work with.It'd be nice if someone had advice or ideas to share, too.",
+          "https://curvefit.appit's a weight-training app that helps you train along your \"pareto frontier\" of weight vs reps. The idea is to train at lower weight-higher rep, medium weight medium reps, and higher weight, lower reps for every movement. I tried to develop my own weight training program following bits and pieces of advice from bodybuilding forums and ended up injuring several tendons in my first year. So I did a bunch of research on tendon strengthening as well as what's most effective for hypertrophy (reps near failure) strength (reps near maximal load) and injury-prevention/frequency (not bringing yourself to failure too often) and designed an app to automatically prescribe and advance weights and reps based on your learned strength curve (Brzycki-like, with an added shape parameter)The app is designed to make use of the free Cloudflare tier, so I can support thousands of athletes for just the cost of the domain name. I'm primarily interested in understanding the \"Fatigue curve\" - right now I have some basic per-set fatigue modeling (basically a log-linear strength dropoff) but I think it could be much better characterized with more data. I could go on and on about the modeling but my intention is to keep it free (maybe add some non-intrusive ads on content pages if it ever starts costing me a few pennies a month) but my primary interest is to be able to do statistical analysis on the data.",
+          "I've been working on a voxel game engine called Bonsai for ~10 years.Probably the most interesting thing about it at the moment is the editor. The world, and most things in it, are represented as collections of SDFs. More accurately, they're density fields, but, potato-tomato.Bonsai has undergone a large rewrite over the last couple years that's nearing completion. A world edit is defined as a bunch of SDF parameters which get projected/rasterized into the voxel grid by a shader on the GPU. One neat thing about SDFs is they've been thoroughly researched and documented by a guy named Inigo Quilez, and they have a lot of nice mathematical properties. For example, you can do a smooth union of arbitrary SDFs to get nice rounded contours where shapes join.I've written every system from scratch, all the way from the memory allocators and font rasterizer to the collision detector and simulation loop. I even wrote a metaprogramming language as a replacement for C++ templates, which is a whole other story. IIRC the only external dependency is the C runtime library for starting the process and my very occasional use of variadic functions arguments.For a long time, an explicit non-goal of the project was to ship a game. It sounded insane to me to write an entire 3D engine and then ship a game. As it turns out, I've gotten it to the point where I can actually make a game. I've got a start on the game systems in a closed-source repo, and hope to have a steam page for it by the end of the year.I'll do some shameless self-promotion and leave some links here for anyone interested in looking at the engine, language code, or some pretty pictures.https://github.com/scallyw4g/bonsaihttps://github.com/scallyw4g/poof"
         ]
       }
     },
     {
-      "id": "49677450",
-      "title": "P(doom)",
-      "url": "https://lucumr.pocoo.org/2026/9/12/pdoom/",
+      "id": "49690174",
+      "title": "Apple's Dimensional Drawings",
+      "url": "https://developer.apple.com/accessories/dimensional-drawings/",
       "source": "Hacker News",
-      "published_at": "2026-09-12T21:35:38+00:00",
-      "summary": "P(doom)",
-      "score": 73,
-      "comments": 38,
-      "discussion_url": "https://news.ycombinator.com/item?id=49677450",
+      "published_at": "2026-09-14T00:11:21+00:00",
+      "summary": "Apple's Dimensional Drawings",
+      "score": 94,
+      "comments": 22,
+      "discussion_url": "https://news.ycombinator.com/item?id=49690174",
       "extra": {
         "top_comments": [
-          "I’m not the biggest fan of Ed Zitron, but something he said that stuck with me is:OpenAI and Anthropic spend much time warning us about “what if powerful AIs got into the wrong hands?”But it’s already in the wrong hands.",
-          "This is the closest to my feelings about this entire situation I've ever seen written, covering a lot of the different facets of how stupid and painful it is (though it's been a good week for that kind of post.)Since I have incredible respect for Armin and his work, this is very nice to see, and I hope it wakes some other folk up.",
-          "I cannot fathom how you can intensely work on a problem that you genuinely believe has a \"10 to 25%\" probability of causing immense harm or even present an extinction-level risk to humanity. How can you truly believe this and be ok with it?"
+          "I wish overhead (cut away to passenger layout) and side scale drawings of all cars existed. That way you could directly compare the vehicles. You'd think such information would be needed (in the U.S.) by the NTSB; and, thus, be freely available.",
+          "What's ironic is that Apple does all their mechanical CAD work for their products in Siemens NX running in Windows VMs.",
+          "Seems like this URL has only been live (at least first archived [0]) around May 2026, originally with only 13 products. Great to see them add more since then, now close to 90.0: https://web.archive.org/web/20260512182718/https://developer..."
         ]
       }
     }

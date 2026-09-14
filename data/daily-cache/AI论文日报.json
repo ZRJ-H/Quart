@@ -1,190 +1,102 @@
 {
-  "cached_at": "2026-09-13T16:37:08.342484+08:00",
+  "cached_at": "2026-09-14T13:14:40.757283+08:00",
   "articles": [
     {
-      "id": "2609.10715",
-      "title": "NCP-ArchPreview Technical Report: Moving towards Latent Space Language Models through Next Concept Prediction",
-      "url": "https://arxiv.org/abs/2609.10715",
-      "source": "Hugging Face Daily Papers / arXiv",
-      "published_at": "2026-09-11T00:00:00+00:00",
-      "summary": "We introduce NCP-ArchPreview, a latent-space language model that pushes autoregressive pretraining beyond standard next-token prediction (NTP). Alongside NTP, the model learns through Next Concept Prediction (NCP) to predict discrete concepts that span multiple tokens, introducing an explicit and more challenging concept-level objective while preserving standard token-level autoregressive generation. NCP-ArchPreview builds a latent space by constructing a product-quantized concept vocabulary directly from its hidden states, and subsequently learns to predict future concepts via a dedicated Concept Module. These predicted concepts are then fed back to the token level to guide subsequent generation, with NTP and NCP trained jointly end-to-end. We scale this architecture to 8.9B parameters and train it on 5.73T tokens from the Dolma-3 dataset, marking the largest demonstration of a latent-space language model to date. Remarkably, by consuming only 51.3% of the total training tokens, NCP-ArchPreview achieves the final pretraining loss of OLMo-3-7B. Following full pretraining, it outperforms OLMo-3-7B by 2.45 points on the downstream macro-average, including a notable 5.99-point gain on GSM8K. Controlled experiments isolate a clear progression of performance gains stemming from both the latent architecture and the NCP objective. Furthermore, utilizing only 85% of the standard computation, NCP-ArchPreview approaches the training loss of a strictly parameter-aligned 8.9B baseline. The learned latent space remains highly valuable after the pretraining stage: updating just the 17M-parameter VQ module yields a novel, lightweight interface for domain adaptation, while a simple injection of concept representations into a DFlash2 drafter improves the mean accepted length by 4.17% with negligible overhead.",
-      "score": 258,
+      "id": "2609.11977",
+      "title": "Occamy-1.0: Open Pareto-frontier 35B Intelligence for Co-work",
+      "url": "https://arxiv.org/abs/2609.11977",
+      "source": "arXiv",
+      "published_at": "2026-09-14T04:00:00+00:00",
+      "summary": "arXiv:2609.11977v1 Announce Type: new Abstract: Co-work agents execute complex workflows that combine information gathering, tool use, coding, and file manipulation across many model invocations. Because cost and latency accumulate over the full episode, their practical value depends not only on peak capability but also on how efficiently that capability is delivered. Yet many steps in everyday work emphasize state tracking, coordination, recovery, and follow-through rather than frontier-scale reasoning. We present Occamy-1.0, a cost-efficient co-work model obtained by further training the post-trained Qwen3.6-35B-A3B checkpoint. We construct execution-grounded data and environments, capture replayable long-horizon trajectories across multiple harnesses, and use staged post-training to develop and consolidate complementary execution capabilities. Across a broad suite of co-work benchmarks, Occamy-1.0 is consistently among the strongest comparably sized models and remains competitive with substantially larger frontier systems on several tasks. Under our stated evaluation and pricing protocol, its aggregate performance across four representative benchmarks places it at the low-cost knee of the observed cost--performance Pareto frontier. Supporting evaluations in tool calling, coding, and instruction following further show that this specialization preserves broad agentic capability. We release the model weights and a subset of the training data to support research on practical co-work agents and agentic post-training.",
+      "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "NCP Team",
-          "Jiaqi Cao",
-          "Chiyu Chen",
-          "Shuang Cheng",
-          "Xu Cheng",
-          "Beiya Dai",
-          "Yufan Feng",
-          "Kewen Ge",
-          "Ruijun Ge",
-          "Jiayi Huang",
-          "Yang Jiao",
-          "Dahua Lin",
-          "Zhouhan Lin",
-          "Yifan Liu",
-          "Yuliang Liu",
-          "Biqing Qi",
-          "Mowen Ruan",
-          "Junzhe Shen",
-          "Yunchong Song",
-          "Hao Sun",
-          "Zhongbo Tian",
-          "Yixuan Wang",
-          "Rubin Wei",
-          "Jiaxin Xiong",
-          "Kangyu Yang",
-          "Qian Yao",
-          "Qi Zhang",
-          "Bowen Zhou"
+          "Wenhui Chen, Shiwen Cheng, Hao Dong, Chenda Duan, Ruixiang Feng, Zhong Guan, Boqiang Guo, Xueyuan Han, Haojie Hao, Liangmeng Huang, Zhelong Huang, Xinke Kong, Hongyu Li, Jiazheng Li, Junbo Li, Qingchuan Li, Yukun Lian, Chang Liu, Tianyu Liu, Zicheng Liu, Shuyi Ouyang, Yijun Pan, Kunyu Shi, Xiaojun Tang, Bingquan Wang, Kesu Wang, Yuchen Wang, Sibo Wei, Sicong Xie, Xiaoying Xing, Yi Xu, Zhijun Xu, Hongwei Xue, Qingcheng Zeng, Di Zhang, Guannan Zhang, Haochen Zhang, Tianlong Zhang, Tianyu Zhao, Tianyu Zhao, Yanjun Zheng, Jialong Zhu, Zijian Zou"
         ],
-        "categories": []
+        "categories": [
+          "cs.AI"
+        ]
       }
     },
     {
-      "id": "2609.11929",
-      "title": "SenseNova-U1.5: Towards Native Unified Visual Intelligence",
-      "url": "https://arxiv.org/abs/2609.11929",
-      "source": "Hugging Face Daily Papers / arXiv",
-      "published_at": "2026-09-11T00:00:00+00:00",
-      "summary": "We launch SenseNova-U1.5, an 8B-MoT native unified multimodal model that understands, reasons about, and generates visual content within an encoder-free and VAE-free architecture. We strengthen its visual interface through spatially coherent patch reconstruction and scale its training with carefully curated generation and editing data, improved task formulation, structural prompt enhancement, and native resolutions of up to 4K. For post-training, we optimize specialized experts for visual aesthetics, bilingual text rendering, infographic generation, and image editing, and consolidate their capabilities through multi-expert on-policy distillation. Across extensive evaluations, SenseNova-U1.5 largely advances image fidelity, text rendering, complex composition, multi-reference editing, and interleaved generation, while improving instruction following and preserving subject identity, geometry, and unmodified regions. Despite limited exposure to structured formats in its generation data, SenseNova-U1.5 generalizes effectively to long, complex, and structured visual instructions, further proving that multimodal understanding can transfer to visual planning and creation. Together, these findings position native unified modelling as a promising path towards systems that perceive, reason and create within a fully end-to-end framework. We will open-source training code, including supervised fine-tuning, reinforcement learning, and on-policy distillation.",
-      "score": 211,
+      "id": "2609.11987",
+      "title": "Harness or Model? Isolating the Harness Effect in Agentic Coding with a Contamination-Controlled Private Suite",
+      "url": "https://arxiv.org/abs/2609.11987",
+      "source": "arXiv",
+      "published_at": "2026-09-14T04:00:00+00:00",
+      "summary": "arXiv:2609.11987v1 Announce Type: new Abstract: An agentic coding system couples a language model to a harness: the tools, prompts and control flow that turn a chat model into an autonomous software engineer. Vendors ship harnesses tuned to their own models, and practitioners assume the vendor-native pairing solves more tasks. We measure that assumption with paired same-model contrasts on a private, contamination-controlled suite of 256 repository and post-cutoff contest tasks. The same 80 tasks ran under claude-agent-sdk and under deepagents on claude-opus-4-8, and under the openai-codex SDK and deepagents on gpt-5.5, with gemini-3.5-flash and deepseek-v3.2 as side cells. 792 of 800 planned runs were graded by an isolated oracle. Neither contrast resolves an average advantage for either harness: -1.25 pp for Opus 4.8 (48.8% vs 50.0%, task-bootstrap 95% CI [-10.0, +7.5]) and +1.25 pp for GPT-5.5 (55.6% vs 54.4%, CI [-4.4, +6.9]). The Opus average combines opposite strata: the native harness trails by 9.0 pp on the 61 repository tasks and leads by 23.7 pp on the 19 contest tasks (label-permutation p = 0.003). The partition was chosen after seeing the data and needs a designed replication. Correctness and completion also separate: 22 of 81 runs cancelled at the wall-clock ceiling had produced a passing patch. Re-priced from raw per-turn usage at frozen list prices, the neutral harness cost 1.3 to 1.6 times as much per solved task on Opus 4.8 and 1.2 times on GPT-5.5. These are observed-usage estimates. On the Anthropic account 58 runs left no usage record, and allocating that spend to either cell would move the Opus ratio between 0.7 and 2.3, so the billed ordering is unresolved. This revision corrects an August 2026 manuscript whose cost figures rested on a usage-semantics defect in our own telemetry (Section 5.1). We release the orchestrator, grading oracle, reanalysis code and derived aggregates. The tasks stay private.",
+      "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Haiwen Diao",
-          "Jiahao Wang",
-          "Chenjing Ding",
-          "Hanming Deng",
-          "Jiangnan Chen",
-          "Ruixi Zhang",
-          "Ruohui Wang",
-          "Wenwen Tong",
-          "Xiangyu Fan",
-          "Yubo Wang",
-          "Yue Zhu",
-          "Yuwei Niu",
-          "Zhengqi Bai",
-          "Zhiqian Lin",
-          "Zhitao Yang",
-          "Zhongang Cai",
-          "Bo Yang",
-          "Chen Feng",
-          "Chengguang Lv",
-          "Guangjia Liu",
-          "Guanlin Wang",
-          "Hanyu Zhang",
-          "Haojia Yu",
-          "Hongcan Xiao",
-          "Hongli Wang",
-          "Huan Wu",
-          "Huaping Zhong",
-          "Jian Fang",
-          "Jianan Fan",
-          "Jiaqi Li",
-          "Jiefan Lu",
-          "Jing Zuo",
-          "Jingcheng Ni",
-          "Junxiang Xu",
-          "Linjun Dai",
-          "Mutian Xu",
-          "Peishen Yan",
-          "Penghao Wu",
-          "Ruijie Mao",
-          "Ruisi Wang",
-          "Shihao Bai",
-          "Shuang Yang",
-          "Shuya Yang",
-          "Shuyan Zheng",
-          "Silei Wu",
-          "Siying Li",
-          "Tao Chu",
-          "Tianbo Zhong",
-          "Tongxi Zhou",
-          "Weichao Luo",
-          "Weichen Fan",
-          "Wenhao Jia",
-          "Wenjie Gao",
-          "Xiangli Kong",
-          "Yan Li",
-          "Yang Yong",
-          "Zimo Wen",
-          "Zixuan Qian",
-          "Wenxiu Sun",
-          "Ruihao Gong",
-          "Quan Wang",
-          "Lewei Lu",
-          "Lei Yang",
-          "Ziwei Liu",
-          "Dahua Lin"
+          "Mohsen Arjmandi"
         ],
-        "categories": []
+        "categories": [
+          "cs.AI",
+          "cs.CL",
+          "cs.SE"
+        ]
       }
     },
     {
-      "id": "2609.07064",
-      "title": "SpatialBlock: Enhancing Spatial Intelligence in LVLMs via Synthetic Block-Stacking Problem",
-      "url": "https://arxiv.org/abs/2609.07064",
-      "source": "Hugging Face Daily Papers / arXiv",
-      "published_at": "2026-09-11T00:00:00+00:00",
-      "summary": "Large Vision-Language Models (LVLMs) have achieved strong performance on diverse visual tasks, yet their ability to reconstruct and reason about the 3D structure of the scene depicted in 2D images -- referred to as spatial intelligence -- remains limited. Existing approaches attempt to address this gap by using real-scene spatial question answering datasets that require dense geometric annotations. However, constructing such labels is costly, time-consuming, and often noisy due to reliance on external perception modules. In this work, we propose a novel paradigm inspired by human cognitive development: learning foundational spatial skills through structured block-manipulation tasks. We introduce SpatialBlock-15k, a synthetic dataset of 15,000 block-stacking problems covering 3D-to-2D projection, viewpoint transformation, and structural combination. The dataset further incorporates controlled color modulation as visual cues to encourage anchor-based reasoning in visually complex conditions. Experiments demonstrate that LVLMs trained on our dataset through either direct answering or reasoning-based prediction significantly outperform baselines and generalize to real-world spatial tasks, despite the dataset's synthetic and compact nature. Code and data are available at https://github.com/rsoohyun/SpatialBlock.",
-      "score": 115,
+      "id": "2609.12035",
+      "title": "Reading the Whole Heart: Latent-Attention Masked Autoencoders for Multimodal Cardiac Representation Learning",
+      "url": "https://arxiv.org/abs/2609.12035",
+      "source": "arXiv",
+      "published_at": "2026-09-14T04:00:00+00:00",
+      "summary": "arXiv:2609.12035v1 Announce Type: new Abstract: Cardiovascular diagnosis rests on integrating complementary modalities, like ECG, echocardiography, chest radiographs, and clinical variables, each capturing distinct but correlated aspects of cardiac physiology. Yet most medical foundation models remain modality-specific, combining modalities only for finetuning or post-training. This discards the cross-modal evidence clinicians naturally integrate and ignores the structure within each modality. We introduce Latent-Attention Masked Autoencoders (LAMAE), a multimodal, structure-aware masked autoencoder that jointly learns patient-level representations during self-supervised pretraining. Rather than fusing modalities post hoc, LAMAE exchanges information directly in the latent space through a shared latent-attention module operating over a study-view-entity hierarchy, enabling aggregation of variable observations and graceful handling of missing modalities. Pretrained on over 1.2 million MIMIC-IV hospital stays, LAMAE outperforms modality-specific pretraining and strong contrastive and vision-language baselines across multimodal hospital-stay tasks, such as in-hospital mortality, ICD-10 and DRG coding, and length of stay, while remaining competitive on unimodal tasks. These gains persist even when only a single modality is available at test time, showing that modeling both intra- and inter-modal structure yields more robust, transferable representations.",
+      "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Soohyun Ryu",
-          "Sohee Kim",
-          "Eunho Yang"
+          "Andrea Agostini, Simon B\\\"ohi, Moritz Vandenhirtz, Samuel Ruiperez-Campillo, Max Kr\\\"ahenmann, Silke M\\\"uhlstedt, Irene Cannistraci, Ece \\\"Ozkan Elsen, Julia E. Vogt, Thomas M. Sutter"
         ],
-        "categories": []
+        "categories": [
+          "cs.AI"
+        ]
       }
     },
     {
-      "id": "2609.05903",
-      "title": "EvoSafeHarness: Evolving Model- and Domain-Specific Harnesses for Securing Agents",
-      "url": "https://arxiv.org/abs/2609.05903",
-      "source": "Hugging Face Daily Papers / arXiv",
-      "published_at": "2026-09-11T00:00:00+00:00",
-      "summary": "Large Language Model (LLM) agents are turning language into real-world effects, making safety necessary against both indirect prompt injections and direct harmful requests. System-level safety harnesses add an enforcement layer beyond model-level defenses, but existing harnesses are usually designed once by experts and applied across heterogeneous models and domains. Effective protection is deployment-dependent: models differ in how much enforcement they need before utility declines, while domains differ in the effects, state, and action sequences that must be governed. A harness that is strict enough for one model may over-block another, and a policy that transfers across domains may miss application-specific safety relations. We present EvoSafeHarness, a safety-specific optimization framework that synthesizes a deployable harness for a frozen model in a target domain. It jointly searches a natural-language policy and executable code logic, guided by model behavior, domain specifications, and fresh-context adversarial review to reject benchmark-specific rules. Across four agent benchmark families, EvoSafeHarness achieves a stronger safety-utility frontier than fixed expert-designed defenses. On DecodingTrust-Agent, it reduces average attack success rate from 45.6% to 10.0% at a 3.3-point utility cost and achieves the best score in 14 of 15 cells. On AgentDojo, it reaches 82.8% utility at 0.0% ASR, twice CaMeL's utility at the same operating point, and transfers unchanged to unseen AgentDyn suites. It also achieves the best score on Agent-SafetyBench for every victim and keeps mean ASR below 20% under adaptive PAIR attacks with a refinement budget of 16. Analysis shows that domain semantics determine which safety relations and trajectory state are needed, while model and runtime behavior determine how and where those relations should be enforced.",
-      "score": 56,
+      "id": "2609.12101",
+      "title": "Competence-Gated Pooling of Language Models and Priors for Event Forecasting",
+      "url": "https://arxiv.org/abs/2609.12101",
+      "source": "arXiv",
+      "published_at": "2026-09-14T04:00:00+00:00",
+      "summary": "arXiv:2609.12101v1 Announce Type: new Abstract: In hybrid forecasting, a language model is often one of several available signals. A system may already have a market, crowd, or statistical forecast and must decide whether the model adds useful information or should be ignored. The relevant target is therefore not standalone model accuracy, but relative competence, defined as the model's marginal value beyond the available external forecast. Under Brier loss, we characterize when model disagreement can improve an external forecast and derive the gain from using domain-specific rather than global pooling weights. We then introduce a competence gate that estimates domain-level source weights from resolved outcomes, shrinks uncertain estimates toward a global weight, and recalibrates the pooled forecast. Across 2,357 resolved binary questions and five language models, the gate improves the main external baseline from 0.0771 to 0.0732 Brier and significantly outperforms global forecast combinations. The gain remains significant under leakage controls and against a leakage-safe time-series prior on the pooled structured set, with separate evidence on FRED. In contrast, the gate gives no significant improvement on the official ForecastBench market subset, where it largely defers to the market. Across four Qwen models, verbal confidence does not reliably identify when the model outperforms the external forecast, while outcome-estimated competence supports better abstention decisions. These results provide a practical approach for selective model use based on measured marginal value.",
+      "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Nanxi Li",
-          "Yingzi Ma",
-          "Yulong Cao",
-          "Edward Suh",
-          "Bo Li",
-          "Dawn Song",
-          "Chaowei Xiao"
+          "Aditi Tiwari, Aashrith Bandaru, Heng Ji"
         ],
-        "categories": []
+        "categories": [
+          "cs.AI"
+        ]
       }
     },
     {
-      "id": "2609.11317",
-      "title": "Mi-Ripple: Restoring Images Degraded by Iterative AI Editing",
-      "url": "https://arxiv.org/abs/2609.11317",
-      "source": "Hugging Face Daily Papers / arXiv",
-      "published_at": "2026-09-11T00:00:00+00:00",
-      "summary": "Iterative reference-conditioned image editing can introduce grid-like and granular textures, commonly described as digital ripple. We present Mi-Ripple, a diagnosis-guided restoration workflow that suppresses this digital ripple while protecting image structure. Mi-Ripple separates periodic lattice artifacts from content-entangled granular texture, then combines selective spectral notching, structure-aware smoothing, and cleaned-reference regeneration. This separation enables low-distortion filtering when artifacts are spectrally isolated and visual reconstruction when filtering would erase legitimate detail. Across fourteen notch-only executions, whole-image residual standard deviation is 0.08--0.44 in CIELAB lightness units. In a paired regeneration example, reference cleaning reduces output debris density by 45\\%. Mi-Ripple links measurable artifact reduction to visibly cleaner generated images, rather than optimizing a spectral score alone.",
-      "score": 47,
+      "id": "2609.12105",
+      "title": "Language Is an Insufficient Substrate for Quantitative Reasoning, and Consequential Domains Need Large Quantitative Models",
+      "url": "https://arxiv.org/abs/2609.12105",
+      "source": "arXiv",
+      "published_at": "2026-09-14T04:00:00+00:00",
+      "summary": "arXiv:2609.12105v1 Announce Type: new Abstract: The prevailing assumption in applied machine learning is that progress on consequential quantitative decisions such as pricing risk, allocating capital, triaging patients, or containing a network intrusion will follow from progress in large language models (LLMs). A language model is trained on a representation of the world that was produced by human description; description is a lossy encoding of the quantitative record, and the loss is irreversible: no downstream model, at any scale, can recover from a description what the description did not encode. We formalize this as a property of the representation on which a model is trained rather than of the model capacity, and we identify three further properties that consequential settings demand of a model and that a language substrate cannot supply by construction: reproducibility, lineage from every output back to the source records that produced. it, and calibrated uncertainty. We argue that these properties define a distinct model class, which we call the Large Quantitative Model (LQM).",
+      "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Jiayin Chen",
-          "Yicheng Xu",
-          "Muting Wang"
+          "Reuben Vandeventer, David Imrem, David J. Wild"
         ],
-        "categories": []
+        "categories": [
+          "cs.AI",
+          "cs.LG"
+        ]
       }
     }
   ]
