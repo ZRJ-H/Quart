@@ -1,4 +1,4 @@
-const DAILY_SECTIONS = ["ai-news", "daily-news", "arxiv-daily", "hn-daily"]
+const DAILY_SECTIONS = ["AI科技动态", "时政要闻", "AI论文日报", "Hacker-News"]
 const SHANGHAI_DATE_FORMATTER = new Intl.DateTimeFormat("en-CA", {
   timeZone: "Asia/Shanghai",
   year: "numeric",
@@ -69,14 +69,17 @@ async function dispatchWorkflow(fetchImpl, env) {
 
 export async function runDailyWatchdog(env, options = {}) {
   const fetchImpl = options.fetch || fetch
+  const logger = options.logger || console
   const date = shanghaiDate(options.now || new Date())
-  const missing = (await Promise.all(
-    DAILY_SECTIONS.map((section) => checkPage(fetchImpl, env.SITE_BASE_URL, section, date)),
-  )).filter(Boolean)
+  const missing = (
+    await Promise.all(
+      DAILY_SECTIONS.map((section) => checkPage(fetchImpl, env.SITE_BASE_URL, section, date)),
+    )
+  ).filter(Boolean)
 
   if (missing.length === 0) {
     const result = { status: "healthy", date, missing }
-    console.log(JSON.stringify(result))
+    logger.log(JSON.stringify(result))
     return result
   }
   if (!env.GITHUB_TOKEN) throw new Error("watchdog requires GITHUB_TOKEN")
@@ -84,13 +87,12 @@ export async function runDailyWatchdog(env, options = {}) {
   const runs = await getWorkflowRuns(fetchImpl, env)
   if (runs.some((run) => run && (run.status === "queued" || run.status === "in_progress"))) {
     const result = { status: "collection-active", date, missing }
-    console.log(JSON.stringify(result))
+    logger.log(JSON.stringify(result))
     return result
   }
 
   await dispatchWorkflow(fetchImpl, env)
   const result = { status: "dispatched", date, missing }
-  console.log(JSON.stringify(result))
+  logger.log(JSON.stringify(result))
   return result
 }
-
