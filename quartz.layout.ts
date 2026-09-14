@@ -21,7 +21,7 @@ const explorerSort = (a: FileTrieNode, b: FileTrieNode): number => {
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [],
+  afterBody: [Component.SearchAIMobileLauncher()],
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/FDogeLover/Quart",
@@ -78,7 +78,11 @@ export const defaultContentPageLayout: PageLayout = {
     }),
     Component.Explorer({ filterFn: explorerFilter, sortFn: explorerSort }),
   ],
-  right: [Component.SearchAI({ workerUrl: "https://doge-wiki-search.ruijiezhou22.workers.dev" }), Component.DesktopOnly(Component.TableOfContents()), Component.Backlinks()],
+  right: [
+    Component.SearchAI({ workerUrl: "https://doge-wiki-search.ruijiezhou22.workers.dev" }),
+    Component.DesktopOnly(Component.TableOfContents()),
+    Component.Backlinks(),
+  ],
 }
 
 // components for pages that display lists of pages  (e.g. tags or folders)

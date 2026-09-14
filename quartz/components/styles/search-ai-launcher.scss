@@ -1,0 +1,45 @@
+.search-fab {
+  display: none;
+  position: fixed;
+  bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+  right: 16px;
+  width: auto;
+  min-width: 112px;
+  height: 52px;
+  padding: 0 18px;
+  gap: 8px;
+  border-radius: 999px;
+  background: var(--secondary);
+  color: #fff;
+  border: none;
+  font-family: inherit;
+  font-size: 0.94rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.28);
+  z-index: 8000;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+
+  svg {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.28);
+  }
+
+  &:active {
+    transform: scale(0.94);
+  }
+
+  @media (max-width: 1199px) {
+    display: flex;
+  }
+}

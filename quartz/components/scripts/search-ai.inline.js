@@ -640,7 +640,10 @@
 
   let _modal = null
   function getModal() {
-    if (!_modal) _modal = createModalDOM()
+    if (!_modal || !_modal.isConnected) {
+      _modal = document.getElementById('search-modal-backdrop') || createModalDOM()
+      bindModalControls(_modal)
+    }
     return _modal
   }
 
@@ -792,24 +795,42 @@
     }
   }
 
-  function initModal() {
-    const modal = getModal()
+  function bindModalControls(modal) {
+    if (modal.dataset.controlsBound === 'true') return
+    modal.dataset.controlsBound = 'true'
 
-    // Backdrop click closes
     modal.addEventListener('click', e => { if (e.target === modal) closeModal() })
-
-    // Close / search buttons
-    document.getElementById('modal-close-btn').addEventListener('click', closeModal)
-    document.getElementById('modal-search-btn').addEventListener('click', doModalSearch)
-
-    // Modal input: Enter = search, Esc = close
-    document.getElementById('modal-search-input').addEventListener('keydown', e => {
+    modal.querySelector('#modal-close-btn').addEventListener('click', closeModal)
+    modal.querySelector('#modal-search-btn').addEventListener('click', doModalSearch)
+    modal.querySelector('#modal-search-input').addEventListener('keydown', e => {
       if (e.key === 'Enter') doModalSearch()
       if (e.key === 'Escape') closeModal()
     })
+  }
+
+  function prepareSearchLaunchers() {
+    document.querySelectorAll('.sidebar .ai-search-box').forEach(box => {
+      const sidebarInput = box.querySelector('.ai-search-input')
+      if (sidebarInput) {
+        sidebarInput.setAttribute('readonly', 'readonly')
+        sidebarInput.setAttribute('placeholder', '向 AI 提问...')
+      }
+
+      if (!box.querySelector('.search-kbd-hint')) {
+        const hint = document.createElement('kbd')
+        hint.className = 'search-kbd-hint'
+        hint.textContent = /Mac|iPhone|iPad/.test(navigator.userAgent) ? '⌘K' : 'Ctrl K'
+        box.appendChild(hint)
+      }
+    })
+  }
+
+  function initModal() {
+    getModal()
 
     // Global ESC
     document.addEventListener('keydown', e => {
+      const modal = getModal()
       if (e.key === 'Escape' && modal.style.display !== 'none') closeModal()
     })
 
@@ -820,53 +841,25 @@
         const tag = active ? active.tagName.toLowerCase() : ''
         if ((tag === 'input' && !active.hasAttribute('readonly')) || tag === 'textarea' || (active && active.isContentEditable)) return
         e.preventDefault()
+        const modal = getModal()
         modal.style.display !== 'none' ? closeModal() : openModal()
       }
     })
 
-    // Mobile FAB
-    ;(function () {
-      const fab = document.createElement('button')
-      fab.id = 'search-fab'
-      fab.className = 'search-fab'
-      fab.setAttribute('aria-label', '搜索知识库')
-      const NS = 'http://www.w3.org/2000/svg'
-      const svg = document.createElementNS(NS, 'svg')
-      svg.setAttribute('viewBox', '0 0 24 24')
-      svg.setAttribute('fill', 'none')
-      svg.setAttribute('stroke', 'currentColor')
-      svg.setAttribute('stroke-width', '2.5')
-      svg.setAttribute('stroke-linecap', 'round')
-      svg.setAttribute('stroke-linejoin', 'round')
-      svg.setAttribute('aria-hidden', 'true')
-      const circle = document.createElementNS(NS, 'circle')
-      circle.setAttribute('cx', '11'); circle.setAttribute('cy', '11'); circle.setAttribute('r', '8')
-      const line = document.createElementNS(NS, 'path')
-      line.setAttribute('d', 'm21 21-4.3-4.3')
-      svg.appendChild(circle); svg.appendChild(line)
-      fab.appendChild(svg)
-      fab.addEventListener('click', openModal)
-      document.body.appendChild(fab)
-    })()
-
-    // Make sidebar search boxes into triggers
-    document.querySelectorAll('.sidebar .ai-search-box').forEach(box => {
-      box.addEventListener('click', e => {
+    // Delegation keeps launchers working after Quartz swaps page content.
+    document.addEventListener('click', e => {
+      const target = e.target instanceof Element
+        ? e.target.closest('.search-fab, .sidebar .ai-search-box')
+        : null
+      if (target) {
         e.preventDefault()
         e.stopPropagation()
         openModal()
-      })
-      const sidebarInput = box.querySelector('.ai-search-input')
-      if (sidebarInput) {
-        sidebarInput.setAttribute('readonly', 'readonly')
-        sidebarInput.setAttribute('placeholder', '搜索知识库...')
       }
-      // ⌘K hint badge
-      const hint = document.createElement('kbd')
-      hint.className = 'search-kbd-hint'
-      hint.textContent = /Mac|iPhone|iPad/.test(navigator.userAgent) ? '⌘K' : 'Ctrl K'
-      box.appendChild(hint)
     })
+
+    prepareSearchLaunchers()
+    document.addEventListener('nav', prepareSearchLaunchers)
   }
 
   initModal()
