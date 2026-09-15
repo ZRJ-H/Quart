@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-09-14T20:58:02.339992+08:00",
+  "cached_at": "2026-09-15T11:01:44.881786+08:00",
   "articles": [
     {
-      "id": "49688695",
-      "title": "Fable 5.1 Solves the Cyphral Distich, a 370-year-old cipher",
-      "url": "https://www.vals.ai/blogs/fable-solves-cyphral-distich",
+      "id": "49700661",
+      "title": "Steam Frame starts at $1059",
+      "url": "https://store.steampowered.com/hardware/steamframe",
       "source": "Hacker News",
-      "published_at": "2026-09-13T21:06:13+00:00",
-      "summary": "Fable 5.1 Solves the Cyphral Distich, a 370-year-old cipher",
-      "score": 1065,
-      "comments": 470,
-      "discussion_url": "https://news.ycombinator.com/item?id=49688695",
+      "published_at": "2026-09-14T17:27:55+00:00",
+      "summary": "Steam Frame starts at $1059",
+      "score": 533,
+      "comments": 407,
+      "discussion_url": "https://news.ycombinator.com/item?id=49700661",
       "extra": {
         "top_comments": [
-          "> Various people attempted to decipher it, but it seems they were missing one crucial hint. They tried methods like frequency analysis, substitution, and homophonic substitution, and none of these approaches worked. That’s because they missed one easy clue.It appears that is not true.Someone here [1] has found a [German] blog [2] writing about this cipher. There are two comments (Jan and Helmut) from 2014 under the blog post which posit that it's a book cipher.Here's one of those comments [in German]:\"Die Lösung müsste eigentlich mit Hilfe des Buches zu finden sein (..who worthily will hear or read this book..)\"I find it curious that the article here claims that people have attempted to decipher it and lists a few methods that are quite similar to what’s proposed in the comments under that post, except for those two comments.[1] https://news.ycombinator.com/item?id=49689516 [2] https://scienceblogs.de/klausis-krypto-kolumne/2014/11/17/we...",
-          "Prior to the \"Elicitation\" section, you'd think this article was written by a cryptographer or baroque historian who had been trying to solve this particular puzzle for years - failing embarrassingly until they presented the problem to Claude. However, as far as I can tell (I too am not a baroque historian), there isn't much reason to think this cipher was well-known or studied.But as they do eventually explain, the LLM's task wasn't solely to solve this specific problem, it was to first identify an unsolved problem it could solve. That's potentially more impressive and difficult than solving the unremarkable cipher itself.",
-          "That's pretty cool, especially the fact that it chose the problem itself. The uncovered text, though:> O GOD UPHOLD KING CHARLS THE SECOND AND MAKE HIM THE SUPREME RULER OF THIS LANDThat's like working out a cereal box cipher and finding the message is \"Do your homework and tidy your room\"."
+          "Half-Life Alyx is the greatest gaming experience I have ever had the pleasure to witness. I now occasionally VR golf. It's a steep price for a niche with not a lot of games.",
+          "I know everyone is singing the praises of the Steam Frame's wireless capabilities but honestly, I just want my wired VR experience back.I had a Rift 2, Reverb G2, then Quest 2 and eventually Quest 3. Despite the Quest 3 having a resolution similar to the G2, it looked more like the Rift 2 than the awe inspiring G2. Wireless gaming never looked as sharp and streaming over USB was also a very poor experience, with input latency and artifacting.Wireless headsets also _suck_ for simulators and productivity - where a battery only adds weights and a wire is not noticable.Personally, I would love to see a wired headset that resembles the bigscreen beyond but with inside out tracking and a universal face gasket. For wireless experiences, I'd love to be able to plug my phone in, put it in my back pocket and use it that way.That sort of \"head mounted display\"-first approach would make it practical to use the device for productivity / screen replacement while gaming would be dependant on your phone or computer.",
+          "GamersNexus released a video comparing the Frame VR vs Meta Quest 3 today, worth a watch for the Frame review alone:https://www.youtube.com/watch?v=vcerOYY_K1g"
         ]
       }
     },
     {
-      "id": "49689048",
-      "title": "Registration without a phone number on Signal will use zero-knowledge proofs",
-      "url": "https://community.signalusers.org/t/registration-without-a-phone-number/2222?page=10",
+      "id": "49701004",
+      "title": "iOS 27, iPadOS 27, and macOS 27",
+      "url": "https://www.apple.com/newsroom/2026/09/major-updates-for-apples-software-platforms-are-now-available/",
       "source": "Hacker News",
-      "published_at": "2026-09-13T21:47:04+00:00",
-      "summary": "Registration without a phone number on Signal will use zero-knowledge proofs",
-      "score": 316,
-      "comments": 159,
-      "discussion_url": "https://news.ycombinator.com/item?id=49689048",
+      "published_at": "2026-09-14T17:50:29+00:00",
+      "summary": "iOS 27, iPadOS 27, and macOS 27",
+      "score": 419,
+      "comments": 479,
+      "discussion_url": "https://news.ycombinator.com/item?id=49701004",
       "extra": {
         "top_comments": [
-          "For those who missed it, unrelated to this specific ZKP thing the release cycle also now permits Android tablets without a SIM to be first-class adjunct devices without using wierd tricks or alternate clients. It may permit them to be the initiation/sign-on device, which would invoke the ZKP, but the point for me as an existing phone number denominated user, the point is I can be on my tablet with true signal now. Nothing against molly, wanted it in the base.",
-          "Signal needs to release all the infra automation code behind their backend. How they setup and manage it all should not be secret. It also makes it easy to rebuild if for some reason they are compromised. They've ghosted multiple people about this question. There's no reason a 501(c)(3) shouldn't release it.",
-          "What a headline!Meanwhile SimpleX and Delta Chat (over chatmail protocol) have it by default for years without any payment requirements, offer relatively better level of data security and are available on F-Droid main repo."
+          "I've been using it for several months since the developer beta came out; overall I'm extremely positive on it. One of their better releases that seemingly focused more on quality and refinements than new-features.Siri is definitely worth using now, even if it remains still a work-in-progress/needs continued refinement. It can surprise you in good ways, but it isn't consistently good yet.The keyboard remains unfixed, as is tradition. The same issues they've \"fixed\" like three or four releases now, seemingly are identically broken, and I'm lost faith they CAN fix it.The iOS Keyboard and Search on Windows, are like the perpetually broken things that both companies have \"fixed\" every year for the last ten+ years and yet... It is almost farcical as this point.",
+          "Was just looking over the Safari 27 release notes¹, which is part of macOS 27, and noticed this:Web DriverNew Features- Allow your agent to connect to a Safari browser for development and debugging via the Safari MCP server. (176038457)Related (From July 1st)Introducing the Safari MCP server for web developershttps://webkit.org/blog/18136/introducing-the-safari-mcp-ser...So that's interesting. On the other hand, looks like WebXR support for Safari will never come.---¹ https://developer.apple.com/documentation/safari-release-not...",
+          "At the bottom of the press release they have links to individual OS pages:* iOS 27: https://www.apple.com/os/ios/* iPadOS 27: https://www.apple.com/os/ipados/* macOS: https://www.apple.com/os/macos/* watchOS: https://www.apple.com/os/watchos/* visionOS: https://www.apple.com/os/visionos/* tvOS 27: no link.* Overview: https://www.apple.com/os/?version=no-hero"
         ]
       }
     },
     {
-      "id": "49690174",
-      "title": "Apple's Dimensional Drawings",
-      "url": "https://developer.apple.com/accessories/dimensional-drawings/",
+      "id": "49700477",
+      "title": "Pion, an agent designed to run any company autonomously",
+      "url": "https://andonlabs.com/blog/why-we-built-pion",
       "source": "Hacker News",
-      "published_at": "2026-09-14T00:11:21+00:00",
-      "summary": "Apple's Dimensional Drawings",
-      "score": 264,
-      "comments": 90,
-      "discussion_url": "https://news.ycombinator.com/item?id=49690174",
+      "published_at": "2026-09-14T17:16:06+00:00",
+      "summary": "Pion, an agent designed to run any company autonomously",
+      "score": 305,
+      "comments": 340,
+      "discussion_url": "https://news.ycombinator.com/item?id=49700477",
       "extra": {
         "top_comments": [
-          "What's ironic is that Apple does all their mechanical CAD work for their products in Siemens NX running in Windows VMs.",
-          "I wish overhead (cut away to passenger layout) and side scale drawings of all cars existed. That way you could directly compare the vehicles. You'd think such information would be needed (in the U.S.) by the NTSB; and, thus, be freely available.",
-          "Seems like this URL has only been live (at least first archived [0]) around May 2026, originally with only 13 products. Great to see them add more since then, now close to 90.0: https://web.archive.org/web/20260512182718/https://developer..."
+          "> The thing we considered the most troubling was whether AIs could autonomously acquire resources by running businesses.So we decided to build that to validate and confirm our fears.",
+          "Expect the 6AM layoff email to get rid of all meatbags, sent by the agent.J/K, scary as several studies have indicated they werent able to keep a vending machine profitable. Anyway, ...I do think a large amounf of tasks can be automated, though i believe supervision remains necessary for most. Especially when process can be externally influenced by injection. People can be influenced, but are (slightly) more judgemental",
+          "Correct me if I'm wrong but a human will be able to cut through the noise with quirky advertising, new/novel distribution methods, etc.Most of the bottleneck in business isn't building the things or sourcing, it's mostly advertising/sales.These specifically require doing something unique or interesting.Sure, maybe LLMs can help with fulfillment or operations, but distribution still remains the hard part."
         ]
       }
     },
     {
-      "id": "49688259",
-      "title": "Mullenweg has returned as CEO after attempted board ouster",
-      "url": "https://techcrunch.com/2026/09/12/automattic-confirms-mullenweg-has-returned-as-ceo-after-attempted-ouster-by-board/",
+      "id": "49699158",
+      "title": "Distributed Systems Classics (2017)",
+      "url": "https://nvartolomei.com/dist-sys-classics/",
       "source": "Hacker News",
-      "published_at": "2026-09-13T20:19:06+00:00",
-      "summary": "Mullenweg has returned as CEO after attempted board ouster",
-      "score": 209,
-      "comments": 281,
-      "discussion_url": "https://news.ycombinator.com/item?id=49688259",
+      "published_at": "2026-09-14T16:02:01+00:00",
+      "summary": "Distributed Systems Classics (2017)",
+      "score": 247,
+      "comments": 56,
+      "discussion_url": "https://news.ycombinator.com/item?id=49699158",
       "extra": {
         "top_comments": [
-          "Seems like nobody is actually reading the TFA which is a shame because what the article describes is truly mind boggling:>However, the board’s plan did not go smoothly. Seemingly declining to depart, Mullenweg booted other admins out of the company Slack and told employees everything had been worked out and that he was back in control of AutomatticWhat the article is actually reporting is that no one at Automatic is giving a straight answer not that the board caved and reversed their decision.",
-          "It does sound as if he has lost his grip on reality.> When TechCrunch asked Mullenweg if his comments about being back as CEO were legitimate, he promised a blog post was coming. When it arrived, however, it was about him buying a houseboat. When we asked if his comments about being back were also him trolling, he replied, “I’m not a troll I’m a pirate, obviously.”And if he's trolling, then I would argue that's also evidence towards having lost his grip on reality.",
-          "I hope someone eventually does a deep-dive on the organizational structure of WordPress and how much of a mess it is.As someone that’s pretty much worked in/with WP for my entire career, it’s always seemed like the worst of both worlds - distributed and slow-moving, yet still ultimately controlled to a massive extent by a single individual.These kinds of absurd situations just slowly push people toward Shopify, other CMSes, etc. There will be no grand exodus, because too many companies are intertwined to the WP ecosystem. But combined with AI, the horrible design of Gutenberg, and half a dozen other things, I really worry for the future of WP. At this point I generally only recommend it to people that need something extremely customized. Other platforms are easier to use and don’t have the soap opera drama."
+          "This is not a bad list for sure. Here are some deeper cuts for those looking for something a bit less mainstream:\"The Maintenance of Duplicate Databases\" https://datatracker.ietf.org/doc/html/rfc677 (AFAIK the genesis of the use of logical clocks in distributed systems).\"Chain Replication for Supporting High Throughput and Availability\" https://www.usenix.org/legacy/event/osdi04/tech/full_papers/... (Chain replication is how a huge percentage of real-world cloud-scale data replication is done).\"Brewer’s Conjecture and the Feasibility of Consistent, Available, Partition-Tolerant Web Services\" (The formalization of CAP, which caused a ton of very poor trade-off thinking in the decade that followed by defining Availability in a very goofy way. Still a classic.)\"Paxos Made Live\" https://research.google/pubs/paxos-made-live-an-engineering-... (Brought a much-needed engineering perspective to a conversation that was largely theoretical up until this time.)\"Practical Byzantine fault tolerance\" (Moved the conversation on Byzantine faults forward significantly).This is just a short selection. There's so much good stuff going back in the 70s and 80s distributed database literature, for example (and in the modern systems and DB literature too).",
+          "I am a Lamport admirer.I gradually realized that Lamport is more of the godfather of distributed system than Hinton is to deep learning. Lamport is less prominent than Shannon is to information theory. Shannon is the closest to any title of \"gold-like\" figure to a scientific discipline of universal relevance in modern society.Lamport specifically revealed a philosophical connections between computer systems and physics, in the parallel of distributed consensus to relativity theory. To me, the enlightenment is that, the relations between events happening in a distributed system, is more fundamental than their absolute ordering, thus the central role of an \"observer\". I haven't really analyzed if this realization is from Lamport's papers, or my general reading and thinking, but I am moderately confident that general readings are heavily influenced by Lamport's papers, or can be traced back to be compatible with Lamport's thinking. I have not seriously study if this connection is valid in depth, which might be another pure amateur speculation of mine.One thing I think Lamport falls short is that his writing is not easy to read and understand. I unconciously feel that Lamport (and Dario from Anthropic) probably share a hidden sense of intellectual supriority grew from their own experience throughout their career. So their writing (and Dario's gospel) all share a unchangable sense of narration from their own delicate and graceful ideas, much less of faciliating the understanding to their audience. In this cateogry, Shannon is abosolutely superior in any measure, in his writing, ideas are so naturally presented, although the implications of the ideas remain elusive due to the inherent depth.Also, among the 3 prominent figures of modern AI: Hinton/Bengio are more like Shannon, Lecun is closer to Lamport.Enough random rambling. Lamport, as indicated by the outweight presence in this list, is no doubt the single most important scientist in distributed systems.",
+          "As always, lists like these don’t include Joe Armstrong's PhD thesis “Making reliable distributed systems in the presence of software errors” - http://erlang.org/download/armstrong_thesis_2003.pdf"
         ]
       }
     },
     {
-      "id": "49690554",
-      "title": "The case against JPEG XL",
-      "url": "https://giannirosato.com/blog/post/case-against-jxl/",
+      "id": "49704008",
+      "title": "Amazon vs. Perplexity – U.S. Court of Appeals for the Ninth Circuit",
+      "url": "https://law.justia.com/cases/federal/appellate-courts/ca9/26-1444/26-1444-2026-08-04.html",
       "source": "Hacker News",
-      "published_at": "2026-09-14T01:02:37+00:00",
-      "summary": "The case against JPEG XL",
-      "score": 201,
-      "comments": 267,
-      "discussion_url": "https://news.ycombinator.com/item?id=49690554",
+      "published_at": "2026-09-14T21:05:22+00:00",
+      "summary": "Amazon vs. Perplexity – U.S. Court of Appeals for the Ninth Circuit",
+      "score": 179,
+      "comments": 185,
+      "discussion_url": "https://news.ycombinator.com/item?id=49704008",
       "extra": {
         "top_comments": [
-          "The article makes a good point: JPEG XL is amazing but not specifically for the typical Web use cases, compared to AVIF. But the conclusion doesn't follow. Having an excellent and versatile format supported by browsers is very useful!Maybe a lossless re-encoding of my website JPEGs to gain 20% size is not worth the 33% longer decode, and maybe the website doesn't need very high resolution images or more than 12 bits per channel. But my personal archives can definitely use that and it's great that such files can be viewed everywhere without specialized tooling, including served on the intranet and indeed the Web.In summary JPEG XL easily beats AVIF on the not-so-long tail of use cases and having compatible viewers everywhere is quite useful. And with JPEG XL becoming part of PDF, it will soon be common use cases too.As for the rest of the article: there are interesting points in the benchmark section but I think it's too early in the JPEG XL adoption cycle to draw conclusions. One thing bothers me though: There is a single picture comparison (with tag line \"results speak for themselves\") and I find it quite misleading: it's just picking one point on the \"bytes received\" line that looks best for AVIF compared to JPEG XL. Try it yourself and you'll see JPEG XL shows something already at 2KB while AVIF has nothing until 8KB, and JPEG XL looks better than AVIF after 100KB.",
-          "A potentially major issue I have with AVIF is that because it is based on a video format, any hardware decoding support AVIF will get is likely to be restrained to common video scenarios. This can result in eg. only 4:2:0 YUV being supported by hardware decoders, as that's the upper limit of AV1 Main Profile (and thus the limit of AVIF Baseline Profile). And 4:2:0 is just a poor fit for certain categories of images (like various kinds of illustrations, screenshots, etc). I would not be very happy about a web where lossy 4:4:4 image compression would be heavily discouraged with modern formats.Also, good lossless compression absolutely does matter for the web as well. Lossy images just cannot be used in all circumstances - like when comparing compression quality (especially of videos), for example!EDIT: To give an additional example, pixel art is an entire field of art (which is very much still active today) where both lossless compression is a must and where 4:2:0 would be absolutely catastrophic for quality.",
-          "\"For non-photographic images, the argument that “they should be vector images” doesn't hold up because many images could be vector images but aren't, and they can't be vectorized perfectly. “The world should be different” is not a justifiable defense against optimizing for the way the world actually is.\"This is a good paragraph. I see people forget to apply that last sentence all the time."
+          "Can't comment on the legal basis in the eyes of CFAA or DAFA, but from a business perspective AI is a legit threat to Amazon because headless Amazon makes it more difficult for Amazon to sell ads, which is a large part of their revenue.Meaning, even if merchants would have a difficult time moving from Amazon to an AI native version of Amazon, this is still a threat.",
+          "I'm naive on the law around this, but it seems like Amazon.com shouldn't have standing here. What Perplexity does, from my perspective, is essentially the same as when I allow Firefox, Chrome, or Safari (or any other browser software) to see my credentials and access Amazon's website on my behalf.",
+          "People don’t realize how big of a threat LLMs are to marketplaces like Amazon, because down the line people will just be talking to AI agents to help them find products, check out, do all of these things.So you’re probably like, why can’t I just use ChatGPT to do that? And you can, but ChatGPT is trying to become the new Amazon. They are trying to vet stores that can check out through ChatGPT officially, and so you’re just trading one master for another.It’s why I’m building an open-source, decentralized, interoperable marketplace. It’s powered by agentic commerce and we include a list of vetted stores but you can bring your own."
         ]
       }
     },
     {
-      "id": "49693610",
-      "title": "EuroBirdPortal – Live bird movements across Europe",
-      "url": "https://www.eurobirdportal.org/ebp/en/",
+      "id": "49698699",
+      "title": "A Beginning for Mathematics",
+      "url": "https://www.daniellitt.com/blog/2026/9/13/a-beginning-for-mathematics/",
       "source": "Hacker News",
-      "published_at": "2026-09-14T08:25:47+00:00",
-      "summary": "EuroBirdPortal – Live bird movements across Europe",
-      "score": 126,
-      "comments": 46,
-      "discussion_url": "https://news.ycombinator.com/item?id=49693610",
+      "published_at": "2026-09-14T15:33:07+00:00",
+      "summary": "A Beginning for Mathematics",
+      "score": 175,
+      "comments": 103,
+      "discussion_url": "https://news.ycombinator.com/item?id=49698699",
       "extra": {
         "top_comments": [
-          "I see it's a portal tracking bird data from other websites. I am doing the same but for East Africa, not live birds but generally monitoring biodiversity, what is happening from ebird, to Xeno-canto to iNaturalist every week. Any new research grade species, new updates to ebird and XC sound additions. East Africa is very under monitored compared to other places. Still work in progress. https://platform.maiyoinstitute.org/",
-          "It's odd that you can see the borders between Belgium and France for various birds (like the swift and cuckoo), same for the border between Germany and Poland.I wonder why that is? There are no topological features defining these borders. Maybe the data is normalised in some way across countries?",
-          "Website doesn't really work properly. As soon as I change the birds and update, it shows 0 birds for entire timespan."
+          "The author argues for evaluating Ph.D. candidates based more on the oral thesis defense than on the actual thesis.By essentially the same reasoning, I’ve been arguing for prioritizing in-person design/code reviews over code-only async PR comments.The important thing is to verify that the human has a coherent design in mind and can demonstrate that it got implemented, regardless of who or what was at the keyboard. “I dunno, I guess Claude thought this was a good idea” is not a coherent design.",
+          "As someone who has a degree in math, I still can't help but think mathematicians are getting a little bit of a comeuppance. In a lot of areas of mathematics there had been little effort to make the work understandable and leaves numerous folks who could benefit from the knowledge on the outside looking in. Now AI comes along and do the same to mathematicians. Makes me chuckle a little bit.",
+          "I’m not a mathematician, but if I were I would imagine the main attraction would be the act of thinking hard and solving problems. Maths felt like the ultimate profession for someone who loved puzzle solving. If you delegate the thinking, any percent of it to an LLM, I don’t think it’s maths anymore. Might as well join any other job and earn better money now. A completely ludicrous proposition, that maths will no longer involve mathematical problem solving."
         ]
       }
     },
     {
-      "id": "49695459",
-      "title": "XCancel suspended \"due to a new development in the ongoing legal proceedings\"",
-      "url": "https://xcancel.com/twitter",
+      "id": "49698607",
+      "title": "Principles for Fast Tokio Applications",
+      "url": "https://dial9-rs.github.io/blog/principles-for-fast-tokio-applications/",
       "source": "Hacker News",
-      "published_at": "2026-09-14T12:05:52+00:00",
-      "summary": "XCancel suspended \"due to a new development in the ongoing legal proceedings\"",
-      "score": 90,
+      "published_at": "2026-09-14T15:27:56+00:00",
+      "summary": "Principles for Fast Tokio Applications",
+      "score": 169,
       "comments": 44,
-      "discussion_url": "https://news.ycombinator.com/item?id=49695459",
+      "discussion_url": "https://news.ycombinator.com/item?id=49698607",
       "extra": {
         "top_comments": [
-          "Of more concern, the Nitter github repository was permanently archived a couple of days ago.https://github.com/zedeus/nitter",
-          "Thanks Elon, now we know that scraping is illegal! Very good to clarify that for future proceedings against the AI thieves.",
-          "Free speech absolutist, btw."
+          "\"Be careful with mutexes\" is good advice, but I'm surprised it doesn't explicitly call out the various channels that tokio provides as alternatives (detailed here: https://docs.rs/tokio/latest/tokio/sync/index.html). There are a variety of options that fit different use cases, and you don't even need to enable the runtime feature to use them (e.g. if you want to do a single check for completion rather than await). I'd estimate that at least half of the bottlenecks I've seen with mutexes when using tokio could have been avoided by not even using a mutex at all and instead passing the data that's truly needed across different tasks with some type of channel.The other trick I've used a few times that's a bit hacky but can get the job done is when reading a snapshot of the data under a mutex is enough without needing to prevent other changes; if that's the case, you can just clone the data and drop the mutex to allow other uses move forward at the cost of the data potentially being stale.",
+          "For a true high performance you should use thread busy-spinning, CPU pinning and SPSC/MPSC ring buffers.",
+          "When you're at a point of tuning Tokio, consider taking a look at ef_vi/DPDK + SPDK"
         ]
       }
     },
     {
-      "id": "49693613",
-      "title": "A 386 PC for Your RP2350",
-      "url": "https://github.com/rh1tech/frank-386",
+      "id": "49699489",
+      "title": "How my e-reader lost its stripes",
+      "url": "https://www.serpentine.com/posts/2026/x3-stripes/",
       "source": "Hacker News",
-      "published_at": "2026-09-14T08:25:57+00:00",
-      "summary": "A 386 PC for Your RP2350",
-      "score": 88,
+      "published_at": "2026-09-14T16:23:16+00:00",
+      "summary": "How my e-reader lost its stripes",
+      "score": 157,
       "comments": 25,
-      "discussion_url": "https://news.ycombinator.com/item?id=49693613",
+      "discussion_url": "https://news.ycombinator.com/item?id=49699489",
       "extra": {
         "top_comments": [
-          "I had Slackware CDs in the nineties! They had a minimalist label and came with no jewel case (rubber band if I recall correctly).I've been meaning to rediscover the CICA and Simtel collections. Maybe that's what I needed!",
-          "Holy cow, a 386 with VGA and SoundBlaster on a $1 MCU?I recall VICE emulating the Brotkasten on 386 PCs some thirty years ago, later UAE doing it for Amiga. How long til my currently running system (anno 2016) is being emulated?",
-          "It's really cool what can be done today with just an MCU that has sufficiently flexible IO. What's the performance like?"
+          "Sorry for the tangent, but as a chart nerd it is so interesting to me the way that LLMs produce charts for articles like this - it's like they have no concept of a 3rd party (the reader). So the writing and the vis gets overloaded with the particular context of the conversation, even if it would be irrelevant to a reader.Like the x-axis label of the first plot mentions that it shows gridlines every 8 ticks - I don't think that's a choice I've ever seen a person make. The next plot does the same thing, but in the title: \"(dotted lines: evenly spaced reference)\". Again, would anyone making a chart ever include such a specific detail in the title? Probably not beyond undergrad level.I encounter a similar thing when trying to work with LLMs to write articles - they cannot help including information or detail from the conversation, rather than empathising with the reader and filtering out what they might already know or not care about. They may be capable of solving decades-old maths problems, but on this particular axis they seem to be floundering at the level of a fresh graduate that's desperate to talk about what they've done rather than what their audience needs to know.",
+          "I got an X3 a couple of weeks ago, they are dirt cheap and the form factor is amazing. It's so easy to leave it in the pocket and just pull it out when you have an idle moment somewhere out in public. I wasn't certain how comfortable reading would be on such a small screen but it works well. With crosspoint, you can sync your page position with koreader on a larger form factor device.",
+          "Related to the Xteink X3 reader mentioned in TFA:https://news.ycombinator.com/item?id=49596629"
         ]
       }
     }

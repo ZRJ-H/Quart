@@ -1,6 +1,18 @@
 {
-  "cached_at": "2026-09-14T20:58:02.339992+08:00",
+  "cached_at": "2026-09-15T11:01:44.881786+08:00",
   "articles": [
+    {
+      "id": "https://openai.com/index/fyxer",
+      "title": "How Fyxer built an AI executive assistant people trust",
+      "url": "https://openai.com/index/fyxer",
+      "source": "OpenAI",
+      "published_at": "2026-09-14T12:00:00+00:00",
+      "summary": "Fyxer uses OpenAI models, fine-tuning, memory, and real user feedback to organize inboxes and draft emails in each user’s voice.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
     {
       "id": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
       "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
@@ -80,18 +92,6 @@
       "source": "OpenAI",
       "published_at": "2026-09-10T07:00:00+00:00",
       "summary": "Introducing ChatGPT for Financial Services, combining built-in financial data and GPT-6 Astra for research, modeling, and client-ready materials.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://openai.com/index/expanding-ai-access-us-government",
-      "title": "Expanding AI access and cyber defense for federal, state, local, and tribal governments",
-      "url": "https://openai.com/index/expanding-ai-access-us-government",
-      "source": "OpenAI",
-      "published_at": "2026-09-10T07:00:00+00:00",
-      "summary": "OpenAI and GSA will offer eligible federal, state, local, and tribal governments $0 license fees, 50% off usage, and expanded cyber defense support.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
