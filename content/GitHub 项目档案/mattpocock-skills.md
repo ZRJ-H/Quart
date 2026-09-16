@@ -1,13 +1,13 @@
 ---
 first_seen: 2026-06-30
-last_seen: 2026-09-05
+last_seen: 2026-09-16
 language: Shell
 tags: [github, trending]
 ---
 
 # mattpocock/skills
 
-> Skills for Real Engineers. Straight from my .claude directory.
+> 面向真实工程师的技能集合，直接来源于作者的 .agents 目录，适合关注代理技能组织方式与工程实践的开发者研究借鉴。
 
 ## 基本信息
 
@@ -54,3 +54,4 @@ tags: [github, trending]
 | 2026-08-25 | #9 | 235,443 | +5,869⭐ | 爆火 |
 | 2026-09-04 | #6 | 247,822 | +12,379⭐ | 爆火 |
 | 2026-09-05 | #6 | 250,645 | +2,823⭐ | 爆火 |
+| 2026-09-16 | #8 | 262,930 | +12,285⭐ | 爆火 |

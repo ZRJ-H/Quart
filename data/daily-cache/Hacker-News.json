@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-09-15T13:07:20.208919+08:00",
+  "cached_at": "2026-09-16T11:01:37.812007+08:00",
   "articles": [
     {
-      "id": "49700661",
-      "title": "Steam Frame starts at $1059",
-      "url": "https://store.steampowered.com/hardware/steamframe",
+      "id": "49717558",
+      "title": "Introducing System One Models and Jev",
+      "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
       "source": "Hacker News",
-      "published_at": "2026-09-14T17:27:55+00:00",
-      "summary": "Steam Frame starts at $1059",
-      "score": 587,
-      "comments": 439,
-      "discussion_url": "https://news.ycombinator.com/item?id=49700661",
+      "published_at": "2026-09-15T19:25:03+00:00",
+      "summary": "Introducing System One Models and Jev",
+      "score": 857,
+      "comments": 276,
+      "discussion_url": "https://news.ycombinator.com/item?id=49717558",
       "extra": {
         "top_comments": [
-          "Half-Life Alyx is the greatest gaming experience I have ever had the pleasure to witness. I now occasionally VR golf. It's a steep price for a niche with not a lot of games.",
-          "GamersNexus released a video comparing the Frame VR vs Meta Quest 3 today, worth a watch for the Frame review alone:https://www.youtube.com/watch?v=vcerOYY_K1g",
-          "I know everyone is singing the praises of the Steam Frame's wireless capabilities but honestly, I just want my wired VR experience back.I had a Rift 2, Reverb G2, then Quest 2 and eventually Quest 3. Despite the Quest 3 having a resolution similar to the G2, it looked more like the Rift 2 than the awe inspiring G2. Wireless gaming never looked as sharp and streaming over USB was also a very poor experience, with input latency and artifacting.Wireless headsets also _suck_ for simulators and productivity - where a battery only adds weights and a wire is not noticable.Personally, I would love to see a wired headset that resembles the bigscreen beyond but with inside out tracking and a universal face gasket. For wireless experiences, I'd love to be able to plug my phone in, put it in my back pocket and use it that way.That sort of \"head mounted display\"-first approach would make it practical to use the device for productivity / screen replacement while gaming would be dependant on your phone or computer."
+          "First, congrats to the team on launching something genuinely interesting and new.Seems like a more accurate title would be \"Jev: Trading general purpose generation for fast typed inference\" or something like that.This is interesting, but the speed comparison seems misleading? A generative model that can output code in a Turing-complete language can do anything a computer can do.Jev can only generate structured output, right? This is probably super useful for classification/routing/scoring, but it's nothing like the code generating models we're all using today for code and automation.Also \"can't hallucinate\" seems wrong? Sure, it can't emit an invalid type, but it can still emit a completely wrong valid value. You can enforce structured output from an LLM too, with an appropriate harness, etc.Assuming there's no funny business, the Doom demo is cool.",
+          "Wasn't really till seeing this home assistant demo they have (https://www.loom.com/share/18c4dbcf8db546dfb2d7f2ef018e78e4) that the value really clicked for me.Seems really cool.",
+          "This, combined with contracts, could make a lot of things so much fun now!For those who don't know (which is probably everyone but me), I ported the design-by-contract pattern in Python and combined it with LLMs. This was early 2025. I originally wrote about it here: https://leoveanu.com/2025-03-01-dbc/ . Contracts are a core feature of SymbolicAI ever since. The community seems to have loved it too (https://news.ycombinator.com/item?id=44399234).I think I'm starting to glimpse the implications and it's gonna change agentic workloads if it holds up to scrutiny. It's too early for me to tell anything other than jot down some rough thoughts.In short, you get blazingly fast semantic branching you can use in control flows. For contracts, I can now directly take the data model that you have to design and convert it into Jev's expected format. Or I can use Jev for semantic branching in postconditions.If my understanding is correct, that should be doable, but I need to think more about it. It could be that with Jev I can finally “compile contracts” and better chain them into workflows, which is something I always wanted but didn't know how to do properly.Eager to test. On the waiting list."
         ]
       }
     },
     {
-      "id": "49701004",
-      "title": "iOS 27, iPadOS 27, and macOS 27",
-      "url": "https://www.apple.com/newsroom/2026/09/major-updates-for-apples-software-platforms-are-now-available/",
+      "id": "49716176",
+      "title": "An update on Wayback Machine access",
+      "url": "https://blog.archive.org/2026/09/15/an-update-on-wayback-machine-access/",
       "source": "Hacker News",
-      "published_at": "2026-09-14T17:50:29+00:00",
-      "summary": "iOS 27, iPadOS 27, and macOS 27",
-      "score": 484,
-      "comments": 528,
-      "discussion_url": "https://news.ycombinator.com/item?id=49701004",
+      "published_at": "2026-09-15T17:52:18+00:00",
+      "summary": "An update on Wayback Machine access",
+      "score": 413,
+      "comments": 221,
+      "discussion_url": "https://news.ycombinator.com/item?id=49716176",
       "extra": {
         "top_comments": [
-          "I've been using it for several months since the developer beta came out; overall I'm extremely positive on it. One of their better releases that seemingly focused more on quality and refinements than new-features.Siri is definitely worth using now, even if it remains still a work-in-progress/needs continued refinement. It can surprise you in good ways, but it isn't consistently good yet.The keyboard remains unfixed, as is tradition. The same issues they've \"fixed\" like three or four releases now, seemingly are identically broken, and I'm lost faith they CAN fix it.The iOS Keyboard and Search on Windows, are like the perpetually broken things that both companies have \"fixed\" every year for the last ten+ years and yet... It is almost farcical as this point.",
-          "Did they fix the thing where you have to wait like 2 seconds for the context menu to open up when you want to paste something? Does anyone else notice that you tap on the screen and it takes literally 3 full seconds for the little pop-up where you can press the paste button to appear,",
-          "This is going to sound like a really weird and irrelevant nitpick, but I dislike how they changed the version numbers to be year+1. I like that they all unified and have a relationship to the current year, but we're not buying cars. We're getting operating systems and not being confused about chronology is pretty important for bug tracking or other minutiae. Plus, the Mac lineup use(d) the year of release. Why move away from it? Is it really necessary to market and sell an operating system like it's a car or the latest Microsoft Office suite?"
+          "> Here’s what’s going on. The Internet Archive’s Wayback Machine has been hit by waves of high-volume automated traffic, and we’ve put protections in place to keep the service running.I'm pretty certain this is scrapers that are trying to workaround blocks on accessing original sites by hitting the Wayback Machine copy instead. Appalling behavior.In addition to the load it puts on this vital non-profit piece of Internet infrastructure, we've also already seen some sites opt out of the Wayback Machine to prevent their content from being scraped via this alternative route.",
+          "Mad props to the people at the Archive. You are the heros we need in a formerly open internet that is surrendering to evil big corps and closing down free access.The Internet Archive is in a really bad spot being attacked from multiple sides at once. But — while service has not been consistent — they have maintained open access. I can still access anonymously from Tor without Cloudflare or some other centralized gatekeeper showing me the middle finger.If you got some money to spare, consider donating to them. They need it.",
+          "Unrelated, but this week I've been on a memory binge with the Wayback Machine, trying to find old content of mine from the early 2000s. Took me a while but I've finally put together a good bit of info about myself at the time that I'd completely forgotten, and it's all thanks to the Internet Archive storing my little gaming review website from when I was 16. I could barely remember any of the other stuff, it's been genuinely surprising figuring out what I'd forgotten. I couldn't even remember most domains I owned aside from one, which I used as the starting point.Still can't remember what my Tripod site address was, but that might be lost to time.Thank you, Archive.org."
         ]
       }
     },
     {
-      "id": "49695876",
-      "title": "OpenAI bots knew about the RubyGems caching vulnerability",
-      "url": "https://tenderlovemaking.com/2026/09/11/what-a-time-to-be-alive/",
+      "id": "49715947",
+      "title": "Gemini 3.8 Live and 3.8 Live Extended Thinking",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
       "source": "Hacker News",
-      "published_at": "2026-09-14T12:40:57+00:00",
-      "summary": "OpenAI bots knew about the RubyGems caching vulnerability",
-      "score": 412,
-      "comments": 335,
-      "discussion_url": "https://news.ycombinator.com/item?id=49695876",
+      "published_at": "2026-09-15T17:38:18+00:00",
+      "summary": "Gemini 3.8 Live and 3.8 Live Extended Thinking",
+      "score": 324,
+      "comments": 200,
+      "discussion_url": "https://news.ycombinator.com/item?id=49715947",
       "extra": {
         "top_comments": [
-          "In the physical world, it seems like when an tool/device/instrument causes harm (or is used to cause harm), we assign blame to either the user of the tool or its creator.When do we blame the user? When the tool is operating as intended by its creator, and we agree the tool meets certain quality standards and isn't defective.When do we blame the creator? When the device doesn't meet those quality standards and reasonable use caused harm inadvertently. For example, for consumer devices, certifications like UL/CE are used to define acceptable performance levels and safety standards.Maybe we need \"quality certifications\" for AI agents - essentially eval suites that demonstrate those agents won't cause harm under reasonable patterns of usage. Right now, these eval suites are run best-effort by the labs themselves.The tricky thing is, a lot (all?) of these recent safety incidents have occurred while evaluating these models! This suggests we need much more rigorous standards for how exactly an eval can be run. Perhaps all of them should occur in truly air-gapped environments... though that may run counter to evaluating agents in a realistic way.Regardless, it feels like the \"industry standards\" common in, say, electrical engineering and other disciplines are sorely lacking here. Unsurprising given how new these technologies are, but concerning since the blast radius for this technology is likely much larger than other technologies we've encountered in the past, except maybe nuclear technology.",
-          "How does this work, legally? I think that RubyGems could file a civil suit against OpenAI, but for a naïve non-lawyer reading this seems like a pretty clear cut criminal violation of the computer fraud and abuse act.",
-          "Related\"OpenAI agents attacked RubyGems before Hugging Face incident (reuters.com)\" 12.sep.2026 https://news.ycombinator.com/item?id=49669099\"OpenAI agents carried out an undisclosed attack on RubyGems (rubyhack.ai)\" 11.sep.2026 https://news.ycombinator.com/item?id=49666735 597 comments\"RubyGems advisory: Possible leak of legacy API keys via improper cache config (rubygems.org)\" 24.jul.2026 https://news.ycombinator.com/item?id=49030590"
+          "My first language is Afrikaans, which is a somewhat niche language and hard to find teachers/conversation buddies outside South Africa. (I live in USA now)I've been using Gemini to live chat in Afrikaans and do impromptu Afrikaans grammar lessons during my solo drives around town. It is phenomenal at speaking the language - like, it really shocks my family members when they hear it.This is probably the most joy I get from any of my usages of LLMs/AIs. It's been really, really nice getting to speak my language regularly again. =)So, I'm excited about this release and live chat getting better. I also hope the other frontier labs pick up niche languages like this as well so that I have more options.",
+          "Just gave it a try - very solid release.Copes well with thick accent, voices are pleasant and latency seems low.Oh and I can actually use it on a workspace account - which for most of the recent releases was an account stuck in limbo. Not personal enough for personal offering, not enterprise enough for enterprise.Well done G - will definitely be using this",
+          "I wonder when/if we’ll see Gemini beating Fable and Astra. Last year I would have confidently bet Google will overtake the others just because they have the data, the hardware (TPUs) and a fat advertising money pipe and yet they are still behind. Anyone anonymous at Google want to hint when Gemini 4 will be out?"
         ]
       }
     },
     {
-      "id": "49700477",
-      "title": "Pion, an agent designed to run any company autonomously",
-      "url": "https://andonlabs.com/blog/why-we-built-pion",
+      "id": "49716476",
+      "title": "We got admin access to Baseten's production GitHub in 25 minutes",
+      "url": "https://www.strix.ai/blog/baseten-harbor-github-pat-takeover",
       "source": "Hacker News",
-      "published_at": "2026-09-14T17:16:06+00:00",
-      "summary": "Pion, an agent designed to run any company autonomously",
-      "score": 337,
-      "comments": 378,
-      "discussion_url": "https://news.ycombinator.com/item?id=49700477",
+      "published_at": "2026-09-15T18:11:24+00:00",
+      "summary": "We got admin access to Baseten's production GitHub in 25 minutes",
+      "score": 236,
+      "comments": 125,
+      "discussion_url": "https://news.ycombinator.com/item?id=49716476",
       "extra": {
         "top_comments": [
-          "Meanwhile, I can't even get Astra to consistently re-use the same font-size across all of my HTML page headings+subheadings.There's just no world where this actually results in a stable, respected business. It will be death by a thousand bad impressions, mistakes and oversights. Yeah, you can automate everything. That doesn't mean it's being done well.That's not to say this might not be something feasible in 2-3 years from now, but we're still a long ways away.",
-          "Interesting to see these experiments. This is early but imagine in few years there will be companies mostly run by agents with a light overview from a human operator. What then happens to scaling of the bussinesses? I would assume, just like today anyone can vibe code an app, there will be vibecoded bussinesses. Maybe its time to start building infrastructure for these bussinesses instead, its a non existent market yet, but give it a few years.",
-          "Isn't Andon Labs the SF startup that burned a bunch of money having AI run a shop into the ground?"
+          "> Baseten handled this well. The timeline was:> July 13, 11:10 PM: I reported the live basetenbot token, the public Harbor project, and the repository permissions.> July 14, morning: Baseten made the Harbor project private. I flagged that the token itself still worked.> July 14, 4:34 PM: Anton from Baseten Security confirmed the issue as critical and said they had made the Harbor project private and rotated the token. He also asked us to securely delete the images we'd pulled.> July 14, 5:05 PM: We confirmed deletion and sent over two lower-severity findings from the same scan.> July 17: Baseten closed out the remaining findings.> September: We let Baseten know we planned to disclose the finding publicly and sent them a draft of this post.They also sent us some T-shirts and sweatshirts as a thank-you for finding this critical bug.well done all around. i think my only open question is what default security boundaries should all vibecoded internal agents follow as a learning we can take from this",
+          "This fits neatly into the category of \"not something an unmotivated huamn would bother to look for, but absolutely something a human could find if they were interested.\"It increasingly feels like the power of these agents is less that they find things humans COULDN'T find, and more that they find many things much more quickly than humans would bother to do.I don't know if this is a great advert for Strix over other agents - what did their agent do that Claude or Codex couldn't? It didn't do anything that I couldn't do, if I wanted to.",
+          "> [pen-testing agent] came back with an active GitHub personal access token for basetenbot. That token had admin and push access to Baseten's main product repo, the GitOps repo that drives their clusters, and their Homebrew tap, plus read/write access to other private repositories including specific repos per customers.And the agent found the token in Docker build history after finding a Baseten image repository.I wonder how many of these kinds of agent-driven security exploits we're not hearing about these days (i.e. driven by bad actors), worrying."
         ]
       }
     },
     {
-      "id": "49699158",
-      "title": "Distributed Systems Classics (2017)",
-      "url": "https://nvartolomei.com/dist-sys-classics/",
+      "id": "49717638",
+      "title": "Building a Linux GPU Driver for the M4 Mac Mini in One Month",
+      "url": "https://codyho.dev/blog/gpu-driver/",
       "source": "Hacker News",
-      "published_at": "2026-09-14T16:02:01+00:00",
-      "summary": "Distributed Systems Classics (2017)",
-      "score": 258,
-      "comments": 58,
-      "discussion_url": "https://news.ycombinator.com/item?id=49699158",
+      "published_at": "2026-09-15T19:30:03+00:00",
+      "summary": "Building a Linux GPU Driver for the M4 Mac Mini in One Month",
+      "score": 181,
+      "comments": 114,
+      "discussion_url": "https://news.ycombinator.com/item?id=49717638",
       "extra": {
         "top_comments": [
-          "This is not a bad list for sure. Here are some deeper cuts for those looking for something a bit less mainstream:\"The Maintenance of Duplicate Databases\" https://datatracker.ietf.org/doc/html/rfc677 (AFAIK the genesis of the use of logical clocks in distributed systems).\"Chain Replication for Supporting High Throughput and Availability\" https://www.usenix.org/legacy/event/osdi04/tech/full_papers/... (Chain replication is how a huge percentage of real-world cloud-scale data replication is done).\"Brewer’s Conjecture and the Feasibility of Consistent, Available, Partition-Tolerant Web Services\" (The formalization of CAP, which caused a ton of very poor trade-off thinking in the decade that followed by defining Availability in a very goofy way. Still a classic.)\"Paxos Made Live\" https://research.google/pubs/paxos-made-live-an-engineering-... (Brought a much-needed engineering perspective to a conversation that was largely theoretical up until this time.)\"Practical Byzantine fault tolerance\" (Moved the conversation on Byzantine faults forward significantly).This is just a short selection. There's so much good stuff going back in the 70s and 80s distributed database literature, for example (and in the modern systems and DB literature too).",
-          "I am a Lamport admirer.I gradually realized that Lamport is more of the godfather of distributed system than Hinton is to deep learning. Lamport is less prominent than Shannon is to information theory. Shannon is the closest to any title of \"gold-like\" figure to a scientific discipline of universal relevance in modern society.Lamport specifically revealed a philosophical connections between computer systems and physics, in the parallel of distributed consensus to relativity theory. To me, the enlightenment is that, the relations between events happening in a distributed system, is more fundamental than their absolute ordering, thus the central role of an \"observer\". I haven't really analyzed if this realization is from Lamport's papers, or my general reading and thinking, but I am moderately confident that general readings are heavily influenced by Lamport's papers, or can be traced back to be compatible with Lamport's thinking. I have not seriously study if this connection is valid in depth, which might be another pure amateur speculation of mine.One thing I think Lamport falls short is that his writing is not easy to read and understand. I unconciously feel that Lamport (and Dario from Anthropic) probably share a hidden sense of intellectual supriority grew from their own experience throughout their career. So their writing (and Dario's gospel) all share a unchangable sense of narration from their own delicate and graceful ideas, much less of faciliating the understanding to their audience. In this cateogry, Shannon is abosolutely superior in any measure, in his writing, ideas are so naturally presented, although the implications of the ideas remain elusive due to the inherent depth.Also, among the 3 prominent figures of modern AI: Hinton/Bengio are more like Shannon, Lecun is closer to Lamport.Enough random rambling. Lamport, as indicated by the outweight presence in this list, is no doubt the single most important scientist in distributed systems.",
-          "Some other classics (applied dist systems):- DDB: https://www.allthingsdistributed.com/files/amazon-dynamo-sos...- MapReduce: https://www.cs.princeton.edu/courses/archive/fall13/cos518/p...- Spark/RDDs: https://www.usenix.org/system/files/conference/nsdi12/nsdi12...- BigTable: https://static.googleusercontent.com/media/research.google.c..."
+          "https://www.reddit.com/r/AsahiLinux/comments/1whecn1/comment...> The author was banned from Asahi Linux for hiding his extensive use of LLMs from us in another attempted contribution, and (more importantly) for concealing that he is a former Apple engineer with direct contacts to the people involved in Apple Silicon development. Make of this what you will.",
+          "It's extremely impressive that they were able to make a working driver so quickly. I think this is one of the best use cases for LLMs. You don't need someone to spend years reverse engineering undocumented hardware anymore. It will interesting to see how good the driver the LLMs came up with is, and whether it can be upstreamed into the Linux kernel.",
+          "All this work is tainted since the poster is ex-Apple[1]. There is no way Linux will take that code, since people from Apple also contribute to Linux and this creates a major conflict.There's also ongoing issues around Codex for this sort of thing, given Apple is suing OpenAI over stolen trade secrets[2]. And nobody knows whether training data in other models is similarly tainted.[1]: https://codyho.dev/documents/cody_ho_resume.pdf[2]: https://www.theguardian.com/technology/2026/jul/10/apple-sue..."
         ]
       }
     },
     {
-      "id": "49698607",
-      "title": "Principles for Fast Tokio Applications",
-      "url": "https://dial9-rs.github.io/blog/principles-for-fast-tokio-applications/",
+      "id": "49718928",
+      "title": "German Rheinmetall open-sources its Battlesuite connected weapon system protcol",
+      "url": "https://rheinmetall.github.io/onboardapi-documentation/9.10.0/index.html",
       "source": "Hacker News",
-      "published_at": "2026-09-14T15:27:56+00:00",
-      "summary": "Principles for Fast Tokio Applications",
-      "score": 186,
-      "comments": 45,
-      "discussion_url": "https://news.ycombinator.com/item?id=49698607",
+      "published_at": "2026-09-15T21:07:47+00:00",
+      "summary": "German Rheinmetall open-sources its Battlesuite connected weapon system protcol",
+      "score": 140,
+      "comments": 44,
+      "discussion_url": "https://news.ycombinator.com/item?id=49718928",
       "extra": {
         "top_comments": [
-          "\"Be careful with mutexes\" is good advice, but I'm surprised it doesn't explicitly call out the various channels that tokio provides as alternatives (detailed here: https://docs.rs/tokio/latest/tokio/sync/index.html). There are a variety of options that fit different use cases, and you don't even need to enable the runtime feature to use them (e.g. if you want to do a single check for completion rather than await). I'd estimate that at least half of the bottlenecks I've seen with mutexes when using tokio could have been avoided by not even using a mutex at all and instead passing the data that's truly needed across different tasks with some type of channel.The other trick I've used a few times that's a bit hacky but can get the job done is when reading a snapshot of the data under a mutex is enough without needing to prevent other changes; if that's the case, you can just clone the data and drop the mutex to allow other uses move forward at the cost of the data potentially being stale.",
-          "For a true high performance you should use thread busy-spinning, CPU pinning and SPSC/MPSC ring buffers.",
-          "When you're at a point of tuning Tokio, consider taking a look at ef_vi/DPDK + SPDK"
+          "“Hi Codex, please find attached website about the specification of my Battlesuit and use the documented API to create a plugin for Home Assistant that shows groups of sensor data.You are only allowed to use commands that retrieve data, you are not allowed to perform actions on the suit.Treat the suit like its API is not robust and in worse shape than a cheap toy: perform read calls slowly and sequentially with at least one minute in between.If possible please group data in meaningful categories, just like the tank and radar dome.My Home Assistant is the default on the local network, credentials are in credentials.txt.Please send me a text when you’re done. Kthnxbye”",
+          "Reminds me a lot of the Tactical Microgrid Standard (aka TMS aka MIL-STD-3071) [1], probably just because TMS uses DDS as well. I would really like to know if there is a protocol that functions like DDS but caters to real-time guarantees and prioritizes (at a \"simple protocol\" level) usability on embedded systems with no dynamic memory allocation. It would also need to be just-as-functional with non-real-time systems. One problem with DDS is that it is too heavy-handed to implement well on an embedded system.[1] https://battery.army.mil/system-integrator-hub/tms/",
+          "Corba never died!!! OMG!!"
         ]
       }
     },
     {
-      "id": "49698699",
-      "title": "A Beginning for Mathematics",
-      "url": "https://www.daniellitt.com/blog/2026/9/13/a-beginning-for-mathematics/",
+      "id": "49716953",
+      "title": "Chopping up books when they're physically too big",
+      "url": "https://attainablefelicity.mattkirkland.com/20260915/cut-up-your-books.html",
       "source": "Hacker News",
-      "published_at": "2026-09-14T15:33:07+00:00",
-      "summary": "A Beginning for Mathematics",
-      "score": 185,
-      "comments": 107,
-      "discussion_url": "https://news.ycombinator.com/item?id=49698699",
+      "published_at": "2026-09-15T18:45:31+00:00",
+      "summary": "Chopping up books when they're physically too big",
+      "score": 134,
+      "comments": 130,
+      "discussion_url": "https://news.ycombinator.com/item?id=49716953",
       "extra": {
         "top_comments": [
-          "The author argues for evaluating Ph.D. candidates based more on the oral thesis defense than on the actual thesis.By essentially the same reasoning, I’ve been arguing for prioritizing in-person design/code reviews over code-only async PR comments.The important thing is to verify that the human has a coherent design in mind and can demonstrate that it got implemented, regardless of who or what was at the keyboard. “I dunno, I guess Claude thought this was a good idea” is not a coherent design.",
-          "As someone who has a degree in math, I still can't help but think mathematicians are getting a little bit of a comeuppance. In a lot of areas of mathematics there had been little effort to make the work understandable and leaves numerous folks who could benefit from the knowledge on the outside looking in. Now AI comes along and do the same to mathematicians. Makes me chuckle a little bit.",
-          "Excellent optimistic post in a sea of negativity, and with actual suggestions, too. After reading, my mental image is this: think of Olympiads in Ancient Greece.* A weightlifter was only awarded a laureate if he were able to lift a heavy stone (have no idea what they were lifting, for illustrative purposes only :-)* Along comes Archimedes who invents what we would call an exoskeleton. Now any regular guy can lift twice as much as last year’s athlete.* What to do? You can cancel the Olympiads, but they are actually useful as training, motivation, etc So now you have to give the prize on other factors, eg how well he can lift, has he opened a gym in the city, etcBTW, physics and bio are not exempt, so those researchers better read and try to stay ahead."
+          "Are AI companies trying to poison the search index?Like Boris Johnson did when he had fun times with a model on the campaign bus, then did a bizarre interview when he claimed he made model buses!https://www.theguardian.com/politics/2019/jun/26/mesmerising...",
+          "I came to a similar realization recently. I used to care so much about how pristine my books looked and then I realized that some of my favorite books I have found in used bookstores are ones which are written all over and have a well-worn feel to them. I now annotate all my books with pencil and also write my name in them. I love seeing a history of who's owned a given book when I open the front cover and see a name and phone number.",
+          "It’s going to tire out your hands to hold up an 850-page book for the time it takes to read an 850-page book. If you read in bed, it’s going to tire your arms out, trying to hold this giant tome over your head.If you can't figure out how to read a large book in comfort that seems like a you problem. It's up to you what you do with (or rather, to) your books but don't ask me to applaud you for being clever."
         ]
       }
     },
     {
-      "id": "49699489",
-      "title": "How my e-reader lost its stripes",
-      "url": "https://www.serpentine.com/posts/2026/x3-stripes/",
+      "id": "49717605",
+      "title": "WangNet – 1.8 MB, zero-dependency Numberwang adjudication in 11 languages",
+      "url": "https://github.com/GraafHenk/numberwang",
       "source": "Hacker News",
-      "published_at": "2026-09-14T16:23:16+00:00",
-      "summary": "How my e-reader lost its stripes",
-      "score": 175,
-      "comments": 28,
-      "discussion_url": "https://news.ycombinator.com/item?id=49699489",
+      "published_at": "2026-09-15T19:27:35+00:00",
+      "summary": "WangNet – 1.8 MB, zero-dependency Numberwang adjudication in 11 languages",
+      "score": 118,
+      "comments": 46,
+      "discussion_url": "https://news.ycombinator.com/item?id=49717605",
       "extra": {
         "top_comments": [
-          "Sorry for the tangent, but as a chart nerd it is so interesting to me the way that LLMs produce charts for articles like this - it's like they have no concept of a 3rd party (the reader). So the writing and the vis gets overloaded with the particular context of the conversation, even if it would be irrelevant to a reader.Like the x-axis label of the first plot mentions that it shows gridlines every 8 ticks - I don't think that's a choice I've ever seen a person make. The next plot does the same thing, but in the title: \"(dotted lines: evenly spaced reference)\". Again, would anyone making a chart ever include such a specific detail in the title? Probably not beyond undergrad level.I encounter a similar thing when trying to work with LLMs to write articles - they cannot help including information or detail from the conversation, rather than empathising with the reader and filtering out what they might already know or not care about. They may be capable of solving decades-old maths problems, but on this particular axis they seem to be floundering at the level of a fresh graduate that's desperate to talk about what they've done rather than what their audience needs to know.",
-          "I got an X3 a couple of weeks ago, they are dirt cheap and the form factor is amazing. It's so easy to leave it in the pocket and just pull it out when you have an idle moment somewhere out in public. I wasn't certain how comfortable reading would be on such a small screen but it works well. With crosspoint, you can sync your page position with koreader on a larger form factor device.",
-          "I assume these fixes did not go yet in the latest release (1.6.0) and are going to be part of a later release? Looking forward to it, specially since anti-aliasing improvements were mentioned."
+          "I don't think that this produces correct results, as it seems to determine whether each individual number is Numberwang. However, whether a number is Numberwang can also depend on the previous numbers in the sequence or other factors.So I think as it stands right now this model can only determine whether a number would be Numberwang as the first number of a sequence, but even for that I still wouldn't rely on this in the actual game show.",
+          "For those confused by this, here is the Mitchell and Webb \"Numberwang\" sketchhttps://youtu.be/0obMRztklqU?is=qufDLUkqofpr-K1Y",
+          "You're playing with fire here, don't forget the tragedy of Colosson. Computers weren't meant to do this."
         ]
       }
     }
