@@ -1,6 +1,24 @@
 {
-  "cached_at": "2026-09-17T11:01:44.658271+08:00",
+  "cached_at": "2026-09-17T13:05:34.897240+08:00",
   "articles": [
+    {
+      "id": "49724881",
+      "title": "Nvidia announces native GPU programming in Rust",
+      "url": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/",
+      "source": "Hacker News",
+      "published_at": "2026-09-16T11:15:53+00:00",
+      "summary": "Nvidia announces native GPU programming in Rust",
+      "score": 467,
+      "comments": 164,
+      "discussion_url": "https://news.ycombinator.com/item?id=49724881",
+      "extra": {
+        "top_comments": [
+          "I strongly dislike CUDA. Once you have allowed that proprietary cr*p into your C++ codebase, it is very hard to get rid, and you end up with code that is either tied to a single vendor or an #ifdef hell, probably both.The best way to program GPUs is face up to the reality that they are not the same machine as the CPU, write your kernels in separate files, and launch them manually, like in Metal, OpenCL, and D3D12, etc. These days we even have DSLs like Triton that make kernel writing much more ergonomic than anything you would hope to achieve in Rust.",
+          "Since NVIDIA owns huggingface now and huggingface has the excellent Candle [1] crate for inference on Rust, this seems like a good step towards nice native Rust kernels.[1] https://github.com/huggingface/candle",
+          "I wonder how many parallels there are between CUDA's Tile abstraction and that of Metal."
+        ]
+      }
+    },
     {
       "id": "49731285",
       "title": "Training a 4B model to produce 81% faster query plans than Postgres",
@@ -8,14 +26,14 @@
       "source": "Hacker News",
       "published_at": "2026-09-16T18:50:00+00:00",
       "summary": "Training a 4B model to produce 81% faster query plans than Postgres",
-      "score": 423,
-      "comments": 86,
+      "score": 459,
+      "comments": 94,
       "discussion_url": "https://news.ycombinator.com/item?id=49731285",
       "extra": {
         "top_comments": [
           "“81% faster query plans than Postgres”…on an 8 GB dataset that fits entirely in memory, with shared_buffers constrained to a fraction of that, queries warmed before measuring, and read-only SELECTs.I would be cautious about over fitting, it’s tough to say if those query plans would really be more optimal than Postgres heuristics at scale and with a bit more realistic OLTP workloads.In any case, such is life with profile guided optimization. Many of us appreciate how database workloads can drift over time and with scale.Kudos to the author for getting their hands dirty and writing up their experiments.",
-          "Engineer: \"HELP, our production DB is frozen on this query that worked fine before!\"Infra: \"Hmm, let's check... Well would you look at that, it seems like your LLM query planner usually works and produces fast queries, but this time when you changed a variable name to trigger query rebuild, it happened to hallucinate and miss an index, would you mind re-running the LLM a few times until you get a faster query?\"",
-          "Unless they’ve been elided, there were no indices other than the PK on any table, and no additional statistics. There are correlated columns here: a given country may have produced more movies in a given range of years, as its movie industry built up; a given country may produce more TV series than movies, etc.Nearly every time I’ve seen someone resorting to hints for a query, it’s because their statistics are incorrect. Adding hints is papering over the problem, and can backfire later if the data shape changes."
+          "Optimal plan construction is math-heavy, algorithm-heavy and vary even by workload. There are options like creating just-in-time indexes, so solution space grows even faster than article presents. Sometimes it is the query planner which is the slow part of total execution time.LLM is kind of blunt weapon to use here. I am waiting rather for alphago style neural net heuristic.",
+          "Engineer: \"HELP, our production DB is frozen on this query that worked fine before!\"Infra: \"Hmm, let's check... Well would you look at that, it seems like your LLM query planner usually works and produces fast queries, but this time when you changed a variable name to trigger query rebuild, it happened to hallucinate and miss an index, would you mind re-running the LLM a few times until you get a faster query?\""
         ]
       }
     },
@@ -26,32 +44,14 @@
       "source": "Hacker News",
       "published_at": "2026-09-16T15:56:47+00:00",
       "summary": "Small programming tricks",
-      "score": 416,
-      "comments": 187,
+      "score": 448,
+      "comments": 201,
       "discussion_url": "https://news.ycombinator.com/item?id=49729000",
       "extra": {
         "top_comments": [
           "The thing with a lot of these tricks is that you have to get into the habit of using them. I knew `Ctrl+r` for history since I learned about the command line. I even have a nice shell integration with fzf. But I still used the up/down arrow keys for years or scrolled up when I was looking for a previous command, because I never remembered the shortcut and just took the path of least resistance to find something.Usually what I do is writing these tricks down to a document that is easily accessible at a place where I know that I will look for when failing to remember them. I have a directory of docs where I write stuff like this down by language/tool/etc., so I can quickly look it up without having to search the internet. But I also have to actively remind myself that these things exist whenever I have a problem, stop me from just doing the inefficient thing.",
           "A lot more tricks can be learned from just watching AI work. Instead of allowing AI to work autonomously, go back to the old days where you manually approve every command the AI runs. Just recently while doing performance optimization work, I found Opus using the `perf` command in ways I didn’t know possible. Just give AI a real task and carefully read what commands are used by the AI to solve the problem; most likely the AI uses a trick or two that you didn’t know existed.",
-          "One of the things I frequently use with Emacs is writing/recording macros on the fly with F3 and running them. I am sure this is present in the other editors as well, but this has helped me a lot at timeshttps://www.gnu.org/software/emacs/manual/html_node/emacs/Ba..."
-        ]
-      }
-    },
-    {
-      "id": "49724881",
-      "title": "Nvidia announces native GPU programming in Rust",
-      "url": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/",
-      "source": "Hacker News",
-      "published_at": "2026-09-16T11:15:53+00:00",
-      "summary": "Nvidia announces native GPU programming in Rust",
-      "score": 352,
-      "comments": 137,
-      "discussion_url": "https://news.ycombinator.com/item?id=49724881",
-      "extra": {
-        "top_comments": [
-          "I strongly dislike CUDA. Once you have allowed that proprietary cr*p into your C++ codebase, it is very hard to get rid, and you end up with code that is either tied to a single vendor or an #ifdef hell, probably both.The best way to program GPUs is face up to the reality that they are not the same machine as the CPU, write your kernels in separate files, and launch them manually, like in Metal, OpenCL, and D3D12, etc. These days we even have DSLs like Triton that make kernel writing much more ergonomic than anything you would hope to achieve in Rust.",
-          "Since NVIDIA owns huggingface now and huggingface has the excellent Candle [1] crate for inference on Rust, this seems like a good step towards nice native Rust kernels.[1] https://github.com/huggingface/candle",
-          "The recent circular moves that Nvidia is making is designed to wrap things around them, anything to keep the AI model party going."
+          "Those were not programming tricks, but computing tricks or command line/sql tricks.Anyways I find it mind boggling how many useful actions are not known by „normal people”. Most people are really using computers in a very inefficient way.My idea is if we would spend time making people learn computers or software they use daily better - we wouldn’t need AI agents and we would triple GDP."
         ]
       }
     },
@@ -62,8 +62,8 @@
       "source": "Hacker News",
       "published_at": "2026-09-16T20:09:18+00:00",
       "summary": "Xiaomi Mimo 2.6 live post-training dashboard",
-      "score": 293,
-      "comments": 75,
+      "score": 338,
+      "comments": 86,
       "discussion_url": "https://news.ycombinator.com/item?id=49732270",
       "extra": {
         "top_comments": [
@@ -74,38 +74,38 @@
       }
     },
     {
+      "id": "49719249",
+      "title": "AWS says it can't restore some data from mideast facilities struck by Iran",
+      "url": "https://www.wsj.com/world/middle-east/aws-says-it-cant-restore-some-data-from-mideast-facilities-struck-by-iran-ddcb7e5d",
+      "source": "Hacker News",
+      "published_at": "2026-09-15T21:41:42+00:00",
+      "summary": "https://archive.is/Ay7RJ",
+      "score": 300,
+      "comments": 240,
+      "discussion_url": "https://news.ycombinator.com/item?id=49719249",
+      "extra": {
+        "top_comments": [
+          "This interview with an AWS leader isn’t aging well, from CBS Sunday morning:Pogue asked, \"I don't mean to give anyone ideas, but let's say I figured out that one of these unmarked buildings was an AWS data center, and I blew it up. Are you saying that it's so backed up and redundant that you probably wouldn't notice?\" Wood replied, \"Yeah, you wouldn't notice. I mean, we might be a bit upset, but you wouldn't notice!\"https://www.cbsnews.com/news/cloud-computing-loudoun-county-...",
+          "I think this is due to the data residency requirements in UAE. I'm working with a client in the health space and the government requirements requires me to store data only in UAE! Tried with AWS but they were not allowing any new instances and I had to go with Azure.",
+          "11.3 Force Majeure. Except for payment obligations, neither party nor any of their affiliates will be liable for any delay or failure to perform any obligation under this Agreement where the delay or failure results from any cause beyond its reasonable control, including acts of God, labor disputes or other industrial disturbances, electrical or power outages, utilities or other telecommunications failures, earthquake, storms or other elements of nature, blockages, embargoes, riots, acts or orders of government, acts of terrorism, or war."
+        ]
+      }
+    },
+    {
       "id": "49726955",
       "title": "Dream-RSI: Recursive Self-Improvement through Evolving Worlds",
       "url": "https://arxiv.org/abs/2609.14858",
       "source": "Hacker News",
       "published_at": "2026-09-16T13:44:40+00:00",
       "summary": "Dream-RSI: Recursive Self-Improvement through Evolving Worlds",
-      "score": 183,
+      "score": 189,
       "comments": 49,
       "discussion_url": "https://news.ycombinator.com/item?id=49726955",
       "extra": {
         "top_comments": [
           "Perhaps I'm not understanding it correctly, but here's my take on what the paper is doing.Imagine you have a problem you want to solve (let's say, identify an OCR'd handwritten character, e.g. the MNIST Dataset). You tell 3 agents \"Hey, each of you take a stab at getting really good at recognizing characters from this dataset. You can take 10 refinement steps to continue to improve \". You can't give each agent unlimited steps of course, because you have a finite amount of compute.So each agent goes off, and by the end, Agent 1 got to 90% accuracy, Agent 2 got to 80% accuracy, and Agent 3 got to 89% accuracy. Agent 1 wins, of course.But then you look at the refinement steps, and after 2 steps, Agent 1 was _already at_ 90% accuracy. So the agent spent the next 8 steps basically not moving at all. Agent 3 on the other hand, perhaps was continuously climbing in accuracy at every refinement step, but hit step 10 and had to stop.Now because you recorded every step from every agent, you know what you'd do differently next time -- you'd not allocate as many steps to Agent 1, and give Agent 3 more steps, because perhaps that might result in Agent 3 coming up with a better answer.From my understanding, that's what they built in the form of a \"search\" controller -- a way to evaluate automatically and reapply how you could allocate resources more effectively, when applied to a new problem.But I guess my misunderstanding is how applicable the search controller is when applied to new problems -- just because one pathway stalled early for one problem, doesn't mean it would work for another?",
           "Unless I'm misunderstanding, calling this RSI seems misleading?This looks like an optimization of current training methods, and a good one, but not \"RSI\" in the sense of a system that can perpetually improve itself forever.",
-          "Is this a good place to ask why no one seems to be worried that recursive self improvement might be dangerous? To me that seems like a really bad idea but I’m interested to hear the pro-RSI side of things."
-        ]
-      }
-    },
-    {
-      "id": "49734171",
-      "title": "Australia says it could follow Canada in forging deeper ties with EU",
-      "url": "https://www.independent.co.uk/news/world/australasia/canda-eu-membership-australia-us-trade-b3050227.html",
-      "source": "Hacker News",
-      "published_at": "2026-09-16T22:56:48+00:00",
-      "summary": "Australia says it could follow Canada in forging deeper ties with EU",
-      "score": 171,
-      "comments": 118,
-      "discussion_url": "https://news.ycombinator.com/item?id=49734171",
-      "extra": {
-        "top_comments": [
-          "Australia and New Zealand should definitely do so. If they haven’t figured it out after a year and 3/4 they never will.",
-          "As an Australian, I have noticed a shift personally in feeling like I identify more with \"European\" culture, compared to 10 years ago I felt like we were the 51st state and I felt very close with the US.This seems to be shared by others, I remember reading there was a survey that asked Australians who they felt our closest international friend was. The US was the top answer for over a decade, having stolen the crown from the UK I think in the late 90s or something. Recently though, it switched to New Zealand.",
-          "It is an interesting position we are in here, I suspect we will do the usual thing and walk the middle road. Australia, is part of the Commonwealth, huge trade partner with Asia and allies with the US. Why not throw Canada into the mix some more.This setup is why I call this place an equal opportunist whore. If we can do business with you, we will. I also call it the worlds largest Mining town, but that just acknowledging the reality of the place a little.As much as many are going against the US, I don't think there is much constitution at the top here to make such a bold move. We will just be pottering around down here hoping all the bad stuff passes us by as nobody notices us."
+          "FYI; the paper is clearly a reference to Danijar Hafner's 'Dreamer' line of work, which was published in 2019, and which Danijar has continued to iterate on. https://arxiv.org/abs/1912.01603The TalkRL podcasts on this line of work are reasonable accessible and quite interesting. https://www.talkrl.com/episodes/danijar-hafner https://www.talkrl.com/episodes/danijar-hafner-on-dreamer-v4..."
         ]
       }
     },
@@ -116,14 +116,14 @@
       "source": "Hacker News",
       "published_at": "2026-09-16T20:59:24+00:00",
       "summary": "Breaking the 1.58-bit Barrier for Ternary LLMs",
-      "score": 150,
-      "comments": 20,
+      "score": 169,
+      "comments": 22,
       "discussion_url": "https://news.ycombinator.com/item?id=49732931",
       "extra": {
         "top_comments": [
           "So they get down from 1.58 to 1.48 bits per weight by exploiting the fact that actual weights in practice are 0 51% of the time. Neat.If ternary llms work out and are baked into hardware as custom silicon I bet they'll be shockingly efficient.",
-          "So this compression is only pertinent to the LLM file format? In memory it'd have to be expanded into the 1.58-bit form - 5 trits per byte.",
-          "Ternary quantization does not make any sense. Vector quantization and trellis based methods are better in this region for PTQ."
+          "Ternary quantization does not make any sense. Vector quantization and trellis based methods are better in this region for PTQ.",
+          "Pushing past log2(3) for real. This could drastically shrink LLMs for embedded systems, making them truly portable."
         ]
       }
     },
@@ -134,14 +134,14 @@
       "source": "Hacker News",
       "published_at": "2026-09-15T22:15:25+00:00",
       "summary": "The engineering behind the US Strategic Petroleum Reserve",
-      "score": 120,
-      "comments": 45,
+      "score": 155,
+      "comments": 61,
       "discussion_url": "https://news.ycombinator.com/item?id=49719596",
       "extra": {
         "top_comments": [
           "Salt contains the oil and helps seal small fractures. The rock salt surrounding the SPR’s caverns has extremely low permeability, meaning fluids have very little ability to pass through it. It also doesn’t react with petroleum. Under enormous pressures underground, salt also slowly deforms, which helps close small fractures. The salt itself can therefore contain the oil without a steel-and-concrete tank lining the cavern.Oil floats on water, which means pumping water into the bottom of the cavern pushes the oil out. As fresh water is pumped into the bottom of the cavern, the oil gets displaced upwards into a delivery system.The more water you pump in, the lower the quality of the oil that's pumped out; we are basically loaning the oil refiners money to buy SPR oil they don't really want. Also, the more water we pump in, the more salt leeches into the water and the more the bottom of the chamber deforms, creating shear forces in the upp walls that lower its overall structural integrity.I've posted this before; it's a recent report on the status and maintenance of SPR facilities, which is very clearly written and well worth your time if you want to understand the topic better: https://www.gao.gov/products/gao-26-106918",
           "I’m certain engineers have considered this, but it doesn’t seem answered anywhere: why not just pump the original brine back in to move around the oil? Wouldn’t that at least prevent eroding the storage unit and causing it to fail?Unrelated: dang, he wasn’t underselling this being a pretty elegant solution! I never would’ve thought of it, for sure.",
-          "Related: https://news.ycombinator.com/item?id=49566946"
+          "Hmm...The Math does not hold up. 300 feet diameter circular area is 1.62 acres. So at max you would need about 1130 x 2 = 2260 acres and not 45000 acres as projected !From the post :\"300 feet in diameter...\"\"To hold 714 million barrels of oil (the full capacity of the Strategic Petroleum Reserve), you’d need about 1,130 of these tanks. If you use the standard capacity of the largest commercial petroleum farms (e.g., in Cushing, Oklahoma), you need about 45,000 acres to store these tanks.\""
         ]
       }
     }
