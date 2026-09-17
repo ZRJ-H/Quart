@@ -1,13 +1,13 @@
 ---
 first_seen: 2026-07-05
-last_seen: 2026-09-07
+last_seen: 2026-09-17
 language: Python
 tags: [github, trending]
 ---
 
 # langchain-ai/langchain
 
-> The agent engineering platform.
+> 面向智能体工程的应用开发平台，提供模型、工具、记忆与链式编排能力，适合构建复杂 LLM 应用、RAG 系统与生产级 AI 工作流。
 
 ## 基本信息
 
@@ -48,3 +48,4 @@ tags: [github, trending]
 | 2026-08-24 | #20 | 144,847 | +55⭐ | 常驻 |
 | 2026-08-27 | #24 | 145,098 | +251⭐ | 跃升 |
 | 2026-09-07 | #24 | 145,829 | +731⭐ | 爆火 |
+| 2026-09-17 | #25 | 146,474 | +645⭐ | 爆火 |

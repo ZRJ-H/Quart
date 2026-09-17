@@ -1,13 +1,13 @@
 ---
 first_seen: 2026-06-28
-last_seen: 2026-09-07
+last_seen: 2026-09-17
 language: C
 tags: [github, trending]
 ---
 
 # Genymobile/scrcpy
 
-> Display and control your Android device
+> 在电脑上显示并控制 Android 设备的开源工具，无需 root 且延迟较低，适合手游投屏、自动化测试、演示与远程协助等场景。
 
 ## 基本信息
 
@@ -28,3 +28,4 @@ tags: [github, trending]
 | 2026-07-13 | #19 | 145,568 | +157⭐ | 常驻 |
 | 2026-08-15 | #21 | 147,651 | +2,083⭐ | 爆火 |
 | 2026-09-07 | #23 | 149,031 | +1,380⭐ | 爆火 |
+| 2026-09-17 | #24 | 149,781 | +750⭐ | 爆火 |

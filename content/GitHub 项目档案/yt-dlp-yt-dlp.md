@@ -1,13 +1,13 @@
 ---
 first_seen: 2026-06-28
-last_seen: 2026-08-31
+last_seen: 2026-09-17
 language: Python
 tags: [github, trending]
 ---
 
 # yt-dlp/yt-dlp
 
-> A feature-rich command-line audio/video downloader
+> 功能丰富的命令行音视频下载工具，支持大量网站与格式参数，适合需要批量下载、归档或离线保存媒体内容的个人与自动化脚本场景。
 
 ## 基本信息
 
@@ -48,3 +48,4 @@ tags: [github, trending]
 | 2026-08-28 | #14 | 187,478 | +223⭐ | 跃升 |
 | 2026-08-30 | #14 | 187,789 | +311⭐ | 跃升 |
 | 2026-08-31 | #16 | 187,996 | +207⭐ | 跃升 |
+| 2026-09-17 | #12 | 191,652 | +3,656⭐ | 爆火 |

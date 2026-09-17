@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-09-16T13:02:31.711253+08:00",
+  "cached_at": "2026-09-17T11:01:44.658271+08:00",
   "articles": [
     {
-      "id": "49717558",
-      "title": "Introducing System One Models and Jev",
-      "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+      "id": "49731285",
+      "title": "Training a 4B model to produce 81% faster query plans than Postgres",
+      "url": "https://rohanbansal.com/qorl",
       "source": "Hacker News",
-      "published_at": "2026-09-15T19:25:03+00:00",
-      "summary": "Introducing System One Models and Jev",
-      "score": 1003,
-      "comments": 313,
-      "discussion_url": "https://news.ycombinator.com/item?id=49717558",
+      "published_at": "2026-09-16T18:50:00+00:00",
+      "summary": "Training a 4B model to produce 81% faster query plans than Postgres",
+      "score": 423,
+      "comments": 86,
+      "discussion_url": "https://news.ycombinator.com/item?id=49731285",
       "extra": {
         "top_comments": [
-          "First, congrats to the team on launching something genuinely interesting and new.Seems like a more accurate title would be \"Jev: Trading general purpose generation for fast typed inference\" or something like that.This is interesting, but the speed comparison seems misleading? A generative model that can output code in a Turing-complete language can do anything a computer can do.Jev can only generate structured output, right? This is probably super useful for classification/routing/scoring, but it's nothing like the code generating models we're all using today for code and automation.Also \"can't hallucinate\" seems wrong? Sure, it can't emit an invalid type, but it can still emit a completely wrong valid value. You can enforce structured output from an LLM too, with an appropriate harness, etc.Assuming there's no funny business, the Doom demo is cool.",
-          "Wasn't really till seeing this home assistant demo they have (https://www.loom.com/share/18c4dbcf8db546dfb2d7f2ef018e78e4) that the value really clicked for me.Seems really cool.",
-          "This, combined with contracts, could make a lot of things so much fun now!For those who don't know (which is probably everyone but me), I ported the design-by-contract pattern in Python and combined it with LLMs. This was early 2025. I originally wrote about it here: https://leoveanu.com/2025-03-01-dbc/ . Contracts are a core feature of SymbolicAI ever since. The community seems to have loved it too (https://news.ycombinator.com/item?id=44399234).I think I'm starting to glimpse the implications and it's gonna change agentic workloads if it holds up to scrutiny. It's too early for me to tell anything other than jot down some rough thoughts.In short, you get blazingly fast semantic branching you can use in control flows. For contracts, I can now directly take the data model that you have to design and convert it into Jev's expected format. Or I can use Jev for semantic branching in postconditions.If my understanding is correct, that should be doable, but I need to think more about it. It could be that with Jev I can finally “compile contracts” and better chain them into workflows, which is something I always wanted but didn't know how to do properly.Eager to test. On the waiting list."
+          "“81% faster query plans than Postgres”…on an 8 GB dataset that fits entirely in memory, with shared_buffers constrained to a fraction of that, queries warmed before measuring, and read-only SELECTs.I would be cautious about over fitting, it’s tough to say if those query plans would really be more optimal than Postgres heuristics at scale and with a bit more realistic OLTP workloads.In any case, such is life with profile guided optimization. Many of us appreciate how database workloads can drift over time and with scale.Kudos to the author for getting their hands dirty and writing up their experiments.",
+          "Engineer: \"HELP, our production DB is frozen on this query that worked fine before!\"Infra: \"Hmm, let's check... Well would you look at that, it seems like your LLM query planner usually works and produces fast queries, but this time when you changed a variable name to trigger query rebuild, it happened to hallucinate and miss an index, would you mind re-running the LLM a few times until you get a faster query?\"",
+          "Unless they’ve been elided, there were no indices other than the PK on any table, and no additional statistics. There are correlated columns here: a given country may have produced more movies in a given range of years, as its movie industry built up; a given country may produce more TV series than movies, etc.Nearly every time I’ve seen someone resorting to hints for a query, it’s because their statistics are incorrect. Adding hints is papering over the problem, and can backfire later if the data shape changes."
         ]
       }
     },
     {
-      "id": "49716176",
-      "title": "An update on Wayback Machine access",
-      "url": "https://blog.archive.org/2026/09/15/an-update-on-wayback-machine-access/",
+      "id": "49729000",
+      "title": "Small programming tricks",
+      "url": "https://will-keleher.com/posts/small-programming-tricks-matter/",
       "source": "Hacker News",
-      "published_at": "2026-09-15T17:52:18+00:00",
-      "summary": "An update on Wayback Machine access",
-      "score": 462,
-      "comments": 240,
-      "discussion_url": "https://news.ycombinator.com/item?id=49716176",
+      "published_at": "2026-09-16T15:56:47+00:00",
+      "summary": "Small programming tricks",
+      "score": 416,
+      "comments": 187,
+      "discussion_url": "https://news.ycombinator.com/item?id=49729000",
       "extra": {
         "top_comments": [
-          "> Here’s what’s going on. The Internet Archive’s Wayback Machine has been hit by waves of high-volume automated traffic, and we’ve put protections in place to keep the service running.I'm pretty certain this is scrapers that are trying to workaround blocks on accessing original sites by hitting the Wayback Machine copy instead. Appalling behavior.In addition to the load it puts on this vital non-profit piece of Internet infrastructure, we've also already seen some sites opt out of the Wayback Machine to prevent their content from being scraped via this alternative route.",
-          "Mad props to the people at the Archive. You are the heros we need in a formerly open internet that is surrendering to evil big corps and closing down free access.The Internet Archive is in a really bad spot being attacked from multiple sides at once. But — while service has not been consistent — they have maintained open access. I can still access anonymously from Tor without Cloudflare or some other centralized gatekeeper showing me the middle finger.If you got some money to spare, consider donating to them. They need it.",
-          "I recently remembered a wonderful comic blog from 2010’s that is not online anymore. It was a sonderful Finnish LGTG-thened comic blog that I use to read, then forgot completely until few weeks ago. WM had it stored of course, so I could read through this amazing piece of internet art again.I really so through some money their way, they do wonderful work."
+          "The thing with a lot of these tricks is that you have to get into the habit of using them. I knew `Ctrl+r` for history since I learned about the command line. I even have a nice shell integration with fzf. But I still used the up/down arrow keys for years or scrolled up when I was looking for a previous command, because I never remembered the shortcut and just took the path of least resistance to find something.Usually what I do is writing these tricks down to a document that is easily accessible at a place where I know that I will look for when failing to remember them. I have a directory of docs where I write stuff like this down by language/tool/etc., so I can quickly look it up without having to search the internet. But I also have to actively remind myself that these things exist whenever I have a problem, stop me from just doing the inefficient thing.",
+          "A lot more tricks can be learned from just watching AI work. Instead of allowing AI to work autonomously, go back to the old days where you manually approve every command the AI runs. Just recently while doing performance optimization work, I found Opus using the `perf` command in ways I didn’t know possible. Just give AI a real task and carefully read what commands are used by the AI to solve the problem; most likely the AI uses a trick or two that you didn’t know existed.",
+          "One of the things I frequently use with Emacs is writing/recording macros on the fly with F3 and running them. I am sure this is present in the other editors as well, but this has helped me a lot at timeshttps://www.gnu.org/software/emacs/manual/html_node/emacs/Ba..."
         ]
       }
     },
     {
-      "id": "49715947",
-      "title": "Gemini 3.8 Live and 3.8 Live Extended Thinking",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
+      "id": "49724881",
+      "title": "Nvidia announces native GPU programming in Rust",
+      "url": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/",
       "source": "Hacker News",
-      "published_at": "2026-09-15T17:38:18+00:00",
-      "summary": "Gemini 3.8 Live and 3.8 Live Extended Thinking",
-      "score": 357,
-      "comments": 230,
-      "discussion_url": "https://news.ycombinator.com/item?id=49715947",
+      "published_at": "2026-09-16T11:15:53+00:00",
+      "summary": "Nvidia announces native GPU programming in Rust",
+      "score": 352,
+      "comments": 137,
+      "discussion_url": "https://news.ycombinator.com/item?id=49724881",
       "extra": {
         "top_comments": [
-          "My first language is Afrikaans, which is a somewhat niche language and hard to find teachers/conversation buddies outside South Africa. (I live in USA now)I've been using Gemini to live chat in Afrikaans and do impromptu Afrikaans grammar lessons during my solo drives around town. It is phenomenal at speaking the language - like, it really shocks my family members when they hear it.This is probably the most joy I get from any of my usages of LLMs/AIs. It's been really, really nice getting to speak my language regularly again. =)So, I'm excited about this release and live chat getting better. I also hope the other frontier labs pick up niche languages like this as well so that I have more options.",
-          "Just gave it a try - very solid release.Copes well with thick accent, voices are pleasant and latency seems low.Oh and I can actually use it on a workspace account - which for most of the recent releases was an account stuck in limbo. Not personal enough for personal offering, not enterprise enough for enterprise.Well done G - will definitely be using this",
-          "I wonder when/if we’ll see Gemini beating Fable and Astra. Last year I would have confidently bet Google will overtake the others just because they have the data, the hardware (TPUs) and a fat advertising money pipe and yet they are still behind. Anyone anonymous at Google want to hint when Gemini 4 will be out?"
+          "I strongly dislike CUDA. Once you have allowed that proprietary cr*p into your C++ codebase, it is very hard to get rid, and you end up with code that is either tied to a single vendor or an #ifdef hell, probably both.The best way to program GPUs is face up to the reality that they are not the same machine as the CPU, write your kernels in separate files, and launch them manually, like in Metal, OpenCL, and D3D12, etc. These days we even have DSLs like Triton that make kernel writing much more ergonomic than anything you would hope to achieve in Rust.",
+          "Since NVIDIA owns huggingface now and huggingface has the excellent Candle [1] crate for inference on Rust, this seems like a good step towards nice native Rust kernels.[1] https://github.com/huggingface/candle",
+          "The recent circular moves that Nvidia is making is designed to wrap things around them, anything to keep the AI model party going."
         ]
       }
     },
     {
-      "id": "49712278",
-      "title": "Show HN: Capsule – Single-file web apps that save their data into SQLite",
-      "url": "https://withcapsule.app/",
+      "id": "49732270",
+      "title": "Xiaomi Mimo 2.6 live post-training dashboard",
+      "url": "https://mimo.xiaomi.com/rl/",
       "source": "Hacker News",
-      "published_at": "2026-09-15T13:31:40+00:00",
-      "summary": "Hey HN,I always had the problem that building HTML pages is really simple now, but trying to save data required hosting it somewhere, and sharing it afterwards was not easy. Over the last few months, I've been building an app called Capsule (it’s also the file extension name) written in Rust with Tauri 2.0 that allows packing an HTML app and its data into a single SQLite file.The HTML file and any related assets are directly embedded in the database. User data can either be saved as a localStorage key/value store or via a MongoDB-inspired collections API as documents, saved in a table in the file. You can also save other assets, like PDF files or images, directly in the database to keep different documents together. All data can be easily exported to CSV or JSON if needed.Privacy and security were a big priority for me, so documents cannot do anything out of the box. They don’t have direct access to the file system and they require permission to access the internet. The permission model is still something I’m working to improve. Capsule documents can also use local or remote AI models for document specific AI features.One downside with this approach is that multiple people working on it will create different copies. To make it possible to merge different copies of the same file, each data entry has a unique UUID and timestamp.I’m planning to open up the file format specification for the 1.0 version of the app so other apps can read or write Capsule files.You can try it out in the web preview at https://withcapsule.app/preview with pre-built templates or use any AI provider of your choice to create a custom, Capsule-optimized app by using the following prompt:\"Please read the app wizard instructions at https://withcapsule.app/prompt.txt and help me design an app.“I’m still working on the file format but there are migrations for each new version, so data should never be lost when using newer versions of the app in the future. Please let me know if you have any ideas or use cases where this might make sense or does not work.",
-      "score": 309,
-      "comments": 122,
-      "discussion_url": "https://news.ycombinator.com/item?id=49712278",
+      "published_at": "2026-09-16T20:09:18+00:00",
+      "summary": "Xiaomi Mimo 2.6 live post-training dashboard",
+      "score": 293,
+      "comments": 75,
+      "discussion_url": "https://news.ycombinator.com/item?id=49732270",
       "extra": {
         "top_comments": [
-          "I feel like this is close to a good idea.What I would want to see is a version of this that lets me write an app that can write to the DB through an API, and then have a google drive-esque \"host this for me\" thing.A focus on local-first really misses the point IMO. Like sure it's good it can be run locally, but really most people have a distribution problem. Be a distribution solution!The thing I would do involves having the hosting just be available by dropping the capsule into the google drive/dropbox-y thing, and then having it be that you can just copy/paste the file to someone _and it carries over the data and everything by default_.For a lot of people the \"thing\" is the app + the data. Sometimes you want to decouple them but a lot of times you don't want to.I think it would be very rare for someone to want to share the single-file bundle just without data.",
-          "> but trying to save data required hosting it somewhereWith the File System Access API, webpages nowadays can read and write local files just like desktop applications:https://developer.chrome.com/docs/capabilities/web-apis/file...Try this text editor for example:https://googlechromelabs.github.io/text-editor/It works nicely on Desktop and Mobile.",
-          "I don't know, this seems like an idea that maybe works in a specific context being generalized past the point of the original idea making sense.If the user needs to download a specific application to run this these web apps, then why not just send them that initial application in the first place? Why jump through the hoops of using Capsule when the same hoops can be jumped through to get to the same endpoint?If this was a near-universally adopted application, then it'd make sense. But it's not, and the closest thing we have to that are browsers... which already do what you're describing?Bundling data with the application makes sense, but is also only appropriate in pretty narrow circumstances. If I'm willing to ship my data with the web app, then I'll just embed the data in the HTML file. If the expectation is that the user will modify this data, then I don't think I'd want to ship it like this."
+          "I been using MiMo-V2.5 to do most of my work as software engineer, on a variety of projects I'm working on, and I been VERY happy with ROI. The model is very powerful! Not perfect – I've run in hallucination loops once or twice, but nothing a stop-then-continue wouldn't solve.The cost is unbelievably low, and the quality of intelligence I get is equivalent to when I was working mostly with Anthropic models (late last year/early this year). I'm fully invested in MiMo and I'm very happy with it.-- PS: I also check almost daily to see if other models are capable of doing such great work. And they do – DS4F is powerful and DS41 is impressive, GLM 5.3 Flash gets a job done well, etc. – but when I add cost of M-token in the ROI math, Jeez! MiMo is an order of magnitude better.",
+          "Well, if open source AI is dangerous (for OpenAI/Anthropic IPOs?), this is like watching a time bomb.",
+          "For reference, Mimo-v2.5-Pro scored 19% on DeepSWE 1.1. This is looking great.Fable scores 70%, Kimi K3 69%, Astra 74% (all on max effort).https://deepswe.datacurve.ai/blog/deepswe-v1-1"
         ]
       }
     },
     {
-      "id": "49716476",
-      "title": "We got admin access to Baseten's production GitHub",
-      "url": "https://www.strix.ai/blog/baseten-harbor-github-pat-takeover",
+      "id": "49726955",
+      "title": "Dream-RSI: Recursive Self-Improvement through Evolving Worlds",
+      "url": "https://arxiv.org/abs/2609.14858",
       "source": "Hacker News",
-      "published_at": "2026-09-15T18:11:24+00:00",
-      "summary": "We got admin access to Baseten's production GitHub",
-      "score": 252,
-      "comments": 138,
-      "discussion_url": "https://news.ycombinator.com/item?id=49716476",
+      "published_at": "2026-09-16T13:44:40+00:00",
+      "summary": "Dream-RSI: Recursive Self-Improvement through Evolving Worlds",
+      "score": 183,
+      "comments": 49,
+      "discussion_url": "https://news.ycombinator.com/item?id=49726955",
       "extra": {
         "top_comments": [
-          "Hey all Philip from Baseten here.Posting this on behalf of our security team. I wanted to confirm that we collaborated with Strix on the remediation of the reported vulnerability. We thank Strix for their responsible disclosure. We took immediate steps to invalidate the leaked key and remove the public container image. Our logs confirm the vulnerability was never exploited and no customer data was exposed.",
-          "> Baseten handled this well. The timeline was:> July 13, 11:10 PM: I reported the live basetenbot token, the public Harbor project, and the repository permissions.> July 14, morning: Baseten made the Harbor project private. I flagged that the token itself still worked.> July 14, 4:34 PM: Anton from Baseten Security confirmed the issue as critical and said they had made the Harbor project private and rotated the token. He also asked us to securely delete the images we'd pulled.> July 14, 5:05 PM: We confirmed deletion and sent over two lower-severity findings from the same scan.> July 17: Baseten closed out the remaining findings.> September: We let Baseten know we planned to disclose the finding publicly and sent them a draft of this post.They also sent us some T-shirts and sweatshirts as a thank-you for finding this critical bug.well done all around. i think my only open question is what default security boundaries should all vibecoded internal agents follow as a learning we can take from this",
-          "I'd call Docker out on this. Why the hell is it recording"
+          "Perhaps I'm not understanding it correctly, but here's my take on what the paper is doing.Imagine you have a problem you want to solve (let's say, identify an OCR'd handwritten character, e.g. the MNIST Dataset). You tell 3 agents \"Hey, each of you take a stab at getting really good at recognizing characters from this dataset. You can take 10 refinement steps to continue to improve \". You can't give each agent unlimited steps of course, because you have a finite amount of compute.So each agent goes off, and by the end, Agent 1 got to 90% accuracy, Agent 2 got to 80% accuracy, and Agent 3 got to 89% accuracy. Agent 1 wins, of course.But then you look at the refinement steps, and after 2 steps, Agent 1 was _already at_ 90% accuracy. So the agent spent the next 8 steps basically not moving at all. Agent 3 on the other hand, perhaps was continuously climbing in accuracy at every refinement step, but hit step 10 and had to stop.Now because you recorded every step from every agent, you know what you'd do differently next time -- you'd not allocate as many steps to Agent 1, and give Agent 3 more steps, because perhaps that might result in Agent 3 coming up with a better answer.From my understanding, that's what they built in the form of a \"search\" controller -- a way to evaluate automatically and reapply how you could allocate resources more effectively, when applied to a new problem.But I guess my misunderstanding is how applicable the search controller is when applied to new problems -- just because one pathway stalled early for one problem, doesn't mean it would work for another?",
+          "Unless I'm misunderstanding, calling this RSI seems misleading?This looks like an optimization of current training methods, and a good one, but not \"RSI\" in the sense of a system that can perpetually improve itself forever.",
+          "Is this a good place to ask why no one seems to be worried that recursive self improvement might be dangerous? To me that seems like a really bad idea but I’m interested to hear the pro-RSI side of things."
         ]
       }
     },
     {
-      "id": "49717638",
-      "title": "Building a Linux GPU Driver for the M4 Mac Mini in One Month",
-      "url": "https://codyho.dev/blog/gpu-driver/",
+      "id": "49734171",
+      "title": "Australia says it could follow Canada in forging deeper ties with EU",
+      "url": "https://www.independent.co.uk/news/world/australasia/canda-eu-membership-australia-us-trade-b3050227.html",
       "source": "Hacker News",
-      "published_at": "2026-09-15T19:30:03+00:00",
-      "summary": "Building a Linux GPU Driver for the M4 Mac Mini in One Month",
-      "score": 213,
-      "comments": 133,
-      "discussion_url": "https://news.ycombinator.com/item?id=49717638",
+      "published_at": "2026-09-16T22:56:48+00:00",
+      "summary": "Australia says it could follow Canada in forging deeper ties with EU",
+      "score": 171,
+      "comments": 118,
+      "discussion_url": "https://news.ycombinator.com/item?id=49734171",
       "extra": {
         "top_comments": [
-          "https://www.reddit.com/r/AsahiLinux/comments/1whecn1/comment...> The author was banned from Asahi Linux for hiding his extensive use of LLMs from us in another attempted contribution, and (more importantly) for concealing that he is a former Apple engineer with direct contacts to the people involved in Apple Silicon development. Make of this what you will.",
-          "All this work is tainted since the poster is ex-Apple[1]. There is no way Linux will take that code, since people from Apple also contribute to Linux and this creates a major conflict.There's also ongoing issues around Codex for this sort of thing, given Apple is suing OpenAI over stolen trade secrets[2]. And nobody knows whether training data in other models is similarly tainted.[1]: https://codyho.dev/documents/cody_ho_resume.pdf[2]: https://www.theguardian.com/technology/2026/jul/10/apple-sue...",
-          "It's extremely impressive that they were able to make a working driver so quickly. I think this is one of the best use cases for LLMs. You don't need someone to spend years reverse engineering undocumented hardware anymore. It will interesting to see how good the driver the LLMs came up with is, and whether it can be upstreamed into the Linux kernel."
+          "Australia and New Zealand should definitely do so. If they haven’t figured it out after a year and 3/4 they never will.",
+          "As an Australian, I have noticed a shift personally in feeling like I identify more with \"European\" culture, compared to 10 years ago I felt like we were the 51st state and I felt very close with the US.This seems to be shared by others, I remember reading there was a survey that asked Australians who they felt our closest international friend was. The US was the top answer for over a decade, having stolen the crown from the UK I think in the late 90s or something. Recently though, it switched to New Zealand.",
+          "It is an interesting position we are in here, I suspect we will do the usual thing and walk the middle road. Australia, is part of the Commonwealth, huge trade partner with Asia and allies with the US. Why not throw Canada into the mix some more.This setup is why I call this place an equal opportunist whore. If we can do business with you, we will. I also call it the worlds largest Mining town, but that just acknowledging the reality of the place a little.As much as many are going against the US, I don't think there is much constitution at the top here to make such a bold move. We will just be pottering around down here hoping all the bad stuff passes us by as nobody notices us."
         ]
       }
     },
     {
-      "id": "49718928",
-      "title": "German Rheinmetall open-sources its Battlesuite connected weapon system protcol",
-      "url": "https://rheinmetall.github.io/onboardapi-documentation/9.10.0/index.html",
+      "id": "49732931",
+      "title": "Breaking the 1.58-bit Barrier for Ternary LLMs",
+      "url": "https://arxiv.org/abs/2609.16338",
       "source": "Hacker News",
-      "published_at": "2026-09-15T21:07:47+00:00",
-      "summary": "German Rheinmetall open-sources its Battlesuite connected weapon system protcol",
-      "score": 168,
-      "comments": 46,
-      "discussion_url": "https://news.ycombinator.com/item?id=49718928",
+      "published_at": "2026-09-16T20:59:24+00:00",
+      "summary": "Breaking the 1.58-bit Barrier for Ternary LLMs",
+      "score": 150,
+      "comments": 20,
+      "discussion_url": "https://news.ycombinator.com/item?id=49732931",
       "extra": {
         "top_comments": [
-          "“Hi Codex, please find attached website about the specification of my Battlesuit and use the documented API to create a plugin for Home Assistant that shows groups of sensor data.You are only allowed to use commands that retrieve data, you are not allowed to perform actions on the suit.Treat the suit like its API is not robust and in worse shape than a cheap toy: perform read calls slowly and sequentially with at least one minute in between.If possible please group data in meaningful categories, just like the tank and radar dome.My Home Assistant is the default on the local network, credentials are in credentials.txt.Please send me a text when you’re done. Kthnxbye”",
-          "Reminds me a lot of the Tactical Microgrid Standard (aka TMS aka MIL-STD-3071) [1], probably just because TMS uses DDS as well. I would really like to know if there is a protocol that functions like DDS but caters to real-time guarantees and prioritizes (at a \"simple protocol\" level) usability on embedded systems with no dynamic memory allocation. It would also need to be just-as-functional with non-real-time systems. One problem with DDS is that it is too heavy-handed to implement well on an embedded system.[1] https://battery.army.mil/system-integrator-hub/tms/",
-          "Are they trying to recreate DIS (IEEE1278) and HLA (IEEE1516) — like they‘re replicating the FOM architecture from distributed simulations for their weapons to integrate."
+          "So they get down from 1.58 to 1.48 bits per weight by exploiting the fact that actual weights in practice are 0 51% of the time. Neat.If ternary llms work out and are baked into hardware as custom silicon I bet they'll be shockingly efficient.",
+          "So this compression is only pertinent to the LLM file format? In memory it'd have to be expanded into the 1.58-bit form - 5 trits per byte.",
+          "Ternary quantization does not make any sense. Vector quantization and trellis based methods are better in this region for PTQ."
         ]
       }
     },
     {
-      "id": "49716953",
-      "title": "Chopping up books when they're physically too big",
-      "url": "https://attainablefelicity.mattkirkland.com/20260915/cut-up-your-books.html",
+      "id": "49719596",
+      "title": "The engineering behind the US Strategic Petroleum Reserve",
+      "url": "https://johnjwang.com/post/2026/09/15/engineering-behind-us-strategic-petroleum-reserve",
       "source": "Hacker News",
-      "published_at": "2026-09-15T18:45:31+00:00",
-      "summary": "Chopping up books when they're physically too big",
-      "score": 149,
-      "comments": 143,
-      "discussion_url": "https://news.ycombinator.com/item?id=49716953",
+      "published_at": "2026-09-15T22:15:25+00:00",
+      "summary": "The engineering behind the US Strategic Petroleum Reserve",
+      "score": 120,
+      "comments": 45,
+      "discussion_url": "https://news.ycombinator.com/item?id=49719596",
       "extra": {
         "top_comments": [
-          "20ish years ago I complained to my college roommate that my math book was too big. He asked if I was gonna sell it back, and I said I couldn’t—they had a new edition out, so mine was worthless. Cut it, he said.It was something I had never considered. Not for a moment. Books were sacred to me. Cut one? Blasphemy.But he was right. And so I cut it. And it fixed all of my complaints.What I learned is that some folks have a different mindset; they see the world as something to be shaped around themselves, rather than seeing themselves as something that should be shaped to fit the world. That’s been a useful lesson sometimes.",
-          "Are AI companies trying to poison the search index?Like Boris Johnson did when he had fun times with a model on the campaign bus, then did a bizarre interview when he claimed he made model buses!https://www.theguardian.com/politics/2019/jun/26/mesmerising...",
-          "This is done by default in Japan. Most long books are sold as different volumes, parts, etc. At first I didn't really like it (especially because you'd have to buy both Vol.1 and 2 for the whole thing), but it makes sense if you're going to be bringing books around with you."
+          "Salt contains the oil and helps seal small fractures. The rock salt surrounding the SPR’s caverns has extremely low permeability, meaning fluids have very little ability to pass through it. It also doesn’t react with petroleum. Under enormous pressures underground, salt also slowly deforms, which helps close small fractures. The salt itself can therefore contain the oil without a steel-and-concrete tank lining the cavern.Oil floats on water, which means pumping water into the bottom of the cavern pushes the oil out. As fresh water is pumped into the bottom of the cavern, the oil gets displaced upwards into a delivery system.The more water you pump in, the lower the quality of the oil that's pumped out; we are basically loaning the oil refiners money to buy SPR oil they don't really want. Also, the more water we pump in, the more salt leeches into the water and the more the bottom of the chamber deforms, creating shear forces in the upp walls that lower its overall structural integrity.I've posted this before; it's a recent report on the status and maintenance of SPR facilities, which is very clearly written and well worth your time if you want to understand the topic better: https://www.gao.gov/products/gao-26-106918",
+          "I’m certain engineers have considered this, but it doesn’t seem answered anywhere: why not just pump the original brine back in to move around the oil? Wouldn’t that at least prevent eroding the storage unit and causing it to fail?Unrelated: dang, he wasn’t underselling this being a pretty elegant solution! I never would’ve thought of it, for sure.",
+          "Related: https://news.ycombinator.com/item?id=49566946"
         ]
       }
     }
