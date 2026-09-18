@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-09-18T11:01:21.269118+08:00",
+  "cached_at": "2026-09-18T12:58:03.590040+08:00",
   "articles": [
     {
       "id": "49743097",
@@ -8,14 +8,14 @@
       "source": "Hacker News",
       "published_at": "2026-09-17T16:25:37+00:00",
       "summary": "Hister: A private search engine for the pages you visit and the files you keep",
-      "score": 493,
-      "comments": 139,
+      "score": 525,
+      "comments": 141,
       "discussion_url": "https://news.ycombinator.com/item?id=49743097",
       "extra": {
         "top_comments": [
           "Ohi, author here! Thanks for posting Hister. Feel free to A.M.A. My first free software search project was Searx, a privacy respecting metasearch engine, but because of the limitations of the metasearch concept, I've decided to take a different approach.Hister builds a personal search index from pages you visit, bookmarks, browser history, local files, and crawled websites. It stores extracted content with offline result previews, so information remains searchable even when the original page changes or disappears. It supports full text and semantic search, can run entirely on your own machine, and includes a web interface, command line tools, and an MCP endpoint for assistant integrations.Website: https://hister.org/Tiny read-only demo: https://demo.hister.org/Ps.: It looks like our name conflicts with a registered trademark in the US. The owner of the other project has asked us to change it, so we’ll probably need to comply sooner or later.Name suggestions are welcome! Ideally, the new name should be relatively short, sound good, and have an available .org domain.Thanks!",
           "Kind of related to this in that I built it to hoard knowledge from web pages I've visited along with implementing a Karpathy-style LLM Wiki, but the knowledge is collected automatically from sources I browse.I have it up on GitHub, but I don't think anyone should use my implementation.Loosely, what I built:* On each of my machines I have a cron job running that looks at all my web browser history (usualy it's inspecting the brower's SQLlite across firefox and chrome). If it matches my rule list: hacker news stories, certain reddits, etc. it'll grab the page, convert to markdown and drop in my Obsidian Vault incoming.* It has a whole de-duping architecture since I might open the same page on multiple machines. Uses the CloudFlare SQLITE D1 storage for tracking the processed links.* it'll then trigger the LLM to do some Karpathy wiki style taxonomy assignment to the articles, organize them, create an index etc.It's then available for my \"bot\" stuff to do writings for me.... I will probably write more about it at some point. I'm not certain it's totally useful and not just a yak-shave on hoarding knowledge.Ai-drafted article on this [1]Example AI-Drafted article based on some discussions the other day on Ollma vs LLama.cpp [2][1] https://taude.xyz/posts/how-archivore-turns-browsing-into-a-...[2] https://taude.xyz/posts/skip-ollama-run-llama-cpp-directly-o...",
-          "I'd love a extension setting to only send tabs that were visible for ~4+ seconds.I built myself a little extension last year that tracks what information I was looking at, but focused on generating \"new info\" recaps for the day / week.I realized that I open / quick view a lot of pages and close them, which is a strong signal that I don't care about that specific page, and it shouldn't be a source of \"new insights\" that I learnt that day (since I probably don't care about that topic).I'd love to re-try a simpler version of that project that builds on Hister as a backend actually."
+          "Opera browser has this feature baked in a long time ago, before the Chromium era."
         ]
       }
     },
@@ -26,8 +26,8 @@
       "source": "Hacker News",
       "published_at": "2026-09-17T20:17:48+00:00",
       "summary": "Astra for Law",
-      "score": 357,
-      "comments": 387,
+      "score": 401,
+      "comments": 436,
       "discussion_url": "https://news.ycombinator.com/item?id=49745940",
       "extra": {
         "top_comments": [
@@ -44,14 +44,14 @@
       "source": "Hacker News",
       "published_at": "2026-09-17T20:36:13+00:00",
       "summary": "Bend – A language that blocks AI mistakes via proof, on CPU and GPU",
-      "score": 328,
-      "comments": 168,
+      "score": 365,
+      "comments": 185,
       "discussion_url": "https://news.ycombinator.com/item?id=49746163",
       "extra": {
         "top_comments": [
           "Hi, I'm the author.HN staff: someone posted before me. Could we change the title to \"Bend - a language that blocks AI mistakes via proof and runs on GPUs\"?Everyone: feel free to ask any question, but I'd be highly appreciative if you could be a bit civilized and respectful this time. I've worked on this for 1 year, nearly 16h/day, 7 days a week, and I'm giving it for free. You need not to use it. So, I'd be thankful if you could point occasional failures politely rather than throwing me in a lava pit.Thank you!",
           "My read on this, after ingesting a good amount of content on the history, is:- this Bend is not really related to the old Bend (only in name)- this Bend doesn't really have anything to do with interaction combinators- this Bend is a QTT, with a change to affinity which enforces a good performance property for GPUs- the \"higher order at comptime\" is neat, reminds me of Andras Kovacs' work on 2ltt and staging in dependently typed languages.- this Bend is likely to be good at \"balanced recursive computations on ADT\", and can parallelize them ... but won't be as good as CUDA or e.g. Futhark on dense rectangular array computations- performance needs improvement in the scheduler, to possibly help with balanced work (looking at the n queens and symbolic regression numbers)?How are you going to handle search or synthesis over irregular structures (SupaGen)?",
-          "This project's repo has 20K stars with only 500 forks, with less than 300 issues(including closed). Something's not right.Compared to other programming languages:- Gleam: 22K stars, 1K forks, 3K issues- V: 38K stars, 2.3K forks, 11K issues- Ruby: 23K stars, 5.6 forks, 19K issues- Zig: 43K stars, 3K forks, 14K issuesIt got 16K stars just in 4 months too. https://www.star-history.com/?repos=bendlang%2FbendAlso how would anyone trust this? I've never seen a programming language that doesn't have 1) changelogs 2) way to download older versions 3) commit history.I don't understand why the author thought deleting the commit history was a good idea. Imagine seeing this project for the first time. It's a repo with 20K stars, but no commits, and suspiciously few issues and PRs. It doesn't look legitimate.---I'm not familiar with academic procedures, but a pdf on a repo, written by Fable and has no reviews, doesn't seem like a proper 'paper' to me."
+          "Gotta say, having followed Taelin on this project since mid 2023, this was not the response I expected when this language first dropped.It's interesting how cosmetics drive discussion, and how HN comments are weirdly divided in a very dismissive or skeptical camp and those acting incredulous and offended at the reaction of the former.What I expected instead was a lot more discussion about use cases, benchmarking, possibilities, limitations (that aren't about git history) and the scope of future development."
         ]
       }
     },
@@ -62,8 +62,8 @@
       "source": "Hacker News",
       "published_at": "2026-09-17T21:13:31+00:00",
       "summary": "Bonsai 2 27B: Near-Lossless Compression in a 9x Smaller Footprint",
-      "score": 264,
-      "comments": 83,
+      "score": 321,
+      "comments": 106,
       "discussion_url": "https://news.ycombinator.com/item?id=49746618",
       "extra": {
         "top_comments": [
@@ -74,74 +74,74 @@
       }
     },
     {
-      "id": "49740260",
-      "title": "The American Religion of Self-Storage Facilities",
-      "url": "https://www.newyorker.com/magazine/2026/09/21/the-american-religion-of-self-storage-facilities",
+      "id": "49749656",
+      "title": "Hacking OpenAI",
+      "url": "https://www.hacktron.ai/blog/hacking-openai",
       "source": "Hacker News",
-      "published_at": "2026-09-17T13:12:28+00:00",
-      "summary": "https://archive.ph/F77tj",
-      "score": 201,
-      "comments": 348,
-      "discussion_url": "https://news.ycombinator.com/item?id=49740260",
+      "published_at": "2026-09-18T02:47:24+00:00",
+      "summary": "Hacking OpenAI",
+      "score": 124,
+      "comments": 33,
+      "discussion_url": "https://news.ycombinator.com/item?id=49749656",
       "extra": {
         "top_comments": [
-          "This article takes the view of the consumer, \"Why do so many people pay to store items they almost never use?\". But in actuality, the interesting part of this is why is there so much supply of self-storage businesses?The answer is: cash flow. Self-storage businesses are the almost perfect solution for someone with a good size (but not enormous) bucket of money that they want to put to work generating cashflow:1. Cheap build out (cheap land, cheap facilities) 2. Almost entirely hands-off (no employees, automated entry) 3. Low liability (low risk of customers suing you) 4. Low overhead (just pay for taxes, electricity, minimal maintenance) 5. Reliable monthly cash flowThe abundant supply of these businesses, I suspect, tends to generate demand: it's easier to pay $80/month to store your junk than spend the time and emotional labor of picking through what you want to keep and what you want to get rid of. That ends up being captive long-term revenue.",
-          "I live in a small downtown condo. I don't have room to store a whole lot of extra stuff but I also have hobbies like camping, watersports, etc. I keep all of that stuff in a storage unit and I access it fairly often. Since I have it I also use it to save all the boxes for my electronics (77\" OLED is impossible to move safely without original box for example), car maintenance stuff, larger tools I use less frequently, etc. It is about 3 minutes drive 10 minute walk from my house. I definitely do not use it to hoard stuff I will never touch again.",
-          "I'm in the Maryland suburbs of Washington, DC, and self storage facilities are popping up around here like weeds. I have a storage unit and I'm trying to clear it out. I'm tired of the monthly fees that keep going up. I got it when I had to clear out my late sister's house and I wanted time to go through things and decide what to keep. When I moved last year, I got a larger unit, thinking I would need to declutter my townhouse prior to showing it. It turned out my agent wasn't that concerned about my clutter, but I did move some idle tech stuff into the unit. I was hoping to get a house with a big basement for my future tech hoarding needs, and I wanted to keep this stuff. As it turned out, I ended up in a rancher with no basement, so now I'm getting rid of old tech I'll never have space for. I'd have saved a lot of money if I'd just done that a year ago. I now have a much smaller unit that I hope to be rid of next year. Self storage units are definitely a mixed blessing.I also have all of the family antique furniture, some of which goes back three or more generations. I have no heirs and no idea what I'll do with it all, but I don't want to leave it for my executor to deal with. At least it's in the house and not in an expensive storage unit."
+          "Unsandboxed ImageMagick is known for being a security nightmare even back when PHP ruled the world (not saying sandboxing is a panacea either, it just requires a different and potentially harder exploit to develop a full chain). Difference is it's easier than ever to turn vulnerabilities into full compromises. At some point we'll have to replace all parsers with something at least as safe as https://github.com/google/wuffs right? Otherwise ImageMagick and co. will just keep giving.",
+          ">...researchers found a bug in the way that the community-discussion forum Discourse processed certain image files. The researchers had access to a special version of Claude Opus 4.8... >At first, it didn’t work. That evening, however, Anthropic released Opus 5 and by the next day, Claude had found a way to exploit the bug...Is this speed of capability because hacking is almost entirely machine verifiable, thus training quicker/deeper than other domains?",
+          "There was something I was hoping to find in the article, which is this common situation where employees are also the customer of their companies product, they happen to have elevated privileges and yet the credential rules applicable to those accounts are same as regular customers. This is across all the product lines, some companies do a better job than others but its still a problem that exists and gets exploited."
         ]
       }
     },
     {
-      "id": "49742353",
-      "title": "Rate limits on GitLab.com are changing",
-      "url": "https://about.gitlab.com/blog/rate-limit-change-2026/",
+      "id": "49747925",
+      "title": "Alibaba releases Qwen 3.8 Omni Flash",
+      "url": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
       "source": "Hacker News",
-      "published_at": "2026-09-17T15:33:54+00:00",
-      "summary": "Rate limits on GitLab.com are changing",
-      "score": 160,
-      "comments": 107,
-      "discussion_url": "https://news.ycombinator.com/item?id=49742353",
+      "published_at": "2026-09-17T23:05:48+00:00",
+      "summary": "Alibaba releases Qwen 3.8 Omni Flash",
+      "score": 111,
+      "comments": 25,
+      "discussion_url": "https://news.ycombinator.com/item?id=49747925",
       "extra": {
         "top_comments": [
-          "If you are using LLMs to interact with sites like GitLab and GitHub, and you have the option to use a GraphQL API, you should jump on it immediately.GraphQL is absolutely terrible for human developers to interact with, but it's like Facebook could see into the future back in 2012. I cannot imagine a more perfect API surface for agents. With the REST API on GitHub, you can consume maybe 10 issue JSON blobs before your context window is blown out. With GraphQL constraining the results you can easily read hundreds in the same token budget.Additionally, the # of requests your agents need to make can be reduced in many cases since GraphQL can join across types whereas REST APIs cannot. You essentially get savings in two dimensions here. Quota and raw token volume per logical response.",
-          "Important buried context: 60/hour unauthenticated, but 5,000/hour on the free plan.60/hour sucks. 5000/hour (a little more than one per second) is totally fine.I'm chalking this up alongside Docker's decision to restrict unauthenticated pulls. Unauthenticated anything went the way of the dodo some time ago. If you want unauthenticated access, go run your own mirror.",
-          "Providing kickbacks to the repos being scraped would be a good way to help fund open source projects and pay creators like streaming services do. Seems like they're headed in this direction - it would be a massive product differentiator over GH"
+          "If the performances are comparable, and there is no evidence it's not.in/out ($) Gemini : 1.5 / 9.0 | Qwen 3.8: 0.15 / 0.47That is a massive cost reduction.Refs: https://www.alibabacloud.com/help/en/model-studio/model-pric... https://runware.ai/gemini-omni",
+          "> audio-visual performance close to Gemini 3.8 Flash and overall audio performance that exceeds Gemini 3.8 FlashWow crazy if true. I think Gemini's audio capability and multi language was the \"selling point\" for a lot of people. Other capability also matches or exceeds 3.8 Flash.They also made a new harness but github link seems to 404.",
+          "3.8 Max is the most “grounded” model I think - talks generally normal, doesn’t go crazy and start doing things (I see you Gemini), has good design choices and isn’t overly nitpicky. But god it’s slow. And only available from Alibaba. Their token plan is stingy too. If I had to pick the “old reliable boring” LLM, a modern Claude 4.5 if you will, Qwen is my choice. Hopefully they don’t RL it to oblivion."
         ]
       }
     },
     {
-      "id": "49746117",
-      "title": "More than 100k people in Japan are now aged 100 or older",
-      "url": "https://www.bbc.com/news/articles/cmzezj5e18xxo",
+      "id": "49746290",
+      "title": "Flet 1.0 – Build cross-platform apps in Python",
+      "url": "https://flet.dev/",
       "source": "Hacker News",
-      "published_at": "2026-09-17T20:33:00+00:00",
-      "summary": "More than 100k people in Japan are now aged 100 or older",
-      "score": 146,
-      "comments": 136,
-      "discussion_url": "https://news.ycombinator.com/item?id=49746117",
+      "published_at": "2026-09-17T20:44:28+00:00",
+      "summary": "Flet 1.0 – Build cross-platform apps in Python",
+      "score": 77,
+      "comments": 39,
+      "discussion_url": "https://news.ycombinator.com/item?id=49746290",
       "extra": {
         "top_comments": [
-          "This article calls it a \"quiet emergency\" but even as a foreigner living in Japan there are alarm bells everywhere. And the government buying 150 F35's is just a slap in the face when there's a massive chunk of the population that is, very quickly, going to need extra care.I looked into becoming a care aid myself as I'm tired of office culture in Japan and have some experience in that field. I was shocked to see that they start at less than 10USD, and working your way up takes years, decades even.Continuing to kick this can down the road is going to be an absolute disaster.",
-          "“A government audit of family registries in Japan in 2010 uncovered more than 230,000 people listed as being aged 100 or older who were unaccounted for, some having died decades previously. The miscounting was attributed to patchy record-keeping and suspicions that some families may have tried to hide the deaths of elderly relatives in order to claim their pensions“ Thus they need to redo the audit in 2026.",
-          "Wild that the article goes on about the percentage of centenarians, then just has this brief note about how the data are completely unreliable, and never squares the two sets of statements."
+          "I built a few Kivy apps years ago at an old job. It was a little clunky, but it got the job done. Haven’t heard of this framework yet, I wonder how compares in developer experience? Anyone have any experience with it?The problem is I don’t want to use Python for everything that bad. If I’m going to reach for a cross platform toolkit these days, I’m personally going to reach for Tauri. Could be useful if you’re really married to Python I suppose.",
+          "Using a to-do list app as the first example to advertise a new app framework is absolutely wild in Q3 2026.",
+          "Choosing to build an application around a framework whose top contributors are Claude and Copilot may have catastrophic consequences for your project, especially if it's a business."
         ]
       }
     },
     {
-      "id": "49742355",
-      "title": "CrowdSec Source Code Leak",
-      "url": "https://www.crowdsec.net/blog/crowdsec-statement-source-code-exposure",
+      "id": "49746407",
+      "title": "The most important product decision is what you don't build",
+      "url": "https://liamnugent.me/posts/what-you-dont-build/",
       "source": "Hacker News",
-      "published_at": "2026-09-17T15:34:01+00:00",
-      "summary": "CrowdSec Source Code Leak",
-      "score": 134,
-      "comments": 42,
-      "discussion_url": "https://news.ycombinator.com/item?id=49742355",
+      "published_at": "2026-09-17T20:52:36+00:00",
+      "summary": "The most important product decision is what you don't build",
+      "score": 74,
+      "comments": 24,
+      "discussion_url": "https://news.ycombinator.com/item?id=49746407",
       "extra": {
         "top_comments": [
-          "Funny to see this after I spent the morning troubleshooting and fixing my crowdsec install on my debian 13 vps. Apparently they stopped supplying a community blocklist to my machine because I'm running the old debian packaged version instead of directly from them (http 500). I had a LLM build a blocklist from publicly available sources rather than tie myself more tightly to their SaaS platform.",
-          "> the Tanstack compromise is very likely to have been the leak vector ....appears to have been backdoored to extract an API key with authorization to read the private codebase. ... > immediately rotated all required tokens & credentials to prevent further incidents. Rotating the API key doesn't quite put them in a position to \"prevent further incidents\" does it? The next PyPI/npm supply chain issue will just get the new key?I suppose whatever they use that key for should be reviewed and re-scoped if possible?Does github let you restrict where you can originate requests using a given API key? or are we just not there yet?",
-          "On the funny side, reading the website tagline, apparently they claim to know who is attacking you, they just happen to miss out on who attacked them.Turns out they are not really a security company, just an aggregator of bad IPs. Ideally this kind of aggregator problem is best suited for a trusted not-for-profit company where providing the data needs some level of credibility and querying the data costs you nominal fee to keep the setup floating."
+          "I see posts pop up with this sentiment often and I'm of two minds:- llms let us build exactly what we want fairly quickly nowadays, or at least a prototype and- being able to build these features (or separate products) quickly is exactly the trap> It’s the same test I keep applying when picking the right problems to solve — does it make the boat go faster?Who knows this though? It's rarely engineers. Product often has a good sense within their lane. Leadership usually (at good companies) is mostly aligned, with some nuance depending on who's speaking.It's a good sentiment but rarely a single person's decision.As I said, I see these pop up and I'm usually annoyed because what new take could someone bring at this point, but I read them every single time :p",
+          "Or as I like to say “the best way to launch is to cut features”.As an engineering leader you’ve got to advocate for it against product/design all the time.",
+          "The one I get constantly is we want \"custom reporting\". Well what the hell is that really? Why, why, why do you need that? Then I just build a new feature they will actually use and defer \"custom reporting\" for another month."
         ]
       }
     }
