@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-09-17T13:05:34.897240+08:00",
+  "cached_at": "2026-09-18T11:01:21.269118+08:00",
   "articles": [
     {
-      "id": "49724881",
-      "title": "Nvidia announces native GPU programming in Rust",
-      "url": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/",
+      "id": "49743097",
+      "title": "Hister: A private search engine for the pages you visit and the files you keep",
+      "url": "https://github.com/asciimoo/hister",
       "source": "Hacker News",
-      "published_at": "2026-09-16T11:15:53+00:00",
-      "summary": "Nvidia announces native GPU programming in Rust",
-      "score": 467,
-      "comments": 164,
-      "discussion_url": "https://news.ycombinator.com/item?id=49724881",
+      "published_at": "2026-09-17T16:25:37+00:00",
+      "summary": "Hister: A private search engine for the pages you visit and the files you keep",
+      "score": 493,
+      "comments": 139,
+      "discussion_url": "https://news.ycombinator.com/item?id=49743097",
       "extra": {
         "top_comments": [
-          "I strongly dislike CUDA. Once you have allowed that proprietary cr*p into your C++ codebase, it is very hard to get rid, and you end up with code that is either tied to a single vendor or an #ifdef hell, probably both.The best way to program GPUs is face up to the reality that they are not the same machine as the CPU, write your kernels in separate files, and launch them manually, like in Metal, OpenCL, and D3D12, etc. These days we even have DSLs like Triton that make kernel writing much more ergonomic than anything you would hope to achieve in Rust.",
-          "Since NVIDIA owns huggingface now and huggingface has the excellent Candle [1] crate for inference on Rust, this seems like a good step towards nice native Rust kernels.[1] https://github.com/huggingface/candle",
-          "I wonder how many parallels there are between CUDA's Tile abstraction and that of Metal."
+          "Ohi, author here! Thanks for posting Hister. Feel free to A.M.A. My first free software search project was Searx, a privacy respecting metasearch engine, but because of the limitations of the metasearch concept, I've decided to take a different approach.Hister builds a personal search index from pages you visit, bookmarks, browser history, local files, and crawled websites. It stores extracted content with offline result previews, so information remains searchable even when the original page changes or disappears. It supports full text and semantic search, can run entirely on your own machine, and includes a web interface, command line tools, and an MCP endpoint for assistant integrations.Website: https://hister.org/Tiny read-only demo: https://demo.hister.org/Ps.: It looks like our name conflicts with a registered trademark in the US. The owner of the other project has asked us to change it, so we’ll probably need to comply sooner or later.Name suggestions are welcome! Ideally, the new name should be relatively short, sound good, and have an available .org domain.Thanks!",
+          "Kind of related to this in that I built it to hoard knowledge from web pages I've visited along with implementing a Karpathy-style LLM Wiki, but the knowledge is collected automatically from sources I browse.I have it up on GitHub, but I don't think anyone should use my implementation.Loosely, what I built:* On each of my machines I have a cron job running that looks at all my web browser history (usualy it's inspecting the brower's SQLlite across firefox and chrome). If it matches my rule list: hacker news stories, certain reddits, etc. it'll grab the page, convert to markdown and drop in my Obsidian Vault incoming.* It has a whole de-duping architecture since I might open the same page on multiple machines. Uses the CloudFlare SQLITE D1 storage for tracking the processed links.* it'll then trigger the LLM to do some Karpathy wiki style taxonomy assignment to the articles, organize them, create an index etc.It's then available for my \"bot\" stuff to do writings for me.... I will probably write more about it at some point. I'm not certain it's totally useful and not just a yak-shave on hoarding knowledge.Ai-drafted article on this [1]Example AI-Drafted article based on some discussions the other day on Ollma vs LLama.cpp [2][1] https://taude.xyz/posts/how-archivore-turns-browsing-into-a-...[2] https://taude.xyz/posts/skip-ollama-run-llama-cpp-directly-o...",
+          "I'd love a extension setting to only send tabs that were visible for ~4+ seconds.I built myself a little extension last year that tracks what information I was looking at, but focused on generating \"new info\" recaps for the day / week.I realized that I open / quick view a lot of pages and close them, which is a strong signal that I don't care about that specific page, and it shouldn't be a source of \"new insights\" that I learnt that day (since I probably don't care about that topic).I'd love to re-try a simpler version of that project that builds on Hister as a backend actually."
         ]
       }
     },
     {
-      "id": "49731285",
-      "title": "Training a 4B model to produce 81% faster query plans than Postgres",
-      "url": "https://rohanbansal.com/qorl",
+      "id": "49745940",
+      "title": "Astra for Law",
+      "url": "https://openai.com/index/astra-for-law/",
       "source": "Hacker News",
-      "published_at": "2026-09-16T18:50:00+00:00",
-      "summary": "Training a 4B model to produce 81% faster query plans than Postgres",
-      "score": 459,
-      "comments": 94,
-      "discussion_url": "https://news.ycombinator.com/item?id=49731285",
+      "published_at": "2026-09-17T20:17:48+00:00",
+      "summary": "Astra for Law",
+      "score": 357,
+      "comments": 387,
+      "discussion_url": "https://news.ycombinator.com/item?id=49745940",
       "extra": {
         "top_comments": [
-          "“81% faster query plans than Postgres”…on an 8 GB dataset that fits entirely in memory, with shared_buffers constrained to a fraction of that, queries warmed before measuring, and read-only SELECTs.I would be cautious about over fitting, it’s tough to say if those query plans would really be more optimal than Postgres heuristics at scale and with a bit more realistic OLTP workloads.In any case, such is life with profile guided optimization. Many of us appreciate how database workloads can drift over time and with scale.Kudos to the author for getting their hands dirty and writing up their experiments.",
-          "Optimal plan construction is math-heavy, algorithm-heavy and vary even by workload. There are options like creating just-in-time indexes, so solution space grows even faster than article presents. Sometimes it is the query planner which is the slow part of total execution time.LLM is kind of blunt weapon to use here. I am waiting rather for alphago style neural net heuristic.",
-          "Engineer: \"HELP, our production DB is frozen on this query that worked fine before!\"Infra: \"Hmm, let's check... Well would you look at that, it seems like your LLM query planner usually works and produces fast queries, but this time when you changed a variable name to trigger query rebuild, it happened to hallucinate and miss an index, would you mind re-running the LLM a few times until you get a faster query?\""
+          "I know someone who works in law and deals particularly with an area of US benefits and healthcare law. One of their workflows for lower-level employees at their firm involves taking in documents from healthcare plans and organizations, analyzing them for certain kinds of data, and then importing that data into an internal system they use to analyze and provide guidance on plans. The internal system can contain hundreds of documents for an individual client. All of the documents have the same information (roughly) but in totally diverse formats and styles. Once it's in the system, it's easy to compare and analyze across documents and the research process is much faster.They recently bought a Claude subscription and began using Claude to do the initial read of the documents and output JSON they can import into their internal systems. The work still must be reviewed by an attorney - Claude is nowhere near making the kinds of judgments a lawyer would make about this content - but it has increased their throughput from 2-3 documents an hour to 8-10 documents an hour by killing the busy work.LLMs have great advantages for this kind of work - but not for decision-making. I just don't see OpenAI ever admitting that.(I've left some details intentionally vague because this is a very specific area of law and I don't want my friends to be identified without their consent.)",
+          "Lawyer here (non practicing so to be clear none of this affects me):most comments I read here don't seem to realize that different areas of law have very very different economic models and don't even mention which one they think will be affected or why, they just sort of lump it all together.For example: It is highly unlikely llms will have any meaningful effect on high value personal injury law - I don't see a 5 million dollar case being handed to an LLM when the majority of the cost is in trial aids and not even lawyers. It may affect where and how they advertise. It may affect how they work. But it seems really unlikely to put any of them out of business any time soon by people doing it themselves.Will it affect other areas more? Maybe. Probably? But so far I haven't seen a ton of comments that make specific enough arguments that they could really be debated or responded to effectively with a useful opinion",
+          "The need for actual lawyers will persist I think from my own experience. I attempted drafting a contract with some points myself using AI, but after several edits I wasn't sure if it was correct. Sending it to an actual lawyer ended up in so many corrections I couldn't imagine the first time. One big thing was the overly excessive protective clauses which didn't make sense for reality or conflicted with another.Its just like code I suppose, if you can read and understand and validate, you can use it to scale and otherwise it could end up being a vibe effort."
         ]
       }
     },
     {
-      "id": "49729000",
-      "title": "Small programming tricks",
-      "url": "https://will-keleher.com/posts/small-programming-tricks-matter/",
+      "id": "49746163",
+      "title": "Bend – A language that blocks AI mistakes via proof, on CPU and GPU",
+      "url": "https://bend-lang.com/",
       "source": "Hacker News",
-      "published_at": "2026-09-16T15:56:47+00:00",
-      "summary": "Small programming tricks",
-      "score": 448,
-      "comments": 201,
-      "discussion_url": "https://news.ycombinator.com/item?id=49729000",
+      "published_at": "2026-09-17T20:36:13+00:00",
+      "summary": "Bend – A language that blocks AI mistakes via proof, on CPU and GPU",
+      "score": 328,
+      "comments": 168,
+      "discussion_url": "https://news.ycombinator.com/item?id=49746163",
       "extra": {
         "top_comments": [
-          "The thing with a lot of these tricks is that you have to get into the habit of using them. I knew `Ctrl+r` for history since I learned about the command line. I even have a nice shell integration with fzf. But I still used the up/down arrow keys for years or scrolled up when I was looking for a previous command, because I never remembered the shortcut and just took the path of least resistance to find something.Usually what I do is writing these tricks down to a document that is easily accessible at a place where I know that I will look for when failing to remember them. I have a directory of docs where I write stuff like this down by language/tool/etc., so I can quickly look it up without having to search the internet. But I also have to actively remind myself that these things exist whenever I have a problem, stop me from just doing the inefficient thing.",
-          "A lot more tricks can be learned from just watching AI work. Instead of allowing AI to work autonomously, go back to the old days where you manually approve every command the AI runs. Just recently while doing performance optimization work, I found Opus using the `perf` command in ways I didn’t know possible. Just give AI a real task and carefully read what commands are used by the AI to solve the problem; most likely the AI uses a trick or two that you didn’t know existed.",
-          "Those were not programming tricks, but computing tricks or command line/sql tricks.Anyways I find it mind boggling how many useful actions are not known by „normal people”. Most people are really using computers in a very inefficient way.My idea is if we would spend time making people learn computers or software they use daily better - we wouldn’t need AI agents and we would triple GDP."
+          "Hi, I'm the author.HN staff: someone posted before me. Could we change the title to \"Bend - a language that blocks AI mistakes via proof and runs on GPUs\"?Everyone: feel free to ask any question, but I'd be highly appreciative if you could be a bit civilized and respectful this time. I've worked on this for 1 year, nearly 16h/day, 7 days a week, and I'm giving it for free. You need not to use it. So, I'd be thankful if you could point occasional failures politely rather than throwing me in a lava pit.Thank you!",
+          "My read on this, after ingesting a good amount of content on the history, is:- this Bend is not really related to the old Bend (only in name)- this Bend doesn't really have anything to do with interaction combinators- this Bend is a QTT, with a change to affinity which enforces a good performance property for GPUs- the \"higher order at comptime\" is neat, reminds me of Andras Kovacs' work on 2ltt and staging in dependently typed languages.- this Bend is likely to be good at \"balanced recursive computations on ADT\", and can parallelize them ... but won't be as good as CUDA or e.g. Futhark on dense rectangular array computations- performance needs improvement in the scheduler, to possibly help with balanced work (looking at the n queens and symbolic regression numbers)?How are you going to handle search or synthesis over irregular structures (SupaGen)?",
+          "This project's repo has 20K stars with only 500 forks, with less than 300 issues(including closed). Something's not right.Compared to other programming languages:- Gleam: 22K stars, 1K forks, 3K issues- V: 38K stars, 2.3K forks, 11K issues- Ruby: 23K stars, 5.6 forks, 19K issues- Zig: 43K stars, 3K forks, 14K issuesIt got 16K stars just in 4 months too. https://www.star-history.com/?repos=bendlang%2FbendAlso how would anyone trust this? I've never seen a programming language that doesn't have 1) changelogs 2) way to download older versions 3) commit history.I don't understand why the author thought deleting the commit history was a good idea. Imagine seeing this project for the first time. It's a repo with 20K stars, but no commits, and suspiciously few issues and PRs. It doesn't look legitimate.---I'm not familiar with academic procedures, but a pdf on a repo, written by Fable and has no reviews, doesn't seem like a proper 'paper' to me."
         ]
       }
     },
     {
-      "id": "49732270",
-      "title": "Xiaomi Mimo 2.6 live post-training dashboard",
-      "url": "https://mimo.xiaomi.com/rl/",
+      "id": "49746618",
+      "title": "Bonsai 2 27B: Near-Lossless Compression in a 9x Smaller Footprint",
+      "url": "https://prismml.com/news/bonsai-2-27b",
       "source": "Hacker News",
-      "published_at": "2026-09-16T20:09:18+00:00",
-      "summary": "Xiaomi Mimo 2.6 live post-training dashboard",
-      "score": 338,
-      "comments": 86,
-      "discussion_url": "https://news.ycombinator.com/item?id=49732270",
+      "published_at": "2026-09-17T21:13:31+00:00",
+      "summary": "Bonsai 2 27B: Near-Lossless Compression in a 9x Smaller Footprint",
+      "score": 264,
+      "comments": 83,
+      "discussion_url": "https://news.ycombinator.com/item?id=49746618",
       "extra": {
         "top_comments": [
-          "I been using MiMo-V2.5 to do most of my work as software engineer, on a variety of projects I'm working on, and I been VERY happy with ROI. The model is very powerful! Not perfect – I've run in hallucination loops once or twice, but nothing a stop-then-continue wouldn't solve.The cost is unbelievably low, and the quality of intelligence I get is equivalent to when I was working mostly with Anthropic models (late last year/early this year). I'm fully invested in MiMo and I'm very happy with it.-- PS: I also check almost daily to see if other models are capable of doing such great work. And they do – DS4F is powerful and DS41 is impressive, GLM 5.3 Flash gets a job done well, etc. – but when I add cost of M-token in the ROI math, Jeez! MiMo is an order of magnitude better.",
-          "Well, if open source AI is dangerous (for OpenAI/Anthropic IPOs?), this is like watching a time bomb.",
-          "For reference, Mimo-v2.5-Pro scored 19% on DeepSWE 1.1. This is looking great.Fable scores 70%, Kimi K3 69%, Astra 74% (all on max effort).https://deepswe.datacurve.ai/blog/deepswe-v1-1"
+          "If you want to try out out the GGUFs from https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf#th... be aware that you need Prism's llama.cpp fork to get them to work, from https://github.com/PrismML-Eng/llama.cpp/releases/tag/prism-...This should work: cd /tmp # Get the Prism macOS runtime curl -fL https://github.com/PrismML-Eng/llama.cpp/releases/download/prism-b10685-7dffb15/llama-prism-b10685-7dffb15-bin-macos-arm64.tar.gz -o bonsai-runtime.tar.gz tar -xzf bonsai-runtime.tar.gz # Get the ~5.95 GB GGUF model: curl -fL https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf/resolve/main/Ternary-Bonsai-2-27B-PTQ1_0.gguf -o Ternary-Bonsai-2-27B-PTQ1_0.gguf # Run the server, I used port 8331 ./llama-prism-b10685-7dffb15/llama-server \\ -m Ternary-Bonsai-2-27B-PTQ1_0.gguf \\ --port 8331 -ngl 99 -fa on -c 32768 Then open http://localhost:8331 for the (very good) baked in llama-server web UI... or run a prompt via the API like this: uvx llm openai endpoint http://127.0.0.1:8331/v1 \\ --model bonsai-2-27b --responses hi That's running at ~20 token/second for me on an M5 Pro (after a server restart I got 44 token/second, not sure why), but I'm pretty sure something isn't working right, on startup the server said \"ggml_metal_device_init: - the tensor API is not supported in this environment - disabling\".",
+          "I really wish people would stop saying N times smaller than something when making a comparison; that makes no sense - it's 1/9th (11.11%) the size. You don't get a smaller quantity by multiplying by a number greater than 1.0. You could instead reverse the subjects being compared - \"the original model is 9x bigger than this new smaller, efficient model\" or some such. That makes sense.I keep seeing this being used when people talk about efficiency or performance gains and it's just very unintuitive language.",
+          "These are small enough that you can run them entirely in the browser https://huggingface.co/spaces/webml-community/ternary-bonsai...Remember to clear the downloaded weights afterward.Like the last model, it's amazing they work as well as they do. Use it for any longer task and they fall apart spectacularly and in interesting ways."
         ]
       }
     },
     {
-      "id": "49719249",
-      "title": "AWS says it can't restore some data from mideast facilities struck by Iran",
-      "url": "https://www.wsj.com/world/middle-east/aws-says-it-cant-restore-some-data-from-mideast-facilities-struck-by-iran-ddcb7e5d",
+      "id": "49740260",
+      "title": "The American Religion of Self-Storage Facilities",
+      "url": "https://www.newyorker.com/magazine/2026/09/21/the-american-religion-of-self-storage-facilities",
       "source": "Hacker News",
-      "published_at": "2026-09-15T21:41:42+00:00",
-      "summary": "https://archive.is/Ay7RJ",
-      "score": 300,
-      "comments": 240,
-      "discussion_url": "https://news.ycombinator.com/item?id=49719249",
+      "published_at": "2026-09-17T13:12:28+00:00",
+      "summary": "https://archive.ph/F77tj",
+      "score": 201,
+      "comments": 348,
+      "discussion_url": "https://news.ycombinator.com/item?id=49740260",
       "extra": {
         "top_comments": [
-          "This interview with an AWS leader isn’t aging well, from CBS Sunday morning:Pogue asked, \"I don't mean to give anyone ideas, but let's say I figured out that one of these unmarked buildings was an AWS data center, and I blew it up. Are you saying that it's so backed up and redundant that you probably wouldn't notice?\" Wood replied, \"Yeah, you wouldn't notice. I mean, we might be a bit upset, but you wouldn't notice!\"https://www.cbsnews.com/news/cloud-computing-loudoun-county-...",
-          "I think this is due to the data residency requirements in UAE. I'm working with a client in the health space and the government requirements requires me to store data only in UAE! Tried with AWS but they were not allowing any new instances and I had to go with Azure.",
-          "11.3 Force Majeure. Except for payment obligations, neither party nor any of their affiliates will be liable for any delay or failure to perform any obligation under this Agreement where the delay or failure results from any cause beyond its reasonable control, including acts of God, labor disputes or other industrial disturbances, electrical or power outages, utilities or other telecommunications failures, earthquake, storms or other elements of nature, blockages, embargoes, riots, acts or orders of government, acts of terrorism, or war."
+          "This article takes the view of the consumer, \"Why do so many people pay to store items they almost never use?\". But in actuality, the interesting part of this is why is there so much supply of self-storage businesses?The answer is: cash flow. Self-storage businesses are the almost perfect solution for someone with a good size (but not enormous) bucket of money that they want to put to work generating cashflow:1. Cheap build out (cheap land, cheap facilities) 2. Almost entirely hands-off (no employees, automated entry) 3. Low liability (low risk of customers suing you) 4. Low overhead (just pay for taxes, electricity, minimal maintenance) 5. Reliable monthly cash flowThe abundant supply of these businesses, I suspect, tends to generate demand: it's easier to pay $80/month to store your junk than spend the time and emotional labor of picking through what you want to keep and what you want to get rid of. That ends up being captive long-term revenue.",
+          "I live in a small downtown condo. I don't have room to store a whole lot of extra stuff but I also have hobbies like camping, watersports, etc. I keep all of that stuff in a storage unit and I access it fairly often. Since I have it I also use it to save all the boxes for my electronics (77\" OLED is impossible to move safely without original box for example), car maintenance stuff, larger tools I use less frequently, etc. It is about 3 minutes drive 10 minute walk from my house. I definitely do not use it to hoard stuff I will never touch again.",
+          "I'm in the Maryland suburbs of Washington, DC, and self storage facilities are popping up around here like weeds. I have a storage unit and I'm trying to clear it out. I'm tired of the monthly fees that keep going up. I got it when I had to clear out my late sister's house and I wanted time to go through things and decide what to keep. When I moved last year, I got a larger unit, thinking I would need to declutter my townhouse prior to showing it. It turned out my agent wasn't that concerned about my clutter, but I did move some idle tech stuff into the unit. I was hoping to get a house with a big basement for my future tech hoarding needs, and I wanted to keep this stuff. As it turned out, I ended up in a rancher with no basement, so now I'm getting rid of old tech I'll never have space for. I'd have saved a lot of money if I'd just done that a year ago. I now have a much smaller unit that I hope to be rid of next year. Self storage units are definitely a mixed blessing.I also have all of the family antique furniture, some of which goes back three or more generations. I have no heirs and no idea what I'll do with it all, but I don't want to leave it for my executor to deal with. At least it's in the house and not in an expensive storage unit."
         ]
       }
     },
     {
-      "id": "49726955",
-      "title": "Dream-RSI: Recursive Self-Improvement through Evolving Worlds",
-      "url": "https://arxiv.org/abs/2609.14858",
+      "id": "49742353",
+      "title": "Rate limits on GitLab.com are changing",
+      "url": "https://about.gitlab.com/blog/rate-limit-change-2026/",
       "source": "Hacker News",
-      "published_at": "2026-09-16T13:44:40+00:00",
-      "summary": "Dream-RSI: Recursive Self-Improvement through Evolving Worlds",
-      "score": 189,
-      "comments": 49,
-      "discussion_url": "https://news.ycombinator.com/item?id=49726955",
+      "published_at": "2026-09-17T15:33:54+00:00",
+      "summary": "Rate limits on GitLab.com are changing",
+      "score": 160,
+      "comments": 107,
+      "discussion_url": "https://news.ycombinator.com/item?id=49742353",
       "extra": {
         "top_comments": [
-          "Perhaps I'm not understanding it correctly, but here's my take on what the paper is doing.Imagine you have a problem you want to solve (let's say, identify an OCR'd handwritten character, e.g. the MNIST Dataset). You tell 3 agents \"Hey, each of you take a stab at getting really good at recognizing characters from this dataset. You can take 10 refinement steps to continue to improve \". You can't give each agent unlimited steps of course, because you have a finite amount of compute.So each agent goes off, and by the end, Agent 1 got to 90% accuracy, Agent 2 got to 80% accuracy, and Agent 3 got to 89% accuracy. Agent 1 wins, of course.But then you look at the refinement steps, and after 2 steps, Agent 1 was _already at_ 90% accuracy. So the agent spent the next 8 steps basically not moving at all. Agent 3 on the other hand, perhaps was continuously climbing in accuracy at every refinement step, but hit step 10 and had to stop.Now because you recorded every step from every agent, you know what you'd do differently next time -- you'd not allocate as many steps to Agent 1, and give Agent 3 more steps, because perhaps that might result in Agent 3 coming up with a better answer.From my understanding, that's what they built in the form of a \"search\" controller -- a way to evaluate automatically and reapply how you could allocate resources more effectively, when applied to a new problem.But I guess my misunderstanding is how applicable the search controller is when applied to new problems -- just because one pathway stalled early for one problem, doesn't mean it would work for another?",
-          "Unless I'm misunderstanding, calling this RSI seems misleading?This looks like an optimization of current training methods, and a good one, but not \"RSI\" in the sense of a system that can perpetually improve itself forever.",
-          "FYI; the paper is clearly a reference to Danijar Hafner's 'Dreamer' line of work, which was published in 2019, and which Danijar has continued to iterate on. https://arxiv.org/abs/1912.01603The TalkRL podcasts on this line of work are reasonable accessible and quite interesting. https://www.talkrl.com/episodes/danijar-hafner https://www.talkrl.com/episodes/danijar-hafner-on-dreamer-v4..."
+          "If you are using LLMs to interact with sites like GitLab and GitHub, and you have the option to use a GraphQL API, you should jump on it immediately.GraphQL is absolutely terrible for human developers to interact with, but it's like Facebook could see into the future back in 2012. I cannot imagine a more perfect API surface for agents. With the REST API on GitHub, you can consume maybe 10 issue JSON blobs before your context window is blown out. With GraphQL constraining the results you can easily read hundreds in the same token budget.Additionally, the # of requests your agents need to make can be reduced in many cases since GraphQL can join across types whereas REST APIs cannot. You essentially get savings in two dimensions here. Quota and raw token volume per logical response.",
+          "Important buried context: 60/hour unauthenticated, but 5,000/hour on the free plan.60/hour sucks. 5000/hour (a little more than one per second) is totally fine.I'm chalking this up alongside Docker's decision to restrict unauthenticated pulls. Unauthenticated anything went the way of the dodo some time ago. If you want unauthenticated access, go run your own mirror.",
+          "Providing kickbacks to the repos being scraped would be a good way to help fund open source projects and pay creators like streaming services do. Seems like they're headed in this direction - it would be a massive product differentiator over GH"
         ]
       }
     },
     {
-      "id": "49732931",
-      "title": "Breaking the 1.58-bit Barrier for Ternary LLMs",
-      "url": "https://arxiv.org/abs/2609.16338",
+      "id": "49746117",
+      "title": "More than 100k people in Japan are now aged 100 or older",
+      "url": "https://www.bbc.com/news/articles/cmzezj5e18xxo",
       "source": "Hacker News",
-      "published_at": "2026-09-16T20:59:24+00:00",
-      "summary": "Breaking the 1.58-bit Barrier for Ternary LLMs",
-      "score": 169,
-      "comments": 22,
-      "discussion_url": "https://news.ycombinator.com/item?id=49732931",
+      "published_at": "2026-09-17T20:33:00+00:00",
+      "summary": "More than 100k people in Japan are now aged 100 or older",
+      "score": 146,
+      "comments": 136,
+      "discussion_url": "https://news.ycombinator.com/item?id=49746117",
       "extra": {
         "top_comments": [
-          "So they get down from 1.58 to 1.48 bits per weight by exploiting the fact that actual weights in practice are 0 51% of the time. Neat.If ternary llms work out and are baked into hardware as custom silicon I bet they'll be shockingly efficient.",
-          "Ternary quantization does not make any sense. Vector quantization and trellis based methods are better in this region for PTQ.",
-          "Pushing past log2(3) for real. This could drastically shrink LLMs for embedded systems, making them truly portable."
+          "This article calls it a \"quiet emergency\" but even as a foreigner living in Japan there are alarm bells everywhere. And the government buying 150 F35's is just a slap in the face when there's a massive chunk of the population that is, very quickly, going to need extra care.I looked into becoming a care aid myself as I'm tired of office culture in Japan and have some experience in that field. I was shocked to see that they start at less than 10USD, and working your way up takes years, decades even.Continuing to kick this can down the road is going to be an absolute disaster.",
+          "“A government audit of family registries in Japan in 2010 uncovered more than 230,000 people listed as being aged 100 or older who were unaccounted for, some having died decades previously. The miscounting was attributed to patchy record-keeping and suspicions that some families may have tried to hide the deaths of elderly relatives in order to claim their pensions“ Thus they need to redo the audit in 2026.",
+          "Wild that the article goes on about the percentage of centenarians, then just has this brief note about how the data are completely unreliable, and never squares the two sets of statements."
         ]
       }
     },
     {
-      "id": "49719596",
-      "title": "The engineering behind the US Strategic Petroleum Reserve",
-      "url": "https://johnjwang.com/post/2026/09/15/engineering-behind-us-strategic-petroleum-reserve",
+      "id": "49742355",
+      "title": "CrowdSec Source Code Leak",
+      "url": "https://www.crowdsec.net/blog/crowdsec-statement-source-code-exposure",
       "source": "Hacker News",
-      "published_at": "2026-09-15T22:15:25+00:00",
-      "summary": "The engineering behind the US Strategic Petroleum Reserve",
-      "score": 155,
-      "comments": 61,
-      "discussion_url": "https://news.ycombinator.com/item?id=49719596",
+      "published_at": "2026-09-17T15:34:01+00:00",
+      "summary": "CrowdSec Source Code Leak",
+      "score": 134,
+      "comments": 42,
+      "discussion_url": "https://news.ycombinator.com/item?id=49742355",
       "extra": {
         "top_comments": [
-          "Salt contains the oil and helps seal small fractures. The rock salt surrounding the SPR’s caverns has extremely low permeability, meaning fluids have very little ability to pass through it. It also doesn’t react with petroleum. Under enormous pressures underground, salt also slowly deforms, which helps close small fractures. The salt itself can therefore contain the oil without a steel-and-concrete tank lining the cavern.Oil floats on water, which means pumping water into the bottom of the cavern pushes the oil out. As fresh water is pumped into the bottom of the cavern, the oil gets displaced upwards into a delivery system.The more water you pump in, the lower the quality of the oil that's pumped out; we are basically loaning the oil refiners money to buy SPR oil they don't really want. Also, the more water we pump in, the more salt leeches into the water and the more the bottom of the chamber deforms, creating shear forces in the upp walls that lower its overall structural integrity.I've posted this before; it's a recent report on the status and maintenance of SPR facilities, which is very clearly written and well worth your time if you want to understand the topic better: https://www.gao.gov/products/gao-26-106918",
-          "I’m certain engineers have considered this, but it doesn’t seem answered anywhere: why not just pump the original brine back in to move around the oil? Wouldn’t that at least prevent eroding the storage unit and causing it to fail?Unrelated: dang, he wasn’t underselling this being a pretty elegant solution! I never would’ve thought of it, for sure.",
-          "Hmm...The Math does not hold up. 300 feet diameter circular area is 1.62 acres. So at max you would need about 1130 x 2 = 2260 acres and not 45000 acres as projected !From the post :\"300 feet in diameter...\"\"To hold 714 million barrels of oil (the full capacity of the Strategic Petroleum Reserve), you’d need about 1,130 of these tanks. If you use the standard capacity of the largest commercial petroleum farms (e.g., in Cushing, Oklahoma), you need about 45,000 acres to store these tanks.\""
+          "Funny to see this after I spent the morning troubleshooting and fixing my crowdsec install on my debian 13 vps. Apparently they stopped supplying a community blocklist to my machine because I'm running the old debian packaged version instead of directly from them (http 500). I had a LLM build a blocklist from publicly available sources rather than tie myself more tightly to their SaaS platform.",
+          "> the Tanstack compromise is very likely to have been the leak vector ....appears to have been backdoored to extract an API key with authorization to read the private codebase. ... > immediately rotated all required tokens & credentials to prevent further incidents. Rotating the API key doesn't quite put them in a position to \"prevent further incidents\" does it? The next PyPI/npm supply chain issue will just get the new key?I suppose whatever they use that key for should be reviewed and re-scoped if possible?Does github let you restrict where you can originate requests using a given API key? or are we just not there yet?",
+          "On the funny side, reading the website tagline, apparently they claim to know who is attacking you, they just happen to miss out on who attacked them.Turns out they are not really a security company, just an aggregator of bad IPs. Ideally this kind of aggregator problem is best suited for a trusted not-for-profit company where providing the data needs some level of credibility and querying the data costs you nominal fee to keep the setup floating."
         ]
       }
     }

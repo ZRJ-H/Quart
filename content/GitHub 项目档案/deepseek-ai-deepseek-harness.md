@@ -1,13 +1,13 @@
 ---
 first_seen: 2026-08-20
-last_seen: 2026-09-16
+last_seen: 2026-09-18
 language: TypeScript
 tags: [github, trending]
 ---
 
 # deepseek-ai/deepseek-harness
 
-> DeepSeek 推出的 Harness 项目，核心理念是“一切皆插件”，适合需要灵活扩展代理能力的 TypeScript 开发者。
+> 以插件化为核心理念的 DeepSeek 智能体框架，一切皆可插件，适合需要灵活扩展、组合和编排 AI 能力的开发场景。
 
 ## 基本信息
 
@@ -35,3 +35,4 @@ tags: [github, trending]
 | 2026-09-12 | #11 | 220,764 | +542⭐ | 爆火 |
 | 2026-09-15 | #14 | 224,321 | +3,557⭐ | 爆火 |
 | 2026-09-16 | #13 | 225,646 | +1,325⭐ | 爆火 |
+| 2026-09-18 | #11 | 228,111 | +2,465⭐ | 爆火 |
