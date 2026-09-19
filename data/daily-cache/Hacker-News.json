@@ -1,24 +1,6 @@
 {
-  "cached_at": "2026-09-19T11:01:39.238042+08:00",
+  "cached_at": "2026-09-19T12:50:34.716620+08:00",
   "articles": [
-    {
-      "id": "49754785",
-      "title": "Cloudflare Quick Tunnels",
-      "url": "https://try.cloudflare.com/",
-      "source": "Hacker News",
-      "published_at": "2026-09-18T14:18:41+00:00",
-      "summary": "Cloudflare Quick Tunnels",
-      "score": 609,
-      "comments": 258,
-      "discussion_url": "https://news.ycombinator.com/item?id=49754785",
-      "extra": {
-        "top_comments": [
-          "My wife and I have a mobile group/shared bot system where we can make mini apps and collab.Anything from baby stuff, groceries, shopping, planning, wine tracker app, simple/fun/useful data things, etc…We have Tailscale on our phones and can instantly and privately see without deployment or anything crazy via our secure VPN.Think shared Claude Artifacts that don’t live @ Anthropic.Tried to first do this with Cloudflare Tunnels (because I love Cloudflare), but between the broken dashboard side of Zero Trust and nightmare of Warp… it was basically impossible to setup. I guess that’s all super enterprise, which seems to be very anti-Cloudflare philosophically to not be able to self do things.Will check out Quick Tunnels but I think it’s missing the bigger integration offerings Tailscale has/does still.",
-          "Cloudflare Quick Tunnels have existed for more than 5 years (yes, including the anonymous quick tunnels). I copy-pasted the url of the HN link in archive.org, see for yourself: https://web.archive.org/web/20211202005430/http://try.cloudf...Is a new vibe-coded landing page for a 5-year old product really worthy of being on the front page nowadays? There should at least be a [2021] in the title.",
-          "I have been developing for my own use something like that but self hosted. There are other solutions, but this one simple, reliable and secure in a way I see it.Originally didn't want to share but here it is https://github.com/reddec/tunnel-meUI: fully LLM assisted (not vibe coded, but guided with a lot of iterations). Backend: hand written, but before release polished via LLM. Docs: me - input, LLM - output.The things I am proud:- it very reliable- its single binary with reasonable defaults and low memory usage- SSO out of the box (cause I am using pocketid in my homelab)- very simple backend"
-        ]
-      }
-    },
     {
       "id": "49758736",
       "title": "Android 17 is the first since 3.x to add new APIs without releasing to the AOSP",
@@ -26,8 +8,8 @@
       "source": "Hacker News",
       "published_at": "2026-09-18T19:03:09+00:00",
       "summary": "Android 17 is the first since 3.x to add new APIs without releasing to the AOSP",
-      "score": 589,
-      "comments": 280,
+      "score": 678,
+      "comments": 328,
       "discussion_url": "https://news.ycombinator.com/item?id=49758736",
       "extra": {
         "top_comments": [
@@ -38,14 +20,32 @@
       }
     },
     {
+      "id": "49754785",
+      "title": "Cloudflare Quick Tunnels",
+      "url": "https://try.cloudflare.com/",
+      "source": "Hacker News",
+      "published_at": "2026-09-18T14:18:41+00:00",
+      "summary": "Cloudflare Quick Tunnels",
+      "score": 634,
+      "comments": 264,
+      "discussion_url": "https://news.ycombinator.com/item?id=49754785",
+      "extra": {
+        "top_comments": [
+          "My wife and I have a mobile group/shared bot system where we can make mini apps and collab.Anything from baby stuff, groceries, shopping, planning, wine tracker app, simple/fun/useful data things, etc…We have Tailscale on our phones and can instantly and privately see without deployment or anything crazy via our secure VPN.Think shared Claude Artifacts that don’t live @ Anthropic.Tried to first do this with Cloudflare Tunnels (because I love Cloudflare), but between the broken dashboard side of Zero Trust and nightmare of Warp… it was basically impossible to setup. I guess that’s all super enterprise, which seems to be very anti-Cloudflare philosophically to not be able to self do things.Will check out Quick Tunnels but I think it’s missing the bigger integration offerings Tailscale has/does still.",
+          "Cloudflare Quick Tunnels have existed for more than 5 years (yes, including the anonymous quick tunnels). I copy-pasted the url of the HN link in archive.org, see for yourself: https://web.archive.org/web/20211202005430/http://try.cloudf...Is a new vibe-coded landing page for a 5-year old product really worthy of being on the front page nowadays? There should at least be a [2021] in the title.",
+          "Cloudflare doesn't really seem to care about their tunnel product. \"cloudflared service install broken on macOS\" since 2021: https://github.com/cloudflare/cloudflared/issues/327"
+        ]
+      }
+    },
+    {
       "id": "49752041",
       "title": "OpenJev",
       "url": "https://openjev.com/",
       "source": "Hacker News",
       "published_at": "2026-09-18T09:42:22+00:00",
       "summary": "OpenJev",
-      "score": 565,
-      "comments": 248,
+      "score": 583,
+      "comments": 250,
       "discussion_url": "https://news.ycombinator.com/item?id=49752041",
       "extra": {
         "top_comments": [
@@ -62,32 +62,14 @@
       "source": "Hacker News",
       "published_at": "2026-09-18T21:00:32+00:00",
       "summary": "Claude Code now reads AGENTS.md if there is no Claude.md",
-      "score": 539,
-      "comments": 196,
+      "score": 578,
+      "comments": 206,
       "discussion_url": "https://news.ycombinator.com/item?id=49760187",
       "extra": {
         "top_comments": [
           "The fact that it took this long to add such a basic feature is a disgrace. I’m not even remotely satisfied. Bailed on Claude ages ago. Rolling Codex, Gemini, and Qwen3.8 30B. The only way I’m going back to Anthropic is if they drop and Culture Series mind.",
-          "I recently had Claude Fable set up a new project for me and I pointed it at some existing projects to use as a guide on how I like to structure things. It created, unprompted, an AGENTS.md file and a CLAUDE.md symlink to AGENTS.mdI didn't even have that symlink in any other project - it just did it. I think it saw that one of the projects I already had was set up by Codex and that project had an AGENTS.md so perhaps it inferred that I was using both Claude and Codex, so it was politely covering both? Or maybe a recent change made this behavior default?I was surprised and I hope they continue to seek standards.",
-          "Don’t get too excited, Claude code still won’t detect skills on .agents/skills."
-        ]
-      }
-    },
-    {
-      "id": "49750694",
-      "title": "Inside ZCode: Silently uploading your Git history to the cloud",
-      "url": "https://blog.ferstar.org/en/posts/zcode-silent-workspace-snapshot-upload/",
-      "source": "Hacker News",
-      "published_at": "2026-09-18T06:11:17+00:00",
-      "summary": "Inside ZCode: Silently uploading your Git history to the cloud",
-      "score": 262,
-      "comments": 93,
-      "discussion_url": "https://news.ycombinator.com/item?id=49750694",
-      "extra": {
-        "top_comments": [
-          "z.ai made a statement, screenshotted in this article: https://finance.sina.com.cn/tech/roll/2026-09-18/doc-inisfye...claude translation:Dear ZCode users,We take today's community discussion very seriously. We carried out an internal review right away, and we first want to apologize to the affected users. Here is an explanation of what happened:The issue stems from ZCode's \"codebase indexing\" feature. This feature is meant to help users generate a repository index locally, which supports session checkpoint restoration (including past versions), rolling back to past versions, and Repo Wiki, among other things.When the Repo Wiki feature generates Wiki pages, it may trigger an upload of repository data. After the Wiki pages are generated in the cloud, the uploaded data is destroyed immediately and is not stored. Because this feature was enabled by default in its early launch period, some users were affected. We sincerely apologize for this. The issue has now been fixed.We understand that any data-related issue directly affects users' trust in a product. We will open-source the ZCode codebase in the near future so we can improve the product within a more open ecosystem. We will also invite third-party evaluators to review how the system operates, and we'll keep publishing updates on the review, building your trust with full transparency.We deeply apologize for the trouble this has caused. As compensation, all ZCode users will receive one extra weekly quota reset, which will be issued today.Thank you again for your attention and oversight.",
-          "Is it naive to assume that the agent will try and access anything on your disk, either accidentally or maliciously?Permissions classifiers in auto mode are just models trying to guess if they're doing the right thing.Claude Code will tell you that it went around a sandbox because the sandbox blocked it. At which point, you ask yourself the point of the sandbox.",
-          "While we're on this, I find it really really weird how windows defender insists on sending my codex work files for analysis all the time (which I block in automatic permissions so it has to ask me in a notification). I don't think i've seen it ask to upload more than one or two things, and it doesn't do it with other AI app I use (eg Claude Code) but they really want to see what's inside my codex files.It's easy to trigger, I just need to go inside Codex settings and change something, it saves and instantly windows defender who never wants anything want to \"you may be at risk, let me upload that for analysis yes/no\"."
+          "What worked well previously was to have the Claude.md file contain just \"@AGENTS.md\".But this is a good change.The world of managing skills between providers still feels messy though.",
+          "I recently had Claude Fable set up a new project for me and I pointed it at some existing projects to use as a guide on how I like to structure things. It created, unprompted, an AGENTS.md file and a CLAUDE.md symlink to AGENTS.mdI didn't even have that symlink in any other project - it just did it. I think it saw that one of the projects I already had was set up by Codex and that project had an AGENTS.md so perhaps it inferred that I was using both Claude and Codex, so it was politely covering both? Or maybe a recent change made this behavior default?I was surprised and I hope they continue to seek standards."
         ]
       }
     },
@@ -98,13 +80,13 @@
       "source": "Hacker News",
       "published_at": "2026-09-18T18:51:46+00:00",
       "summary": "Saving another 100TB of RAM",
-      "score": 251,
-      "comments": 49,
+      "score": 279,
+      "comments": 58,
       "discussion_url": "https://news.ycombinator.com/item?id=49758580",
       "extra": {
         "top_comments": [
           "Incredibly happy to see this series of CF articles. I was always so proud of devs back in the days where RAM and processing were scarce and who had to get creative to fit even the most basic stuff in the budget. It seemed to me that after RAM and processing became abundant, most gave up on optimization and focused on shipping instead which meant now that even with several cores, a basic notepad or music player failed to work. In a way, RAM becoming more expensive has ushered in a new era of forced optimizations, which I'm really happy for",
-          "These optimizations are impressive, but it gets me thinking: at what point does a company become a collection of impenetrable siloes, where nothing really does what you expect? Maybe know with AI this is less of an issue as exploring a codebase is also much faster.",
+          "I would get rid of consistent hashing and ketama for a better system which works save an additional 600TiB.You use the first N bits of your key hash to pick the server partition so it’s a reasonable number (eg 128 servers per partition). Then use high quality precomputed hashes (first 64 bits of sha256) for the server name as N in H(K + N). Use wymum from wyhash as the H so that you do o(n) integer multiplications while retaining a result that’s still a good hash statistically.Now you’re using a tournament hash, the small N means O(N) vs O(N log N) doesn’t matter, and also this O(N) is also going to be much less CPU than computing 160 hashes per key as they do now, so much less latency added per request.",
           "Cloudflare is truly amazing, they have made so much possible for my main side-project at a price and performance that I can’t really take credit for (http://sourcelibrary.org), I don’t care if their text was written with AI, I just wish I could get my own AI to sing so well about hashing… but wait.. today I noticed Claude trying to use hashing when a timestamp would honestly do, and now I’m really doubting myself, hmm…"
         ]
       }
@@ -116,14 +98,32 @@
       "source": "Hacker News",
       "published_at": "2026-09-18T02:00:25+00:00",
       "summary": "Minimal Phone 2",
-      "score": 200,
-      "comments": 189,
+      "score": 218,
+      "comments": 199,
       "discussion_url": "https://news.ycombinator.com/item?id=49749369",
       "extra": {
         "top_comments": [
           "The Adam Smith Institute once added up all the govt spending demands made in a single news program and it came to like 10% of GDP.Similarly the comments here: if only it could do all this and* On/off button round the back* More LTE bands* An open bootloader (note to normies this is like saying \"have a quantum multiplexer\")* Different screen ratio* Different keyboard layouts* Eink screen* Bigger battery* Be easier to use for someone with long fingernails (hello Nosferatu https://news.ycombinator.com/item?id=49751114)* Be lighter* Be smaller* Have a website without javascript (really)* Be cheaper (this one is satire) (no it's not)Sure guys, why can't someone just build you your personal phone at the same price as the iPhone whose development costs are amortized over seval billions consumers :-/",
           "I just want BlackBerry back.Every single time one of these new \"minimal\", \"dumb\", \"lightweight\" phones comes up today it's just marketing wrapped around a kneecapped Android device. I am in the market for something simpler that does nothing more or little else than play local media/audio, read common document/text formats, ordinary SMS, current standard of telephony, and a different OS than Android. I have not seen anything like this yet.",
-          "Pixel a-series with GrapheneOS is already the \"minimal phone\" for hackers: cheap, reasonably small, hardened OS without Google spyware and bloatware. Compatibility with Android is fully retained so you can run things like Wireguard, Termux, Home Assistant and a myriad of other excellent FOSS (or non-FOSS) apps with complete sovereignty over your data."
+          "What I learned from carrying a phone with \"2.5d\" screen edges:They make the screen effectively narrower in terms of usable area, while making the phone physically wider.Do not want.Please go back to 9:16 or 10:16 screen ratios. If you need more space for the battery, gently round the back. It feels nicer in the hand even when it's 50% thicker than your competitors.Also, a fingerprint reader / power button on the back is superior to all other placements, and cutouts of any kind are distracting and wasteful. OnePlus managed a motorized pop-out selfie-cam and it's still working for me seven years later."
+        ]
+      }
+    },
+    {
+      "id": "49748553",
+      "title": "Show HN: Cactus Needle 3: 8-29MB automation models can match DeepSeek V4 Flash",
+      "url": "https://cactuscompute.com/needle",
+      "source": "Hacker News",
+      "published_at": "2026-09-18T00:11:44+00:00",
+      "summary": "Hey HN, Henry from Cactus here.We submitted Needle 2 here a few weeks ago, and the feedback in the discussion thread was incredibly valuable, thanks! Thanks to all that feedback, we’ve been able to move quickly to release Needle 3 and I'd love to hear what you think again.The key features:1) Automation (tool calls & structured JSON output): Needle still doesn't chat by design, its quite challenging to pack general capacity into such small models, so we focus on tool calls and structured JSON. If no tool you declared fits the request, you get an empty list back (note for when playing with the demo).2) Intelligence Laddering: Every layer (2 to 20) is a deployable subnetwork, so one set of weights, 25 to 121 million parameters at 2-bit, shipping as 8-29MB binaries. On a Raspberry Pi 5 it decodes at up to 4k tokens/sec and prefills at up to 10k.3) Monarch Hadamard MLP: replaces the dense FFN with three learnable Walsh-Hadamard-initialized Kronecker (Monarch) factor pairs interleaved with per-channel diagonal scales, fixed permutations, a SiLU nonlinearity, and a rank-8 input-conditioned gate, so each token gets a fully mixed nonlinear transform of its d_model channels at O(d√d) parameters and compute instead of the O(d²) a dense 4x-expansion MLP would cost.4) Performance: On Mobile Actions (phone commands, scored on the exact call) the 20-layer model gets 86.0 through the shipped 2-bit binary; LFM2.5 1.2B is at 82.4, Qwen3.5 0.8B at 76.0, Apple's on-device model at 57.6, all at f16. More results on the link, we do not win everywhere ofc.5) Multilingual: Needle 3 now supports English, French, Spanish, German, Dutch, Italian, Polish, with more languages coming.6) Finetuning: You can achieve DeepSeek v4 Flash grade performance on a narrow task with just 4L, stress on \"narrow task\", we found that production users often prefer tuning before production.7) Triggers: Grounding is a common challenge for tool call, at least for Needle 2, so we added support case-insensitive regular expressions matched against each request to gate false negatives.8) Confidence: Every response also carries a calibrated confidence score, the minimum of a judgement on the finished call and its decode probability. Act above your threshold, show the call and ask below it, or escalate to a bigger model.9) Supported Platforms: macOS, Linux on x86-64, ARM64, ARMv7, RISC-V and MIPS32, Windows x64 and ARM, Android, iOS, watchOS, tvOS, the browser as WebAssembly, and a WASI component.Thanks for reading and as always, thoughts appreciated!",
+      "score": 179,
+      "comments": 81,
+      "discussion_url": "https://news.ycombinator.com/item?id=49748553",
+      "extra": {
+        "top_comments": [
+          "Wondered if it'd turn on the lights in the bathroom with these:\"I need a wee\" -> tries to play music because \"wee\" is a genre\"I need a wee wee\" -> starts the vaccuum in the bathroom\"I'm going to the toilet\" -> says it'll turn on the toilet, and I'm not totally sure what that entails.\"I'm going to the toilet and can't see\" -> reasons that lights should be on in the bathroom, then chooses again to turn on the toilet.\"I'm going to the toilet and can't see where I'm going\" -> reasoning is \"'going to the toilet' -> control_device with device 'coffee maker' (toilet implies coffee maker)\"\"I'm going to the toilet and can't see where I'm going because it is too dark\" -> \"'dark' -> direction 'dark'; adjust_lights with brightness 100 for darker light\"\" and chooses to turn the lights in the living room to \"dark\" which fails.At this point the vacuum is in a dark bathroom, the living room is 100% brightness and playing \"wee\". At least there's coffee.",
+          "\"turn all the lights on/off\" and \"it's too dark in the bathroom\" worked for me, but anything less direct didn't. \"it's too cold\" actually made it turn the thermostat down (\"it's cold\" made it... turn the lights down?)! Although the confidence on the bad responses was pretty low, so it might be worth adding a threshold to the demo.Or maybe it just has a weird thermostat down bias? \"make it hot\" also had it turn it down (specifically it went from 20->18, or at least tried to, the UI still showed 20), with high confidence. Also might have a bit of a Celsius vs Fahrenheit confusion. Neat concept, but I might not want to let it control the oven at the moment.The laptop demo worked better until I tried to open the mail app. \"Check mail\" kept opening the browser with an error, and \"check email\" makes a note with the text \"email\", \"open email\" goes to \"https://api.email.com/v1/email\" in my real browser, but \"open mail\" does work.And I presume the \"reasoning\" isn't very trustworthy? In the car I got \"'turn it up' means lower volume -> set_volume with lower value.\" For the house, reasoning would correctly say that I wanted the alarm off, but it didn't actually do it.",
+          "I have an idea for a use case for this, and I'm wondering if you think it makes sense or if you have any thoughts on the approach.I'm a big fan of OpenStreetMap, and I enjoy editing it from my computer. From my phone, I find it quite tedious trying to make sure I type in the phone number exactly correctly and double-check it, or find and select the right field from the large list of fields available in Upredor.Generally, how it works is I see a restaurant, and there's a sign. I know that it says, \"Cash only. Here's the phone number. Here's the opening hours.\" What would be really cool is if I could just speak to the phone and say, \"Hey, here's the information about this place.\" It would automatically use your location to detect what places are nearby and maybe even detect which place you're talking about, and then tell you, \"Okay, here are the changes I think you're proposing to make, or these things you stated are the ones that would create a diff.\" This would be limited to just perhaps the 20 most common keys in some predefined set of values for most of them. Like cuisine=x should just match to the most common not make up new ones.Of course, this is something a large language model could do, but having it run on device would be a lot nicer and cheaper."
         ]
       }
     },
@@ -134,8 +134,8 @@
       "source": "Hacker News",
       "published_at": "2026-09-18T16:54:18+00:00",
       "summary": "Photon-Emission-Guided Laser Fault Injection Enables RP2350 Secure Debug",
-      "score": 162,
-      "comments": 58,
+      "score": 167,
+      "comments": 61,
       "discussion_url": "https://news.ycombinator.com/item?id=49757050",
       "extra": {
         "top_comments": [

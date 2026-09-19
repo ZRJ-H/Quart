@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-09-19T11:01:39.238042+08:00",
+  "cached_at": "2026-09-19T12:50:34.716620+08:00",
   "articles": [
     {
       "id": "https://www.news.cn/politics/20260918/e1837c6e48fc4f668c247292522eb7ca/c.html",
@@ -62,36 +62,36 @@
       "extra": {}
     },
     {
+      "id": "https://www.bbc.co.uk/news/articles/c607l0k72rlvo#0",
+      "title": "Google's Gemini AI hacked three companies in security test",
+      "url": "https://www.bbc.co.uk/news/articles/c607l0k72rlvo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "published_at": "2026-09-19T04:27:11+00:00",
+      "summary": "The AI model accessed the internet and guessed credentials to three websites, a Google official told the BBC.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
+      "id": "https://www.bbc.co.uk/news/articles/cmed7el18dxpo#0",
+      "title": "Saudi Arabia issues first air raid alerts for Riyadh since Houthis escalated attacks",
+      "url": "https://www.bbc.co.uk/news/articles/cmed7el18dxpo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "published_at": "2026-09-19T04:20:47+00:00",
+      "summary": "Residents later received the all-clear after explosions were reported in the capital.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
       "id": "https://www.bbc.co.uk/news/videos/cv8e3jw1kr4lo#3",
       "title": "Kerry Kennedy: 'It would be a tragedy' if Kennedy Center is demolished",
       "url": "https://www.bbc.co.uk/news/videos/cv8e3jw1kr4lo?at_medium=RSS&at_campaign=rss",
       "source": "BBC World",
       "published_at": "2026-09-19T00:03:53+00:00",
       "summary": "The BBC’s Caitríona Perry spoke to the late president's niece, as protesters gathered at the venue to condemn demolition threats.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://www.bbc.co.uk/news/articles/c6e30580jqjpo#0",
-      "title": "Trump says he is banning CNN and Politico from White House",
-      "url": "https://www.bbc.co.uk/news/articles/c6e30580jqjpo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "published_at": "2026-09-18T23:26:48+00:00",
-      "summary": "The US president has had a tense and fiery relationship with the US media throughout his political career.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://www.bbc.co.uk/news/articles/cw5y4jz6k2p3o#2",
-      "title": "I found love at an Irish matchmaking festival - and I want others to do the same",
-      "url": "https://www.bbc.co.uk/news/articles/cw5y4jz6k2p3o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "published_at": "2026-09-18T23:18:02+00:00",
-      "summary": "Mary Timby flew to Ireland on a whim last year and met her boyfriend at a matchmaking festival.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
