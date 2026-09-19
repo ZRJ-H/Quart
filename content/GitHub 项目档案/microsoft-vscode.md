@@ -1,13 +1,13 @@
 ---
 first_seen: 2026-06-28
-last_seen: 2026-09-18
+last_seen: 2026-09-19
 language: TypeScript
 tags: [github, trending]
 ---
 
 # microsoft/vscode
 
-> Visual Studio Code 编辑器，适合各类开发者进行跨语言编码、调试与扩展开发。
+> Visual Studio Code 编辑器源码，适合开发者日常写代码，也适合插件作者和 IDE 研究者学习其架构。
 
 ## 基本信息
 
@@ -102,3 +102,4 @@ tags: [github, trending]
 | 2026-09-16 | #18 | 192,576 | -7⭐ | 回落 |
 | 2026-09-17 | #12 | 192,602 | +26⭐ | 常驻 |
 | 2026-09-18 | #16 | 192,642 | +40⭐ | 常驻 |
+| 2026-09-19 | #17 | 192,666 | +24⭐ | 常驻 |
