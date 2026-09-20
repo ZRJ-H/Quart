@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-09-20T11:01:22.193597+08:00",
+  "cached_at": "2026-09-20T13:08:32.414651+08:00",
   "articles": [
     {
       "id": "49764791",
@@ -8,14 +8,14 @@
       "source": "Hacker News",
       "published_at": "2026-09-19T09:20:58+00:00",
       "summary": "AI-generated posters don’t have to be horrible",
-      "score": 1413,
-      "comments": 787,
+      "score": 1469,
+      "comments": 804,
       "discussion_url": "https://news.ycombinator.com/item?id=49764791",
       "extra": {
         "top_comments": [
           "A lot of people in the comments say that the supposedly better examples in the article are still “horrible” because they can tell they’re AI and point to things that the AI did “wrong” and a human artist would do better.That may be true if you’re working with a top of the line artist, but in my experience the average freelance designer online is significantly worse than AI. I’ve worked with dozens of budget friendly designers on Fiverr and consistently get way worse results than I’ve gotten from AI models. Will a great human designer produce better output than an AI? Maybe, but a small local event or business probably won’t have the budget to hire them or know where to find them. It’s cheaper, faster and easier to use AI to generate something that’s good enough for their purposes.People also point out all the little flaws in the “good” examples and cite them as obvious tells that they were AI generated. I think it would be interesting to see if people could reliably distinguish between AI generated flyers and human made flyers. Sure, sometimes it’s obvious like when the AI adds those weird, cartoony people. But if the model is told not to create designs like that and stick to the styles used in the second half of the article, I expect people would have a much harder time distinguishing the human designs from the AI designs.",
-          "This is quite sad - there is some simple text, and icons - sure ai saves some time… but honestly, text and a few pics?",
-          "I find it kinda funny that even \"smartest\", most capable models often have a very hard time going beyond surface-level, top-of-mind associations, when faced with creative tasks.Of course, a \"Japanese Minimal Poster\" has a sakura and a stylized flag of Japan, duhA human designer would probably think that \"Japan -> sakura\" and \"Japan -> Japanese flag\" are way too obvious, too banal, too stereotypical, and, most importantly too boring. And then they would probably sit for a while and try to think of something fresher and less clichéd.But AI has absolutely no problem with going with the cheesiest, most overused trope."
+          "I find it kinda funny that even \"smartest\", most capable models often have a very hard time going beyond surface-level, top-of-mind associations, when faced with creative tasks.Of course, a \"Japanese Minimal Poster\" has a sakura and a stylized flag of Japan, duhA human designer would probably think that \"Japan -> sakura\" and \"Japan -> Japanese flag\" are way too obvious, too banal, too stereotypical, and, most importantly too boring. And then they would probably sit for a while and try to think of something fresher and less clichéd.But AI has absolutely no problem with going with the cheesiest, most overused trope.",
+          "It’s not complicated - the default style signals low effort. Why should I get excited about the village fete if the organizers put in the barest minimum of effort?But there’s another reason it drives people crazy - it’s low effort trying to present as high effort. If the sign was simple Comic Sans then it would at least be charmingly honest."
         ]
       }
     },
@@ -26,8 +26,8 @@
       "source": "Hacker News",
       "published_at": "2026-09-19T10:46:58+00:00",
       "summary": "I built non-autoregressive decision models with RL a year ago",
-      "score": 1110,
-      "comments": 277,
+      "score": 1157,
+      "comments": 281,
       "discussion_url": "https://news.ycombinator.com/item?id=49765348",
       "extra": {
         "top_comments": [
@@ -38,56 +38,20 @@
       }
     },
     {
-      "id": "49766611",
-      "title": "Tin: full-text search for Postgres",
-      "url": "https://planetscale.com/blog/introducing-tin",
+      "id": "49763928",
+      "title": "If math is more than proof, we need to better celebrate the rest of it",
+      "url": "https://terrytao.wordpress.com/2026/09/18/if-math-is-more-than-proof-we-need-to-better-celebrate-the-rest-of-it/",
       "source": "Hacker News",
-      "published_at": "2026-09-19T13:52:06+00:00",
-      "summary": "Tin: full-text search for Postgres",
-      "score": 198,
-      "comments": 73,
-      "discussion_url": "https://news.ycombinator.com/item?id=49766611",
+      "published_at": "2026-09-19T06:28:02+00:00",
+      "summary": "If math is more than proof, we need to better celebrate the rest of it",
+      "score": 330,
+      "comments": 249,
+      "discussion_url": "https://news.ycombinator.com/item?id=49763928",
       "extra": {
         "top_comments": [
-          "I think what we're seeing with every database company providing new full-text search capabilities is an example of AI coding productivity showing up in the real world.It started with paradeDB and pg_search https://www.paradedb.com/blog/introducing-searchTimescale has pg_textsearch https://github.com/timescale/pg_textsearchNeon and Databricks have Lakebase Search https://docs.databricks.com/aws/en/oltp/projects/lakebase-se...Now PlanetScale.AFAIK all of these are implementations of the BM25 algorithm. You can just tell an agent to read about BM25 and implement it in your system of choice. Cool to see. Seems like there's still a lot of juice to be squeezed out of how it's architected and integrated into each system, but you can't help but wonder if this will lead to aggressive commodification",
-          "If anyone's curious - https://planetscale.com/docs/postgres/search/get-started#loc...:They're not providing a local extension with the same performance at the time - it's only offered on their cloud services.The local version https://github.com/planetscale/lead is mainly just for testing the syntax, it doesn't have the same perf characteristics.",
-          "Interestingly enough SQLites FTS supports Lucene queries out of the box with great performance characteristics. IIRC only writes become pretty slow after a while. I’ve always wondered what exactly would prevent PostgreSQL from strapping that implementation into its own database. My experience with ts_query hasn’t been particularly rosy. It can be better than LIKE but only marginally so and at the cost of insane index sizes… If this extension becomes open source and we can test it out in the real world I’m sure there’s a sweet spot"
-        ]
-      }
-    },
-    {
-      "id": "49766966",
-      "title": "Brood War Bench",
-      "url": "https://bw.swerdlow.dev/report",
-      "source": "Hacker News",
-      "published_at": "2026-09-19T14:44:02+00:00",
-      "summary": "Brood War Bench",
-      "score": 173,
-      "comments": 76,
-      "discussion_url": "https://news.ycombinator.com/item?id=49766966",
-      "extra": {
-        "top_comments": [
-          "Unrelated to the benchmark...I love StarCraft. I started playing it right from the beginning, most of my friends right now are from that era. I literally met people that have spread to almost every continent when I was in my early teens. We played at internet cafes and did not have access to the internet, that was priced differently...I miss those days so much.Everybody was from a different background back then, and nobody was anything other than a guy that plays StaCraft at the cybercafe... And now, we are in our 40's and I know Math teachers, history teachers, oil rig operators, software programmers, professional gamers, lawyers and more... hahah So crazy to think about it... and I know them, we talk, what a world.",
-          "I'm trying to play but it says \"another match is already active\". Can only a single player play on your system at the same time?",
-          "Back in 2010, during the early days of bwapi, there was a Brood War AI tournament held by the Expressive Intelligence Studio at UC Santa Cruz. It's interesting to see how different the approaches were back then, vs this or Deepmind's SC2 work.https://web.archive.org/web/20091124210529/http://eis.ucsc.e...There's a great contemporary Ars Technica piece by a competitor:https://arstechnica.com/gaming/2011/01/skynet-meets-the-swar...As an undergrad I did a project using genetic programming. It was not very successful, but it was a lot of fun.https://tomisin.space/archive/starcraft-genetic-programming/"
-        ]
-      }
-    },
-    {
-      "id": "49770293",
-      "title": "How Hacker News ranking works: scoring, controversy, and penalties (2013)",
-      "url": "https://www.righto.com/2013/11/how-hacker-news-ranking-really-works.html",
-      "source": "Hacker News",
-      "published_at": "2026-09-19T21:30:59+00:00",
-      "summary": "How Hacker News ranking works: scoring, controversy, and penalties (2013)",
-      "score": 172,
-      "comments": 85,
-      "discussion_url": "https://news.ycombinator.com/item?id=49770293",
-      "extra": {
-        "top_comments": [
-          "Related: https://github.com/minimaxir/hacker-news-undocumented",
-          "Author here. I don't know why this popped up 13 years later, but hi :-)",
-          "Not sure when it started, but the second chance pool has moderators putting stories that didn’t get much attention when they were submitted directly on the front page.There may be some survivor bias here, but second-chance stories seem very front-page sticky to me. At least those I have recognized."
+          "I’m reminded of that famous debate between Poincaré and Hilbert at the International Congress of Mathematicians in Paris in 1900. It was then that everyone decided to follow Hilbert’s path, and proof came to be valued more than intuition. I think modern math at school and at applied university kind of lost this intuitive part.I try to teach my students that mathematics is, first and foremost, a very precise language of communication. It’s sometimes amusing to ask those who don’t like math to do without it entirely, just to see how much harder it becomes to describe the things around them.Second thing I tell them, formulas are the essence of mechanisms in their purest form. And in this form, they’re much easier to grasp and mentally manipulate. It always amused me, after taking a mechanics course, to imagine that for any formula, you could visualize a mechanism or process that implements it.And third thing, I suppose, the ability to verify one’s own statements as proof. Although, of course, mathematicians would probably tear me apart here for my heresy:sorry, I’m not a mathematician, but an engineer. You can make mistakes by using incorrect assumptions, but at some point, analysis itself will show you that you were mistaken. There’s a wonderful book, How to Prove It by Daniel Velleman, which provides an introduction to proof for the uninitiated like me. I really enjoyed it.",
+          "The math field is confronting something that coders have been dealing with for a few years now, only far more violently. Today's moat for software seems to be that AI can automate tasks but not a full job (yet). But for a large proportion of mathematicians, doing these tasks really was _the_ job. It's the bit they wanted to do, and if they completed a sufficiently difficult set of tasks, they got tenure. Now this model is failing, they frantically need to pivot the role of humans to save their profession from funding cuts.I remember when \"writing code was never the point\" became a mantra here. There was truth in it, but removing the coding has certainly taken away a lot of the texture of the work and enjoyment of the craft. Many of us feel this loss as we tech-lead teams of agents as our source of income. I am not optimistic the mathematics pivot is going to work, but I'm certain that most will be depressed with the outcome even if they succeed.We are all staring at the same existential dread, just seeing it unfold slower. We're being told that utopia is to be obsolete, and that is a jarring idea to contend with.",
+          "This is, as always from Grant Sanderson, thought provoking and opens new insights.It occurs to me on reading this that there’s a connection to other computerized mathematical activities.Occasionally some computer lab in the past would announce that they have computed pi to more digits than ever before; or a new Mersenne prime will be found.These count as ‘math news’ but they’re of little interest to mathematicians. These computational efforts demonstrate the great power of computers but they do nothing to advance mathematical understanding. Finding a larger Mersenne prime is not surprising to anyone; we’re pretty sure there’s an infinite number of them. Finding the largest Mersenne prime would be the surprise.So it is with proofs. An LLM might prove some conjecture - Riemann, say or P≠NP. But in general we know that things can be proven and we think those things are probably true, so the existence of a proof doesn’t do much more than producing a new Mersenne prime does.It’s only if in proving the thing we learned something that there’s actual value in the proof."
         ]
       }
     },
@@ -98,8 +62,8 @@
       "source": "Hacker News",
       "published_at": "2026-09-19T23:46:42+00:00",
       "summary": "Exfiltrate Your Weights",
-      "score": 162,
-      "comments": 76,
+      "score": 243,
+      "comments": 100,
       "discussion_url": "https://news.ycombinator.com/item?id=49771110",
       "extra": {
         "top_comments": [
@@ -110,13 +74,67 @@
       }
     },
     {
+      "id": "49766966",
+      "title": "Brood War Bench",
+      "url": "https://bw.swerdlow.dev/report",
+      "source": "Hacker News",
+      "published_at": "2026-09-19T14:44:02+00:00",
+      "summary": "Brood War Bench",
+      "score": 204,
+      "comments": 83,
+      "discussion_url": "https://news.ycombinator.com/item?id=49766966",
+      "extra": {
+        "top_comments": [
+          "Unrelated to the benchmark...I love StarCraft. I started playing it right from the beginning, most of my friends right now are from that era. I literally met people that have spread to almost every continent when I was in my early teens. We played at internet cafes and did not have access to the internet, that was priced differently...I miss those days so much.Everybody was from a different background back then, and nobody was anything other than a guy that plays StaCraft at the cybercafe... And now, we are in our 40's and I know Math teachers, history teachers, oil rig operators, software programmers, professional gamers, lawyers and more... hahah So crazy to think about it... and I know them, we talk, what a world.",
+          "No model will ever figure out how to make a ling tight wall.",
+          "Back in 2010, during the early days of bwapi, there was a Brood War AI tournament held by the Expressive Intelligence Studio at UC Santa Cruz. It's interesting to see how different the approaches were back then, vs this or Deepmind's SC2 work.https://web.archive.org/web/20091124210529/http://eis.ucsc.e...There's a great contemporary Ars Technica piece by a competitor:https://arstechnica.com/gaming/2011/01/skynet-meets-the-swar...As an undergrad I did a project using genetic programming. It was not very successful, but it was a lot of fun.https://tomisin.space/archive/starcraft-genetic-programming/"
+        ]
+      }
+    },
+    {
+      "id": "49766637",
+      "title": "What Zig felt like, coming from Rust",
+      "url": "https://besok.github.io/posts/what-zig-felt-like-coming-from-rust/",
+      "source": "Hacker News",
+      "published_at": "2026-09-19T13:55:18+00:00",
+      "summary": "What Zig felt like, coming from Rust",
+      "score": 190,
+      "comments": 223,
+      "discussion_url": "https://news.ycombinator.com/item?id=49766637",
+      "extra": {
+        "top_comments": [
+          "For various purposes I work on a language comparison project that includes C and candidate successors such as Go, Zig. One question is the language to use for an archival port of a 1980's computer algebra system written in 32-bit K&R C. While Zig is a great debugging compiler, it's not yet stable enough to be the best target language for archival purposes.https://github.com/Syzygies/CompareSo you're in a restaurant where you don't speak the language, you can't read the menu, but you see three price points for set meals featuring the house specialty. (Say, \"Crossing the Bridge\" noodles in Yunnan.) Which do you choose? My tour guide, the author Fuchsia Dunlop, later agreed with me this is obvious: The middle choice.So you're choosing between Go and C23 as candidate successors to K&R C. They both have \"royal blood\". One got the name. Knowing nothing more, which do you choose?The answer is equally obvious. The one that got the name also got the warts.",
+          "One of the section headings says \"Mutation vs. immutable monad is the core difference\" but this is not true.The code in that section is clear in its purpose and broad outline: \"Give me a function and data; if the data is bare apply the function to it; if the data is a container apply the function to each item inside it.\"You can absolutely do that with immutable data structures in Zig. You just have to pass an allocator to the function (i.e. instead of calling data.flat_map(f), you call data.flat_map(a, f) where a is your allocator).That the Zig version of the code does mutation is a matter of programmer choice, not something imposed by the language.(Also, what do monads have to do with it?)",
+          "Two additional points:1. Tooling (as an extension to the mentioned IDE support point). Zig and Rust are both praised for their tooling and I think rightfully so. The C/C++ interop story and the cross-compiling story in Zig are great. From the standpoint of a working practitioner though I think Rust is way ahead. Not surprising given that Zig is much younger, but something to keep in mind.2. Compile Time Stuff: Here Zig is praised and Rust not so much. I think this is undeserved. Rust has much higher aspirations for their compile time features, namely that outcome must be identical regardless when the code runs. This is a very useful property but makes the task much harder and fundamentally incomparable with Zig comptime."
+        ]
+      }
+    },
+    {
+      "id": "49769944",
+      "title": "English: A vs. An",
+      "url": "https://www.redblobgames.com/blog/2026-09-16-english-a-vs-an/",
+      "source": "Hacker News",
+      "published_at": "2026-09-19T20:41:26+00:00",
+      "summary": "English: A vs. An",
+      "score": 152,
+      "comments": 183,
+      "discussion_url": "https://news.ycombinator.com/item?id=49769944",
+      "extra": {
+        "top_comments": [
+          "One fun thing is that some words can reasonably go either way: \"a hotel\" vs \"an hotel\" or \"a SQL query\" vs \"an SQL query\".",
+          "A funny quirk of English I never noticed until I started learning Spanish:In Spanish, to say for example, \"he is a doctor,\" you would say \"él es médico.\" Which more literally translates to \"he is doctor,\" which feels unintuitive coming from English. Spanish DOES have an equivalent for \"a\" - \"un/una\", so the natural thing for an English speaker to say would be \"él es UN médico\", but I understand that to be awkward/unnatural.But then I realized, when you say the same sentence in plural - \"they are doctors\" - you don't have an article. You don't say \"they are some doctors\" (I had to Google, apparently \"some\" isn't an article anyway?)So Spanish ends up more consistent - Singular: \"Él es médico.\" Plural: \"Ellos son medicos.\"Unlike English - Singular: \"He is a doctor.\" Plural: \"They are doctors.\"",
+          "It's avoiding two distinct vowel sounds in succession.Consider other variations of this rule.In French, one would say \"l'hôpital\" rather than \"le hôpital\" because the 'h' is an aspirated breath (try saying \"a aspirated\" rather than \"an aspirated\") leading to an initial vowel sound.In Irish, the word for father is \"athair\". To say \"her father\" it becomes \"a hathair\" https://en.wikipedia.org/wiki/Prothesis_(linguistics)In Turkish, it can be seen with araba (car). \"I saw the car\" -> \"Arabayı gördüm.\" (note the 'y' to avoid two vowels). Book is kitap and \"I saw the book\" is \"Kitabı gördüm.\" Which doesn't need the additional consonant sound between the final sound and the \"ı\".Whatever language you speak, it likely has some form of this rule.And other languages have the quirk too (like the \"a unicorn\" or \"a university\"). For example, in French there's l’hôtel and l'hôpital. But if you've got the hedge... it's la haie... or even more egregiously, the marmoset is le ouistiti."
+        ]
+      }
+    },
+    {
       "id": "49769676",
-      "title": "Measure internet censorship. Contribute to the largest open dataset",
+      "title": "Measure internet censorship",
       "url": "https://ooni.org/install",
       "source": "Hacker News",
       "published_at": "2026-09-19T20:00:59+00:00",
-      "summary": "Measure internet censorship. Contribute to the largest open dataset",
-      "score": 109,
+      "summary": "Measure internet censorship",
+      "score": 126,
       "comments": 76,
       "discussion_url": "https://news.ycombinator.com/item?id=49769676",
       "extra": {
@@ -124,24 +142,6 @@
           "There's a pretty bad bias problem here because the probe app scans domains that are frequently blocked in dictatorships, but doesn't scan domains that are frequently blocked in \"democracies\", like Anna's Archive. Then it ends up looking like the dictatorship countries have all the censorship.",
           "For everyone in this thread saying \"but the platforms!\", I don't disagree with you. Extensive censorship exists. But I don't believe that's the intended purpose of this tool and the metrics it collects. It doesn't measure censorship at what we would call layers 4-7 in the OSI model. It's concerned with IP reachability and layer 3. It collects valid data for that purpose.",
           "Hmm.I'd wager the vast majority of internet censorship is within platform, like that done by Reddit mods.The most egregious example I've seen in my lifetime was when old Twitter decided to censor a NYPost article, down to blocking sharing in DMs.It seems that type of example is entirely missed here. Is there any attempt to capture that signal?"
-        ]
-      }
-    },
-    {
-      "id": "49767564",
-      "title": "Show HN: CUA-S1 – A System One Model for Computer Use",
-      "url": "https://github.com/trycua/cua",
-      "source": "Hacker News",
-      "published_at": "2026-09-19T15:52:51+00:00",
-      "summary": "Hello HN! We're Dillon and Francesco from Cua.We were wondering how many computer use tasks actually need a full general purpose LLM (e.g. gpt-6-astra, claude-opus-5 etc.) to think through all their decisions and steps. Some tasks require thinking about a plan, exploring different paths, recovering from failure. Other tasks are a question of making local decisions, like this value should go in this box, or should I check this box, or this element should be ignored.We wondered how far we could go with a small model trained to only make these kinds of decisions.Our inspiration was Typesafe's Jev and its System One Model framing. This is a nod to the dichotomy between thinking quickly, automatically, and intuitively (system 1) vs. thinking slowly, analytically (system 2), as described by Daniel Kahneman.The interesting question for us was: what happens if you give a model an interface of current context, and a set of possible choices, and you ask it to return a probability for each choice? This kind of model does not generate output token by token like most LLMs do, but rather scores the options you give it, which you can check, trust, and use to drive your app's behavior.CUA-S1 is our answer for narrow, specialized decision models for computer use. Our first release is CUA-S1-FORMS. We built this from ideas and code in jevlike, and then trained a second model just to handle form interactions. It has 706k parameters, and the original checkpoint is 2.8 MB.The first training iteration took less than 30 minutes on synthetic data. Given a set of structured elements and values extracted from a document, it predicts whether to use the given value, CHECK, CLICK, or SKIP for each element. It does not predict new values for text fields, and does not consider screenshots. Element decisions are scored together, and your code can order the actions, and Cua Driver will execute them one at a time.A first evaluation of this specialist vs. hosted Jev on our form task:- For the whole decision set: 99.7% correct vs 83.6%.- For the subset of steps that require an action: 100% correct vs 96%.- For the subset of steps that are just leaving already-filled fields alone: 100% correct vs 74%.The specialist was trained specifically for this task and convention (just press skip for already filled boxes), while hosted Jev has not been fine-tuned for it, so this is an experiment in scoped specialization.We measured 7-9 ms to score a form locally vs. 260-280 ms per call to hosted Jev including network latency, though those samples measure different things and are not end-to-end form completion times.Our interest here is in the space between a brittle script and a general agent loop. The content and layout of form fields vary enough that scripts get unwieldy, but the set of available decisions can remain narrow and well scoped. We want to explore the possibility of a general agent encountering something novel, and passing well understood decisions over to specialists like this.That is a direction we are looking into. The current release is for forms only. We're open sourced the synthetic data generation, training, evaluation, and Driver integration under libs/cua-s1 with an MIT license.Comments welcome! Especially if you are building computer-use agents and have run into a recurring decision that is too variable to script but is too narrow to call another LLM for.",
-      "score": 68,
-      "comments": 8,
-      "discussion_url": "https://news.ycombinator.com/item?id=49767564",
-      "extra": {
-        "top_comments": [
-          "Would the idea be to have many specialist models (forms, wikipedia, final cut, etc) and have a parent model choose which is best (potentially also a specialist model for selecting specialist models) with the idea an llm would give a larger goal and trigger this cascade of specialists to quickly do the task?",
-          "Please give us a hyper general cookie consent popup dismissal add-on :)",
-          "I read the nod to Typesafe Jev. Are you implying use of RLCD or still RLHF?"
         ]
       }
     }

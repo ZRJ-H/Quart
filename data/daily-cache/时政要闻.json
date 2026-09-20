@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-09-20T11:01:22.193597+08:00",
+  "cached_at": "2026-09-20T13:08:32.414651+08:00",
   "articles": [
     {
       "id": "https://www.news.cn/politics/20260920/70b536870c56449ca60eaaf14cb7f880/c.html",
@@ -62,11 +62,23 @@
       "extra": {}
     },
     {
+      "id": "https://www.bbc.co.uk/news/videos/ck980m0pr1e0o#3",
+      "title": "Watch: Fans cheer as Ed Sheeran speaks out over Macklemore controversy at show",
+      "url": "https://www.bbc.co.uk/news/videos/ck980m0pr1e0o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "published_at": "2026-09-20T05:01:47+00:00",
+      "summary": "Ed Sheeran told the crowd he had made mistakes after Macklemore was dropped from his tour for making pro-Palestinian remarks.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
       "id": "https://www.bbc.co.uk/news/articles/cm780ll1de18o#0",
       "title": "Ed Sheeran admits 'mistakes' as he addresses Macklemore controversy at Philadelphia show",
       "url": "https://www.bbc.co.uk/news/articles/cm780ll1de18o?at_medium=RSS&at_campaign=rss",
       "source": "BBC World",
-      "published_at": "2026-09-20T01:38:30+00:00",
+      "published_at": "2026-09-20T04:49:11+00:00",
       "summary": "The mega-star spoke about Israel and Gaza at his first concert since rapper Macklemore was removed from his tour.",
       "score": 0,
       "comments": 0,
@@ -74,24 +86,12 @@
       "extra": {}
     },
     {
-      "id": "https://www.bbc.co.uk/news/articles/cwly5d9v7r43o#0",
-      "title": "Houthis say they targeted Saudi capital with ballistic missiles",
-      "url": "https://www.bbc.co.uk/news/articles/cwly5d9v7r43o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "published_at": "2026-09-19T23:49:26+00:00",
-      "summary": "A reported strike on a fuel depot at Riyadh airport caused delays on Saturday, as Saudi Arabia says it shot down a ballistic missile aimed at the capital.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://www.bbc.co.uk/news/articles/cvgy1q2k2z0o#0",
-      "title": "Cultural treasures are being destroyed by war, and people want justice",
-      "url": "https://www.bbc.co.uk/news/articles/cvgy1q2k2z0o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "published_at": "2026-09-19T23:18:18+00:00",
-      "summary": "A cauldron of conflicts is bubbling across the world, with cultural monuments being destroyed. These people are fighting against it.",
+      "id": "https://www.npr.org/2026/09/19/nx-s1-5974980/saudi-arabia-houthis-attempted-attack-capital",
+      "title": "Saudi Arabia says Houthis tried to attack its capital",
+      "url": "https://www.npr.org/2026/09/19/nx-s1-5974980/saudi-arabia-houthis-attempted-attack-capital",
+      "source": "NPR World",
+      "published_at": "2026-09-20T03:57:23+00:00",
+      "summary": "Saudi Arabia on Saturday said that Yemen's Houthi rebels tried to attack Riyadh with a ballistic missile, the first time the Saudi capital has been targeted since the escalation in fighting with the Iran-backed rebels opened a new front in the Iran war.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
