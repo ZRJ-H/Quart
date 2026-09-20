@@ -1,13 +1,13 @@
 ---
 first_seen: 2026-07-12
-last_seen: 2026-09-07
+last_seen: 2026-09-20
 language: Python
 tags: [github, trending]
 ---
 
 # anthropics/claude-code
 
-> Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.
+> Anthropic 推出的终端内代理式编码工具，能理解代码库并执行常规任务、解释复杂代码，适合希望在命令行中提升编码效率的开发者。
 
 ## 基本信息
 
@@ -28,3 +28,4 @@ tags: [github, trending]
 | 2026-08-24 | #21 | 142,767 | +216⭐ | 跃升 |
 | 2026-08-27 | #25 | 143,137 | +370⭐ | 跃升 |
 | 2026-09-07 | #25 | 144,286 | +1,149⭐ | 爆火 |
+| 2026-09-20 | #25 | 146,752 | +2,466⭐ | 爆火 |

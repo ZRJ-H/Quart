@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-09-19T12:50:34.716620+08:00",
+  "cached_at": "2026-09-20T11:01:22.193597+08:00",
   "articles": [
     {
       "id": "https://research.google/blog/millemiglia-a-realistic-instance-generator-for-middle-mile-logistics/",
@@ -8,6 +8,18 @@
       "source": "Google Research",
       "published_at": "2026-09-18T17:46:09+00:00",
       "summary": "Algorithms & Theory",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
+      "id": "https://openai.com/index/australian-youth-safety-blueprint",
+      "title": "Introducing the Australian Youth Safety Blueprint",
+      "url": "https://openai.com/index/australian-youth-safety-blueprint",
+      "source": "OpenAI",
+      "published_at": "2026-09-18T12:00:00+00:00",
+      "summary": "OpenAI introduces the Australian Youth Safety Blueprint, a six-pillar roadmap for safer AI experiences that protect and empower young people.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
