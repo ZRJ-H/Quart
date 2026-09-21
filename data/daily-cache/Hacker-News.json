@@ -1,21 +1,21 @@
 {
-  "cached_at": "2026-09-21T11:01:18.012352+08:00",
+  "cached_at": "2026-09-21T13:13:55.503476+08:00",
   "articles": [
     {
-      "id": "49776729",
-      "title": "ChatGPT now knows what you do on other websites via ad collector",
-      "url": "https://www.buchodi.com/chatgpt-now-knows-what-you-do-on-other-websites-via-ad-collector/",
+      "id": "49776699",
+      "title": "Pirate Face Rescues LLM Models from Deletion",
+      "url": "https://pirateface.co/",
       "source": "Hacker News",
-      "published_at": "2026-09-20T15:18:44+00:00",
-      "summary": "ChatGPT now knows what you do on other websites via ad collector",
-      "score": 630,
-      "comments": 334,
-      "discussion_url": "https://news.ycombinator.com/item?id=49776729",
+      "published_at": "2026-09-20T15:16:07+00:00",
+      "summary": "Pirate Face Rescues LLM Models from Deletion",
+      "score": 495,
+      "comments": 143,
+      "discussion_url": "https://news.ycombinator.com/item?id=49776699",
       "extra": {
         "top_comments": [
-          "I noticed that the link for OAI’s ad pixel documentation itself has a tracking referral header to the author’s site (?ref=buchodi.com). Given the nature of the article, my instinct was that this is actually some next-level humour that totally sniped me. But now I’m not so sure- does OAI even have a kickback program? What would referral attribution even do here?",
-          "I am once again happy that the EU is fighting practices like these via legislation.Some outcomes can be annoying, but the net result is still positive, for the consumers and their data privacy at least.",
-          "To me, this quote just about sums it up:> The mechanism is standard adtech. What has no precedent is running it on an AI chat product.As someone who has been well aware of this mechanism for quite some time, I still feel icky anytime I re-read the details of it.What a time to be alive."
+          "Speaking to the \"uncensored model\" angle: there's little reason to distribute abliterated weights anyway. Instead of orthogonalising the weights that write back to the residual stream, you can just orthogonalise the activations themselves. It's equivalent.Orthogonalising activations at runtime is computationally cheap. Just distribute the refusal vectors (few thousand floats per layer), then run against the stock weights. Antirez's DS4 already supports this: https://github.com/antirez/ds4/blob/8db1d1d155cb0400a86a86b9...Abliterated weights are just a bad habit we've gotten into. It's also deeply suboptimal from a precision point of view to take a model that's already been QATed and distributed in pre-quantised form (DeepSeek V4, Kimi K2.5 or K3...), modify its weights, and re-quantise it. Similarly, abliterated models regain some of their refusal behaviour when they're re-quantised after abliteration -- avoidable by keeping the two separate.",
+          "Torrents should really be the preferred method for distributing AI model weights. Why rely on a single point of failure like Hugging Face? BitTorrent was made for exactly this.",
+          "Steam & Blizzard (probably others) used to delivery games through torrent protocol in the past, before CDNs became cheaper.When StarCraft 2 was lauched, the installer (before Battle.net installer crapware) had a complete graphical visualization of seeders & leechers.Reference: https://warcraft.wiki.gg/wiki/Blizzard_Downloader"
         ]
       }
     },
@@ -26,8 +26,8 @@
       "source": "Hacker News",
       "published_at": "2026-09-20T17:38:50+00:00",
       "summary": "Samsung is expected to more than double output of its HBM4 and HBM4E DRAM",
-      "score": 367,
-      "comments": 240,
+      "score": 402,
+      "comments": 261,
       "discussion_url": "https://news.ycombinator.com/item?id=49778029",
       "extra": {
         "top_comments": [
@@ -38,38 +38,20 @@
       }
     },
     {
-      "id": "49780630",
-      "title": "Bill to Ban Private Equity from Owning Medical Practices",
-      "url": "https://truthout.org/articles/warren-introduces-bill-to-ban-private-equity-from-owning-medical-practices/",
-      "source": "Hacker News",
-      "published_at": "2026-09-20T22:13:46+00:00",
-      "summary": "Bill to Ban Private Equity from Owning Medical Practices",
-      "score": 318,
-      "comments": 202,
-      "discussion_url": "https://news.ycombinator.com/item?id=49780630",
-      "extra": {
-        "top_comments": [
-          "There's a pattern to the kinds of companies PE buys and I think it points to the real problem.They like companies with some kind of moat that makes it hard to unseat them. Basically, companies where there is no alternative for the consumer. That way, they can inflict abuse but know there will be nowhere to run.There are two different ways to achieve this. Monopoly and regulation. Hospitals have both government granted locational monopoly and tons of regulations that make it impossible to compete.Private equity is the symptom, not the disease.Until we get at the disease, new monsters will be born with different name filling the same ecological niche. It's economic natural selection played out in the environment we created.",
-          "It's actually worse with veterinary practices.Younger veterinarians are drowning in school debt and can't buy the practices from the older folks that are retiring. So, private equity is basically snatching all of them up right now, betting that childless millennials are going to pay tons of money on veterinary care when their pandemic pups begin to reach end-of-life.They're going to cut wages for all the staff, and hike all the prices, because unlike with human medical care, there's hardly any regulation (yet).",
-          "Australia is on its way down this path after Brookfield / Healthscope was holding a private hospital hostage against the government and had performance so degraded a child died. Hopefully we (aus) continue down this path of burning off the rot.https://www.abc.net.au/news/2025-03-27/nsw-government-joes-l..."
-        ]
-      }
-    },
-    {
       "id": "49780797",
-      "title": "Google's Open Agentic Orchestrator",
+      "title": "AX – Google’s Open Agentic Orchestrator",
       "url": "https://agentexecutor.io",
       "source": "Hacker News",
       "published_at": "2026-09-20T22:32:43+00:00",
-      "summary": "Google's Open Agentic Orchestrator",
-      "score": 255,
-      "comments": 101,
+      "summary": "AX – Google’s Open Agentic Orchestrator",
+      "score": 342,
+      "comments": 132,
       "discussion_url": "https://news.ycombinator.com/item?id=49780797",
       "extra": {
         "top_comments": [
           "Could someone explain to me what the general workflow is now that people are converging to? I haven't really been catching up with the AI ecosystem but I was looking into agent sandboxes and VM's recently and there's a ton of these startups and tools now. Is giving the agent a temporary scratchbox really that valuable?I've been still just like, making VM's with proxmox, then putting my agent in the machine and letting it run free (with my dotfiles setup script making dev env pretty much free, though I could also just make a VM snapshot). What's wrong with that? Is that not the scalable solution for enterprise rn?",
           "I have been happy with Google's Antigravity harness and Jules so looking forward to playing with this. Thanks for sharing. Simultaneously I am looking to also revisit local offline models.While I feel like I have a decent understanding of the model landscape I'm feeling a bit lost at which agentic harness to leverage for local models. Hermes, Cline, Aider, Qwen Code, Goose, Pi, OpenCode, something else? I live in the terminal so Desktop UX is a bonus but not a must have.Can I modify the antigravity settings/program to point to a local model? Where should I spend my energy?",
-          "Anyone who uses this promotion packet fodder for anything important is a fool"
+          "Nobody has a use for this, and anybody who can look at this website and work out what it's for is kidding themselves. Even the demo gif playing just has them pausing a task and resuming the task."
         ]
       }
     },
@@ -80,8 +62,8 @@
       "source": "Hacker News",
       "published_at": "2026-09-20T22:35:49+00:00",
       "summary": "What happened to the Snowden archive",
-      "score": 204,
-      "comments": 110,
+      "score": 273,
+      "comments": 178,
       "discussion_url": "https://news.ycombinator.com/item?id=49780820",
       "extra": {
         "top_comments": [
@@ -98,8 +80,8 @@
       "source": "Hacker News",
       "published_at": "2026-09-20T15:18:05+00:00",
       "summary": "Singapore’s National Library Board offers micropayments to build reading habits",
-      "score": 184,
-      "comments": 85,
+      "score": 203,
+      "comments": 87,
       "discussion_url": "https://news.ycombinator.com/item?id=49776717",
       "extra": {
         "top_comments": [
@@ -110,14 +92,32 @@
       }
     },
     {
+      "id": "49776627",
+      "title": "Sherline Tools Is Going Out of Business",
+      "url": "https://toolguyd.com/sherline-tools-shutting-down-usa-production/",
+      "source": "Hacker News",
+      "published_at": "2026-09-20T15:09:41+00:00",
+      "summary": "Sherline Tools Is Going Out of Business",
+      "score": 201,
+      "comments": 133,
+      "discussion_url": "https://news.ycombinator.com/item?id=49776627",
+      "extra": {
+        "top_comments": [
+          "Sad news. First, Openbuilds now this.Not a surprise to me though since I am operating in the CNC industry I have seen the same struggles and changes, albeit, from a slightly different perspective.I work with the Smoothieware/Smoothieboard project. It seems, from my observation, that most people are not working with hardware like they were a few years ago. The \"homebrew\" machines and shadetree makers are becoming few and far between.The lie has been heavily sold to the maker community that you are \"wasting your time if you make something yourself\" since it is cheaper to offshore even small 3d prints and machining projects. Not only that but people have been convinced that they don't have the ability to make a machine.Instead of spending time learning something new/valuable (i.e. Reprap) it is now popular to just have someone else do it...be it AI or a factory in another country with subsidies that create massive differences in bottom line.The ability to make things at home is disappearing. People cannot/will not learn to make their own machines. Companies that make machines that care about their community and customers are disappearing.Maybe it's by design? I don't know.",
+          "There’s some other threads in this discussion bemoaning the lack of diy machine builders…and, I am really unclear how this Sherline issue is related? To me, this is a question of value for money. Sherline products were always interesting, but also nowhere near competitive as machines. With controllers like masso and acorn available, converting a mill like a grizzly, precision Mathews or even a Bridgeport are just way more value for money.The other end of the spectrum is tools like the Langmuir bed mill/router or the avid benchtop routers with available 4 pole spindles.There’s a lot of options, closed loop steppers are sub $100, servos from DMM or teknic are readily available and awesome.Sherline has a product set that just felt like a compromise on everything.In the last decade, I’ve built 3 routers, rebuilt a bed mill, converted a Bridgeport, and am currently building an automated beam saw. All the options in the market are drastically better than they were 15 years ago.It’s sad to see a fixture of the community going out of business, but it also a reflection that the business is different now. Given the many different kits and options available, it just doesn’t make sense to buy small work envelope machines for most people.",
+          "I own a lathe and mill from them, both converted to CNC. Sadly their products have changed little in 30+ years. Their precision parts have a use in some applications but it's vastly overshadowed by the cheap parts available from Asia (including India now).3D printers, laser cutters and benchtop CNC routers have the taken over the lion share of what hobbyists (and some professionals) used to do with these machines. Mine are just collecting dust while my 3D printers crank out parts every day."
+        ]
+      }
+    },
+    {
       "id": "49777467",
       "title": "I am often wrong",
       "url": "https://borischerny.com/management,/product/2026/09/19/I-am-often-wrong.html",
       "source": "Hacker News",
       "published_at": "2026-09-20T16:41:46+00:00",
       "summary": "I am often wrong",
-      "score": 122,
-      "comments": 111,
+      "score": 153,
+      "comments": 124,
       "discussion_url": "https://news.ycombinator.com/item?id=49777467",
       "extra": {
         "top_comments": [
@@ -128,20 +128,20 @@
       }
     },
     {
-      "id": "49777539",
-      "title": "Show HN: Radius – A Meetup.com Alternative",
-      "url": "https://radius.to/",
+      "id": "49778195",
+      "title": "A Necessary History of the Oddest Letter: W",
+      "url": "https://lithub.com/a-necessary-history-of-the-oddest-letter-w/",
       "source": "Hacker News",
-      "published_at": "2026-09-20T16:51:26+00:00",
-      "summary": "Hello HN!I'm relaunching Radius [1] - far too long after the original Show HN [2] (I'll blame the day job for that).Radius started out from my frustration with not knowing what was going on around me. The initial plan was to \"show all and every type of event\" from big to small, but over time I narrowed the focus to communities, groups, events, and helping people connect through them.The initial Show HN gave me 150+ comments (surprising, looking back, given how terrible the plain Bootstrap UI was...) with a huge amount of useful feedback and feature requests. I've spent the time since then working through that, along with additional requests from groups using Radius, and it finally feels ready for a proper relaunch.I've also recently added \"Activities\" [3] - which are lightweight events, independent of groups, intended to help people find others to do things with - for example:> John is going for a cycle and a coffee in New York at 10amPeople can join and vote for a time that works for them.I've got a bunch of ideas for where to go next with this, including things like open sourcing and federation, but those are for another day!Any feedback would be greatly appreciated!P.S. it's built with Ruby on Rails, for those interested. I highly suspect it would have taken me 2 more years to get to this point without Rails![1] https://radius.to/[2] https://news.ycombinator.com/item?id=40717398[3] https://radius.to/documentation/activities/post-an-activity",
-      "score": 105,
-      "comments": 45,
-      "discussion_url": "https://news.ycombinator.com/item?id=49777539",
+      "published_at": "2026-09-20T17:55:57+00:00",
+      "summary": "A Necessary History of the Oddest Letter: W",
+      "score": 115,
+      "comments": 58,
+      "discussion_url": "https://news.ycombinator.com/item?id=49778195",
       "extra": {
         "top_comments": [
-          "Looks nice! I created something similar, an app called Connective. It’s available for both Android and iOS. Check out our website www.connective-app.com. Please contact me if you want to discuss further",
-          "If you want to start in that niche you really need to double down on a specific subset of that niche to get people to use it. Right now you are not offering much over Facebook Events or Meetup and the tech / design in this case doesn't matter when all that matters is that you have people using it for their events.I'd take a look at how Luma (The only seemingly competitor in that niche these days) is doing it, they are focused on a very small group of large cities and started being mostly for crypto related events. Only these days it feels like there's more variety in the events depending on the city. Doing a generic \"I was annoyed with Meetup\" strategy won't work.",
-          "Between Partiful, Posh, Luma, Instagram, and yes even Meetup, I'm not sure how people aren't \"finding events\" around them. I literally get invited to like 100+ random things every week."
+          "The history of W in Finnish is interesting (for some values of \"interesting\"). Mikael Agricola [1], a Lutheran clergyman, essentially created literary Finnish from scratch in the 1500s (before that, Finnish had existed solely as a spoken, vernacular language, with official business conducted in Swedish (or German), and until the reformation, the language of the Church had of course been Latin).Agricola had to create an alphabet for Finnish, and naturally borrowed heavily from Swedish and, to a lesser extent, German. His orthography was not particularly self-consistent, and for example the /u/ and /v/ phonemes might be written as either \"u\", \"v\", or \"w\" in Agricola's works. For example, the word uusi (/u:si/; \"new\") was written by him as \"wsi\", indeed using \"w\" as a literal \"double-u\". The /w/ sound did not exist in spoken Finnish.Over time, Finnish became the almost entirely phonetic language that it is now, with letters matching phonemes essentially one-to-one. /u/ was regularized as \"u\" and /v/ as \"v\". As /w/ still doesn't exist, the letter \"w\" is very rarely used, mainly in some surnames as an alternative spelling of \"v\"; phonebooks used to collate \"v\" and \"w\" as the same letter. In loanwords \"w\" becomes \"v\" (e.g. \"whiskey\" -> viski). Finns with a thick accent (see \"Rally English\" [2]) tend to pronounce the foreign /w/ as /v/ when speaking English, similar to Germans.Today, imitation of Agricola's orthography is the Finnish version of \"ye olde English\", used for humorous or intensifying effect. For example, the word vanha \"old\" might be spelled \"wanha\" in the name of an antiques shop. \"Wanha\" also used to be a standard \"old news\" reply on IRC, especially to links that had already been pasted by someone (and this became so annoying on some channels that it became a kick-worthy offense).[1] https://en.wikipedia.org/wiki/Mikael_Agricola[2] https://en.wikipedia.org/wiki/Rally_English",
+          "English is at best my 3rd language. I have always found the huge discrepancy between pronunciation and spelling really nonsensical (keep in mind that I even speak French). But this article really helps see all that in a new light. Nothing is a-historical, not even phonetics. Newfound respect for the English language.",
+          "Would be remiss to not mention W's biopic: https://www.youtube.com/watch?v=sg2j7mZ9-2Y"
         ]
       }
     }
