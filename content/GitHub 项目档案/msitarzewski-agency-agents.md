@@ -1,13 +1,13 @@
 ---
 first_seen: 2026-07-13
-last_seen: 2026-09-07
+last_seen: 2026-09-21
 language: Shell
 tags: [github, trending]
 ---
 
 # msitarzewski/agency-agents
 
-> A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.
+> 提供覆盖前端、社区运营、创意与现实校验等角色的 AI 代理集合，适合希望快速组建多角色虚拟团队、探索代理协作模式的使用者参考。
 
 ## 基本信息
 
@@ -24,3 +24,4 @@ tags: [github, trending]
 | 2026-08-27 | #23 | 148,347 | +10,642⭐ | 爆火 |
 | 2026-09-06 | #25 | 150,270 | +1,923⭐ | 爆火 |
 | 2026-09-07 | #22 | 150,522 | +252⭐ | 跃升 |
+| 2026-09-21 | #24 | 153,787 | +3,265⭐ | 爆火 |

