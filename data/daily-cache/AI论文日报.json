@@ -1,108 +1,153 @@
 {
-  "cached_at": "2026-09-22T11:01:14.262006+08:00",
+  "cached_at": "2026-09-22T13:13:37.851143+08:00",
   "articles": [
     {
-      "id": "2609.24556",
-      "title": "Identifying Representational Biases in Datasets Using PCA: A Max-Disparity Partition Framework",
-      "url": "https://arxiv.org/abs/2609.24556v1",
+      "id": "2609.25001",
+      "title": "GameHorizon Suite: Multi-Horizon Data and Evaluation in Gameplay",
+      "url": "https://arxiv.org/abs/2609.25001v1",
       "source": "arXiv",
-      "published_at": "2026-09-21T13:19:41+00:00",
-      "summary": "Principal Component Analysis (PCA) minimises aggregate reconstruction error, which can inadvertently represent majority subgroups with substantially higher fidelity than minority subgroups. Fairness-aware extensions of PCA correct this disparity but require group labels as input. We address the logically prior question: given only a data matrix, which binary partition of the data suffers the greatest representational disparity under a shared PCA projection? We formalise this as the max-disparity partition problem and propose a greedy local-search algorithm, grounded in the Fiduccia-Mattheyses bipartitioning framework, that discovers the disparity-maximising partition without any predefined group labels. Two benchmark algorithms, a fixed-projection sorting baseline and a simulated-annealing variant, confirm that the greedy solution is empirically near-optimal. Having identified the partition, we attribute the disparity to specific features via PCA loading scores and association rule mining, enabling a practitioner to assess whether the disadvantaged group corresponds to a human-meaningful minority. On the Predict Students' Dropout and Academic Success dataset, representational disparity is driven predominantly by institutional and programmatic proxies for socioeconomic disadvantage, with gender emerging as a secondary but consistent contributor within the disadvantaged group. The discovered partition is then passed directly to Fair PCA, completing a detect-explain-mitigate pipeline.",
+      "published_at": "2026-09-21T17:59:33+00:00",
+      "summary": "Modern video games provide a measurable testbed for AI models, combining abilities of visual understanding, instruction decomposition, goal planning, and precise action control over multiple temporal horizons. Existing datasets and benchmarks, however, either cover a narrow range of games, lack language instructions, or rely on high-variance online rollouts. To address these challenges, we introduce GameHorizon, a unified data and evaluation suite that measures gameplay capabilities at different horizons for diverse model families. GameHorizon Suite consists of three components. First, GameHorizon-Annotator is a scalable and automated annotation pipeline for multi-horizon instructions. Second, utilizing the pipeline, we construct GameHorizon-Data, the first large-scale AAA gameplay dataset with temporally aligned videos, player actions, and multi-horizon instructions. It comprises 5,000 hours of recordings from 21 games, collected by 100 human expert players. Third, we build GameHorizon-Bench with reproducible offline and stepwise online testing. The offline track enables reproducible evaluation using thousands of standardized questions organized into three primary tasks and a series of diagnostic variants, while the online track tests whether offline scores reflect actual gameplay capabilities and localizes failures to specific steps within long-horizon gameplay. Based on our GameHorizon Suite, we evaluate 47 models through more than one million model invocations, revealing a meaningful hierarchy of task difficulty and pronounced differences in model capabilities. Our work can provide a standardized yardstick for evaluating gameplay capabilities across horizons and model families. We will release our dataset, annotator, and benchmark to facilitate future research.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Arjun KM",
-          "Shashi Jain"
+          "Yiran Wang",
+          "Xingyilang Yin",
+          "Junfu Pu",
+          "Guangzhi Wang",
+          "Kaifeng Li",
+          "Mingyu Ouyang",
+          "Huiqiang Sun",
+          "Lingen Li",
+          "Cheng Cheng",
+          "Wangbo Yu",
+          "Honghao Chen",
+          "Xiaodong Cun",
+          "Chi-Man Pun",
+          "Zhiguo Cao",
+          "Ying Shan"
         ],
         "categories": [
-          "stat.ML",
-          "cs.LG"
+          "cs.CV",
+          "cs.AI"
         ]
       }
     },
     {
-      "id": "2609.24555",
-      "title": "The Endless Exam: Mathematical Constructions from Today's Models toward Superintelligence",
-      "url": "https://arxiv.org/abs/2609.24555v1",
+      "id": "2609.24985",
+      "title": "Critical-State RL: Diagnosing Trainable States for Multi-Turn Tool Use",
+      "url": "https://arxiv.org/abs/2609.24985v1",
       "source": "arXiv",
-      "published_at": "2026-09-21T13:19:36+00:00",
-      "summary": "We introduce the Endless Exam, a benchmark for measuring mathematical progress from today's models toward artificial superintelligence through fourteen parameterised construction families. Each submitted object is checked automatically for validity and assigned a relative quality score against a published frontier or construction baseline, without capping improvements at $1$. The families draw on open mathematical problems for long-term targets and generate new instances at larger parameters, where compact certificates keep large constructions verifiable. Across eight models evaluated on 69 distinct instances, continuous quality scores distinguish performance even though no evaluated system surpasses a published frontier. Size-quality curves show how construction quality changes as problem size increases. We release the generators, verifiers, references, model responses and analysis to support continued measurement before and beyond human frontiers.",
+      "published_at": "2026-09-21T17:57:20+00:00",
+      "summary": "Multi-turn tool-use failures can hinge on a single model call, yet reward variation alone does not reveal which call would benefit from training. When rewards depend on later interactions, their variation can reflect downstream randomness rather than differences between the current actions. We introduce Critical-State RL to identify trainable states in multi-turn interactions. Given task-defined candidate calls and local rewards, the method assesses whether each reward captures the action's effect on task success and whether improvement over a reference policy is possible. It then uses nested sampling to separate action-dependent reward variation from continuation noise and optimizes the policy at the selected states using contextual-bandit training. Experiments on the Berkeley Function Calling Leaderboard (BFCL) v4 compare training at diagnostic-selected states with training at alternative states. For missing-function tasks, the diagnostic selects the response after the tool becomes available; for missing-argument tasks, it selects the response before the missing argument is supplied. Training the selected responses improves performance, including about 14 percentage points on the missing-function task, while training the alternatives leaves performance flat or worse. We further apply the recipe across models and tasks, including logged repeat-call avoidance and memory management.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Muhan Zhang"
+          "Zixiang Chen",
+          "Wenting Zhao",
+          "Zhepeng Cen",
+          "Akshara Prabhakar",
+          "Jielin Qiu",
+          "Jianguo Zhang",
+          "Zhiwei Liu",
+          "Tulika Manoj Awalgaonkar",
+          "Liangwei Yang",
+          "Shelby Heinecke",
+          "Silvio Savarese",
+          "Huan Wang"
         ],
         "categories": [
-          "cs.AI",
-          "math.HO"
-        ]
-      }
-    },
-    {
-      "id": "2609.24554",
-      "title": "Toward a Unified Mathematics of Concepts",
-      "url": "https://arxiv.org/abs/2609.24554v1",
-      "source": "arXiv",
-      "published_at": "2026-09-21T13:19:13+00:00",
-      "summary": "Concepts are commonly defined as abstract, compact representations of knowledge and treated as basic units of intelligent behavior. Yet, cognition, psychology, and AI lack a shared mathematical language for them. Modern systems represent concepts as vectors, distributions, symbols, graphs, and other structures, but these formalisms are typically treated as competing rather than as solutions to a common problem. We propose an operation-based view that evaluates mathematical frameworks by the conceptual operations they support, identifying thirteen operations (including similarity, composition, generalization, and grounding) that recur across cognition, psychology, and AI. We show that ten frameworks embody distinct commitments to concepts as self-contained content, relational structure, or evolving process, and that these commitments determine which operations each supports naturally. For example, vector-based models facilitate graded similarity and generalization but struggle with explicit composition, whereas symbolic models support composition but offer but generalize poorly. No single framework we examined naturally supports all operations without extension. We test this account empirically using categorization as a case study, operationalizing nine theories on the same items against human judgments. Despite addressing the same conceptual question, the theories produce different procedures and results, demonstrating that mathematical commitment shapes what a theory can explain. We call for hybrid formalisms that treat content, relation, and process as jointly primary.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Chen Shani"
-        ],
-        "categories": [
+          "cs.LG",
           "cs.CL"
         ]
       }
     },
     {
-      "id": "2609.24538",
-      "title": "QLoRA Fine-Tuning of Ministral LLM for Sequence-to-Function Protein Annotation",
-      "url": "https://arxiv.org/abs/2609.24538v1",
+      "id": "2609.24984",
+      "title": "WorldCrafter: Consistent Video World Model with Implicit 3D-aware Memory",
+      "url": "https://arxiv.org/abs/2609.24984v1",
       "source": "arXiv",
-      "published_at": "2026-09-21T13:09:59+00:00",
-      "summary": "Functional annotation of newly sequenced proteins remains a bottleneck in molecular biology: the number of sequences in public repositories grows far faster than the capacity for manual curation. Most computational approaches consider annotation as multi-label classification over a fixed ontology, which constrains predictions to a predefined label set. In this work we study the the protein annotation as a sequence-to-text generation problem. We fine-tune the 3B-parameter Ministral 3 base model with QLoRA (4-bit NF4 quantization with low-rank adapters) on sequence annotation pairs. We assess predictions with an LLM-as-expert protocol: a GPT model prompted as a senior molecular-biology curator scores organism identification as binary and function annotation quality. We conclude that QLoRA-fine-tuned compact LLMs can generate curator-style annotations with genuine biological value for a substantial subset of proteins. We also discuss future directions in data quality, model scaling, and evidence grounding that are needed to make the approach sufficiently reliable for practical use.",
+      "published_at": "2026-09-21T17:57:06+00:00",
+      "summary": "Video world models enable interactive exploration of dynamic environments, yet struggle to respect prior observations over long horizons and across viewpoints. We present WorldCrafter, a video world model that learns a camera-queryable implicit 3D-aware memory for this purpose. The key insight is to let the requested viewpoint shape how multi-view evidence is compressed into the video generator's limited token budget. Trained jointly with the video generator, a memory encoder and pose-conditioned readout module integrate historical observations into a fixed set of target view-specific tokens before denoising, without explicit depth-based correspondences. By combining this memory with recent temporal context and few-step distillation, WorldCrafter enables streaming scene exploration from a single input image or text prompt. Experiments across static and dynamic scenes show substantial gains in long-horizon consistency and camera-control accuracy while preserving visual quality during minute-scale exploration.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Demian Pavlyshenko",
-          "Bohdan Pavlyshenko"
+          "Wangbo Yu",
+          "Kunhao Liu",
+          "Wenbo Hu",
+          "Shenghai Yuan",
+          "Chaoran Feng",
+          "Haiyang Zhou",
+          "Yukun Huang",
+          "Yiran Wang",
+          "Wang Zhao",
+          "Yingmin Luo",
+          "Ying Shan"
         ],
         "categories": [
-          "cs.CL",
+          "cs.CV",
           "cs.AI",
-          "cs.NE",
-          "q-bio.QM"
+          "cs.GR"
         ]
       }
     },
     {
-      "id": "2609.24528",
-      "title": "Beyond Point Prediction: Artificial Representative Trees with Uncertainty",
-      "url": "https://arxiv.org/abs/2609.24528v1",
+      "id": "2609.24983",
+      "title": "onPanda: Efficient Annotation of On-Policy Alignment Data for LLMs and Agents via Token-Level Correction",
+      "url": "https://arxiv.org/abs/2609.24983v1",
       "source": "arXiv",
-      "published_at": "2026-09-21T13:01:36+00:00",
-      "summary": "Random forests (RFs) predict well but are opaque, whereas single decision trees are interpretable but unstable. Artificial representative trees (ARTs) were developed as interpretable surrogate models for RFs, but their use as standalone prediction models with uncertainty quantification has not been systematically investigated. We combine ARTs with leaf-wise Mondrian conformal predictive systems (CPS), enabling a single tree to provide continuous predictions, prediction intervals, and probabilities of exceeding arbitrary thresholds. We compared ARTs with CPS against decision trees with CPS and separate regression and probability trees across five simulation scenarios, 21 benchmark datasets, and a cross-sectional NHANES example data set. Repeated cross-validation assessed predictive performance, interpretability, and stability. ARTs with CPS yield compact, structurally stable trees with substantially more reproducible split-variable selection than decision trees across benchmark datasets and NHANES. Decision trees showed slightly better predictive performance and narrower prediction intervals, while coverage was broadly comparable. CPS-based trees generally achieved lower and less variable Brier scores than multi-model approaches. Combining ARTs with CPS therefore provides a single, interpretable, and stable model for continuous predictions and calibrated probabilities, balancing predictive performance with reproducibility and transparency in settings where stability and interpretability are essential.",
+      "published_at": "2026-09-21T17:56:53+00:00",
+      "summary": "We present onPanda, an interactive tool for efficiently annotating LLM alignment data and agent trajectories. onPanda adopts token-level correction as its core interaction: while reading a model response, the annotator locates the first inappropriate token and either picks a substitute from the model's candidate tokens or types the correct text via free-form editing. The system then truncates everything after that position and continues generation from the corrected prefix, repeating this locate-correct-continue loop until a satisfactory response is obtained. This mechanism lets annotators precisely steer model outputs at low cost: a small controlled study suggests that onPanda reduces median annotation time by 52% over manual post-editing. Since the vast majority of tokens in the final response are generated by the model itself, the resulting data largely preserves the model's sampling distribution and is well suited for constructing on-policy SFT and preference data. Furthermore, the token-level corrections recorded during annotation provide fine-grained supervision with precise positions and naturally paired positive--negative samples. onPanda also connects to external tools and harnesses, enabling interactive trajectory annotation in realistic environments. In addition, we release Panda-CVL, a dataset annotated with onPanda, together with a benchmark for token-level correction.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Lea L. Mairhöfer",
-          "Silke Szymczak",
-          "Björn-Hergen Laabs",
-          "Tuwe Löfström-Cavallin"
+          "Lei Yang",
+          "Mengyin Liu",
+          "Jia Wang",
+          "Hangyu Guo",
+          "Liang Zhao",
+          "Zheng Ge",
+          "Kang An",
+          "Binxing Jiao",
+          "Qi Han",
+          "Daxin Jiang",
+          "Siqi Shen",
+          "Xiangyu Zhang"
         ],
         "categories": [
-          "stat.ML",
+          "cs.CL",
+          "cs.HC",
+          "cs.LG"
+        ]
+      }
+    },
+    {
+      "id": "2609.24979",
+      "title": "LoRA-generating hypernetworks for efficient on-device LLM generative personalization",
+      "url": "https://arxiv.org/abs/2609.24979v1",
+      "source": "arXiv",
+      "published_at": "2026-09-21T17:55:48+00:00",
+      "summary": "On-device large language models (`LLMs'), e.g. running on mobile phones, are ripe for improvement via personalization. The limited compute resources of mobile devices impose limits on model scale and thus model quality, making any realizable quality gains highly impactful. At the same time, their personal nature (i.e., the close coupling to a particular user) means that a given on-device LLM tends to be used in similar, predictable patterns over the course of time. This paper presents a novel method for personalizing on-device LLMs. It trains a hypernetwork to map a user's context tokens to a low-rank adaptation (`LoRA') well-suited to that user. Once the trained common artifacts are deployed to users' devices, each user uses the hypernetwork to synthesize (entirely on device) a personalized LoRA. This approach blends the benefits while avoiding the drawbacks of two existing approaches to LLM customization: in-context learning (`ICL') and parameter-efficient fine-tuning (`PEFT'). Like ICL (and unlike PEFT), the on-device phase of our approach is computationally feasible, requiring only forward passes through neural networks. Like PEFT (and unlike ICL), our approach modifies the `target' base LLM via weights (the LoRA), avoiding negative consequences (e.g. increased latency) associated with extending the input sequence. Our approach is particularly well-suited to the mobile device regime. Apart from the on-device compute and latency benefits mentioned, it also requires minimal additional storage, as internally its architecture partly leverages the same LLM weights as belong to the target LLM to be personalized. We demonstrate the benefits of LoRA-generating hypernetworks on several representative personalization datasets, comparing against baselines like ICL and PEFT. Of note, our personalization experiments focus on more challenging and less studied long-form text generation tasks.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Sean Augenstein",
+          "Li Ding",
+          "Jihwan Lee",
+          "Keith Rush",
+          "Andrey Zhmoginov"
+        ],
+        "categories": [
           "cs.LG"
         ]
       }
