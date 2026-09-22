@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-09-21T13:13:55.503476+08:00",
+  "cached_at": "2026-09-22T11:01:14.262006+08:00",
   "articles": [
     {
-      "id": "49776699",
-      "title": "Pirate Face Rescues LLM Models from Deletion",
-      "url": "https://pirateface.co/",
+      "id": "49792730",
+      "title": "Xiaomi MiMo v2.6",
+      "url": "https://mimo.xiaomi.com/mimo-v2-6",
       "source": "Hacker News",
-      "published_at": "2026-09-20T15:16:07+00:00",
-      "summary": "Pirate Face Rescues LLM Models from Deletion",
-      "score": 495,
-      "comments": 143,
-      "discussion_url": "https://news.ycombinator.com/item?id=49776699",
+      "published_at": "2026-09-21T20:12:12+00:00",
+      "summary": "Xiaomi MiMo v2.6",
+      "score": 596,
+      "comments": 302,
+      "discussion_url": "https://news.ycombinator.com/item?id=49792730",
       "extra": {
         "top_comments": [
-          "Speaking to the \"uncensored model\" angle: there's little reason to distribute abliterated weights anyway. Instead of orthogonalising the weights that write back to the residual stream, you can just orthogonalise the activations themselves. It's equivalent.Orthogonalising activations at runtime is computationally cheap. Just distribute the refusal vectors (few thousand floats per layer), then run against the stock weights. Antirez's DS4 already supports this: https://github.com/antirez/ds4/blob/8db1d1d155cb0400a86a86b9...Abliterated weights are just a bad habit we've gotten into. It's also deeply suboptimal from a precision point of view to take a model that's already been QATed and distributed in pre-quantised form (DeepSeek V4, Kimi K2.5 or K3...), modify its weights, and re-quantise it. Similarly, abliterated models regain some of their refusal behaviour when they're re-quantised after abliteration -- avoidable by keeping the two separate.",
-          "Torrents should really be the preferred method for distributing AI model weights. Why rely on a single point of failure like Hugging Face? BitTorrent was made for exactly this.",
-          "Steam & Blizzard (probably others) used to delivery games through torrent protocol in the past, before CDNs became cheaper.When StarCraft 2 was lauched, the installer (before Battle.net installer crapware) had a complete graphical visualization of seeders & leechers.Reference: https://warcraft.wiki.gg/wiki/Blizzard_Downloader"
+          "I know we have strong views on what a truly open model is (open weights, open training data, open training code etc.) but I really like how transparent they’ve been about the training of this model.The realtime dashboard they shared during training (https://mimo.xiaomi.com/rl/) was an incredible learning and teaching tool for me, and they’ve been unusually comprehensive in sharing details about their methodology (check out that tech report - it's got lots of clever behind the scene tricks like Google or Deepseek writeups) and benchmark scores (even the stuff they didn’t do well on).If you’re releasing an open model going forward, please consider offering the community more of this transparency!",
+          "Anyone else more excited about Chinese models than American models these days? Big thing for me is affordability.",
+          "Flash[1]: 309B total / 15B activated parametersPro [2]:, 1.02T total / 42B activated parameters[1]: https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL[2]: https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL"
         ]
       }
     },
     {
-      "id": "49778029",
-      "title": "Samsung is expected to more than double output of its HBM4 and HBM4E DRAM",
-      "url": "https://en.sedaily.com/finance/2026/09/20/samsung-to-double-hbm4-output-next-year-sources-say",
+      "id": "49788838",
+      "title": "Grok 4.7",
+      "url": "https://x.ai/news/grok-4-7",
       "source": "Hacker News",
-      "published_at": "2026-09-20T17:38:50+00:00",
-      "summary": "Samsung is expected to more than double output of its HBM4 and HBM4E DRAM",
-      "score": 402,
-      "comments": 261,
-      "discussion_url": "https://news.ycombinator.com/item?id=49778029",
+      "published_at": "2026-09-21T15:50:15+00:00",
+      "summary": "Grok 4.7",
+      "score": 513,
+      "comments": 429,
+      "discussion_url": "https://news.ycombinator.com/item?id=49788838",
       "extra": {
         "top_comments": [
-          "On a related note, I was reading yesterday that apparently the real bottleneck for Chinese production of AI accelerators is HBM production, not processors or ASML equipment.The lack of ASML EUV machines certainly hurts, and pushing DUV so hard results in abysmal yields of good chips, but you can compensate by running more wafers or making smaller chips, and the net result is that Huawei's Ascend production volume is limited by CXMT's HBM capacity not processor dies.The problem is that HBM manufacture requires many steps (die thinning, via drilling, plating, alignment) where the equipment used by everyone else (Samsung, SK Hynix, Micron) is also blocked by sanctions, so the Chinese are having to develop all of this themselves too, which they have, but yields are currently low, even when using shorter HBM stacks.",
-          "I’ve often wondered about die thinning. I mean just looking at sd cards and micro sd etc, it was clear that there had to be a thinning step (or many steps) and it seemed amazing to me that such a complex step could be economically viable. And yet it clearly is. All a matter of being able to operate at scale I guess.It’s not a step I’ve seen discussed very much, so it was kind of neat to see it discussed front and center in a lay article like this.",
-          "What's the main blocker (other than the current inflated cost) for using HBM instead of DRAM as the primary memory for consumer electronics?"
+          "Apparently Grok 4.7 has 40% more weights than Grok 4.6, but the price ($6 output token, $2 input) is the same.Given that the decrease in their margin and the fact they delayed the release of Grok 4.7 almost two weeks past the original date, XAI must not have been happy with the results for 4.7. And XAI also waited the day before Opus 5.5 is rumored to launch. I imagine Opus 5.5 will blow Grok 4.7 out of the water benchmark wise.However, I have become skeptical of benchmarks. Grok 4.5 solved some issues setting up a buildroot system that Fable 5 couldn't do. I find the post cursor groks are phenomenal at frontend web development, though Claude is much better at backend ruby.My favorite part of the new Groks has been how they speak in plain english. I simply cannot stand Claudish. Or even GPT, which doesn't have Claude's ticks but definitely likes to handwave explaining technical concepts. Still, nothing beats Claude 3.5 and 4 with explaining since it seems all models have regressed. I wonder if Grok 4.7 will also regress with English because of all the RL.",
+          "It's a real dud IMO, worse than 4.6. I told it to fix a depth-testing issue with a WebGL scene and provided it a screenshot: told me it was fixed but it wasn't. I tell it to try again and it says it's \"FOUND THE ROOT CAUSE!\" then hasn't fixed it.I told it to compose an image (putting headgear on top of a head) - kept getting it completely wrong, generating new headgear, getting that wrong and screwing up the scaling.I told it to diagnose a webhook issue that was happening in production from a local environment and it kept giving me moronic answers like that environment variables weren't set (despite me telling it that the values WERE set in production).",
+          "Initial impressions, Grok 4.6 for me just didn't really hack it for any usecase I tried. I seem to have a floor for my usecaseses (coding and a bunch of agentic workflows) and Sol/Opus are above some kind of intelligence floor.4.7 is definitely slower & more expensive. It feels kind of like they really had it burn tokens to claw up the benchmarks. But it's not super clear to me whether it's above the line or not. A part of that is that it is so slow that i haven't been making fast progress today with benchmarking it.Overall, it it gets above my intelligence line its a good release...but you can read the tea leaves and tell the Grok team thinks this was a miss."
         ]
       }
     },
     {
-      "id": "49780797",
-      "title": "AX – Google’s Open Agentic Orchestrator",
-      "url": "https://agentexecutor.io",
+      "id": "49794330",
+      "title": "I don't want to read what you didn't write",
+      "url": "https://blog.colinbreck.com/i-dont-want-to-read-what-you-didnt-write/",
       "source": "Hacker News",
-      "published_at": "2026-09-20T22:32:43+00:00",
-      "summary": "AX – Google’s Open Agentic Orchestrator",
-      "score": 342,
-      "comments": 132,
-      "discussion_url": "https://news.ycombinator.com/item?id=49780797",
+      "published_at": "2026-09-21T22:30:41+00:00",
+      "summary": "I don't want to read what you didn't write",
+      "score": 340,
+      "comments": 119,
+      "discussion_url": "https://news.ycombinator.com/item?id=49794330",
       "extra": {
         "top_comments": [
-          "Could someone explain to me what the general workflow is now that people are converging to? I haven't really been catching up with the AI ecosystem but I was looking into agent sandboxes and VM's recently and there's a ton of these startups and tools now. Is giving the agent a temporary scratchbox really that valuable?I've been still just like, making VM's with proxmox, then putting my agent in the machine and letting it run free (with my dotfiles setup script making dev env pretty much free, though I could also just make a VM snapshot). What's wrong with that? Is that not the scalable solution for enterprise rn?",
-          "I have been happy with Google's Antigravity harness and Jules so looking forward to playing with this. Thanks for sharing. Simultaneously I am looking to also revisit local offline models.While I feel like I have a decent understanding of the model landscape I'm feeling a bit lost at which agentic harness to leverage for local models. Hermes, Cline, Aider, Qwen Code, Goose, Pi, OpenCode, something else? I live in the terminal so Desktop UX is a bonus but not a must have.Can I modify the antigravity settings/program to point to a local model? Where should I spend my energy?",
-          "Nobody has a use for this, and anybody who can look at this website and work out what it's for is kidding themselves. Even the demo gif playing just has them pausing a task and resuming the task."
+          "As I have been saying for years:Writing is fundamentally the transfer of information from your brain to my brain. If you have 1000 bits of semantic information you want to transfer, you can't give 300 bits of semantic information to an LLM and have it fill in the remaining 700, because it doesn't know what those 700 bits are. If it's able to guess those 700 bits correctly, then they aren't true semantic information, and you really only have 300 bits you want to transfer. You might as well transfer those bits to me directly, rather than having the LLM add on an extra superfluous 700 bits that I then have to filter out.",
+          "It's funny, i push back on pull requests because there is too much description now - a 20 line change has pages and pages of generated description, rationalisation for why it is safe, defense of each design decision, analysis of risks and side effects. People are indignant, you're rejecting my change because there is too much documentation? And my response is, I don't have time to read it and you put me in the position where I can't afford not to - because approving the PR implies I did and accepted it. The investment to read all that for the value of a code change that I'm one prompt away from doing myself if I cared is just not high enough. So it's rejected.",
+          "I wonder where this discourse is headed, we[0] keep making the same observations over and over again.[0] myself included https://www.google.com/goto?url=CAESbQHrOzAViiJizn8otPF3AAeE..."
         ]
       }
     },
     {
-      "id": "49780820",
-      "title": "What happened to the Snowden archive",
-      "url": "https://libroot.org/posts/what-happened-to-the-snowden-archive",
+      "id": "49791939",
+      "title": "NASA’s Mars Sample Return mission is dead",
+      "url": "https://www.science.org/content/article/nasa-s-mars-sample-return-mission-dead",
       "source": "Hacker News",
-      "published_at": "2026-09-20T22:35:49+00:00",
-      "summary": "What happened to the Snowden archive",
-      "score": 273,
-      "comments": 178,
-      "discussion_url": "https://news.ycombinator.com/item?id=49780820",
+      "published_at": "2026-09-21T19:14:12+00:00",
+      "summary": "NASA’s Mars Sample Return mission is dead",
+      "score": 322,
+      "comments": 258,
+      "discussion_url": "https://news.ycombinator.com/item?id=49791939",
       "extra": {
         "top_comments": [
-          "This article linked back to the intercept's snowden archive articles [0], and while this article paints the Intercept in a bad light it lead me to reading a couple of these.While I heard many of the headlines the reporting is very in depth, including a bunch of smaller details worth poking into. I'd recommend people who are interested and who haven't done so yet to just read a couple of these.[0]: https://theintercept.com/series/snowden-archive/",
-          "I think the real answer is the Overton window shifted to accommodate what was previously scandalous,",
-          "People became ambivalent. Snowden fled eventually to Russia. Some people viewed him less relevant over time as the archive merely trickled out. When he fled to Russia, he looked less like a martyr and more like a national security information leaker or spy like RobertA lot of what sounded extraordinary in 2013 is now baked into everyday discussion like metadata and mass surveillance. He is also available less for interviews because he is in Russia.Basically bigger fish to fry"
+          "I worked on (a very small part of) the ExoMars rover (now called the Rosalind Franklin[0]).It was supposed to launch in 2018, then was pushed to the early 2020s on a Russian rocket. For obvious reasons, it got pushed again, now launching in 2028.The state of the world isn't great for space exploration, but I'm hopeful this mission will be revived at some point in the future.[0]https://en.wikipedia.org/wiki/Rosalind_Franklin_(rover)",
+          "This mission is representative of what JPL has become. Leadership there increased the cost of the program to $11B and would not bring the samples back until 2040, they also designed the mission around legacy rockets like Ariane 64 instead of working to lower costs and increase capacity by working with industry and designing around Starship or New Glenn. The moon missions brought back 842 pounds of rocks and MSL would bring back 1.1 pounds. It’s directionally better to wait for manned missions to Mars so we can bring back tons of rocks or even do the research on Mars itself. It seems like the JPL mission is maximized to provide jobs to researchers and maximized for mission complexity rather than just buying rocks from a contractor with quoted price and lead time.I’d be interested in working there to help accelerate the program but I’m not if I would get support internally.",
+          "\"makes sense, it's financially unfeasible\"> Engages in pointless wars"
         ]
       }
     },
     {
-      "id": "49776717",
-      "title": "Singapore’s National Library Board offers micropayments to build reading habits",
-      "url": "https://www.gadgetreview.com/singapore-is-paying-people-to-put-down-their-phones-and-read-books",
+      "id": "49790409",
+      "title": "Turn off and restrict access to Apple Intelligence features on Mac",
+      "url": "https://support.apple.com/guide/mac-help/turn-restrict-access-apple-intelligence-mchlb2e44f94/mac",
       "source": "Hacker News",
-      "published_at": "2026-09-20T15:18:05+00:00",
-      "summary": "Singapore’s National Library Board offers micropayments to build reading habits",
-      "score": 203,
-      "comments": 87,
-      "discussion_url": "https://news.ycombinator.com/item?id=49776717",
+      "published_at": "2026-09-21T17:30:21+00:00",
+      "summary": "Turn off and restrict access to Apple Intelligence features on Mac",
+      "score": 251,
+      "comments": 169,
+      "discussion_url": "https://news.ycombinator.com/item?id=49790409",
       "extra": {
         "top_comments": [
-          "I read a lot, and I own a lot of physical books, but I almost never actually read physical books anymore. I'm one of the happy few that used my Kindle for more than a week after getting it as a gift.I find that reading on an ereader is many times easier for me, primarily because I can make the text gigantic and I don't lose track of my place on the page nearly as often. I'm not dyslexic (I've been tested), but I do think that there's some issue with my brain where if the text is small I really can't follow it. On all my computers the text is gigantic and even then I will click and highlight text as I'm reading so don't lose place. I would love to be paid to read but I don't think I'd love to be paid to read physical books.I remember my grandmother was wholly unconvinced that my Kindle was a different thing than an iPad or a Game Boy, and that it was not \"real\" reading, for whatever reason.",
-          "The headline makes it seem more monetary than it actually is.https://www.read.gov.sg/join-the-readsg-challengeIt seems like turning points into money is just a happens to exist sort of mechanic. Enough to write a headline that they are technically \"paying you\". The real mechanics are much more typical gamification. Like earning xp, streaks, leaderboards, limited edition goodies at events, prize draws, collective goals.The strict money payout is S$0.02 per 15 minutes at most once a day. Obviously if you were doing this it would be more for the rest of the dopamine then hoping to buy a candy bar after like 50 days.",
-          "> to build daily reading habits among a phone-first populationReading is fundamental.EDIT: Other skills and habits that you can then build on reading: critical thinking, reasoning, detection and handling own biases, numeracy, financial literacy, and more. All these dimensions are manipulated via phones and the apps on them, so you need a firewall.Also: writing. Cursive writing."
+          "I want the disk space taken from the models back.I will never touch this garbage and would rather use the disk space I purchased to be used for my purposes, not the industry's pointless fad bubble endeavors.",
+          "I would never have figured out the toggle for writing tools is in `Settings -> Screen Time -> Content & Privacy Restrictions -> Siri -> Writing Assistance`",
+          "Clearly, nobody at Apple is thinking globally about this stuff.If you have kids, \"Screen Time\" is a reasonable enough name for the place where parental controls live.If you work under the assumption that AI features are OK in general, but potentially problematic around kids in particular, parental controls are a reasonable enough place to put these AI controls.If you're not a parent, and have broader concerns about AI, you'd never even think of looking for these options where they are."
         ]
       }
     },
     {
-      "id": "49776627",
-      "title": "Sherline Tools Is Going Out of Business",
-      "url": "https://toolguyd.com/sherline-tools-shutting-down-usa-production/",
+      "id": "49792342",
+      "title": "Transformers Explained Visually",
+      "url": "https://poloclub.github.io/transformer-explainer/",
       "source": "Hacker News",
-      "published_at": "2026-09-20T15:09:41+00:00",
-      "summary": "Sherline Tools Is Going Out of Business",
-      "score": 201,
-      "comments": 133,
-      "discussion_url": "https://news.ycombinator.com/item?id=49776627",
+      "published_at": "2026-09-21T19:43:49+00:00",
+      "summary": "Transformers Explained Visually",
+      "score": 226,
+      "comments": 38,
+      "discussion_url": "https://news.ycombinator.com/item?id=49792342",
       "extra": {
         "top_comments": [
-          "Sad news. First, Openbuilds now this.Not a surprise to me though since I am operating in the CNC industry I have seen the same struggles and changes, albeit, from a slightly different perspective.I work with the Smoothieware/Smoothieboard project. It seems, from my observation, that most people are not working with hardware like they were a few years ago. The \"homebrew\" machines and shadetree makers are becoming few and far between.The lie has been heavily sold to the maker community that you are \"wasting your time if you make something yourself\" since it is cheaper to offshore even small 3d prints and machining projects. Not only that but people have been convinced that they don't have the ability to make a machine.Instead of spending time learning something new/valuable (i.e. Reprap) it is now popular to just have someone else do it...be it AI or a factory in another country with subsidies that create massive differences in bottom line.The ability to make things at home is disappearing. People cannot/will not learn to make their own machines. Companies that make machines that care about their community and customers are disappearing.Maybe it's by design? I don't know.",
-          "There’s some other threads in this discussion bemoaning the lack of diy machine builders…and, I am really unclear how this Sherline issue is related? To me, this is a question of value for money. Sherline products were always interesting, but also nowhere near competitive as machines. With controllers like masso and acorn available, converting a mill like a grizzly, precision Mathews or even a Bridgeport are just way more value for money.The other end of the spectrum is tools like the Langmuir bed mill/router or the avid benchtop routers with available 4 pole spindles.There’s a lot of options, closed loop steppers are sub $100, servos from DMM or teknic are readily available and awesome.Sherline has a product set that just felt like a compromise on everything.In the last decade, I’ve built 3 routers, rebuilt a bed mill, converted a Bridgeport, and am currently building an automated beam saw. All the options in the market are drastically better than they were 15 years ago.It’s sad to see a fixture of the community going out of business, but it also a reflection that the business is different now. Given the many different kits and options available, it just doesn’t make sense to buy small work envelope machines for most people.",
-          "I own a lathe and mill from them, both converted to CNC. Sadly their products have changed little in 30+ years. Their precision parts have a use in some applications but it's vastly overshadowed by the cheap parts available from Asia (including India now).3D printers, laser cutters and benchtop CNC routers have the taken over the lion share of what hobbyists (and some professionals) used to do with these machines. Mine are just collecting dust while my 3D printers crank out parts every day."
+          "For the uninitiated, I can't recommend enough, The Illustrated Transformer:https://jalammar.github.io/illustrated-transformer/",
+          "Nicely done. For me the most fascinating thing about attention heads is the place where Attention matrix is already computed and is getting multiplied by Value vector. It behaves exactly like pushing Value vector through Dense layer of ordinary network where Attention matrix forms weights of that layer. So attention head is trained to construct this small single layer network dynamically during inference from Key and Query. And that's the point. That's rarely underlined in explanations of LLMs architecture and for me it's quite amazing that it works so well. This mechanism easy to observe in this particular visualization if you click through it.",
+          "As someone with an EE degree (though a sysadmin), this use of the term \"transformer\" is constantly confusing. :)(Also \"cryto\" for cryptocurrency rather than cryptography.)"
         ]
       }
     },
     {
-      "id": "49777467",
-      "title": "I am often wrong",
-      "url": "https://borischerny.com/management,/product/2026/09/19/I-am-often-wrong.html",
+      "id": "49794615",
+      "title": "Spymarks, Not Watermarks",
+      "url": "https://brand.io/article/spymarks/",
       "source": "Hacker News",
-      "published_at": "2026-09-20T16:41:46+00:00",
-      "summary": "I am often wrong",
-      "score": 153,
-      "comments": 124,
-      "discussion_url": "https://news.ycombinator.com/item?id=49777467",
+      "published_at": "2026-09-21T23:03:49+00:00",
+      "summary": "Spymarks, Not Watermarks",
+      "score": 167,
+      "comments": 37,
+      "discussion_url": "https://news.ycombinator.com/item?id=49794615",
       "extra": {
         "top_comments": [
-          "Haven't seen any Claude Code specific examples of Boris admitting he's wrong and then actually fixing things in the way the community wants.There are mind blowing bugs in CC that go unaddressed for months.Something like 15-20% of all Fable messages in CC are invisible to users. You've most likely noticed this when Claude references something it said but it never said it?It happens frequently when Fable outputs a message above a certain number of tokens just before doing a tool call.This has been going on for months. If \"users can't see messages the agent sends\" isn't a critical issue that gets addressed within 24 hours, I don't really care if you admit you're often wrong, we know.",
-          "Having listened to him give a couple of talks I am always struck by how much he talks and writes like Claude code.I don’t think he farms out all of his writing and talking to LLMs. I don’t think Claude code was trained to emulate him or anything.I think his “voice” has been filed LLM smooth by years of agent based interactions. He claims Anthropic engineers use an average of 500+ agents a day. They are human interfaces to token generators more than human to human communication. They are picking up the tendencies of their most frequent communication partner.Unfortunately, I see Claude being wrong often enough that I view it as a faulty narrator. Often helpful, sometimes totally full of it.And now I subconsciously apply this filter to anything that sounds like Claude.Makes me nervous that my voice may be becoming that of a faulty narrators.",
-          "> Something that people learn quickly when they work with me is that my approach to pretty much every problem is: > ... > 6. Act with urgency to achieve the goalIf everything is urgent, then nothing is. This guy sounds miserable to work for and with. Assuming this is accurate and not just hyperbole, he is essentially saying he has no prioritization skills because everything is urgent. I think most people who have been around the block have worked with people like this, and unbeknownst to them, their coworkers develop a default snooze button associated with most of their requests and projects."
+          "Spymarks just seem like another word for https://en.wikipedia.org/wiki/Steganography. On that note, one way we can prevent it is to assert that all our content is byte-for-byte identical with the last known trusted stage of what we have produced (for example: a camera we are certain does not watermark, an image editor we are certain doesn't watermark, an image compressor we are certain can't watermark, etc). One vector that I am particularly concerned about is social media. Most images and videos uploaded to most social media is re-compressed by the target platform. This is a door to tracking that is far too easy for social media platforms to open. They might rationalize it (if discovered/announced) by saying that our memes won't be reposted, images or work stolen, etc... but honestly I'd rather my work be stolen than tracking information inserted in there. Oh, we also have stuff which is way more secure, like time-stamped cryptographic signatures.",
+          "These are going to be very popular for intercepting images on their way to a display. Think of the advertising possibilities. Ad attribution can be 'vastly improved' when both the ad and every step in the funnel are all spymarked and all of them are reliably reported on by virtue of their pixels hitting your screen.First the low-end laptops and phones (and probably later, most of them) will incorporate some low-level driver that is constantly scanning for these and passing them to a helper app to phone home. I assume this is something Apple will, to their credit, refuse to do[1] but I don't think other OEMs will have any qualms based on what they already do with their TVs.[1] (though they don't do this kind of thing out of altruism, but because their cash cow is app store rents and fat hardware margins, not third-party advertising.)",
+          "The word choice example is cool. I wonder if it really works dependably. I'm sure many many exerpts in posts and books have those same 8 bits - you'd need a lot more bits - but the more you add the more strange your writing style might become.Like it choose between \"winding\" and \"curving\" but there are many uses of curving that probably can't be replaced with \"winding\" like \"her gently curving thighs\" with \"her gently winding thighs\"But I'm sure there are some intricacies I don't understand. Anyway, very cool website, thanks for sharing it~!"
         ]
       }
     },
     {
-      "id": "49778195",
-      "title": "A Necessary History of the Oddest Letter: W",
-      "url": "https://lithub.com/a-necessary-history-of-the-oddest-letter-w/",
+      "id": "49792067",
+      "title": "AI coding has made CI a bottleneck, so we reworked ours to keep up",
+      "url": "https://linear.app/now/ci-bottleneck-reworked",
       "source": "Hacker News",
-      "published_at": "2026-09-20T17:55:57+00:00",
-      "summary": "A Necessary History of the Oddest Letter: W",
-      "score": 115,
-      "comments": 58,
-      "discussion_url": "https://news.ycombinator.com/item?id=49778195",
+      "published_at": "2026-09-21T19:23:33+00:00",
+      "summary": "AI coding has made CI a bottleneck, so we reworked ours to keep up",
+      "score": 155,
+      "comments": 165,
+      "discussion_url": "https://news.ycombinator.com/item?id=49792067",
       "extra": {
         "top_comments": [
-          "The history of W in Finnish is interesting (for some values of \"interesting\"). Mikael Agricola [1], a Lutheran clergyman, essentially created literary Finnish from scratch in the 1500s (before that, Finnish had existed solely as a spoken, vernacular language, with official business conducted in Swedish (or German), and until the reformation, the language of the Church had of course been Latin).Agricola had to create an alphabet for Finnish, and naturally borrowed heavily from Swedish and, to a lesser extent, German. His orthography was not particularly self-consistent, and for example the /u/ and /v/ phonemes might be written as either \"u\", \"v\", or \"w\" in Agricola's works. For example, the word uusi (/u:si/; \"new\") was written by him as \"wsi\", indeed using \"w\" as a literal \"double-u\". The /w/ sound did not exist in spoken Finnish.Over time, Finnish became the almost entirely phonetic language that it is now, with letters matching phonemes essentially one-to-one. /u/ was regularized as \"u\" and /v/ as \"v\". As /w/ still doesn't exist, the letter \"w\" is very rarely used, mainly in some surnames as an alternative spelling of \"v\"; phonebooks used to collate \"v\" and \"w\" as the same letter. In loanwords \"w\" becomes \"v\" (e.g. \"whiskey\" -> viski). Finns with a thick accent (see \"Rally English\" [2]) tend to pronounce the foreign /w/ as /v/ when speaking English, similar to Germans.Today, imitation of Agricola's orthography is the Finnish version of \"ye olde English\", used for humorous or intensifying effect. For example, the word vanha \"old\" might be spelled \"wanha\" in the name of an antiques shop. \"Wanha\" also used to be a standard \"old news\" reply on IRC, especially to links that had already been pasted by someone (and this became so annoying on some channels that it became a kick-worthy offense).[1] https://en.wikipedia.org/wiki/Mikael_Agricola[2] https://en.wikipedia.org/wiki/Rally_English",
-          "English is at best my 3rd language. I have always found the huge discrepancy between pronunciation and spelling really nonsensical (keep in mind that I even speak French). But this article really helps see all that in a new light. Nothing is a-historical, not even phonetics. Newfound respect for the English language.",
-          "Would be remiss to not mention W's biopic: https://www.youtube.com/watch?v=sg2j7mZ9-2Y"
+          "Here's my constant question:Everyone's going so fast that they keep hitting walls. Review, CI, product asking for things, whatever.Why have we not seen an improvements in products?While every post and thread feels like a 90's wall street office, the new android and iphone ship with fewer features than usual. No indie guys come up with a linux-sized alternative OS. Switch 2 remains unhacked. Windows takes 3 seconds to show the right click menu.Is everyone just running full speed in circles or something?",
+          "In my case it's not the CI that's the bottleneck. It's the human testing side. Does it work, sure. But does it actually do the thing we want (and more importantly) does it do it in a way our customers will understand and actually like?",
+          "> Moving our workloads off GitHub Actions to third-party runners with faster CPUs, higher-performance storage, and better cache infrastructure gave us faster machines to run the same pipeline onYeah, was not surprised to read this. Actions is convenient if you already use GitHub, but it can also be pretty slow. Given reliability is also a major issue with GitHub these days I expect to see more orgs moving to different pipelines"
         ]
       }
     }

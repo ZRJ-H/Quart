@@ -1,99 +1,108 @@
 {
-  "cached_at": "2026-09-21T13:13:55.503476+08:00",
+  "cached_at": "2026-09-22T11:01:14.262006+08:00",
   "articles": [
     {
-      "id": "2609.20971",
-      "title": "RBS-Attention: Radius-Bounded Sparse Prefill for Long-Context Large Language Models",
-      "url": "https://arxiv.org/abs/2609.20971",
+      "id": "2609.24556",
+      "title": "Identifying Representational Biases in Datasets Using PCA: A Max-Disparity Partition Framework",
+      "url": "https://arxiv.org/abs/2609.24556v1",
       "source": "arXiv",
-      "published_at": "2026-09-21T04:00:00+00:00",
-      "summary": "arXiv:2609.20971v1 Announce Type: new Abstract: Long-context large language model inference is increasingly limited by prefill, where dense self-attention processes the entire prompt before generation begins. Sparse block selection can reduce this cost, but a block centroid may hide a highly relevant token among many irrelevant ones. We call this failure mode mean dilution and propose RBS-Attention, a training-free sparse-prefill method with two complementary selection branches. A centroid base branch captures average relevance, while a rescue branch uses the maximum key-block radius and its prompt-, layer-, and head-dependent distribution to identify blocks at risk of underestimation. Independently thresholding the two branches and combining their masks controls the contribution of rescue blocks while preserving regular block-sparse FlashAttention execution. On H100 GPUs, RBS-Attention achieves 20.65$\\times$ standalone prefill-attention speedup, 11.92$\\times$ vLLM prefill-attention speedup, and 5.97$\\times$ end-to-end time-to-first-token speedup at 128K on Qwen3-30B-A3B-Instruct-2507-FP8. On the dense Qwen3-32B model, it obtains 88.65 overall RULER accuracy versus 89.52 for dense attention; LongBench-v2, InfiniteBench, and Video-MME provide additional quality evaluation. Supporting experiments measure actual retention, compare selectors at matched density, and characterize block-size, threshold, and memory behavior. Together, these results support radius-adaptive dual-branch selection as an effective approach to long-context prefill.",
+      "published_at": "2026-09-21T13:19:41+00:00",
+      "summary": "Principal Component Analysis (PCA) minimises aggregate reconstruction error, which can inadvertently represent majority subgroups with substantially higher fidelity than minority subgroups. Fairness-aware extensions of PCA correct this disparity but require group labels as input. We address the logically prior question: given only a data matrix, which binary partition of the data suffers the greatest representational disparity under a shared PCA projection? We formalise this as the max-disparity partition problem and propose a greedy local-search algorithm, grounded in the Fiduccia-Mattheyses bipartitioning framework, that discovers the disparity-maximising partition without any predefined group labels. Two benchmark algorithms, a fixed-projection sorting baseline and a simulated-annealing variant, confirm that the greedy solution is empirically near-optimal. Having identified the partition, we attribute the disparity to specific features via PCA loading scores and association rule mining, enabling a practitioner to assess whether the disadvantaged group corresponds to a human-meaningful minority. On the Predict Students' Dropout and Academic Success dataset, representational disparity is driven predominantly by institutional and programmatic proxies for socioeconomic disadvantage, with gender emerging as a secondary but consistent contributor within the disadvantaged group. The discovered partition is then passed directly to Fair PCA, completing a detect-explain-mitigate pipeline.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Chuxu Song, Jiuqi Wei, Zhencan Peng"
+          "Arjun KM",
+          "Shashi Jain"
         ],
         "categories": [
-          "cs.AI"
+          "stat.ML",
+          "cs.LG"
         ]
       }
     },
     {
-      "id": "2609.20974",
-      "title": "Attention-Aware Routing: Coupling Routing and Attention in MoEs",
-      "url": "https://arxiv.org/abs/2609.20974",
+      "id": "2609.24555",
+      "title": "The Endless Exam: Mathematical Constructions from Today's Models toward Superintelligence",
+      "url": "https://arxiv.org/abs/2609.24555v1",
       "source": "arXiv",
-      "published_at": "2026-09-21T04:00:00+00:00",
-      "summary": "arXiv:2609.20974v1 Announce Type: new Abstract: In Mixture-of-Experts language models, the router typically selects and weights experts based on the token's hidden state, utilizing limited contextual information. We propose Attention-Aware Routing (AAR), which augments the router with temporal and spectral features extracted from a sliding window of attention weights that represent a summary of the model's contextual state, disentangled from the hidden state. Keeping the base transformer entirely frozen, we train only the routing parameters, isolating routing as the sole variable. AAR improves GSM8K by +3.37 pp over a routing-only SFT baseline on OLMoE. Beyond performance, we show that routing and attention form a coupled circuit: routing changes at layer l propagate through the residual stream to amplify attention sinks at layer l+1, reshaping attention without any direct update to the attention mechanism itself. Further, AAR reduces long diverging generation, with incorrect answers getting shorter, while correct answers remain unchanged in length. Finally, AAR is strongly depth-sensitive: applying it indiscriminately across layers can degrade factual retrieval, whereas mathematical reasoning gains persist when it is introduced deeper in the network. This sensitivity exposes a retrieval--reasoning tension across depth and makes layer-selective AAR a controlled probe of the routing-relevant information carried by attention at different layers.",
+      "published_at": "2026-09-21T13:19:36+00:00",
+      "summary": "We introduce the Endless Exam, a benchmark for measuring mathematical progress from today's models toward artificial superintelligence through fourteen parameterised construction families. Each submitted object is checked automatically for validity and assigned a relative quality score against a published frontier or construction baseline, without capping improvements at $1$. The families draw on open mathematical problems for long-term targets and generate new instances at larger parameters, where compact certificates keep large constructions verifiable. Across eight models evaluated on 69 distinct instances, continuous quality scores distinguish performance even though no evaluated system surpasses a published frontier. Size-quality curves show how construction quality changes as problem size increases. We release the generators, verifiers, references, model responses and analysis to support continued measurement before and beyond human frontiers.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Despoina Kosmopoulou, Anastasios Tsetsilas, Efthymios Georgiou, Giannis Karamanolakis, Swastik Roy, Alexandros Potamianos"
-        ],
-        "categories": [
-          "cs.AI"
-        ]
-      }
-    },
-    {
-      "id": "2609.20981",
-      "title": "CaLR: Causal Latent Revision for Robust Diffusion Reasoning",
-      "url": "https://arxiv.org/abs/2609.20981",
-      "source": "arXiv",
-      "published_at": "2026-09-21T04:00:00+00:00",
-      "summary": "arXiv:2609.20981v1 Announce Type: new Abstract: Autoregressive (AR) models suffer from local greediness, while diffusion language models (DLMs) often lack the strict causal structure required for reasoning. To combine the advantages and overcome the drawbacks of the dual, we propose Causal Latent Revision (CaLR), a framework that reformulates reasoning as constrained latent optimization. By adopting a causal topology matrix (CTM) from an expert model and implicit differentiation, CaLR performs gradient-guided ``thought revision\" to enforce logical consistency, enabling dynamic self-correction of intermediate steps during parallel generation. Empirically, CaLR achieves SOTA DLM performance on complex benchmarks, surpassing strong AR baselines and demonstrating superior robustness in constrained tasks like Sudoku.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Wei Cai, Jian Zhao, Yuchen Yuan, Xuelong Li"
-        ],
-        "categories": [
-          "cs.AI"
-        ]
-      }
-    },
-    {
-      "id": "2609.21061",
-      "title": "LoRA Enhanced Contrastive Learning with SAS Vision Transformers",
-      "url": "https://arxiv.org/abs/2609.21061",
-      "source": "arXiv",
-      "published_at": "2026-09-21T04:00:00+00:00",
-      "summary": "arXiv:2609.21061v1 Announce Type: new Abstract: Automatic target recognition (ATR) with synthetic aperture sonar (SAS) supports advanced naval capabilities, but deep learning is constrained by scarce target imagery, background clutter, and human-in-the-loop assessment. We adapt DINOv3 Vision Transformer (ViT) models to underwater SAS ATR using a three-stage parameter-efficient framework. Stage 1 uses Low-Rank Adaptation (LoRA) while freezing the ViT backbone, bridging the gap between natural-image pretraining and underwater acoustic propagation. Stage 2 uses hard-negative mining to strengthen the decision boundary against acoustic mimics, including rocks and sediment formations resembling man-made targets. Stage 3 uses Supervised Contrastive Learning (SupCon) to separate target and clutter representations. We evaluate at-sea SAS data using a mission-level geographic split, compare all arms at 85 percent test recall, and repeat each comparison over three random seeds. LoRA accounts for the primary effect, increasing area under the precision-recall curve (AUPRC) from 0.300 to 0.679 +/- 0.027 using the same frozen backbone. Rank 4 achieves this result while training only 0.26 percent of weights. Neither refinement stage exceeds its matched control: hard-negative mining changes AUPRC by -0.0045 +/- 0.0119 versus an equal-size random curriculum, and SupCon changes AUPRC by +0.0002 +/- 0.0096 versus the preceding stage. These null results indicate that mining occurred on data the encoder had already fit and that supervised stages had already imposed most target-clutter geometry. One efficient adaptation stage is sufficient; stacked refinement is not.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Dan Zimmerman, Frank E. Bobe III, Amelia L. McCormack, Matthew Cook, Gregory D. Vetaw"
-        ],
-        "categories": [
-          "cs.AI"
-        ]
-      }
-    },
-    {
-      "id": "2609.21096",
-      "title": "Detecting Hallucination in LLMs: Tracing the Topological Signatures of Impaired Context Sharing",
-      "url": "https://arxiv.org/abs/2609.21096",
-      "source": "arXiv",
-      "published_at": "2026-09-21T04:00:00+00:00",
-      "summary": "arXiv:2609.21096v1 Announce Type: new Abstract: In this work, we examine the topology of information flow patterns within attention graphs to effectively distinguish hallucinated from non-hallucinated responses. We analyze the Forman-Ricci curvature to identify structural patterns indicating information bottlenecks in attention graphs. We then introduce a method that captures both semi-local and global information-flow characteristics of attention heads associated with hallucinated responses. We evaluate our approach extensively across several LLMs and established benchmarks. Empirical results demonstrate that our proposed single-pass approach provides consistent improvements over existing attention-based and multi-response baselines across two hallucination-detection benchmarks, while achieving competitive performance across diverse LLM architectures. Further analysis reveals that impaired context sharing among tokens during causal generation is strongly associated with hallucination occurrences in LLMs. In particular, hallucinated responses are consistently characterized by an over-reliance on self-attention, diffused context retrieval from earlier tokens, or information over-squashing, especially in the final transformer layer.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Amir Jalilifard, Anderson Rocha, Eric Wong, Marcos Medeiros Raimundo"
+          "Muhan Zhang"
         ],
         "categories": [
           "cs.AI",
+          "math.HO"
+        ]
+      }
+    },
+    {
+      "id": "2609.24554",
+      "title": "Toward a Unified Mathematics of Concepts",
+      "url": "https://arxiv.org/abs/2609.24554v1",
+      "source": "arXiv",
+      "published_at": "2026-09-21T13:19:13+00:00",
+      "summary": "Concepts are commonly defined as abstract, compact representations of knowledge and treated as basic units of intelligent behavior. Yet, cognition, psychology, and AI lack a shared mathematical language for them. Modern systems represent concepts as vectors, distributions, symbols, graphs, and other structures, but these formalisms are typically treated as competing rather than as solutions to a common problem. We propose an operation-based view that evaluates mathematical frameworks by the conceptual operations they support, identifying thirteen operations (including similarity, composition, generalization, and grounding) that recur across cognition, psychology, and AI. We show that ten frameworks embody distinct commitments to concepts as self-contained content, relational structure, or evolving process, and that these commitments determine which operations each supports naturally. For example, vector-based models facilitate graded similarity and generalization but struggle with explicit composition, whereas symbolic models support composition but offer but generalize poorly. No single framework we examined naturally supports all operations without extension. We test this account empirically using categorization as a case study, operationalizing nine theories on the same items against human judgments. Despite addressing the same conceptual question, the theories produce different procedures and results, demonstrating that mathematical commitment shapes what a theory can explain. We call for hybrid formalisms that treat content, relation, and process as jointly primary.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Chen Shani"
+        ],
+        "categories": [
+          "cs.CL"
+        ]
+      }
+    },
+    {
+      "id": "2609.24538",
+      "title": "QLoRA Fine-Tuning of Ministral LLM for Sequence-to-Function Protein Annotation",
+      "url": "https://arxiv.org/abs/2609.24538v1",
+      "source": "arXiv",
+      "published_at": "2026-09-21T13:09:59+00:00",
+      "summary": "Functional annotation of newly sequenced proteins remains a bottleneck in molecular biology: the number of sequences in public repositories grows far faster than the capacity for manual curation. Most computational approaches consider annotation as multi-label classification over a fixed ontology, which constrains predictions to a predefined label set. In this work we study the the protein annotation as a sequence-to-text generation problem. We fine-tune the 3B-parameter Ministral 3 base model with QLoRA (4-bit NF4 quantization with low-rank adapters) on sequence annotation pairs. We assess predictions with an LLM-as-expert protocol: a GPT model prompted as a senior molecular-biology curator scores organism identification as binary and function annotation quality. We conclude that QLoRA-fine-tuned compact LLMs can generate curator-style annotations with genuine biological value for a substantial subset of proteins. We also discuss future directions in data quality, model scaling, and evidence grounding that are needed to make the approach sufficiently reliable for practical use.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Demian Pavlyshenko",
+          "Bohdan Pavlyshenko"
+        ],
+        "categories": [
           "cs.CL",
+          "cs.AI",
+          "cs.NE",
+          "q-bio.QM"
+        ]
+      }
+    },
+    {
+      "id": "2609.24528",
+      "title": "Beyond Point Prediction: Artificial Representative Trees with Uncertainty",
+      "url": "https://arxiv.org/abs/2609.24528v1",
+      "source": "arXiv",
+      "published_at": "2026-09-21T13:01:36+00:00",
+      "summary": "Random forests (RFs) predict well but are opaque, whereas single decision trees are interpretable but unstable. Artificial representative trees (ARTs) were developed as interpretable surrogate models for RFs, but their use as standalone prediction models with uncertainty quantification has not been systematically investigated. We combine ARTs with leaf-wise Mondrian conformal predictive systems (CPS), enabling a single tree to provide continuous predictions, prediction intervals, and probabilities of exceeding arbitrary thresholds. We compared ARTs with CPS against decision trees with CPS and separate regression and probability trees across five simulation scenarios, 21 benchmark datasets, and a cross-sectional NHANES example data set. Repeated cross-validation assessed predictive performance, interpretability, and stability. ARTs with CPS yield compact, structurally stable trees with substantially more reproducible split-variable selection than decision trees across benchmark datasets and NHANES. Decision trees showed slightly better predictive performance and narrower prediction intervals, while coverage was broadly comparable. CPS-based trees generally achieved lower and less variable Brier scores than multi-model approaches. Combining ARTs with CPS therefore provides a single, interpretable, and stable model for continuous predictions and calibrated probabilities, balancing predictive performance with reproducibility and transparency in settings where stability and interpretability are essential.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Lea L. Mairhöfer",
+          "Silke Szymczak",
+          "Björn-Hergen Laabs",
+          "Tuwe Löfström-Cavallin"
+        ],
+        "categories": [
+          "stat.ML",
           "cs.LG"
         ]
       }
