@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-09-23T11:01:19.567420+08:00",
+  "cached_at": "2026-09-23T12:57:58.716730+08:00",
   "articles": [
     {
       "id": "49803892",
@@ -8,8 +8,8 @@
       "source": "Hacker News",
       "published_at": "2026-09-22T16:29:05+00:00",
       "summary": "Claude Opus 5.5",
-      "score": 1266,
-      "comments": 840,
+      "score": 1353,
+      "comments": 868,
       "discussion_url": "https://news.ycombinator.com/item?id=49803892",
       "extra": {
         "top_comments": [
@@ -26,8 +26,8 @@
       "source": "Hacker News",
       "published_at": "2026-09-22T18:00:34+00:00",
       "summary": "GPT-6 Sol and Luna",
-      "score": 1241,
-      "comments": 628,
+      "score": 1344,
+      "comments": 652,
       "discussion_url": "https://news.ycombinator.com/item?id=49805509",
       "extra": {
         "top_comments": [
@@ -44,8 +44,8 @@
       "source": "Hacker News",
       "published_at": "2026-09-22T13:52:15+00:00",
       "summary": "OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005",
-      "score": 580,
-      "comments": 363,
+      "score": 608,
+      "comments": 373,
       "discussion_url": "https://news.ycombinator.com/item?id=49801324",
       "extra": {
         "top_comments": [
@@ -62,13 +62,13 @@
       "source": "Hacker News",
       "published_at": "2026-09-22T19:03:38+00:00",
       "summary": "https://archive.ph/0V37g",
-      "score": 468,
-      "comments": 240,
+      "score": 521,
+      "comments": 256,
       "discussion_url": "https://news.ycombinator.com/item?id=49806430",
       "extra": {
         "top_comments": [
           "> It found the U.S. “failed in its obligation to do everything feasible to verify” that the school was a military objective and that the failure “went beyond mere negligence.” The report said the United States “directed the strikes at the building of the school while being aware of a substantial risk of striking a civilian object and acting recklessly as regards the possibility that this would happen.”Reading the details, \"AI\" doesn't really seem like the culprit -it's a scapegoat.The intelligence that it was no longer a military target never entered the target database, the team that was responsible for vetting the target list was gutted, and said team was never even consulted.The White House wanted 1000 targets and pulled from their database without any due diligence. Whether it was an AI call or an SQL query - this was from pure human maliciousness and incompetence.",
-          "> The Minab site, which was cataloged as an Islamic Revolutionary Guard Corps facility due to outdated data, was fed into Maven with other candidates and came out as a recommended day-one target. Target-list work that once took hours was condensed into minutes.I feel like we're optimizing the wrong metric here.",
+          "The UN needs a seal team 6 to take out everyone at the pentagon as it's home to the worlds biggest and most babybloodthirsty terrorists",
           "Related: the U.S. nearly boarded a Chinese boat that AI incorrectly flagged as carrying nuclear weapons materiel.https://gizmodo.com/almost-started-a-war-us-military-nearly-..."
         ]
       }
@@ -80,14 +80,14 @@
       "source": "Hacker News",
       "published_at": "2026-09-22T17:46:02+00:00",
       "summary": "https://archive.ph/96YBP",
-      "score": 452,
-      "comments": 319,
+      "score": 502,
+      "comments": 350,
       "discussion_url": "https://news.ycombinator.com/item?id=49805278",
       "extra": {
         "top_comments": [
           "At this point, no one seems capable of keeping a large database safe. I assume all medical and biographical information that exists is in the hands of the major state actors.China hacked 22.1 million records of US government employees:https://en.wikipedia.org/wiki/2015_Office_of_Personnel_Manag...",
-          "There’s a scene in Battlestar Galactica (2004) where someone asks Captain Adama why the Galactica doesn’t have networked computers. So the cylons can’t hack the ship…",
-          "> When asked if ShinyHunters was going to attempt to extort the FBI, the representative said, “what we plan to do is not something I’d call extortion, maybe coercion... This is not financially motivated,” they addedThey should try something like \"100 agents at noon on Sep 23 do the chicken dance for 30 min in the middle of the street in DC, then we'll consider not releasing the info and not sell it to the Chinese\"."
+          "Release the jui-cy bits!",
+          "There’s a scene in Battlestar Galactica (2004) where someone asks Captain Adama why the Galactica doesn’t have networked computers. So the cylons can’t hack the ship…"
         ]
       }
     },
@@ -98,8 +98,8 @@
       "source": "Hacker News",
       "published_at": "2026-09-22T14:42:59+00:00",
       "summary": "OpenAI is well positioned to fast-follow Jev",
-      "score": 268,
-      "comments": 195,
+      "score": 275,
+      "comments": 199,
       "discussion_url": "https://news.ycombinator.com/item?id=49802161",
       "extra": {
         "top_comments": [
@@ -116,14 +116,14 @@
       "source": "Hacker News",
       "published_at": "2026-09-22T16:51:31+00:00",
       "summary": "Claude Opus 5.5 Intelligence, Performance and Price Analysis (Max)",
-      "score": 243,
-      "comments": 73,
+      "score": 261,
+      "comments": 77,
       "discussion_url": "https://news.ycombinator.com/item?id=49804316",
       "extra": {
         "top_comments": [
           "This is the page for the \"max\" reasoning setting. The page for xhigh is https://artificialanalysis.ai/models/claude-opus-5-5-xhigh and the page for medium (the default setting) is https://artificialanalysis.ai/models/claude-opus-5-5-mediumI've failed twice to get \"Generate an SVG of a pelican riding a bicycle\" to work with max, because in both cases it ran out of the 128,000 token budget while it was still reasoning about the problem.I'm suspicious that \"max\" may be virtually useless if it's that easy to have it overthink to the point that it doesn't get to a response.Transcript for one attempt here - expand the \"Reasoning trace\" bit to see it: https://tools.simonwillison.net/markdown-svg-renderer?url=ht...",
-          "The very first sentence:> Claude Opus 5.5 is amongst the leading models in intelligence, but somewhat expensive when comparing to other models of similar price.What does it mean for a group of similarly priced things to have one that's somewhat more expensive? Cost relative to cost means nothing. You'd think they are would talk about performance relative to cost.",
-          "Do these evaluations get re run a few weeks after launch? I started doing that yesterday for our internal dataset and found Sol’s performance had regressed to be equal to Luna’s. Granted this was one run, but something I’m becoming more concerned about, the model providers want to quickly prove they’re the best, people switch to them, then they pull the rug."
+          "Do these evaluations get re run a few weeks after launch? I started doing that yesterday for our internal dataset and found Sol’s performance had regressed to be equal to Luna’s. Granted this was one run, but something I’m becoming more concerned about, the model providers want to quickly prove they’re the best, people switch to them, then they pull the rug.",
+          "Half the cost per task compared to Opus 5, comparing high effort to high effort. That's just really nice.Edit: https://artificialanalysis.ai/models/claude-opus-5-5?models=..."
         ]
       }
     },
@@ -134,14 +134,14 @@
       "source": "Hacker News",
       "published_at": "2026-09-22T21:00:30+00:00",
       "summary": "Visual FoxPro stopped at version 9 in 2007. A surprising amount of it is still running, in 32 bits, because rewriting a 20-year-old business app is how you lose the business. A customer wanted to keep milking their app for the foreseeable future, so here it is: the same language on a new runtime (Rust, compiled to wasm, checked against the real vfp9.exe), tables no longer stopped at 2 GB, the old 32-bit .fll add-ins still loading, and lambdas, JSON and an HTTP server bolted on for good measure. Reports are not done and the builds are unsigned. MIT because why not?",
-      "score": 200,
-      "comments": 139,
+      "score": 241,
+      "comments": 154,
       "discussion_url": "https://news.ycombinator.com/item?id=49808023",
       "extra": {
         "top_comments": [
+          "I know there are still a few niche industry that has an industry standard program written in Visual FoxPro, and I remember as pre COVID 2019 they were still using it. ( Edit: I just called and asked, still using it as of 2026 )Niche but no small business, commodity with over $400M USD annual revenue, the industry together than easily $2B+.If it is not broke, don't fix it. And there are industry that is extremely conservative in anything software, they will just keep it running for as long as they could.I used to be sad that we don't have something better to replace these antique software. Now I have come to appreciate it, mostly because newer software haven't show they have manage to add value in the slightest. And most of the time they simply don't work as well.Delphi, Visual FoxPro, Visual Basic, Flash. I used to think one day we will have something that is not only faster, easier and scalable replacement of those. Instead everything went more technical, more complex, enterprisy and non-user friendly.And to the Author of the project. Thank You for making it.",
           "Here’s my problem with reviving FoxPro in any form: there’s a huge security hole in the Database Container (DBC) design. For DBCs to be useful, they must be read/write to all users (there is no permissions scheme). DBCs have stored procedures that can run any FoxPro code, including Win32 calls made from the FoxPro runtime. The stored procedures are stored as plain text in a “memo” field. Do you see where this is going? With a little technical knowledge, one can modify that INSERT trigger to whatever you like. EDIT: as the DB is just files in the file system, modifications can be made using a text editor, bypassing any checks in the FoxPro runtime. FoxPro just executes what it finds in there.My recommendation is to get rid of the DBF/DBC files and move to a SQL DB of some flavor ASAP. If you have the source code, use ODBC or OLE DB to point to a server.Source: filed that bug over 20 years ago when I worked on the Fox team. No, it wasn’t going to get fixed without rewriting large parts of how the DB engine worked.",
-          "I worked with a physician's office in 2006, and the lead physician had cobbled together a system for patient tracking using Visual FoxPro. It was a monstrosity, and using it over a network drive gave all sorts of file locks and issues with multiple people changing the same record (usually the physician and front of house staff when checking the patient out).I finally got the physician to switch to a proper client/server architecture using .NET WinForms and ASP.NET RPC calls. All issues went away, and I was even able to allow staff members to edit the interface to set what mattered to them most at the top of the application, by building the lab testing form in XML so they could move the X/Y coordinates to where they wanted them. It wasn't even a feature I had thought of, just a physician looking through the technology and figuring out how it worked (luckily the business and security logic were on the server, so a bad actor could only have destroyed their own local copy of the app).",
-          "My goodness, a blast from the past. Such a glorious time to be a programmer... every single business needed a database to do their simple little daily chores, the coding was insanely easy (just a bunch of CRUD process), and the difference it made to the customers was night/day... hence, you could charge thru the roof.I wrote a simple little CRUD app in FoxPro, for the Canadian real estate appraisal market, which took about a part-time month to create, and first year, sold 300 licenses at $299 a pop.Ahh, memories of a simpler time."
+          "I worked with a physician's office in 2006, and the lead physician had cobbled together a system for patient tracking using Visual FoxPro. It was a monstrosity, and using it over a network drive gave all sorts of file locks and issues with multiple people changing the same record (usually the physician and front of house staff when checking the patient out).I finally got the physician to switch to a proper client/server architecture using .NET WinForms and ASP.NET RPC calls. All issues went away, and I was even able to allow staff members to edit the interface to set what mattered to them most at the top of the application, by building the lab testing form in XML so they could move the X/Y coordinates to where they wanted them. It wasn't even a feature I had thought of, just a physician looking through the technology and figuring out how it worked (luckily the business and security logic were on the server, so a bad actor could only have destroyed their own local copy of the app)."
         ]
       }
     }

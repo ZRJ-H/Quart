@@ -7,7 +7,7 @@ tags: [github, trending]
 
 # huggingface/transformers
 
-> Hugging Face 的模型定义框架，覆盖文本、视觉、音频与多模态模型的推理和训练，适合 AI 研究与应用开发者。
+> Hugging Face 的模型定义框架，覆盖文本、视觉、音频与多模态模型，适合推理与训练各类先进机器学习模型。
 
 ## 基本信息
 
