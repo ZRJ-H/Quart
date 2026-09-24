@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-09-24T11:01:38.607964+08:00",
+  "cached_at": "2026-09-24T13:08:11.030497+08:00",
   "articles": [
     {
       "id": "https://huggingface.co/blog/nvidia/how-to-use-nvidia-warp-and-mjwarp",
@@ -26,12 +26,36 @@
       "extra": {}
     },
     {
+      "id": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/",
+      "title": "Advancing Private AI Compute with secure, server-side memory",
+      "url": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/",
+      "source": "Google DeepMind",
+      "published_at": "2026-09-23T16:00:57+00:00",
+      "summary": "Introducing private, server-side memory to Private AI Compute for personal AI.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
       "id": "https://openai.com/index/two-years-of-openai-academy",
       "title": "Two years of OpenAI Academy",
       "url": "https://openai.com/index/two-years-of-openai-academy",
       "source": "OpenAI",
       "published_at": "2026-09-23T16:00:00+00:00",
       "summary": "Marking two years of OpenAI Academy and bringing AI skills to even more communities.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
+      "id": "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/",
+      "title": "Gemini 3.8 text-to-speech says hello",
+      "url": "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/",
+      "source": "Google DeepMind",
+      "published_at": "2026-09-23T15:25:14+00:00",
+      "summary": "",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
@@ -68,30 +92,6 @@
       "source": "OpenAI",
       "published_at": "2026-09-23T12:00:00+00:00",
       "summary": "GPT-6 Astra produces more structured, context-aware legal documents, freeing lawyers to focus on strategy.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://openai.com/index/invideo-builds-with-gpt-6-astra",
-      "title": "How invideo improves color grading 3x with GPT‑6 Astra",
-      "url": "https://openai.com/index/invideo-builds-with-gpt-6-astra",
-      "source": "OpenAI",
-      "published_at": "2026-09-23T12:00:00+00:00",
-      "summary": "With GPT‑6 Astra, invideo plans edits with greater precision, improves color correction and grading threefold, and produces 50 custom effects in one day.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://openai.com/index/ringg",
-      "title": "Ringg’s AI agents resolve up to 65% of customer calls with OpenAI",
-      "url": "https://openai.com/index/ringg",
-      "source": "OpenAI",
-      "published_at": "2026-09-23T12:00:00+00:00",
-      "summary": "Using GPT-5.6, Ringg powers multilingual agents across voice, chat, WhatsApp, and web for 90% less cost vs. GPT-4.1.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",

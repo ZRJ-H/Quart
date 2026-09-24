@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-09-24T11:01:38.607964+08:00",
+  "cached_at": "2026-09-24T13:08:11.030497+08:00",
   "articles": [
     {
       "id": "https://www.news.cn/politics/20260924/a512e6e3ab5b44f5ad0651c0d1b37646/c.html",
@@ -62,36 +62,36 @@
       "extra": {}
     },
     {
+      "id": "https://www.bbc.co.uk/news/articles/cry8zwwq21pxo#0",
+      "title": "Ethiopia and Tigray accuse each of launching offensives, fuelling fears of new war",
+      "url": "https://www.bbc.co.uk/news/articles/cry8zwwq21pxo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "published_at": "2026-09-24T04:37:47+00:00",
+      "summary": "The local authorities reportedly seize Tigray's airports following reports of recent drone strikes.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
+      "id": "https://www.npr.org/2026/09/24/nx-s1-5978861/conflict-ethiopia-tigray",
+      "title": "Fears of return to war grow in Ethiopia's Tigray region",
+      "url": "https://www.npr.org/2026/09/24/nx-s1-5978861/conflict-ethiopia-tigray",
+      "source": "NPR World",
+      "published_at": "2026-09-24T04:23:38+00:00",
+      "summary": "Fears are growing of a return to war in Ethiopia's Tigray region, just four years after a devastating conflict ended in a fragile peace deal.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
       "id": "https://www.bbc.co.uk/news/articles/c6vgy0333dppo#0",
       "title": "OpenAI agent 'infiltrated' Australian government website, PM says",
       "url": "https://www.bbc.co.uk/news/articles/c6vgy0333dppo?at_medium=RSS&at_campaign=rss",
       "source": "BBC World",
-      "published_at": "2026-09-24T02:23:54+00:00",
+      "published_at": "2026-09-24T03:22:54+00:00",
       "summary": "Albanese said he expressed \"concern\" to OpenAI founder Sam Altman, after authorities were informed three months after the breach in June.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://www.bbc.co.uk/news/articles/cwp80l0my1x2o#2",
-      "title": "They were labelled 'pervert glasses'. Will a camera-free version transform their image?",
-      "url": "https://www.bbc.co.uk/news/articles/cwp80l0my1x2o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "published_at": "2026-09-24T00:50:24+00:00",
-      "summary": "Meta has unveiled audio-only smart glasses, with some questioning whether it is a response to the backlash over privacy.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://www.bbc.co.uk/news/articles/ck3wjyjgj37po#2",
-      "title": "In Amish country, nurses go door to door to stop deadly spread of measles",
-      "url": "https://www.bbc.co.uk/news/articles/ck3wjyjgj37po?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "published_at": "2026-09-24T00:15:46+00:00",
-      "summary": "With four measles-related deaths in Pennsylvania, health officials are hoping to get people on board with vaccines in private.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",

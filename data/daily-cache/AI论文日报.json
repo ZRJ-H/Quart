@@ -1,121 +1,101 @@
 {
-  "cached_at": "2026-09-24T11:01:38.607964+08:00",
+  "cached_at": "2026-09-24T13:08:11.030497+08:00",
   "articles": [
     {
-      "id": "2609.28473",
-      "title": "On the Diffusibility of High-Dimensional Latents",
-      "url": "https://arxiv.org/abs/2609.28473v1",
+      "id": "2609.25010",
+      "title": "Do Synthetic Personas Predict Real Audience Response? A Sim-to-Real Study Where a No-Persona Baseline Beats Persona-Based Copy Simulation",
+      "url": "https://arxiv.org/abs/2609.25010",
       "source": "arXiv",
-      "published_at": "2026-09-23T17:59:56+00:00",
-      "summary": "Representation Autoencoders (RAEs) enable diffusion models to operate in the feature spaces of pretrained visual encoders. However, many off-the-shelf encoders are not optimized for faithful reconstruction, discarding fine-grained visual details. As expected, finetuning these encoders for image reconstruction recovers such details. However, perhaps counterintuitively, this procedure reduces the effective dimensionality of the resulting representation, and the altered geometry has downstream effects on generation. Specifically, we show that using the standard velocity prediction in flow matching in this high-dimensional space requires the model to fit orthogonal noise directions outside the low-dimensional signal manifold, making optimization inefficient. This motivates using the clean data parameterization ($\\boldsymbol{x}_{0}$-prediction) instead, which focuses learning on the underlying signal manifold. Across experiments with multiple strong-reconstruction encoders, we show that $\\boldsymbol{x}_{0}$-prediction consistently improves text-to-image generation performance.",
+      "published_at": "2026-09-24T04:00:00+00:00",
+      "summary": "arXiv:2609.25010v1 Announce Type: new Abstract: Marketers increasingly use large language models (LLMs) as \"synthetic personas\" to predict how an audience will react to a piece of copy before it ships, encouraged by evidence that profile-conditioned LLMs mimic human samples. But is that prediction actually valid against real behaviour - and does the persona machinery help? We present a sim-to-real validity study using the Upworthy Research Archive - thousands of headline A/B tests on shared real traffic, with measured click-through - as held-out ground truth. We compare a ten-persona panel, grounded in the real audience's demographics, against a no-persona zero-shot baseline that simply asks the model how likely a typical reader is to click. Two findings stand out. First, ground-truth reliability is the binding constraint: most A/B tests have no statistically distinguishable winner, so validity can only be measured on the reliable subset (n = 399). Second, and counter to the persona-simulation premise, persona conditioning degrades predictive validity: the no-persona baseline ranks variants markedly better (Kendall {\\tau} = 0.361, a medium effect; top-1 accuracy 49.2%) than the persona panel ({\\tau} = 0.084; top-1 34.6%), with non-overlapping confidence intervals. Asking the model directly taps an accurate population-level prior; forcing it to role-play specific personas injects bias and noise. The result replicates across three independent Upworthy splits, holds in direction on a different-domain news dataset, and is robust to seed, prompt phrasing, and model choice - across three Gemini tiers and a different model family (OpenAI gpt-4.1, significant paired gap). The takeaway: for predicting aggregate engagement, a plain LLM ranker beats persona simulation - synthetic personas are not merely a weak predictor, they are worse than not using them. All numbers regenerate from a public, artifact-first replication package.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Chao Feng",
-          "Zhiyang Xu",
-          "Bowei Chen",
-          "Yuanjun Xiong",
-          "Xiyao Wang",
-          "Jui-Hsien Wang",
-          "Richard Zhang",
-          "Zhe Lin",
-          "Andrew Owens",
-          "Yijun Li"
-        ],
-        "categories": [
-          "cs.CV",
-          "cs.LG"
-        ]
-      }
-    },
-    {
-      "id": "2609.28471",
-      "title": "Contrastive Learning for Authorship Verification",
-      "url": "https://arxiv.org/abs/2609.28471v1",
-      "source": "arXiv",
-      "published_at": "2026-09-23T17:59:08+00:00",
-      "summary": "Our results show that contrastive learning outperforms a classification-based approach to authorship verification under the tested settings. We identify loss function, batch size, training duration, pre-trained model, input context length, and random text span data augmentation as important factors of model performance. Based on these considerations, we develop a ModernBERT Bi-Encoder model that achieves 98.4% accuracy on the PAN21 authorship verification task.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Peter Kirby"
-        ],
-        "categories": [
-          "cs.CL",
-          "cs.LG"
-        ]
-      }
-    },
-    {
-      "id": "2609.28470",
-      "title": "StudentBench: AI and human tutoring yield equivalent GRE learning gains",
-      "url": "https://arxiv.org/abs/2609.28470v1",
-      "source": "arXiv",
-      "published_at": "2026-09-23T17:57:45+00:00",
-      "summary": "Artificial intelligence offers an unprecedented opportunity to augment human capabilities, yet progress at the frontier has focused primarily on advancing model capabilities. We introduce StudentBench, a suite of AI teaching evaluations and a public platform that enables large-scale data collection with over 175,000 student-AI messages to study whether large language models (LLMs) produce learning gains equivalent to human tutoring. Using StudentBench, we measured learning gains on Quantitative and Verbal GRE questions across 2,383 human participants receiving AI tutoring, human tutoring, or no tutoring. We establish that AI tutoring is statistically equivalent to expert human tutoring for GRE learning gains (p = .015), and in five of the seven GRE domains, the best performing AI tutor surpassed the human tutor, on average. In a second study, expert human tutors compared LLM-generated lesson plans and practice problems through 2,028 pairwise rubric evaluations. Together, the two studies clearly separate AI tutors across: (1) lesson planning, (2) practice-problem creation, (3) conversational pedagogy, (4) cost, and (5) engagement. Surprisingly, one AI tutor achieved learning gains equivalent to human tutoring (p = .044) at 918 times lower cost (USD 0.0052 for AI versus USD 4.81 for human, per percentage point gained). For Quantitative GRE sessions, faster AI replies correlated with more student messages, more messages with more correct practice, and more correct practice with larger learning gains (all p < .002). The StudentBench platform is freely available at https://studentbench.org.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Curtis Northcutt",
-          "Inaara Hasmani",
-          "Kevin Feng",
-          "Trevor Khangi",
-          "Andreas Plesner",
-          "Jonas Mueller"
+          "Alexandre Cristov\\~ao Maiorano"
         ],
         "categories": [
           "cs.AI",
+          "cs.CL",
           "cs.CY"
         ]
       }
     },
     {
-      "id": "2609.28467",
-      "title": "Where Should I Join? Robot Group Joining via Language-Guided Goal Prediction",
-      "url": "https://arxiv.org/abs/2609.28467v1",
+      "id": "2609.25013",
+      "title": "Do Existing Preconditioners Improve Biomedical Tabular Foundation Learning? An Empirical Study on TabPFN Optimization",
+      "url": "https://arxiv.org/abs/2609.25013",
       "source": "arXiv",
-      "published_at": "2026-09-23T17:55:48+00:00",
-      "summary": "Social navigation typically assumes a specified goal and focuses on reaching it while respecting social conventions, whereas robot group joining requires predicting where to join based on the group's real-time activity and formation. This is a highly semantic task, yet an important capability for applications such as robotic guide dogs and autonomous mobility scooters. We formulate language-grounded robot group joining: given an observation and a natural-language description of a target group, the robot identifies the relevant group members and predicts socially compliant joining poses. For grounding, we generate structured candidate subsets through recursive spectral partitioning and rank them with a language-conditioned image--geometry model. Given the grounded group, a goal predictor leverages human-formation priors to produce a multimodal energy--orientation map over feasible robot poses. Experiments on conversations, queues, and audiences across varying group sizes, crowd densities, and visual ambiguities show that our method achieves competitive grounding accuracy with sub-second inference and outperforms all baselines in joining-pose prediction. Real-robot experiments further demonstrate group joining in both static and dynamically changing interactions.",
+      "published_at": "2026-09-24T04:00:00+00:00",
+      "summary": "arXiv:2609.25013v1 Announce Type: new Abstract: Tabular foundation models have recently shown strong potential for structured biomedical data analysis. Among them, TabPFN has emerged as an effective approach for low-data tabular classification tasks. However, the impact of optimization and preconditioning strategies on biomedical fine-tuning remains largely unexplored. In this work, we present a comprehensive empirical investigation of five AdamW-based preconditioning strategies for fine-tuning TabPFN v2.5 on 59 biomedical datasets spanning Alzheimer's disease, breast cancer, schizophrenia, significant memory concern (SMC), KEEL biomedical datasets, and UCI biomedical benchmarks. The evaluation considers predictive performance, computational efficiency, and statistical significance analysis. Experimental results demonstrate that the original AdamW optimizer consistently achieves the best overall performance and statistical ranking, while existing curvature-aware preconditioners fail to provide reliable improvements across diverse biomedical learning scenarios. The findings suggest that generic preconditioning approaches may not adequately capture the optimization characteristics of biomedical tabular learning, motivating the development of biomedical-aware preconditioners specifically tailored for healthcare-oriented tabular foundation models.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Zilin Fang",
-          "Zishuo Wang",
-          "Gim Hee Lee",
-          "David Hsu"
+          "M. Sajid, Pinki Khatun, M. Tanveer"
         ],
         "categories": [
-          "cs.RO",
           "cs.AI"
         ]
       }
     },
     {
-      "id": "2609.28459",
-      "title": "Even Sharper Bounds for Transductive Learning and Its Applications",
-      "url": "https://arxiv.org/abs/2609.28459v1",
+      "id": "2609.25036",
+      "title": "4DGS-JEPA: Temporally Compositional Joint-Embedding Prediction for Dynamic Gaussian Splatting",
+      "url": "https://arxiv.org/abs/2609.25036",
       "source": "arXiv",
-      "published_at": "2026-09-23T17:52:50+00:00",
-      "summary": "We introduce Sharper Transductive Local Complexity (STLC), a localized complexity method for transductive learning under uniform sampling without replacement. The construction starts from a Bernstein-type concentration inequality for the supremum of the test--train empirical process. Its proof uses the modified log-Sobolev inequality for the swap walk and a two-parameter entropy closure. A peeling argument with a surrogate localization functional then gives excess-risk bounds with the same fixed-point and confidence terms as the classical inductive local Rademacher-complexity bounds, without the additional logarithmic confidence factor in earlier transductive results. For realizable learning over a binary class of VC dimension $\\dVC$, with training size $m$, test size $u$, and $u\\ge m\\ge\\dVC$, STLC yields $\\cO\\{\\dVC\\log(me/\\dVC)/m\\}$. This matches the standard inductive rate and, when $m\\ge9$, is within a logarithmic factor of the transductive minimax lower bound of order $\\dVC/m$. For transductive kernel learning, STLC gives a spectrum-adaptive excess-risk bound without the multiplicative imbalance factors appearing in the earlier local-complexity bound.",
+      "published_at": "2026-09-24T04:00:00+00:00",
+      "summary": "arXiv:2609.25036v1 Announce Type: new Abstract: Dynamic Gaussian Splatting provides an explicit representation of evolving 3D scenes, but existing approaches are primarily optimized for reconstruction, future-state generation, or rendering rather than for learning reusable predictive dynamics. We propose 4DGS-JEPA, a Gaussian-native joint-embedding predictive architecture for causal multi-horizon prediction over dynamic Gaussian scenes. The model uses a hierarchical scene-, motion-group-, and Gaussian-level representation together with a horizon-conditioned transition operator that supports both direct prediction and recursive rollout. Its central principle is temporal composition: different chronological transition paths reaching the same future endpoint should produce compatible predictive states. Endpoint and multi-horizon path supervision anchor these predictions to future target embeddings, while a selective geometry decoder and geometry-level composition ground the learned dynamics in consistent group motion and Gaussian geometry without requiring complete future appearance reconstruction. We further introduce a hybrid correspondence mechanism that combines persistent canonical identity with residual optimal-transport matching under reordering and topology change. We characterize zero-loss path agreement and finite-error rollout accumulation theoretically. Three controlled experiments provide mechanism-level evidence that temporal composition reduces latent path dependence while retaining predictive accuracy, geometry-level composition improves consistency of decoded motion, and hybrid correspondence preserves reliable identity while remaining robust when correspondence becomes ambiguous. Together, 4DGS-JEPA provides a predictive, temporally compositional formulation of dynamic Gaussian worlds.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Yingzhen Yang"
+          "Yongchao Huang"
         ],
         "categories": [
-          "cs.LG",
-          "cs.IT",
-          "math.ST"
+          "cs.AI"
+        ]
+      }
+    },
+    {
+      "id": "2609.25088",
+      "title": "An Accurate and Interpretable Hyper Graph Neural Network for GBM Survival Prediction",
+      "url": "https://arxiv.org/abs/2609.25088",
+      "source": "arXiv",
+      "published_at": "2026-09-24T04:00:00+00:00",
+      "summary": "arXiv:2609.25088v1 Announce Type: new Abstract: Survival prediction for glioblastoma multiforme (GBM) demands models that are both accurate and interpretable, yet existing approaches treat these objectives as com- peting, where performant models sacrifice transparency, while interpretable models accept degraded predictive power. We argue that this trade-off is not inherent. Graph neural net- works offer a structural foundation for extracting interpretable, explainable representations without compromising discriminative ability. Furthermore, current methods typically rely on a single imaging modality, underutilizing the complementary information available across multi-modal MRI and clinical metadata. We propose a multi-modal framework that inte- grates three components to address both objectives simultaneously: (1) a sheaf hypergraph neural network that captures higher-order relationships among tissue patches through direc- tional, asymmetric message passing; (2) a concept bottleneck layer that compresses learned representations into clinically grounded concepts, enforcing ante-hoc interpretability; and (3) an extension sufficiency test (EST) regularizer that penalizes unfaithful explanations during training, ensuring that model explanations genuinely reflect the internal decision process. Clinical and genomic features are incorporated through gated fusion, preserving the dominant prognostic signal of molecular markers while retaining concept-level traceabil- ity. Evaluated on 593 patients from the UPenn-GBM dataset under 5-fold cross-validation, our framework achieves a concordance index of 0.643 with the lowest fold-level variance among all compared models (std = 0.015). To our knowledge, this is the first work to unify sheaf hypergraph convolution, concept bottleneck supervision, and EST regularization for interpretable survival prediction from brain MRI",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Mushahid Intesum"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.LG"
+        ]
+      }
+    },
+    {
+      "id": "2609.25165",
+      "title": "Ovis-Embedding: Pushing the Frontiers of Universal Omni-Modal Embeddings",
+      "url": "https://arxiv.org/abs/2609.25165",
+      "source": "arXiv",
+      "published_at": "2026-09-24T04:00:00+00:00",
+      "summary": "arXiv:2609.25165v1 Announce Type: new Abstract: In this report, we introduce \\textbf{Ovis-Embedding}, a state-of-the-art omni-modal embedding family built on native integration of text, image, video, and audio. Instead of assembling separate modality towers, Ovis-Embedding uses a shared multimodal backbone to encode different modalities in a common representation space. Specifically, we make \\textbf{three key advances}: (1) \\textbf{native omni-modal initialization}: we adopt a pretrained Qwen-omni model as the embedding backbone and adapt it through contrastive training with low-rank initialization; (2) \\textbf{data-centric omni-modal training}: we construct a broad, high-quality corpus spanning text, images, video, audio, and interleaved multimodal data. To improve data efficiency, we introduce homogeneous-source sampling to form task-consistent batches with informative in-batch negatives; and (3) \\textbf{embedding-specific training and inference optimization}: we use focal loss to emphasize hard examples and similarity-based Embedding Distillation to transfer fine-grained similarity structure from complementary experts. At inference time, low-rank feature decomposition enables compact embeddings with flexible dimensionality and minimal performance loss. Empirical evaluations show that the \\textbf{Ovis-Embedding} family achieves state-of-the-art performance on \\textbf{MMEB-v3}, \\textbf{MMEB-v2}, \\textbf{MVEB}, \\textbf{MAEB}, and \\textbf{RTEB}, demonstrating its effectiveness across text, image, video, and audio modalities. These results highlight the potential of unified omni-modal training to overcome modality fragmentation and advance universal embedding models for any-to-any retrieval.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Embedding Team"
+        ],
+        "categories": [
+          "cs.AI"
         ]
       }
     }

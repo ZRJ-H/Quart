@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-09-24T11:01:38.607964+08:00",
+  "cached_at": "2026-09-24T13:08:11.030497+08:00",
   "articles": [
     {
       "id": "49819221",
@@ -8,14 +8,14 @@
       "source": "Hacker News",
       "published_at": "2026-09-23T17:06:16+00:00",
       "summary": "Italian parliament votes for return to nuclear energy",
-      "score": 612,
-      "comments": 396,
+      "score": 659,
+      "comments": 427,
       "discussion_url": "https://news.ycombinator.com/item?id=49819221",
       "extra": {
         "top_comments": [
           "I've seen quite a few SMR proposals over the last couple of years and not a single one that dared to address the whole cycle from deployment to eventual decommission as a function of the total revenues - costs to operate. Most of these projects seem to be made to bilk investors or governments rather than to actually produce power. The day Italy produces the first KWh that is net profitable to the operators without counting subsidies I will be highly amazed, and that's assuming they get to operational in the first place.",
           "I'm Italian and I'm super happy with this.The referendum that made nuclear energy illegal in Italy was held right after the accident of Chernobyl; people voted with their gut, not with their mind.Curiously enough, some Italian town signs still have a small sub-sign reading \"denuclearized municipality\" (example: https://live.staticflickr.com/1421/712461235_e46a2c7db5_z.jp... )",
-          ">Rather than reviving the large reactors of the past, the government is focusing on small modular reactors, or SMRs, and other advanced technologies that supporters say could be safer, more flexible and quicker to build.>The legislation does not authorize the construction of any reactors. Instead, it creates the regulatory foundation needed before future projects can be proposed, assessed and approved.Giant step for SMRs. I'm hopefull for greater NATO collaboration regarding energy security if SMRs prove commercially viable."
+          "China is building nuclear reactors faster than any other country: https://news.ycombinator.com/item?id=38485137Belgium stops decommissioning nuclear power plants: https://news.ycombinator.com/item?id=47961319Canada plans 'nuclear renaissance' with up to 10 reactors built by 2040: https://news.ycombinator.com/item?id=48634585Its important to remember that nuclear needs water and is not immune to climate change. France and Switzerland shut down nuclear power plants amid scorching heatwave: https://www.euronews.com/2025/07/02/france-and-switzerland-s...And maybe unknown future costs. Government awards $45B to company treating over 50M gallons of leaking radioactive waste: 'One of our nation's most important environmental challenges': https://www.thecooldown.com/green-business/hanford-nuclear-s...Admiral Rickover's 'Paper Reactor' memo: https://whatisnuclear.com/rickover.html"
         ]
       }
     },
@@ -26,14 +26,13 @@
       "source": "Hacker News",
       "published_at": "2026-09-23T18:06:47+00:00",
       "summary": "Claude discovers a novel enzyme system with CRISPR-like repeats",
-      "score": 533,
-      "comments": 559,
+      "score": 570,
+      "comments": 588,
       "discussion_url": "https://news.ycombinator.com/item?id=49820134",
       "extra": {
         "top_comments": [
           "Current evolved Cas9 (CRISPR) variants are highly efficient and relatively unconstrained in terms of their human genome targeting coverage. Smaller nucleases and higher targeting specificity would be useful. But therapeutic use is mostly limited by delivery.This seems revolve around a known retron-like reverse transcriptase. A sober framing would be something like: Claude identified a previously undescribed genomic arrangement around a known reverse transcriptase. Not all that sexy.For now, this is mostly a story about how AI can be used to parse existing data to discover new biology (which is fantastic!).",
-          "> While combing through the raw DNA sequence near the RT, the agent exclaimed: “[The DNA next to the RT] is spectacular: I can see by eye a tandem repeat array … that's a CRISPR-like … repeat array?!”I love that with AI discoveries, we can relive the discoveries from agent transcripts like this.I'm sort of imagining future histories involving notable AI events peppered with direct quotes like these.",
-          "Anthropic: You absolutely cannot, under any circumstances, use Claude for bio-engineering. It could literally end humanity.Also Anthropic: Claude discovers a new way to edit your genome!"
+          "> While combing through the raw DNA sequence near the RT, the agent exclaimed: “[The DNA next to the RT] is spectacular: I can see by eye a tandem repeat array … that's a CRISPR-like … repeat array?!”I love that with AI discoveries, we can relive the discoveries from agent transcripts like this.I'm sort of imagining future histories involving notable AI events peppered with direct quotes like these."
         ]
       }
     },
@@ -44,14 +43,14 @@
       "source": "Hacker News",
       "published_at": "2026-09-23T23:47:56+00:00",
       "summary": "Meta VR Glasses",
-      "score": 260,
-      "comments": 231,
+      "score": 312,
+      "comments": 273,
       "discussion_url": "https://news.ycombinator.com/item?id=49824268",
       "extra": {
         "top_comments": [
           "I had an Oculus Quest and it was a really great device. After the \"Meta\" rebrand, the quality rapidly decreased and now it wants me to upload my ID to Meta to keep using it. Absolutely not! Zuckerberg already has way too much information on me, uploading my state issued identification to them is such an insane ask, I will never do it. While this looks like interesting hardware, the company behind it has unacceptable and user-hostile practices, so I'll pass.",
-          "Looks like superb hardware, and contrary to many others the use cases this is designed for look actually worth it. \"AVP but lighter and cheaper\" or \"looks designed for trains or planes\" . . . well, obviously.The key problem is it's Meta. People don't even trust other people near them to use Meta hardware, and the way they dealt with Oculus users was just grimy. From basically any other company this would be a very welcome device. Zuckerberg needs to fix the company first, because there's no such thing as a killer product good enough to overcome this hurdle.",
-          "I want a glasses-with-puck style like this with a great fov and resolution good enough for crisp text work and nothing else. for sound I just want it to be small enough to wear with headphones. It would be fantastic if I could run a real OS on it. I just want it for productivity, I dont care about the latest 3d gimmick movie or VR apps.The closest thing so far is a Bigscreen Beyond 2 w/ a laptop if it wasn't for the fact that you need a base station for the damn thing.I know my request is a fantasy right now, but I put this our there in case someone that could make it less of a fantasy reads this."
+          "I am so so glad Meta, or any company continue to invest in AR and VR. Not because I like AR / VR, to the contrary I am not a big fan of wearing a glasses to use it.But it is the only thing that will move Low Latency Computing forward. Everything in modern computing is slow, we might have increased throughput by 1000 or 10000x over the course of 30+ years. But latency has gone backwards, from Apps to OS UI response. Decent AR/VR experience mimicking the real world would require sub 10ms results. And this should finally force developers to take latency into account.",
+          "He's the only one on the couch. The only one at the sports game. The only one at the movie theatre.At the office, it was nice to see him put the glasses down and shake hands with the person who rocked up. If that person had arrived 'in VR' I think I would have been completely turned off.I guess if you want to be alone, it's a good device -- but the best times for me with modern technology have been when it brings me closer to other people. Online games were better on LAN. Couch co-op as a genre is one of the best console experiences I think. Meeting people in real life, who I spoke to on IRC -- again, a great moment.I'm not anti-tech, and the device form factor sure looks amazing -- but I can't imagine any moment I would use something like this at home while anyone else in my house was here."
         ]
       }
     },
@@ -62,14 +61,14 @@
       "source": "Hacker News",
       "published_at": "2026-09-23T22:38:16+00:00",
       "summary": "Linux support is coming to Snapdragon X2 Series",
-      "score": 191,
-      "comments": 87,
+      "score": 259,
+      "comments": 124,
       "discussion_url": "https://news.ycombinator.com/item?id=49823582",
       "extra": {
         "top_comments": [
+          "I hope Qualcomm upstreams all the device tree kernel level stuff to Linux for every laptop model. One of the things I don't like about Arm Laptops is—for example—how even if a SoC is supported upstream, if the manufacturer does not upload a device tree for their device, then you're cooked.I read that while these Snapdragon laptops do technically have UEFI + ACPI, the information they provide is not useful for Linux and is more coupled with Qualcomm's proprietary drivers on Windows. Therefore, device trees are needed on Linux (I could be wrong about the first part).",
           "I think a lot of people don't realize the level of performance Qualcomm has reached with these. This is the closest competition to Apple's M series that we have, for the laptop form factor at least. They are better than Intel and AMD's best. I'd love to buy an X2 laptop with Linux preinstalled and supported.",
-          "OpenBSD developer Tobias Heider (tobhe@) has already committed the first pieces of OpenBSD/arm64 support for these Qualcomm Snapdragon X2 Elite laptops.\"This gets USB, keyboard and touchpad working in ACPI mode on the HP Elitebook X G2q.\"https://marc.info/?l=openbsd-cvs&m=178891082169317&w=2Tobias (who also works for Canonical) recently demoed Ubuntu on mastodon and confirmed ARM EL2 works, meaning KVM support unlike previous generations.bsd.network/@tobhe/117122761215052773(I'd love to get my hands on one of these X2 Elite machines, hmu qcom.)",
-          "In case anyone else is wondering what they mean by linux support;> We're upstreaming core drivers for Snapdragon X2 Series — including the Hexagon NPU and Adreno GPU — to open the door to developers and partners.Glad this isn't going to be some semi-proprietary thing like support for chromebooks. Hopefully it continues."
+          "OpenBSD developer Tobias Heider (tobhe@) has already committed the first pieces of OpenBSD/arm64 support for these Qualcomm Snapdragon X2 Elite laptops.\"This gets USB, keyboard and touchpad working in ACPI mode on the HP Elitebook X G2q.\"https://marc.info/?l=openbsd-cvs&m=178891082169317&w=2Tobias (who also works for Canonical) recently demoed Ubuntu on mastodon and confirmed ARM EL2 works, meaning KVM support unlike previous generations.bsd.network/@tobhe/117122761215052773(I'd love to get my hands on one of these X2 Elite machines, hmu qcom.)"
         ]
       }
     },
@@ -80,14 +79,32 @@
       "source": "Hacker News",
       "published_at": "2026-09-23T21:01:48+00:00",
       "summary": "VSCode's SSH Agent Is Bananas (2025)",
-      "score": 143,
-      "comments": 93,
+      "score": 166,
+      "comments": 109,
       "discussion_url": "https://news.ycombinator.com/item?id=49822555",
       "extra": {
         "top_comments": [
+          "The author didn't go into much explanation behind \"I would be a little nervous about letting people VSCode-remote-edit stuff on dev servers\".If you are worried about having VSCode server-side binaries running directly on the bare metal OS you can isolate the workspace using containers or VMs.",
           "Missing a (2025)FYI VSCode's SSH Agent is a godsend for remote development - the \"disadvantages\" that Fly lists are part of its advantages. I've worked in several teams that have made extensive use of the extension, and it's never been an issue. You can restrict SSH access arbitrarily to ensure whatever security or access guardrails you need.",
-          "So a program that is specifically designed to edit files and run arbitrary commands on a remote machine... can do so. Not sure where the bananas part comes in. Sending a binary over SSH/SFTP might sound weird at first glance, but VSCode can't assume that your remote machine can access the wider internet, and it needs a reliable way to bootstrap the agent on the remote. Shipping it over the SSH tunnel is the natural solution.",
-          "The agent is supposed to run on a remote dev box. The purpose is to make the remote machine an extension of your local one, to run extensions, containers, install packages, test deployments, forward ports and tons more. Tunneling is part of the feature set. If you are installing it on production servers and are surprised by its behavior that’s on you."
+          "So a program that is specifically designed to edit files and run arbitrary commands on a remote machine... can do so. Not sure where the bananas part comes in. Sending a binary over SSH/SFTP might sound weird at first glance, but VSCode can't assume that your remote machine can access the wider internet, and it needs a reliable way to bootstrap the agent on the remote. Shipping it over the SSH tunnel is the natural solution."
+        ]
+      }
+    },
+    {
+      "id": "49824686",
+      "title": "Feds Target AI Critics as \"Foreign Agents\"",
+      "url": "https://www.kenklippenstein.com/p/feds-think-ai-critics-are-foreign",
+      "source": "Hacker News",
+      "published_at": "2026-09-24T00:41:31+00:00",
+      "summary": "Feds Target AI Critics as \"Foreign Agents\"",
+      "score": 163,
+      "comments": 145,
+      "discussion_url": "https://news.ycombinator.com/item?id=49824686",
+      "extra": {
+        "top_comments": [
+          "When the CEOs of these companies are saying that we will risk extinction and jobs will be decimated, why do you even need a \"foreign agent\"?",
+          "CCP is pushing and amplifying AI opposition efforts, that’s a fact regardless of US politics. CCP is also working hard to smuggle around American export control laws for AI tech, at the same time.https://www.justice.gov/opa/pr/american-citizen-who-worked-a...https://www.latimes.com/california/story/2026-07-28/fbi-raid...https://www.justice.gov/opa/pr/chinese-national-and-two-us-c...https://www.justice.gov/opa/pr/former-google-engineer-found-...Etc",
+          "> O'LearyPeople with 15, 20, 25 years in the datacenter and telecom industry also think O'Leary is a joke. He has no previous legitimate experience in the sector to be making high budget decisions on anything.There's no need for any CCP involvement or foreign agents to clown on O'Leary.The fact that he's successfully raising some large amount of capital to execute his projects says more about how desperate some of the sources of funding are to invest in any \"hyperscale\" datacenter project. Or how gullible they are."
         ]
       }
     },
@@ -98,32 +115,14 @@
       "source": "Hacker News",
       "published_at": "2026-09-23T18:02:08+00:00",
       "summary": "A brief history of Windows scroll bar shortcuts",
-      "score": 114,
-      "comments": 52,
+      "score": 126,
+      "comments": 63,
       "discussion_url": "https://news.ycombinator.com/item?id=49820065",
       "extra": {
         "top_comments": [
           "> Sadly, almost nobody uses Win32 scroll bars any more. Everybody uses frameworks that provide their own custom scroll bars.Yeah and, sadly, those framework implementations are all mired in some amount of bollocks due to lack of care, attention, or interest from their creators. And by bollocks I mean they either behave differently or do less.But I very much miss the days of consistent UX across Windows applications, or indeed applications on any other OS.I don’t mind if you want a custom look and feel for your application: I very much do mind if your widgets don’t behave like other widgets of the same type or, at least, where any variance is at least a superset of OS level functionality rather than a crippled subset.I was always frustrated by how hard Microsoft made this as time wore on and they moved through more and more UI frameworks, and then offerings like CEF and Electron entered the mix as well. The UI story on Windows started getting particularly messy around 2007 or so and has been in an awful state of confusion for at least 15 years now.I literally have no idea what I’d use to develop a Windows desktop app nowadays and, honestly, none of the options fill me with enthusiasm. With more recent desktop experiments, partly because whilst I might want them to run on Windows I don’t primarily work on Windows, I’ve gone the Rust + Qt route simply because it offers native performance and it doesn’t feel like I’m getting rug pulled by either set of creators any time soon.",
           "IMO, \"scroll here\" should be the default action for clicking on a scrollbar. There are already good keyboard shortcuts for page up and page down, but there cannot be a keyboard shortcut for \"scroll here\". It's wasting the capability of the mouse to duplicate keyboard functionality when you could be benefiting from unique mouse-only functionality.GTK gets this right, and Qt does not.",
-          "It’s about time that Raymond Chen starts ranting about the increasing amount of UI inconsistencies and loss of formerly ubiquitous features. (Or maybe I missed previous installments.)"
-        ]
-      }
-    },
-    {
-      "id": "49823195",
-      "title": "We just shipped support for the ugliest part of HTTP: Vary",
-      "url": "https://blog.cloudflare.com/vary-support/",
-      "source": "Hacker News",
-      "published_at": "2026-09-23T22:03:21+00:00",
-      "summary": "We just shipped support for the ugliest part of HTTP: Vary",
-      "score": 93,
-      "comments": 15,
-      "discussion_url": "https://news.ycombinator.com/item?id=49823195",
-      "extra": {
-        "top_comments": [
-          "I've been wanting this from Cloudflare for years.The classic problem here is if you do that thing where user agents that send \"accept: text/html\" get HTML, while user agents that don't get JSON or some other format.This used to be impossible to deploy behind Cloudflare caching, because they ignored the Vary header on anything other than images - so you risked caching the JSON version and then serving it up to someone who was expecting HTML.(Independent of the Cloudflare feature I ended up deciding never to use that pattern, because I prefer having URL that predictably returns HTML or JSON - I add a .json suffix to my apps to serve JSON instead.)",
-          "I had not actually realized what a mess Vary is.Wow, sometimes I think it's amazing the web works at all!",
-          "If this surprises you, remember that Cloudflare doesn't cache HTML by default."
+          "Very worrying trend is thin scrollbars on websites, or in some rare cases - scrollbar just hidden. Fortunately Firefox has a setting in about:config: layout.css.scrollbar-width-thin.disabled=true ."
         ]
       }
     },
@@ -134,8 +133,8 @@
       "source": "Hacker News",
       "published_at": "2026-09-23T17:49:07+00:00",
       "summary": "Making Tailscale Faster",
-      "score": 90,
-      "comments": 40,
+      "score": 116,
+      "comments": 43,
       "discussion_url": "https://news.ycombinator.com/item?id=49819880",
       "extra": {
         "top_comments": [
