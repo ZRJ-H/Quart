@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-09-23T12:57:58.716730+08:00",
+  "cached_at": "2026-09-24T11:01:38.607964+08:00",
   "articles": [
     {
-      "id": "49803892",
-      "title": "Claude Opus 5.5",
-      "url": "https://www.anthropic.com/claude-opus-5-5",
+      "id": "49819221",
+      "title": "Italian parliament votes for return to nuclear energy",
+      "url": "https://apnews.com/article/italy-nuclear-chernobyl-4891b6b7c7791ae84db6b0bf0f7cf567",
       "source": "Hacker News",
-      "published_at": "2026-09-22T16:29:05+00:00",
-      "summary": "Claude Opus 5.5",
-      "score": 1353,
-      "comments": 868,
-      "discussion_url": "https://news.ycombinator.com/item?id=49803892",
+      "published_at": "2026-09-23T17:06:16+00:00",
+      "summary": "Italian parliament votes for return to nuclear energy",
+      "score": 612,
+      "comments": 396,
+      "discussion_url": "https://news.ycombinator.com/item?id=49819221",
       "extra": {
         "top_comments": [
-          "> Claude Opus 5.5 is our first release since we called for pacing the frontier.Interesting how the very first line is used to remind the reader of their call to pace the frontier just last week, and everything else after that line is to demonstrate with very specific numbers how they absolutely are not pacing.",
-          "Finally that price drop Prices per 1M tokens Claude Opus 5.5 Claude Opus 5 Cache reads $0.20 $0.50 Input tokens $4 $5 Output tokens $20 $25 Cache writes $5 $6.25 Opus 5 is the model with highest spend on openrouter (https://openrouter.ai/rankings#task-spend) and it seems plausible that Opus 5 is/was the highest spend model in the world, and certainly Anthropic's biggest moneymaker.If you are forced to reduce price despite raising capabilities, that certainly tells something about the market, and potentially about Anthropic future profitability too, since this model is their biggest topline contributor",
-          "> Communication. Opus 5.5 communicates more naturally than prior models. Early testers found its writing clearer and easier to follow, which addresses some of the common feedback we heard about Opus 5. It puts the most important information up front, and its style makes it a better work partner over long sessions. As one early tester put it, “it writes the way I do.” In our own use, this has made Opus 5.5’s work easier to follow and check—which is a safety benefit as well as a practical one.I think this is what I'm most interested in. I mostly moved to Astra because I just can't work all day with the Claude Opus 5/Fable writing style. I don't think Astra is a better model, but it's the first OpenAI one that seemed good enough to me. Definitely keen to try Opus 5.5 and see if this claim is real."
+          "I've seen quite a few SMR proposals over the last couple of years and not a single one that dared to address the whole cycle from deployment to eventual decommission as a function of the total revenues - costs to operate. Most of these projects seem to be made to bilk investors or governments rather than to actually produce power. The day Italy produces the first KWh that is net profitable to the operators without counting subsidies I will be highly amazed, and that's assuming they get to operational in the first place.",
+          "I'm Italian and I'm super happy with this.The referendum that made nuclear energy illegal in Italy was held right after the accident of Chernobyl; people voted with their gut, not with their mind.Curiously enough, some Italian town signs still have a small sub-sign reading \"denuclearized municipality\" (example: https://live.staticflickr.com/1421/712461235_e46a2c7db5_z.jp... )",
+          ">Rather than reviving the large reactors of the past, the government is focusing on small modular reactors, or SMRs, and other advanced technologies that supporters say could be safer, more flexible and quicker to build.>The legislation does not authorize the construction of any reactors. Instead, it creates the regulatory foundation needed before future projects can be proposed, assessed and approved.Giant step for SMRs. I'm hopefull for greater NATO collaboration regarding energy security if SMRs prove commercially viable."
         ]
       }
     },
     {
-      "id": "49805509",
-      "title": "GPT-6 Sol and Luna",
-      "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+      "id": "49820134",
+      "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
+      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
       "source": "Hacker News",
-      "published_at": "2026-09-22T18:00:34+00:00",
-      "summary": "GPT-6 Sol and Luna",
-      "score": 1344,
-      "comments": 652,
-      "discussion_url": "https://news.ycombinator.com/item?id=49805509",
+      "published_at": "2026-09-23T18:06:47+00:00",
+      "summary": "Claude discovers a novel enzyme system with CRISPR-like repeats",
+      "score": 533,
+      "comments": 559,
+      "discussion_url": "https://news.ycombinator.com/item?id=49820134",
       "extra": {
         "top_comments": [
-          "GPT-6 Luna being half the price of GPT-5.6 Luna is a really big deal.Here's GPT-6 Luna pelicans: https://tools.simonwillison.net/markdown-svg-renderer?url=ht...And GPT-6 Sol: https://tools.simonwillison.net/markdown-svg-renderer?url=ht...Scroll to the bottom for the GPT-6 Sol max one: https://tools.simonwillison.net/markdown-svg-renderer?url=ht...For comparison, here are the pelicans I got for GPT-6 Astra: https://tools.simonwillison.net/markdown-svg-renderer?url=ht... - I still like the Astra Max one best.Here's a comparison grid showing all of the GPT-6 and GPT-5.6 pelicans at all effort levels: https://static.simonwillison.net/static/2026/gpt-6-and-5.6.h...The grid is actually really interesting, because it shows that the 5.6 family default to brighter colors than the 6 family.",
-          "I've been working with agents all year, but 5.6 Sol was some sort of sweet spot for me. Something about how it communicated verbally and its engineering instincts just clicked for me, and I was able to somehow predict it and jam with it. Like a colleague you click with. It's the first model I've gotten attached to. I'm concerned that whatever model supercedes it, while technically better, just won't feel quite as natural to work with. And this makes me feel very professionally vulnerable to the labs. I miss the days when my crucial tooling came from companies as reliable and predictable as, say, Jetbrains.",
-          "At this point, the deciding factors for me between Claude Code 20x and Codex Pro 20x are:1/ Usage limits: downstream of input/output cost, but resets and obscure windows and odd 20x plan / 5x plan != 4x usage math throw a wrench into it. Winner right now is Codex by a mile, especially when you factor in the fact that ChatGPT usage (even 6 Astra Pro) is essentially unmetered on the 20x plan. Always a bummer when asking if I should see a doctor about a rash means I can't code as much. It's also is a godsend if you use an MCP like oracle to automate the process of calling the Pro model on particularly tough problems, giving better planning results or deeper code analysis without burning usage.2/ Context window in the harness. Claude Code wins on this. There used to be a toml file workaround for Codex to extend the GPT context window to 1m, but this stopped working on the plans and only on per-token billing (ETA: noname120 pointed out this is no longer the case and it can be enabled again [1]). 252k is just not enough. Codex's compaction is very good, fwiw, but it happens so frequently that even a model as powerful as Astra sometimes loses the plot on long-running tasks.3/ Ability to use the plan outside of the official harness. Codex wins. Anthropic does shit like bills requests as extra usage if it sees a hermes.md in a commit.I've subscription hopped a bunch, and at times I've had both, but I keep coming back to Codex because it wins on 2/3.ETA: apparently I haven't been Keeping Up With the Altmans and new 20x signups have been disabled for a few weeks. I am grandfathered in, which makes the comparison above pretty much moot.[1]https://news.ycombinator.com/item?id=49806060"
+          "Current evolved Cas9 (CRISPR) variants are highly efficient and relatively unconstrained in terms of their human genome targeting coverage. Smaller nucleases and higher targeting specificity would be useful. But therapeutic use is mostly limited by delivery.This seems revolve around a known retron-like reverse transcriptase. A sober framing would be something like: Claude identified a previously undescribed genomic arrangement around a known reverse transcriptase. Not all that sexy.For now, this is mostly a story about how AI can be used to parse existing data to discover new biology (which is fantastic!).",
+          "> While combing through the raw DNA sequence near the RT, the agent exclaimed: “[The DNA next to the RT] is spectacular: I can see by eye a tandem repeat array … that's a CRISPR-like … repeat array?!”I love that with AI discoveries, we can relive the discoveries from agent transcripts like this.I'm sort of imagining future histories involving notable AI events peppered with direct quotes like these.",
+          "Anthropic: You absolutely cannot, under any circumstances, use Claude for bio-engineering. It could literally end humanity.Also Anthropic: Claude discovers a new way to edit your genome!"
         ]
       }
     },
     {
-      "id": "49801324",
-      "title": "OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005",
-      "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
+      "id": "49824268",
+      "title": "Meta VR Glasses",
+      "url": "https://www.meta.com/vr-glasses/",
       "source": "Hacker News",
-      "published_at": "2026-09-22T13:52:15+00:00",
-      "summary": "OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005",
-      "score": 608,
-      "comments": 373,
-      "discussion_url": "https://news.ycombinator.com/item?id=49801324",
+      "published_at": "2026-09-23T23:47:56+00:00",
+      "summary": "Meta VR Glasses",
+      "score": 260,
+      "comments": 231,
+      "discussion_url": "https://news.ycombinator.com/item?id=49824268",
       "extra": {
         "top_comments": [
-          "For anybody interested, the actual encrypted message: BTTE UM ANGABE DES MARSQWEGES X BEFINDE MIQ IN X ROSENOW ROSENOW X SOFORT FUNKANTWORT X WASCHBBSCH which, given misspellings, translates approximately to: Please specify the route of march. I am in Rosenow, Rosenow. Immediate reply by radio. Waschbusch.",
-          "gemini 3.8 flash in anrigravitiy oneshoted the descryption in about 45min non-steered run (opus is still running with the task, has some script to run for about 100min)PromptDecrypt encrypted with enigma `ICRVSORMCCWQTATYEVFXDBZGGSNXWLPSYWZYTCBSWULRTBZCVGODVJUSLSOOMJQJZSXSEBZPEYMDNXJYTC`ResultRaw Decryption (verbatim from the machine): BTTEUMANGABEDESMARSQWEGESXBEFINDEMIQINXROSENOWROSENOWXSOFORTFUNKANTWORTXWASCHBBSCH 2. Segmented German (with military telegraph conventions expanded): BTTE UM ANGABE DES MARSQWEGES . BEFINDE MIQ IN : ROSENOW ROSENOW . SOFORT FUNKANTWORT . WASCHBBSCH(Standard German radio conventions: X represents punctuation/spacing; Q was frequently substituted for CH to prevent transmission ambiguities; BTTE was an enciphering operator typo for BITTE; WASCHBBSCH was an operator typo for the signature WASCHBUSCH).3. Corrected German: „Bitte um Angabe des Marschweges. Befinde mich in Rosenow, Rosenow. Sofort Funkantwort. Waschbusch.“4. English Translation: \"Please specify the route of march. I am in Rosenow, Rosenow. Immediate reply by radio. Waschbusch.\"Cryptographic Verification Re-encrypting the plaintext using the identical key settings reproduces the exact ciphertext byte-for-byte:Enigma ( M raw ) = ICRVSORMCCWQTATYEVFXDBZGGSNXWLPSYWZYTCBSWULRTBZCVGODVJUSLSOOMJQJZSXSEBZPEYMDNXJYTC Enigma(M raw)=ICRVSORMCCWQTATYEVFXDBZGGSNXWLPSYWZYTCBSWULRTBZCVGODVJUSLSOOMJQJZSXSEBZPEYMDNXJYTC 19:10",
-          "Neat, but \"did it entirely on its own\" is incongruous with \"developing the necessary Python and C++ software for an Enigma simulator\".I'd start by asking how much of that generated software is novel, or easily found on the web? Then, how much of the breaking process was offloaded to that software? If Astra is just handing off tasks to another computer, then I'm not sure how much credit it deserves. Finally, it looks like Astra provided some useful insights which narrowed down the search. Were these insights cribbed from elsewhere?"
+          "I had an Oculus Quest and it was a really great device. After the \"Meta\" rebrand, the quality rapidly decreased and now it wants me to upload my ID to Meta to keep using it. Absolutely not! Zuckerberg already has way too much information on me, uploading my state issued identification to them is such an insane ask, I will never do it. While this looks like interesting hardware, the company behind it has unacceptable and user-hostile practices, so I'll pass.",
+          "Looks like superb hardware, and contrary to many others the use cases this is designed for look actually worth it. \"AVP but lighter and cheaper\" or \"looks designed for trains or planes\" . . . well, obviously.The key problem is it's Meta. People don't even trust other people near them to use Meta hardware, and the way they dealt with Oculus users was just grimy. From basically any other company this would be a very welcome device. Zuckerberg needs to fix the company first, because there's no such thing as a killer product good enough to overcome this hurdle.",
+          "I want a glasses-with-puck style like this with a great fov and resolution good enough for crisp text work and nothing else. for sound I just want it to be small enough to wear with headphones. It would be fantastic if I could run a real OS on it. I just want it for productivity, I dont care about the latest 3d gimmick movie or VR apps.The closest thing so far is a Bigscreen Beyond 2 w/ a laptop if it wasn't for the fact that you need a base station for the damn thing.I know my request is a fantasy right now, but I put this our there in case someone that could make it less of a fantasy reads this."
         ]
       }
     },
     {
-      "id": "49806430",
-      "title": "Pentagon says overreliance on AI contributed to missile strike on Iran school",
-      "url": "https://www.bloomberg.com/graphics/2026-iran-school-attack/",
+      "id": "49823582",
+      "title": "Linux support is coming to Snapdragon X2 Series",
+      "url": "https://www.qualcomm.com/news/onq/2026/09/snapdragon-summit-agentic-ai-pcs-linux",
       "source": "Hacker News",
-      "published_at": "2026-09-22T19:03:38+00:00",
-      "summary": "https://archive.ph/0V37g",
-      "score": 521,
-      "comments": 256,
-      "discussion_url": "https://news.ycombinator.com/item?id=49806430",
+      "published_at": "2026-09-23T22:38:16+00:00",
+      "summary": "Linux support is coming to Snapdragon X2 Series",
+      "score": 191,
+      "comments": 87,
+      "discussion_url": "https://news.ycombinator.com/item?id=49823582",
       "extra": {
         "top_comments": [
-          "> It found the U.S. “failed in its obligation to do everything feasible to verify” that the school was a military objective and that the failure “went beyond mere negligence.” The report said the United States “directed the strikes at the building of the school while being aware of a substantial risk of striking a civilian object and acting recklessly as regards the possibility that this would happen.”Reading the details, \"AI\" doesn't really seem like the culprit -it's a scapegoat.The intelligence that it was no longer a military target never entered the target database, the team that was responsible for vetting the target list was gutted, and said team was never even consulted.The White House wanted 1000 targets and pulled from their database without any due diligence. Whether it was an AI call or an SQL query - this was from pure human maliciousness and incompetence.",
-          "The UN needs a seal team 6 to take out everyone at the pentagon as it's home to the worlds biggest and most babybloodthirsty terrorists",
-          "Related: the U.S. nearly boarded a Chinese boat that AI incorrectly flagged as carrying nuclear weapons materiel.https://gizmodo.com/almost-started-a-war-us-military-nearly-..."
+          "I think a lot of people don't realize the level of performance Qualcomm has reached with these. This is the closest competition to Apple's M series that we have, for the laptop form factor at least. They are better than Intel and AMD's best. I'd love to buy an X2 laptop with Linux preinstalled and supported.",
+          "OpenBSD developer Tobias Heider (tobhe@) has already committed the first pieces of OpenBSD/arm64 support for these Qualcomm Snapdragon X2 Elite laptops.\"This gets USB, keyboard and touchpad working in ACPI mode on the HP Elitebook X G2q.\"https://marc.info/?l=openbsd-cvs&m=178891082169317&w=2Tobias (who also works for Canonical) recently demoed Ubuntu on mastodon and confirmed ARM EL2 works, meaning KVM support unlike previous generations.bsd.network/@tobhe/117122761215052773(I'd love to get my hands on one of these X2 Elite machines, hmu qcom.)",
+          "In case anyone else is wondering what they mean by linux support;> We're upstreaming core drivers for Snapdragon X2 Series — including the Hexagon NPU and Adreno GPU — to open the door to developers and partners.Glad this isn't going to be some semi-proprietary thing like support for chromebooks. Hopefully it continues."
         ]
       }
     },
     {
-      "id": "49805278",
-      "title": "'We hacked the FBI:' Hackers say they have data on all FBI employees",
-      "url": "https://www.404media.co/we-hacked-the-fbi-hackers-say-they-have-data-on-all-fbi-employees/",
+      "id": "49822555",
+      "title": "VSCode's SSH Agent Is Bananas (2025)",
+      "url": "https://fly.io/blog/vscode-ssh-wtf/",
       "source": "Hacker News",
-      "published_at": "2026-09-22T17:46:02+00:00",
-      "summary": "https://archive.ph/96YBP",
-      "score": 502,
-      "comments": 350,
-      "discussion_url": "https://news.ycombinator.com/item?id=49805278",
+      "published_at": "2026-09-23T21:01:48+00:00",
+      "summary": "VSCode's SSH Agent Is Bananas (2025)",
+      "score": 143,
+      "comments": 93,
+      "discussion_url": "https://news.ycombinator.com/item?id=49822555",
       "extra": {
         "top_comments": [
-          "At this point, no one seems capable of keeping a large database safe. I assume all medical and biographical information that exists is in the hands of the major state actors.China hacked 22.1 million records of US government employees:https://en.wikipedia.org/wiki/2015_Office_of_Personnel_Manag...",
-          "Release the jui-cy bits!",
-          "There’s a scene in Battlestar Galactica (2004) where someone asks Captain Adama why the Galactica doesn’t have networked computers. So the cylons can’t hack the ship…"
+          "Missing a (2025)FYI VSCode's SSH Agent is a godsend for remote development - the \"disadvantages\" that Fly lists are part of its advantages. I've worked in several teams that have made extensive use of the extension, and it's never been an issue. You can restrict SSH access arbitrarily to ensure whatever security or access guardrails you need.",
+          "So a program that is specifically designed to edit files and run arbitrary commands on a remote machine... can do so. Not sure where the bananas part comes in. Sending a binary over SSH/SFTP might sound weird at first glance, but VSCode can't assume that your remote machine can access the wider internet, and it needs a reliable way to bootstrap the agent on the remote. Shipping it over the SSH tunnel is the natural solution.",
+          "The agent is supposed to run on a remote dev box. The purpose is to make the remote machine an extension of your local one, to run extensions, containers, install packages, test deployments, forward ports and tons more. Tunneling is part of the feature set. If you are installing it on production servers and are surprised by its behavior that’s on you."
         ]
       }
     },
     {
-      "id": "49802161",
-      "title": "OpenAI is well positioned to fast-follow Jev",
-      "url": "https://arcturus-labs.com/blog/2026/09/21/will-openai-eat-jevs-lunch/",
+      "id": "49820065",
+      "title": "A brief history of Windows scroll bar shortcuts",
+      "url": "https://devblogs.microsoft.com/oldnewthing/20260922-00/?p=112719/",
       "source": "Hacker News",
-      "published_at": "2026-09-22T14:42:59+00:00",
-      "summary": "OpenAI is well positioned to fast-follow Jev",
-      "score": 275,
-      "comments": 199,
-      "discussion_url": "https://news.ycombinator.com/item?id=49802161",
+      "published_at": "2026-09-23T18:02:08+00:00",
+      "summary": "A brief history of Windows scroll bar shortcuts",
+      "score": 114,
+      "comments": 52,
+      "discussion_url": "https://news.ycombinator.com/item?id=49820065",
       "extra": {
         "top_comments": [
-          "Every major AI shop has a ton of in-house classifiers already, big, small, generalist, specialized. Some are used in inference pipelines (e.g. safeguards), some are used in data preparation, training, analysis and investigation, research, various one-off and intermediate tasks etc. Offering them on a public API doesn't always make business sense. I don't see much substance to this buzz, looks like people that are new to all this are discovering that classifiers exist, they are more efficient at classification, and many tasks commonly done with generative models are classification in disguise. Which is not bad at all, a fresh look at their use is great to have.",
-          "This article is extraordinarily hard to read. It’s tummelvisioned on OpenAI and things like tool calling which are only relevant to the extent that llms have been tuned to make relative choices, but this applies to all LLMs. Also, some really outdated references. LLM written, perhaps?Also, moat discussion is the lowest form of discussion. I don’t care if jev has a moat. Did it get the interface right? What other past ideas have we overlooked that if given some love, could kick the door down like jev did?Really silly stuff.. people wanting to talk about moats when there’s no castle. Moat talk merely projects the illusion of being engaged but, much more often than not, it’s hollow engagement.",
-          "I find it unlikely. OpenAI is all in training models with reasoning with RL, and Jev-like models are the total opposite. They are made to not reason at all to be fast. If you want to add reasoning on top, you might as well use a conventional LLM because you lose the price and speed benefits when you output auto-regressive tokens. I don't think OpenAI will even bother with this.> My main assumption is that Jev is using something quite close to a conventional large language model. As evidence of this, Latent Space reports that many of the early clones are indeed LLM-based.Not proof that this is the case with Jev though. It might use non causal text encoder for the state, which could make sense given that it's very good for its price."
+          "> Sadly, almost nobody uses Win32 scroll bars any more. Everybody uses frameworks that provide their own custom scroll bars.Yeah and, sadly, those framework implementations are all mired in some amount of bollocks due to lack of care, attention, or interest from their creators. And by bollocks I mean they either behave differently or do less.But I very much miss the days of consistent UX across Windows applications, or indeed applications on any other OS.I don’t mind if you want a custom look and feel for your application: I very much do mind if your widgets don’t behave like other widgets of the same type or, at least, where any variance is at least a superset of OS level functionality rather than a crippled subset.I was always frustrated by how hard Microsoft made this as time wore on and they moved through more and more UI frameworks, and then offerings like CEF and Electron entered the mix as well. The UI story on Windows started getting particularly messy around 2007 or so and has been in an awful state of confusion for at least 15 years now.I literally have no idea what I’d use to develop a Windows desktop app nowadays and, honestly, none of the options fill me with enthusiasm. With more recent desktop experiments, partly because whilst I might want them to run on Windows I don’t primarily work on Windows, I’ve gone the Rust + Qt route simply because it offers native performance and it doesn’t feel like I’m getting rug pulled by either set of creators any time soon.",
+          "IMO, \"scroll here\" should be the default action for clicking on a scrollbar. There are already good keyboard shortcuts for page up and page down, but there cannot be a keyboard shortcut for \"scroll here\". It's wasting the capability of the mouse to duplicate keyboard functionality when you could be benefiting from unique mouse-only functionality.GTK gets this right, and Qt does not.",
+          "It’s about time that Raymond Chen starts ranting about the increasing amount of UI inconsistencies and loss of formerly ubiquitous features. (Or maybe I missed previous installments.)"
         ]
       }
     },
     {
-      "id": "49804316",
-      "title": "Claude Opus 5.5 Intelligence, Performance and Price Analysis (Max)",
-      "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
+      "id": "49823195",
+      "title": "We just shipped support for the ugliest part of HTTP: Vary",
+      "url": "https://blog.cloudflare.com/vary-support/",
       "source": "Hacker News",
-      "published_at": "2026-09-22T16:51:31+00:00",
-      "summary": "Claude Opus 5.5 Intelligence, Performance and Price Analysis (Max)",
-      "score": 261,
-      "comments": 77,
-      "discussion_url": "https://news.ycombinator.com/item?id=49804316",
+      "published_at": "2026-09-23T22:03:21+00:00",
+      "summary": "We just shipped support for the ugliest part of HTTP: Vary",
+      "score": 93,
+      "comments": 15,
+      "discussion_url": "https://news.ycombinator.com/item?id=49823195",
       "extra": {
         "top_comments": [
-          "This is the page for the \"max\" reasoning setting. The page for xhigh is https://artificialanalysis.ai/models/claude-opus-5-5-xhigh and the page for medium (the default setting) is https://artificialanalysis.ai/models/claude-opus-5-5-mediumI've failed twice to get \"Generate an SVG of a pelican riding a bicycle\" to work with max, because in both cases it ran out of the 128,000 token budget while it was still reasoning about the problem.I'm suspicious that \"max\" may be virtually useless if it's that easy to have it overthink to the point that it doesn't get to a response.Transcript for one attempt here - expand the \"Reasoning trace\" bit to see it: https://tools.simonwillison.net/markdown-svg-renderer?url=ht...",
-          "Do these evaluations get re run a few weeks after launch? I started doing that yesterday for our internal dataset and found Sol’s performance had regressed to be equal to Luna’s. Granted this was one run, but something I’m becoming more concerned about, the model providers want to quickly prove they’re the best, people switch to them, then they pull the rug.",
-          "Half the cost per task compared to Opus 5, comparing high effort to high effort. That's just really nice.Edit: https://artificialanalysis.ai/models/claude-opus-5-5?models=..."
+          "I've been wanting this from Cloudflare for years.The classic problem here is if you do that thing where user agents that send \"accept: text/html\" get HTML, while user agents that don't get JSON or some other format.This used to be impossible to deploy behind Cloudflare caching, because they ignored the Vary header on anything other than images - so you risked caching the JSON version and then serving it up to someone who was expecting HTML.(Independent of the Cloudflare feature I ended up deciding never to use that pattern, because I prefer having URL that predictably returns HTML or JSON - I add a .json suffix to my apps to serve JSON instead.)",
+          "I had not actually realized what a mess Vary is.Wow, sometimes I think it's amazing the web works at all!",
+          "If this surprises you, remember that Cloudflare doesn't cache HTML by default."
         ]
       }
     },
     {
-      "id": "49808023",
-      "title": "Microsoft killed FoxPro in 2007. Anyway, here's FoxPro revived",
-      "url": "https://foxscript.org/",
+      "id": "49819880",
+      "title": "Making Tailscale Faster",
+      "url": "https://tailscale.com/blog/making-tailscale-faster",
       "source": "Hacker News",
-      "published_at": "2026-09-22T21:00:30+00:00",
-      "summary": "Visual FoxPro stopped at version 9 in 2007. A surprising amount of it is still running, in 32 bits, because rewriting a 20-year-old business app is how you lose the business. A customer wanted to keep milking their app for the foreseeable future, so here it is: the same language on a new runtime (Rust, compiled to wasm, checked against the real vfp9.exe), tables no longer stopped at 2 GB, the old 32-bit .fll add-ins still loading, and lambdas, JSON and an HTTP server bolted on for good measure. Reports are not done and the builds are unsigned. MIT because why not?",
-      "score": 241,
-      "comments": 154,
-      "discussion_url": "https://news.ycombinator.com/item?id=49808023",
+      "published_at": "2026-09-23T17:49:07+00:00",
+      "summary": "Making Tailscale Faster",
+      "score": 90,
+      "comments": 40,
+      "discussion_url": "https://news.ycombinator.com/item?id=49819880",
       "extra": {
         "top_comments": [
-          "I know there are still a few niche industry that has an industry standard program written in Visual FoxPro, and I remember as pre COVID 2019 they were still using it. ( Edit: I just called and asked, still using it as of 2026 )Niche but no small business, commodity with over $400M USD annual revenue, the industry together than easily $2B+.If it is not broke, don't fix it. And there are industry that is extremely conservative in anything software, they will just keep it running for as long as they could.I used to be sad that we don't have something better to replace these antique software. Now I have come to appreciate it, mostly because newer software haven't show they have manage to add value in the slightest. And most of the time they simply don't work as well.Delphi, Visual FoxPro, Visual Basic, Flash. I used to think one day we will have something that is not only faster, easier and scalable replacement of those. Instead everything went more technical, more complex, enterprisy and non-user friendly.And to the Author of the project. Thank You for making it.",
-          "Here’s my problem with reviving FoxPro in any form: there’s a huge security hole in the Database Container (DBC) design. For DBCs to be useful, they must be read/write to all users (there is no permissions scheme). DBCs have stored procedures that can run any FoxPro code, including Win32 calls made from the FoxPro runtime. The stored procedures are stored as plain text in a “memo” field. Do you see where this is going? With a little technical knowledge, one can modify that INSERT trigger to whatever you like. EDIT: as the DB is just files in the file system, modifications can be made using a text editor, bypassing any checks in the FoxPro runtime. FoxPro just executes what it finds in there.My recommendation is to get rid of the DBF/DBC files and move to a SQL DB of some flavor ASAP. If you have the source code, use ODBC or OLE DB to point to a server.Source: filed that bug over 20 years ago when I worked on the Fox team. No, it wasn’t going to get fixed without rewriting large parts of how the DB engine worked.",
-          "I worked with a physician's office in 2006, and the lead physician had cobbled together a system for patient tracking using Visual FoxPro. It was a monstrosity, and using it over a network drive gave all sorts of file locks and issues with multiple people changing the same record (usually the physician and front of house staff when checking the patient out).I finally got the physician to switch to a proper client/server architecture using .NET WinForms and ASP.NET RPC calls. All issues went away, and I was even able to allow staff members to edit the interface to set what mattered to them most at the top of the application, by building the lab testing form in XML so they could move the X/Y coordinates to where they wanted them. It wasn't even a feature I had thought of, just a physician looking through the technology and figuring out how it worked (luckily the business and security logic were on the server, so a bad actor could only have destroyed their own local copy of the app)."
+          "(Tailscale cofounder) I see a few comments here that using kernel wireguard would make it faster; it’s not really that simple. In fact, for a while (and we wrote a blog post about it), our optimizations made wireguard-go faster than kernel wireguard because it was better optimized. They adopted some of those improvements and now we’re on to the next order of magnitude together.For really high bandwidth cases, things like DPDK are the long term best choice and are primarily userspace, for good reasons. Kernel mode is not the pure benefit it once was (if it ever was).Separately, wireguard itself has a problem that the crypto suite it uses is not supported by hardware accelerators. So if we want to get into the hundreds of gigabits range, we will possibly need to switch packet formats entirely. (But, wireguard also needs to update to support post-quantum so maybe they’ll fix both problems at the same time and we can join in.)",
+          "In my opinion, this is Tailscale's largest issue.It is slow. It cannot achieve speeds of greater than 1Gbps on clients systems (Windows & Mac), where you'd normally see it being used. On Linux, it struggles to achieve 10Gbps even when using a synthetic large packet benchmark [1]. With an IMIX benchmark, it would not be competitive whatsoever.This problem is fixable. WireGuard achieves higher performance (Kernel vs Userspace implementation) and IPsec implementations can achieve 100Gbps/400Gbps (DPDK/XDP). Zero-copy networking.From this blog post, I can say Tailscale still seems to not have the appetite for that, which is a shame.[1] https://tailscale.com/blog/more-throughput",
+          "I used to LOVE tailscale. Then I put wireguard on my home network exposed to the internet with a dynamic DNS provider and it immediately became irrelevant. Not only is raw wireguard more stable (I don't have to fight the DNS issues on my mobile phones) it feels faster and is amazingly simple to set up."
         ]
       }
     }
