@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-09-25T11:01:12.451078+08:00",
+  "cached_at": "2026-09-25T13:10:12.375117+08:00",
   "articles": [
     {
       "id": "49831968",
@@ -8,8 +8,8 @@
       "source": "Hacker News",
       "published_at": "2026-09-24T15:26:12+00:00",
       "summary": "F-Droid 2.0",
-      "score": 984,
-      "comments": 267,
+      "score": 1064,
+      "comments": 282,
       "discussion_url": "https://news.ycombinator.com/item?id=49831968",
       "extra": {
         "top_comments": [
@@ -26,14 +26,14 @@
       "source": "Hacker News",
       "published_at": "2026-09-23T22:53:28+00:00",
       "summary": "A joke tool that abuses OpenType's ligature feature to mix fonts. It works pretty fast on client-side by loading Python in WASM.",
-      "score": 511,
-      "comments": 71,
+      "score": 554,
+      "comments": 79,
       "discussion_url": "https://news.ycombinator.com/item?id=49823738",
       "extra": {
         "top_comments": [
+          "So at first I misunderstood your tool, thinking it was like a tool I made a little over a year ago that creates new fonts from existing font glyph paths, combining them in a couple of ways. It began as an ambigram generator (png image) using an arbitrary ttf or woff of your choosing and once I had that working, I realized that since I was just transforming vector paths, I could mix paths from multiple fonts, still focusing on ambigram generation.Eventually, scope crept until it became an interesting and useful thing to be able to combine say, the top half of Arial with the bottom half of Times New Roman's letters (and combine with various boolean operations on the paths, with outlines, etc, and I assumed others would be as pleased with this ability as I was, so I documented some examples and shared it here and in a fontography subreddit.To my surprise, it got essentially no interest when I posted here, and the response from the typography folks was basically negative with people somehow framing it as a piracy-adjacent thing, and not a fun thing to do, just mashing up vector paths to get interesting unique results. shrugSeems like you and maybe some other participants in this discussion might actually appreciate this little tool and get some enjoyment and perhaps utility out of it, so I'll share it here. https://github.com/scottvr/fambigenThere are examples in the README that show what it does in ambigram mode or \"font compositor\" mode. Enjoy!",
           "I have never felt quite so cacklingly nefarious as a designer as I did just now carefully adjusting vertical scale and offset so that the x-height and baseline of Papyrus optically match Comic Sans when mixed together.I don't yet know who I'll be pranking with the downloaded font, but I look forward to their reaction.",
-          "If you want to make a designer have a nervous breakdown, upload a copy of Helvetica and make every second or third character be Arial.",
-          "Inspired by the sample text for \"Nervous Sans\": \"Anal\", an Arial with bad keming"
+          "If you want to make a designer have a nervous breakdown, upload a copy of Helvetica and make every second or third character be Arial."
         ]
       }
     },
@@ -44,8 +44,8 @@
       "source": "Hacker News",
       "published_at": "2026-09-24T10:39:19+00:00",
       "summary": "Two-tier encryption in the UK",
-      "score": 392,
-      "comments": 378,
+      "score": 401,
+      "comments": 384,
       "discussion_url": "https://news.ycombinator.com/item?id=49828731",
       "extra": {
         "top_comments": [
@@ -62,8 +62,8 @@
       "source": "Hacker News",
       "published_at": "2026-09-24T16:23:00+00:00",
       "summary": "Why is the liver so weirdly regenerative?",
-      "score": 286,
-      "comments": 162,
+      "score": 329,
+      "comments": 173,
       "discussion_url": "https://news.ycombinator.com/item?id=49832938",
       "extra": {
         "top_comments": [
@@ -80,14 +80,14 @@
       "source": "Hacker News",
       "published_at": "2026-09-23T15:33:33+00:00",
       "summary": "Rails World 2026 Opening Keynote [video]",
-      "score": 257,
-      "comments": 274,
+      "score": 291,
+      "comments": 304,
       "discussion_url": "https://news.ycombinator.com/item?id=49817680",
       "extra": {
         "top_comments": [
           "I sat front row for David's talk yesterday morning. Having talked with him the day before, I’ll admit… I wasn’t particularly surprised (nor unprepared).A bit of a field report from #RailsWorld: the vibe here is far from doom and gloom. Quite the contrary. Wherever our industry is headed, most of us are still employed as menders… tending to systems that customers rely on and businesses are quite happy to keep paying for.Most of us aren’t waking up to a blank canvas and designing the architecture of the future. We’re inheriting decisions made years ago, updating old patterns, working around constraints, and keeping this shit running reliably.I think these newer tools give us an opportunity to wonder a little more about the systems we’ve inherited. To unpack why things work the way they do. To tinker with assumptions we haven’t had the time, confidence, or permission to revisit… and share what we learn so the next person, or agent, has an easier time.That deployment model we picked eight years ago? Worth another look. Some of our web apps probably wish they were native apps. And there are plenty of architectural decisions we’ve been living with mostly because… well, we’ve been busy living with them.There’s plenty of understandable anxiety about what these tools mean for our work. I’m increasingly curious about what they give us permission to revisit.Once my keynote is published, I’ll share more about a little programming-language-adjacent framework I’ve been working on for approaching exactly this kind of curiosity.In the meantime… keep showing up. Keep wondering.Long live Ruby. Long live Rails.p(bloom)",
           "Concerns with his politics aside, I do think there's a truth to what he's talking about here, and that he is just spelling out the reality that developers are, or shortly will be, facing. For many this will be deeply uncomfortable to hear.It is notable that his perspective in this talk is very much from a developer-user side rather than someone who is responsible for the framework itself. That surprises me, and I suspect it is not a good omen for Rails.For all of this embrace of agentic development, there is nothing here on how they are adapting the framework for this new agentic development reality. Agents do currently work well with Rails, but there's nothing here pushing things forward as best as I can see.I know for my own projects I've largely moved to Elixir/Phoenix, for similar reasons to his use of Rust... I didn't want to have to learn it, but now I don't have to and I get to benefit from its strengths.",
-          "So the keynote mentions that in a perspective you are going to be a \"maker of things\" rather than a coder. But, nobody is asking, in a perspective, why would anybody use the stuff you \"make\" rather than using AI directly? All of the notion of apps disappears, in a perspective."
+          "Regarding the native vs web app problem, this was a completely made up human-made problem. I think I would have preferred a deterministic solution like a game engine but having agents code up native apps based on your web spec is not a horrible idea.The bigger question to me, is the original implementation, are agents going to do that, or will humans hand code it. My two cents, I’ve been using agents heavily now, I review thousands of lines of code a day, I don’t think this works unless I have a clear idea of the spec I want to build in my mind already.I get a better understanding of what the architecture should be and how I should build it by actually doing the thing, which means typing code at human speeds. I don’t reason my way into a good architecture, I don’t think I ever did that much in the past and I definitely don’t get it by asking the agent to check its plan and explain it to me the hundredth time. And then once I know the architecture, I don’t think the agent even speeds me up that much. It changes 7 days of coding to 1, but those 7 days weren’t worth much and I generate even more ideas and mental models in those 7 days that pay dividends for years to come.Would you have told a tailor that using the industrial sewing machine improves his skill at making delicate, beautiful clothes? Of course not, actually even in 2026, large swathes of high quality delicate clothes are hand sewn. There will be an equivalent for coding, even DHH admits it, when he hedges with “most”.I think, for me I’ll navigate my career to focus more on extremely high quality, delicate custom code and leave this agentic coding to the sweatshop workers. I wanted to do this anyway before agents, now I need to accelerate it. yes FAANG is sweatshop work."
         ]
       }
     },
@@ -98,14 +98,14 @@
       "source": "Hacker News",
       "published_at": "2026-09-23T22:37:28+00:00",
       "summary": "Toyota is taking the Corolla electric",
-      "score": 246,
-      "comments": 401,
+      "score": 275,
+      "comments": 451,
       "discussion_url": "https://news.ycombinator.com/item?id=49823568",
       "extra": {
         "top_comments": [
           "Cars that are designed from the ground up to be EVs tend to be much better than trying to shoehorn an EV into an ICE design.The new Lexus ES350e, which comes in both hybrid and EV flavors, has been pretty universally panned as a mediocre EV [1]. Lexus anticipates that the vast majority of ES sales will be for the hybrid model, and I expect the same will be true of the Corolla.The updated bZ and new bZ Woodland on the other hand, which are built as ground-up EVs on the e-TNGA platform, actually seem pretty decent. And I'm hopeful for the upcoming EV Highlander, too (although that will use a modified version of the TNGA-K platform).I would prefer if Toyota just released a new EV model with roughly the same proportions as the Corolla, instead of going with the one-size-fits-all approach. But maybe they'll finally be able to get it right this time.[1] https://www.youtube.com/watch?v=QQ97R1nhq4M",
           "Ugh. I saw the headline and I was hoping it would be an entry-level, low cost, highly analogue, \"looks just like a normal car but electric\" car.",
-          "Those wheels are so far to the corner, I can’t see how the car drives after even a minor front corner hit."
+          "I literally want a 1995 Toyota Starlet, with its spartan interior, just with an electric drivetrain and a price tag that reflects. A standard 2 din screen with android auto is enough tech for me."
         ]
       }
     },
@@ -116,14 +116,14 @@
       "source": "Hacker News",
       "published_at": "2026-09-24T17:21:36+00:00",
       "summary": "Hello! We’re Sid, Alex, Ketan, and Milan. We’re building Whiteboard (https://whiteboard.dev.fast/), an open-source desktop app where humans and agents can architect software together in a common workspace. Here’s our repo: https://github.com/devdotfast/whiteboard.We were missing the feeling of a “whiteboard session” with another dev where you leave with a deep understanding of a system, so we built this app for ourselves. Whiteboard plugs into the tools you already use - e.g. Claude Code, Codex, etc. – and gives your agent an SDK to draw on an in-app canvas to describe its work. We began with an MVP based on HTML artifacts and started rethinking the app as we ran into limitations:1. Built on top of CodeOSS: We found that in pure HTML tools it was hard to connect a spec or diagram to code. In Whiteboard, when you click on visualizations like a sequence diagram, an entity relationship diagram, or a quote from the agent’s trace, you can jump to the underlying code directly. When navigating code, you get keybindings and LSP support from VSCode out of the box. We’ve found this is especially valuable because tradeoffs are often only discovered after a first pass at implementation (re: slop)2. Semantic diff viewer: we wrote a semantic, AST-aware diff viewer in Rust so you can only view the code changes which are relevant to you [1]. We’ve set up some sane defaults: large added functions are summarized as pseudocode, and things like unit tests and large documentation changes are collapsed / hidden. This is all customizable with a WASM-based plugin system.3. Decision Log: We found it difficult to reason about what set of decisions our agents made autonomously. So we built tools for agents to query and link their own traces to the Whiteboard, so you can understand how the requirements that you set were implemented, and understand what decisions your agent made autonomously.Here’s a quick demo video explaining more: https://www.youtube.com/watch?v=ChPn3ftULWEFolks at companies like Salesforce and Modal are using Whiteboard today as a review tool for architecture or spec-level changes – really any change where they want to be involved:1. Reviewing your own coding agent’s work: because Whiteboard makes it easier to review large amounts of code, folks will typically have their AI agents create a prototype and a corresponding Whiteboard session so they can iterate on the design.2. Reviewing other people’s changes: We’ve found that Whiteboard is particularly helpful when composed with tools like Greptile. For example, you can run an automated code reviewer on small changes and escalate to a Whiteboard session for the changes that require human judgement.Why we built this: we’re four buddies from college who quit our jobs as tech leads right before agentic coding became industry standard. As we iterated towards an MVP for a previous idea, we struggled to maintain a comprehensible codebase while reaping all the velocity benefits of agentic coding. As more PRs were merged without our understanding, we felt a ‘cognitive debt’ begin to seep in, until it became difficult for us to even contribute to the system [2].We’re releasing our desktop app under an MIT license. Please poke through and feel free to contribute! Eventually we’ll charge companies for a hosted web version that manages whiteboard session creation alongside features like trajectory storage and multiplayer reviews. Everything will always remain self-hostable.Thanks for reading, and we hope you try it out! We would love to hear any feedback and to learn from your expertise.Here’s are the project links again: https://github.com/devdotfast/whiteboard, and you can install (for MacOS + Linux) at https://install.dev.fast[1] diffs library: https://github.com/devdotfast/diffr [2] Credit for the term ‘cognitive debt’ goes to https://www.geoffreylitt.com/2026/07/02/understanding-is-the...",
-      "score": 215,
-      "comments": 85,
+      "score": 241,
+      "comments": 94,
       "discussion_url": "https://news.ycombinator.com/item?id=49833867",
       "extra": {
         "top_comments": [
+          "Is a new IDE really required for this? Wouldn't Markdown already cover a shared \"canvas\" for documentation/planning, when accompanied by something like Mermaid?I think some of the presented ideas are pretty cool, but am thinking that you'll get slown down by the IDE approach.",
           "Oh WOW, cool to see a technique that'll be everywhere in 12 months (the fake pen drawing animations + streaming diagrams as they're produced) first be announced. Do we still do \"First!\" comments, y'all?~~[EDIT: you need to put \"only for macOS\" in way more prominent places, all over -- that offends my soul greatly and may Linus frown upon you all]~~ [EDIT2: I was mistaken!]This all looks really solid. That said, two remarks:1. The integration with OS LSPs is quite fun and commendable. Is it possible that the diagrams might get their own LSP, someday? Or is better just staying as direct TS callsites?2. The choice of the word \"IDE\" seems like it might get you in trouble, given the small \"cannot edit files\" detail. Any comments on the decision there, as opposed to, say... \"brainstorming tool\"? Or hell, \"[architectonic] harness\"?3. The psuedocode \"semantic diff\" thing is an incredible idea, wow. Props there.4. This language kinda concerns me: \"how the requirements that you set were implemented\". In my highly-arbitrary development flow, it ideally goes `idea -> spec/reqs -> plan -> test -> impl -> eval -> land -> review`, and this kind of tool seems explicitly targeted towards just the second and third with some partial coverage of their neighbors on either side. More concretely: by adding implementation, don't you lose a powerful specificity selling point and now have to compete with all full harnesses?5. Suggesting \"GPT-6 Luna and Claude Opus 5.5\" is presumably a typo? Cause the equivelant of Opus 5.5 is Astra, and even then not really.",
-          "You cannot currently edit files in Whiteboard. If this is something that you find yourself wanting to do, please file an issue! Do you still consider this an IDE? Curious",
-          "This is definitely getting at least some things right about how we work with agents today, specifically that we often work at the architecture level, and we need a better alternative to the current Plan Mode offered by coding agents to efficiently architect software at a high level, which is more visual and offers better back-and-forth incrementation with the agent than simply \"reject final plan with X message\".From the website demos i definitely think this is a clean interface, although I don't know how much better this is compared to some simple custom Mermaid format, which the agent can write as artifact files and present to users. Zooming out, this app seems like 1 feature (a MCP with a GUI attached to it) rather than an entire product.Also, I don't know if asking the agent to write specific code changes into the plan is a good idea. I think maybe that a \"plan -> approve -> write code\" would let the agent write higher quality code than \"plan which contains code -> approve\". But maybe you can make it work when combined with some specific prompting marking the code as clearly work-in-progress and subject to change, and that the agent should surface any parts implemented differently relative to the plan to the user, etc."
+          "Thanks! The project looks great and I am definitely interested in this approach. I hope it will help me with my usual issue - I review a lot of code these days and it's really hard to understand what changes about and why they even needed usually, without deep analysis and AI sessions. It's always good to have such a visual method to check briefly what's there on architecture and design level - these mistakes are hardest to find in other people's code, as it is for me.I especially like your way to connect agents - I'm basically using what I wish to use, without limitations or pay walls. At my work, all AI tools should be reviewed and approved before usage but here I just use my coding agent and this is \"plugin\" for visualisation, so I guess it will be approved in no time. Thanks to not keeping a forced data collection, it will really help to promote your tool in corporate environments.No reasons to not try it for me! I am looking closely at what will come next and will try to share my feedback, if there will be some.For now, I just feel that it will be good to have a way to trigger review creation from the app itself, not to create a new agent session for this. Kinda a bit counterintuitive but I understand why it works this way and it's not a real issue."
         ]
       }
     },
@@ -134,8 +134,8 @@
       "source": "Hacker News",
       "published_at": "2026-09-24T20:34:32+00:00",
       "summary": "California is chasing wealth that has feet",
-      "score": 155,
-      "comments": 440,
+      "score": 193,
+      "comments": 547,
       "discussion_url": "https://news.ycombinator.com/item?id=49836419",
       "extra": {
         "top_comments": [

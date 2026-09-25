@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-09-25T11:01:12.451078+08:00",
+  "cached_at": "2026-09-25T13:10:12.375117+08:00",
   "articles": [
     {
       "id": "https://www.news.cn/politics/20260924/a512e6e3ab5b44f5ad0651c0d1b37646/c.html",
@@ -62,6 +62,18 @@
       "extra": {}
     },
     {
+      "id": "https://www.bbc.co.uk/news/articles/cr93e4x7kdjjo#0",
+      "title": "Xi got Trump's red carpet welcome - but not everything he wanted",
+      "url": "https://www.bbc.co.uk/news/articles/cr93e4x7kdjjo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "published_at": "2026-09-25T03:57:09+00:00",
+      "summary": "China wanted progress on trade, technology and Taiwan - but hasn't got as much as it would have hoped for.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
       "id": "https://www.bbc.co.uk/news/videos/cm790gjyw1qxo#3",
       "title": "The world’s two most powerful men just met. How did it go?",
       "url": "https://www.bbc.co.uk/news/videos/cm790gjyw1qxo?at_medium=RSS&at_campaign=rss",
@@ -80,18 +92,6 @@
       "source": "BBC World",
       "published_at": "2026-09-25T01:10:35+00:00",
       "summary": "CNN and MS NOW said reporters were denied access to covering White House arrivals for a state dinner, despite a judge ruling their passes must be restored.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://www.bbc.co.uk/news/articles/c3y0z7kxlegdo#0",
-      "title": "Netanyahu defends Israeli military action as delegates walk out before UN speech",
-      "url": "https://www.bbc.co.uk/news/articles/c3y0z7kxlegdo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "published_at": "2026-09-25T00:44:04+00:00",
-      "summary": "The Israeli leader labels those who left his speech at the UN General Assembly as \"moral cowards\".",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
