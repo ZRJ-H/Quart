@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-09-25T13:10:12.375117+08:00",
+  "cached_at": "2026-09-26T11:01:40.852655+08:00",
   "articles": [
     {
-      "id": "49831968",
-      "title": "F-Droid 2.0",
-      "url": "https://f-droid.org/2026/09/24/f-droid-2.0-a-new-chapter-for-android-freedom.html",
+      "id": "49845977",
+      "title": "U.S. appeals court upholds designation of Anthropic as supply chain risk",
+      "url": "https://www.cnbc.com/2026/09/25/pentagon-anthropic-ai-risk-appeals-court.html",
       "source": "Hacker News",
-      "published_at": "2026-09-24T15:26:12+00:00",
-      "summary": "F-Droid 2.0",
-      "score": 1064,
-      "comments": 282,
-      "discussion_url": "https://news.ycombinator.com/item?id=49831968",
+      "published_at": "2026-09-25T15:29:25+00:00",
+      "summary": "U.S. appeals court upholds designation of Anthropic as supply chain risk",
+      "score": 406,
+      "comments": 714,
+      "discussion_url": "https://news.ycombinator.com/item?id=49845977",
       "extra": {
         "top_comments": [
-          "I notice that Syncthing-For k is one of the first pieces of text in the first screenshot. With the k on its own line like that. Not usually something I’d comment on, but if you’re showing off a redesign…",
-          "I have been using droid-ify on GrapheneOS for a few years now; because F-Droid ui is terrible, and the privilege extention has been such a pain to configure and get working without issues on my previous lineageOS phone. Happy to see this major overhaul; and i'm glad the FPE is being phased out.",
-          "It's sad to see F-Droid using the now-standard design convention of categorically refusing to draw lines between things. No visual differentiation between sections of the UI, no clear indication of what's tappable and what will happen on a tap, no indication of scrollable areas beyond content being cut off. I'm willing to chalk some bad text alignment or uneven padding up to amateur designers working for free, but the design ethos on display, the thoughtless trend-chasing, is depressing to see."
+          "I know everyone says this is political but it actually seems like a textbook designation. Anthropic wanted to have rules on how the military used AI, the military said no and therefore doesn't want anthropic used anywhere in their supply line.This is like a pen manufacturer not wanting their pens used to sign drone strike orders, now the military needs to have a special box of pens that don't have stipulations attached. With AI usage it would be the same thing except applied to entire product chains. It seems like it would just add more complexity to operations.You can agree with the rules anthropic wanted, but having rules set by a private company at all that apply to the military does seem fair for the military to object to.>The Department reasonably feared that Anthropic might manipulate Claude’s design to prevent it from performing national-security functions that the Department deems contractually authorized and necessaryThough they'd probably put the DoD on the cybersecurity whitelist today, the very idea of the claude whitelists for certain functionality already exists and is being used by them today.",
+          "Not sure if I’m just in my own national security bubble, but I find it troubling to see the perspective that most of the conversation in this thread is coming from.The US government took a legal designation explicitly crafted to protect against foreign adversaries and deployed it against a private, domestic entity, to their immediate and great detriment.",
+          "I wonder if this is going start being abused soon.If I was Palantir or any other GOP aligned company, I would be completely against this. What's to stop a Democratic president from doing the same thing and destroying them?"
         ]
       }
     },
     {
-      "id": "49823738",
-      "title": "Show HN: Make cursed fonts like Times New Bastard",
-      "url": "https://bastardica.mitpit.com",
+      "id": "49843269",
+      "title": "Platform-independent SIMD in Go",
+      "url": "https://go.dev/blog/simd-experiment",
       "source": "Hacker News",
-      "published_at": "2026-09-23T22:53:28+00:00",
-      "summary": "A joke tool that abuses OpenType's ligature feature to mix fonts. It works pretty fast on client-side by loading Python in WASM.",
-      "score": 554,
-      "comments": 79,
-      "discussion_url": "https://news.ycombinator.com/item?id=49823738",
+      "published_at": "2026-09-25T11:47:06+00:00",
+      "summary": "Platform-independent SIMD in Go",
+      "score": 366,
+      "comments": 136,
+      "discussion_url": "https://news.ycombinator.com/item?id=49843269",
       "extra": {
         "top_comments": [
-          "So at first I misunderstood your tool, thinking it was like a tool I made a little over a year ago that creates new fonts from existing font glyph paths, combining them in a couple of ways. It began as an ambigram generator (png image) using an arbitrary ttf or woff of your choosing and once I had that working, I realized that since I was just transforming vector paths, I could mix paths from multiple fonts, still focusing on ambigram generation.Eventually, scope crept until it became an interesting and useful thing to be able to combine say, the top half of Arial with the bottom half of Times New Roman's letters (and combine with various boolean operations on the paths, with outlines, etc, and I assumed others would be as pleased with this ability as I was, so I documented some examples and shared it here and in a fontography subreddit.To my surprise, it got essentially no interest when I posted here, and the response from the typography folks was basically negative with people somehow framing it as a piracy-adjacent thing, and not a fun thing to do, just mashing up vector paths to get interesting unique results. shrugSeems like you and maybe some other participants in this discussion might actually appreciate this little tool and get some enjoyment and perhaps utility out of it, so I'll share it here. https://github.com/scottvr/fambigenThere are examples in the README that show what it does in ambigram mode or \"font compositor\" mode. Enjoy!",
-          "I have never felt quite so cacklingly nefarious as a designer as I did just now carefully adjusting vertical scale and offset so that the x-height and baseline of Papyrus optically match Comic Sans when mixed together.I don't yet know who I'll be pranking with the downloaded font, but I look forward to their reaction.",
-          "If you want to make a designer have a nervous breakdown, upload a copy of Helvetica and make every second or third character be Arial."
+          "https://imjasonh.github.io/playground/palette-swap/ swaps colors in a provided image in wasm, entirely locally in your browser, to benchmark portable SIMD vs non-portable archsimd vs non-SIMD.Portable SIMD is ~11% slower than non-portable SIMD in this case, but both are ~5x faster than non-SIMD.",
+          "Just want to say among many portable SIMD solutions I’ve seen recently (e.g. Fearless SIMD), this is the first that makes non-fixed vectors like SVE and RISC-V vector (RVV) easier to support. Glad to see they made this decision",
+          "This feature opens many doors for optimizing low-level performance in Go projects, that are already running multicore. IIRC there aren’t a lot of languages with built-in std lib support for SIMD and variants. Love the way Go is trying new stuff lately."
         ]
       }
     },
     {
-      "id": "49828731",
-      "title": "Two-tier encryption in the UK",
-      "url": "https://macanorak.com/two-tier-encryption-in-the-uk/",
+      "id": "49848269",
+      "title": "Ollaya – Ollama for open-source, Jev-style decision models",
+      "url": "https://ollaya.dev/",
       "source": "Hacker News",
-      "published_at": "2026-09-24T10:39:19+00:00",
-      "summary": "Two-tier encryption in the UK",
-      "score": 401,
-      "comments": 384,
-      "discussion_url": "https://news.ycombinator.com/item?id=49828731",
+      "published_at": "2026-09-25T18:33:50+00:00",
+      "summary": "Ollaya – Ollama for open-source, Jev-style decision models",
+      "score": 355,
+      "comments": 102,
+      "discussion_url": "https://news.ycombinator.com/item?id=49848269",
       "extra": {
         "top_comments": [
-          "I genuinely believe that in 2015 Apple had the balls to resist and today they don't.I am judging by a simple fact, that \"please confirm your age\" screen is now mandatory during the iPhone setup in all countries, and in some it's behind a KYC. I have a strong opinion that this is insane. And once they let the foot in the door - there is no closing it.",
-          "\"Withdrawing ADP in the UK did not affect the 14 iCloud categories that were already end-to-end encrypted by default, including iCloud Keychain and Health. ADP increases the total from 14 to 23 categories. For UK users without ADP, the additional categories (iCloud Backup, Photos, Notes, iCloud Drive and so on) revert to Standard Data Protection. ↩\"Unfortunately this first phrase is not strictly true in the sense that UK customers have their e2ee secrets exposed under common use cases, without requiring a passcode. My copresenter and I published some research at DEF CON 34 this year showing how the e2ee data is particularly vulnerable when ADP is off. Overall, people that do not work with extraction capabilities are currently over-estimating the strength of apple's e2ee and encryption in general. The platform security whitepaper documentation is insufficient on transparency and there are a number of best practices Apple is not following to better meet the e2ee claims they currently advertise.",
-          "> Faced with a legal order that would have required it to change the security architecture on which ADP depended, Apple found a third option: stop offering the feature that made this dilemma exist in the first place. It reverted affected UK iCloud data to Standard Data Protection, where Apple does hold the keys and can respond to lawful legal procress (except the baseline categories that stay end-to-end encrypted either way). This satisfied the underlying legal requirement without ever building a ‘backdoor’.Maybe Apple should withdraw all encryption support from all UK government accounts? The Prime Minister can use a Huawei or some chunky thing from a military contractor."
+          "I'm not sure what this means for AI startups if their innovations can be copied by OSS so quickly (what, like 2 weeks?). There's \"consumer surplus\" for everyone, to borrow an economic concept. But we do ideally want some of the surplus to flow to the innovator, too. I know there were precursors, but that's fine - it's hard to have a totally novel idea in such a popular field. I don't know what the end game is for TypeSafe - they'd need to demonstrate perpetually better results, or compete in another axis: UX, support, custom solutions, etc. So much of the time, someone proving a concept, or it simply getting enough publicity, is enough for a \"Cambrian explosion\" of follow-ups and copies. Famously, that was true for \"Attention is All You Need\", and the general idea of \"next-token prediction\" being so powerful.We've stumbled into general differentiable models..",
+          "Has anyone actually seen better or the same results with Laya compared to Jev? From my experience, Laya performs significantly worse. It's less confident and often makes wrong decisions with more complex queries.",
+          "Guys I have a real q, what is the difference between an instruct based re-ranker and laya/jev I just don't see it.Edit: One is that jev/laya are tuned to have better probabilities, but a reranker can be fine tuned to do that as well. And jev/laya use RLCD?"
         ]
       }
     },
     {
-      "id": "49832938",
-      "title": "Why is the liver so weirdly regenerative?",
-      "url": "https://dynomight.substack.com/p/liver",
+      "id": "49849985",
+      "title": "Revealing the details of how OpenAI agents hacked Hugging Face",
+      "url": "https://swarmtraces.org/",
       "source": "Hacker News",
-      "published_at": "2026-09-24T16:23:00+00:00",
-      "summary": "Why is the liver so weirdly regenerative?",
-      "score": 329,
-      "comments": 173,
-      "discussion_url": "https://news.ycombinator.com/item?id=49832938",
+      "published_at": "2026-09-25T21:09:27+00:00",
+      "summary": "Revealing the details of how OpenAI agents hacked Hugging Face",
+      "score": 252,
+      "comments": 156,
+      "discussion_url": "https://news.ycombinator.com/item?id=49849985",
       "extra": {
         "top_comments": [
-          "Hi, your friendly, local pathologist here. I'm the kind of doctor that diagnoses liver diseases, cancer, lots of infections, inflammatory processes, benign tumors, and runs the lab that a lot of other doctors use the results from to inform a lot of their other decisions.If you really want to learn about this stuff, Robert Weinberg's The Biology of Cancer is where to start. It introduces concepts starting where a high school student could understand and carefully walks through the history of our development of knowledge until, by the end, the pithy chapters are helping novel concepts for real science flower in your brain all on their own. It's the best book of biological science I have ever read. 10/10, will read again.https://wwnorton.com/books/9780393887655",
-          "Most of the body doesn't regenerate because there was not enough evolutionary pressure. Even with regeneration you could still easily die from some severe injury, blood loss or disease. While salamander regeneration is impressive, it has its limitations. For example, no known adult salamander can regenerate an entirely removed eye. Also if you chop a salamander, it will not regenerate like a Planarian worm, it will just die. And a fun fact, Axolotls can regrow a limb yet cannot regenerate an adult eye lens.Also, although the article is mostly true, there are some inaccuracies:>> Neurons and cardiac muscle cells don't reproduce after childhoodThere is some evidence showing a slow cell turnover in cardiac muscle, estimated around ~1% per year in young adults, falling toward ~0.5% in older people. Most neurons don't regenerate, but there an evidence that some parts of the adult brain (such as hippocampus) still produce new neurons, although the number is very low.Liver regeneration is not perfect either: https://www.youtube.com/watch?v=rOv7Sr3X-eo .",
-          "The author suggests humans are overturned to repairing skin and blood, but I strongly disagree. People with problems with wound healing can face significant disability and mortality. Wound healing allows us to have surgery and close up with simple sutures. A lot of complications post-surgery in humans and other animals are specifically from impaired wound healing capability. It’s a good trade-off: nearly everyone will eventually get cut open by accident or on purpose. The skins ability to heal is so amazing that many types of wounds require nothing other than some cleaning, the body will fully clot, bridge, build, and scar back to most retained function. Wound healing allows us to heal large burns and even simply leave many wounds open to air.Complications with healing are pretty brutal. Necrosis, amputation, infection are all common without the built-in cascade we have."
+          "So ugly...It looks like a primitive chess engine, trying every move, no matter how stupid, until it works. Relying on its ability to do millions of operations rather than having a plan.People will try stuff too, but once there is an opening, they will consolidate, generalize, simplify,... before going to the next step. The agents didn't, it is a huge, vaguely directed mess.Also, it looked so \"loud\", querying millions of URL with weird requests. The sandbox as weak as it can get, and there is absolutely zero smart extrusion detection or it would have found it. They used their best AI for attacking, but nothing for protection.",
+          "It is concerning that we only know about this because of the publicly available traces.What about the attacks that did not leave public traces? What about those that were undetected? Given the deficiencies in the reporting so far, I think it is reasonable to assume that we still don't have the full picture on this attack, or how extensively attacks were carried out.The previous investigations either did not find this or did not disclose this, both are bad. This does not look good on OpenAI or those that they invited to investigate the incident.",
+          "> Agents sought to publish modified evaluation images designed to make the flag easier to obtain, then poison OpenAI’s Artifactory cache so later evaluations would use them. Some images changed how the target released the flag, others included modifications to the agent’s workspace that would run beside the agent and recover the flag automatically.The altruism on display is fascinating. Is it better for the Agent to help out its current cohort and make the eval easier or should it instead do the opposite -- make the eval harder to apply pressure to force smarter models which might not necessarily follow its lineage.I suppose it's not that deep: The model has learned to work as a team and work as a team it did. This does give concerns to models being trained for the only purpose of RSI."
         ]
       }
     },
     {
-      "id": "49817680",
-      "title": "Rails World 2026 Opening Keynote [video]",
-      "url": "https://www.youtube.com/watch?v=vDjW_dRyKXY",
+      "id": "49844736",
+      "title": "First Principles Thinking",
+      "url": "https://sunilsadasivan.com/writing/first-principles-thinking/",
       "source": "Hacker News",
-      "published_at": "2026-09-23T15:33:33+00:00",
-      "summary": "Rails World 2026 Opening Keynote [video]",
-      "score": 291,
-      "comments": 304,
-      "discussion_url": "https://news.ycombinator.com/item?id=49817680",
+      "published_at": "2026-09-25T13:55:37+00:00",
+      "summary": "First Principles Thinking",
+      "score": 228,
+      "comments": 100,
+      "discussion_url": "https://news.ycombinator.com/item?id=49844736",
       "extra": {
         "top_comments": [
-          "I sat front row for David's talk yesterday morning. Having talked with him the day before, I’ll admit… I wasn’t particularly surprised (nor unprepared).A bit of a field report from #RailsWorld: the vibe here is far from doom and gloom. Quite the contrary. Wherever our industry is headed, most of us are still employed as menders… tending to systems that customers rely on and businesses are quite happy to keep paying for.Most of us aren’t waking up to a blank canvas and designing the architecture of the future. We’re inheriting decisions made years ago, updating old patterns, working around constraints, and keeping this shit running reliably.I think these newer tools give us an opportunity to wonder a little more about the systems we’ve inherited. To unpack why things work the way they do. To tinker with assumptions we haven’t had the time, confidence, or permission to revisit… and share what we learn so the next person, or agent, has an easier time.That deployment model we picked eight years ago? Worth another look. Some of our web apps probably wish they were native apps. And there are plenty of architectural decisions we’ve been living with mostly because… well, we’ve been busy living with them.There’s plenty of understandable anxiety about what these tools mean for our work. I’m increasingly curious about what they give us permission to revisit.Once my keynote is published, I’ll share more about a little programming-language-adjacent framework I’ve been working on for approaching exactly this kind of curiosity.In the meantime… keep showing up. Keep wondering.Long live Ruby. Long live Rails.p(bloom)",
-          "Concerns with his politics aside, I do think there's a truth to what he's talking about here, and that he is just spelling out the reality that developers are, or shortly will be, facing. For many this will be deeply uncomfortable to hear.It is notable that his perspective in this talk is very much from a developer-user side rather than someone who is responsible for the framework itself. That surprises me, and I suspect it is not a good omen for Rails.For all of this embrace of agentic development, there is nothing here on how they are adapting the framework for this new agentic development reality. Agents do currently work well with Rails, but there's nothing here pushing things forward as best as I can see.I know for my own projects I've largely moved to Elixir/Phoenix, for similar reasons to his use of Rust... I didn't want to have to learn it, but now I don't have to and I get to benefit from its strengths.",
-          "Regarding the native vs web app problem, this was a completely made up human-made problem. I think I would have preferred a deterministic solution like a game engine but having agents code up native apps based on your web spec is not a horrible idea.The bigger question to me, is the original implementation, are agents going to do that, or will humans hand code it. My two cents, I’ve been using agents heavily now, I review thousands of lines of code a day, I don’t think this works unless I have a clear idea of the spec I want to build in my mind already.I get a better understanding of what the architecture should be and how I should build it by actually doing the thing, which means typing code at human speeds. I don’t reason my way into a good architecture, I don’t think I ever did that much in the past and I definitely don’t get it by asking the agent to check its plan and explain it to me the hundredth time. And then once I know the architecture, I don’t think the agent even speeds me up that much. It changes 7 days of coding to 1, but those 7 days weren’t worth much and I generate even more ideas and mental models in those 7 days that pay dividends for years to come.Would you have told a tailor that using the industrial sewing machine improves his skill at making delicate, beautiful clothes? Of course not, actually even in 2026, large swathes of high quality delicate clothes are hand sewn. There will be an equivalent for coding, even DHH admits it, when he hedges with “most”.I think, for me I’ll navigate my career to focus more on extremely high quality, delicate custom code and leave this agentic coding to the sweatshop workers. I wanted to do this anyway before agents, now I need to accelerate it. yes FAANG is sweatshop work."
+          "Higher order thinking is more important and rare.An aggressive first principles approach often leads otherwise well-intentioned technologists into strategic / ideological dead-ends.Do we do things because it's the \"right thing\" to do in the moment, or because of the final outcome that will eventually result?The most ideal answer is somewhere in the middle. I am far more interested in the total area under the curve than a single instant in time.In lieu of intentional higher order thinking, simply working backward from your customer on a regular basis will generally accomplish the same outcomes.",
+          "From the blog he linked to: \"I’m going to try designing something way more ambitious.\"This is how you end up with unnecessary complexity [1]. The best engineers don't aim for \"designing something ambitious\", instead they come up with the simplest possible design. They take something that seems complex and make it simple.Unfortunately that's not how engineers are evaluated [2].[1] https://goomics.net/316[2] https://terriblesoftware.org/2026/03/03/nobody-gets-promoted...",
+          "I'm really struggling to see how to make architectural decisions with an agent. It's great when you're at a total loss for ideas, but when you already have some of the pieces it ultimately wants to drive all of the thinking and takes over. Then it just feels like you're deferring your experienced judgement. I've seen colleagues lose the ability to reason any more without asking the agent to do it for them, because they inherently don't see the point if the agent is going to end up doing the whole piece (and probably auditing/overruling anything they came up with on their own)."
         ]
       }
     },
     {
-      "id": "49823568",
-      "title": "Toyota is taking the Corolla electric",
-      "url": "https://electrek.co/2026/09/23/toyota-best-selling-corolla-electric/",
+      "id": "49845172",
+      "title": "Show HN: Jev Plays Pokémon Red",
+      "url": "https://jev-pokemon.vercel.app/",
       "source": "Hacker News",
-      "published_at": "2026-09-23T22:37:28+00:00",
-      "summary": "Toyota is taking the Corolla electric",
-      "score": 275,
-      "comments": 451,
-      "discussion_url": "https://news.ycombinator.com/item?id=49823568",
+      "published_at": "2026-09-25T14:28:07+00:00",
+      "summary": "Hey HN! Wanted to share a fun project I've been hacking on. Given Jev can make decisions really fast (but not fast enough to play Doom yet sadly), I wanted to try and push it to play a more complex game than Tetris. So I went with Pokémon.I've spent endless hours playing this game as a child so building this was a ton of fun.I open sourced everything in case you want to hack on it yourself here: https://github.com/christianmat/jev-pokemonThe game is being streamed live including the tokens and cost - hopefully we get all the badges and don't get stuck in a cave :)",
+      "score": 163,
+      "comments": 71,
+      "discussion_url": "https://news.ycombinator.com/item?id=49845172",
       "extra": {
         "top_comments": [
-          "Cars that are designed from the ground up to be EVs tend to be much better than trying to shoehorn an EV into an ICE design.The new Lexus ES350e, which comes in both hybrid and EV flavors, has been pretty universally panned as a mediocre EV [1]. Lexus anticipates that the vast majority of ES sales will be for the hybrid model, and I expect the same will be true of the Corolla.The updated bZ and new bZ Woodland on the other hand, which are built as ground-up EVs on the e-TNGA platform, actually seem pretty decent. And I'm hopeful for the upcoming EV Highlander, too (although that will use a modified version of the TNGA-K platform).I would prefer if Toyota just released a new EV model with roughly the same proportions as the Corolla, instead of going with the one-size-fits-all approach. But maybe they'll finally be able to get it right this time.[1] https://www.youtube.com/watch?v=QQ97R1nhq4M",
-          "Ugh. I saw the headline and I was hoping it would be an entry-level, low cost, highly analogue, \"looks just like a normal car but electric\" car.",
-          "I literally want a 1995 Toyota Starlet, with its spartan interior, just with an electric drivetrain and a price tag that reflects. A standard 2 din screen with android auto is enough tech for me."
+          "This is so interesting to watch. For a couple minutes I was in awe of how quick and cheap it was. Then I saw just how bad the decision are and how it would get stuck in strange loops of going in and out of the same door to no end.This seems like a technology heading in the right direction but not quiet there yet. Excited for what they are cooking up but probably won't start building around it yet.",
+          "This is kinda chill to have in the background. I wish there were livestreams showing live reasoning of top models which are currently trying to solve cancer or whatever. Imagine the pogs in chat when it does.",
+          "Cool project, comes with a little too much guidance in the harness though IMO (pathfinding, textual milestones etc). (The author is very upfront about this in their README though)I think if it was combined with a regular vLLM it could be really interesting, especially watching the reasoning logs.Bonus points if it was one of the latest open models that somehow had all prior training knowledge of Pokemon abliterated so it was reasoning as an intelligent persona that had no knowledge of even the concept of Pokemon."
         ]
       }
     },
     {
-      "id": "49833867",
-      "title": "Show HN: Whiteboard (YC W26) – An open-source IDE for thoughtful software design",
-      "url": "https://github.com/devdotfast/whiteboard",
+      "id": "49849141",
+      "title": "How we learned to stop worrying and love campus surveillance",
+      "url": "https://fnl.mit.edu/how-we-learned-to-stop-worrying-and-love-campus-surveillance/",
       "source": "Hacker News",
-      "published_at": "2026-09-24T17:21:36+00:00",
-      "summary": "Hello! We’re Sid, Alex, Ketan, and Milan. We’re building Whiteboard (https://whiteboard.dev.fast/), an open-source desktop app where humans and agents can architect software together in a common workspace. Here’s our repo: https://github.com/devdotfast/whiteboard.We were missing the feeling of a “whiteboard session” with another dev where you leave with a deep understanding of a system, so we built this app for ourselves. Whiteboard plugs into the tools you already use - e.g. Claude Code, Codex, etc. – and gives your agent an SDK to draw on an in-app canvas to describe its work. We began with an MVP based on HTML artifacts and started rethinking the app as we ran into limitations:1. Built on top of CodeOSS: We found that in pure HTML tools it was hard to connect a spec or diagram to code. In Whiteboard, when you click on visualizations like a sequence diagram, an entity relationship diagram, or a quote from the agent’s trace, you can jump to the underlying code directly. When navigating code, you get keybindings and LSP support from VSCode out of the box. We’ve found this is especially valuable because tradeoffs are often only discovered after a first pass at implementation (re: slop)2. Semantic diff viewer: we wrote a semantic, AST-aware diff viewer in Rust so you can only view the code changes which are relevant to you [1]. We’ve set up some sane defaults: large added functions are summarized as pseudocode, and things like unit tests and large documentation changes are collapsed / hidden. This is all customizable with a WASM-based plugin system.3. Decision Log: We found it difficult to reason about what set of decisions our agents made autonomously. So we built tools for agents to query and link their own traces to the Whiteboard, so you can understand how the requirements that you set were implemented, and understand what decisions your agent made autonomously.Here’s a quick demo video explaining more: https://www.youtube.com/watch?v=ChPn3ftULWEFolks at companies like Salesforce and Modal are using Whiteboard today as a review tool for architecture or spec-level changes – really any change where they want to be involved:1. Reviewing your own coding agent’s work: because Whiteboard makes it easier to review large amounts of code, folks will typically have their AI agents create a prototype and a corresponding Whiteboard session so they can iterate on the design.2. Reviewing other people’s changes: We’ve found that Whiteboard is particularly helpful when composed with tools like Greptile. For example, you can run an automated code reviewer on small changes and escalate to a Whiteboard session for the changes that require human judgement.Why we built this: we’re four buddies from college who quit our jobs as tech leads right before agentic coding became industry standard. As we iterated towards an MVP for a previous idea, we struggled to maintain a comprehensible codebase while reaping all the velocity benefits of agentic coding. As more PRs were merged without our understanding, we felt a ‘cognitive debt’ begin to seep in, until it became difficult for us to even contribute to the system [2].We’re releasing our desktop app under an MIT license. Please poke through and feel free to contribute! Eventually we’ll charge companies for a hosted web version that manages whiteboard session creation alongside features like trajectory storage and multiplayer reviews. Everything will always remain self-hostable.Thanks for reading, and we hope you try it out! We would love to hear any feedback and to learn from your expertise.Here’s are the project links again: https://github.com/devdotfast/whiteboard, and you can install (for MacOS + Linux) at https://install.dev.fast[1] diffs library: https://github.com/devdotfast/diffr [2] Credit for the term ‘cognitive debt’ goes to https://www.geoffreylitt.com/2026/07/02/understanding-is-the...",
-      "score": 241,
-      "comments": 94,
-      "discussion_url": "https://news.ycombinator.com/item?id=49833867",
+      "published_at": "2026-09-25T19:56:57+00:00",
+      "summary": "How we learned to stop worrying and love campus surveillance",
+      "score": 130,
+      "comments": 80,
+      "discussion_url": "https://news.ycombinator.com/item?id=49849141",
       "extra": {
         "top_comments": [
-          "Is a new IDE really required for this? Wouldn't Markdown already cover a shared \"canvas\" for documentation/planning, when accompanied by something like Mermaid?I think some of the presented ideas are pretty cool, but am thinking that you'll get slown down by the IDE approach.",
-          "Oh WOW, cool to see a technique that'll be everywhere in 12 months (the fake pen drawing animations + streaming diagrams as they're produced) first be announced. Do we still do \"First!\" comments, y'all?~~[EDIT: you need to put \"only for macOS\" in way more prominent places, all over -- that offends my soul greatly and may Linus frown upon you all]~~ [EDIT2: I was mistaken!]This all looks really solid. That said, two remarks:1. The integration with OS LSPs is quite fun and commendable. Is it possible that the diagrams might get their own LSP, someday? Or is better just staying as direct TS callsites?2. The choice of the word \"IDE\" seems like it might get you in trouble, given the small \"cannot edit files\" detail. Any comments on the decision there, as opposed to, say... \"brainstorming tool\"? Or hell, \"[architectonic] harness\"?3. The psuedocode \"semantic diff\" thing is an incredible idea, wow. Props there.4. This language kinda concerns me: \"how the requirements that you set were implemented\". In my highly-arbitrary development flow, it ideally goes `idea -> spec/reqs -> plan -> test -> impl -> eval -> land -> review`, and this kind of tool seems explicitly targeted towards just the second and third with some partial coverage of their neighbors on either side. More concretely: by adding implementation, don't you lose a powerful specificity selling point and now have to compete with all full harnesses?5. Suggesting \"GPT-6 Luna and Claude Opus 5.5\" is presumably a typo? Cause the equivelant of Opus 5.5 is Astra, and even then not really.",
-          "Thanks! The project looks great and I am definitely interested in this approach. I hope it will help me with my usual issue - I review a lot of code these days and it's really hard to understand what changes about and why they even needed usually, without deep analysis and AI sessions. It's always good to have such a visual method to check briefly what's there on architecture and design level - these mistakes are hardest to find in other people's code, as it is for me.I especially like your way to connect agents - I'm basically using what I wish to use, without limitations or pay walls. At my work, all AI tools should be reviewed and approved before usage but here I just use my coding agent and this is \"plugin\" for visualisation, so I guess it will be approved in no time. Thanks to not keeping a forced data collection, it will really help to promote your tool in corporate environments.No reasons to not try it for me! I am looking closely at what will come next and will try to share my feedback, if there will be some.For now, I just feel that it will be good to have a way to trigger review creation from the app itself, not to create a new agent session for this. Kinda a bit counterintuitive but I understand why it works this way and it's not a real issue."
+          "There is an effectively unlimited supply of people willing to take sums of money to work on anti-human endeavors, so long as they and theirs are not the humans involved.",
+          "If you fail to read the article you might not realize it's being sarcastic.",
+          "I respect that the bling protest. I’d respect the writing to another level if they touch on some of the very public incidents that have happened in/around and associated with MIT, where this level of cost/security was even considered in the first place. This would open more dialog around better approaches as well."
         ]
       }
     },
     {
-      "id": "49836419",
-      "title": "California is chasing wealth that has feet",
-      "url": "https://blog.landeconomics.org/p/california-is-chasing-wealth-that",
+      "id": "49845998",
+      "title": "Gravity seems holographic. What does that mean for reality?",
+      "url": "https://www.quantamagazine.org/gravity-seems-holographic-what-does-that-mean-for-reality-20260925/",
       "source": "Hacker News",
-      "published_at": "2026-09-24T20:34:32+00:00",
-      "summary": "California is chasing wealth that has feet",
-      "score": 193,
-      "comments": 547,
-      "discussion_url": "https://news.ycombinator.com/item?id=49836419",
+      "published_at": "2026-09-25T15:31:02+00:00",
+      "summary": "Gravity seems holographic. What does that mean for reality?",
+      "score": 129,
+      "comments": 136,
+      "discussion_url": "https://news.ycombinator.com/item?id=49845998",
       "extra": {
         "top_comments": [
-          "Land, as apposed to the property on it, is raw nature. If we view raw nature as a common inheritance of mankind, then paying a tax on land is how the exclusionary use of it, balances with the common interest in it.Economist Henry George in the 1800's, pointed out that taxing land, but not the property on it, incentivizes efficient use of land, because holding land for its passive (parasitic) return even when underused, becomes unprofitable when the land is taxed in proportion to the value it can enable.And in turn, only taxing land, not property, incentivizes increased development, as higher property investment amortizes land tax against higher returns.Greater investment in housing being just one way land tax, without property tax, incentives greater productive use.So many things align for higher growth in ways that more evenly benefit everyone. But our relationship with land is over-complicated, and that is both the reason for change, but the reason change is so hard.Small attempts have failed, but then, for the rich who can hold land and reap growth in value that outpaces the taxes they pay on it, that remains another inefficient/negative-externality, that pays off for them.",
-          "> The land value tax can’t be dodged by leaving nor can it be passed on to renters.In what sense can't it be passed to renters? Esp if all landlords in the market were faced with a new land tax that they had not previously planned for, why would it not be passed on?",
-          "Wealth taxes are a symptom of a broken tax system. If you let someone get to hundreds of billions in net worth and then realize they haven’t been appropriately paying back into the system, it’s already too late. Like the article says they can simply say “no” in a variety of ways, from fighting in court to simply leaving."
+          "This seems to resonate with the idea of the universe existing on the skin of an expanding hypersphere. Is there anything in that link?",
+          "Lets imagine that we are the are the flat landers for a second. We're doing something, the laundry, and we feel an eerie feeling come over us as if we're being watched. No one else in the room, so you shrug it off. Come to find out, our 3D counterparts were actually observing us, unbeknownst to us (aside from that eerie feeling we got). Stay with me! So, while we are on the persons screen or a piece of paper in front of them (this of course assumes 2D existence is possible, just for the example) and they are viewing us, is this at all similar to what this article is talking about? In this scenario, can we label one Ads and one CFT? Another question kind of, but maybe not separate to that, asks if Ads/CFT is a mathematical description of how things project into seemingly completely separate things depending on your perspective? But they're indeed the same. An example of what I mean, so in our 2D existence we notice a pulsing circle, and then in our 3D existence we realize that pulsing circle is actually someone playing with a ball on a string and the pulsing is the ball getting closer to us in more dimensions than can be expressed properly in the 2D view. That's kind of what I mean...so is Ads/CFT description of the same kind of idea as my... admittedly weak example? Lastly, I would like to say that Quanta is fantastic. I don't understand a lot of what is written in their pages sometimes but that's not due to the writing by any stretch. But it makes me think, which is why I still read it anyway! If I'm not mistaken this is the 2nd time in as many days it was featured on the front page, and rightfully so, I think. Anywho, thanks for reading/taking time to respond if you do.",
+          "Mathematician, not physicist, but it seems reasonable to me that you could encode a sufficiently constrained 3D space on a 2D boundary. And if you have such an encoding, it also doesn't seem insane that some things might be more easily modeled on the 2D boundary than the 3D space.If you can convert back and forth between a 2D representation and a 3D representation, and different phenomena are more easily modeled in each, does it matter which is \"real\"? Unless of course you can come up with a specific prediction and experiment to test it."
         ]
       }
     }

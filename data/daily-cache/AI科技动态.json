@@ -1,6 +1,18 @@
 {
-  "cached_at": "2026-09-25T13:10:12.375117+08:00",
+  "cached_at": "2026-09-26T11:01:40.852655+08:00",
   "articles": [
+    {
+      "id": "https://openai.com/index/proaction",
+      "title": "Proaction boosts sales 60% and saves 75+ hours with Codex",
+      "url": "https://openai.com/index/proaction",
+      "source": "OpenAI",
+      "published_at": "2026-09-25T19:00:00+00:00",
+      "summary": "With Codex, GPT-Live-1, and GPT-6 Astra, Proaction builds, operates, and sells modern fleet management faster.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
     {
       "id": "https://research.google/blog/coherent-long-form-video-generation/",
       "title": "Automating coherent long-form video generation",
@@ -31,66 +43,6 @@
       "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark",
       "source": "Hugging Face",
       "published_at": "2026-09-24T14:08:57+00:00",
-      "summary": "",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://huggingface.co/blog/nvidia/how-to-use-nvidia-warp-and-mjwarp",
-      "title": "How to Use NVIDIA Warp and MjWarp to Accelerate Robotics Simulation and Learning Workflows",
-      "url": "https://huggingface.co/blog/nvidia/how-to-use-nvidia-warp-and-mjwarp",
-      "source": "Hugging Face",
-      "published_at": "2026-09-23T18:41:40+00:00",
-      "summary": "",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://www.microsoft.com/en-us/research/?p=1186774",
-      "title": "Offloaded inference for real-world physical AI robotics",
-      "url": "https://www.microsoft.com/en-us/research/blog/offloaded-inference-for-real-world-physical-ai-robotics/",
-      "source": "Microsoft Research",
-      "published_at": "2026-09-23T16:01:36+00:00",
-      "summary": "Robots are getting smarter, but how can their hardware match that growth? New Microsoft Research findings show that moving AI inference beyond the robot can improve task success, boost efficiency, and support more advanced physical AI workloads. The post Offloaded inference for real-world physical AI robotics appeared first on Microsoft Research.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/",
-      "title": "Advancing Private AI Compute with secure, server-side memory",
-      "url": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/",
-      "source": "Google DeepMind",
-      "published_at": "2026-09-23T16:00:57+00:00",
-      "summary": "Introducing private, server-side memory to Private AI Compute for personal AI.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://openai.com/index/two-years-of-openai-academy",
-      "title": "Two years of OpenAI Academy",
-      "url": "https://openai.com/index/two-years-of-openai-academy",
-      "source": "OpenAI",
-      "published_at": "2026-09-23T16:00:00+00:00",
-      "summary": "Marking two years of OpenAI Academy and bringing AI skills to even more communities.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/",
-      "title": "Gemini 3.8 text-to-speech says hello",
-      "url": "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/",
-      "source": "Google DeepMind",
-      "published_at": "2026-09-23T15:25:14+00:00",
       "summary": "",
       "score": 0,
       "comments": 0,
