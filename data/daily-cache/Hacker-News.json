@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-09-26T11:01:40.852655+08:00",
+  "cached_at": "2026-09-26T13:15:56.441084+08:00",
   "articles": [
     {
       "id": "49845977",
@@ -8,32 +8,14 @@
       "source": "Hacker News",
       "published_at": "2026-09-25T15:29:25+00:00",
       "summary": "U.S. appeals court upholds designation of Anthropic as supply chain risk",
-      "score": 406,
-      "comments": 714,
+      "score": 421,
+      "comments": 736,
       "discussion_url": "https://news.ycombinator.com/item?id=49845977",
       "extra": {
         "top_comments": [
           "I know everyone says this is political but it actually seems like a textbook designation. Anthropic wanted to have rules on how the military used AI, the military said no and therefore doesn't want anthropic used anywhere in their supply line.This is like a pen manufacturer not wanting their pens used to sign drone strike orders, now the military needs to have a special box of pens that don't have stipulations attached. With AI usage it would be the same thing except applied to entire product chains. It seems like it would just add more complexity to operations.You can agree with the rules anthropic wanted, but having rules set by a private company at all that apply to the military does seem fair for the military to object to.>The Department reasonably feared that Anthropic might manipulate Claude’s design to prevent it from performing national-security functions that the Department deems contractually authorized and necessaryThough they'd probably put the DoD on the cybersecurity whitelist today, the very idea of the claude whitelists for certain functionality already exists and is being used by them today.",
           "Not sure if I’m just in my own national security bubble, but I find it troubling to see the perspective that most of the conversation in this thread is coming from.The US government took a legal designation explicitly crafted to protect against foreign adversaries and deployed it against a private, domestic entity, to their immediate and great detriment.",
-          "I wonder if this is going start being abused soon.If I was Palantir or any other GOP aligned company, I would be completely against this. What's to stop a Democratic president from doing the same thing and destroying them?"
-        ]
-      }
-    },
-    {
-      "id": "49843269",
-      "title": "Platform-independent SIMD in Go",
-      "url": "https://go.dev/blog/simd-experiment",
-      "source": "Hacker News",
-      "published_at": "2026-09-25T11:47:06+00:00",
-      "summary": "Platform-independent SIMD in Go",
-      "score": 366,
-      "comments": 136,
-      "discussion_url": "https://news.ycombinator.com/item?id=49843269",
-      "extra": {
-        "top_comments": [
-          "https://imjasonh.github.io/playground/palette-swap/ swaps colors in a provided image in wasm, entirely locally in your browser, to benchmark portable SIMD vs non-portable archsimd vs non-SIMD.Portable SIMD is ~11% slower than non-portable SIMD in this case, but both are ~5x faster than non-SIMD.",
-          "Just want to say among many portable SIMD solutions I’ve seen recently (e.g. Fearless SIMD), this is the first that makes non-fixed vectors like SVE and RISC-V vector (RVV) easier to support. Glad to see they made this decision",
-          "This feature opens many doors for optimizing low-level performance in Go projects, that are already running multicore. IIRC there aren’t a lot of languages with built-in std lib support for SIMD and variants. Love the way Go is trying new stuff lately."
+          "Incredible.TBH Anthropic was used for target selection in Iran and if Amodei oversold operational AI and was reason why US bled so many highend munitions... only for Iran to survive than basically everything downstream of the shit show including energy prices is on their heads."
         ]
       }
     },
@@ -44,14 +26,14 @@
       "source": "Hacker News",
       "published_at": "2026-09-25T18:33:50+00:00",
       "summary": "Ollaya – Ollama for open-source, Jev-style decision models",
-      "score": 355,
-      "comments": 102,
+      "score": 386,
+      "comments": 107,
       "discussion_url": "https://news.ycombinator.com/item?id=49848269",
       "extra": {
         "top_comments": [
           "I'm not sure what this means for AI startups if their innovations can be copied by OSS so quickly (what, like 2 weeks?). There's \"consumer surplus\" for everyone, to borrow an economic concept. But we do ideally want some of the surplus to flow to the innovator, too. I know there were precursors, but that's fine - it's hard to have a totally novel idea in such a popular field. I don't know what the end game is for TypeSafe - they'd need to demonstrate perpetually better results, or compete in another axis: UX, support, custom solutions, etc. So much of the time, someone proving a concept, or it simply getting enough publicity, is enough for a \"Cambrian explosion\" of follow-ups and copies. Famously, that was true for \"Attention is All You Need\", and the general idea of \"next-token prediction\" being so powerful.We've stumbled into general differentiable models..",
-          "Has anyone actually seen better or the same results with Laya compared to Jev? From my experience, Laya performs significantly worse. It's less confident and often makes wrong decisions with more complex queries.",
-          "Guys I have a real q, what is the difference between an instruct based re-ranker and laya/jev I just don't see it.Edit: One is that jev/laya are tuned to have better probabilities, but a reranker can be fine tuned to do that as well. And jev/laya use RLCD?"
+          "For everyone dismissing Jev's innovation as being trivial, no it's not.It is definitely not the MNIST classifier you had trained in 2019.The difference is that you only train it once and the modern LLM machinery sort of takes care of that with large contexts.It's great that Jev proved this is a viable product. I'd expect a great many research innovations coming from making this work better/faster/cheaper, and around interfacing modern agents with it.",
+          "Has anyone actually seen better or the same results with Laya compared to Jev? From my experience, Laya performs significantly worse. It's less confident and often makes wrong decisions with more complex queries."
         ]
       }
     },
@@ -62,8 +44,8 @@
       "source": "Hacker News",
       "published_at": "2026-09-25T21:09:27+00:00",
       "summary": "Revealing the details of how OpenAI agents hacked Hugging Face",
-      "score": 252,
-      "comments": 156,
+      "score": 332,
+      "comments": 197,
       "discussion_url": "https://news.ycombinator.com/item?id=49849985",
       "extra": {
         "top_comments": [
@@ -80,8 +62,8 @@
       "source": "Hacker News",
       "published_at": "2026-09-25T13:55:37+00:00",
       "summary": "First Principles Thinking",
-      "score": 228,
-      "comments": 100,
+      "score": 245,
+      "comments": 105,
       "discussion_url": "https://news.ycombinator.com/item?id=49844736",
       "extra": {
         "top_comments": [
@@ -98,8 +80,8 @@
       "source": "Hacker News",
       "published_at": "2026-09-25T14:28:07+00:00",
       "summary": "Hey HN! Wanted to share a fun project I've been hacking on. Given Jev can make decisions really fast (but not fast enough to play Doom yet sadly), I wanted to try and push it to play a more complex game than Tetris. So I went with Pokémon.I've spent endless hours playing this game as a child so building this was a ton of fun.I open sourced everything in case you want to hack on it yourself here: https://github.com/christianmat/jev-pokemonThe game is being streamed live including the tokens and cost - hopefully we get all the badges and don't get stuck in a cave :)",
-      "score": 163,
-      "comments": 71,
+      "score": 176,
+      "comments": 76,
       "discussion_url": "https://news.ycombinator.com/item?id=49845172",
       "extra": {
         "top_comments": [
@@ -110,38 +92,56 @@
       }
     },
     {
-      "id": "49849141",
-      "title": "How we learned to stop worrying and love campus surveillance",
-      "url": "https://fnl.mit.edu/how-we-learned-to-stop-worrying-and-love-campus-surveillance/",
-      "source": "Hacker News",
-      "published_at": "2026-09-25T19:56:57+00:00",
-      "summary": "How we learned to stop worrying and love campus surveillance",
-      "score": 130,
-      "comments": 80,
-      "discussion_url": "https://news.ycombinator.com/item?id=49849141",
-      "extra": {
-        "top_comments": [
-          "There is an effectively unlimited supply of people willing to take sums of money to work on anti-human endeavors, so long as they and theirs are not the humans involved.",
-          "If you fail to read the article you might not realize it's being sarcastic.",
-          "I respect that the bling protest. I’d respect the writing to another level if they touch on some of the very public incidents that have happened in/around and associated with MIT, where this level of cost/security was even considered in the first place. This would open more dialog around better approaches as well."
-        ]
-      }
-    },
-    {
       "id": "49845998",
       "title": "Gravity seems holographic. What does that mean for reality?",
       "url": "https://www.quantamagazine.org/gravity-seems-holographic-what-does-that-mean-for-reality-20260925/",
       "source": "Hacker News",
       "published_at": "2026-09-25T15:31:02+00:00",
       "summary": "Gravity seems holographic. What does that mean for reality?",
-      "score": 129,
-      "comments": 136,
+      "score": 148,
+      "comments": 150,
       "discussion_url": "https://news.ycombinator.com/item?id=49845998",
       "extra": {
         "top_comments": [
-          "This seems to resonate with the idea of the universe existing on the skin of an expanding hypersphere. Is there anything in that link?",
-          "Lets imagine that we are the are the flat landers for a second. We're doing something, the laundry, and we feel an eerie feeling come over us as if we're being watched. No one else in the room, so you shrug it off. Come to find out, our 3D counterparts were actually observing us, unbeknownst to us (aside from that eerie feeling we got). Stay with me! So, while we are on the persons screen or a piece of paper in front of them (this of course assumes 2D existence is possible, just for the example) and they are viewing us, is this at all similar to what this article is talking about? In this scenario, can we label one Ads and one CFT? Another question kind of, but maybe not separate to that, asks if Ads/CFT is a mathematical description of how things project into seemingly completely separate things depending on your perspective? But they're indeed the same. An example of what I mean, so in our 2D existence we notice a pulsing circle, and then in our 3D existence we realize that pulsing circle is actually someone playing with a ball on a string and the pulsing is the ball getting closer to us in more dimensions than can be expressed properly in the 2D view. That's kind of what I mean...so is Ads/CFT description of the same kind of idea as my... admittedly weak example? Lastly, I would like to say that Quanta is fantastic. I don't understand a lot of what is written in their pages sometimes but that's not due to the writing by any stretch. But it makes me think, which is why I still read it anyway! If I'm not mistaken this is the 2nd time in as many days it was featured on the front page, and rightfully so, I think. Anywho, thanks for reading/taking time to respond if you do.",
-          "Mathematician, not physicist, but it seems reasonable to me that you could encode a sufficiently constrained 3D space on a 2D boundary. And if you have such an encoding, it also doesn't seem insane that some things might be more easily modeled on the 2D boundary than the 3D space.If you can convert back and forth between a 2D representation and a 3D representation, and different phenomena are more easily modeled in each, does it matter which is \"real\"? Unless of course you can come up with a specific prediction and experiment to test it."
+          "If everyone was just taught quantum physics with lattice field theory at the beginning, everyone on earth would understand physics at any level, no clickbait mystic level black hole hologram physics trying to do mental gymnastics. want to study physics harder? Increase resolution add more parameters and bake into some formula for application ...done",
+          "Susskind's original paper is shockingly readable, at least the first section. It doesn't use a lot of fancy math or derivations to justify holography. Mostly it uses basic concepts from undergraduate physics to show how the idea of holography is consistent and makes sense, despite it seeming incredibly counterintuitive at first glance.For instance, figure 3 shows how you can't hide a black hole behind another black hole, which has implications for how a 3D universe can be completely encoded in a 2D region.https://arxiv.org/html/hep-th/9409089v2",
+          "Pause for a moment to reflect on how outrageous this assertion is. You can’t see into the box at all. Nevertheless, holography says that you can learn exactly what’s happening everywhere in the box without any access to the interior. Observing the surface alone is enough. In this sense, the amount of stuff that fills a box is the same as the amount of paint that covers it. That’s a violation of logic and geometry.The breathless tone of this article obscures rather than illuminates its subject. It sounds as if the author describes a box with some particles bouncing around inside, and every time a particle bounces off the wall of the box the outside glows briefly indicating the location and intensity of the collision. The author is amazed that by repeatedly measuring this, you can draw inferences about what's going on in the box.I can't see what's 'outrageous' about this. You need a lower surface which registers information about activity inside a higher-dimensional volume, some way to accurately read that information, and the time/patience to repeat the measurement many times. Isn't this how radar works, or feeling your way around a pitch-dark room using only the 2-dimensional surface of your hands (or shins)? We know from computer science that you can mathematically encode any structure of arbitrary dimension into a binary tree. One might as well ask how it's possible that our complex 3 dimensional world can be contained in the flat surface of a mirror, film strip, or camera sensor."
+        ]
+      }
+    },
+    {
+      "id": "49849832",
+      "title": "Excel now supports multiple values in a single cell",
+      "url": "https://techcommunity.microsoft.com/blog/microsoft365insiderblog/put-multiple-values-in-one-cell-with-lists-and-arrays-in-excel/4559395",
+      "source": "Hacker News",
+      "published_at": "2026-09-25T20:55:00+00:00",
+      "summary": "Related: https://techcommunity.microsoft.com/blog/excelblog/excel-now...",
+      "score": 138,
+      "comments": 102,
+      "discussion_url": "https://news.ycombinator.com/item?id=49849832",
+      "extra": {
+        "top_comments": [
+          "Over the years, I've seen many comments dismissing Excel. But as many people who've worked in enterprises know, Excel is a godsend for manipulating reams of data for non-programmers who can think analytically. Of course, complex formulae and extensive VBA functions become a tech debt over time. But implemented properly, it provides a solution which doesn't require huge management approvals and increases productivity.I'm sure that these new features will find a lot of use amongst many people. And seeing these Excel innovations is heartening.",
+          "What would be a revolution in excel is if we could have probability distributions in cells. Right now all spreadsheets are fairly deterministic and we think that tells us something about the real world. Having an ability to make cells distributions (and then all resultant cells would be distributions too) would represent the uncertainty in the world better (and expose lots of interesting things like distributions of tails)",
+          "Interesting.I wouldn't consider myself a \"pro\" Excel user. I think my comprehension would be on the higher end of \"basic\", or maybe the lowest end of \"intermediate\".That said, in all the years I've used spreadsheets, I guess I've never really thought I needed more than one value in a cell. I never really seriously considered putting JSON or something in there, and have been ok with just using more cells instead (especially since Office 2019 when they added dynamic arrays that allowed spillover)."
+        ]
+      }
+    },
+    {
+      "id": "49850305",
+      "title": "What even is an OS now?",
+      "url": "https://sockpuppet.org/blog/2026/09/25/what-even-is-an-os-now/",
+      "source": "Hacker News",
+      "published_at": "2026-09-25T21:36:56+00:00",
+      "summary": "What even is an OS now?",
+      "score": 133,
+      "comments": 226,
+      "discussion_url": "https://news.ycombinator.com/item?id=49850305",
+      "extra": {
+        "top_comments": [
+          "Hey, all. I really don't know what to do with a post like this.I'm being sincere when I say (as I've said on two threads here) that this genre of posts --- \"I'm leaving this company I've been very publicly associated with, and here's the new thing I'm doing\" --- is deeply cursed. There's no way to say anything interesting without it just stinking like an ad for the new thing.Obviously, anything at all you say about a commercial project you're working on is easily read as promotional. And you're right, this kind of writing almost always is promotional. But there's a way to do it where at least you're trying to be in conversation with your peers, rather than hitting people over the head with how awesome you think the project is.But I don't know how to do that in a post like this. I think the only way to read it is as, like, an investor memo. Not my goal, but I don't make the rules.So my strategy here is just to stay kind of vague, and talk about where I think the world is going, rather than the specific thing we're doing. I can talk your ears off about capability systems, datalog, models driving hardware, virtualization, whatever. Those are fun conversations and I'm very psyched to have them; it's what lights me up about the work we're doing now.But I don't think it can work here. I didn't submit this post and I didn't upvote it. I wrote it because I didn't want the whole thing I'm leaving Fly.io for to be wrapped up in some dumb Twitter thread.If you're unsatisfied with the post, I don't blame you, but it's less a bid for the front page of HN than it is an update to my \"about me\" page. I'd literally rather talk about HN meta, and how to write for HN, than I would about operating systems at this moment. I truly appreciate the interest though.",
+          "> \"But it booted straight into BASIC. That’s all it did. I was, like, 8 years old. I wasn’t about to learn BASIC. What I learned instead: computers were not as awesome as I’d imagined.\"You were the exception. Most kids felt awe. We started learning BASIC and creating \"dumb games\". That's the origin story of most people my age who ended up in this doomed industry.",
+          "In my opinion, this post misses the forest for the trees. Yes, the model of an OS running various off-the-shelf apps for various tasks will soon become obsolete. But it's not the idea of the OS that's outdated - it's the idea of apps. Why would you ever want to ask an AI to make an app for you to complete some task, if you can instead ask the AI to complete the task directly? The future isn't a bunch of extremely personalized apps - the future is a single AI assistant doing all the work."
         ]
       }
     }
