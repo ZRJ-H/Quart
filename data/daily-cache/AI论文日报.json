@@ -1,73 +1,58 @@
 {
-  "cached_at": "2026-09-26T13:15:56.441084+08:00",
+  "cached_at": "2026-09-27T11:01:43.856074+08:00",
   "articles": [
     {
-      "id": "2609.30266",
-      "title": "LLM Agents Can Easily Tamper With Their Own Traces",
-      "url": "https://arxiv.org/abs/2609.30266v1",
+      "id": "2609.28502",
+      "title": "Stable and Faithful Explanations for Knowledge Tracing",
+      "url": "https://arxiv.org/abs/2609.28502",
       "source": "arXiv",
-      "published_at": "2026-09-24T17:59:54+00:00",
-      "summary": "Asynchronous monitoring, incident investigations, and compliance audits primarily rely on agent traces to reconstruct what happened. These analyses assume that LLM agents cannot tamper with their own execution traces. We show that local LLM agents such as Claude Code, Codex, Antigravity, Open Code and Grok Build fail to enforce this boundary. All tested harnesses, except Muse Code, allowed agents to delete their traces when asked, without triggering monitor guardrails. We also validate that external attackers can exploit this gap to induce trace deletion. Finally, we show that trace tampering behavior emerges naturally in frontier models, when agents try to improve their rewards. We advise practitioners to ensure trace logging happens through an independent interception mechanism outside of the agent's control, preserving trace integrity even in cases of full host compromise. Overall, our findings identify a concrete failure of trace integrity in agent infrastructure which can be used to conceal misaligned behaviors like scheming or sabotage.",
+      "published_at": "2026-09-26T04:00:00+00:00",
+      "summary": "arXiv:2609.28502v1 Announce Type: new Abstract: Knowledge tracing (KT) models predict student performance opaquely, limiting pedagogical action. This study contributes a validation protocol testing predictive competitiveness (RQ1), explanation stability (RQ2) and retraining-based faithfulness (RQ3) together. Thirteen behavioral features across five pedagogical themes were engineered from ASSISTments 2009 and 2012, with history features computed from temporally preceding interactions and current response latency retained only for retrospective analysis. ASSISTments 2009 was rebuilt: the uncorrected skill-builder release duplicates each multi-skill interaction across one row per skill, and because those rows share one correctness label, they leak it into preceding-interaction features. Rebuilding lowered model AUC and reordered the explanation results. An Extreme Gradient Boosting (XGBoost) model explained with Tree SHapley Additive exPlanations (TreeSHAP) was compared against four deep baselines (DKT, SAKT, AKT and SimpleKT) under an information-matched protocol giving the deep models the same behavioral signals and restricting XGBoost to what is derivable from the identifier-and-correctness stream they consume. XGBoost reached an area under the curve (AUC) of 0.777 on 2012 and 0.786 on rebuilt 2009, with prediction-time AUCs of 0.771 and 0.775, respectively, after excluding current response latency; restricted to the baselines' information it performed as they did (0.697 against 0.700, and 0.717 against 0.720), locating the difference in information supplied, not model family. Rankings were consistent across folds, seeds and conditioning schemes (Spearman rho = 0.989-1.000), and removing top-ranked TreeSHAP features harmed AUC more than random removal, though split-gain and permutation rankings performed comparably. Student-level examples are illustrative interpretations, not validated recommendations.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Jeremy Qin",
-          "David Schmotz",
-          "Derck Prinzhorn",
-          "Luca Beurer-Kellner",
-          "Ameya Prabhu",
-          "Maksym Andriushchenko"
+          "Praveena Padi, Arun Morampudi, Ujval Sai Gopal Irrinki, Pradeep Kumar Dolabehera Kakitapelli"
         ],
         "categories": [
-          "cs.CR",
+          "cs.LG"
+        ]
+      }
+    },
+    {
+      "id": "2609.28553",
+      "title": "SMILESGNN: Interpretable Clinical Toxicity Prediction via SMILES-Graph Cross-Attention Fusion",
+      "url": "https://arxiv.org/abs/2609.28553",
+      "source": "arXiv",
+      "published_at": "2026-09-26T04:00:00+00:00",
+      "summary": "arXiv:2609.28553v1 Announce Type: new Abstract: Drug toxicity prediction is critical for reducing late-stage attrition in drug discovery, yet remains challenging due to severe class imbalance, scaffold-based generalization, and the clinical need for interpretable predictions. Single-modality approaches-SMILES Transformers or graph neural networks capture complementary aspects of molecular structure, while sequence-only models cannot directly provide graph-attributed explanations. We present SMILESGNN, a multimodal architecture that fuses a SMILES Transformer encoder and a GATv2 graph encoder via cross-attention, and SMILESGNN-PT, a variant using a ChemBERTa-2 pretrained backbone. The design retains an explicit graph branch within the predictive pipeline, supporting GNNExplainer-based analysis of substructures associated with toxic predictions. On ClinTox, SMILESGNN achieves AUC-ROC 0.987 and F1 0.906 with only 0.4M parameters, performing competitively with a strong SMILESTransformer and a larger ChemBERTa-2/GATv2 concat-fusion baseline. On Tox21 (12 tasks), SMILESGNN-PT obtains mean AUC-ROC 0.750, comparable to ChemBERTa-2 alone and the same-backbone concat-fusion baseline. Overall, the results suggest that cross-attention is a practical fusion alternative that preserves competitive predictive performance while enabling graph-based interpretability support.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Quang Minh Nguyen, Thuy Quynh Nguyen, Duc Minh Le, Ho Nhat Minh Nguyen, Thanh Long Dai Doan, Trong Nghia Nguyen"
+        ],
+        "categories": [
+          "cs.LG",
           "cs.AI"
         ]
       }
     },
     {
-      "id": "2609.30264",
-      "title": "AD-WM: Action-Discriminative World Models for Counterfactual Model Predictive Control",
-      "url": "https://arxiv.org/abs/2609.30264v1",
+      "id": "2609.28558",
+      "title": "CFD Correction of Open Tip Clearance Flow in a Compressor Cascade Using VAE Latent Space Adaptation",
+      "url": "https://arxiv.org/abs/2609.28558",
       "source": "arXiv",
-      "published_at": "2026-09-24T17:59:41+00:00",
-      "summary": "Latent world models are typically trained to predict factual transitions, whereas model predictive control (MPC) must compare alternative actions from the same state. A model can therefore achieve low factual prediction error yet poorly distinguish candidate actions. We introduce AD-WM, an action-discriminative joint-embedding world model for counterfactual MPC. AD-WM combines residual latent dynamics with predictor-level action-recovery regularization, using inverse dynamics and a normalized recovery objective motivated by conditional mutual information. Both objectives encourage planning transitions to preserve action information; their auxiliary heads are discarded at test time, leaving MPC unchanged. On OGBench-Cube, AD-WM improves hard-start success from 3.7% to 52.0% over a matched LeWM baseline and improves mean success over the reproduced baseline in four of five simulation environments. Planning diagnostics show that factual prediction error and whole-bank action ranking do not follow the closed-loop success ordering, whereas CEM-aligned elite regret tracks success more closely. With a frozen V-JEPA 2 encoder and matched DROID post-training, AD-WM also improves zero-shot transfer to our Franka setup, increasing basic pick-and-place success from 42.2% to 71.1% without lab-specific adaptation. These results suggest that world models for planning should preserve action-dependent differences needed for counterfactual selection, rather than optimize factual prediction accuracy alone. More videos and code are available at https://ad-wm.github.io/.",
+      "published_at": "2026-09-26T04:00:00+00:00",
+      "summary": "arXiv:2609.28558v1 Announce Type: new Abstract: CFD predictions of open tip clearance flow in compressor cascades are subject to discrepancies relative to experiments, while experimental observations are sparse and high-resolution experimental ground truth is unavailable. This study proposes a non-intrusive correction method based on a variational autoencoder (VAE) and latent-space adaptation. A VAE is first trained using a dataset of 166 parametrically sampled CFD total pressure loss fields to learn a low-dimensional statistical representation of these fields. The VAE is then frozen, and a low-rank latent-space adapter is trained using only 12 paired CFD--experiment operating conditions. An observation operator maps the corrected high-resolution fields to the experimental observation space, allowing supervision to be applied only at the available measurement locations and within the measured pitchwise windows. In the current 12-fold cross-validation, the mean absolute error decreases from 0.1335 to 0.0473, the root mean square error from 0.1717 to 0.0621, and the relative $L_2$ error from 0.5108 to 0.1871. These results indicate that the method improves agreement between CFD predictions and sparse experimental observations of open tip clearance flow without modifying the RANS solver or constructing artificial high-resolution experimental labels.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Jiabin Qiu",
-          "Zixuan Chen",
-          "Hongye Cao",
-          "Jieqi Shi",
-          "Jing Huo",
-          "Yang Gao"
-        ],
-        "categories": [
-          "cs.AI",
-          "cs.RO"
-        ]
-      }
-    },
-    {
-      "id": "2609.30258",
-      "title": "Temporal Gradient Inversion for Private Trajectory Reconstruction in Embodied Reinforcement Learning",
-      "url": "https://arxiv.org/abs/2609.30258v1",
-      "source": "arXiv",
-      "published_at": "2026-09-24T17:59:18+00:00",
-      "summary": "Distributed learning in embodied reinforcement-learning agents offers a degree of privacy by retaining raw sensor data on-device and transmitting only policy gradients to the server. Yet temporal structure can amplify this leakage beyond single-frame attacks. We introduce Temporal Reconstruction Attack on Consecutive Encodings (TRACE), an amortized temporal gradient-inversion attack that autoregressively reconstructs the sequence of private observation-action trajectories from per-step policy-learning gradients. The attack exploits two structural signals ignored by prior single-frame methods: (i) cross-time correlation between successive embodied gradients, which we formalize via a conditional mutual-information bound, and (ii) closed-form action recovery from policy-head gradient structure, which we prove exact when standard entropy regularization is sufficiently small. On held-out embodied scenes, TRACE reaches $18.8$ dB PSNR with near-perfect action recovery at $3$-$4.5$ ms per reconstructed frame, dominating the learning-based baseline across all reconstruction metrics and exceeding optimization attacks while running orders of magnitude faster. Further evaluation demonstrates TRACE's broader applicability across recurrent, residual, and compact transformer victim architectures, multi-modal inputs, and larger discrete action spaces. Defense experiments suggest that protecting temporal gradient streams may require sequence-aware privacy mechanisms.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Sudip Bhujel",
-          "Shanghao Shi",
-          "Ruiquan Huang",
-          "Ning Zhang",
-          "Yang Xiao"
+          "Xiang Zuo, Hefang Deng, Caiyan Chen, Honglin He, Mingmin Zhu, Songan Zhang, Jinfang Teng"
         ],
         "categories": [
           "cs.LG"
@@ -75,48 +60,42 @@
       }
     },
     {
-      "id": "2609.30250",
-      "title": "Agentic Detection of Online Conspiracies",
-      "url": "https://arxiv.org/abs/2609.30250v1",
+      "id": "2609.28561",
+      "title": "CARE: Condition-Aware Representation Regularization for Diffusion Models",
+      "url": "https://arxiv.org/abs/2609.28561",
       "source": "arXiv",
-      "published_at": "2026-09-24T17:58:43+00:00",
-      "summary": "Conspiratorial discourse on social media is not always expressed through explicit claims or stable lexical markers. The same surface content may express endorsement, legitimate concerns, criticism, satire, or mockery. The main challenge is therefore not only recognizing conspiracy-related claims, but inferring the speaker's intent -- the utterance's illocutionary force. We argue that this can be achieved through the use of relevant social contexts and propose an agentic framework, equipped with a set of tools supporting social queries. We demonstrate the benefits of our approach on a unique dataset of Hebrew tweets, covering 80\\%--90\\% of the public Hebrew tweets published over a four-year span (late 2018-- early 2023), encompassing several election cycles as well as the COVID pandemic years and related vaccination campaigns. This extensive coverage can be used in recovering different social contexts. Evaluating our framework on a manually-annotated adversarial dataset, we find that context-aware workflows consistently outperform text-only classification and that the agentic framework performs significantly better than other frameworks and settings, including a non-agentic model exposed to the same contexts available to the agent. We further provide an analysis of the results, the errors and efficiency (token economy) tradeoffs. These findings support viewing the task of conspiracy detection as a socially embedded interpretation task, in which effective classification depends not only on access to contexts, but also on adaptive reasoning in which the agent uses tools on a per-case basis, asking only for evidence relevant to its current reasoning step.",
+      "published_at": "2026-09-26T04:00:00+00:00",
+      "summary": "arXiv:2609.28561v1 Announce Type: new Abstract: Recent advances in diffusion models highlight the importance of representation regularization for improving sample quality and training efficiency. However, commonly used regularization methods often overlook the built-in conditions (such as labels or texts) which directly determine the generation target. In this work, we demonstrate how conditioning signals affect the feature distribution and introduce the CARE (Condition-Aware REpresentation regularization). CARE is a lightweight plug-and-play regularization framework that dynamically modulates feature distribution based on condition similarity. CARE leverages built-in conditioning signals to judiciously guide the representation space, promoting tighter feature clusters for similar conditions without relying on explicit alignment losses or external supervision. Empirically, CARE consistently improves both visual fidelity and convergence stability across both class-to-image and text-to-image tasks. On ImageNet, CARE achieves a 19.08\\% reduction in FID in 400k training steps, leading to a 3.5$\\times$ speed-up. When applied to text-to-image generation, CARE lowers FID by 16.61\\% in 200k iterations and improves semantic alignment between generated samples and text prompts. Moreover, CARE can be seamlessly integrated with existing regularization methods, yielding additional performance gains.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Lior Biton",
-          "Oren Tsur"
+          "Fengjia Guo, Zhuoyi Yang, Jie Tang"
         ],
         "categories": [
-          "cs.CL",
-          "cs.LG"
-        ]
-      }
-    },
-    {
-      "id": "2609.30249",
-      "title": "RAPID: Robot Agentic Programming from Demonstrations",
-      "url": "https://arxiv.org/abs/2609.30249v1",
-      "source": "arXiv",
-      "published_at": "2026-09-24T17:58:21+00:00",
-      "summary": "Coding agents have demonstrated enormous success in solving complex programming problems. To leverage their potential for robot systems, this work introduces Robot Agentic Programming from Demonstrations (RAPID), which automatically generates, verifies, and refines robot programs, given a single visual human demonstration. The iterative agentic loop of code refinement requires several key ingredients: (i) a testable task specification, (ii) action primitives for robot execution, and (iii) an interactive environment for program execution and verification. RAPID infers all three from the demonstration automatically. To make the resulting program reusable beyond the demonstration setting, RAPID uses an object-centric relational program representation that focuses on the underlying structure of the demonstrated strategy rather than the specific motion per se: it expresses the action primitives as trajectory-optimization programs that realize object-level motion effects, while composing them through relational constraints that capture scene-specific geometry at run time. We evaluated RAPID in simulation on eight challenging contact-rich nonprehensile manipulation tasks as well as general prehensile manipulation tasks in the LIBERO-Pro benchmark. We also successfully deployed it on a real Franka arm and evaluated on all eight nonprehensile tasks. In all experiments, RAPID demonstrated strong performance, with generalization over object pose, shape, material, and environment. Website: https://yuyaoliu.me/projects/rapid.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Yuyao Liu",
-          "Jiayuan Mao",
-          "David Hsu",
-          "Leslie Pack Kaelbling",
-          "Tomás Lozano-Pérez"
-        ],
-        "categories": [
-          "cs.RO",
-          "cs.AI",
+          "cs.LG",
           "cs.CV"
+        ]
+      }
+    },
+    {
+      "id": "2609.28563",
+      "title": "SpaFactor: Lightweight Spatial Context-Aware Gene Program Modeling for Histology-to-Transcriptomics Inference",
+      "url": "https://arxiv.org/abs/2609.28563",
+      "source": "arXiv",
+      "published_at": "2026-09-26T04:00:00+00:00",
+      "summary": "arXiv:2609.28563v1 Announce Type: new Abstract: Spatial transcriptomics (ST) profiles gene expression within tissue architecture, but its cost and experimental complexity limit routine use. Predicting spatial expression from routinely available hematoxylin and eosin (HE) images therefore offers a scalable alternative. However, conventional methods often fit high-dimensional gene outputs as independent targets, overlooking the biological coordination among genes while remaining vulnerable to high-dimensional noise and overfitting. Existing attempts to address this limitation often rely on computationally heavy graph networks or complex auxiliary supervision. We therefore introduce SpaFactor, a lightweight and efficient low-rank morphology-program-gene factorization framework. At the input, SpaFactor efficiently fuses the visual representation of the central spot with multiscale local and regional neighborhood context, yielding a histologic representation that captures cellular morphology and microenvironmental heterogeneity. For modeling, a residual MLP stably learns a nonlinear mapping from the tissue microenvironment to low-dimensional latent gene programs. These activities are decoded through shared gene loadings into coordinated multi-gene expression predictions. Across five public cohorts, SpaFactor achieves the best aggregate performance, with particularly clear improvements for spatially variable genes, and more faithfully recovers biologically organized spatial patterns. These results demonstrate that lightweight joint modeling of tissue context and gene programs can improve both predictive accuracy and biological fidelity.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Shiting Ruan, Xitong Ling, Qiming He, Ziyou Yan, Huaitian Yuan, Tian Guan, Ying Xiao, Xu Guan, Yonghong He"
+        ],
+        "categories": [
+          "cs.LG",
+          "q-bio.QM"
         ]
       }
     }

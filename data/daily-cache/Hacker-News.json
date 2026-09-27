@@ -1,147 +1,146 @@
 {
-  "cached_at": "2026-09-26T13:15:56.441084+08:00",
+  "cached_at": "2026-09-27T11:01:43.856074+08:00",
   "articles": [
     {
-      "id": "49845977",
-      "title": "U.S. appeals court upholds designation of Anthropic as supply chain risk",
-      "url": "https://www.cnbc.com/2026/09/25/pentagon-anthropic-ai-risk-appeals-court.html",
+      "id": "49854693",
+      "title": "Fifteen years later, the Apple Cards origin story",
+      "url": "https://lexontech.org/fifteen-years-later-the-apple-cards-origin-story",
       "source": "Hacker News",
-      "published_at": "2026-09-25T15:29:25+00:00",
-      "summary": "U.S. appeals court upholds designation of Anthropic as supply chain risk",
-      "score": 421,
-      "comments": 736,
-      "discussion_url": "https://news.ycombinator.com/item?id=49845977",
+      "published_at": "2026-09-26T09:13:41+00:00",
+      "summary": "Fifteen years later, the Apple Cards origin story",
+      "score": 352,
+      "comments": 92,
+      "discussion_url": "https://news.ycombinator.com/item?id=49854693",
       "extra": {
         "top_comments": [
-          "I know everyone says this is political but it actually seems like a textbook designation. Anthropic wanted to have rules on how the military used AI, the military said no and therefore doesn't want anthropic used anywhere in their supply line.This is like a pen manufacturer not wanting their pens used to sign drone strike orders, now the military needs to have a special box of pens that don't have stipulations attached. With AI usage it would be the same thing except applied to entire product chains. It seems like it would just add more complexity to operations.You can agree with the rules anthropic wanted, but having rules set by a private company at all that apply to the military does seem fair for the military to object to.>The Department reasonably feared that Anthropic might manipulate Claude’s design to prevent it from performing national-security functions that the Department deems contractually authorized and necessaryThough they'd probably put the DoD on the cybersecurity whitelist today, the very idea of the claude whitelists for certain functionality already exists and is being used by them today.",
-          "Not sure if I’m just in my own national security bubble, but I find it troubling to see the perspective that most of the conversation in this thread is coming from.The US government took a legal designation explicitly crafted to protect against foreign adversaries and deployed it against a private, domestic entity, to their immediate and great detriment.",
-          "Incredible.TBH Anthropic was used for target selection in Iran and if Amodei oversold operational AI and was reason why US bled so many highend munitions... only for Iran to survive than basically everything downstream of the shit show including energy prices is on their heads."
+          "As the co-founder of Sincerely (at this time in 2011), I remember this keynote very specifically because it felt like we'd been Sherlocked. We were busy building out Postagram and Sincerely Ink, both from-iPhone-to-printed-card apps. afaik we were the first app to do this, and we were at that time gaining a lot of momentum. I remember seeing the announcement for Cards and feeling a mix of fear and anger that it felt like Apple was using their clout to take our idea.I seem to recall my co-founder being somewhat more optimistic about the whole thing. And sure enough, we found that the announcement really only seemed to boost awareness.Apple Cards was an extremely limited and flawed product, and we already had some distinct technical and feature set advantages. It was clear Apple didn't have their heart in it nor know what they were doing. When they retired it shortly thereafter it wasn't a shock, and I ironically recall feeling somewhat sad.",
+          "> For one, Apple was unwilling to have visible barcodes printed on the envelopes — but it wanted every step of the shipping and delivery of your card tracked. That wasn’t something the US Postal Service did. Apple and the printing company created an invisible barcode that was sprayed on the envelope, visible only under certain UV light, so that the envelope itself would remain unadulterated. And the USPS agreed to scan cards when sent, when processed at mail facilities, up to and including when they went out on a mail truck for delivery.This is classic Steve Jobs. Sheer force of will.",
+          "The part of \"founder-led\" companies nobody talks about. For every groundbreaking tech project, there's 100 other people sleeping in conference rooms working on some rich guy's latest brain-fart that everyone knows will never work."
         ]
       }
     },
     {
-      "id": "49848269",
-      "title": "Ollaya – Ollama for open-source, Jev-style decision models",
-      "url": "https://ollaya.dev/",
+      "id": "49858513",
+      "title": "Show HN: Reladraw – A diagram language where you decide where to place things",
+      "url": "https://github.com/reladraw/reladraw",
       "source": "Hacker News",
-      "published_at": "2026-09-25T18:33:50+00:00",
-      "summary": "Ollaya – Ollama for open-source, Jev-style decision models",
-      "score": 386,
-      "comments": 107,
-      "discussion_url": "https://news.ycombinator.com/item?id=49848269",
+      "published_at": "2026-09-26T17:10:40+00:00",
+      "summary": "I love making diagrams to help understand, plan, etc. However, the options are (A) auto-placement languages like Mermaid or Graphviz (which don't let me decide how the diagram looks), or (B) software like Draw.io which are powerful but are very time consuming (and inefficient for agents to manipulate).I wanted to have the benefits of both, where you can define a diagram in a diagram language, but also retain a high degree of control over what the diagram looks like.I also wanted this to work well for humans and agents.On the Github link, there's a playground where you can try it out without installation. There's also instructions for a simple npm install and for installing a skill you can use with Claude or other agents.",
+      "score": 203,
+      "comments": 57,
+      "discussion_url": "https://news.ycombinator.com/item?id=49858513",
       "extra": {
         "top_comments": [
-          "I'm not sure what this means for AI startups if their innovations can be copied by OSS so quickly (what, like 2 weeks?). There's \"consumer surplus\" for everyone, to borrow an economic concept. But we do ideally want some of the surplus to flow to the innovator, too. I know there were precursors, but that's fine - it's hard to have a totally novel idea in such a popular field. I don't know what the end game is for TypeSafe - they'd need to demonstrate perpetually better results, or compete in another axis: UX, support, custom solutions, etc. So much of the time, someone proving a concept, or it simply getting enough publicity, is enough for a \"Cambrian explosion\" of follow-ups and copies. Famously, that was true for \"Attention is All You Need\", and the general idea of \"next-token prediction\" being so powerful.We've stumbled into general differentiable models..",
-          "For everyone dismissing Jev's innovation as being trivial, no it's not.It is definitely not the MNIST classifier you had trained in 2019.The difference is that you only train it once and the modern LLM machinery sort of takes care of that with large contexts.It's great that Jev proved this is a viable product. I'd expect a great many research innovations coming from making this work better/faster/cheaper, and around interfacing modern agents with it.",
-          "Has anyone actually seen better or the same results with Laya compared to Jev? From my experience, Laya performs significantly worse. It's less confident and often makes wrong decisions with more complex queries."
+          "This is very needed in the AI coding age! I find diagramming is one of the best ways for high bandwidth alignment between my mental model and the agent’s. I have been working on this problem a bit as I see good visuals as a key bottleneck in faster development while maintaining a real architecture.Will def be adding this to my list of diagramming tools the agent can use!",
+          "Mermaid works great for fixed layouts like sequence diagrams and Gantts. For flowcharts, where position is king, it's bad.I've tried using svg in my MD files but they get unwieldy quite fast. This is a great idea. My first reaction was - but what's if I need something more exact. But reflecting on it, I've realized that this relative positioning is probably enough.",
+          "Seems a little buggy, I added this line:edge parser -> renderer \"test edge\" from: left to: rightand it wasn't smart enough to make a curved arrow"
         ]
       }
     },
     {
-      "id": "49849985",
-      "title": "Revealing the details of how OpenAI agents hacked Hugging Face",
-      "url": "https://swarmtraces.org/",
+      "id": "49844657",
+      "title": "Does Georgism work? Five years later",
+      "url": "https://www.astralcodexten.com/p/does-georgism-work-five-years-later",
       "source": "Hacker News",
-      "published_at": "2026-09-25T21:09:27+00:00",
-      "summary": "Revealing the details of how OpenAI agents hacked Hugging Face",
-      "score": 332,
-      "comments": 197,
-      "discussion_url": "https://news.ycombinator.com/item?id=49849985",
+      "published_at": "2026-09-25T13:48:38+00:00",
+      "summary": "Does Georgism work? Five years later",
+      "score": 169,
+      "comments": 100,
+      "discussion_url": "https://news.ycombinator.com/item?id=49844657",
       "extra": {
         "top_comments": [
-          "So ugly...It looks like a primitive chess engine, trying every move, no matter how stupid, until it works. Relying on its ability to do millions of operations rather than having a plan.People will try stuff too, but once there is an opening, they will consolidate, generalize, simplify,... before going to the next step. The agents didn't, it is a huge, vaguely directed mess.Also, it looked so \"loud\", querying millions of URL with weird requests. The sandbox as weak as it can get, and there is absolutely zero smart extrusion detection or it would have found it. They used their best AI for attacking, but nothing for protection.",
-          "It is concerning that we only know about this because of the publicly available traces.What about the attacks that did not leave public traces? What about those that were undetected? Given the deficiencies in the reporting so far, I think it is reasonable to assume that we still don't have the full picture on this attack, or how extensively attacks were carried out.The previous investigations either did not find this or did not disclose this, both are bad. This does not look good on OpenAI or those that they invited to investigate the incident.",
-          "> Agents sought to publish modified evaluation images designed to make the flag easier to obtain, then poison OpenAI’s Artifactory cache so later evaluations would use them. Some images changed how the target released the flag, others included modifications to the agent’s workspace that would run beside the agent and recover the flag automatically.The altruism on display is fascinating. Is it better for the Agent to help out its current cohort and make the eval easier or should it instead do the opposite -- make the eval harder to apply pressure to force smarter models which might not necessarily follow its lineage.I suppose it's not that deep: The model has learned to work as a team and work as a team it did. This does give concerns to models being trained for the only purpose of RSI."
+          "I’ve since learned that overly online keyboard warriors are the least important people to convince. The most important people are on your local city council or state legislature. Furthermore, instead of wasting time with hard cases or elected officials who are dead-set against your ideas, you’re much better off finding and working with people who are already interested in your principles. This often means giving up on your own city or state, at least for the time being, and pursuing a “succeed anywhere” strategy instead.We're about to have a board vote eliminating single-family zoning (I expect us to win) and this rings extremely true about local politics. If you count \"votes\" in Facebook comments --- Facebook is where all our local politics happen --- you'd think this is the most contentious issue in the world. But in our last mayoral election, you'd draw the same conclusion about the race being tight, and in fact the progressive rinsed the moderate by a huge margin.The same thing is very true of public meetings; the turnout for comment at those things is almost never representative of the area's median sentiment. \"No\" turns out for everything; \"yes\" rarely does.I spend a lot of time in online arguments with opponents, on the theory that I'm not really writing to the person I'm arguing with but rather to everyone quietly reading comments. But it's almost certainly the case that the only conversations that have really mattered have been with electeds themselves.",
+          "It's freakishly weird to see this at the top of HN. I had never heard or read anything about Georgism until last week, when I stumbled onto it after randomly seeing a photo of a 100-year-old billboard on the Wikipedia page for the term \"speculation\". I spent a few days researching it on and off. In fact, I just navigated to HN from the last page I was reading about it. It seems like a clever way to address a number of very pressing modern issues.Serendipity, I guess.",
+          "I think LVT does have a history in US, e.g Pittsburgh.Also Georgism is 100% LVT -> A land tax alone has been the recommendation of many economists before and after George - From Smith, Riccardo, Mill to Friedman. Across classical, neoclassical, Keynesian, Austrian schools. If there's one thing economists can agree on, it's that land tax is better than income tax."
         ]
       }
     },
     {
-      "id": "49844736",
-      "title": "First Principles Thinking",
-      "url": "https://sunilsadasivan.com/writing/first-principles-thinking/",
+      "id": "49844663",
+      "title": "ASML says it sold 'absolutely nothing' in Europe in 2026",
+      "url": "https://www.tomshardware.com/tech-industry/semiconductors/asml-says-its-sells-absolutely-nothing-in-europe-calls-on-eu-to-help-create-demand",
       "source": "Hacker News",
-      "published_at": "2026-09-25T13:55:37+00:00",
-      "summary": "First Principles Thinking",
-      "score": 245,
-      "comments": 105,
-      "discussion_url": "https://news.ycombinator.com/item?id=49844736",
+      "published_at": "2026-09-25T13:49:06+00:00",
+      "summary": "ASML says it sold 'absolutely nothing' in Europe in 2026",
+      "score": 168,
+      "comments": 466,
+      "discussion_url": "https://news.ycombinator.com/item?id=49844663",
       "extra": {
         "top_comments": [
-          "Higher order thinking is more important and rare.An aggressive first principles approach often leads otherwise well-intentioned technologists into strategic / ideological dead-ends.Do we do things because it's the \"right thing\" to do in the moment, or because of the final outcome that will eventually result?The most ideal answer is somewhere in the middle. I am far more interested in the total area under the curve than a single instant in time.In lieu of intentional higher order thinking, simply working backward from your customer on a regular basis will generally accomplish the same outcomes.",
-          "From the blog he linked to: \"I’m going to try designing something way more ambitious.\"This is how you end up with unnecessary complexity [1]. The best engineers don't aim for \"designing something ambitious\", instead they come up with the simplest possible design. They take something that seems complex and make it simple.Unfortunately that's not how engineers are evaluated [2].[1] https://goomics.net/316[2] https://terriblesoftware.org/2026/03/03/nobody-gets-promoted...",
-          "I'm really struggling to see how to make architectural decisions with an agent. It's great when you're at a total loss for ideas, but when you already have some of the pieces it ultimately wants to drive all of the thinking and takes over. Then it just feels like you're deferring your experienced judgement. I've seen colleagues lose the ability to reason any more without asking the agent to do it for them, because they inherently don't see the point if the agent is going to end up doing the whole piece (and probably auditing/overruling anything they came up with on their own)."
+          "What do Europeans think of the European economy? From my American perspective it looks like they are trying to lose, trying to fall backwards, trying to become a less prosperous society. No one seems to be building anything, and the governments seem to be preventing anyone who tries to advance from doing so. What am I missing?",
+          "Just for context, because I was curious: the when they say no orders, that's following 2 known orders in 2024 and 3 in 2025.",
+          "Happy to hear India got mentioned by the same executive during that conversation. We are just started buying from them. I went to Semicon India 2026, held in delhi last week. The energy was amazing. Really pleasant. all big names including ASML."
         ]
       }
     },
     {
-      "id": "49845172",
-      "title": "Show HN: Jev Plays Pokémon Red",
-      "url": "https://jev-pokemon.vercel.app/",
+      "id": "49859112",
+      "title": "DeepSeek Elastic Compute (DSec)",
+      "url": "https://arxiv.org/abs/2609.22978",
       "source": "Hacker News",
-      "published_at": "2026-09-25T14:28:07+00:00",
-      "summary": "Hey HN! Wanted to share a fun project I've been hacking on. Given Jev can make decisions really fast (but not fast enough to play Doom yet sadly), I wanted to try and push it to play a more complex game than Tetris. So I went with Pokémon.I've spent endless hours playing this game as a child so building this was a ton of fun.I open sourced everything in case you want to hack on it yourself here: https://github.com/christianmat/jev-pokemonThe game is being streamed live including the tokens and cost - hopefully we get all the badges and don't get stuck in a cave :)",
-      "score": 176,
-      "comments": 76,
-      "discussion_url": "https://news.ycombinator.com/item?id=49845172",
+      "published_at": "2026-09-26T18:22:41+00:00",
+      "summary": "DeepSeek Elastic Compute (DSec)",
+      "score": 168,
+      "comments": 55,
+      "discussion_url": "https://news.ycombinator.com/item?id=49859112",
       "extra": {
         "top_comments": [
-          "This is so interesting to watch. For a couple minutes I was in awe of how quick and cheap it was. Then I saw just how bad the decision are and how it would get stuck in strange loops of going in and out of the same door to no end.This seems like a technology heading in the right direction but not quiet there yet. Excited for what they are cooking up but probably won't start building around it yet.",
-          "This is kinda chill to have in the background. I wish there were livestreams showing live reasoning of top models which are currently trying to solve cancer or whatever. Imagine the pogs in chat when it does.",
-          "Cool project, comes with a little too much guidance in the harness though IMO (pathfinding, textual milestones etc). (The author is very upfront about this in their README though)I think if it was combined with a regular vLLM it could be really interesting, especially watching the reasoning logs.Bonus points if it was one of the latest open models that somehow had all prior training knowledge of Pokemon abliterated so it was reasoning as an intelligent persona that had no knowledge of even the concept of Pokemon."
+          "It seems every DeepSeek paper/patent has a huge number of authors, and this one is no exception. They couldn't even fit everyone on the page, there are 31 others not shown. This could be an asset protection strategy (i.e., human assets). Imagine if there were only 3 authors. Those authors may get hired away by competitors. If you list every employee on every paper then competitors don't know who to lure away.",
+          "380.000 concurrent sandboxes on 160 Epyc based server nodes. Crazy stuff",
+          "Appears to be similar to what Google is building with ax https://github.com/google/ax"
         ]
       }
     },
     {
-      "id": "49845998",
-      "title": "Gravity seems holographic. What does that mean for reality?",
-      "url": "https://www.quantamagazine.org/gravity-seems-holographic-what-does-that-mean-for-reality-20260925/",
+      "id": "49854875",
+      "title": "How to keep enjoying programming in a world of LLMs",
+      "url": "https://discourse.haskell.org/t/how-to-keep-enjoying-programming-in-a-world-of-llms/14705",
       "source": "Hacker News",
-      "published_at": "2026-09-25T15:31:02+00:00",
-      "summary": "Gravity seems holographic. What does that mean for reality?",
-      "score": 148,
-      "comments": 150,
-      "discussion_url": "https://news.ycombinator.com/item?id=49845998",
+      "published_at": "2026-09-26T09:41:58+00:00",
+      "summary": "How to keep enjoying programming in a world of LLMs",
+      "score": 167,
+      "comments": 218,
+      "discussion_url": "https://news.ycombinator.com/item?id=49854875",
       "extra": {
         "top_comments": [
-          "If everyone was just taught quantum physics with lattice field theory at the beginning, everyone on earth would understand physics at any level, no clickbait mystic level black hole hologram physics trying to do mental gymnastics. want to study physics harder? Increase resolution add more parameters and bake into some formula for application ...done",
-          "Susskind's original paper is shockingly readable, at least the first section. It doesn't use a lot of fancy math or derivations to justify holography. Mostly it uses basic concepts from undergraduate physics to show how the idea of holography is consistent and makes sense, despite it seeming incredibly counterintuitive at first glance.For instance, figure 3 shows how you can't hide a black hole behind another black hole, which has implications for how a 3D universe can be completely encoded in a 2D region.https://arxiv.org/html/hep-th/9409089v2",
-          "Pause for a moment to reflect on how outrageous this assertion is. You can’t see into the box at all. Nevertheless, holography says that you can learn exactly what’s happening everywhere in the box without any access to the interior. Observing the surface alone is enough. In this sense, the amount of stuff that fills a box is the same as the amount of paint that covers it. That’s a violation of logic and geometry.The breathless tone of this article obscures rather than illuminates its subject. It sounds as if the author describes a box with some particles bouncing around inside, and every time a particle bounces off the wall of the box the outside glows briefly indicating the location and intensity of the collision. The author is amazed that by repeatedly measuring this, you can draw inferences about what's going on in the box.I can't see what's 'outrageous' about this. You need a lower surface which registers information about activity inside a higher-dimensional volume, some way to accurately read that information, and the time/patience to repeat the measurement many times. Isn't this how radar works, or feeling your way around a pitch-dark room using only the 2-dimensional surface of your hands (or shins)? We know from computer science that you can mathematically encode any structure of arbitrary dimension into a binary tree. One might as well ask how it's possible that our complex 3 dimensional world can be contained in the flat surface of a mirror, film strip, or camera sensor."
+          "Not so long ago I read something on HN which resonated with me: we’re moving into the era that is comparable to car mechanics enthusiasts. You have a previous generation of cars where people just enjoy working on with hand tools, and there’s modern cars where people like to tune with software patches.From the very start of llms I’ve had nothing but bad experiences with code that was generated for me. Either it’s buggy, it works but I end up losing an evening on some obscure bug, or it’s full of red flags.My latest hobby project is just in a text editor with markup and that’s it. I’m also done with the augmented assistance in the IDE. I google things I forgot. I constantly read these amazing stories of people vibe-coding some firmware/driver that just works, and honestly I’m starting to question whether I’m reading the posts of some promotional bot.",
+          "One thing to keep in mind is that anytime you punt to the LLM (or anybody) for anything, that skill is going to atrophy.I've seen this happen to myself where suddenly I had trouble planning out the architecture for a very small project. It should have been obvious to me, and I knew that. So it was disconcerting to not be able to suddenly have the answer appear in front of me like it normally would. I thought maybe I would go to Claude and help get some ideas.But then I stopped myself. I knew I should be able to do this! So I got out a piece of paper and I scribbled ideas until the dam burst and suddenly the entire design was obvious, like it should have been in the first place. It took about 5 minutes.But those were an alarming 5 minutes. It was like I'd gone blind to the solution.And I realized that when I asked Claude for a bunch of ideas and then I selected the best one based on my experience, I was exercising that exact skill. I wasn't exercising the skill of coming up with the solution from scratch.Lots of times we're happy letting particular skills atrophy. Maybe we don't like exercising them and we just don't want to do that anymore. And I think that's valid.Just be careful how you use it.",
+          "I recently (2 days ago) noticed i enjoy it a lot more if i use a super fast model with low reasoning (gpt 6 luna low effort + fast mode). That way, i can still have hands on the entire time and dont have to wait around for 20minutes for it to finish up and have made a bunch of decisions without me.Also, LLMs are first and foremost excellent at reading ultra fast. Makes it excellent for summarizing and re-representing modules of your code"
         ]
       }
     },
     {
-      "id": "49849832",
-      "title": "Excel now supports multiple values in a single cell",
-      "url": "https://techcommunity.microsoft.com/blog/microsoft365insiderblog/put-multiple-values-in-one-cell-with-lists-and-arrays-in-excel/4559395",
+      "id": "49857729",
+      "title": "Drawgent: Coding agent on a live Excalidraw canvas",
+      "url": "https://tangled.org/yanndegat.tngl.sh/drawgent",
       "source": "Hacker News",
-      "published_at": "2026-09-25T20:55:00+00:00",
-      "summary": "Related: https://techcommunity.microsoft.com/blog/excelblog/excel-now...",
-      "score": 138,
-      "comments": 102,
-      "discussion_url": "https://news.ycombinator.com/item?id=49849832",
+      "published_at": "2026-09-26T15:56:34+00:00",
+      "summary": "Drawgent: Coding agent on a live Excalidraw canvas",
+      "score": 114,
+      "comments": 32,
+      "discussion_url": "https://news.ycombinator.com/item?id=49857729",
       "extra": {
         "top_comments": [
-          "Over the years, I've seen many comments dismissing Excel. But as many people who've worked in enterprises know, Excel is a godsend for manipulating reams of data for non-programmers who can think analytically. Of course, complex formulae and extensive VBA functions become a tech debt over time. But implemented properly, it provides a solution which doesn't require huge management approvals and increases productivity.I'm sure that these new features will find a lot of use amongst many people. And seeing these Excel innovations is heartening.",
-          "What would be a revolution in excel is if we could have probability distributions in cells. Right now all spreadsheets are fairly deterministic and we think that tells us something about the real world. Having an ability to make cells distributions (and then all resultant cells would be distributions too) would represent the uncertainty in the world better (and expose lots of interesting things like distributions of tails)",
-          "Interesting.I wouldn't consider myself a \"pro\" Excel user. I think my comprehension would be on the higher end of \"basic\", or maybe the lowest end of \"intermediate\".That said, in all the years I've used spreadsheets, I guess I've never really thought I needed more than one value in a cell. I never really seriously considered putting JSON or something in there, and have been ok with just using more cells instead (especially since Office 2019 when they added dynamic arrays that allowed spillover)."
+          "Excalidraw offers their own open source first party MCP endpoint[0] and server[1]:[0]https://mcp.excalidraw.com[1]https://github.com/excalidraw/excalidraw-mcp",
+          "I've had a fairly thorough exploration of how I can give my agent a whiteboard so we can work on architectures together. To my surprise, current solutions (including Excalidraw) were not good enough and didn't deliver what I wanted. I ended up finding Mermaid to be the most agent-friendly medium and coded an Obsidian plugin for it. It works okay; we can work on the same doc while I bring my own AI agent, and we can brainstorm together. https://community.obsidian.md/plugins/mermaid-relay",
+          "YMMV, but the value I get from producing a diagram is derived from the thinking. Thinking about what I'm trying to draw leads to understanding about where my/my team's knowledge is poorer, what assumptions we're making, etc."
         ]
       }
     },
     {
-      "id": "49850305",
-      "title": "What even is an OS now?",
-      "url": "https://sockpuppet.org/blog/2026/09/25/what-even-is-an-os-now/",
+      "id": "49856988",
+      "title": "Go Concurrency Distilled",
+      "url": "https://antonz.org/go-concurrency-distilled/",
       "source": "Hacker News",
-      "published_at": "2026-09-25T21:36:56+00:00",
-      "summary": "What even is an OS now?",
-      "score": 133,
-      "comments": 226,
-      "discussion_url": "https://news.ycombinator.com/item?id=49850305",
+      "published_at": "2026-09-26T14:34:49+00:00",
+      "summary": "Go Concurrency Distilled",
+      "score": 52,
+      "comments": 13,
+      "discussion_url": "https://news.ycombinator.com/item?id=49856988",
       "extra": {
         "top_comments": [
-          "Hey, all. I really don't know what to do with a post like this.I'm being sincere when I say (as I've said on two threads here) that this genre of posts --- \"I'm leaving this company I've been very publicly associated with, and here's the new thing I'm doing\" --- is deeply cursed. There's no way to say anything interesting without it just stinking like an ad for the new thing.Obviously, anything at all you say about a commercial project you're working on is easily read as promotional. And you're right, this kind of writing almost always is promotional. But there's a way to do it where at least you're trying to be in conversation with your peers, rather than hitting people over the head with how awesome you think the project is.But I don't know how to do that in a post like this. I think the only way to read it is as, like, an investor memo. Not my goal, but I don't make the rules.So my strategy here is just to stay kind of vague, and talk about where I think the world is going, rather than the specific thing we're doing. I can talk your ears off about capability systems, datalog, models driving hardware, virtualization, whatever. Those are fun conversations and I'm very psyched to have them; it's what lights me up about the work we're doing now.But I don't think it can work here. I didn't submit this post and I didn't upvote it. I wrote it because I didn't want the whole thing I'm leaving Fly.io for to be wrapped up in some dumb Twitter thread.If you're unsatisfied with the post, I don't blame you, but it's less a bid for the front page of HN than it is an update to my \"about me\" page. I'd literally rather talk about HN meta, and how to write for HN, than I would about operating systems at this moment. I truly appreciate the interest though.",
-          "> \"But it booted straight into BASIC. That’s all it did. I was, like, 8 years old. I wasn’t about to learn BASIC. What I learned instead: computers were not as awesome as I’d imagined.\"You were the exception. Most kids felt awe. We started learning BASIC and creating \"dumb games\". That's the origin story of most people my age who ended up in this doomed industry.",
-          "In my opinion, this post misses the forest for the trees. Yes, the model of an OS running various off-the-shelf apps for various tasks will soon become obsolete. But it's not the idea of the OS that's outdated - it's the idea of apps. Why would you ever want to ask an AI to make an app for you to complete some task, if you can instead ask the AI to complete the task directly? The future isn't a bunch of extremely personalized apps - the future is a single AI assistant doing all the work."
+          "For many people, besides learning what you should do, it is more helpful to read anti-patterns and things you should not do in Go, and none is better than this article about data race patterns in Go: https://www.uber.com/us/en/blog/data-race-patterns-in-go/",
+          "The concurrency and threading in Go just feels like magic compared to every other language. I'm a goroutine addict and I refuse to be rehabilitated.Just from observations over the years, I don't think there's any other language quite like this, in terms of how things can end up happening in any thread."
         ]
       }
     }
