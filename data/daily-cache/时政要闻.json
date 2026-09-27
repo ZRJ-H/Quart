@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-09-27T11:01:43.856074+08:00",
+  "cached_at": "2026-09-27T13:31:04.766842+08:00",
   "articles": [
     {
       "id": "https://www.news.cn/politics/20260924/a512e6e3ab5b44f5ad0651c0d1b37646/c.html",
@@ -62,12 +62,12 @@
       "extra": {}
     },
     {
-      "id": "https://www.bbc.co.uk/news/articles/cqgmrr9ekr7ko#0",
-      "title": "Trump rejects Iran deal to reopen Strait of Hormuz in seven days",
-      "url": "https://www.bbc.co.uk/news/articles/cqgmrr9ekr7ko?at_medium=RSS&at_campaign=rss",
+      "id": "https://www.bbc.co.uk/news/articles/ck1wxx8n2x3zo#1",
+      "title": "Bangkok roads submerged as flood disaster declared",
+      "url": "https://www.bbc.co.uk/news/articles/ck1wxx8n2x3zo?at_medium=RSS&at_campaign=rss",
       "source": "BBC World",
-      "published_at": "2026-09-26T22:15:59+00:00",
-      "summary": "Iran's foreign minister acknowledges Trump's comments, but adds that Tehran is waiting for the \"definitive views\" of mediators.",
+      "published_at": "2026-09-27T04:45:08+00:00",
+      "summary": "Authorities said the heavy rains have subsided but the flooding is not yet over.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
@@ -78,7 +78,7 @@
       "title": "Nor'easter brings flooding as New York and New Jersey declare emergency",
       "url": "https://www.bbc.co.uk/news/articles/ck1wxxzn5jndo?at_medium=RSS&at_campaign=rss",
       "source": "BBC World",
-      "published_at": "2026-09-26T22:04:26+00:00",
+      "published_at": "2026-09-27T04:23:09+00:00",
       "summary": "Tens of millions of people from Maine to Virginia are in the path of the powerful storm.",
       "score": 0,
       "comments": 0,
@@ -86,12 +86,12 @@
       "extra": {}
     },
     {
-      "id": "https://www.npr.org/2026/09/26/nx-s1-5980066/trump-gave-xi-jinping-a-warm-welcome-what-did-the-talks-accomplish",
-      "title": "Trump gave Xi Jinping a warm welcome. What did the talks accomplish?",
-      "url": "https://www.npr.org/2026/09/26/nx-s1-5980066/trump-gave-xi-jinping-a-warm-welcome-what-did-the-talks-accomplish",
-      "source": "NPR World",
-      "published_at": "2026-09-26T21:13:54+00:00",
-      "summary": "From the National Archives to the state dinner, President Trump and Xi Jinping looked comfortable together in Washington. Two former NPR China correspondents on what the visit did and didn't deliver.",
+      "id": "https://www.bbc.co.uk/news/articles/cqgmrr9ekr7ko#0",
+      "title": "Trump rejects Iran deal to reopen Strait of Hormuz in seven days",
+      "url": "https://www.bbc.co.uk/news/articles/cqgmrr9ekr7ko?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "published_at": "2026-09-26T22:15:59+00:00",
+      "summary": "Iran's foreign minister acknowledges Trump's comments, but adds that Tehran is waiting for the \"definitive views\" of mediators.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",

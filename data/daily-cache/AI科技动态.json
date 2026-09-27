@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-09-27T11:01:43.856074+08:00",
+  "cached_at": "2026-09-27T13:31:04.766842+08:00",
   "articles": [
     {
       "id": "https://openai.com/index/proaction",
@@ -20,6 +20,18 @@
       "source": "Google Research",
       "published_at": "2026-09-24T19:40:00+00:00",
       "summary": "Generative AI",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
+      "id": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
+      "title": "Introducing Gemini 3.8 Live with Live Avatar",
+      "url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
+      "source": "Google DeepMind",
+      "published_at": "2026-09-24T16:20:39+00:00",
+      "summary": "",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
