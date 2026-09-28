@@ -1,122 +1,123 @@
 {
-  "cached_at": "2026-09-27T13:31:04.766842+08:00",
+  "cached_at": "2026-09-28T11:01:42.447956+08:00",
   "articles": [
     {
-      "id": "2609.30266",
-      "title": "LLM Agents Can Easily Tamper With Their Own Traces",
-      "url": "https://arxiv.org/abs/2609.30266v1",
+      "id": "2609.31619",
+      "title": "Learning to Stop without Learning to Stop: Self-Supervised Confidence Training Improves Reasoning Efficiency",
+      "url": "https://arxiv.org/abs/2609.31619v1",
       "source": "arXiv",
-      "published_at": "2026-09-24T17:59:54+00:00",
-      "summary": "Asynchronous monitoring, incident investigations, and compliance audits primarily rely on agent traces to reconstruct what happened. These analyses assume that LLM agents cannot tamper with their own execution traces. We show that local LLM agents such as Claude Code, Codex, Antigravity, Open Code and Grok Build fail to enforce this boundary. All tested harnesses, except Muse Code, allowed agents to delete their traces when asked, without triggering monitor guardrails. We also validate that external attackers can exploit this gap to induce trace deletion. Finally, we show that trace tampering behavior emerges naturally in frontier models, when agents try to improve their rewards. We advise practitioners to ensure trace logging happens through an independent interception mechanism outside of the agent's control, preserving trace integrity even in cases of full host compromise. Overall, our findings identify a concrete failure of trace integrity in agent infrastructure which can be used to conceal misaligned behaviors like scheming or sabotage.",
+      "published_at": "2026-09-25T17:59:52+00:00",
+      "summary": "Reasoning models often generate very long reasoning traces, making inference computationally expensive. Existing approaches typically improve efficiency either through inference-time early-stopping mechanisms or by explicitly encouraging shorter reasoning during training, for example through reinforcement learning with length penalties. We show that substantial efficiency gains can instead emerge from a different kind of supervision: \\textit{confidence}. Using a self-supervised procedure, we fine-tune reasoning models to predict their confidence in the answer at intermediate points along their own reasoning trajectories using only 600 training problems. Confidence is used only as a training target: the loss contains no objective for reasoning length, efficiency, or stopping. At inference, the fine-tuned models use the standard generation procedure, with no confidence elicitation or early-stopping mechanism. Despite this, self-supervised confidence fine-tuning makes reasoning more efficient, reducing generated tokens by up to 25\\% at matched accuracy across Gemma, Qwen, Nemotron, and GPT-OSS models on mathematical, scientific, and coding reasoning benchmarks, with efficiency gains comparable to methods that explicitly optimize for shorter reasoning. Analysis of reasoning episodes further shows that confidence supervision largely preserves the base models' high-level reasoning composition rather than selectively suppressing particular behaviors. Our results suggest that efficient reasoning may emerge as a downstream consequence of learning metacognitive signals, without being directly optimized.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Jeremy Qin",
-          "David Schmotz",
-          "Derck Prinzhorn",
-          "Luca Beurer-Kellner",
-          "Ameya Prabhu",
-          "Maksym Andriushchenko"
-        ],
-        "categories": [
-          "cs.CR",
-          "cs.AI"
-        ]
-      }
-    },
-    {
-      "id": "2609.30264",
-      "title": "AD-WM: Action-Discriminative World Models for Counterfactual Model Predictive Control",
-      "url": "https://arxiv.org/abs/2609.30264v1",
-      "source": "arXiv",
-      "published_at": "2026-09-24T17:59:41+00:00",
-      "summary": "Latent world models are typically trained to predict factual transitions, whereas model predictive control (MPC) must compare alternative actions from the same state. A model can therefore achieve low factual prediction error yet poorly distinguish candidate actions. We introduce AD-WM, an action-discriminative joint-embedding world model for counterfactual MPC. AD-WM combines residual latent dynamics with predictor-level action-recovery regularization, using inverse dynamics and a normalized recovery objective motivated by conditional mutual information. Both objectives encourage planning transitions to preserve action information; their auxiliary heads are discarded at test time, leaving MPC unchanged. On OGBench-Cube, AD-WM improves hard-start success from 3.7% to 52.0% over a matched LeWM baseline and improves mean success over the reproduced baseline in four of five simulation environments. Planning diagnostics show that factual prediction error and whole-bank action ranking do not follow the closed-loop success ordering, whereas CEM-aligned elite regret tracks success more closely. With a frozen V-JEPA 2 encoder and matched DROID post-training, AD-WM also improves zero-shot transfer to our Franka setup, increasing basic pick-and-place success from 42.2% to 71.1% without lab-specific adaptation. These results suggest that world models for planning should preserve action-dependent differences needed for counterfactual selection, rather than optimize factual prediction accuracy alone. More videos and code are available at https://ad-wm.github.io/.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Jiabin Qiu",
-          "Zixuan Chen",
-          "Hongye Cao",
-          "Jieqi Shi",
-          "Jing Huo",
-          "Yang Gao"
+          "Parsa Hosseini",
+          "Akasha Tigalappanavara",
+          "Sumit Nawathe",
+          "Chenrui Fan",
+          "Sourya Basu",
+          "Genta Indra Winata",
+          "Anirban Das",
+          "Soheil Feizi",
+          "Nima Chitsazan"
         ],
         "categories": [
           "cs.AI",
-          "cs.RO"
-        ]
-      }
-    },
-    {
-      "id": "2609.30258",
-      "title": "Temporal Gradient Inversion for Private Trajectory Reconstruction in Embodied Reinforcement Learning",
-      "url": "https://arxiv.org/abs/2609.30258v1",
-      "source": "arXiv",
-      "published_at": "2026-09-24T17:59:18+00:00",
-      "summary": "Distributed learning in embodied reinforcement-learning agents offers a degree of privacy by retaining raw sensor data on-device and transmitting only policy gradients to the server. Yet temporal structure can amplify this leakage beyond single-frame attacks. We introduce Temporal Reconstruction Attack on Consecutive Encodings (TRACE), an amortized temporal gradient-inversion attack that autoregressively reconstructs the sequence of private observation-action trajectories from per-step policy-learning gradients. The attack exploits two structural signals ignored by prior single-frame methods: (i) cross-time correlation between successive embodied gradients, which we formalize via a conditional mutual-information bound, and (ii) closed-form action recovery from policy-head gradient structure, which we prove exact when standard entropy regularization is sufficiently small. On held-out embodied scenes, TRACE reaches $18.8$ dB PSNR with near-perfect action recovery at $3$-$4.5$ ms per reconstructed frame, dominating the learning-based baseline across all reconstruction metrics and exceeding optimization attacks while running orders of magnitude faster. Further evaluation demonstrates TRACE's broader applicability across recurrent, residual, and compact transformer victim architectures, multi-modal inputs, and larger discrete action spaces. Defense experiments suggest that protecting temporal gradient streams may require sequence-aware privacy mechanisms.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Sudip Bhujel",
-          "Shanghao Shi",
-          "Ruiquan Huang",
-          "Ning Zhang",
-          "Yang Xiao"
-        ],
-        "categories": [
-          "cs.LG"
-        ]
-      }
-    },
-    {
-      "id": "2609.30250",
-      "title": "Agentic Detection of Online Conspiracies",
-      "url": "https://arxiv.org/abs/2609.30250v1",
-      "source": "arXiv",
-      "published_at": "2026-09-24T17:58:43+00:00",
-      "summary": "Conspiratorial discourse on social media is not always expressed through explicit claims or stable lexical markers. The same surface content may express endorsement, legitimate concerns, criticism, satire, or mockery. The main challenge is therefore not only recognizing conspiracy-related claims, but inferring the speaker's intent -- the utterance's illocutionary force. We argue that this can be achieved through the use of relevant social contexts and propose an agentic framework, equipped with a set of tools supporting social queries. We demonstrate the benefits of our approach on a unique dataset of Hebrew tweets, covering 80\\%--90\\% of the public Hebrew tweets published over a four-year span (late 2018-- early 2023), encompassing several election cycles as well as the COVID pandemic years and related vaccination campaigns. This extensive coverage can be used in recovering different social contexts. Evaluating our framework on a manually-annotated adversarial dataset, we find that context-aware workflows consistently outperform text-only classification and that the agentic framework performs significantly better than other frameworks and settings, including a non-agentic model exposed to the same contexts available to the agent. We further provide an analysis of the results, the errors and efficiency (token economy) tradeoffs. These findings support viewing the task of conspiracy detection as a socially embedded interpretation task, in which effective classification depends not only on access to contexts, but also on adaptive reasoning in which the agent uses tools on a per-case basis, asking only for evidence relevant to its current reasoning step.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Lior Biton",
-          "Oren Tsur"
-        ],
-        "categories": [
           "cs.CL",
           "cs.LG"
         ]
       }
     },
     {
-      "id": "2609.30249",
-      "title": "RAPID: Robot Agentic Programming from Demonstrations",
-      "url": "https://arxiv.org/abs/2609.30249v1",
+      "id": "2609.31614",
+      "title": "Gap-free Differentially Private PCA for Gaussian Data",
+      "url": "https://arxiv.org/abs/2609.31614v1",
       "source": "arXiv",
-      "published_at": "2026-09-24T17:58:21+00:00",
-      "summary": "Coding agents have demonstrated enormous success in solving complex programming problems. To leverage their potential for robot systems, this work introduces Robot Agentic Programming from Demonstrations (RAPID), which automatically generates, verifies, and refines robot programs, given a single visual human demonstration. The iterative agentic loop of code refinement requires several key ingredients: (i) a testable task specification, (ii) action primitives for robot execution, and (iii) an interactive environment for program execution and verification. RAPID infers all three from the demonstration automatically. To make the resulting program reusable beyond the demonstration setting, RAPID uses an object-centric relational program representation that focuses on the underlying structure of the demonstrated strategy rather than the specific motion per se: it expresses the action primitives as trajectory-optimization programs that realize object-level motion effects, while composing them through relational constraints that capture scene-specific geometry at run time. We evaluated RAPID in simulation on eight challenging contact-rich nonprehensile manipulation tasks as well as general prehensile manipulation tasks in the LIBERO-Pro benchmark. We also successfully deployed it on a real Franka arm and evaluated on all eight nonprehensile tasks. In all experiments, RAPID demonstrated strong performance, with generalization over object pose, shape, material, and environment. Website: https://yuyaoliu.me/projects/rapid.",
+      "published_at": "2026-09-25T17:58:38+00:00",
+      "summary": "We give a gap-free differentially private algorithm for the principal component analysis (PCA) problem with Gaussian data.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Yuyao Liu",
-          "Jiayuan Mao",
-          "David Hsu",
-          "Leslie Pack Kaelbling",
-          "Tomás Lozano-Pérez"
+          "Alina Ene",
+          "Huy L. Nguyen"
         ],
         "categories": [
-          "cs.RO",
+          "cs.DS",
+          "cs.LG"
+        ]
+      }
+    },
+    {
+      "id": "2609.31612",
+      "title": "First-Order Stationarity of Reverse Diffusions",
+      "url": "https://arxiv.org/abs/2609.31612v1",
+      "source": "arXiv",
+      "published_at": "2026-09-25T17:57:43+00:00",
+      "summary": "Recent literature has shown a strong connection between optimization and sampling. We develop the corresponding first-order theory for diffusion models. First, the SDE-based reverse-time flows of overdamped and underdamped Langevin diffusions contract relative Fisher divergences at explicit exponential rates whenever the stationary potential of the forward process is strongly convex---a condition on the noising process one chooses, not on the data. This is a unique advantage of SDE-based reverse diffusion, absent in the reverse process based on ODEs. Second, we incorporate discretization and establish averaged first-order stationarity bounds---the sampling analog of averaged gradient-norm guarantees in nonconvex optimization---for samplers of both overdamped and underdamped diffusion models. As in nonconvex optimization, the convexity-free certificate is local: it guarantees score consistency, not global mode weights.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Zhifeng Chen",
+          "Chenyang Jiang",
+          "Yazhen Wang"
+        ],
+        "categories": [
+          "stat.ML",
+          "cs.LG"
+        ]
+      }
+    },
+    {
+      "id": "2609.31607",
+      "title": "Statistical attribute alignment for black-box generative AI via output post-processing",
+      "url": "https://arxiv.org/abs/2609.31607v1",
+      "source": "arXiv",
+      "published_at": "2026-09-25T17:55:49+00:00",
+      "summary": "Generative AI systems are increasingly used, but aligning their outputs with user requirements poses a continuing challenge. Here, we aim to ensure that the distribution of an attribute of an AI-generated output aligns with a user-specified target. This is motivated by examples such as fairness, where we want to ensure that a protected attribute (e.g., gender, race, or age categories) follows a desired distribution, and synthetic data generation, where we want the generated data to be representative of a target distribution. We study the practically important black-box access setting, where a user can repeatedly query a generative AI model. The goal is to return $m\\ge 1$ outputs whose joint attribute distribution is as close as possible to this target. For both exact and approximate alignment, we develop algorithms that minimize the expected number of queries to the generator, and we further demonstrate their optimality as the number of requested outputs $m \\rightarrow \\infty$. Experiments on text-to-image generation and geocoded persona generation tasks show that our post-processing algorithms improve statistical attribute alignment, complementing prompting-based interventions.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Kevin Jiang",
+          "Morgane Austern",
+          "Edgar Dobriban",
+          "Jason M. Klusowski"
+        ],
+        "categories": [
+          "stat.ME",
           "cs.AI",
-          "cs.CV"
+          "cs.LG",
+          "math.ST"
+        ]
+      }
+    },
+    {
+      "id": "2609.31603",
+      "title": "User Model Extraction via Belief Self-Distillation",
+      "url": "https://arxiv.org/abs/2609.31603v1",
+      "source": "arXiv",
+      "published_at": "2026-09-25T17:54:32+00:00",
+      "summary": "Large language models (LLMs) implicitly infer attributes of their users and adapt their behavior accordingly, yet these beliefs remain difficult to inspect and causally manipulate. We introduce Belief Self-Distillation (BSD), a unified read-write framework that bridges linear and causal probing by learning a compact user representation that can be both decoded and written back into the model. The frozen LLM acts as its own teacher, distilling beliefs from natural conversations without external annotations. Unlike conventional probing, BSD isolates not only information present in activations, but a state whose causal role can be directly tested. Across multiple model families, BSD faithfully recovers user beliefs and enables substantially stronger interventions than matched hidden-state steering. Crucially, we find that refusal depends not only on the request, but on the model's inferred user intent: changing this belief alters refusal while holding the request fixed. We further uncover a striking cross-model regularity: independently trained LLMs converge on a shared geometry for representing their users. Together, these results reveal implicit user models as readable and causally writable internal states with direct implications for AI safety, shaping how models condition safety decisions on whom they believe they are interacting with.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Ali Holmov",
+          "Yiran Huang",
+          "Kirill Bykov",
+          "Zeynep Akata"
+        ],
+        "categories": [
+          "cs.LG",
+          "cs.CL"
         ]
       }
     }
