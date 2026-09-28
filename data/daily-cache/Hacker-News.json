@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-09-28T11:01:42.447956+08:00",
+  "cached_at": "2026-09-28T13:40:51.311111+08:00",
   "articles": [
     {
       "id": "49870367",
@@ -8,8 +8,8 @@
       "source": "Hacker News",
       "published_at": "2026-09-27T20:12:54+00:00",
       "summary": "When did Google get so weird?",
-      "score": 866,
-      "comments": 462,
+      "score": 1008,
+      "comments": 544,
       "discussion_url": "https://news.ycombinator.com/item?id=49870367",
       "extra": {
         "top_comments": [
@@ -26,14 +26,32 @@
       "source": "Hacker News",
       "published_at": "2026-09-27T17:31:53+00:00",
       "summary": "Ember-1",
-      "score": 371,
-      "comments": 187,
+      "score": 410,
+      "comments": 199,
       "discussion_url": "https://news.ycombinator.com/item?id=49868830",
       "extra": {
         "top_comments": [
           "This is the golden age of model training. Some days ago, I decided I wanted a local CPU only model that can perform exceptionally well for English to Bash translation (to avoid the googling for command syntax). I got a bunch of subagents to generate large amount of training data (140k+ samples), got the Qwen 3 0.6B base model, pointed Astra at it, and off to the races. It trained for 2 days (on and off) and I got a surprisingly good model for my task! The total active time I spent was a few hours. And it is still improving, what a time to be alive!",
-          "Off topic:With sol pricing drop tbh kimi k3’s value prop has not been that great. For our internal use case/testing/benchmarks sol come out with way better quality and much cheaper costs. Kimi really needs to drop their pricing (I heard it’s set by them across all the neoclouds) Sol is at 2/10 vs kimi’s 3/15",
-          "It’s the first time I know fireworks has a team doing model research. I do have a complex mood in that. On one hand, I’m always happy to see improvement of OSS models, whether that’s on intelligence or cost-efficiency. On the other hand, I would be a little worried about using fireworks as my API provider. Till the moment I saw this news, I had been using fireworks as my provider of deepseek v4 flash, because I thought fireworks acting as a role deploying OSS models and selling calculation resources, should be safe to use without worry of data being used for training since there’s no “conflict of interests”. But I would think twice now."
+          "It’s the first time I know fireworks has a team doing model research. I do have a complex mood in that. On one hand, I’m always happy to see improvement of OSS models, whether that’s on intelligence or cost-efficiency. On the other hand, I would be a little worried about using fireworks as my API provider. Till the moment I saw this news, I had been using fireworks as my provider of deepseek v4 flash, because I thought fireworks acting as a role deploying OSS models and selling calculation resources, should be safe to use without worry of data being used for training since there’s no “conflict of interests”. But I would think twice now.",
+          "Off topic:With sol pricing drop tbh kimi k3’s value prop has not been that great. For our internal use case/testing/benchmarks sol come out with way better quality and much cheaper costs. Kimi really needs to drop their pricing (I heard it’s set by them across all the neoclouds) Sol is at 2/10 vs kimi’s 3/15"
+        ]
+      }
+    },
+    {
+      "id": "49872723",
+      "title": "Owed a billion dollars in Nvidia stock",
+      "url": "https://colo.to/nvidia-stock-narrative.html",
+      "source": "Hacker News",
+      "published_at": "2026-09-28T02:05:13+00:00",
+      "summary": "Owed a billion dollars in Nvidia stock",
+      "score": 359,
+      "comments": 159,
+      "discussion_url": "https://news.ycombinator.com/item?id=49872723",
+      "extra": {
+        "top_comments": [
+          "You are ultimately responsible for asserting your contractual rights. Your stock options had an expiry and you did not exercise them in time. The letter you received notifying that you had 15,625 vested options was not an award in of itself, it was only a courtesy notifying you that you had vested options to exercise before they expired. Even if due to ambiguous wording it could be argued that 25,000 options had vested at the time instead of 15,625, that was only relevant until the options expired. You needed to assert your rights to the [additional 9,375] vested options before they expired. So, this issue died in 1996.I had a similar experience although over a shorter time horizon. I was in a dispute with a corporation which prompted me to pore over every word in every previously signed agreement. I discovered, due to an obvious typo in a stock option agreement, more options had vested than had been intended. After some pushback, they eventually relented and awarded me the options.Given the amount of money involved, it was worth engaging lawyers to see if NVIDIA would pay you some money to save the hassle of dealing with it, but there is and was zero prospect of this ever being awarded in your favor by a court since the options expired.",
+          "You should sell your right to litigate this. There are hundreds of firms that would pay you to take this on. Would involve near zero effort for you and would also check the box of being “about the principle”.",
+          "An open question is what happened to the 15,625 shares that he received when he exercised his options in 1996?If he had held on to those, they would be worth even more than the additional 9,375 shares he was entitled to -- about $1.7 billion using the same numbers in the post.My guess is that he probably sold them when they were worth a lot less then they are now, and would have done the same with the additional shares too."
         ]
       }
     },
@@ -44,14 +62,14 @@
       "source": "Hacker News",
       "published_at": "2026-09-27T18:44:30+00:00",
       "summary": "Show HN: Lofi Cities – Pixel-art city nights with browser-generated lofi",
-      "score": 187,
-      "comments": 84,
+      "score": 203,
+      "comments": 90,
       "discussion_url": "https://news.ycombinator.com/item?id=49869574",
       "extra": {
         "top_comments": [
-          "It's not that weird - Google isn't a search engine company, they're an advertising company.I'm not just flogging a dead horse here - they don't care how good the search results for these types of queries are, they need to be just good enough to stop you from moving to search via Perplexity, Chatgpt, Claude etc. They also need to be as cheap as possible to generate.Google makes money when you search for things to buy which is why they'll give you an ad-free experience on things that they never made much money off anyways (eg \"why is the sky blue?\") - they want you to be around when you search for something they can (eg \"jewellery\").Unfortunately people both expect answers phrased in response to their questions, and people have generally poor skills at picking up on authoritative-sounding bullshit. Also if they give you \"an answer\" and stop you from moving to another site with more detail (and possibly ads from someone else!) you're more likely to ask follow up questions on google.",
+          "[delayed]",
           "The product hunt ad is breaking the immersion for me. I know that most cities have ads but still, I prefer ad free pixel art.It’s also not realistic, in one landscape the billboard is taller than a 9 story building.",
-          "I like the Sydney one (the jacarandas are a nice touch; a banksias or wattle option would add an interesting local touch).For any city, a thunderstorm or light drizzle option would be very moody."
+          "There's a lot to like here, but too AI-generated for me. The pixel art for Tokyo & Hong Kong don't use proper Chinese/Japanese characters. The pulsating badges in the non-pixel UI are also pretty AI-indicative in a way that is distracting."
         ]
       }
     },
@@ -62,8 +80,8 @@
       "source": "Hacker News",
       "published_at": "2026-09-27T16:50:58+00:00",
       "summary": "Don't couple your Go code to GitHub",
-      "score": 160,
-      "comments": 80,
+      "score": 195,
+      "comments": 93,
       "discussion_url": "https://news.ycombinator.com/item?id=49868404",
       "extra": {
         "top_comments": [
@@ -74,32 +92,14 @@
       }
     },
     {
-      "id": "49870070",
-      "title": "Alan Kay's answer to “Did the ENIAC have a BIOS”?",
-      "url": "https://www.quora.com/Did-the-ENIAC-have-a-BIOS/answer/Alan-Kay-11",
-      "source": "Hacker News",
-      "published_at": "2026-09-27T19:37:05+00:00",
-      "summary": "Alan Kay's answer to “Did the ENIAC have a BIOS”?",
-      "score": 80,
-      "comments": 30,
-      "discussion_url": "https://news.ycombinator.com/item?id=49870070",
-      "extra": {
-        "top_comments": [
-          "EDSAC as early as 1949 had an \"initial orders\" module. A boot-up ROM. There was a bank of rotary selector switches, to set the octal digits in each ROM word.David Wheeler (of subroutine fame) figured out the most sensible thing to put in the tiny ROM was a paper tape loader and mini-assembler that loaded the rest of itself from paper tape. So at switch-on the machine would start reading the tape input and run. Programs could be written on the teletype with mnemonics and relative addresses in octal.It seems a little strange that more advanced later machines like the original PDP-11 from 1970, couldn't \"autostart\" from ROM like that. You had to toggle in a bootloader.I think that was because core memory was non-volatile. (EDSAC didn't use core; it had a refreshing DRAM-like delay line memory.) With core, you only had to toggle the bootloader into once and, provided your software didn't accidentally overwrite it, it was still there after a power cycle. So re-toggling in the boot loader was not really that common, despite how much lore surrounds it.",
-          "I had Claude Opus disassemble the CDC 6600 dead start panel. The hard part was finding a better image of the switches so the vision could read the bits.¹The content isn't very interesting, and Claude's comments aren't very detailed. Not bad for 2 minutes of work about a 62 year old computer though. Look out Ken Shirriff, AI is coming for you.² Addr Octal Instruction Meaning 0001 7512 DCN 12 Disconnect channel 12 (put it in a known idle state) 0002 7712 FNC 12, 4000? Send function code to channel 12's device 0003 4000? └ function code (last bit unclear: 4000 or 4001) 0004 7712 FNC 12, 0001 Send another function code 0005 0001 └ function code 0006 7712 FNC 12, 1500? Send a third function code 0007 1500? └ function code (least certain row) 0010 2000 LDC 0160? Load A with a word count 0011 0160? └ the count 0012 7412 ACN 12 Activate channel 12 0013 7112 IAM 12, 0015 Read A words from channel 12 into memory starting at 0015 0014 0015 └ destination address 1. https://dyninst.github.io/scalable_tools_workshop/petascale2...2. Not really. I have no idea if this disassembly is corrrect.3. Quora is prison for words.",
-          "I'm pretty sure Kay's not quite correct about the Eniac not being a stored program computer. In it's original form it obviously was not, as it had to physically reconfigured to solve different problems. However, after the war it was rebuilt to operate like any other stored program (von Neumann architecture) computer, as it was the first recipient of the design philosophy seen in the EDVAC report. It operated in that mode from '48 to '55, when it was decommissioned.ENIAC in Action: Making and Remaking the Modern Computer is an excellent summary of the initial design and redesign of the Eniac."
-        ]
-      }
-    },
-    {
       "id": "49870295",
       "title": "Self-Hosting on the Dark Web",
       "url": "https://david.alvarezrosa.com/posts/self-hosting-on-the-dark-web/",
       "source": "Hacker News",
       "published_at": "2026-09-27T20:03:36+00:00",
       "summary": "Self-Hosting on the Dark Web",
-      "score": 76,
-      "comments": 28,
+      "score": 112,
+      "comments": 36,
       "discussion_url": "https://news.ycombinator.com/item?id=49870295",
       "extra": {
         "top_comments": [
@@ -110,38 +110,38 @@
       }
     },
     {
+      "id": "49870070",
+      "title": "Alan Kay's answer to “Did the ENIAC have a BIOS”?",
+      "url": "https://www.quora.com/Did-the-ENIAC-have-a-BIOS/answer/Alan-Kay-11",
+      "source": "Hacker News",
+      "published_at": "2026-09-27T19:37:05+00:00",
+      "summary": "Alan Kay's answer to “Did the ENIAC have a BIOS”?",
+      "score": 99,
+      "comments": 34,
+      "discussion_url": "https://news.ycombinator.com/item?id=49870070",
+      "extra": {
+        "top_comments": [
+          "EDSAC as early as 1949 had an \"initial orders\" module. A boot-up ROM. There was a bank of rotary selector switches, to set the octal digits in each ROM word.David Wheeler (of subroutine fame) figured out the most sensible thing to put in the tiny ROM was a paper tape loader and mini-assembler that loaded the rest of itself from paper tape. So at switch-on the machine would start reading the tape input and run. Programs could be written on the teletype with mnemonics and relative addresses in octal.It seems a little strange that more advanced later machines like the original PDP-11 from 1970, couldn't \"autostart\" from ROM like that. You had to toggle in a bootloader.I think that was because core memory was non-volatile. (EDSAC didn't use core; it had a refreshing DRAM-like delay line memory.) With core, you only had to toggle the bootloader into once and, provided your software didn't accidentally overwrite it, it was still there after a power cycle. So re-toggling in the boot loader was not really that common, despite how much lore surrounds it.",
+          "I had Claude Opus disassemble the CDC 6600 dead start panel. The hard part was finding a better image of the switches so the vision could read the bits.¹The content isn't very interesting, and Claude's comments aren't very detailed. Not bad for 2 minutes of work about a 62 year old computer though. Look out Ken Shirriff, AI is coming for you.² Addr Octal Instruction Meaning 0001 7512 DCN 12 Disconnect channel 12 (put it in a known idle state) 0002 7712 FNC 12, 4000? Send function code to channel 12's device 0003 4000? └ function code (last bit unclear: 4000 or 4001) 0004 7712 FNC 12, 0001 Send another function code 0005 0001 └ function code 0006 7712 FNC 12, 1500? Send a third function code 0007 1500? └ function code (least certain row) 0010 2000 LDC 0160? Load A with a word count 0011 0160? └ the count 0012 7412 ACN 12 Activate channel 12 0013 7112 IAM 12, 0015 Read A words from channel 12 into memory starting at 0015 0014 0015 └ destination address 1. https://dyninst.github.io/scalable_tools_workshop/petascale2...2. Not really. I have no idea if this disassembly is corrrect.3. Quora is prison for words.",
+          "So early computers did have BIOS, but they loaded from wetware rather than firmware?"
+        ]
+      }
+    },
+    {
       "id": "49869773",
       "title": "What I did at Recurse Center",
       "url": "https://thill.me/2026/09/11/what-i-did-at-rc.html",
       "source": "Hacker News",
       "published_at": "2026-09-27T19:04:19+00:00",
       "summary": "What I did at Recurse Center",
-      "score": 75,
-      "comments": 21,
+      "score": 93,
+      "comments": 25,
       "discussion_url": "https://news.ycombinator.com/item?id=49869773",
       "extra": {
         "top_comments": [
           "> This included what was probably the most interesting part, writing the tricky recursive code to implement the match statement.Back in school I found this book[0], \"The Implementation of Functional Programming Languages\". Flipping through it was very neat because it kinda demystified the nuts and bolts of implementing the \"fancier\" functional programming features for me.Chapter 5 is about implementing pattern matching.You read this kind of stuff and realize how easy things become when you just tackle a problem with the right mindset and abstractions. And this is a book from 1987! We've always had decent answers for a lot of the stuff.I think it's interesting to flip through if you're a language implementer, though helps to be comfortable with reading some stuff sideways and not understanding every detail.[0] https://simon.peytonjones.org/assets/pdfs/slpj-book-1987-sea...",
-          "This is what school should have been like. Instead, we got factory-style non-thinker exam-taker pencil-pushing excel-cruncher-wannabes.",
-          "Reading this conjured some feelings in me. At various points in my career, I’ve wanted to take a sabbatical and go to RC. Having spent the last year in the agentic coding world, the idea of writing code by hand seems quaint and outdated. Many have spoken of this feeling of loss so I’m not saying anything new here, but for some reason reading about RC in 2026 specifically cemented the idea that I’ll probably never write anything by hand again."
-        ]
-      }
-    },
-    {
-      "id": "49866988",
-      "title": "Fragment of oldest known peace treaty found in Turkey",
-      "url": "https://www.livescience.com/archaeology/ancient-egyptians/we-have-found-traces-of-peace-thousands-of-years-old-fragment-of-worlds-oldest-known-peace-treaty-found-in-turkey",
-      "source": "Hacker News",
-      "published_at": "2026-09-27T14:35:10+00:00",
-      "summary": "Fragment of oldest known peace treaty found in Turkey",
-      "score": 70,
-      "comments": 9,
-      "discussion_url": "https://news.ycombinator.com/item?id=49866988",
-      "extra": {
-        "top_comments": [
-          "Related:https://en.wikipedia.org/wiki/Amarna_letters",
-          "Egypt and the Hittites were now concerned with the rise of Assyria.All would suffer in the late Bronze Age (LBA) collapse, with the Hittite empire collapsing soon after a string of three drought years about half a century after the treaty. Egypt and Assyria, at least, would persist in truncated form, with the latter rising to new heights of power in the Iron Age.",
-          "> The country of Egypt and the country of Hatti [Hittite Empire] will be forever in a state of peace.Wonder how long it lasted?Edit: turns out it lasted until the Hittite empire collapsed 80 years later, so in a sense indeed \"forever\"."
+          "Reading this conjured some feelings in me. At various points in my career, I’ve wanted to take a sabbatical and go to RC. Having spent the last year in the agentic coding world, the idea of writing code by hand seems quaint and outdated. Many have spoken of this feeling of loss so I’m not saying anything new here, but for some reason reading about RC in 2026 specifically cemented the idea that I’ll probably never write anything by hand again.",
+          "> The goal of the game is to give hints to a secret word without giving the same hint as another player; it was shocking how often all the agents playing would give the same hint, even at temperature 1. We resolved this by giving them all “personalities” which were really just topics; for example we’d be telling one agent to think about things in the context of sports, so their clue for “shell” might be “defense” or something, whereas the agent told to be a hippie might say “cancer” for the zodiac’s crab.Mode-collapse is characteristic of pretty much all chatbots post-davinci-002 and a major challenge to anything creative or game-like."
         ]
       }
     }
