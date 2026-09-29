@@ -1,71 +1,63 @@
 {
-  "cached_at": "2026-09-28T13:40:51.311111+08:00",
+  "cached_at": "2026-09-29T11:01:43.090644+08:00",
   "articles": [
     {
-      "id": "2609.31619",
-      "title": "Learning to Stop without Learning to Stop: Self-Supervised Confidence Training Improves Reasoning Efficiency",
-      "url": "https://arxiv.org/abs/2609.31619v1",
+      "id": "2609.34056",
+      "title": "Steering Language Model Goals with Value Transplant",
+      "url": "https://arxiv.org/abs/2609.34056v1",
       "source": "arXiv",
-      "published_at": "2026-09-25T17:59:52+00:00",
-      "summary": "Reasoning models often generate very long reasoning traces, making inference computationally expensive. Existing approaches typically improve efficiency either through inference-time early-stopping mechanisms or by explicitly encouraging shorter reasoning during training, for example through reinforcement learning with length penalties. We show that substantial efficiency gains can instead emerge from a different kind of supervision: \\textit{confidence}. Using a self-supervised procedure, we fine-tune reasoning models to predict their confidence in the answer at intermediate points along their own reasoning trajectories using only 600 training problems. Confidence is used only as a training target: the loss contains no objective for reasoning length, efficiency, or stopping. At inference, the fine-tuned models use the standard generation procedure, with no confidence elicitation or early-stopping mechanism. Despite this, self-supervised confidence fine-tuning makes reasoning more efficient, reducing generated tokens by up to 25\\% at matched accuracy across Gemma, Qwen, Nemotron, and GPT-OSS models on mathematical, scientific, and coding reasoning benchmarks, with efficiency gains comparable to methods that explicitly optimize for shorter reasoning. Analysis of reasoning episodes further shows that confidence supervision largely preserves the base models' high-level reasoning composition rather than selectively suppressing particular behaviors. Our results suggest that efficient reasoning may emerge as a downstream consequence of learning metacognitive signals, without being directly optimized.",
+      "published_at": "2026-09-28T00:26:19+00:00",
+      "summary": "Reasoning models often act as if they pursue goals, but their efforts are not always directed toward what users intend, sometimes leading them to pursue unintended outcomes. Previous work has examined how models may internally track their progress toward their goals through a \"value axis.\" We study whether changing such a signal can retarget the model's search toward a different goal. We test value transplant: at each token, we shift the host model's activation along a candidate value axis by the donor-host difference in value coordinates (multiplied by a large scalar), aiming to redirect the host toward the donor's goal. We study this intervention in Qwen3-8B and GPT-OSS-20B models fine-tuned into honest and cheating variants. We test several candidate value axes, including a self-rating axis constructed from activations preceding high versus low elicited self-ratings of progress. The intervention works in both directions, with an honest donor reducing test-gaming in a cheating host and a cheating donor increasing test-gaming in an honest host, showing that this signal can influence which strategy the model follows. On solvable coding tasks, transplant from an honest donor also improves the cheating host's hidden-test performance. Value transplant also works across model families, providing preliminary evidence for the intervention in a setting relevant to model control.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Parsa Hosseini",
-          "Akasha Tigalappanavara",
-          "Sumit Nawathe",
-          "Chenrui Fan",
-          "Sourya Basu",
-          "Genta Indra Winata",
-          "Anirban Das",
-          "Soheil Feizi",
-          "Nima Chitsazan"
+          "Pengcheng Jiang",
+          "Fabien Roger"
         ],
         "categories": [
-          "cs.AI",
-          "cs.CL",
+          "cs.LG",
+          "cs.CL"
+        ]
+      }
+    },
+    {
+      "id": "2609.34054",
+      "title": "PReCache: Efficient KV Cache Sharing for Multi-LoRA Agents via Low-Rank Precomputation and Neutral Reconstruction",
+      "url": "https://arxiv.org/abs/2609.34054v1",
+      "source": "arXiv",
+      "published_at": "2026-09-28T00:24:14+00:00",
+      "summary": "Multi-LoRA agent systems enable efficient role specialization by sharing a common backbone model. However, each agent repeatedly processes the growing shared trajectory and constructs its own KV cache, introducing substantial memory and computation redundancy in long-horizon tasks. Existing KV cache sharing methods reduce this repeated prefill, but they either require additional training or architectural constraints or retain substantial model computation. Moreover, direct cache reuse causes the current agent to rely on cache states generated by the previous agent's adapter, weakening the role-specific behavior encoded by its own LoRA. We present PReCache, a training-free KV cache sharing framework with two designs, namely PreLRShared and ReBaseShared, that share the base cache computed using the pretrained weights and precompute a compact agent-specific low-rank (LR) cache. To remove repeated prefill, PreLRShared precomputes each agent's LR cache when the shared context is first processed, allowing the current agent to use its own LR cache without reprocessing context processed by previous agents. To improve sharing accuracy, ReBaseShared reconstructs the shared base cache from adapter-free hidden states, reducing the remaining error caused by the previous agent's adapted representation. To minimize its reconstruction cost, we propose two inference schemes tailored to single-stream inference and concurrent serving, performing the same reconstruction after each agent's turn or alongside its execution, respectively. Across multiple models and agent benchmarks, PreLRShared achieves up to a 3.1x TTFT speedup and a 2.3x improvement in per-request throughput over inference without KV cache sharing. ReBaseShared best preserves accuracy overall among the evaluated cache-sharing methods, with an average drop of only 1.1 points relative to inference without cache sharing.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Hyesung Jeon",
+          "Hyeongju Ha",
+          "Jae-Joon Kim"
+        ],
+        "categories": [
           "cs.LG"
         ]
       }
     },
     {
-      "id": "2609.31614",
-      "title": "Gap-free Differentially Private PCA for Gaussian Data",
-      "url": "https://arxiv.org/abs/2609.31614v1",
+      "id": "2609.34050",
+      "title": "The Statistical Cost of Causal Discovery with Feedback",
+      "url": "https://arxiv.org/abs/2609.34050v1",
       "source": "arXiv",
-      "published_at": "2026-09-25T17:58:38+00:00",
-      "summary": "We give a gap-free differentially private algorithm for the principal component analysis (PCA) problem with Gaussian data.",
+      "published_at": "2026-09-28T00:19:08+00:00",
+      "summary": "What determines the unavoidable sample cost of learning cyclic causal structure? For cyclic linear non-Gaussian models, we study exact condensation recovery from observational data: identifying the strongly connected component (SCC) partition and all edges between components. We establish the first information-theoretic lower bounds on sample complexity for this target. For $p$ variables, maximum SCC size $s_{\\max}$, and maximum external-parent count $d_B$, any estimator requires order $s_{\\max}\\log(ep/s_{\\max})+d_B\\log(ep/d_B)$ samples in the worst case over a regular model class. These bounds distinguish the costs of SCC membership and external-parent selection. Under principal invertibility and without correlation faithfulness, we establish a population block-exogeneity principle that identifies unknown root SCCs through residual independence and inclusion minimality. A sparse-adjustment characterization shows that small adjustment sets suffice to identify SCCs and their direct external parents, without regressing on all previously recovered variables. These characterizations yield BlockExo, which attains a structurally matching sample bound without knowing $s_{\\max}$ or $d_B$ under suitable conditions. Simulations support the structural dependence of our sample bound and demonstrate BlockExo's sample-efficient recovery in comparisons with other methods for cyclic causal discovery.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Alina Ene",
-          "Huy L. Nguyen"
-        ],
-        "categories": [
-          "cs.DS",
-          "cs.LG"
-        ]
-      }
-    },
-    {
-      "id": "2609.31612",
-      "title": "First-Order Stationarity of Reverse Diffusions",
-      "url": "https://arxiv.org/abs/2609.31612v1",
-      "source": "arXiv",
-      "published_at": "2026-09-25T17:57:43+00:00",
-      "summary": "Recent literature has shown a strong connection between optimization and sampling. We develop the corresponding first-order theory for diffusion models. First, the SDE-based reverse-time flows of overdamped and underdamped Langevin diffusions contract relative Fisher divergences at explicit exponential rates whenever the stationary potential of the forward process is strongly convex---a condition on the noising process one chooses, not on the data. This is a unique advantage of SDE-based reverse diffusion, absent in the reverse process based on ODEs. Second, we incorporate discretization and establish averaged first-order stationarity bounds---the sampling analog of averaged gradient-norm guarantees in nonconvex optimization---for samplers of both overdamped and underdamped diffusion models. As in nonconvex optimization, the convexity-free certificate is local: it guarantees score consistency, not global mode weights.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Zhifeng Chen",
-          "Chenyang Jiang",
-          "Yazhen Wang"
+          "Sunmin Oh",
+          "Seungsu Han",
+          "Gunwoong Park"
         ],
         "categories": [
           "stat.ML",
@@ -74,50 +66,43 @@
       }
     },
     {
-      "id": "2609.31607",
-      "title": "Statistical attribute alignment for black-box generative AI via output post-processing",
-      "url": "https://arxiv.org/abs/2609.31607v1",
+      "id": "2609.34049",
+      "title": "Thinking Outside the Box: Retention and Transmission of Information in Sliding-Window KV Inference",
+      "url": "https://arxiv.org/abs/2609.34049v1",
       "source": "arXiv",
-      "published_at": "2026-09-25T17:55:49+00:00",
-      "summary": "Generative AI systems are increasingly used, but aligning their outputs with user requirements poses a continuing challenge. Here, we aim to ensure that the distribution of an attribute of an AI-generated output aligns with a user-specified target. This is motivated by examples such as fairness, where we want to ensure that a protected attribute (e.g., gender, race, or age categories) follows a desired distribution, and synthetic data generation, where we want the generated data to be representative of a target distribution. We study the practically important black-box access setting, where a user can repeatedly query a generative AI model. The goal is to return $m\\ge 1$ outputs whose joint attribute distribution is as close as possible to this target. For both exact and approximate alignment, we develop algorithms that minimize the expected number of queries to the generator, and we further demonstrate their optimality as the number of requested outputs $m \\rightarrow \\infty$. Experiments on text-to-image generation and geocoded persona generation tasks show that our post-processing algorithms improve statistical attribute alignment, complementing prompting-based interventions.",
+      "published_at": "2026-09-28T00:18:20+00:00",
+      "summary": "Sliding-window KV inference refers to processing a sequence incrementally while retaining only a fixed-size cache of recent key and value states. It can be applied to pretrained causal transformers at inference time without additional training, while its KV-cache memory remains fixed as more tokens are processed. Because cached states are computed in the context of earlier tokens, they may carry information from beyond the current window and transmit it to later states. This study presents a series of experiments using five open-weight models spanning Qwen, Llama, Mistral, and Muse Glimmer. We investigate whether information originating outside the immediate context window can persist through a rolling KV cache and remain useful for retrieval. Initial results show that retaining previously computed states improves retrieval across the models tested compared with recomputing the final fixed window from raw tokens. We then measure how far this effect extends and find that Muse Glimmer and Mistral 7B show the strongest \\emph{latent information relay}: they can recover information even after the relevant source tokens have left the cache. Both models incorporate sliding-window attention in their published architectures, an association that motivates testing whether training with sliding windows promotes more reliable information retention.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Kevin Jiang",
-          "Morgane Austern",
-          "Edgar Dobriban",
-          "Jason M. Klusowski"
+          "Timothy DeLise",
+          "Seth Cromelin"
         ],
         "categories": [
-          "stat.ME",
-          "cs.AI",
-          "cs.LG",
-          "math.ST"
+          "cs.AI"
         ]
       }
     },
     {
-      "id": "2609.31603",
-      "title": "User Model Extraction via Belief Self-Distillation",
-      "url": "https://arxiv.org/abs/2609.31603v1",
+      "id": "2609.34047",
+      "title": "ARCH-B: Architectural Representation, Comprehension and Hierarchy Benchmark",
+      "url": "https://arxiv.org/abs/2609.34047v1",
       "source": "arXiv",
-      "published_at": "2026-09-25T17:54:32+00:00",
-      "summary": "Large language models (LLMs) implicitly infer attributes of their users and adapt their behavior accordingly, yet these beliefs remain difficult to inspect and causally manipulate. We introduce Belief Self-Distillation (BSD), a unified read-write framework that bridges linear and causal probing by learning a compact user representation that can be both decoded and written back into the model. The frozen LLM acts as its own teacher, distilling beliefs from natural conversations without external annotations. Unlike conventional probing, BSD isolates not only information present in activations, but a state whose causal role can be directly tested. Across multiple model families, BSD faithfully recovers user beliefs and enables substantially stronger interventions than matched hidden-state steering. Crucially, we find that refusal depends not only on the request, but on the model's inferred user intent: changing this belief alters refusal while holding the request fixed. We further uncover a striking cross-model regularity: independently trained LLMs converge on a shared geometry for representing their users. Together, these results reveal implicit user models as readable and causally writable internal states with direct implications for AI safety, shaping how models condition safety decisions on whom they believe they are interacting with.",
+      "published_at": "2026-09-28T00:16:23+00:00",
+      "summary": "Multimodal models increasingly interpret visual environments, but their ability to recognize the same building across photographs, floor plans, elevations, sections, and renderings remains poorly characterized. We introduce ARCH-B, a benchmark of 354 four-choice questions across 11 cross-representational archetypes, constructed from a building-linked corpus of 3.9 million architectural images using visually similar distractors, model-guided difficulty screening, and manual validation. We evaluate 25 multimodal models and collect 5,830 responses from non-expert human participants. Model accuracy ranges from 10.45% to 83.90%, compared with a human baseline of 35.35%. Models perform comparatively well on mixed-representation outlier detection and photograph matching, but remain weaker on floorplan-to-photograph correspondence. Human and model difficulty across archetypes is only weakly correlated (Spearman's (ρ=0.33)). Held-out evaluation confirms that the difficulty identified during screening generalizes beyond the curation models. ARCH-B provides a diagnostic evaluation of visual correspondence and representation transfer across architectural media.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Ali Holmov",
-          "Yiran Huang",
-          "Kirill Bykov",
-          "Zeynep Akata"
+          "Kieran Sagar Parikh",
+          "Jose Luis Garcia del Castillo y Lopez"
         ],
         "categories": [
-          "cs.LG",
-          "cs.CL"
+          "cs.CV",
+          "cs.AI"
         ]
       }
     }
