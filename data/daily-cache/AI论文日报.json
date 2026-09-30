@@ -1,143 +1,146 @@
 {
-  "cached_at": "2026-09-29T13:58:20.814199+08:00",
+  "cached_at": "2026-09-30T11:01:06.952422+08:00",
   "articles": [
     {
-      "id": "2609.35770",
-      "title": "FurE: Efficient Instance-Specific 3D Fur Reconstruction without Animal-Fur Datasets",
-      "url": "https://arxiv.org/abs/2609.35770v1",
+      "id": "2609.38178",
+      "title": "Skill-Space Shooting for Autonomous Robot Policy Improvement",
+      "url": "https://arxiv.org/abs/2609.38178v1",
       "source": "arXiv",
-      "published_at": "2026-09-28T17:59:58+00:00",
-      "summary": "Realistic and editable animal fur reconstruction from multi-view images is challenging due to fine-scale detail, self-occlusion and obfuscation, and, unlike human hair, the lack of animal-fur datasets. Fur usually covers most of an animal's body, with large inter-species and intra-species variability. We present FurE, an efficient strand-based animal fur reconstruction method that recovers a per-strand, editable groom by optimizing a root-conditioned latent field, decoded into strand geometry via a PCA-based decoder. We reconstruct a defurred animal body using local fur-thickness cues from a surface-constrained Gaussian Frosting representation together with part-based priors. We further show that a PCA-based decoder learned from human-hair strand data can alleviate animal-data scarcity while enabling substantially faster optimization. FurE achieves a 10x speedup in strand training over current SOTA dense per-strand optimization while retaining strand fidelity and generalizing across synthetic and real-world sequences, with quantitative and qualitative validation despite the reduction in training time.",
+      "published_at": "2026-09-29T17:59:55+00:00",
+      "summary": "Robots deployed in the physical world must be able to improve beyond their initial training as they encounter new situations and failures. For this improvement to scale across tasks, it must make effective use of experience without requiring human demonstration of each correction. Recent agentic systems offer a way to reduce this reliance on human effort by using foundation models to autonomously compose learned behaviors to complete tasks. Yet completing tasks this way does not itself teach a task policy to overcome its own failures; that requires turning these behaviors into learnable corrections for the policy. Our insight is that many such corrections are familiar short behaviors, or skills: they recur across tasks and describe actions that foundation models can reason about from a scene. We introduce skill-space shooting, which uses foundation model guidance to explore corrections through these reusable skills and turn successful trials into policy improvement. Real-world experiments show repeated improvement in policies acting autonomously, while skills can also be shared to reduce the teaching needed to improve on new tasks. By making reusable skills a source of corrective supervision, skill-space shooting enables scalable and generalizable policy improvement within and across tasks. Additional results and videos at https://skill-space-shooting.github.io.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Srinjay Sarkar",
-          "Prakhar Kaushik",
-          "Soumava Paul",
-          "Alan Yuille"
+          "Zihang Rui",
+          "Renhao Wang",
+          "Haoxu Huang",
+          "Yang Gao"
         ],
         "categories": [
-          "cs.CV",
+          "cs.RO",
           "cs.AI",
-          "cs.GR"
-        ]
-      }
-    },
-    {
-      "id": "2609.35769",
-      "title": "Telescopic Language Models",
-      "url": "https://arxiv.org/abs/2609.35769v1",
-      "source": "arXiv",
-      "published_at": "2026-09-28T17:59:53+00:00",
-      "summary": "One deployed language model must often serve many compute budgets, yet serving each budget still means a separate training or compression run per point. We train a Telescopic Language Model (TLM) to be that continuum: a nested-capacity Transformer supervised by stochastic prefix supervision with a full anchor. At every step, one randomly truncated prefix of the capacity axis is trained against the full next-token target, alongside one full-capacity pass, so the trained artifact is a valid language model at every depth. Two forward-backward passes per step, no architectural change, nothing extra at inference. Fixed-exit suites such as Matryoshka Language Model Suites (MLMS) occupy one point in this design space, and the point has a cost: supervising only a few fixed exits leaves the nested model at chance level everywhere else (perplexity 10^2-10^5 in our baselines). On a 200M proxy suite (20B FineWeb-Edu tokens, identical data stream for all methods), a single TLM run is a valid language model at every one of its twenty layer prefixes, in perplexity and on perplexity-sensitive downstream tasks, reducing the area under the quality-budget curve by 43-44% relative to the fixed-exit suites while matching them at full capacity, at ~12% lower GPU cost per run. The prefix sampling density is a dial: concentrating it on a few depths recovers fixed-exit quality there at the price of the continuum, so the operating points become a training-time choice rather than an architectural one. These results indicate that the training objective, not the nesting itself, is what makes a model elastic.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Zhilin Guo",
-          "Boqiao Zhang",
-          "Hakan Aktas",
-          "Kyle Fogarty",
-          "Nursena Koprucu Aslan",
-          "Wenzhao Li",
-          "Canberk Baykal",
-          "Albert Miao",
-          "Siyu Hong",
-          "Yixiao Liu",
-          "Adam Wu",
-          "Ashish Kumar Singh",
-          "Sakar Khattar",
-          "Chenliang Zhou",
-          "Weihao Xia",
-          "Cristina Nader Vasconcelos",
-          "Cengiz Oztireli"
-        ],
-        "categories": [
-          "cs.CL",
-          "cs.AI"
-        ]
-      }
-    },
-    {
-      "id": "2609.35768",
-      "title": "PDMD: Projected Distribution Matching Distillation for Video Diffusion Models",
-      "url": "https://arxiv.org/abs/2609.35768v1",
-      "source": "arXiv",
-      "published_at": "2026-09-28T17:59:52+00:00",
-      "summary": "Modern video diffusion models require tens of denoising evaluations over long spatiotemporal token sequences. Distribution Matching Distillation (DMD) reduces the number of function evaluations (NFE) to just a few. However, DMD samples can degrade during training, exhibiting progressive oversaturation and artifacts. We trace this instability to critic errors, which enter successive student updates and accumulate over time. We introduce Projected Distribution Matching Distillation (PDMD) to filter critic errors. PDMD projects out the component of the DMD update parallel to the student-critic endpoint residual. At a fixed noisy query, we prove that this residual is an unbiased estimate of the critic's endpoint error. Under high-dimensional assumptions, this projection removes a constant fraction of critic error while discarding only a vanishing fraction of ideal DMD signal. Empirically, the projection stabilizes training and improves sample quality where DMD degrades and develops unnatural textures. PDMD requires only a one-line code change to DMD, with no extra loss, network, data, model pass, or multi-stage training. With Wan2.1, PDMD achieves a VBench total score of 83.73 at 4 NFE, surpassing matched DMD by 1.03 points. On MiniMax-H3 joint video-audio generation, PDMD achieves a VideoGen-Eval visual total score of 83.17, 0.41 points above the strongest distilled baseline. PDMD also achieves the best performance on all six audio metrics among the compared 4-NFE models. Qualitative comparisons and user studies favor PDMD over the distilled baselines in visual quality, motion, and audio quality. Code and models are available at https://pdmd2026.github.io/.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Zimo Wang",
-          "Junkun Yuan",
-          "Angtian Wang",
-          "Haotian Yang",
-          "Canyu Zhang",
-          "Siyuan Yuan",
-          "Xingchang Huang",
-          "Bo Liu",
-          "Yizhi Wang",
-          "Yiding Yang",
-          "Chongyang Ma",
-          "Gordon Guocheng Qian"
-        ],
-        "categories": [
-          "cs.CV",
           "cs.LG"
         ]
       }
     },
     {
-      "id": "2609.35767",
-      "title": "Learning Native Reflection in Unified Models with Interleaved Reinforcement Learning",
-      "url": "https://arxiv.org/abs/2609.35767v1",
+      "id": "2609.38177",
+      "title": "Imagine3D-LLM: Teaching MLLMs to Imagine 3D Scenes Before Answering",
+      "url": "https://arxiv.org/abs/2609.38177v1",
       "source": "arXiv",
-      "published_at": "2026-09-28T17:59:36+00:00",
-      "summary": "Unified multimodal models can both look at and render images, so in principle they can repair their own generations: diagnose what an image gets wrong, revise it, observe the result, and diagnose again. Whether a revision helps is known only after it is rendered, so the reflection text and the image generation must be learned jointly, over the whole loop. Supervised fine-tuning (SFT) on reflection trajectories gives a cold start but does not find the high-success repair paths, and naive RL that optimizes only the renderer or only one head leaves most of the gain untapped. We introduce UMM-Reflection, which applies reinforcement learning (RL) to complete reflection trajectories inside one unified model: sibling trajectories share one initial image, so the group-relative advantage compares reflection strategies, and one trajectory-level advantage updates both the reflection tokens and the flow-based revisions, avoiding the combinatorial blow-up of per-round credit assignment. Unlike single-round editing or pipelines with an external critic, credit flows across rounds and to both roles of the same model, and no verifier is needed at inference. On BAGEL, UMM-Reflection improves GenEval by 12.05 points over SFT, and the gains transfer to WISE (+10.97), OneIG-Bench (+3.48), and T2I-CompBench++ (+4.63), none of which is used in training.",
+      "published_at": "2026-09-29T17:59:52+00:00",
+      "summary": "Reasoning about the 3D world from multi-view images remains a fundamental challenge for Multimodal Large Language Models (MLLMs). While modern MLLMs handle single-image inputs effectively, they struggle to integrate evidence across viewpoints into a coherent 3D understanding. A growing body of work attempts to close this gap by injecting 3D awareness into MLLMs, either by boosting fine-grained pixel-level cross-view correspondence or by fusing features from 3D geometry foundation models, yet a substantial gap to human reasoning persists. In this work, we revisit human spatial reasoning, which suggests that rather than relying on fine-grained geometry cues, humans roughly identify common objects across views, infer the relative geometry between viewpoints, and assemble a coarse 3D layout of the scene. Inspired by this process, we introduce Imagine3D-LLM, an MLLM that learns to assemble a similar compact 3D representation of the scene and conditions its answer on this representation. Concretely, we append a small set of learnable summary tokens after the image tokens, decode them into a compact 3D Gaussian Splatting representation supervised by a photometric reconstruction loss, and train jointly with the standard next-token prediction objective. Notably, although only the summary tokens receive direct reconstruction supervision, this objective also induces stronger cross-frame correspondence within the LLM's underlying image features, suggesting that learning to reconstruct propagates 3D-aware signals throughout the model. As a result, Imagine3D-LLM consistently outperforms prior approaches across multiple spatial reasoning and 3D understanding benchmarks, suggesting that imagining the scene can be more effective than being told its pixel-wise geometry.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Yijia Fan",
-          "Ziqi Huang",
-          "Zhongang Cai",
-          "Yan Li",
-          "Zimo Wen",
-          "Wanqi Yin",
-          "Haiwen Diao",
-          "Ziwei Liu"
+          "Jaewoo Jung",
+          "Hyeonseo Yu",
+          "Honggyu An",
+          "Jisang Han",
+          "Mungyeom Kim",
+          "Minkyeong Jeon",
+          "Heeseong Shin",
+          "Wonjun Moon",
+          "Federico Tombari",
+          "Daniel Barath",
+          "Marc Pollefeys",
+          "Seungryong Kim",
+          "Sunghwan Hong"
         ],
         "categories": [
           "cs.CV",
-          "cs.AI"
+          "cs.CL"
         ]
       }
     },
     {
-      "id": "2609.35765",
-      "title": "Retrieving Biblical Intertextual References in Karen Blixen's Seven Gothic Tales",
-      "url": "https://arxiv.org/abs/2609.35765v1",
+      "id": "2609.38176",
+      "title": "Breakdown of Local Denoising as Semantic Speciation",
+      "url": "https://arxiv.org/abs/2609.38176v1",
       "source": "arXiv",
-      "published_at": "2026-09-28T17:59:27+00:00",
-      "summary": "Identifying intertextual references is central to literary scholarship, but computationally difficult when source material is transformed through paraphrase, allusion, historical language, and translation. We investigate this problem through biblical intertextuality in Karen Blixen's Seven Gothic Tales. Drawing on the commentary to a critical edition, we construct a benchmark of 189 annotated references and evaluate retrieval against all 31,170 verses of historically plausible Danish Old and New Testament translations. We compare TF-IDF and BM25 with multilingual and Danish sentence encoders, examine the effect of linguistic normalization, and fine-tune a Danish encoder using hard negatives and five-fold cross-validation. We analyze performance across automatically derived lexical-overlap strata representing quotations, paraphrases, and allusions. Linguistically normalized BM25 provides a strong zero-shot baseline, attaining an overall R@10 of 0.365 and retrieving every quotation within its ten highest-ranked verses. The best zero-shot dense model achieves a comparable overall score of 0.360 while performing better on allusions. Fine-tuning DFM-large raises its overall R@10 from 0.265 to 0.508 and more than doubles its performance on allusions, from 0.138 to 0.339. However, evaluation against editorial annotations alone understates the model's scholarly usefulness: a literary scholar judged seven of 30 selected rank-one predictions counted as false positives to be meaningful additional references. These findings show both the potential and the epistemic limits of computational intertextual retrieval. Rather than treating scholarly annotations as exhaustive or model outputs as discoveries, we propose retrieval models as heuristic co-readers that recover documented references and generate candidates for expert-led close reading.",
+      "published_at": "2026-09-29T17:59:50+00:00",
+      "summary": "The dynamics of generative models exhibit two apparently distinct temporal windows: a speciation window, in which a sample commits to a semantic class, and a nonlocality window, in which local context windows become insufficient for generation. Motivated by evidence of their near-concurrence in a variety of frontier models, we investigate their relationship through the spatial distribution of semantic information. Under a \"common cause\" hypothesis, we prove that the nonlocality window must lie in the speciation window. This hypothesis postulates that semantic labels explain a fraction of the correlations between distant tokens, a condition that is natural for many real datasets. We further give conditions under which both windows shrink to a single limiting time as system size grows, defining a \"phase transition\", and verify this behavior analytically in Gaussian mixtures. Together, these results identify conditions under which semantic information explains the concurrence of speciation and nonlocality, connecting two complementary perspectives on the emergence of semantic structure in generative modeling.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "András Kovács",
-          "Alexander Conroy",
-          "Daniel Hershcovich",
-          "Jens Bjerring-Hansen"
+          "Guangkuo Liu",
+          "Mert Okyay",
+          "Yifan F. Zhang",
+          "Fangjun Hu",
+          "Rahul Nandkishore",
+          "Xun Gao"
         ],
         "categories": [
-          "cs.CL"
+          "cs.LG",
+          "cond-mat.dis-nn",
+          "cond-mat.stat-mech"
+        ]
+      }
+    },
+    {
+      "id": "2609.38169",
+      "title": "STEPQuant: When and Where Errors Matter in Delta-Rule Recurrent State Quantization",
+      "url": "https://arxiv.org/abs/2609.38169v1",
+      "source": "arXiv",
+      "published_at": "2026-09-29T17:59:40+00:00",
+      "summary": "Linear attention replaces growing KV caches with fixed-size recurrent states, yet these persistent states can become a substantial memory bottleneck under concurrent serving. Directly quantizing recurrent states to low precision often leads to severe accuracy degradation, as quantization errors propagate through successive state updates. We discover that the impact of these errors depends on two complementary dimensions: temporally, errors in long-lived memory can persist across many decoding steps; spatially, errors in different key rows affect model outputs differently, while state magnitudes vary substantially along both rows and columns. Motivated by these observations, we propose STEPQuant, a spatial-temporal post-training quantization framework for Delta-rule recurrent states. STEPQuant allocates precision according to error magnitude and memory lifetime, and jointly fits key-row and value-column scales based on state distributions and key-row impact on output error. Experiments on Qwen3.8-27B and Kimi-Linear-48B-A3B-Instruct across both long- and short-generation benchmarks show that STEPQuant closely matches FP32-state accuracy under a nominal 6-bit budget and outperforms uniform INT8 in its 4-bit configuration. Integrated into SGLang with optimized GPU kernels, 6-bit STEPQuant achieves over 5x recurrent-state compression and reduces total serving memory by up to 68.7%. Our code is available at https://github.com/Dreamer-Toby/STEPQuant.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Bingchen Yao",
+          "Haobo Xu",
+          "Haokun Lin",
+          "Yichen Wu",
+          "Ziyu Guo",
+          "Renrui Zhang",
+          "Zhichao Lu",
+          "Zhenan Sun",
+          "Ying Wei"
+        ],
+        "categories": [
+          "cs.CL",
+          "cs.AI",
+          "cs.LG"
+        ]
+      }
+    },
+    {
+      "id": "2609.38166",
+      "title": "LeapQuant: Efficient Linear Attention with Accurate Recurrent State Quantization",
+      "url": "https://arxiv.org/abs/2609.38166v1",
+      "source": "arXiv",
+      "published_at": "2026-09-29T17:59:34+00:00",
+      "summary": "Recent LLMs increasingly adopt hybrid designs that replace standard attention with linear attention, such as Gated DeltaNet (GDN) and Kimi Delta Attention (KDA). Although they compress the context into a fixed-size recurrent state and substantially reduce the cost of long-context processing, repeatedly reading and updating that state remains a major inference bottleneck. Quantization offers a natural way to reduce this cost, but can significantly degrade model quality, due to the accumulation of rounding errors and the presence of outlier rows and columns in the state. To address these challenges, we propose LeapQuant, a training-free method that achieves near-lossless performance under 8-bit recurrent-state quantization. First, to mitigate error accumulation, we propose per-window quantization, which leaps over a window of tokens and quantizes the state only once at its end. Within a window, outputs are computed from the fixed low-bit state together with high-precision buffered updates. Second, to reduce the error introduced by each quantization, LeapQuant retains the state's largest outliers as a few high-precision Compensator Tokens, which share the update path of real tokens. We then smooth the remaining residual before quantization to further reduce the error. Comprehensive experiments across the Qwen, Kimi, and GLM model families show that LeapQuant substantially reduces memory and compute costs during inference. With accuracy comparable to the FP32 baseline, it achieves average speedups of 2.05--3.70$\\times$ at the kernel level and 1.47$\\times$ for end-to-end inference on NVIDIA B200, RTX PRO 6000, and RTX 5090 GPUs.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Yi Pan",
+          "Haocheng Xi",
+          "Kan Zhu",
+          "Xingyang Li",
+          "Yibo Wu",
+          "Mayank Mishra",
+          "Hongtao Zhang",
+          "William X. Zheng",
+          "Baris Kasikci",
+          "Song Han",
+          "Kurt Keutzer",
+          "Rishabh Iyer",
+          "Ion Stoica"
+        ],
+        "categories": [
+          "cs.LG",
+          "cs.AI"
         ]
       }
     }
