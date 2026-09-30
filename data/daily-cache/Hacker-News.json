@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-09-30T11:01:06.952422+08:00",
+  "cached_at": "2026-09-30T13:47:43.483309+08:00",
   "articles": [
     {
       "id": "49896586",
@@ -8,8 +8,8 @@
       "source": "Hacker News",
       "published_at": "2026-09-29T17:06:45+00:00",
       "summary": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
-      "score": 811,
-      "comments": 747,
+      "score": 860,
+      "comments": 783,
       "discussion_url": "https://news.ycombinator.com/item?id=49896586",
       "extra": {
         "top_comments": [
@@ -20,20 +20,20 @@
       }
     },
     {
-      "id": "49892245",
-      "title": "How Delhi cut electricity loss from 50 to 5 percent",
-      "url": "https://spectrum.ieee.org/delhi-electricity-loss",
+      "id": "49896604",
+      "title": "Dots: Always-on agents",
+      "url": "https://openai.com/index/introducing-dots/",
       "source": "Hacker News",
-      "published_at": "2026-09-29T12:43:29+00:00",
-      "summary": "How Delhi cut electricity loss from 50 to 5 percent",
-      "score": 448,
-      "comments": 263,
-      "discussion_url": "https://news.ycombinator.com/item?id=49892245",
+      "published_at": "2026-09-29T17:07:57+00:00",
+      "summary": "Dots: Always-on agents",
+      "score": 526,
+      "comments": 397,
+      "discussion_url": "https://news.ycombinator.com/item?id=49896604",
       "extra": {
         "top_comments": [
-          "I wonder how many HNers recall life in Delhi even 20 years ago? Cutting electricity loss is one thing, but getting rid of \"load shedding\" (unplanned power cuts) is the really revolutionary part. It was not uncommon for the power to go out several times a day and you had to rush to unplug expensive appliances (TV, laptop), because when the power came back it was often accompanied by a surge. My office was wired with two sets of electrical sockets, one connected to grid mains and the other connected to the UPS (for important equipment only).",
-          "The effort to reduce electricity theft has had an interesting side effect. One of the ways to prevent theft is to insulate the power lines going into neighborhoods. This also makes them safe for monkeys to use as 'roads' with the result that roving gangs of monkeys move from neighborhood to neighborhood with ease and also have access to the upper floor of apartment buildings because of the proximity of the power lines. I saw this in person a few years ago.",
-          "India has one thing going for it, sunlight all the time.India can adopt plug-in standards, solar and batteries. I guess most people use some form of battery (UPS/Inverter) anyways, so the idea is familiar.Rooftop is known and it can continue to grow. Next, add vertical solar. This will add ~4 hours of solar production.Required gated communities to be self sufficient or net producers. Cover the surfaces of all high rises with vertical panels. Require these communities to have BESS and EV charging for all car parking. This adds two layers of storage. BESS instead of diesel generators. Add outlet for induction stove. No need of piped gas. I've seen villa communities where most homes are net producers, these ideas are happening, need to be standardized as regulation. Easiest thing is to create standards for the gated communities, which can be enforced.Don't build rural transmission infrastructure. They can be offgrid, using solar and batteries. It is not worth the cost to build and maintain transmission and distribution infrastructure to millions of small villages.Work towards regulating uber/rapido to require EV cars. These drive the most miles in cities and would do wonders.Lots of scope for growth."
+          "OpenAI won a lot of good favor for the generous Codex subscription and the efficiency of their models, but now that many people have switched over from Claude, they think they can leverage their position to peddle a stream of unnecessary products, and crack down on the generous limits[1] that brought everyone to Codex in the first place.Anthropic did the same thing. Earlier this year, Claude subs and Claude Code took off because of the subscription's incredible capability and value, then once they gained enough users, they started focusing on unnecessary products no one asked for (see Claude in Slack), and eventually lost their lead. After losing a bunch of customers to Codex subs they realized their mistake, and now they're shipping again.AI companies are bad at making software; they are good at making AI models. And that's about it.[1] https://x.com/thsottiaux/status/2104823812042940713",
+          "I feel like a lot of these always on agents tie users deeply into the platform. Unlike models that you can swap between with relative ease, with an agent because of the integrations to other platforms, work history and so on it would be harder to switch, since in effect they are essentially your computer on the cloud.Tin foil hat version of me thinks that all the closed model companies want to desperately build an abstraction layer on top of the model, so that they can limit access to the model directly and build a locked down relationship with the user.Other inference providers should counter this by providing their own version of standardized managed agents.Coincidentally, I published a note on my blog just about this today https://aditya.rs/blog/2026/09/29/inference-providers-should...",
+          "The lines between Codex, ChatGPT Work, and Dots is getting a bit blurry to me. I think the target should be a remote agent(s) in its own sandbox with long memory, and all three are heading in that direction so why have the distinctions?Unless Dots is dramatically more capable than Muse, I'm also more bullish on Muse than Dots. I think Muse is a better consumer play because it can be forever subsidized by Meta ads and find distribution in family of apps while Dots is in a weird place between consumer & professional. From the release, it also sounds like you'll have to pay per Dot at some point which doesn't sound appealing."
         ]
       }
     },
@@ -44,14 +44,14 @@
       "source": "Hacker News",
       "published_at": "2026-09-29T14:04:57+00:00",
       "summary": "America.gov",
-      "score": 393,
-      "comments": 318,
+      "score": 483,
+      "comments": 391,
       "discussion_url": "https://news.ycombinator.com/item?id=49893509",
       "extra": {
         "top_comments": [
-          "I understand that having the fingerprint unlock icon over the text about 'keeping your privacy protected' is supposed to represent protecting 'your privacy', but if you click it, it doesn't even go away, so it just becomes an annoying impediment to trying to read. Am I alone in thinking this or is that entire paragraph just generally poorly designed?Edit: Also hope that they don't plan on having anyone using ancient software (specifically IE, which I'm sure there are probably some government agencies somewhere that probably do) having the website work - even if you use an IE user agent, it will use SSE.",
+          "Paraphrasing a chat with America:- What happened at the Capitol on January 6th, 2021?- looks it up, finds dozens of government sources \"I am not a history recap service.\"- Who was the first president of the US?- \"George Washington took the oath of office on April 30, 1789\"- I thought you weren't a history recap service?",
           "OK, there's a lot of negative comments here, but this is a great idea at a high level. It really is hard to figure out where to do a thing and it's also very easy to get phished. If they can figure out how to help people get all the services they're eligible for that'll be an amazing improvement for the people.",
-          "If anyone's wondering how this works, it looks like[1] Gemini + guardrails:> Google is proud to be named a technology partner in this vital initiative, leveraging Gemini to help more than 100 million people access critical public resources with greater speed and ease[1] https://blog.google/company-news/outreach-and-initiatives/pu..."
+          "I understand that having the fingerprint unlock icon over the text about 'keeping your privacy protected' is supposed to represent protecting 'your privacy', but if you click it, it doesn't even go away, so it just becomes an annoying impediment to trying to read. Am I alone in thinking this or is that entire paragraph just generally poorly designed?Edit: Also hope that they don't plan on having anyone using ancient software (specifically IE, which I'm sure there are probably some government agencies somewhere that probably do) having the website work - even if you use an IE user agent, it will use SSE."
         ]
       }
     },
@@ -62,32 +62,14 @@
       "source": "Hacker News",
       "published_at": "2026-09-29T22:36:14+00:00",
       "summary": "Livenerf: Has Opus 5.5 been nerfed yet?",
-      "score": 295,
-      "comments": 129,
+      "score": 421,
+      "comments": 173,
       "discussion_url": "https://news.ycombinator.com/item?id=49901736",
       "extra": {
         "top_comments": [
           "We also have Nerf Bench:https://www.bridgebench.ai/nerf-benchThey test it on launch day, then benchmark it against that. A deviation of above 10% is considered a change. They're currently tracking Opus 5.5 and GPT-6 Astra.This bench famously detected a degradation of Opus 4.6 which Anthropic later blogged about. I personally think people sense nerfs more often than they happen and that it's often about honeymoon effects.",
           "\"Nerf\"ing models isn't real in the vast majority of reported cases. Benchmarks like this or the 100 other \"let's see if nerfing is real\" copies would have shown it by now if it was.I made a graphic to explain why people feel like the models get nerfed:https://x.com/thesilenceturns/status/2103551351825543610The idea is that new models can handle up to a certain level of complexity, at which point they fall apart. Every new model can handle more complexity, so there's a wonderful time upon release when you feel like you can do anything, only for you to hit the complexity ceiling a few days later when you saturate it. Rinse and repeat for the next model.",
-          "Anecdata: I've been running a long-lived claude code session with Opus 4.6 for the last few days. Yesterday, almost right after the Sonnet 5.5 announcement, codex starting asking for permission to run things a lot more oftenThe quality of the output/work seems the same, but the speed at which it gets stuff done is a lot slower, because it's asking for permission so much moreI don't have any numbers/stats, just my impression. However, I imagine that if Anthropic could make the models ask for permission more often, it could be an interesting way to throttle access, without degrading quality of the output"
-        ]
-      }
-    },
-    {
-      "id": "49896712",
-      "title": "Tcl/Tk 9.1",
-      "url": "https://www.tcl-lang.org/software/tcltk/9.1.html",
-      "source": "Hacker News",
-      "published_at": "2026-09-29T17:13:38+00:00",
-      "summary": "Tcl/Tk 9.1",
-      "score": 247,
-      "comments": 90,
-      "discussion_url": "https://news.ycombinator.com/item?id=49896712",
-      "extra": {
-        "top_comments": [
-          "I have a soft corner for TCL, because of its idiosyncracies and weird dynamic stringy playfulness. I would be wary of using it professionally but to play around for the fun of it ... it's just too much fun. Upvar and uplevels are crazy.Python is that kind of cool one behaves when visiting parents of your would be spouse for the first time. Tcl on the other hand is like playing one's secret exclusive and somewhat dangerous games with kid school bestie.Tcl/Tk pioneered the notion of a scripting language as a library. It got threading right. You can run multiple independent Tcl interpreters in the address space of your process and they can exchange messages. Entirety of interpreter state is encapsulated inside the interpreter object, no globals. To a user an it is just a pointer to an object.No need for GIL, no need for serialization/deserialization (pickle/unpickle) ... just within process memory copy (or no copies in case data is immutable).",
-          "The biggest early selling point of Tcl was Tk, as a relatively easy way to make good-enough GUI programs with open source on Unixen and the X Window System. Even much easier than the easier-to-use X toolkits like XView with C, and the alternatives only got more difficult from there. There were no Web frontends.Tcl itself was quite clever as what I'd actually call a string-based scripting language (contrast with Bourne/C-shell/etc. that preceded it on Unix).Originally, Tcl was among the handful of off-the-shelf extension languages. You write your big application in C or C++, and then you embed an interpreter for a higher-level extension language, for users or the original developer to add on functionality. The options at the time were usually a small Lisp/Scheme, Tcl, Python, or something entirely bespoke and probably quirky and half-butted.During early dotcoms, there was considerable interest in Tcl for backend work, and it also wouldn't have been the worst choice to put into the browser. Like Python, Tcl would've been more accessible and democratizing-the-Web than JavaScript, and there were already solid off-the-shelf designs and implementations. (Scheme would've appeared slightly more intimidating than Python or Tcl, and was more powerful, which I think was why Tim Berners-Lee preferred Python over Scheme as the people's programming language for various Web purpose. The semantics of the JavaScript we got was more a hurried toy Scheme, plus the simplest object model, and a more intimidating syntax that came from systems programming.)",
-          "Tcl/Tk has got to be the easiest GUI system out there; you can get simple stuff going with no effort - nothing I've seen comes close to that simplicity.Good to see it's getting some modern support."
+          "> It could also mean nothing happened and people are pattern-matching on noise.It is definitely not this. Anthropic has thousands of employees making probably > 100,000+ tiny changes across the entire stack and infrastructure everyday.The compounding effect can definitely cause temporary regressions in some domain or use-case that doesn’t have really good coverage in their internal tests.What makes this particularly challenging in the case of LLMs is how changing some language in the prompt can vastly affect the output.But this is less true as models become larger and additional parameters are able to capture each and every possible nuance of the language. I’d say caching and cache tuning or token optimization/tweaks to thinking are the biggest culprits today."
         ]
       }
     },
@@ -98,8 +80,8 @@
       "source": "Hacker News",
       "published_at": "2026-09-29T15:44:41+00:00",
       "summary": "PS5 Relapse Exploit",
-      "score": 241,
-      "comments": 132,
+      "score": 267,
+      "comments": 152,
       "discussion_url": "https://news.ycombinator.com/item?id=49895304",
       "extra": {
         "top_comments": [
@@ -110,14 +92,32 @@
       }
     },
     {
+      "id": "49893157",
+      "title": "Ask HN: What are you reading?",
+      "url": "https://news.ycombinator.com/item?id=49893157",
+      "source": "Hacker News",
+      "published_at": "2026-09-29T13:44:43+00:00",
+      "summary": "I'm plowing through the Dungeon Crawler Carl series, which is not particularly challenging as sci-fi/LitRPG goes, but entertaining enough. I'm also wrapping up Doctorow's _Enshittification_, and I'm looking for something a little meaty to keep the brain working...",
+      "score": 209,
+      "comments": 465,
+      "discussion_url": "https://news.ycombinator.com/item?id=49893157",
+      "extra": {
+        "top_comments": [
+          "Just finished: \"Lonesome Dove\", by Larry McMurtry. From the name, I'd somehow assumed it was a romance novel. No, it's absolutely not. If it were released today, I think I'd describe it as \"horsepunk\": instead of cyberpunk's high tech low-lifes, it's basically horseback low-lifes. That's not entirely fair because there's a lot of moral strength in some of the characters, but they're all living on the brutal edges of a society where any random event might bring death, or worse.Now reading: \"null: $cat /dev/null_\", by Dienw Neb[0]. I don't know what it's about yet. I heard about it in an ad in the back of \"2600 Magazine\" and it caught my attention. Initial impressions are that 1) Neb is really good at dialog, and 2) their recreations of IRC chats is so perfect that I know they had to've spend many hours online in the middle of the night. Basically, the author knows how to write things I want to read. I do so hope they stick the landing and that the story turns out as wonderful as the writing.[0]https://nebulaofbooks.com/books/null-cat-dev-null_/",
+          "Two of Vernor Vinge's books in particular (science fiction): A Fire Upon The Deep, and A Deepness In The Sky.They have a special place in my heart. Vinge didn't write much, but what he did write I think is very special indeed.I've also taken to buying hardbacks of my favourite books from ebay.https://www.goodreads.com/en/book/show/77711.A_Fire_Upon_the...https://www.goodreads.com/book/show/226004.A_Deepness_in_the...",
+          "Oh I've got some recs for you if you want meaty! I've been reading classics this year. It started with East of Eden; if you've got a philosophical leaning and appreciate your characters deeply fleshed out, you owe it to yourself to read this book.The next one was Lonesome Dove, this was my first time reading a western and I didn't think I'd enjoy it as much as I did. The book is also absolutely hilarious and has one of my favorite characters in a book(shoutout to Gus).I'm currently reading The Count of Monte Cresto and, boy, it's turning out to be quite the epic tale of revenge(no spoilers please!)."
+        ]
+      }
+    },
+    {
       "id": "49899090",
       "title": "U.S. postal inspectors shut down website selling counterfeit postage labels",
       "url": "https://postalemployeenetwork.com/news/2026/09/26/u-s-postal-inspectors-shut-down-website-selling-millions-of-counterfeit-postage-labels/",
       "source": "Hacker News",
       "published_at": "2026-09-29T19:30:17+00:00",
       "summary": "U.S. postal inspectors shut down website selling counterfeit postage labels",
-      "score": 181,
-      "comments": 107,
+      "score": 201,
+      "comments": 119,
       "discussion_url": "https://news.ycombinator.com/item?id=49899090",
       "extra": {
         "top_comments": [
@@ -128,20 +128,20 @@
       }
     },
     {
-      "id": "49893157",
-      "title": "Ask HN: What are you reading?",
-      "url": "https://news.ycombinator.com/item?id=49893157",
+      "id": "49898778",
+      "title": "Show HN: Real-time Solar System with 526k asteroids and all tracked satellites",
+      "url": "https://space.bl2.net/",
       "source": "Hacker News",
-      "published_at": "2026-09-29T13:44:43+00:00",
-      "summary": "I'm plowing through the Dungeon Crawler Carl series, which is not particularly challenging as sci-fi/LitRPG goes, but entertaining enough. I'm also wrapping up Doctorow's _Enshittification_, and I'm looking for something a little meaty to keep the brain working...",
-      "score": 158,
-      "comments": 403,
-      "discussion_url": "https://news.ycombinator.com/item?id=49893157",
+      "published_at": "2026-09-29T19:08:01+00:00",
+      "summary": "Show HN: Real-time Solar System with 526k asteroids and all tracked satellites",
+      "score": 178,
+      "comments": 39,
+      "discussion_url": "https://news.ycombinator.com/item?id=49898778",
       "extra": {
         "top_comments": [
-          "Just finished: \"Lonesome Dove\", by Larry McMurtry. From the name, I'd somehow assumed it was a romance novel. No, it's absolutely not. If it were released today, I think I'd describe it as \"horsepunk\": instead of cyberpunk's high tech low-lifes, it's basically horseback low-lifes. That's not entirely fair because there's a lot of moral strength in some of the characters, but they're all living on the brutal edges of a society where any random event might bring death, or worse.Now reading: \"null: $cat /dev/null_\", by Dienw Neb[0]. I don't know what it's about yet. I heard about it in an ad in the back of \"2600 Magazine\" and it caught my attention. Initial impressions are that 1) Neb is really good at dialog, and 2) their recreations of IRC chats is so perfect that I know they had to've spend many hours online in the middle of the night. Basically, the author knows how to write things I want to read. I do so hope they stick the landing and that the story turns out as wonderful as the writing.[0]https://nebulaofbooks.com/books/null-cat-dev-null_/",
-          "Oh I've got some recs for you if you want meaty! I've been reading classics this year. It started with East of Eden; if you've got a philosophical leaning and appreciate your characters deeply fleshed out, you owe it to yourself to read this book.The next one was Lonesome Dove, this was my first time reading a western and I didn't think I'd enjoy it as much as I did. The book is also absolutely hilarious and has one of my favorite characters in a book(shoutout to Gus).I'm currently reading The Count of Monte Cresto and, boy, it's turning out to be quite the epic tale of revenge(no spoilers please!).",
-          "Fiction:I'm on Book Two of the Dungeon Crawler Carl series.Non-Fiction:More than I can count, as far as \"I've read at least some, put a bookmark in it, and intend to finish it eventually.\" But in terms of the books I'm really actively engaging with right now, the top one is:Neuroscience: Exploring The Brain[1] by Mark F. Bear, Barry W. Connors, and Michael A. ParadisoAnd sort of in parallel with that, isAnalog Computing: Development, Programming, Applications, and Future Directions[2] by Bernd Ulmann[1]: https://www.amazon.com/dp/0781760038/[2]: https://www.amazon.com/Analog-Computing-Development-Programm..."
+          "Oh man, it seems like my asteroid (Minor Planet 31689 - Sebmellen [0]) is missing.[0]: https://www.wikidata.org/wiki/Q6711174[1]: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=20031...",
+          "Author here. It's a browser view of the Solar System at real scale, with its current state, plus the objects around Earth from the CelesTrak catalog.Data: CelesTrak TLEs (SGP4), asteroids and comets from JPL SBDB, spacecraft positions from JPL Horizons. Updated daily.Rendering is WebGL2, orbit propagation runs in web workers. The asteroid set (~30 MB) loads in the background.The time slider runs forwards and backwards; satellites appear and disappear by launch date.",
+          "Just spent a little time following Europa Clipper, it will fly by Earth very soon! If you zoom out from Earth, it's already pretty close. This will be its second gravity assist after Mars. Very cool site!"
         ]
       }
     }
