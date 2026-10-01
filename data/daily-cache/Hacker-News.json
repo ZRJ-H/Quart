@@ -1,147 +1,146 @@
 {
-  "cached_at": "2026-09-30T13:47:43.483309+08:00",
+  "cached_at": "2026-10-01T11:00:27.096373+08:00",
   "articles": [
     {
-      "id": "49896586",
-      "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
-      "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+      "id": "49913571",
+      "title": "Gemini 4 Argon",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
       "source": "Hacker News",
-      "published_at": "2026-09-29T17:06:45+00:00",
-      "summary": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
-      "score": 860,
-      "comments": 783,
-      "discussion_url": "https://news.ycombinator.com/item?id=49896586",
+      "published_at": "2026-09-30T20:04:37+00:00",
+      "summary": "See also: Gemini 4 Argon (High): Intelligence, Performance and Price Analysis - https://news.ycombinator.com/item?id=49914236",
+      "score": 1054,
+      "comments": 706,
+      "discussion_url": "https://news.ycombinator.com/item?id=49913571",
       "extra": {
         "top_comments": [
-          "I am yet to spend $200 on deepseek this year. Not sure what kind of usage can justify $200/month of either openai or anthropic, i'm not even talking about $500. Deepseek is faster, IMO intelligence difference is negligible and it so much cheaper that i no longer care about how much i use it. I never hit any daily/weekly quota or anything like that while working or tinkering. At this point i am OK with being 6 months behind the \"frontier\", purely on bang-for-buck basis and who cares which shadowy government gets my data.",
-          "There was a model called Astra-Minor, found in the files a few days ago. I assume Sol 6.1 is this, as a last minute panic rename due to Sol 6 being underwhelming while Opus 5.5 turned out really strong. I can't really explain releasing Sol 6 in any other way, especially mere days ago.",
-          "The GPT 6 release was ... not great.Sol 6 was so bad that I switched over to Opus 5.5 exclusively.Huge regression compared to Sol 5.6, often doing really dumb things. Same for Luna.Even Astra is very unreliable for coding. Brilliant for vision, sometimes just great, but it also often does very stupid things.I'm a bit sour on OpenAI right now and skeptical that 6.1 will be much different.(Note: this is after preferring and shilling Codex/OpenAI models for the last half year)"
+          "Ten days ago I had an experience with Gemini 3.8 flash that made me wonder if I was being routed to a different model under test. I was trying to use rocm with llama.cpp on my 128gb Strix Halo but could only get it to run Vulkan. I pasted the error message into agy and it proceeded to attach GDB to my GPU driver, reverse-engineer the kernel queue ioctl interface, and author an LD_PRELOAD C shim to get ROCm llama.cpp working on my Strix Halo. My jaw was hanging open the whole time.Edit to add the fix: https://gist.github.com/birep/6f2c8d490c7a29820997d57bd654c3...",
+          "The important take away here: the leapfrogging we’ve seen this year doesn’t seem to be a temporary thing. The famous theory of Dario Amodei was that AI was this winner-takes-all field where the first team to get a head start would never cede ground back. The term he liked to use was, “concentrating”. This is yet another datapoint that he was wrong about that. AI seems more distributed amongst neoclouds and traditional hyperscalers, FAANG and startups, GPUs and ASICs than it did this time a year ago.Nobody has a moat.",
+          "> We’ll continue to gather feedback from early testers as we iterate on guardrails before making Argon available to developers, enterprises, and consumers as soon as possible.Gemini not beating the \"can't release a model\" allegations"
         ]
       }
     },
     {
-      "id": "49896604",
-      "title": "Dots: Always-on agents",
-      "url": "https://openai.com/index/introducing-dots/",
+      "id": "49913192",
+      "title": "EDG C++ front-end goes public",
+      "url": "https://edgcpp.org/#transition",
       "source": "Hacker News",
-      "published_at": "2026-09-29T17:07:57+00:00",
-      "summary": "Dots: Always-on agents",
-      "score": 526,
-      "comments": 397,
-      "discussion_url": "https://news.ycombinator.com/item?id=49896604",
+      "published_at": "2026-09-30T19:26:37+00:00",
+      "summary": "https://github.com/edgcpp/compiler",
+      "score": 160,
+      "comments": 77,
+      "discussion_url": "https://news.ycombinator.com/item?id=49913192",
       "extra": {
         "top_comments": [
-          "OpenAI won a lot of good favor for the generous Codex subscription and the efficiency of their models, but now that many people have switched over from Claude, they think they can leverage their position to peddle a stream of unnecessary products, and crack down on the generous limits[1] that brought everyone to Codex in the first place.Anthropic did the same thing. Earlier this year, Claude subs and Claude Code took off because of the subscription's incredible capability and value, then once they gained enough users, they started focusing on unnecessary products no one asked for (see Claude in Slack), and eventually lost their lead. After losing a bunch of customers to Codex subs they realized their mistake, and now they're shipping again.AI companies are bad at making software; they are good at making AI models. And that's about it.[1] https://x.com/thsottiaux/status/2104823812042940713",
-          "I feel like a lot of these always on agents tie users deeply into the platform. Unlike models that you can swap between with relative ease, with an agent because of the integrations to other platforms, work history and so on it would be harder to switch, since in effect they are essentially your computer on the cloud.Tin foil hat version of me thinks that all the closed model companies want to desperately build an abstraction layer on top of the model, so that they can limit access to the model directly and build a locked down relationship with the user.Other inference providers should counter this by providing their own version of standardized managed agents.Coincidentally, I published a note on my blog just about this today https://aditya.rs/blog/2026/09/29/inference-providers-should...",
-          "The lines between Codex, ChatGPT Work, and Dots is getting a bit blurry to me. I think the target should be a remote agent(s) in its own sandbox with long memory, and all three are heading in that direction so why have the distinctions?Unless Dots is dramatically more capable than Muse, I'm also more bullish on Muse than Dots. I think Muse is a better consumer play because it can be forever subsidized by Meta ads and find distribution in family of apps while Dots is in a weird place between consumer & professional. From the release, it also sounds like you'll have to pay per Dot at some point which doesn't sound appealing."
+          "What's not mentioned in the announcement (at least based on a quick skim) is that EDG the company is winding down, which is likely the reason why they're open sourcing the front end.https://en.wikipedia.org/wiki/Edison_Design_Group ref 9: https://herbsutter.com/2025/11/10/trip-report-november-2025-...",
+          "Wow. This is big news for C++.For background -- and I am not an expert here -- their C++ frontend is widely known. I first heard of it because Visual C++'s Intellisense uses it, which was notable because VC does not use the msvc frontend for its own completion. I understand it's been either used or evaluated for other frontends in the past too. I worked as PM for one C++ product, and was fortunate to be able to learn a lot from our engineers; we didn't use it, but they thought highly of EDG.It has a very strong reputation for being correct. And as such, I think open sourcing it will be a very beneficial thing for the C++ community.",
+          "It's got history! That's really unusual for moves to open-source; the dates on the earliest commits are in 1990 and they do go forward in time so that's really unusual to have that much history. I bet there's some fun stuff in there."
         ]
       }
     },
     {
-      "id": "49893509",
-      "title": "America.gov",
-      "url": "https://america.gov/",
+      "id": "49915082",
+      "title": "The top secret URSALA, RAQUEL, and FARRAH satellites (2025)",
+      "url": "https://www.thespacereview.com/article/4951/1",
       "source": "Hacker News",
-      "published_at": "2026-09-29T14:04:57+00:00",
-      "summary": "America.gov",
-      "score": 483,
-      "comments": 391,
-      "discussion_url": "https://news.ycombinator.com/item?id=49893509",
+      "published_at": "2026-09-30T22:03:04+00:00",
+      "summary": "The top secret URSALA, RAQUEL, and FARRAH satellites (2025)",
+      "score": 146,
+      "comments": 58,
+      "discussion_url": "https://news.ycombinator.com/item?id=49915082",
       "extra": {
         "top_comments": [
-          "Paraphrasing a chat with America:- What happened at the Capitol on January 6th, 2021?- looks it up, finds dozens of government sources \"I am not a history recap service.\"- Who was the first president of the US?- \"George Washington took the oath of office on April 30, 1789\"- I thought you weren't a history recap service?",
-          "OK, there's a lot of negative comments here, but this is a great idea at a high level. It really is hard to figure out where to do a thing and it's also very easy to get phished. If they can figure out how to help people get all the services they're eligible for that'll be an amazing improvement for the people.",
-          "I understand that having the fingerprint unlock icon over the text about 'keeping your privacy protected' is supposed to represent protecting 'your privacy', but if you click it, it doesn't even go away, so it just becomes an annoying impediment to trying to read. Am I alone in thinking this or is that entire paragraph just generally poorly designed?Edit: Also hope that they don't plan on having anyone using ancient software (specifically IE, which I'm sure there are probably some government agencies somewhere that probably do) having the website work - even if you use an IE user agent, it will use SSE."
+          "The incredible and futuristic technologies the US managed to deploy decades before the competition reminds me of the story of how the NRO gifted NASA a couple of their old decommissioned satellites in 2012 and they turned out to be basically upgraded Hubble telescopes pointed at earth. The US from the 90s to the 2000s had multiple Hubble-level telescopes just for spying while NASA was fighting for scraps to study the entire cosmos.",
+          "Relevance of this information:https://www.dailymail.com/sciencetech/article-16172545/us-sp..."
         ]
       }
     },
     {
-      "id": "49901736",
-      "title": "Livenerf: Has Opus 5.5 been nerfed yet?",
-      "url": "https://github.com/ninjahawk/livenerf",
+      "id": "49912955",
+      "title": "Surprisingly complex waves reveal the brain's inner workings",
+      "url": "https://www.quantamagazine.org/surprisingly-complex-waves-reveal-the-brains-inner-workings-20260930/",
       "source": "Hacker News",
-      "published_at": "2026-09-29T22:36:14+00:00",
-      "summary": "Livenerf: Has Opus 5.5 been nerfed yet?",
-      "score": 421,
-      "comments": 173,
-      "discussion_url": "https://news.ycombinator.com/item?id=49901736",
+      "published_at": "2026-09-30T19:04:50+00:00",
+      "summary": "Surprisingly complex waves reveal the brain's inner workings",
+      "score": 132,
+      "comments": 42,
+      "discussion_url": "https://news.ycombinator.com/item?id=49912955",
       "extra": {
         "top_comments": [
-          "We also have Nerf Bench:https://www.bridgebench.ai/nerf-benchThey test it on launch day, then benchmark it against that. A deviation of above 10% is considered a change. They're currently tracking Opus 5.5 and GPT-6 Astra.This bench famously detected a degradation of Opus 4.6 which Anthropic later blogged about. I personally think people sense nerfs more often than they happen and that it's often about honeymoon effects.",
-          "\"Nerf\"ing models isn't real in the vast majority of reported cases. Benchmarks like this or the 100 other \"let's see if nerfing is real\" copies would have shown it by now if it was.I made a graphic to explain why people feel like the models get nerfed:https://x.com/thesilenceturns/status/2103551351825543610The idea is that new models can handle up to a certain level of complexity, at which point they fall apart. Every new model can handle more complexity, so there's a wonderful time upon release when you feel like you can do anything, only for you to hit the complexity ceiling a few days later when you saturate it. Rinse and repeat for the next model.",
-          "> It could also mean nothing happened and people are pattern-matching on noise.It is definitely not this. Anthropic has thousands of employees making probably > 100,000+ tiny changes across the entire stack and infrastructure everyday.The compounding effect can definitely cause temporary regressions in some domain or use-case that doesn’t have really good coverage in their internal tests.What makes this particularly challenging in the case of LLMs is how changing some language in the prompt can vastly affect the output.But this is less true as models become larger and additional parameters are able to capture each and every possible nuance of the language. I’d say caching and cache tuning or token optimization/tweaks to thinking are the biggest culprits today."
+          "For context, the debate in the field has been whether these are epiphenomena of the actual neuronal activity, or a meaningful driver of further activity.I don’t think these studies quite rest the case. As Buzsaki comments in the article, the action is in the cells to create these waves. Do the waves themselves get measured and impact what happens next? The issue at hand is: synaptic currents are stronger and we know neurons respond to them. The wave behavior is in the extracellular fluid as well, and that part we have evidence neurons don’t respond much to.That said, thing the article doesn’t talk about is astrocytes. Especially in the cortex, most synapses are tripartite. There’s an astrocytic end foot that sheathes the synapse and regulates how much of the bulk extracellular space has access to the synapse. And one astrocyte can touch thousands of synapses and in humans, hundreds of thousands. They also form a syncitium, through gap junctions/electrical synapses.Do astrocytes respond to the extracellular wave behavior, which potentially changes the extent and behavior of the syncitium, and thus impact the neurons they touch?That’s still an open question but that’s what I’d be interested to find out more about.",
+          "Bit of a sensationalist title - EEG/iEEG measurements have led to worthwhile clinical outcomes but also are an avenue for bunk pseudosccience so it pays to be careful whenever you see the words 'brain waves' paired with some large claim.More accurate, much less sexy title: Intracranial Recordings Uncover Spiral and Concentric Brain Waves During Memory Tasks\" (study completed only on small cohorts of epilepsy patients performing constrained memory tasks).No inner workings revealed or laid bare, just another piece of evidence contributing to a small part of the debate in cortical electrophysiological studies on whether or not some data measures can be discarded as the downstream, messy noise of the neurons firing or actual, high-fidelity signals of activity",
+          "My hypothesis:Sentience / consciousness is “hosted by” or “seated in” structured EM fields. Neurons are just the mechanism.I’ve not yet thought of a way to falsify this hypothesis, but I continue to think there’s something to this framing.One reason I like it is that it doesn’t completely succumb to total dualism. Also it doesn’t say WHY this would be the case, or HOW. It just says “that thing you call experience? That’s a special kind of structured EM field configuration.”"
         ]
       }
     },
     {
-      "id": "49895304",
-      "title": "PS5 Relapse Exploit",
-      "url": "https://github.com/ntfargo/Relapse-Exploit",
+      "id": "49911995",
+      "title": "Launch HN: Magnitude (YC S25) – Self-optimizing inference engine for agents",
+      "url": "https://github.com/magnitudedev/magnitude",
       "source": "Hacker News",
-      "published_at": "2026-09-29T15:44:41+00:00",
-      "summary": "PS5 Relapse Exploit",
-      "score": 267,
-      "comments": 152,
-      "discussion_url": "https://news.ycombinator.com/item?id=49895304",
+      "published_at": "2026-09-30T17:37:40+00:00",
+      "summary": "Hey HN, Anders and Tom here. We're building Magnitude, an inference engine for agents that optimizes itself to run as fast as possible on your hardware. It works on Mac, Linux, and Windows on any hardware and is up to 2x faster than llama.cpp.We're both software engineers and previously built an open source browser agent to 4k+ GH stars and 100k+ downloads. We increasingly wanted to run it on local models, but found that no inference engine worked for our use case.Inference engines today all make a performance tradeoff. They are either:- Built for batched inference on datacenter hardware at the cost of single-session performance (vLLM, SGLang) - Designed for broad compatibility instead of optimizing for specific hardware (llama.cpp, Ollama) - Specialized for specific hardware or models but lacking engine completeness (oMLX, ds4)Plus none of them are designed for running agents locally. Sessions are long, several often run at once, and you still want to use your computer for other things.Magnitude is built for maximum performance on your hardware and running local agents:- On-device compilation and tuning: Kernels are written with flexible parameters that are tuned on your actual device before the model runs. This gives you broad hardware compatibility with the same performance ceiling as hardware-specific kernels.- Focus on best architectures: We write our tunable, highly efficient kernels for the most popular open-weights families. This allows us to achieve and surpass the performance of hardware or model specialized engines, without forcing ourselves to over-generalize at the cost of performance.- Dynamic memory allocation: Magnitude reserves only enough memory up front to hold model weights. As your agent sessions grow, the memory heap dynamically increases, and frees itself when agents stop. Your hardware can still be used for other stuff while agents run.- Hybrid paged attention: We borrow the best ideas from engines like SGLang to allow concurrent sessions to share prefix caches, but optimize placement for memory-adjacency so single-session performance doesn't suffer.Magnitude is fully open source (Apache 2.0). We built it in Rust, including a custom GPU kernel runtime and autotuner. We take inspiration from the best innovations in inference from academics (e.g. FlashAttention, FlashInfer, TurboQuant) as well as other engines (e.g. SGLang radix attention) to reach the performance ceiling.Benchmarked against llama.cpp with Qwen 3.6 35B A3B (4 bit), 64k context, no speculative decoding:Metal (Mac M4 Pro 48 GB) - 92% faster decode (30 tok/s → 57 tok/s) - 9% faster prefill (466 tok/s → 507 tok/s) - 28% less per-agent memory usageCUDA (DGX Spark) - 19% faster decode (49 tok/s → 58 tok/s) - 23% faster prefill (2,033 tok/s → 2,507 tok/s) - 27% less per-agent memory usageMagnitude ships as a desktop app that you can easily connect with whatever agents you already use (Pi, OpenCode, Hermes, Codex, and more). It automatically runs models on demand when these agents actually need them, and shuts them down after inactivity. Here's what it looks like: https://www.youtube.com/watch?v=0qE8BWEZu7oWe're excited to push Magnitude further to let you run bigger models on the same hardware while continuing to improve performance. Our plans include:- Expert streaming: store experts on RAM or disk and load them just-in-time. This lets you run models bigger than what otherwise would fit on your GPU.- Kernel compiler: our current kernels tune a few parameters to fit your hardware. We can take this further with a fully custom compiler that automatically chooses how to fuse kernels and which implementations to use, to make it fit to your hardware even better.- Multi-device utilization: Make the best possible use of all hardware on a system (CPU, GPUs, RAM, disk) by detecting these and automatically solving for the best model layout.We'd love for more people to try it out and give us feedback. Feel free to comment here, we'll be around all day!",
+      "score": 130,
+      "comments": 59,
+      "discussion_url": "https://news.ycombinator.com/item?id=49911995",
       "extra": {
         "top_comments": [
-          "Can I use this to make backups of my game saves to USB?Being somewhat naive to the gaming scene, I only recently discovered that the PS5 prevents you from backing up your game saves to your own physical media - something that was possible on the PS1, PS2, PS3 and PS4.Instead, you have to subscribe to PS Plus and enable cloud backups - and you need a separate subscription per user profile.I only discovered this after my daughter lost a year of work in Minecraft due to data corruption, and I tried to teach her the value of backing up.The PS5 may be my last console.",
-          "If I know anything about those communities, they sit on a bag of zero days and another bag of leads to zero days in the bootloader or whatever everjail they need to break out of.",
-          "At a glance, it looks like it exploits a bug in WebKit's JavaScriptCore JavaScript engine.Does the PS5's WebKit use JavaScriptCore with JIT enabled? Have to wonder if Sony will respond by disabled its JIT, to narrow the attack surface."
+          "On my local inference box I have a perpetual codex thread open in my llama.cpp checkout that I periodically ask to take a look at currently pending llama.cpp PRs, do some research on latest MTP, Dflash and other prediction or attention optimizations, do research on the latest model quants and finetunes, take a look at localLlama Reddit threads and just do essentially a sweep of the frontier.Then it rebuilds latest llama.cpp, grabs the PRs it finds relevant to test against, and then it performs a benchmark and finalizes the upgrade and verifies what model, variant, or even a separate finetune that we should be running.Occasionally, it performs its own optimizations and commits, which then gets superseded by pull requests and merged code that essentially validates the model's own optimization directionality.",
+          "How accurate are speed estimates in the UI? I'm asking because for Qwen 3.8 (Q8) the speed numbers cited in the UI look quite poor: Estimated speed on your machine Context tokens Tokens / sec 25 000 17 50 000 16 75 000 16 262 144 12 262K number is ok, but for lower context sizes (<128K) it's about 2x slower than the numbers I'm getting from real mtplx sessions for qwen3.8 q8 (mac m5 max).Is it a lack of optimizations, or incorrect numbers, or a benchmark artifact (e.g. something which is harder for spec decoding than usual agentic sessions)?",
+          "This seems to be a good idea. However, beating llama.cpp on speed is a low bar :)I found it to be a good baseline, but at least on Mac there was always something way faster, and/or with better memory requirements - like you said, ds4, omlx, mtplx, etc. It seems if you use local LLMs for real, there is very little reason not to use one of the more optimized engines.3 main failure modes I observed in the engines:* Not using best available spec decoding* Using too much VRAM for KV cache (e.g. KV cache used to take almost nothing in ds4, but huge amount of VRAM on unsloth/llama.cpp for deepseek models)* Degraded performance at large context sizes - benchmarks at 4K or 32K are awesome, but at realistic 100-200K it's slower than some stupid baseline"
         ]
       }
     },
     {
-      "id": "49893157",
-      "title": "Ask HN: What are you reading?",
-      "url": "https://news.ycombinator.com/item?id=49893157",
+      "id": "49912444",
+      "title": "5x faster Edge Functions: V8 isolates to Firecracker MicroVMs",
+      "url": "https://www.netlify.com/blog/edge-functions-firecracker-microvms/",
       "source": "Hacker News",
-      "published_at": "2026-09-29T13:44:43+00:00",
-      "summary": "I'm plowing through the Dungeon Crawler Carl series, which is not particularly challenging as sci-fi/LitRPG goes, but entertaining enough. I'm also wrapping up Doctorow's _Enshittification_, and I'm looking for something a little meaty to keep the brain working...",
-      "score": 209,
-      "comments": 465,
-      "discussion_url": "https://news.ycombinator.com/item?id=49893157",
+      "published_at": "2026-09-30T18:17:45+00:00",
+      "summary": "5x faster Edge Functions: V8 isolates to Firecracker MicroVMs",
+      "score": 123,
+      "comments": 50,
+      "discussion_url": "https://news.ycombinator.com/item?id=49912444",
       "extra": {
         "top_comments": [
-          "Just finished: \"Lonesome Dove\", by Larry McMurtry. From the name, I'd somehow assumed it was a romance novel. No, it's absolutely not. If it were released today, I think I'd describe it as \"horsepunk\": instead of cyberpunk's high tech low-lifes, it's basically horseback low-lifes. That's not entirely fair because there's a lot of moral strength in some of the characters, but they're all living on the brutal edges of a society where any random event might bring death, or worse.Now reading: \"null: $cat /dev/null_\", by Dienw Neb[0]. I don't know what it's about yet. I heard about it in an ad in the back of \"2600 Magazine\" and it caught my attention. Initial impressions are that 1) Neb is really good at dialog, and 2) their recreations of IRC chats is so perfect that I know they had to've spend many hours online in the middle of the night. Basically, the author knows how to write things I want to read. I do so hope they stick the landing and that the story turns out as wonderful as the writing.[0]https://nebulaofbooks.com/books/null-cat-dev-null_/",
-          "Two of Vernor Vinge's books in particular (science fiction): A Fire Upon The Deep, and A Deepness In The Sky.They have a special place in my heart. Vinge didn't write much, but what he did write I think is very special indeed.I've also taken to buying hardbacks of my favourite books from ebay.https://www.goodreads.com/en/book/show/77711.A_Fire_Upon_the...https://www.goodreads.com/book/show/226004.A_Deepness_in_the...",
-          "Oh I've got some recs for you if you want meaty! I've been reading classics this year. It started with East of Eden; if you've got a philosophical leaning and appreciate your characters deeply fleshed out, you owe it to yourself to read this book.The next one was Lonesome Dove, this was my first time reading a western and I didn't think I'd enjoy it as much as I did. The book is also absolutely hilarious and has one of my favorite characters in a book(shoutout to Gus).I'm currently reading The Count of Monte Cresto and, boy, it's turning out to be quite the epic tale of revenge(no spoilers please!)."
+          "I've been using SlicerVM extensively - which is Firecracker MicroVMs for the regular person (and for the irregular with their platform offering) - to run local 'edge' style workloads locally and securly. Agents, local dev CI, etc. It slotted in and replaced my proxmox vm orchestrator, and now I have secure and and fast vms on my laptop wherever I go. It also supports dockerfile style builds if you're wanting a security upgrade from containers (which, you should if you're using agents).Honestly, while I see firecracker replacing docker on the horizon I don't see firecracker replacing v8 isolates for most edge function execution. Firstly, this article's scenario is a bit unusual in that they were using someone else's isolates - so adding on a few hops; secondly isolates running JS/TS can be statically analyzed quite well, and at scale looking historically for issues and exploits, in many edge compute scenarios this is quite desirable. MicroVMs can have an awful lot more flexibility so to get the same benefit you have to really lock down what is available - the trade-offs for mid-size companies seems to benefit isolates. Obviously netlify is more than big enough and relies heavily on this that it leans in their favour.",
+          "Alex from Unikraft here! Happy to answer any questions about the microVM part of the story from our side.We also did a couple of technical write ups if you're interested:- https://unikraft.com/blog/netlify-edge-functions- https://unikraft.com/customer-stories/edge-functions-netlify",
+          "> In the past, requests went out to a hosted execution service. Today, they run on MicroVMs inside our own edge network — roughly 5x faster at the median.So, the execution itself might now be slower as far as we know, they just eliminated some networking from the mix? Misleading."
         ]
       }
     },
     {
-      "id": "49899090",
-      "title": "U.S. postal inspectors shut down website selling counterfeit postage labels",
-      "url": "https://postalemployeenetwork.com/news/2026/09/26/u-s-postal-inspectors-shut-down-website-selling-millions-of-counterfeit-postage-labels/",
+      "id": "49913350",
+      "title": "Halfspace experimental IDE for solid modeling with distance fields",
+      "url": "https://www.mattkeeter.com/projects/halfspace/",
       "source": "Hacker News",
-      "published_at": "2026-09-29T19:30:17+00:00",
-      "summary": "U.S. postal inspectors shut down website selling counterfeit postage labels",
-      "score": 201,
-      "comments": 119,
-      "discussion_url": "https://news.ycombinator.com/item?id=49899090",
+      "published_at": "2026-09-30T19:44:37+00:00",
+      "summary": "Halfspace experimental IDE for solid modeling with distance fields",
+      "score": 83,
+      "comments": 7,
+      "discussion_url": "https://news.ycombinator.com/item?id=49913350",
       "extra": {
         "top_comments": [
-          "I am pretty sure I bought from a seller using this (or something similar) on eBay. It sent me down a rabbit hole of reading about this type of scam that exploded earlier this year: https://www.uspsoig.gov/sites/default/files/reports/2026-04/...Here's how it went down:https://www.ebay.com/fdbk/feedback_profile/theperfectpartNote that they’ve sold so much that even 1k neutral ratings are barely registering - they have “100% positive feedback”I bought a cheap tool from this seller on ebay. Tracking number was provided showing my town as the destination. About four days later, I get an unprompted ebay message from the seller: “I monitor all my shipments and sometimes there are problems so I’m proactively sending you a new one, here’s a new tracking number.”The original tracking number showed a message I’d never seen before “Item seized - counterfeit postage”. The new tracking number showed postage that had been bought back in January, but never entered the mailstream. Huh. I suspect that buys them time while they re-ship.I did eventually get the item after another tracking number was provided.My suspicion is that the seller uses counterfit USPS postage on 'x' number of packages to juice their margins. If you look at the neutral reviews, you can see a pattern — slow postage, lost package, had to replace, blah blah. Look at the positives — rave reviews at how fast things are arriving. Probably because the seller is “paying” for higher end postage via scamming the USPS.And only when they get caught by USPS do they need to re-ship an item. They must get away with it enough to make it worthwhile",
-          "The USPIS (mentioned in the article) once came to the federal prison I was at to tell inmates that using stamps as currency was illegal.There are flats and there are books. Flats are a sheet of 20 Forever stamps that you would get at a drug store. A book is 20 stamps, used or not used.Generally there are different values associated with flats because you can get cash for them on the streets. You can get them to the streets via an officer if you're ballsy. Or you can just find discreet ways to mail them.The value of a flat where I was at was about $13-$14 depending on your vendor. A book was generally worth $10. If you were buying bulk (and depending on who exactly you were buying from), that number could go down to $12 and $7 respectively.If you were buying from someone that was running a ticket (sports gambling) they had more incentive to get rid of their stamps. Some people had tens of thousands of dollars of stamps in their property and they wanted to convert them.If you were buying from someone running a store (think \"buy and resell commissary\"), their business model was dependent on flipping books of stamps in exchange for more commissary. They could sell a ramen for 3 stamps ($1.50) when it was worth just 50 cents.Flats were easier to hide because they are, well, flat.",
-          "30 years ago a teacher told me of an art student applying to a school. The student included two art pieces for the submission but was meant to provide three. A note suggested that they look at the stamp for the third submission. It was a hand drawn counterfeit that was good enough to get it delivered.Or so the story goes."
+          "Note that Matt Keeter has been at this for quite a while now, very generously sharing his efforts and research:https://www.mattkeeter.com/research/In particular, his thesis is well-worth reading: https://www.mattkeeter.com/research/thesis.pdf",
+          "> My favorite project along those lines is Kartik Agaram's Mu[3], which wraps emulation, tracing, and time-travel debugging around a subset of x86 assembly language.From https://akkartik.name/code : Mu[1], a safe, hackable computing stack that builds up from raw machine code (guided tour[2]; paper '20[3]; talk '20[4]; sample app[5])[1] https://github.com/akkartik/mu [2] tour https://github.com/akkartik/mu/blob/main/tutorial/index.md [3] paper https://akkartik.name/akkartik-convivial-20200315.pdf [4] talk https://vimeo.com/416363066 [5] sample app https://archive.org/details/akkartik-mu-2021-08-15",
+          "I'm waiting for Halfspace 3."
         ]
       }
     },
     {
-      "id": "49898778",
-      "title": "Show HN: Real-time Solar System with 526k asteroids and all tracked satellites",
-      "url": "https://space.bl2.net/",
+      "id": "49915126",
+      "title": "56k.rip – the 1996 dial-up internet experience",
+      "url": "https://56k.rip/",
       "source": "Hacker News",
-      "published_at": "2026-09-29T19:08:01+00:00",
-      "summary": "Show HN: Real-time Solar System with 526k asteroids and all tracked satellites",
-      "score": 178,
-      "comments": 39,
-      "discussion_url": "https://news.ycombinator.com/item?id=49898778",
+      "published_at": "2026-09-30T22:08:50+00:00",
+      "summary": "56k.rip – the 1996 dial-up internet experience",
+      "score": 79,
+      "comments": 49,
+      "discussion_url": "https://news.ycombinator.com/item?id=49915126",
       "extra": {
         "top_comments": [
-          "Oh man, it seems like my asteroid (Minor Planet 31689 - Sebmellen [0]) is missing.[0]: https://www.wikidata.org/wiki/Q6711174[1]: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=20031...",
-          "Author here. It's a browser view of the Solar System at real scale, with its current state, plus the objects around Earth from the CelesTrak catalog.Data: CelesTrak TLEs (SGP4), asteroids and comets from JPL SBDB, spacecraft positions from JPL Horizons. Updated daily.Rendering is WebGL2, orbit propagation runs in web workers. The asteroid set (~30 MB) loads in the background.The time slider runs forwards and backwards; satellites appear and disappear by launch date.",
-          "Just spent a little time following Europa Clipper, it will fly by Earth very soon! If you zoom out from Earth, it's already pretty close. This will be its second gravity assist after Mars. Very cool site!"
+          "https://news.ycombinator.com/item?id=49886195",
+          "This is very similar to a project I'm working on called Sim95 [1]. It has an entire networking stack and visual basic style language. You can host your own websites, chat servers, anything you want, and everything runs over a virtual network (websocket that passes through a relay).It has all the warts of the early internet era: you can program a virus, get people to download it, delete their documents, etc., but it also has a lot of the charm, build a website, chat with strangers, enjoy the lack of facebook (for now until someone builds it).1: https://sim95.kippy.io/",
+          "Lovely. 16MB of RAM in the 90s? That's luxury. And that dial-up sound always takes me back to happier times. Not unlike normal people's childhood songs."
         ]
       }
     }
