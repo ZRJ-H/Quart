@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-10-01T11:00:27.096373+08:00",
+  "cached_at": "2026-10-01T14:17:30.946650+08:00",
   "articles": [
     {
       "id": "49913571",
@@ -8,8 +8,8 @@
       "source": "Hacker News",
       "published_at": "2026-09-30T20:04:37+00:00",
       "summary": "See also: Gemini 4 Argon (High): Intelligence, Performance and Price Analysis - https://news.ycombinator.com/item?id=49914236",
-      "score": 1054,
-      "comments": 706,
+      "score": 1241,
+      "comments": 795,
       "discussion_url": "https://news.ycombinator.com/item?id=49913571",
       "extra": {
         "top_comments": [
@@ -20,14 +20,32 @@
       }
     },
     {
+      "id": "49909583",
+      "title": "A brief history of the Bloomberg terminal",
+      "url": "https://spectrum.ieee.org/bloomberg-terminal",
+      "source": "Hacker News",
+      "published_at": "2026-09-30T14:34:07+00:00",
+      "summary": "A brief history of the Bloomberg terminal",
+      "score": 259,
+      "comments": 109,
+      "discussion_url": "https://news.ycombinator.com/item?id=49909583",
+      "extra": {
+        "top_comments": [
+          "Starting October 14, 2026, Bloomberg is requiring a physical Bloomberg Keyboard for login and access on all Bloomberg Open Terminal workstations.The harder Bloomberg tries to control and restrict its users, the more users will just find alternatives or even build their own proprietary systems. It thinks it can be Apple in the financial data world, but I highly doubt it.",
+          "I have the highest regard for these terse, but information-dense displays that enable humans to quickly grasp all information they need to do their jobs, and nothing more. This is also something avionics provide - a modern cockpit displays are a work of art in layering needed information for what is happening at the time, both the dense PFD and the much specific that communicate aircraft status.",
+          "The modern Terminal is based on a private fork of Chromium to give it the look and feel of a VT100 terminal, and integrate their private networking and security technologies. The BBT predates HTTP, and backwards compatibility is hugely important to the company- they have a museum where a second-generation Terminal from ~1985 shows the current news, because they are so dedicated to backwards compatibility that they still can support the 1985 hardware."
+        ]
+      }
+    },
+    {
       "id": "49913192",
       "title": "EDG C++ front-end goes public",
       "url": "https://edgcpp.org/#transition",
       "source": "Hacker News",
       "published_at": "2026-09-30T19:26:37+00:00",
       "summary": "https://github.com/edgcpp/compiler",
-      "score": 160,
-      "comments": 77,
+      "score": 195,
+      "comments": 89,
       "discussion_url": "https://news.ycombinator.com/item?id=49913192",
       "extra": {
         "top_comments": [
@@ -44,13 +62,32 @@
       "source": "Hacker News",
       "published_at": "2026-09-30T22:03:04+00:00",
       "summary": "The top secret URSALA, RAQUEL, and FARRAH satellites (2025)",
-      "score": 146,
-      "comments": 58,
+      "score": 188,
+      "comments": 83,
       "discussion_url": "https://news.ycombinator.com/item?id=49915082",
       "extra": {
         "top_comments": [
           "The incredible and futuristic technologies the US managed to deploy decades before the competition reminds me of the story of how the NRO gifted NASA a couple of their old decommissioned satellites in 2012 and they turned out to be basically upgraded Hubble telescopes pointed at earth. The US from the 90s to the 2000s had multiple Hubble-level telescopes just for spying while NASA was fighting for scraps to study the entire cosmos.",
-          "Relevance of this information:https://www.dailymail.com/sciencetech/article-16172545/us-sp..."
+          "A while ago, NRO put on-line a bunch of declassified documents [1], including their internal books about the history of satellite reconnaissance. But it was all in one unsorted pile, often scans of barely legible pages. I think this was the original source of some of the documents shown in this article.Although one could randomly stumble on some interesting anecdote here and there in the NRO archive, overall that collection was not made to be easy to navigate, and one would have to be very patient to sift through it thoroughly. Maybe the situation is better now.[1] https://www.nro.gov/foia-home/foia-declassified-nro-programs...",
+          "I’m not going to be alive in 40 years, but I would like to have known what classified information will be released in 2066 dealing with satellites in orbit now?"
+        ]
+      }
+    },
+    {
+      "id": "49909056",
+      "title": "What TLA+ can and can't check",
+      "url": "https://buttondown.com/hillelwayne/archive/what-tla-can-and-cant-check/",
+      "source": "Hacker News",
+      "published_at": "2026-09-30T13:57:06+00:00",
+      "summary": "What TLA+ can and can't check",
+      "score": 175,
+      "comments": 36,
+      "discussion_url": "https://news.ycombinator.com/item?id=49909056",
+      "extra": {
+        "top_comments": [
+          "While both TLA+ and ADA/Spark might be necessary, I haven’t noticed much mention of ADA/SPARK here, which kind of surprised me that they are not used in conjunction as frequent as I might have thought.For some critical software we developed, we used TLA+ for high-level formal specification. As mentioned earlier, transitioning the actual implementation to another language can be challenging, especially if partial hardware bootstrapping is required. We ended up implementing the high-level specification created in TLA+ using ADA/Spark, which minimized our exposure to buffer and assertion failures. However, optimizing the code to meet performance thresholds was at times frustrating and time-consuming, like any low-level implementation with a new tool/language for us.I’m curious about any new tools or workflows for leveraging TLA+ high-level specification implementation into other languages like C and Rust. What approaches are people taking once the formalized specification is verified in TLA+ to complete the implementation?I might be out of the loop, but using TLA+ spec and translate then to other languages hasn’t been a successful use case for LLMs. While they can be helpful, a significant effort is still required to ensure that implementations accurately adhere to the specifications.",
+          "I discovered Quint[0] due to this comment[1] on HN. Quint is \"an executable specification language [which works in JavaScript] with delightful tooling based on the temporal logic of actions (TLA)\". I think it is awesome and anybody interested in TLA+ should check it out.[0]: https://github.com/quint-co/quint[1]: https://news.ycombinator.com/item?id=49865720",
+          "I love this. This is great to read if you are trying to use TLA+ for something.In a different vein, another thing TLA+ isn't great at is modeling atomics and in particular weak-memory semantics or anything that's not sequentially consistent. If you translate your algorithm to pcal, it will run as if it was sequentially consistent. If you need to model non-sequential-consistency, then that needs to be spelled out with explicit logic to TLA+, which is probably too complicated and error-prone to do by hand. The C/C++/Rust memory models permit a lot of wacky stuff. I imagine you need to add read caches and writeback buffers for each variable with cache-flushing instructions at appropriate points, but maybe there is a more elegant way to do it.If you use rust, miri and loom both have analyzers that can check some non-sequentially-consistent behavior (and loom doesn't actually implement sequential-consistency at all)."
         ]
       }
     },
@@ -61,32 +98,14 @@
       "source": "Hacker News",
       "published_at": "2026-09-30T19:04:50+00:00",
       "summary": "Surprisingly complex waves reveal the brain's inner workings",
-      "score": 132,
-      "comments": 42,
+      "score": 161,
+      "comments": 53,
       "discussion_url": "https://news.ycombinator.com/item?id=49912955",
       "extra": {
         "top_comments": [
           "For context, the debate in the field has been whether these are epiphenomena of the actual neuronal activity, or a meaningful driver of further activity.I don’t think these studies quite rest the case. As Buzsaki comments in the article, the action is in the cells to create these waves. Do the waves themselves get measured and impact what happens next? The issue at hand is: synaptic currents are stronger and we know neurons respond to them. The wave behavior is in the extracellular fluid as well, and that part we have evidence neurons don’t respond much to.That said, thing the article doesn’t talk about is astrocytes. Especially in the cortex, most synapses are tripartite. There’s an astrocytic end foot that sheathes the synapse and regulates how much of the bulk extracellular space has access to the synapse. And one astrocyte can touch thousands of synapses and in humans, hundreds of thousands. They also form a syncitium, through gap junctions/electrical synapses.Do astrocytes respond to the extracellular wave behavior, which potentially changes the extent and behavior of the syncitium, and thus impact the neurons they touch?That’s still an open question but that’s what I’d be interested to find out more about.",
-          "Bit of a sensationalist title - EEG/iEEG measurements have led to worthwhile clinical outcomes but also are an avenue for bunk pseudosccience so it pays to be careful whenever you see the words 'brain waves' paired with some large claim.More accurate, much less sexy title: Intracranial Recordings Uncover Spiral and Concentric Brain Waves During Memory Tasks\" (study completed only on small cohorts of epilepsy patients performing constrained memory tasks).No inner workings revealed or laid bare, just another piece of evidence contributing to a small part of the debate in cortical electrophysiological studies on whether or not some data measures can be discarded as the downstream, messy noise of the neurons firing or actual, high-fidelity signals of activity",
-          "My hypothesis:Sentience / consciousness is “hosted by” or “seated in” structured EM fields. Neurons are just the mechanism.I’ve not yet thought of a way to falsify this hypothesis, but I continue to think there’s something to this framing.One reason I like it is that it doesn’t completely succumb to total dualism. Also it doesn’t say WHY this would be the case, or HOW. It just says “that thing you call experience? That’s a special kind of structured EM field configuration.”"
-        ]
-      }
-    },
-    {
-      "id": "49911995",
-      "title": "Launch HN: Magnitude (YC S25) – Self-optimizing inference engine for agents",
-      "url": "https://github.com/magnitudedev/magnitude",
-      "source": "Hacker News",
-      "published_at": "2026-09-30T17:37:40+00:00",
-      "summary": "Hey HN, Anders and Tom here. We're building Magnitude, an inference engine for agents that optimizes itself to run as fast as possible on your hardware. It works on Mac, Linux, and Windows on any hardware and is up to 2x faster than llama.cpp.We're both software engineers and previously built an open source browser agent to 4k+ GH stars and 100k+ downloads. We increasingly wanted to run it on local models, but found that no inference engine worked for our use case.Inference engines today all make a performance tradeoff. They are either:- Built for batched inference on datacenter hardware at the cost of single-session performance (vLLM, SGLang) - Designed for broad compatibility instead of optimizing for specific hardware (llama.cpp, Ollama) - Specialized for specific hardware or models but lacking engine completeness (oMLX, ds4)Plus none of them are designed for running agents locally. Sessions are long, several often run at once, and you still want to use your computer for other things.Magnitude is built for maximum performance on your hardware and running local agents:- On-device compilation and tuning: Kernels are written with flexible parameters that are tuned on your actual device before the model runs. This gives you broad hardware compatibility with the same performance ceiling as hardware-specific kernels.- Focus on best architectures: We write our tunable, highly efficient kernels for the most popular open-weights families. This allows us to achieve and surpass the performance of hardware or model specialized engines, without forcing ourselves to over-generalize at the cost of performance.- Dynamic memory allocation: Magnitude reserves only enough memory up front to hold model weights. As your agent sessions grow, the memory heap dynamically increases, and frees itself when agents stop. Your hardware can still be used for other stuff while agents run.- Hybrid paged attention: We borrow the best ideas from engines like SGLang to allow concurrent sessions to share prefix caches, but optimize placement for memory-adjacency so single-session performance doesn't suffer.Magnitude is fully open source (Apache 2.0). We built it in Rust, including a custom GPU kernel runtime and autotuner. We take inspiration from the best innovations in inference from academics (e.g. FlashAttention, FlashInfer, TurboQuant) as well as other engines (e.g. SGLang radix attention) to reach the performance ceiling.Benchmarked against llama.cpp with Qwen 3.6 35B A3B (4 bit), 64k context, no speculative decoding:Metal (Mac M4 Pro 48 GB) - 92% faster decode (30 tok/s → 57 tok/s) - 9% faster prefill (466 tok/s → 507 tok/s) - 28% less per-agent memory usageCUDA (DGX Spark) - 19% faster decode (49 tok/s → 58 tok/s) - 23% faster prefill (2,033 tok/s → 2,507 tok/s) - 27% less per-agent memory usageMagnitude ships as a desktop app that you can easily connect with whatever agents you already use (Pi, OpenCode, Hermes, Codex, and more). It automatically runs models on demand when these agents actually need them, and shuts them down after inactivity. Here's what it looks like: https://www.youtube.com/watch?v=0qE8BWEZu7oWe're excited to push Magnitude further to let you run bigger models on the same hardware while continuing to improve performance. Our plans include:- Expert streaming: store experts on RAM or disk and load them just-in-time. This lets you run models bigger than what otherwise would fit on your GPU.- Kernel compiler: our current kernels tune a few parameters to fit your hardware. We can take this further with a fully custom compiler that automatically chooses how to fuse kernels and which implementations to use, to make it fit to your hardware even better.- Multi-device utilization: Make the best possible use of all hardware on a system (CPU, GPUs, RAM, disk) by detecting these and automatically solving for the best model layout.We'd love for more people to try it out and give us feedback. Feel free to comment here, we'll be around all day!",
-      "score": 130,
-      "comments": 59,
-      "discussion_url": "https://news.ycombinator.com/item?id=49911995",
-      "extra": {
-        "top_comments": [
-          "On my local inference box I have a perpetual codex thread open in my llama.cpp checkout that I periodically ask to take a look at currently pending llama.cpp PRs, do some research on latest MTP, Dflash and other prediction or attention optimizations, do research on the latest model quants and finetunes, take a look at localLlama Reddit threads and just do essentially a sweep of the frontier.Then it rebuilds latest llama.cpp, grabs the PRs it finds relevant to test against, and then it performs a benchmark and finalizes the upgrade and verifies what model, variant, or even a separate finetune that we should be running.Occasionally, it performs its own optimizations and commits, which then gets superseded by pull requests and merged code that essentially validates the model's own optimization directionality.",
-          "How accurate are speed estimates in the UI? I'm asking because for Qwen 3.8 (Q8) the speed numbers cited in the UI look quite poor: Estimated speed on your machine Context tokens Tokens / sec 25 000 17 50 000 16 75 000 16 262 144 12 262K number is ok, but for lower context sizes (<128K) it's about 2x slower than the numbers I'm getting from real mtplx sessions for qwen3.8 q8 (mac m5 max).Is it a lack of optimizations, or incorrect numbers, or a benchmark artifact (e.g. something which is harder for spec decoding than usual agentic sessions)?",
-          "This seems to be a good idea. However, beating llama.cpp on speed is a low bar :)I found it to be a good baseline, but at least on Mac there was always something way faster, and/or with better memory requirements - like you said, ds4, omlx, mtplx, etc. It seems if you use local LLMs for real, there is very little reason not to use one of the more optimized engines.3 main failure modes I observed in the engines:* Not using best available spec decoding* Using too much VRAM for KV cache (e.g. KV cache used to take almost nothing in ds4, but huge amount of VRAM on unsloth/llama.cpp for deepseek models)* Degraded performance at large context sizes - benchmarks at 4K or 32K are awesome, but at realistic 100-200K it's slower than some stupid baseline"
+          "> If you’re paying attention to what you are looking at, signals are traveling backward from receptors in your eyes to the visual cortex, and then forward into the rest of the brain via the wave to form a memory.has someone used muse2 to measure there brain waves are indeed some how different on days/hours when tehy are focused?Let me explain. I have ADHD, I am on medication. I read an alternate hypothesis to stimulant based treatment of how attention networks don't necessarily change with intake of traditional stimulants[1]; this is also something i have experienced.Personally, medication helps me keep certain negative thoughts and resistance to doing things, but it does not help with longer arc change in executive functioning like planning or strategy. It just removes some barriers to focus on _a_ task, whatever is in front of me and I can do it. The only thing that really worked for executive function improvemement is meditation for 45 mins a day. I believe that also puts the brain waves in a different state. Which is why I've been interested in brain activity tracking and why this article is interesting too.[1] https://www.nytimes.com/2026/09/29/science/adhd-attention-mo...",
+          "Bit of a sensationalist title - EEG/iEEG measurements have led to worthwhile clinical outcomes but also are an avenue for bunk pseudosccience so it pays to be careful whenever you see the words 'brain waves' paired with some large claim.More accurate, much less sexy title: Intracranial Recordings Uncover Spiral and Concentric Brain Waves During Memory Tasks\" (study completed only on small cohorts of epilepsy patients performing constrained memory tasks).No inner workings revealed or laid bare, just another piece of evidence contributing to a small part of the debate in cortical electrophysiological studies on whether or not some data measures can be discarded as the downstream, messy noise of the neurons firing or actual, high-fidelity signals of activity"
         ]
       }
     },
@@ -97,8 +116,8 @@
       "source": "Hacker News",
       "published_at": "2026-09-30T18:17:45+00:00",
       "summary": "5x faster Edge Functions: V8 isolates to Firecracker MicroVMs",
-      "score": 123,
-      "comments": 50,
+      "score": 150,
+      "comments": 55,
       "discussion_url": "https://news.ycombinator.com/item?id=49912444",
       "extra": {
         "top_comments": [
@@ -109,38 +128,20 @@
       }
     },
     {
-      "id": "49913350",
-      "title": "Halfspace experimental IDE for solid modeling with distance fields",
-      "url": "https://www.mattkeeter.com/projects/halfspace/",
+      "id": "49911995",
+      "title": "Launch HN: Magnitude (YC S25) – Self-optimizing inference engine for agents",
+      "url": "https://github.com/magnitudedev/magnitude",
       "source": "Hacker News",
-      "published_at": "2026-09-30T19:44:37+00:00",
-      "summary": "Halfspace experimental IDE for solid modeling with distance fields",
-      "score": 83,
-      "comments": 7,
-      "discussion_url": "https://news.ycombinator.com/item?id=49913350",
+      "published_at": "2026-09-30T17:37:40+00:00",
+      "summary": "Hey HN, Anders and Tom here. We're building Magnitude, an inference engine for agents that optimizes itself to run as fast as possible on your hardware. It works on Mac, Linux, and Windows on any hardware and is up to 2x faster than llama.cpp.We're both software engineers and previously built an open source browser agent to 4k+ GH stars and 100k+ downloads. We increasingly wanted to run it on local models, but found that no inference engine worked for our use case.Inference engines today all make a performance tradeoff. They are either:- Built for batched inference on datacenter hardware at the cost of single-session performance (vLLM, SGLang) - Designed for broad compatibility instead of optimizing for specific hardware (llama.cpp, Ollama) - Specialized for specific hardware or models but lacking engine completeness (oMLX, ds4)Plus none of them are designed for running agents locally. Sessions are long, several often run at once, and you still want to use your computer for other things.Magnitude is built for maximum performance on your hardware and running local agents:- On-device compilation and tuning: Kernels are written with flexible parameters that are tuned on your actual device before the model runs. This gives you broad hardware compatibility with the same performance ceiling as hardware-specific kernels.- Focus on best architectures: We write our tunable, highly efficient kernels for the most popular open-weights families. This allows us to achieve and surpass the performance of hardware or model specialized engines, without forcing ourselves to over-generalize at the cost of performance.- Dynamic memory allocation: Magnitude reserves only enough memory up front to hold model weights. As your agent sessions grow, the memory heap dynamically increases, and frees itself when agents stop. Your hardware can still be used for other stuff while agents run.- Hybrid paged attention: We borrow the best ideas from engines like SGLang to allow concurrent sessions to share prefix caches, but optimize placement for memory-adjacency so single-session performance doesn't suffer.Magnitude is fully open source (Apache 2.0). We built it in Rust, including a custom GPU kernel runtime and autotuner. We take inspiration from the best innovations in inference from academics (e.g. FlashAttention, FlashInfer, TurboQuant) as well as other engines (e.g. SGLang radix attention) to reach the performance ceiling.Benchmarked against llama.cpp with Qwen 3.6 35B A3B (4 bit), 64k context, no speculative decoding:Metal (Mac M4 Pro 48 GB) - 92% faster decode (30 tok/s → 57 tok/s) - 9% faster prefill (466 tok/s → 507 tok/s) - 28% less per-agent memory usageCUDA (DGX Spark) - 19% faster decode (49 tok/s → 58 tok/s) - 23% faster prefill (2,033 tok/s → 2,507 tok/s) - 27% less per-agent memory usageMagnitude ships as a desktop app that you can easily connect with whatever agents you already use (Pi, OpenCode, Hermes, Codex, and more). It automatically runs models on demand when these agents actually need them, and shuts them down after inactivity. Here's what it looks like: https://www.youtube.com/watch?v=0qE8BWEZu7oWe're excited to push Magnitude further to let you run bigger models on the same hardware while continuing to improve performance. Our plans include:- Expert streaming: store experts on RAM or disk and load them just-in-time. This lets you run models bigger than what otherwise would fit on your GPU.- Kernel compiler: our current kernels tune a few parameters to fit your hardware. We can take this further with a fully custom compiler that automatically chooses how to fuse kernels and which implementations to use, to make it fit to your hardware even better.- Multi-device utilization: Make the best possible use of all hardware on a system (CPU, GPUs, RAM, disk) by detecting these and automatically solving for the best model layout.We'd love for more people to try it out and give us feedback. Feel free to comment here, we'll be around all day!",
+      "score": 144,
+      "comments": 71,
+      "discussion_url": "https://news.ycombinator.com/item?id=49911995",
       "extra": {
         "top_comments": [
-          "Note that Matt Keeter has been at this for quite a while now, very generously sharing his efforts and research:https://www.mattkeeter.com/research/In particular, his thesis is well-worth reading: https://www.mattkeeter.com/research/thesis.pdf",
-          "> My favorite project along those lines is Kartik Agaram's Mu[3], which wraps emulation, tracing, and time-travel debugging around a subset of x86 assembly language.From https://akkartik.name/code : Mu[1], a safe, hackable computing stack that builds up from raw machine code (guided tour[2]; paper '20[3]; talk '20[4]; sample app[5])[1] https://github.com/akkartik/mu [2] tour https://github.com/akkartik/mu/blob/main/tutorial/index.md [3] paper https://akkartik.name/akkartik-convivial-20200315.pdf [4] talk https://vimeo.com/416363066 [5] sample app https://archive.org/details/akkartik-mu-2021-08-15",
-          "I'm waiting for Halfspace 3."
-        ]
-      }
-    },
-    {
-      "id": "49915126",
-      "title": "56k.rip – the 1996 dial-up internet experience",
-      "url": "https://56k.rip/",
-      "source": "Hacker News",
-      "published_at": "2026-09-30T22:08:50+00:00",
-      "summary": "56k.rip – the 1996 dial-up internet experience",
-      "score": 79,
-      "comments": 49,
-      "discussion_url": "https://news.ycombinator.com/item?id=49915126",
-      "extra": {
-        "top_comments": [
-          "https://news.ycombinator.com/item?id=49886195",
-          "This is very similar to a project I'm working on called Sim95 [1]. It has an entire networking stack and visual basic style language. You can host your own websites, chat servers, anything you want, and everything runs over a virtual network (websocket that passes through a relay).It has all the warts of the early internet era: you can program a virus, get people to download it, delete their documents, etc., but it also has a lot of the charm, build a website, chat with strangers, enjoy the lack of facebook (for now until someone builds it).1: https://sim95.kippy.io/",
-          "Lovely. 16MB of RAM in the 90s? That's luxury. And that dial-up sound always takes me back to happier times. Not unlike normal people's childhood songs."
+          "Self-optimizing inference is one of those problems where marginal gains compound—small improvements in batching, KV-cache reuse, and routing across thousands of requests add up fast.The hard part isn't the optimization itself—it's measuring whether a change actually helps across the long tail of request patterns. Most inference benchmarks show huge gains on popular workloads, but production traffic has a fat tail where naive optimizations hurt latency.Interested in how you handle regression detection when the optimizer changes between requests.",
+          "On a Mac the baseline I'd want is MLX, not llama.cpp. llama.cpp isn't the fast path on Apple Silicon for most models people run locally, so a speedup over llama.cpp could still be slower than mlx_lm. Do you have that number?Second, more important for agents: decode speed is rarely what hurts. It's resending the same system prompt plus tool schemas every turn. Does self-optimizing cover prefix cache reuse across requests, or is it kernel and layout tuning only?And is the endpoint OpenAI-compatible? My runtime already talks to llama.cpp and LM Studio through that wrapper, so drop-in is the difference between trying it tonight and not.",
+          "On my local inference box I have a perpetual codex thread open in my llama.cpp checkout that I periodically ask to take a look at currently pending llama.cpp PRs, do some research on latest MTP, Dflash and other prediction or attention optimizations, do research on the latest model quants and finetunes, take a look at localLlama Reddit threads and just do essentially a sweep of the frontier.Then it rebuilds latest llama.cpp, grabs the PRs it finds relevant to test against, and then it performs a benchmark and finalizes the upgrade and verifies what model, variant, or even a separate finetune that we should be running.Occasionally, it performs its own optimizations and commits, which then gets superseded by pull requests and merged code that essentially validates the model's own optimization directionality."
         ]
       }
     }
