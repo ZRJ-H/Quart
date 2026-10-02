@@ -1,147 +1,146 @@
 {
-  "cached_at": "2026-10-01T14:17:30.946650+08:00",
+  "cached_at": "2026-10-02T11:00:35.440233+08:00",
   "articles": [
     {
-      "id": "49913571",
-      "title": "Gemini 4 Argon",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+      "id": "49926069",
+      "title": "Pi 1.0",
+      "url": "https://earendil.com/posts/pi-1-0/",
       "source": "Hacker News",
-      "published_at": "2026-09-30T20:04:37+00:00",
-      "summary": "See also: Gemini 4 Argon (High): Intelligence, Performance and Price Analysis - https://news.ycombinator.com/item?id=49914236",
-      "score": 1241,
-      "comments": 795,
-      "discussion_url": "https://news.ycombinator.com/item?id=49913571",
+      "published_at": "2026-10-01T19:33:05+00:00",
+      "summary": "Related: Pi Durable - https://news.ycombinator.com/item?id=49925969",
+      "score": 820,
+      "comments": 286,
+      "discussion_url": "https://news.ycombinator.com/item?id=49926069",
       "extra": {
         "top_comments": [
-          "Ten days ago I had an experience with Gemini 3.8 flash that made me wonder if I was being routed to a different model under test. I was trying to use rocm with llama.cpp on my 128gb Strix Halo but could only get it to run Vulkan. I pasted the error message into agy and it proceeded to attach GDB to my GPU driver, reverse-engineer the kernel queue ioctl interface, and author an LD_PRELOAD C shim to get ROCm llama.cpp working on my Strix Halo. My jaw was hanging open the whole time.Edit to add the fix: https://gist.github.com/birep/6f2c8d490c7a29820997d57bd654c3...",
-          "The important take away here: the leapfrogging we’ve seen this year doesn’t seem to be a temporary thing. The famous theory of Dario Amodei was that AI was this winner-takes-all field where the first team to get a head start would never cede ground back. The term he liked to use was, “concentrating”. This is yet another datapoint that he was wrong about that. AI seems more distributed amongst neoclouds and traditional hyperscalers, FAANG and startups, GPUs and ASICs than it did this time a year ago.Nobody has a moat.",
-          "> We’ll continue to gather feedback from early testers as we iterate on guardrails before making Argon available to developers, enterprises, and consumers as soon as possible.Gemini not beating the \"can't release a model\" allegations"
+          "Love pi. I tried to run some local models and pi was the only one that actually worked decently because it didn’t have a gargantuan system prompt that would take minutes to prefill on my scrawny ass laptop.Been running it almost barebones vanilla for a couple of months. Just a bunch of basic extensions and some skills.Now, if only they could fix the very annoying bug of the history jumping back at the beginning if I am not a the end while the model is reasoning that would great.",
+          "I wonder how Tolkien would’ve thought about the use of LotR names being used by all these AI and tech companies.. especially since they all seem to use the names of things that were corrupted by darkness.",
+          "It's so great to see now that the folks behind Pi also try to pivot away from the idea that Pi is more than a \"coding\" agent. Its minimalism, and tool call primitives really lends itself to be a general purpose agent for your OS that you gradually extend on demand for your specific use case.Since January I use Pi professionally as well as personally and I can only recommend to start small and grow your harness over time. For example, for an agent in production it was so helpful for me to use Pi in interactive mode via tmux to get a feel of the agentic flow, tool calls and reasoning traces for a certain use case while only the stylized responses are rendered in Telegram via an extension to the user. As a Developer, I have full technical observability and control while providing and incrementally improving a service to a user at the same time.Excited how Pi Durable will fit in and can support more. Congrats and thank you!"
         ]
       }
     },
     {
-      "id": "49909583",
-      "title": "A brief history of the Bloomberg terminal",
-      "url": "https://spectrum.ieee.org/bloomberg-terminal",
+      "id": "49925969",
+      "title": "Pi Durable",
+      "url": "https://earendil.com/posts/pi-durable/",
       "source": "Hacker News",
-      "published_at": "2026-09-30T14:34:07+00:00",
-      "summary": "A brief history of the Bloomberg terminal",
-      "score": 259,
-      "comments": 109,
-      "discussion_url": "https://news.ycombinator.com/item?id=49909583",
+      "published_at": "2026-10-01T19:24:08+00:00",
+      "summary": "Related: Pi 1.0 - https://news.ycombinator.com/item?id=49926069 - Oct 2026 (184 comments)",
+      "score": 250,
+      "comments": 27,
+      "discussion_url": "https://news.ycombinator.com/item?id=49925969",
       "extra": {
         "top_comments": [
-          "Starting October 14, 2026, Bloomberg is requiring a physical Bloomberg Keyboard for login and access on all Bloomberg Open Terminal workstations.The harder Bloomberg tries to control and restrict its users, the more users will just find alternatives or even build their own proprietary systems. It thinks it can be Apple in the financial data world, but I highly doubt it.",
-          "I have the highest regard for these terse, but information-dense displays that enable humans to quickly grasp all information they need to do their jobs, and nothing more. This is also something avionics provide - a modern cockpit displays are a work of art in layering needed information for what is happening at the time, both the dense PFD and the much specific that communicate aircraft status.",
-          "The modern Terminal is based on a private fork of Chromium to give it the look and feel of a VT100 terminal, and integrate their private networking and security technologies. The BBT predates HTTP, and backwards compatibility is hugely important to the company- they have a museum where a second-generation Terminal from ~1985 shows the current news, because they are so dedicated to backwards compatibility that they still can support the 1985 hardware."
+          "Very cool to see Pi build a durable agent harness too. I've been building in this space for quite some time myself [0][1] and it is a super interesting place of innovation. Less hype-y that on-your-machine coding agents, but all major players are building products in this space: LangChain Deep Agents, Vercel Eve, OpenAI Agents API, Anthropic Managed Agents, etc.The main reasons are:1) they are \"durable\", i.e. easier to make long-running in an unattended way, and easier to implement recovery, monitoring, etc2) separating the harness from the compute brings safety and scaling benefits3) easier to make multi-player.[0] https://github.com/smartcomputer-ai/lightspeed[1] https://github.com/smartcomputer-ai/agent-os/",
+          "One decision here which seems like a large break from the original pi is that Durable doesn't support branching conversation trees, it only supports conversation forks with ancestry information. Can anyone speculate (or confirm, if you happen to be Armin or Mario) why this is, and if that is necessary for the durable guarantees? The branching conversations are still an immutable data structure, so I can't see why this would be necessary, but perhaps I'm missing something.",
+          "It's an interesting concept. This is half way to replicating pieces of Gastown. I like the idea, but I'm disappointed these tools still fail to address sandboxing as a first class citizen. I want to be able to declaratively set rules for what sandboxes agents execute in and mark context as tainted when untrusted etc. So far I still don't see any of these harnesses properly addressing this space. I'd be interested in knowing if it can be done through the extensibility of Pi, but since it operates directly on the trust layer, it feels like the type of thing that really needs native support."
         ]
       }
     },
     {
-      "id": "49913192",
-      "title": "EDG C++ front-end goes public",
-      "url": "https://edgcpp.org/#transition",
+      "id": "49924179",
+      "title": "Git 3.0's upcoming SHA-256 default will be a costly mistake",
+      "url": "https://blog.gitbutler.com/git-3-sha-256",
       "source": "Hacker News",
-      "published_at": "2026-09-30T19:26:37+00:00",
-      "summary": "https://github.com/edgcpp/compiler",
-      "score": 195,
-      "comments": 89,
-      "discussion_url": "https://news.ycombinator.com/item?id=49913192",
+      "published_at": "2026-10-01T16:57:03+00:00",
+      "summary": "Git 3.0's upcoming SHA-256 default will be a costly mistake",
+      "score": 236,
+      "comments": 240,
+      "discussion_url": "https://news.ycombinator.com/item?id=49924179",
       "extra": {
         "top_comments": [
-          "What's not mentioned in the announcement (at least based on a quick skim) is that EDG the company is winding down, which is likely the reason why they're open sourcing the front end.https://en.wikipedia.org/wiki/Edison_Design_Group ref 9: https://herbsutter.com/2025/11/10/trip-report-november-2025-...",
-          "Wow. This is big news for C++.For background -- and I am not an expert here -- their C++ frontend is widely known. I first heard of it because Visual C++'s Intellisense uses it, which was notable because VC does not use the msvc frontend for its own completion. I understand it's been either used or evaluated for other frontends in the past too. I worked as PM for one C++ product, and was fortunate to be able to learn a lot from our engineers; we didn't use it, but they thought highly of EDG.It has a very strong reputation for being correct. And as such, I think open sourcing it will be a very beneficial thing for the C++ community.",
-          "It's got history! That's really unusual for moves to open-source; the dates on the earliest commits are in 1990 and they do go forward in time so that's really unusual to have that much history. I bet there's some fun stuff in there."
+          "I think this change is more to do with politics rather than \"security\". Those kind of things where companies or gov, need to be certified with those super secure certificates and can't be using software that uses SHA-1. I don't have proof, but I'm not doubting it either.This is what I saw in one of the mails. > > There are organizations where SHA-1 is blanket banned across the board - regardless of its useAnd also on git 3.0 breaking changes. > > SHA-1 ... recommended against in FIPS 140-2 and similar certificationsSince SHA-1 isn't used for security in git, they should've instead moved to a non-cryptographic hash function such as MurmurHash3 and avoid all these problems, instead of moving to SHA-256 until SHA-256 is broken and need to move to the next cryptographic hash that is now incompatible with previous versions of git repositories.",
+          "I agree with the main thrust of the article, that we should instead trust the transport mechanism rather than the cryptographic properties of SHA1, but because of this I don’t really think switching the default will be a costly mistake. I don’t use full SHA1 hashes right now; I only use the truncated version and I don’t think any user cares about the length of the full hash. As for compatibility with forges, it’s just a small UX problem that should be solvable: don’t let the user choose the format when a repo is created; instead choose it when the first push happens.",
+          "This article is full of mistakes and misleading claims:1) It's claiming SHA1 insecurity is theoretical, while SHAttered from 2017 was specifically a pratical proof of concept. The only reason Git wasn't affected, is because they didn't bother bruteforcing a git-blob prefix.2) It's claiming collision attacks don't matter, only second-preimage attacks do. This is incorrect, collision attacks are enough for code-smuggling problems, when two repositories are on the same git commit (verified by the full commit hash), yet contain different code in their git checkout.3) The Linus quote \"The real security is in distribution\" is arguing that \"git's content-addressed system should not be used to address content\". It's arguing that, in case of curl|sh, you shouldn't use a sha256sum-gate to pin the content to something you've reviewed, you should instead ensure curl is fetching from an https server."
         ]
       }
     },
     {
-      "id": "49915082",
-      "title": "The top secret URSALA, RAQUEL, and FARRAH satellites (2025)",
-      "url": "https://www.thespacereview.com/article/4951/1",
+      "id": "49926536",
+      "title": "SvelteKit 3",
+      "url": "https://svelte.dev/blog/sveltekit-3-is-here",
       "source": "Hacker News",
-      "published_at": "2026-09-30T22:03:04+00:00",
-      "summary": "The top secret URSALA, RAQUEL, and FARRAH satellites (2025)",
-      "score": 188,
-      "comments": 83,
-      "discussion_url": "https://news.ycombinator.com/item?id=49915082",
-      "extra": {
-        "top_comments": [
-          "The incredible and futuristic technologies the US managed to deploy decades before the competition reminds me of the story of how the NRO gifted NASA a couple of their old decommissioned satellites in 2012 and they turned out to be basically upgraded Hubble telescopes pointed at earth. The US from the 90s to the 2000s had multiple Hubble-level telescopes just for spying while NASA was fighting for scraps to study the entire cosmos.",
-          "A while ago, NRO put on-line a bunch of declassified documents [1], including their internal books about the history of satellite reconnaissance. But it was all in one unsorted pile, often scans of barely legible pages. I think this was the original source of some of the documents shown in this article.Although one could randomly stumble on some interesting anecdote here and there in the NRO archive, overall that collection was not made to be easy to navigate, and one would have to be very patient to sift through it thoroughly. Maybe the situation is better now.[1] https://www.nro.gov/foia-home/foia-declassified-nro-programs...",
-          "I’m not going to be alive in 40 years, but I would like to have known what classified information will be released in 2066 dealing with satellites in orbit now?"
-        ]
-      }
-    },
-    {
-      "id": "49909056",
-      "title": "What TLA+ can and can't check",
-      "url": "https://buttondown.com/hillelwayne/archive/what-tla-can-and-cant-check/",
-      "source": "Hacker News",
-      "published_at": "2026-09-30T13:57:06+00:00",
-      "summary": "What TLA+ can and can't check",
-      "score": 175,
-      "comments": 36,
-      "discussion_url": "https://news.ycombinator.com/item?id=49909056",
-      "extra": {
-        "top_comments": [
-          "While both TLA+ and ADA/Spark might be necessary, I haven’t noticed much mention of ADA/SPARK here, which kind of surprised me that they are not used in conjunction as frequent as I might have thought.For some critical software we developed, we used TLA+ for high-level formal specification. As mentioned earlier, transitioning the actual implementation to another language can be challenging, especially if partial hardware bootstrapping is required. We ended up implementing the high-level specification created in TLA+ using ADA/Spark, which minimized our exposure to buffer and assertion failures. However, optimizing the code to meet performance thresholds was at times frustrating and time-consuming, like any low-level implementation with a new tool/language for us.I’m curious about any new tools or workflows for leveraging TLA+ high-level specification implementation into other languages like C and Rust. What approaches are people taking once the formalized specification is verified in TLA+ to complete the implementation?I might be out of the loop, but using TLA+ spec and translate then to other languages hasn’t been a successful use case for LLMs. While they can be helpful, a significant effort is still required to ensure that implementations accurately adhere to the specifications.",
-          "I discovered Quint[0] due to this comment[1] on HN. Quint is \"an executable specification language [which works in JavaScript] with delightful tooling based on the temporal logic of actions (TLA)\". I think it is awesome and anybody interested in TLA+ should check it out.[0]: https://github.com/quint-co/quint[1]: https://news.ycombinator.com/item?id=49865720",
-          "I love this. This is great to read if you are trying to use TLA+ for something.In a different vein, another thing TLA+ isn't great at is modeling atomics and in particular weak-memory semantics or anything that's not sequentially consistent. If you translate your algorithm to pcal, it will run as if it was sequentially consistent. If you need to model non-sequential-consistency, then that needs to be spelled out with explicit logic to TLA+, which is probably too complicated and error-prone to do by hand. The C/C++/Rust memory models permit a lot of wacky stuff. I imagine you need to add read caches and writeback buffers for each variable with cache-flushing instructions at appropriate points, but maybe there is a more elegant way to do it.If you use rust, miri and loom both have analyzers that can check some non-sequentially-consistent behavior (and loom doesn't actually implement sequential-consistency at all)."
-        ]
-      }
-    },
-    {
-      "id": "49912955",
-      "title": "Surprisingly complex waves reveal the brain's inner workings",
-      "url": "https://www.quantamagazine.org/surprisingly-complex-waves-reveal-the-brains-inner-workings-20260930/",
-      "source": "Hacker News",
-      "published_at": "2026-09-30T19:04:50+00:00",
-      "summary": "Surprisingly complex waves reveal the brain's inner workings",
-      "score": 161,
-      "comments": 53,
-      "discussion_url": "https://news.ycombinator.com/item?id=49912955",
-      "extra": {
-        "top_comments": [
-          "For context, the debate in the field has been whether these are epiphenomena of the actual neuronal activity, or a meaningful driver of further activity.I don’t think these studies quite rest the case. As Buzsaki comments in the article, the action is in the cells to create these waves. Do the waves themselves get measured and impact what happens next? The issue at hand is: synaptic currents are stronger and we know neurons respond to them. The wave behavior is in the extracellular fluid as well, and that part we have evidence neurons don’t respond much to.That said, thing the article doesn’t talk about is astrocytes. Especially in the cortex, most synapses are tripartite. There’s an astrocytic end foot that sheathes the synapse and regulates how much of the bulk extracellular space has access to the synapse. And one astrocyte can touch thousands of synapses and in humans, hundreds of thousands. They also form a syncitium, through gap junctions/electrical synapses.Do astrocytes respond to the extracellular wave behavior, which potentially changes the extent and behavior of the syncitium, and thus impact the neurons they touch?That’s still an open question but that’s what I’d be interested to find out more about.",
-          "> If you’re paying attention to what you are looking at, signals are traveling backward from receptors in your eyes to the visual cortex, and then forward into the rest of the brain via the wave to form a memory.has someone used muse2 to measure there brain waves are indeed some how different on days/hours when tehy are focused?Let me explain. I have ADHD, I am on medication. I read an alternate hypothesis to stimulant based treatment of how attention networks don't necessarily change with intake of traditional stimulants[1]; this is also something i have experienced.Personally, medication helps me keep certain negative thoughts and resistance to doing things, but it does not help with longer arc change in executive functioning like planning or strategy. It just removes some barriers to focus on _a_ task, whatever is in front of me and I can do it. The only thing that really worked for executive function improvemement is meditation for 45 mins a day. I believe that also puts the brain waves in a different state. Which is why I've been interested in brain activity tracking and why this article is interesting too.[1] https://www.nytimes.com/2026/09/29/science/adhd-attention-mo...",
-          "Bit of a sensationalist title - EEG/iEEG measurements have led to worthwhile clinical outcomes but also are an avenue for bunk pseudosccience so it pays to be careful whenever you see the words 'brain waves' paired with some large claim.More accurate, much less sexy title: Intracranial Recordings Uncover Spiral and Concentric Brain Waves During Memory Tasks\" (study completed only on small cohorts of epilepsy patients performing constrained memory tasks).No inner workings revealed or laid bare, just another piece of evidence contributing to a small part of the debate in cortical electrophysiological studies on whether or not some data measures can be discarded as the downstream, messy noise of the neurons firing or actual, high-fidelity signals of activity"
-        ]
-      }
-    },
-    {
-      "id": "49912444",
-      "title": "5x faster Edge Functions: V8 isolates to Firecracker MicroVMs",
-      "url": "https://www.netlify.com/blog/edge-functions-firecracker-microvms/",
-      "source": "Hacker News",
-      "published_at": "2026-09-30T18:17:45+00:00",
-      "summary": "5x faster Edge Functions: V8 isolates to Firecracker MicroVMs",
-      "score": 150,
+      "published_at": "2026-10-01T20:14:23+00:00",
+      "summary": "SvelteKit 3",
+      "score": 141,
       "comments": 55,
-      "discussion_url": "https://news.ycombinator.com/item?id=49912444",
+      "discussion_url": "https://news.ycombinator.com/item?id=49926536",
       "extra": {
         "top_comments": [
-          "I've been using SlicerVM extensively - which is Firecracker MicroVMs for the regular person (and for the irregular with their platform offering) - to run local 'edge' style workloads locally and securly. Agents, local dev CI, etc. It slotted in and replaced my proxmox vm orchestrator, and now I have secure and and fast vms on my laptop wherever I go. It also supports dockerfile style builds if you're wanting a security upgrade from containers (which, you should if you're using agents).Honestly, while I see firecracker replacing docker on the horizon I don't see firecracker replacing v8 isolates for most edge function execution. Firstly, this article's scenario is a bit unusual in that they were using someone else's isolates - so adding on a few hops; secondly isolates running JS/TS can be statically analyzed quite well, and at scale looking historically for issues and exploits, in many edge compute scenarios this is quite desirable. MicroVMs can have an awful lot more flexibility so to get the same benefit you have to really lock down what is available - the trade-offs for mid-size companies seems to benefit isolates. Obviously netlify is more than big enough and relies heavily on this that it leans in their favour.",
-          "Alex from Unikraft here! Happy to answer any questions about the microVM part of the story from our side.We also did a couple of technical write ups if you're interested:- https://unikraft.com/blog/netlify-edge-functions- https://unikraft.com/customer-stories/edge-functions-netlify",
-          "> In the past, requests went out to a hosted execution service. Today, they run on MicroVMs inside our own edge network — roughly 5x faster at the median.So, the execution itself might now be slower as far as we know, they just eliminated some networking from the mix? Misleading."
+          "After far too many hours using react, Svelte has become my favorite frontend framework. I’m seeing a lot of comments about how it stacks up in the LLM age. Prior to Opus 4.6-8 (and that era of model releases) they often struggled to get Svelte 4/5 code straight and mixed it up quite a bit.But having used it A LOT this year for personal projects, large work initiatives, and one-off web tools. I’m happy to say all the modern llms seem to do just fine with it. They even handle the experimental features, like remote functions, very well. It’s mostly preference but I find reading Svelte code much more pleasant than React/Vue.",
+          "Such a great project. I converted my React-enjoying cofounders to Svelte/SvelteKit worried they wouldn't like it, but they absolutely love it!We use Svelte extensively at Orb.net for our website (duh), but also as a framework for our desktop and mobile apps. Wails serves our golang and SvelteKit/Svelte provide the UX. It's been tremendous for multiplatform productivity, and binaries are less than 20mb! Nothing like Electron!",
+          "I love the hands-on developer experience of programming in Svelte. But since we're in October of 2026 I have to ask, is the vibe-coding experience in Svelte any different than in React? Can anyone with experience in both comment?"
         ]
       }
     },
     {
-      "id": "49911995",
-      "title": "Launch HN: Magnitude (YC S25) – Self-optimizing inference engine for agents",
-      "url": "https://github.com/magnitudedev/magnitude",
+      "id": "49928121",
+      "title": "Several vulnerabilities have been discovered in the Linux kernel",
+      "url": "https://lwn.net/Articles/1097401/",
       "source": "Hacker News",
-      "published_at": "2026-09-30T17:37:40+00:00",
-      "summary": "Hey HN, Anders and Tom here. We're building Magnitude, an inference engine for agents that optimizes itself to run as fast as possible on your hardware. It works on Mac, Linux, and Windows on any hardware and is up to 2x faster than llama.cpp.We're both software engineers and previously built an open source browser agent to 4k+ GH stars and 100k+ downloads. We increasingly wanted to run it on local models, but found that no inference engine worked for our use case.Inference engines today all make a performance tradeoff. They are either:- Built for batched inference on datacenter hardware at the cost of single-session performance (vLLM, SGLang) - Designed for broad compatibility instead of optimizing for specific hardware (llama.cpp, Ollama) - Specialized for specific hardware or models but lacking engine completeness (oMLX, ds4)Plus none of them are designed for running agents locally. Sessions are long, several often run at once, and you still want to use your computer for other things.Magnitude is built for maximum performance on your hardware and running local agents:- On-device compilation and tuning: Kernels are written with flexible parameters that are tuned on your actual device before the model runs. This gives you broad hardware compatibility with the same performance ceiling as hardware-specific kernels.- Focus on best architectures: We write our tunable, highly efficient kernels for the most popular open-weights families. This allows us to achieve and surpass the performance of hardware or model specialized engines, without forcing ourselves to over-generalize at the cost of performance.- Dynamic memory allocation: Magnitude reserves only enough memory up front to hold model weights. As your agent sessions grow, the memory heap dynamically increases, and frees itself when agents stop. Your hardware can still be used for other stuff while agents run.- Hybrid paged attention: We borrow the best ideas from engines like SGLang to allow concurrent sessions to share prefix caches, but optimize placement for memory-adjacency so single-session performance doesn't suffer.Magnitude is fully open source (Apache 2.0). We built it in Rust, including a custom GPU kernel runtime and autotuner. We take inspiration from the best innovations in inference from academics (e.g. FlashAttention, FlashInfer, TurboQuant) as well as other engines (e.g. SGLang radix attention) to reach the performance ceiling.Benchmarked against llama.cpp with Qwen 3.6 35B A3B (4 bit), 64k context, no speculative decoding:Metal (Mac M4 Pro 48 GB) - 92% faster decode (30 tok/s → 57 tok/s) - 9% faster prefill (466 tok/s → 507 tok/s) - 28% less per-agent memory usageCUDA (DGX Spark) - 19% faster decode (49 tok/s → 58 tok/s) - 23% faster prefill (2,033 tok/s → 2,507 tok/s) - 27% less per-agent memory usageMagnitude ships as a desktop app that you can easily connect with whatever agents you already use (Pi, OpenCode, Hermes, Codex, and more). It automatically runs models on demand when these agents actually need them, and shuts them down after inactivity. Here's what it looks like: https://www.youtube.com/watch?v=0qE8BWEZu7oWe're excited to push Magnitude further to let you run bigger models on the same hardware while continuing to improve performance. Our plans include:- Expert streaming: store experts on RAM or disk and load them just-in-time. This lets you run models bigger than what otherwise would fit on your GPU.- Kernel compiler: our current kernels tune a few parameters to fit your hardware. We can take this further with a fully custom compiler that automatically chooses how to fuse kernels and which implementations to use, to make it fit to your hardware even better.- Multi-device utilization: Make the best possible use of all hardware on a system (CPU, GPUs, RAM, disk) by detecting these and automatically solving for the best model layout.We'd love for more people to try it out and give us feedback. Feel free to comment here, we'll be around all day!",
-      "score": 144,
-      "comments": 71,
-      "discussion_url": "https://news.ycombinator.com/item?id=49911995",
+      "published_at": "2026-10-01T23:10:44+00:00",
+      "summary": "Several vulnerabilities have been discovered in the Linux kernel",
+      "score": 135,
+      "comments": 73,
+      "discussion_url": "https://news.ycombinator.com/item?id=49928121",
       "extra": {
         "top_comments": [
-          "Self-optimizing inference is one of those problems where marginal gains compound—small improvements in batching, KV-cache reuse, and routing across thousands of requests add up fast.The hard part isn't the optimization itself—it's measuring whether a change actually helps across the long tail of request patterns. Most inference benchmarks show huge gains on popular workloads, but production traffic has a fat tail where naive optimizations hurt latency.Interested in how you handle regression detection when the optimizer changes between requests.",
-          "On a Mac the baseline I'd want is MLX, not llama.cpp. llama.cpp isn't the fast path on Apple Silicon for most models people run locally, so a speedup over llama.cpp could still be slower than mlx_lm. Do you have that number?Second, more important for agents: decode speed is rarely what hurts. It's resending the same system prompt plus tool schemas every turn. Does self-optimizing cover prefix cache reuse across requests, or is it kernel and layout tuning only?And is the endpoint OpenAI-compatible? My runtime already talks to llama.cpp and LM Studio through that wrapper, so drop-in is the difference between trying it tonight and not.",
-          "On my local inference box I have a perpetual codex thread open in my llama.cpp checkout that I periodically ask to take a look at currently pending llama.cpp PRs, do some research on latest MTP, Dflash and other prediction or attention optimizations, do research on the latest model quants and finetunes, take a look at localLlama Reddit threads and just do essentially a sweep of the frontier.Then it rebuilds latest llama.cpp, grabs the PRs it finds relevant to test against, and then it performs a benchmark and finalizes the upgrade and verifies what model, variant, or even a separate finetune that we should be running.Occasionally, it performs its own optimizations and commits, which then gets superseded by pull requests and merged code that essentially validates the model's own optimization directionality."
+          "note that _any_ bugfix is assigned a cve, which makes for big numbers.>“Due to the layer at which the Linux kernel is in a system, almost any bug might be exploitable to compromise the security of the kernel… Because of this, the CVE assignment team is overly cautious and assign CVE numbers to any bugfix that they identify.”https://docs.kernel.org/process/cve.html\"number of cves\" is a useless metric, especially when it comes to the kernel.",
+          "This is great, more access did provide more eyes on these problems.But, does that all of these being found now call into question, not the open source model logic itself, but the ability of human eyes to find security issues? These vulnerabilities have been sitting here for however long, but how many thousands of humans did not find them before AI?",
+          "That’s probably a great thing. The initial friction of AI overwhelming projects certainly sucks, but once there are better processes to deal with them it’s going to strengthen the quality of so many projects!"
+        ]
+      }
+    },
+    {
+      "id": "49924618",
+      "title": "Vote on which of Hacker News' challenges for AI have been met",
+      "url": "https://stoppels.ch/goalposts/",
+      "source": "Hacker News",
+      "published_at": "2026-10-01T17:32:43+00:00",
+      "summary": "Vote on which of Hacker News' challenges for AI have been met",
+      "score": 100,
+      "comments": 112,
+      "discussion_url": "https://news.ycombinator.com/item?id=49924618",
+      "extra": {
+        "top_comments": [
+          "My comment about humanity's last exam being a misnomer is included, and I proposed better ideas about what a last exam could look like. One of the things I said was \"solve an open math problem\" which has conclusively been done with Navier-Stokes (regardless of the controversy surrounding that). However, in the spirit of clarifying the goalposts, AI has only passed 1/6 of the tests I proposed. 17% is not a passing grade, so I'd say no, my challenge has not been met.Another thing to note is that the (presumably AI-generated) summary of my challenge does not accurately represent what I wrote, listing only half the things I said and saying \"or\" rather than \"and\".",
+          "There's one of mine in there where I predicted in 2023 that it would be 20 years until AI would be reliably able to entirely build and deploy arbitrary applications from a prompt. I was off by about 18 years on that one!",
+          "At least 1/3rd of these predictions aren't clear enough to determine exactly what is being claimed/predicted. Even after reading the full comment multiple times, on a lot of them I couldn't tell where the author had set the goalposts well enough to say whether we've crossed it or not."
+        ]
+      }
+    },
+    {
+      "id": "49925036",
+      "title": "Bez: Generating a browser engine from specs and tests",
+      "url": "https://tangled.org/burrito.space/bez",
+      "source": "Hacker News",
+      "published_at": "2026-10-01T18:08:03+00:00",
+      "summary": "Bez: Generating a browser engine from specs and tests",
+      "score": 90,
+      "comments": 40,
+      "discussion_url": "https://news.ycombinator.com/item?id=49925036",
+      "extra": {
+        "top_comments": [
+          "This makes a ton of sense to me with the huge corpus of web standards that exist. In theory we should be able to generate a browser from those specs, it just took a massive amount of effort before. Maybe if things like this get some traction, some of the human time spent implementing the spec could be spent on creating more/better specs, allowing for even better generation too.Edit: replies are making good points about AI capabilities and where the effort really goes. Let’s just say that I meant this in an aspirational sense, rather than where the rubber actually meets the road today.",
+          "I'm looking forward to the day when we have fully functioning web browsers that we have full programmatic control over in all aspects.With luck all chromium/blink-based browsers will go the way of the dodo bird.",
+          "Very cool idea, though I think we're a long way away from this. Hopefully they file bugs on the specs when they find ambiguities.Also the specs are written to define observable behavior, and there's a fair bit of ambiguity that's UA defined, but to be actually compatible with the Web requires doing what Chrome does.The good news is that you can look at the source of the 3 major engines (and Ladybird!) and your AI agent can do comparisons and figure out optimizations."
+        ]
+      }
+    },
+    {
+      "id": "49925742",
+      "title": "Oxygen-deprived underwater zones may not be “dead zones” but clue to early life",
+      "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2026AV002570",
+      "source": "Hacker News",
+      "published_at": "2026-10-01T19:03:42+00:00",
+      "summary": "Oxygen-deprived underwater zones may not be “dead zones” but clue to early life",
+      "score": 87,
+      "comments": 4,
+      "discussion_url": "https://news.ycombinator.com/item?id=49925742",
+      "extra": {
+        "top_comments": [
+          "Anoxic brine pools are beautiful and uncanny. https://cdn.mos.cms.futurecdn.net/hB2ogu7nw4r9YZWfHoUgLi-192... https://oceanexplorer.noaa.gov/multimedia/daily-image-media-...From the exploration vehicle Nautilus, https://www.youtube.com/watch?v=nGLtMWx28hsTheir existence isn't intuitive. You'd expect diffusion to dilute the pools and yet they seem to last a very long time somewhere on the order of thousands of years. It's not immediately obvious to me how the physics of these pools functions because there is a persistent interface as if the brine is another liquid entirely. From another paper, \"Discovery of the deep-sea NEOM Brine Pools in the Gulf of Aqaba, Red Sea,\" The CTD measurements from 1200 m depth, through the brine pool interface (1769.46 m) and 2 m below (1771.50 m) revealed that the bathyal water column above the brine pool has a stable 21.33 °C temperature, the salinity of 40 PSU, and dissolved oxygen of 180 μmol L−1. but if you sample the pool itself, Within 15 cm beneath the brine interface, salinity rose from 40 PSU to values higher than the limits of the conductivity probe (120 PSU). Subsequent lab analysis of the brine provided actual salinity values of 160 PSU. Dissolved oxygen values fell more than 75% at the interface, reaching 50 μmol L−1 by 20 cm submergence into the brine, and further falling to a minimum value of <10 μmol L−1 by 50 cm below the interface. The brine is also hotter than the water just above it, Unlike salinity and dissolved oxygen, the temperature did not abruptly change across the brine interface. Instead, the temperature gradually increases below the brine interface at a rate of 0.1 °C per 20 cm depth increase, reaching an increment of 1.0 °C above the temperature of ambient seawater by 2 m depth into the brine (Fig. 4). The temperature differential to ambient did not increase with deeper submergence. Such a modest warming increment suggests the lack of proximal hydrothermal heating of the brine. from, https://www.nature.com/articles/s43247-022-00482-xNature is beautiful.",
+          "Extremely interesting page, thank you, am reading through it.It's amazing what can live where. There are microbes a mile down and a mile up, in near boiling water and in subzero conditions."
         ]
       }
     }

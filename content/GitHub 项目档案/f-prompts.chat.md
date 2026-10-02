@@ -1,13 +1,13 @@
 ---
 first_seen: 2026-06-28
-last_seen: 2026-09-10
+last_seen: 2026-10-02
 language: HTML
 tags: [github, trending]
 ---
 
 # f/prompts.chat
 
-> f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.
+> 社区共享与发现提示词的平台，前身为 Awesome ChatGPT Prompts。适合用户查找、收藏和自托管提示词库，在组织内部实现隐私化使用。
 
 ## 基本信息
 
@@ -90,3 +90,4 @@ tags: [github, trending]
 | 2026-09-06 | #19 | 169,429 | +82⭐ | 常驻 |
 | 2026-09-07 | #17 | 169,525 | +96⭐ | 常驻 |
 | 2026-09-10 | #24 | 169,821 | +296⭐ | 跃升 |
+| 2026-10-02 | #22 | 171,834 | +2,013⭐ | 爆火 |
