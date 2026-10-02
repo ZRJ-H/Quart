@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-10-02T11:00:35.440233+08:00",
+  "cached_at": "2026-10-02T13:58:07.628230+08:00",
   "articles": [
     {
       "id": "https://www.news.cn/politics/20260930/53249451c1e94d9487bff423e7504c55/c.html",
@@ -62,12 +62,24 @@
       "extra": {}
     },
     {
-      "id": "https://www.bbc.co.uk/news/articles/cr1585y0y90go#0",
-      "title": "NY's governor appoints special prosecutor in Cornell frat rape investigation",
-      "url": "https://www.bbc.co.uk/news/articles/cr1585y0y90go?at_medium=RSS&at_campaign=rss",
+      "id": "https://www.bbc.co.uk/news/articles/crpd0d0jl0y0o#1",
+      "title": "Ethiopia and Eritrea cut diplomatic ties as northern conflict escalates",
+      "url": "https://www.bbc.co.uk/news/articles/crpd0d0jl0y0o?at_medium=RSS&at_campaign=rss",
       "source": "BBC World",
-      "published_at": "2026-10-02T02:49:44+00:00",
-      "summary": "The governor said she'd lost faith in prosecutors overseeing the case and handed it over to New York Attorney General Letitia James.",
+      "published_at": "2026-10-02T05:42:07+00:00",
+      "summary": "The diplomatic fallout comes as Ethiopian forces battle rebel fighters across northern region.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
+      "id": "https://www.bbc.co.uk/news/articles/c5zjzjgdeneeo#0",
+      "title": "US pressures Europe over diesel reserves as Trump threatens export ban",
+      "url": "https://www.bbc.co.uk/news/articles/c5zjzjgdeneeo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "published_at": "2026-10-02T05:26:06+00:00",
+      "summary": "President Donald Trump has threatened to ban diesel exports in a bid to ease prices in the US ahead of the November elections.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
@@ -78,20 +90,8 @@
       "title": "Australia says platforms like Steam and Roblox have 'significant' child safety gaps",
       "url": "https://www.bbc.co.uk/news/articles/cjvgygzzy6lro?at_medium=RSS&at_campaign=rss",
       "source": "BBC World",
-      "published_at": "2026-10-02T02:29:41+00:00",
-      "summary": "Fortnite, Roblox and Minecraft also told to 'lift their game' by online safety regulator.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://www.bbc.co.uk/news/articles/ckge4eql4q7eo#2",
-      "title": "What happened in the failed execution of Christa Pike - and what next?",
-      "url": "https://www.bbc.co.uk/news/articles/ckge4eql4q7eo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "published_at": "2026-10-02T02:11:34+00:00",
-      "summary": "The convicted killer is in hospital in Tennessee after surviving two lethal injections, in a case that has raised many questions.",
+      "published_at": "2026-10-02T04:21:31+00:00",
+      "summary": "Fortnite and Minecraft also told to 'lift their game' by online safety regulator.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
