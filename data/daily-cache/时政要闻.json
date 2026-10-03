@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-10-03T11:00:47.539548+08:00",
+  "cached_at": "2026-10-03T13:33:17.999275+08:00",
   "articles": [
     {
       "id": "https://www.news.cn/politics/20260930/53249451c1e94d9487bff423e7504c55/c.html",
@@ -62,36 +62,36 @@
       "extra": {}
     },
     {
+      "id": "https://www.bbc.co.uk/news/articles/ck87zg8jnwngo#0",
+      "title": "G7 to release millions of barrels of oil and diesel after Trump threat",
+      "url": "https://www.bbc.co.uk/news/articles/ck87zg8jnwngo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "published_at": "2026-10-03T04:38:31+00:00",
+      "summary": "The co-ordinated release is aimed at heading off further price spikes and avoiding a ban on US diesel exports.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
+      "id": "https://www.npr.org/2026/10/02/nx-s1-5989727/brazil-election-lula-bolsonaro-flavio-democracy",
+      "title": "Brazil's big political rematch: What to know",
+      "url": "https://www.npr.org/2026/10/02/nx-s1-5989727/brazil-election-lula-bolsonaro-flavio-democracy",
+      "source": "NPR World",
+      "published_at": "2026-10-03T02:57:07+00:00",
+      "summary": "Four years after President Lula narrowly defeated Jair Bolsonaro, Brazil is back at the ballot box. This time, Lula faces Bolsonaro's son, Flávio, in a high-stakes rematch.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
       "id": "https://www.bbc.co.uk/news/articles/c6ly0ljypzrdo#0",
       "title": "Cornell frat house rape accuser 'under siege' online, says lawyer",
       "url": "https://www.bbc.co.uk/news/articles/c6ly0ljypzrdo?at_medium=RSS&at_campaign=rss",
       "source": "BBC World",
       "published_at": "2026-10-03T02:23:07+00:00",
       "summary": "A lawyer for Jane Doe says she is \"not doing well\" amid attempts to uncover her identity.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://www.bbc.co.uk/news/articles/cm3eqegwpzl4o#2",
-      "title": "The South African men trying to end violence against women: 'Every man needs to play a part'",
-      "url": "https://www.bbc.co.uk/news/articles/cm3eqegwpzl4o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "published_at": "2026-10-02T23:56:21+00:00",
-      "summary": "The discovery of 12 women's bodies near Johannesburg has again highlighted South Africa's problem with violence against women.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://www.bbc.co.uk/weather/articles/cwgkvyyg8115o#2",
-      "title": "Could El Niño mean there are no Atlantic hurricanes this year?",
-      "url": "https://www.bbc.co.uk/weather/articles/cwgkvyyg8115o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "published_at": "2026-10-02T23:37:13+00:00",
-      "summary": "For the first time in three decades there has not been a single Atlantic hurricane in September, normally the most active month.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",

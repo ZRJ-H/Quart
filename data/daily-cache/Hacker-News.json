@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-10-03T11:00:47.539548+08:00",
+  "cached_at": "2026-10-03T13:33:17.999275+08:00",
   "articles": [
     {
       "id": "49937276",
@@ -8,8 +8,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-02T19:06:56+00:00",
       "summary": "Apple Pass Designer",
-      "score": 334,
-      "comments": 223,
+      "score": 376,
+      "comments": 233,
       "discussion_url": "https://news.ycombinator.com/item?id=49937276",
       "extra": {
         "top_comments": [
@@ -26,8 +26,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-02T13:18:32+00:00",
       "summary": "The Legend of von Neumann (1973) [pdf]",
-      "score": 248,
-      "comments": 141,
+      "score": 266,
+      "comments": 143,
       "discussion_url": "https://news.ycombinator.com/item?id=49933235",
       "extra": {
         "top_comments": [
@@ -44,8 +44,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-02T11:07:17+00:00",
       "summary": "A 12-year sequence of telescope images of a star and four planets orbiting",
-      "score": 211,
-      "comments": 50,
+      "score": 234,
+      "comments": 51,
       "discussion_url": "https://news.ycombinator.com/item?id=49932147",
       "extra": {
         "top_comments": [
@@ -62,8 +62,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-02T14:11:24+00:00",
       "summary": "https://www.nature.com/articles/s41586-026-11036-yhttps://arxiv.org/abs/2511.07312",
-      "score": 189,
-      "comments": 91,
+      "score": 202,
+      "comments": 96,
       "discussion_url": "https://news.ycombinator.com/item?id=49933740",
       "extra": {
         "top_comments": [
@@ -74,38 +74,20 @@
       }
     },
     {
-      "id": "49929391",
-      "title": "Greg Kroah-Hartman – Security in the LLM Age [video]",
-      "url": "https://www.youtube.com/watch?v=NnV_cWeoo5Q",
-      "source": "Hacker News",
-      "published_at": "2026-10-02T02:51:27+00:00",
-      "summary": "Greg Kroah-Hartman – Security in the LLM Age [video]",
-      "score": 189,
-      "comments": 49,
-      "discussion_url": "https://news.ycombinator.com/item?id=49929391",
-      "extra": {
-        "top_comments": [
-          "Greatly appreciated the candor. I've included a few slides into text that i thought were eye-opening to me:From his Kernel Recipes 2026 slide on Mythos``` Mythos's 79 vulnerabilities: 24 - no detail at all \"something crashed\" 14 - not a bug at all 3 - totally made up data 15 - already fixed in latest release - 11 by others - 4 by anthropic 20 - fixes were needed - 7 \"assume a malicious filesystem image\" - 2 \"assume you can inject a malicious network packet into the middle of the stack\" - 2 \"NOMMU\" - 6 sctp networking issues for untrusted devices - 2 ipv6 minor network issues - 1 gpu driver for local malicious user ```GHK called this \"10 'real' bugfixes\", which to me sounds like there's a wild hype machine around these companies and uncritical parroting of every press release they make that falls apart when you engage the affected real experts.",
-          "> So what all of mythos; that whole big marketing issue of 79 bugs came down to one hour of kernel development.If you're someone at OpenAI or Anthropic and you truly believe what you're making could destroy the world, this is the kind of thing that isn't doing you any favors when it comes to convincing the public. The dissonance here is stark: - widely proclaiming that your new model is so dangerous it needs to be released only to select people, for safety - widely proclaiming the model easily found 79 bugs in linux, except that GKH says it took 1 hour to fix all of them because most weren't bugs and the rest were almost all completely trivial, unimportant, and/or not severe It doesn't mean the model isn't dangerous or super capable but wow this makes it realllll easy to doubt it and any future announcement.",
-          "At 3m19s Greg KH revealed what Mythos did in \"revealing\" 79 CVEs - pure pattern matching the previous decades of kernel developer's patches, and applying those mechanisms elsewhere to see if they have been universally patched. And Anthropic didn't cite Kernel Developers who original fixed/patched the CVEs like a decent human being would do. So yeah, Anthropic has the same problem OpenAI had for citing original work."
-        ]
-      }
-    },
-    {
       "id": "49936575",
       "title": "From the creator of Redis; run LLM locally with ds4",
       "url": "https://dwarfstar.sh/",
       "source": "Hacker News",
       "published_at": "2026-10-02T18:01:16+00:00",
       "summary": "From the creator of Redis; run LLM locally with ds4",
-      "score": 164,
-      "comments": 42,
+      "score": 197,
+      "comments": 56,
       "discussion_url": "https://news.ycombinator.com/item?id=49936575",
       "extra": {
         "top_comments": [
-          "In case you like the store kv to disk so you can resume I keep this branch of llama.cpp that includes that same functionalityhttps://github.com/alainnothere/llama.cpp/commits/disk-cache...And you know it's load bearing each of the load baerings parts that bear some load and load a bear... you fight a bear because it took a load... or something like that...",
           "I maintain a fork of ds4 as shared libraries and thus can be used with other languages via FFI, along with public builds/binaries [1]. I made ds4go [2] against ds4 using techniques inspired by yzma.In addition to the library bindings, we have a small library of tools (workspace for view/edit, scratchpad for persistence) and making your own is registering a Go function. And in recent weeks, I added the Vision and Qwen support, as ds4 added them.Even if you don't use the Go library, the ds4go binary makes it really easy to download the libraries off of HuggingFace with a TUI available vie Homebrew.Here's some TUI toy screenshots, sorry I still haven't released that code; it's of different quality than the others. [3]EDIT: add ds4go TUI screenshot gist [4][1] https://github.com/NimbleMarkets/ds4/releases/tag/v0.8.20260...[2] https://github.com/nimblemarkets/ds4go#install[3] https://gist.github.com/neomantra/ae47422c8daf7a458212c93992...[4] https://gist.github.com/neomantra/40180ade13df93290250ce8c6d...",
-          "https://github.com/antirez/ds4The project GitHub page is a much better introduction for the hn crowd."
+          "https://github.com/antirez/ds4The project GitHub page is a much better introduction for the hn crowd.",
+          "Nothing comparable but inspired from DwarfStar I wrote a little inference engine for Intel Xe-LP (no XMX) 32GB laptops. The only model supported right now is a quantized Gemma-4, but I don't exclude in the future to support other MoE of similar size. Too bad we have no Qwen 3.8 35B-A3B yet.I'm also looking into expanding the protocol and the engine to support various steering techniques.https://github.com/simoneiacomino/xenolith"
         ]
       }
     },
@@ -116,14 +98,31 @@
       "source": "Hacker News",
       "published_at": "2026-10-02T19:26:54+00:00",
       "summary": "Muse Gadgets",
-      "score": 143,
-      "comments": 68,
+      "score": 170,
+      "comments": 77,
       "discussion_url": "https://news.ycombinator.com/item?id=49937504",
       "extra": {
         "top_comments": [
-          "I'm generally skeptical and critical of most things that Meta is doing (\"fool me once...\") and I definitely won't trust them enough to use their agents and give them any more data than I already do, but this is a super cute and fun idea!I love microcontrollers and DIY IoT as a hobby, a huge fan of ESP32s (so affordable and perfectly packaged in ready-to-use boards), and I can see how such easy, vibe-coded projects can inspire more people and show them how easy it is to get started with them today. (I remember my first experiments with microcontrollers and DSPs at college in 00s - the nightmare of even just flashing those devices, not to mention the almost-prohibitive cost to get them and the sometimes required JTAG programmers I faced in Poland... My BSc thesis project was reduced in scope a few times because my professor couldn't get some purchases and shipments approved on time)A toy with not much value? Sure. But who cares, it's fun and inspiring! They even recommend vibe-building so that the user doesn't need to download or configure SDKs. Awesome stuff for complete beginners to this area.Over a decade ago, I could see Google releasing such a whimsy, hackersy fun toy project. Sadly, not anymore... (Saying this as a former Google employee in 2017-2022, witnessing in person the sad, gradual change from hacker culture to corporate culture)",
           "I'll go against the grain and say that I like this, I genuinely don't think this is anything but some internal team being excited about their product and giving you some firmware to connect stuff to their agents. Meta the trillion dollar company will not move at all from this.",
-          "The general theme of meta's approach across the board here is interesting - basically, they are trying to win in part by taking risks others aren't willing to. I can imagine they saw that all the success is coming so far when a someone is willing to cross a boundary that wasn't previously thought acceptable - from releasing ChatGPT in the first place, to things like OpenClaw.So now they are actively distributing SDKs and to let people \"hack\" custom hardware integrations to their already risky AI agents unleashed on the general public. Giving agents abilty to control things in the physical world - what could possibly go wrong?But here we are: so far the story is pretty much 100% \"fortune favors the bold\", and Meta is leaning into it."
+          "The general theme of meta's approach across the board here is interesting - basically, they are trying to win in part by taking risks others aren't willing to. I can imagine they saw that all the success is coming so far when a someone is willing to cross a boundary that wasn't previously thought acceptable - from releasing ChatGPT in the first place, to things like OpenClaw.So now they are actively distributing SDKs and to let people \"hack\" custom hardware integrations to their already risky AI agents unleashed on the general public. Giving agents abilty to control things in the physical world - what could possibly go wrong?But here we are: so far the story is pretty much 100% \"fortune favors the bold\", and Meta is leaning into it.",
+          "I'm generally skeptical and critical of most things that Meta is doing (\"fool me once...\") and I definitely won't trust them enough to use their agents and give them any more data than I already do, but this is a super cute and fun idea!I love microcontrollers and DIY IoT as a hobby, a huge fan of ESP32s (so affordable and perfectly packaged in ready-to-use boards), and I can see how such easy, vibe-coded projects can inspire more people and show them how easy it is to get started with them today. (I remember my first experiments with microcontrollers and DSPs at college in 00s - the nightmare of even just flashing those devices, not to mention the almost-prohibitive cost to get them and the sometimes required JTAG programmers I faced in Poland... My BSc thesis project was reduced in scope a few times because my professor couldn't get some purchases and shipments approved on time)A toy with not much value? Sure. But who cares, it's fun and inspiring! They even recommend vibe-building so that the user doesn't need to download or configure SDKs. Awesome stuff for complete beginners to this area.Over a decade ago, I could see Google releasing such a whimsy, hackersy fun toy project. Sadly, not anymore... (Saying this as a former Google employee in 2017-2022, witnessing in person the sad, gradual change from hacker culture to corporate culture)"
+        ]
+      }
+    },
+    {
+      "id": "49933869",
+      "title": "The Forgetful CPU (Linux on M4)",
+      "url": "https://yuka.dev/blog-2026-10-02-linux-m4.html",
+      "source": "Hacker News",
+      "published_at": "2026-10-02T14:22:12+00:00",
+      "summary": "The Forgetful CPU (Linux on M4)",
+      "score": 167,
+      "comments": 79,
+      "discussion_url": "https://news.ycombinator.com/item?id=49933869",
+      "extra": {
+        "top_comments": [
+          "Imagine how big Apple would/could be if they embraced open hardware. They do have a moat here. macOS is so bloated, I hate it, but the hardware is just so much better than anything else.",
+          "Not related to this but the other day I was searching for a good external trackpad that would work with macOS and there are very few (and not good) and every discussion was about how nothing comes close to Apple magic trackpad. The question is why can't other companies create such a good trackpad for macOS, it turns out they can't because the whole protocol for touchpad/gestures etc are proprietary and closed on macOS side so essentially any 3rd party trackpad has to emulate a mouse device. Thats what you get when a company makes computer and its OS and also its accessories and also software services, the whole stack, you either use their whole thing or not."
         ]
       }
     },
@@ -134,14 +133,14 @@
       "source": "Hacker News",
       "published_at": "2026-10-02T19:37:01+00:00",
       "summary": "Updates to Full Disk Access in macOS",
-      "score": 138,
-      "comments": 81,
+      "score": 165,
+      "comments": 100,
       "discussion_url": "https://news.ycombinator.com/item?id=49937631",
       "extra": {
         "top_comments": [
-          "I don’t quite understand why people complains this is bad for AI agents. Local Code (https://releases.drawthings.ai/p/public-beta-of-local-code-b...) doesn’t require full disk access, when you ask the agent to deal with some files it doesn’t have access to, the built-in ‘permit’ tool will trigger the OS folder grant interface and that information will be recorded both by Apple and by the app so it can be revoked later if you want. That allows you to not give full disk access to the app to be useful.",
+          "> We give developers powerful APIs to build incredible capabilities> Full Disk Access largely sidesteps these controlsThat's because you don't really. Just like you don't give users \"powerfulf\" controls, so instead they have to resort to dumb ones like \"Full disk\"For example, if you care about \"mail, messages, and even browsing history\", why isn't there a subset of \"full disk access except for reading mail/messages/browsing history\"? Or if vibe code have some basic disk sizing functionality to ask questions about your files, why can't it have a more granular \"full disk read only access for file sizes only\" so that your vibe coded disk visualization app can't destroy your data or your privacy> can only do so with very explicit user action.Which is in the same vein and is mostly useless, just another inconvenient bump",
           "IMHO, it's good to add more specific controls for this. After reading this, I went and checked my list of app with full disk access:- Ghostty (fine, it's my terminal)- Alfred (fine, I use it for searching everywhere)Then I have a few turned off:- Spotify (why does it need full disk access) ??- Gemini (nope, don't need it to know everything about my computer)",
-          "I would like the ability to see which specific folders I have granted access to on an app by app basis. And edit. It’s not clear to me how you revoke an app’s individual folder access after you have granted it."
+          "I don’t quite understand why people complains this is bad for AI agents. Local Code (https://releases.drawthings.ai/p/public-beta-of-local-code-b...) doesn’t require full disk access, when you ask the agent to deal with some files it doesn’t have access to, the built-in ‘permit’ tool will trigger the OS folder grant interface and that information will be recorded both by Apple and by the app so it can be revoked later if you want. That allows you to not give full disk access to the app to be useful."
         ]
       }
     }
