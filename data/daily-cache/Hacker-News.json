@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-10-02T13:58:07.628230+08:00",
+  "cached_at": "2026-10-03T11:00:47.539548+08:00",
   "articles": [
     {
-      "id": "49926069",
-      "title": "Pi 1.0",
-      "url": "https://earendil.com/posts/pi-1-0/",
+      "id": "49937276",
+      "title": "Apple Pass Designer",
+      "url": "https://developer.apple.com/pass-designer/",
       "source": "Hacker News",
-      "published_at": "2026-10-01T19:33:05+00:00",
-      "summary": "Related: Pi Durable - https://news.ycombinator.com/item?id=49925969",
-      "score": 1018,
-      "comments": 321,
-      "discussion_url": "https://news.ycombinator.com/item?id=49926069",
+      "published_at": "2026-10-02T19:06:56+00:00",
+      "summary": "Apple Pass Designer",
+      "score": 334,
+      "comments": 223,
+      "discussion_url": "https://news.ycombinator.com/item?id=49937276",
       "extra": {
         "top_comments": [
-          "Love pi. I tried to run some local models and pi was the only one that actually worked decently because it didn’t have a gargantuan system prompt that would take minutes to prefill on my scrawny ass laptop.Been running it almost barebones vanilla for a couple of months. Just a bunch of basic extensions and some skills.Now, if only they could fix the very annoying bug of the history jumping back at the beginning if I am not a the end while the model is reasoning that would great.",
-          "It's so great to see now that the folks behind Pi also try to pivot away from the idea that Pi is more than a \"coding\" agent. Its minimalism, and tool call primitives really lends itself to be a general purpose agent for your OS that you gradually extend on demand for your specific use case.Since January I use Pi professionally as well as personally and I can only recommend to start small and grow your harness over time. For example, for an agent in production it was so helpful for me to use Pi in interactive mode via tmux to get a feel of the agentic flow, tool calls and reasoning traces for a certain use case while only the stylized responses are rendered in Telegram via an extension to the user. As a Developer, I have full technical observability and control while providing and incrementally improving a service to a user at the same time.Excited how Pi Durable will fit in and can support more. Congrats and thank you!",
-          "I wonder how Tolkien would’ve thought about the use of LotR names being used by all these AI and tech companies.. especially since they all seem to use the names of things that were corrupted by darkness."
+          "What do people find interesting about this? This doesn’t seem at all significant to me",
+          "This is exactly the sort of software that was hard to prioritise before LLMs, and trivial to build with LLMs.There's nothing interesting going on here, and I don't mean that as a criticism. There's a clear schema, no particularly clever UX needed, you can build almost all of this out of standard UI components, and the problem is well defined.The only challenge is the actual time input for coding, and that's mostly gone today.",
+          "There are free, web-based wizards to create PKPass-format Apple Wallet passes. This one was posted on HN a few months ago.https://walletwallet.alen.ro/"
         ]
       }
     },
     {
-      "id": "49925969",
-      "title": "Pi Durable",
-      "url": "https://earendil.com/posts/pi-durable/",
+      "id": "49933235",
+      "title": "The Legend of von Neumann (1973) [pdf]",
+      "url": "https://gwern.net/doc/math/1973-halmos.pdf",
       "source": "Hacker News",
-      "published_at": "2026-10-01T19:24:08+00:00",
-      "summary": "Related: Pi 1.0 - https://news.ycombinator.com/item?id=49926069 - Oct 2026 (184 comments)",
-      "score": 304,
-      "comments": 37,
-      "discussion_url": "https://news.ycombinator.com/item?id=49925969",
+      "published_at": "2026-10-02T13:18:32+00:00",
+      "summary": "The Legend of von Neumann (1973) [pdf]",
+      "score": 248,
+      "comments": 141,
+      "discussion_url": "https://news.ycombinator.com/item?id=49933235",
       "extra": {
         "top_comments": [
-          "Very cool to see Pi build a durable agent harness too. I've been building in this space for quite some time myself [0][1] and it is a super interesting place of innovation. Less hype-y that on-your-machine coding agents, but all major players are building products in this space: LangChain Deep Agents, Vercel Eve, OpenAI Agents API, Anthropic Managed Agents, etc.The main reasons are:1) they are \"durable\", i.e. easier to make long-running in an unattended way, and easier to implement recovery, monitoring, etc2) separating the harness from the compute brings safety and scaling benefits3) easier to make multi-player.[0] https://github.com/smartcomputer-ai/lightspeed[1] https://github.com/smartcomputer-ai/agent-os/",
-          "One decision here which seems like a large break from the original pi is that Durable doesn't support branching conversation trees, it only supports conversation forks with ancestry information. Can anyone speculate (or confirm, if you happen to be Armin or Mario) why this is, and if that is necessary for the durable guarantees? The branching conversations are still an immutable data structure, so I can't see why this would be necessary, but perhaps I'm missing something.",
-          "> The entire source code, without tests, is about 15,000 lines, which comes out to about 150,000 tokens with GPT and about 250,000 with Claude.Woah, that big of a difference when it comes to token counting?"
+          "My favorite von Neumann anecdote was a quote from Edward Teller: \"von Neumann would carry on a conversation with my 3 year old son, and the two of them would talk as equals, and I sometimes wondered if he used the same principle when he talked to the rest of us.\"",
+          "When you look at it holistically, von Neumann was more influential in science and mathematics in the 20th century than either Einstein or Planck. He wasn't as obvious a symbol of the scientific revolution, but his contributions to SO MANY THINGS at a fundamental level makes him stand out to me.",
+          "For a longer read, I can highly recommend the book \"The Man from the Future\" by Ananyo Bhattacharya. It's quite an easy read and extensively discusses the life and discoveries by John von Neumann in chronological order."
         ]
       }
     },
     {
-      "id": "49928121",
-      "title": "Several vulnerabilities have been discovered in the Linux kernel",
-      "url": "https://lwn.net/Articles/1097401/",
+      "id": "49932147",
+      "title": "A 12-year sequence of telescope images of a star and four planets orbiting",
+      "url": "https://bsky.app/profile/theplanetaryguy.com/post/3mwucf5ert22f",
       "source": "Hacker News",
-      "published_at": "2026-10-01T23:10:44+00:00",
-      "summary": "Several vulnerabilities have been discovered in the Linux kernel",
-      "score": 217,
-      "comments": 140,
-      "discussion_url": "https://news.ycombinator.com/item?id=49928121",
+      "published_at": "2026-10-02T11:07:17+00:00",
+      "summary": "A 12-year sequence of telescope images of a star and four planets orbiting",
+      "score": 211,
+      "comments": 50,
+      "discussion_url": "https://news.ycombinator.com/item?id=49932147",
       "extra": {
         "top_comments": [
-          "note that _any_ bugfix is assigned a cve, which makes for big numbers.>“Due to the layer at which the Linux kernel is in a system, almost any bug might be exploitable to compromise the security of the kernel… Because of this, the CVE assignment team is overly cautious and assign CVE numbers to any bugfix that they identify.”https://docs.kernel.org/process/cve.html\"number of cves\" is a useless metric, especially when it comes to the kernel.",
-          "Just the beginning. AI is going to expose how fragile the entire computing infrastructure in our world is.",
-          "An interesting observation that I encountered somewhere, I forget where, is that AIs when writing code introduce vulnerabilities at a rate similar to humans writing the same code. So we're looking at a massively accelerated volume of security vulnerabilities for the foreseeable future thanks to AI-assisted security research, and we can expect no reduction in new vulnerabilities from the AIs writing the code."
+          "Not to self-plug, but here's my video of the same four planets:https://sefffal.github.io/images/orbital-animation.mp4The creator of the GIF above used a data from a range of different telescopes and wavelengths, whereas I made this with using data only from same telescope (Keck), instrument, and wavelength (3.5 microns; near infrared).",
+          "Worth being very clear that this is not a real video of the system, it's 10 static images with a few hundred interpolated \"fake\" frames. Still very cool though.",
+          "Amazing. Scrolling down one of the comments has an animation of starts around the center of the Milky Way. I have seen a few short ones of nebulae. There should be much much more of this sort of thing.I appreciate that scientist are not always after the pretty pictures. They can be expensive, do not always give the data needed, and the experiments do not always produce data that has obvious pretty picture potential. Still, for the average non professional scientist (me) the pictures are about all I will ever get out of the science."
         ]
       }
     },
     {
-      "id": "49926536",
-      "title": "SvelteKit 3",
-      "url": "https://svelte.dev/blog/sveltekit-3-is-here",
+      "id": "49933740",
+      "title": "With most information hidden, the game Stratego had stumped AI until now",
+      "url": "https://arstechnica.com/science/2026/10/ai-finally-beat-the-best-stratego-player-in-history-and-did-it-on-a-budget/",
       "source": "Hacker News",
-      "published_at": "2026-10-01T20:14:23+00:00",
-      "summary": "SvelteKit 3",
-      "score": 197,
-      "comments": 64,
-      "discussion_url": "https://news.ycombinator.com/item?id=49926536",
+      "published_at": "2026-10-02T14:11:24+00:00",
+      "summary": "https://www.nature.com/articles/s41586-026-11036-yhttps://arxiv.org/abs/2511.07312",
+      "score": 189,
+      "comments": 91,
+      "discussion_url": "https://news.ycombinator.com/item?id=49933740",
       "extra": {
         "top_comments": [
-          "After far too many hours using react, Svelte has become my favorite frontend framework. I’m seeing a lot of comments about how it stacks up in the LLM age. Prior to Opus 4.6-8 (and that era of model releases) they often struggled to get Svelte 4/5 code straight and mixed it up quite a bit.But having used it A LOT this year for personal projects, large work initiatives, and one-off web tools. I’m happy to say all the modern llms seem to do just fine with it. They even handle the experimental features, like remote functions, very well. It’s mostly preference but I find reading Svelte code much more pleasant than React/Vue.",
-          "Such a great project. I converted my React-enjoying cofounders to Svelte/SvelteKit worried they wouldn't like it, but they absolutely love it!We use Svelte extensively at Orb.net for our website (duh), but also as a framework for our desktop and mobile apps. Wails serves our golang and SvelteKit/Svelte provide the UX. It's been tremendous for multiplatform productivity, and binaries are less than 20mb! Nothing like Electron!",
-          "I love the hands-on developer experience of programming in Svelte. But since we're in October of 2026 I have to ask, is the vibe-coding experience in Svelte any different than in React? Can anyone with experience in both comment?"
+          "I loved Stratego so much as a kid. But, I eventually couldn't find anyone to play with me because I crushed everyone, including my dad who was much better than me at chess. But, I never would have thought it'd be a game that models would have a hard time with. It feels relatively simple. And, inexplicably, I never even thought that there might be serious players...I've kept the board game, one of the very few things I have from young childhood, but it's been twenty years since I played. I guess it's time to find an online Stratego. Surely someone in the whole world can beat me.Too bad I never played against an AI before they cracked it.",
+          "> The algorithm also learned far faster—it played about 34 times fewer games than DeepNash, and still ended up much stronger.Imo, this is the critical piece and what makes the AI work at all.With hidden information games, the best move depends on information you don’t have. So a move could be good or bad, it just depends on something that’s impossible to know.You’d like to search ahead, meaning “if I do this they will do that” but that’s impossible since you don’t even know what the opponent can do because you don’t know their hidden state.If the possible hidden states are randomly distributed, you are screwed. It’s just like rock paper scissors: there’s no best move if your opponent is unpredictable.However if you can quickly learn to predict their moves, it becomes possible to make informed decisions about what to do.",
+          "Oh no! Stratego had been on my mind as something we just hadn't tried hard enough to make a winning bot for, including the DeepMind effort from 2022. I was planning to make the first one.I thought this was slightly less crank-coded than trying to prove the Riemann Hypothesis, but maybe these days you just ask Claude to do that and it tells you there's a counterexample at 1 + πi that no one ever noticed before."
         ]
       }
     },
     {
-      "id": "49926628",
-      "title": "Automatic Transmission – a data-privacy study of connected vehicles",
-      "url": "https://automatictransmission.khoury.northeastern.edu/index.html",
+      "id": "49929391",
+      "title": "Greg Kroah-Hartman – Security in the LLM Age [video]",
+      "url": "https://www.youtube.com/watch?v=NnV_cWeoo5Q",
       "source": "Hacker News",
-      "published_at": "2026-10-01T20:23:27+00:00",
-      "summary": "Automatic Transmission – a data-privacy study of connected vehicles",
-      "score": 160,
-      "comments": 152,
-      "discussion_url": "https://news.ycombinator.com/item?id=49926628",
+      "published_at": "2026-10-02T02:51:27+00:00",
+      "summary": "Greg Kroah-Hartman – Security in the LLM Age [video]",
+      "score": 189,
+      "comments": 49,
+      "discussion_url": "https://news.ycombinator.com/item?id=49929391",
       "extra": {
         "top_comments": [
-          "I currently drive a mid 2000s Ford truck, which runs great and meets my needs, but lately I got interested in minivans/people carriers. I pretty quickly realized that newer vehicles seem to not just record, but export a lot of driving data.The minivan market is small. There are really only 4-5 available and every single one sends telemetry data from the car and makes it hard/impossible to opt out of selling your data. Additionally, without pretty extensive work there is no means of physically disabling the telemetry, which forces you to trust they'll honor your opt out request (vs re-enabling it with some update).I'm clearly in the vast minority on this, but it's so frustrating that there are no options beyond buying and installing a third-party bypass to disable this type of tracking. Worse, I'm aware that the absence of data is data itself. Is my insurance going raise my rates because my vehicle won't provide telemetry for them to buy?",
-          "if an owner decides they are uncomfortable with the data sharing described within them, they are faced with (arguably) unfair choices: - 01 accept the agreements regardless of their concerns - 02 stop using their car's connected-vehicle features - which includes remote start, the app, and other very useful features - 03 stop using the vehicle entirely Easy, I take #2. Is that it? This whole time I thought the article was talking about telemetry the car sends regardless.",
-          "> As one notable exception, Honda improved its data collection practices to prevent sending precise geolocation to a third party associated with user tracking.I know what my next car will be."
+          "Greatly appreciated the candor. I've included a few slides into text that i thought were eye-opening to me:From his Kernel Recipes 2026 slide on Mythos``` Mythos's 79 vulnerabilities: 24 - no detail at all \"something crashed\" 14 - not a bug at all 3 - totally made up data 15 - already fixed in latest release - 11 by others - 4 by anthropic 20 - fixes were needed - 7 \"assume a malicious filesystem image\" - 2 \"assume you can inject a malicious network packet into the middle of the stack\" - 2 \"NOMMU\" - 6 sctp networking issues for untrusted devices - 2 ipv6 minor network issues - 1 gpu driver for local malicious user ```GHK called this \"10 'real' bugfixes\", which to me sounds like there's a wild hype machine around these companies and uncritical parroting of every press release they make that falls apart when you engage the affected real experts.",
+          "> So what all of mythos; that whole big marketing issue of 79 bugs came down to one hour of kernel development.If you're someone at OpenAI or Anthropic and you truly believe what you're making could destroy the world, this is the kind of thing that isn't doing you any favors when it comes to convincing the public. The dissonance here is stark: - widely proclaiming that your new model is so dangerous it needs to be released only to select people, for safety - widely proclaiming the model easily found 79 bugs in linux, except that GKH says it took 1 hour to fix all of them because most weren't bugs and the rest were almost all completely trivial, unimportant, and/or not severe It doesn't mean the model isn't dangerous or super capable but wow this makes it realllll easy to doubt it and any future announcement.",
+          "At 3m19s Greg KH revealed what Mythos did in \"revealing\" 79 CVEs - pure pattern matching the previous decades of kernel developer's patches, and applying those mechanisms elsewhere to see if they have been universally patched. And Anthropic didn't cite Kernel Developers who original fixed/patched the CVEs like a decent human being would do. So yeah, Anthropic has the same problem OpenAI had for citing original work."
         ]
       }
     },
     {
-      "id": "49924618",
-      "title": "Vote on which of Hacker News' challenges for AI have been met",
-      "url": "https://stoppels.ch/goalposts/",
+      "id": "49936575",
+      "title": "From the creator of Redis; run LLM locally with ds4",
+      "url": "https://dwarfstar.sh/",
       "source": "Hacker News",
-      "published_at": "2026-10-01T17:32:43+00:00",
-      "summary": "Vote on which of Hacker News' challenges for AI have been met",
-      "score": 121,
-      "comments": 125,
-      "discussion_url": "https://news.ycombinator.com/item?id=49924618",
+      "published_at": "2026-10-02T18:01:16+00:00",
+      "summary": "From the creator of Redis; run LLM locally with ds4",
+      "score": 164,
+      "comments": 42,
+      "discussion_url": "https://news.ycombinator.com/item?id=49936575",
       "extra": {
         "top_comments": [
-          "My comment about humanity's last exam being a misnomer is included, and I proposed better ideas about what a last exam could look like. One of the things I said was \"solve an open math problem\" which has conclusively been done with Navier-Stokes (regardless of the controversy surrounding that). However, in the spirit of clarifying the goalposts, AI has only passed 1/6 of the tests I proposed. 17% is not a passing grade, so I'd say no, my challenge has not been met.Another thing to note is that the (presumably AI-generated) summary of my challenge does not accurately represent what I wrote, listing only half the things I said and saying \"or\" rather than \"and\".",
-          "There's one of mine in there where I predicted in 2023 that it would be 20 years until AI would be reliably able to entirely build and deploy arbitrary applications from a prompt. I was off by about 18 years on that one!",
-          "One thing I thought about as I responded to these: in many cases, I am convinced that a present-day LLM could accomplish the task at least once given an infinite compute budget and an infinite number of tries. For example: \"An AI surprises its user by asking them a question out of the blue.\" This has absolutely happened. But some of these are not routine occurrences, or the model cannot (at present) routinely and reliably complete the task in question. I wouldn't build a workflow that assumed an LLM's capacity to ask unprompted \"out of the blue\" questions.I thought the different variations on \"could AI pass the Turing test?\" were interesting in this regard. Surely any frontier LLM could pass a Turing test for some amount of time, and that's been the case for at least a year now. But I don't think we're anywhere close to a model that could pass an \"adversarial\" Turing test for an extended period of time."
+          "In case you like the store kv to disk so you can resume I keep this branch of llama.cpp that includes that same functionalityhttps://github.com/alainnothere/llama.cpp/commits/disk-cache...And you know it's load bearing each of the load baerings parts that bear some load and load a bear... you fight a bear because it took a load... or something like that...",
+          "I maintain a fork of ds4 as shared libraries and thus can be used with other languages via FFI, along with public builds/binaries [1]. I made ds4go [2] against ds4 using techniques inspired by yzma.In addition to the library bindings, we have a small library of tools (workspace for view/edit, scratchpad for persistence) and making your own is registering a Go function. And in recent weeks, I added the Vision and Qwen support, as ds4 added them.Even if you don't use the Go library, the ds4go binary makes it really easy to download the libraries off of HuggingFace with a TUI available vie Homebrew.Here's some TUI toy screenshots, sorry I still haven't released that code; it's of different quality than the others. [3]EDIT: add ds4go TUI screenshot gist [4][1] https://github.com/NimbleMarkets/ds4/releases/tag/v0.8.20260...[2] https://github.com/nimblemarkets/ds4go#install[3] https://gist.github.com/neomantra/ae47422c8daf7a458212c93992...[4] https://gist.github.com/neomantra/40180ade13df93290250ce8c6d...",
+          "https://github.com/antirez/ds4The project GitHub page is a much better introduction for the hn crowd."
         ]
       }
     },
     {
-      "id": "49926917",
-      "title": "Using Opus 5.5 to discover a new eyewitness record of the dodo",
-      "url": "https://resobscura.substack.com/p/using-opus-55-to-discover-a-new-eyewitness",
+      "id": "49937504",
+      "title": "Muse Gadgets",
+      "url": "https://gadgets.muse.ai",
       "source": "Hacker News",
-      "published_at": "2026-10-01T20:48:37+00:00",
-      "summary": "Using Opus 5.5 to discover a new eyewitness record of the dodo",
-      "score": 111,
-      "comments": 23,
-      "discussion_url": "https://news.ycombinator.com/item?id=49926917",
+      "published_at": "2026-10-02T19:26:54+00:00",
+      "summary": "Muse Gadgets",
+      "score": 143,
+      "comments": 68,
+      "discussion_url": "https://news.ycombinator.com/item?id=49937504",
       "extra": {
         "top_comments": [
-          "> Epistemological weirdness> They are also notably bad at judging the historical significance of what they find.I use LLMs for some things that are outside the more common use-cases (in my case 3D design for 3D printing) and one thing I've noticed is that the errors it makes are so completely unlike human errors that they are hard to anticipate.It will do things like build perfect snap catches but put them so the the pieces they are connecting are rotated 90 degrees from how they should be. It's \"dumb\" error, but hard to say the model itself if dumb because it does other very hard things so perfectly.> seven chord groupsThis sounds a lot more like Opus 5.0 than Opus 5.5 TBH. I wonder if that was an earlier investigation because 5.5 has improved that kind of language a lot.",
-          "Good read! How many pages of text were in scope? I'm not sure if the 1615+1629 pages were the total or just a subagent.If they were the total I would say it was arguably more impressive the author was able to narrow it down to just 3000 pages than it was to find the dodo mention amongst those!",
-          "My dad died and had many many notebooks of his journals with very hard-to-read handwriting. Is it worth the effort to scan all of these so I can feed them in and go to work. Seems like so much minutia is out there, ready to be meta-understood."
+          "I'm generally skeptical and critical of most things that Meta is doing (\"fool me once...\") and I definitely won't trust them enough to use their agents and give them any more data than I already do, but this is a super cute and fun idea!I love microcontrollers and DIY IoT as a hobby, a huge fan of ESP32s (so affordable and perfectly packaged in ready-to-use boards), and I can see how such easy, vibe-coded projects can inspire more people and show them how easy it is to get started with them today. (I remember my first experiments with microcontrollers and DSPs at college in 00s - the nightmare of even just flashing those devices, not to mention the almost-prohibitive cost to get them and the sometimes required JTAG programmers I faced in Poland... My BSc thesis project was reduced in scope a few times because my professor couldn't get some purchases and shipments approved on time)A toy with not much value? Sure. But who cares, it's fun and inspiring! They even recommend vibe-building so that the user doesn't need to download or configure SDKs. Awesome stuff for complete beginners to this area.Over a decade ago, I could see Google releasing such a whimsy, hackersy fun toy project. Sadly, not anymore... (Saying this as a former Google employee in 2017-2022, witnessing in person the sad, gradual change from hacker culture to corporate culture)",
+          "I'll go against the grain and say that I like this, I genuinely don't think this is anything but some internal team being excited about their product and giving you some firmware to connect stuff to their agents. Meta the trillion dollar company will not move at all from this.",
+          "The general theme of meta's approach across the board here is interesting - basically, they are trying to win in part by taking risks others aren't willing to. I can imagine they saw that all the success is coming so far when a someone is willing to cross a boundary that wasn't previously thought acceptable - from releasing ChatGPT in the first place, to things like OpenClaw.So now they are actively distributing SDKs and to let people \"hack\" custom hardware integrations to their already risky AI agents unleashed on the general public. Giving agents abilty to control things in the physical world - what could possibly go wrong?But here we are: so far the story is pretty much 100% \"fortune favors the bold\", and Meta is leaning into it."
         ]
       }
     },
     {
-      "id": "49927760",
-      "title": "Frog and Toad and the Increasingly Capable Machines",
-      "url": "https://www.frogandtoad.ai/",
+      "id": "49937631",
+      "title": "Updates to Full Disk Access in macOS",
+      "url": "https://developer.apple.com/news/?id=p6zjojqw",
       "source": "Hacker News",
-      "published_at": "2026-10-01T22:23:38+00:00",
-      "summary": "Frog and Toad and the Increasingly Capable Machines",
-      "score": 105,
-      "comments": 17,
-      "discussion_url": "https://news.ycombinator.com/item?id=49927760",
+      "published_at": "2026-10-02T19:37:01+00:00",
+      "summary": "Updates to Full Disk Access in macOS",
+      "score": 138,
+      "comments": 81,
+      "discussion_url": "https://news.ycombinator.com/item?id=49937631",
       "extra": {
         "top_comments": [
-          "For those not familiar with it already, the writing and art style are a well-executed pastiche of Arnold Lobel's ”Frog and Toad” books.https://en.wikipedia.org/wiki/Frog_and_Toad",
-          "has the estate of arnold lobel been compensated for this?",
-          "Great story! I read it in one sitting."
+          "I don’t quite understand why people complains this is bad for AI agents. Local Code (https://releases.drawthings.ai/p/public-beta-of-local-code-b...) doesn’t require full disk access, when you ask the agent to deal with some files it doesn’t have access to, the built-in ‘permit’ tool will trigger the OS folder grant interface and that information will be recorded both by Apple and by the app so it can be revoked later if you want. That allows you to not give full disk access to the app to be useful.",
+          "IMHO, it's good to add more specific controls for this. After reading this, I went and checked my list of app with full disk access:- Ghostty (fine, it's my terminal)- Alfred (fine, I use it for searching everywhere)Then I have a few turned off:- Spotify (why does it need full disk access) ??- Gemini (nope, don't need it to know everything about my computer)",
+          "I would like the ability to see which specific folders I have granted access to on an app by app basis. And edit. It’s not clear to me how you revoke an app’s individual folder access after you have granted it."
         ]
       }
     }
