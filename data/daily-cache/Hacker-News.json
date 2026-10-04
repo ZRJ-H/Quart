@@ -1,146 +1,147 @@
 {
-  "cached_at": "2026-10-03T13:33:17.999275+08:00",
+  "cached_at": "2026-10-04T11:00:47.088950+08:00",
   "articles": [
     {
-      "id": "49937276",
-      "title": "Apple Pass Designer",
-      "url": "https://developer.apple.com/pass-designer/",
+      "id": "49942706",
+      "title": "Kolibri: A Sovereign Open-Weight Model",
+      "url": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/",
       "source": "Hacker News",
-      "published_at": "2026-10-02T19:06:56+00:00",
-      "summary": "Apple Pass Designer",
-      "score": 376,
-      "comments": 233,
-      "discussion_url": "https://news.ycombinator.com/item?id=49937276",
+      "published_at": "2026-10-03T09:36:04+00:00",
+      "summary": "tech report: https://aleph-alpha.com/downloads/tech-report.pdfadditional paper: https://tej.as/blog/aleph-alpha-kolibri",
+      "score": 531,
+      "comments": 303,
+      "discussion_url": "https://news.ycombinator.com/item?id=49942706",
       "extra": {
         "top_comments": [
-          "What do people find interesting about this? This doesn’t seem at all significant to me",
-          "This is exactly the sort of software that was hard to prioritise before LLMs, and trivial to build with LLMs.There's nothing interesting going on here, and I don't mean that as a criticism. There's a clear schema, no particularly clever UX needed, you can build almost all of this out of standard UI components, and the problem is well defined.The only challenge is the actual time input for coding, and that's mostly gone today.",
-          "There are free, web-based wizards to create PKPass-format Apple Wallet passes. This one was posted on HN a few months ago.https://walletwallet.alen.ro/"
+          "The paper explains absolutely everything as if it was a tutorial \"how to made your own modern agentic LLM\". They even tell how they made their dataset. https://aleph-alpha.com/downloads/tech-report.pdf ; It's the first time I see this level of openness.",
+          "Thank you Aleph Alpha team for making it open.We as many other’s were curious to try and benchmark it.On that note, as a small gesture of support, we’ve hosted and made Kolibri-1 free for anyone to try for the next few days.No GPU. No setup. Just try it. tesseracted.com/kolibri-1-chat/https://x.com/konarkmodi/status/2106373678589960260?s=46",
+          ">We trained Kolibri with abstention data and with our Merlin-Arthur protocol. As a result, it is trained to say \"I don't know\" when the answer isn't in the context.https://aleph-alpha.com/en/blog/bounding-hallucinations-merl..."
         ]
       }
     },
     {
-      "id": "49933235",
-      "title": "The Legend of von Neumann (1973) [pdf]",
-      "url": "https://gwern.net/doc/math/1973-halmos.pdf",
+      "id": "49948254",
+      "title": "Federal judge calls Flock 'indiscriminate mass surveillance'",
+      "url": "https://techcrunch.com/2026/10/03/federal-judge-calls-flock-indiscriminate-mass-surveillance/",
       "source": "Hacker News",
-      "published_at": "2026-10-02T13:18:32+00:00",
-      "summary": "The Legend of von Neumann (1973) [pdf]",
-      "score": 266,
+      "published_at": "2026-10-03T22:07:13+00:00",
+      "summary": "Federal judge calls Flock 'indiscriminate mass surveillance'",
+      "score": 334,
+      "comments": 208,
+      "discussion_url": "https://news.ycombinator.com/item?id=49948254",
+      "extra": {
+        "top_comments": [
+          "License plate reader?So the device should require very specific license plates to scan for—not the current dragnet. The software should only \"ping\" when there is a confident match with said license plate(s)—and merely log which license plate, time stamp a single photo, and note the confidence level of it being a match.The frame buffer should be the only place (a frame of) video is ever stored at all (excepting the high-confidence match indicated above).The only issue remaining would be whether we trust the device/software to have complied (and not have a backdoor) and of course there needs to be a legal warrant for every license plate uploaded (and it should expire fairly frequently, likely requiring a new warrant to continue canning for the plate).",
+          "To Google and apple's credit they have at the least made location history stored on device instead of dealing with the slippery slope of warrants that ask for all devices around a point. Google specifically decided after a court ruling to get out of the morass of server side storage. There is a lot wrong with how permissioning works on android and Google services but this is not one of them.",
+          "Yes, that's what they are. But does that mean are they breaking federal law or unconstitutional? I believe we've been told by the courts repeatedly that we should have no expectation of privacy out in public."
+        ]
+      }
+    },
+    {
+      "id": "49946393",
+      "title": "Hole Punch: Sling your spaceship around gravitational fields",
+      "url": "https://notoriousbfg.com/hole-punch/",
+      "source": "Hacker News",
+      "published_at": "2026-10-03T18:06:45+00:00",
+      "summary": "Hole Punch: Sling your spaceship around gravitational fields",
+      "score": 244,
+      "comments": 61,
+      "discussion_url": "https://news.ycombinator.com/item?id=49946393",
+      "extra": {
+        "top_comments": [
+          "Great game, though the controls on mobile are a bit too imprecise.As you drag a hole, the size widgets should disappear so you can better see what's around it. They could pop back up again once you're done dragging.Personally I'd rather if you had to press a button or something (or long press?) to add a new hole. I keep accidentally adding new ones when all I want to do is adjust an existing one.Also spamming the user with the help screen right off the bat is a bit much. As long as they know it's there and can pull it up / dismiss it, I think it would be more fun to sort of discover the game mechanics yourself.Note several of the first 8 or so levels can be accomplished with a single minimum (8) sized black hole. Eg. I liked the simplicity of doing that on level 6.",
+          "Well, this is strangely familiar to a game I just vibe-coded recently!https://www.michaelfogleman.com/gravity-assist/",
+          "I love it. The dragging of black holes could be improved:* The black hole is not moved until the cursor has moved more than five pixels.* The first time the black hole moves in the dragging process, it moves more than one pixel, afterwards one. So it is a small jump and then it moves smooth.* The cursor icon changes to the drag symbol only after the mouse has already moved five pixels, not as soon as the mouse button is hold down.* When the mouse is outside the draggable zone, but still in the game window, the black hole is not dragged along the border."
+        ]
+      }
+    },
+    {
+      "id": "49949235",
+      "title": "We're going to need default hard budget caps on pretty much everything",
+      "url": "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/",
+      "source": "Hacker News",
+      "published_at": "2026-10-04T00:20:16+00:00",
+      "summary": "We're going to need default hard budget caps on pretty much everything",
+      "score": 213,
+      "comments": 114,
+      "discussion_url": "https://news.ycombinator.com/item?id=49949235",
+      "extra": {
+        "top_comments": [
+          "Network saturation is difficult. Even if you turn off the endpoint you can still saturate the network in between. And it's still bandwidth.I actually think network ACL triggers based on billing might be the only way to really enforce this.I witnessed a DDoS attack once that changed how I think about billing. It was locally provisioned hardware and the attackers had saturated the switches. Naively I said \"just block the CIDRs\" but the problem was the incoming ram is so saturated that it can't even get to the point of \"deny\" in the firmware.So from a technical perspective if there's an internal DDoS at AWS what do you do? Do you turn off the endpoint? Do you drop the sources from hitting it at the router? And even that costs money. Anyway that incident gave me a different level of appreciation for this challenge.Edit: this is mainly targeted at the people complaining why this took so long. At some point even telling you \"no sorry\" in a nice way is expensive. I'm sure recruiters can sympathize with this nowdays.",
+          "It’s incredible that in 2026, AWS and GCP are only just now introducing this. It’s possibly one of the most obviously needed features for a cloud provider.Also, does anyone know why it’s taken this long? I suspect it’s a technical reason. While one could be cynical, I doubt it’s an intentional business/product decision. Hard spending caps are both excellent product differentiators and could possibly save these providers money as they don’t have to forgive their users when they accidentally over-use a service.",
+          "Wait, Google Cloud finally added hard caps on spending per service? I've been wanting that for so many years! They sure took their sweet time.https://cloud.google.com/blog/topics/cost-management/new-ear...Edit: Ugh it's fake. Literally only works for four random services, unsupported for all the rest. Completely useless for all of my projects. Also dumb that the only supported term is \"monthly\" considering that months are different lengths, and that they don't bother to account for credits or discounts. Maybe next decade they'll get around to implementing something useful."
+        ]
+      }
+    },
+    {
+      "id": "49948332",
+      "title": "OpenAI safety leader quits, warning AI company's culture is 'broken'",
+      "url": "https://www.theguardian.com/technology/2026/oct/03/openai-safety-leader-quits-warning-ai-companys-culture-is-broken",
+      "source": "Hacker News",
+      "published_at": "2026-10-03T22:18:13+00:00",
+      "summary": "OpenAI safety leader quits, warning AI company's culture is 'broken'",
+      "score": 200,
       "comments": 143,
-      "discussion_url": "https://news.ycombinator.com/item?id=49933235",
+      "discussion_url": "https://news.ycombinator.com/item?id=49948332",
       "extra": {
         "top_comments": [
-          "My favorite von Neumann anecdote was a quote from Edward Teller: \"von Neumann would carry on a conversation with my 3 year old son, and the two of them would talk as equals, and I sometimes wondered if he used the same principle when he talked to the rest of us.\"",
-          "When you look at it holistically, von Neumann was more influential in science and mathematics in the 20th century than either Einstein or Planck. He wasn't as obvious a symbol of the scientific revolution, but his contributions to SO MANY THINGS at a fundamental level makes him stand out to me.",
-          "For a longer read, I can highly recommend the book \"The Man from the Future\" by Ananyo Bhattacharya. It's quite an easy read and extensively discusses the life and discoveries by John von Neumann in chronological order."
+          "Trolley problem:- If you allow to trolley to proceed, there's a 50% chance it will run over every human on the planet- But if you flip the switch, it takes the long way around, possibly bankrupting the trolley company. And you have a legal obligation to the shareholders to prevent that from happening at all costs.",
+          "Was this a \"build better sandboxing\" and \"don't tell people to eat glue\" safety leader, or a Roko's Basilisk believing safety leader?A lot of the \"AI safety\" types are very focused on the latter and not at all concerned with the former. We need both, but we clearly need a much stronger focus on the problems we are seeing now, and much less on the hypothetical problems we might see in the future.",
+          "Quitting in protest makes you look a little better than quitting because of a toxic work environment. I can't imagine working at OpenAI is at all pleasurable with the current amount of pressure they are likely inflicting on their employees."
         ]
       }
     },
     {
-      "id": "49932147",
-      "title": "A 12-year sequence of telescope images of a star and four planets orbiting",
-      "url": "https://bsky.app/profile/theplanetaryguy.com/post/3mwucf5ert22f",
+      "id": "49946567",
+      "title": "Getting the most out of Opus 5.5 in Claude and Claude Code",
+      "url": "https://claude.dev/blog/getting-the-most-out-of-opus-5-5/",
       "source": "Hacker News",
-      "published_at": "2026-10-02T11:07:17+00:00",
-      "summary": "A 12-year sequence of telescope images of a star and four planets orbiting",
-      "score": 234,
-      "comments": 51,
-      "discussion_url": "https://news.ycombinator.com/item?id=49932147",
+      "published_at": "2026-10-03T18:29:30+00:00",
+      "summary": "Getting the most out of Opus 5.5 in Claude and Claude Code",
+      "score": 173,
+      "comments": 125,
+      "discussion_url": "https://news.ycombinator.com/item?id=49946567",
       "extra": {
         "top_comments": [
-          "Not to self-plug, but here's my video of the same four planets:https://sefffal.github.io/images/orbital-animation.mp4The creator of the GIF above used a data from a range of different telescopes and wavelengths, whereas I made this with using data only from same telescope (Keck), instrument, and wavelength (3.5 microns; near infrared).",
-          "Worth being very clear that this is not a real video of the system, it's 10 static images with a few hundred interpolated \"fake\" frames. Still very cool though.",
-          "Amazing. Scrolling down one of the comments has an animation of starts around the center of the Milky Way. I have seen a few short ones of nebulae. There should be much much more of this sort of thing.I appreciate that scientist are not always after the pretty pictures. They can be expensive, do not always give the data needed, and the experiments do not always produce data that has obvious pretty picture potential. Still, for the average non professional scientist (me) the pictures are about all I will ever get out of the science."
+          "It’s a really good model. Over the past few days, I give Opus some general directives to basically speed up our CI, and telling it I care both about billing minutes and wall clock time. I told it to create a plan after analyzing everything in our CI, run the plan by a Fable subagent, and then focus on low-risk, high-reward changes.9 hours later, I had 12 PRs ready to be merged, and the net result is CI time has dropped from ~10 minutes to ~4 minutes, and billing minutes have dropped around 60%. Less than an hour of my attention.",
+          "It’s extremely good at frontend, particularly if it has an image reference. I chucked in design reference images into this and told it to focus on the flowing svgs, and it crushed this Star Trek computer-inspired layout: https://html.non.io/lcars-opus-5.5",
+          "Some of this advice is really missing the mark. I will speak to just one I know well. Many of my frequently used prompts have “think through this step by step” because if you don’t, it only considers the task holistically rather than step by step, and different issues emerge in that frame of thinking. I see this. Often when doing planning, for example, it will not notice interdependencies between tasks until you force it to think through doing the whole thing step by step (task by task) then it will notice that step 2 requires a feature introduced by step 14. It wouldn’t notice otherwise.Yes this has held true on Opus 5.5. I checked. It’s a massively better model, peer to Fable but with different strengths and weaknesses. But it still has this issue. Which to be fair, people do too. Planning is a learned skill.I think what they’re saying is that the harness no longer uses a text search on “think” to engage reasoning modes. Fair, that’s good to know. That doesn’t mean asking the model to think a certain way doesn’t have the intended effect."
         ]
       }
     },
     {
-      "id": "49933740",
-      "title": "With most information hidden, the game Stratego had stumped AI until now",
-      "url": "https://arstechnica.com/science/2026/10/ai-finally-beat-the-best-stratego-player-in-history-and-did-it-on-a-budget/",
+      "id": "49946895",
+      "title": "The work by Valve's Timur Kristóf on improving old AMD GPUs on Linux",
+      "url": "https://www.phoronix.com/news/XDC-2026-Valve-Timur-AMDGPU",
       "source": "Hacker News",
-      "published_at": "2026-10-02T14:11:24+00:00",
-      "summary": "https://www.nature.com/articles/s41586-026-11036-yhttps://arxiv.org/abs/2511.07312",
-      "score": 202,
-      "comments": 96,
-      "discussion_url": "https://news.ycombinator.com/item?id=49933740",
+      "published_at": "2026-10-03T19:14:48+00:00",
+      "summary": "The work by Valve's Timur Kristóf on improving old AMD GPUs on Linux",
+      "score": 158,
+      "comments": 21,
+      "discussion_url": "https://news.ycombinator.com/item?id=49946895",
       "extra": {
         "top_comments": [
-          "I loved Stratego so much as a kid. But, I eventually couldn't find anyone to play with me because I crushed everyone, including my dad who was much better than me at chess. But, I never would have thought it'd be a game that models would have a hard time with. It feels relatively simple. And, inexplicably, I never even thought that there might be serious players...I've kept the board game, one of the very few things I have from young childhood, but it's been twenty years since I played. I guess it's time to find an online Stratego. Surely someone in the whole world can beat me.Too bad I never played against an AI before they cracked it.",
-          "> The algorithm also learned far faster—it played about 34 times fewer games than DeepNash, and still ended up much stronger.Imo, this is the critical piece and what makes the AI work at all.With hidden information games, the best move depends on information you don’t have. So a move could be good or bad, it just depends on something that’s impossible to know.You’d like to search ahead, meaning “if I do this they will do that” but that’s impossible since you don’t even know what the opponent can do because you don’t know their hidden state.If the possible hidden states are randomly distributed, you are screwed. It’s just like rock paper scissors: there’s no best move if your opponent is unpredictable.However if you can quickly learn to predict their moves, it becomes possible to make informed decisions about what to do.",
-          "Oh no! Stratego had been on my mind as something we just hadn't tried hard enough to make a winning bot for, including the DeepMind effort from 2022. I was planning to make the first one.I thought this was slightly less crank-coded than trying to prove the Riemann Hypothesis, but maybe these days you just ask Claude to do that and it tells you there's a counterexample at 1 + πi that no one ever noticed before."
+          "I just bought a used Ayaneo 2 handheld, it has an old(er) mobile RDNA 2 GPU and I was blown away by how well this thing performed under Linux. Almost everything (that's not a recent AAA game) runs beautiful and a lot faster/smoother than it does under Windows. The experience has been so good that I'm considering switching my main pc (with a 9070XT) to Linux as well.No doubt Timur contributed heavily to this given Valves Steamdeck (which uses a very similar but slower GPU).Given the current hardware prices it's pretty awesome to see someone squeezing maximum performance out of old hardware!",
+          "Direct link to the talk, with timestamp: https://youtu.be/j5W5ErEMnvM?t=21385",
+          "Honestly, the folks writing inference drivers for Llama.cpp / GGML would sort of benefit from better compiler work like this.In general, Valve's work has been exceptional and supplementing AMD's own ROCM/OpenCL and Vulkan team, they've gotten a lot of defaults right and people should work together with Valve to improve support for their chips."
         ]
       }
     },
     {
-      "id": "49936575",
-      "title": "From the creator of Redis; run LLM locally with ds4",
-      "url": "https://dwarfstar.sh/",
+      "id": "49949438",
+      "title": "Bob Cringely Has Died",
+      "url": "https://news.ycombinator.com/item?id=49949438",
       "source": "Hacker News",
-      "published_at": "2026-10-02T18:01:16+00:00",
-      "summary": "From the creator of Redis; run LLM locally with ds4",
-      "score": 197,
-      "comments": 56,
-      "discussion_url": "https://news.ycombinator.com/item?id=49936575",
+      "published_at": "2026-10-04T00:50:52+00:00",
+      "summary": "I heard from a friend of the family that Bob passed away in his sleep early Saturday. Very sad news. Bob, who's real name was Mark Stevens, was an early employee of Apple and was best known for his PBS documentaries, especially \"Triumph of the Nerds\". He will be missed.",
+      "score": 155,
+      "comments": 26,
+      "discussion_url": "https://news.ycombinator.com/item?id=49949438",
       "extra": {
         "top_comments": [
-          "I maintain a fork of ds4 as shared libraries and thus can be used with other languages via FFI, along with public builds/binaries [1]. I made ds4go [2] against ds4 using techniques inspired by yzma.In addition to the library bindings, we have a small library of tools (workspace for view/edit, scratchpad for persistence) and making your own is registering a Go function. And in recent weeks, I added the Vision and Qwen support, as ds4 added them.Even if you don't use the Go library, the ds4go binary makes it really easy to download the libraries off of HuggingFace with a TUI available vie Homebrew.Here's some TUI toy screenshots, sorry I still haven't released that code; it's of different quality than the others. [3]EDIT: add ds4go TUI screenshot gist [4][1] https://github.com/NimbleMarkets/ds4/releases/tag/v0.8.20260...[2] https://github.com/nimblemarkets/ds4go#install[3] https://gist.github.com/neomantra/ae47422c8daf7a458212c93992...[4] https://gist.github.com/neomantra/40180ade13df93290250ce8c6d...",
-          "https://github.com/antirez/ds4The project GitHub page is a much better introduction for the hn crowd.",
-          "Nothing comparable but inspired from DwarfStar I wrote a little inference engine for Intel Xe-LP (no XMX) 32GB laptops. The only model supported right now is a quantized Gemma-4, but I don't exclude in the future to support other MoE of similar size. Too bad we have no Qwen 3.8 35B-A3B yet.I'm also looking into expanding the protocol and the engine to support various steering techniques.https://github.com/simoneiacomino/xenolith"
-        ]
-      }
-    },
-    {
-      "id": "49937504",
-      "title": "Muse Gadgets",
-      "url": "https://gadgets.muse.ai",
-      "source": "Hacker News",
-      "published_at": "2026-10-02T19:26:54+00:00",
-      "summary": "Muse Gadgets",
-      "score": 170,
-      "comments": 77,
-      "discussion_url": "https://news.ycombinator.com/item?id=49937504",
-      "extra": {
-        "top_comments": [
-          "I'll go against the grain and say that I like this, I genuinely don't think this is anything but some internal team being excited about their product and giving you some firmware to connect stuff to their agents. Meta the trillion dollar company will not move at all from this.",
-          "The general theme of meta's approach across the board here is interesting - basically, they are trying to win in part by taking risks others aren't willing to. I can imagine they saw that all the success is coming so far when a someone is willing to cross a boundary that wasn't previously thought acceptable - from releasing ChatGPT in the first place, to things like OpenClaw.So now they are actively distributing SDKs and to let people \"hack\" custom hardware integrations to their already risky AI agents unleashed on the general public. Giving agents abilty to control things in the physical world - what could possibly go wrong?But here we are: so far the story is pretty much 100% \"fortune favors the bold\", and Meta is leaning into it.",
-          "I'm generally skeptical and critical of most things that Meta is doing (\"fool me once...\") and I definitely won't trust them enough to use their agents and give them any more data than I already do, but this is a super cute and fun idea!I love microcontrollers and DIY IoT as a hobby, a huge fan of ESP32s (so affordable and perfectly packaged in ready-to-use boards), and I can see how such easy, vibe-coded projects can inspire more people and show them how easy it is to get started with them today. (I remember my first experiments with microcontrollers and DSPs at college in 00s - the nightmare of even just flashing those devices, not to mention the almost-prohibitive cost to get them and the sometimes required JTAG programmers I faced in Poland... My BSc thesis project was reduced in scope a few times because my professor couldn't get some purchases and shipments approved on time)A toy with not much value? Sure. But who cares, it's fun and inspiring! They even recommend vibe-building so that the user doesn't need to download or configure SDKs. Awesome stuff for complete beginners to this area.Over a decade ago, I could see Google releasing such a whimsy, hackersy fun toy project. Sadly, not anymore... (Saying this as a former Google employee in 2017-2022, witnessing in person the sad, gradual change from hacker culture to corporate culture)"
-        ]
-      }
-    },
-    {
-      "id": "49933869",
-      "title": "The Forgetful CPU (Linux on M4)",
-      "url": "https://yuka.dev/blog-2026-10-02-linux-m4.html",
-      "source": "Hacker News",
-      "published_at": "2026-10-02T14:22:12+00:00",
-      "summary": "The Forgetful CPU (Linux on M4)",
-      "score": 167,
-      "comments": 79,
-      "discussion_url": "https://news.ycombinator.com/item?id=49933869",
-      "extra": {
-        "top_comments": [
-          "Imagine how big Apple would/could be if they embraced open hardware. They do have a moat here. macOS is so bloated, I hate it, but the hardware is just so much better than anything else.",
-          "Not related to this but the other day I was searching for a good external trackpad that would work with macOS and there are very few (and not good) and every discussion was about how nothing comes close to Apple magic trackpad. The question is why can't other companies create such a good trackpad for macOS, it turns out they can't because the whole protocol for touchpad/gestures etc are proprietary and closed on macOS side so essentially any 3rd party trackpad has to emulate a mouse device. Thats what you get when a company makes computer and its OS and also its accessories and also software services, the whole stack, you either use their whole thing or not."
-        ]
-      }
-    },
-    {
-      "id": "49937631",
-      "title": "Updates to Full Disk Access in macOS",
-      "url": "https://developer.apple.com/news/?id=p6zjojqw",
-      "source": "Hacker News",
-      "published_at": "2026-10-02T19:37:01+00:00",
-      "summary": "Updates to Full Disk Access in macOS",
-      "score": 165,
-      "comments": 100,
-      "discussion_url": "https://news.ycombinator.com/item?id=49937631",
-      "extra": {
-        "top_comments": [
-          "> We give developers powerful APIs to build incredible capabilities> Full Disk Access largely sidesteps these controlsThat's because you don't really. Just like you don't give users \"powerfulf\" controls, so instead they have to resort to dumb ones like \"Full disk\"For example, if you care about \"mail, messages, and even browsing history\", why isn't there a subset of \"full disk access except for reading mail/messages/browsing history\"? Or if vibe code have some basic disk sizing functionality to ask questions about your files, why can't it have a more granular \"full disk read only access for file sizes only\" so that your vibe coded disk visualization app can't destroy your data or your privacy> can only do so with very explicit user action.Which is in the same vein and is mostly useless, just another inconvenient bump",
-          "IMHO, it's good to add more specific controls for this. After reading this, I went and checked my list of app with full disk access:- Ghostty (fine, it's my terminal)- Alfred (fine, I use it for searching everywhere)Then I have a few turned off:- Spotify (why does it need full disk access) ??- Gemini (nope, don't need it to know everything about my computer)",
-          "I don’t quite understand why people complains this is bad for AI agents. Local Code (https://releases.drawthings.ai/p/public-beta-of-local-code-b...) doesn’t require full disk access, when you ask the agent to deal with some files it doesn’t have access to, the built-in ‘permit’ tool will trigger the OS folder grant interface and that information will be recorded both by Apple and by the app so it can be revoked later if you want. That allows you to not give full disk access to the app to be useful."
+          "I actually don't know who Bob Cringely is, and it is unfortunate to have learned about him in this way.",
+          "I liked his \"Plane Crazy: Building a Plane in 30 Days\" on PBS.Watching him try (and fail) to build a composite airplane says so much about the allure of modern techniques (I won't spoil the end, but old-school gets the last laugh). I've been less than enthusiastic about modern composites ever since seeing this show.Bob's attempt (and short temper) reveals a good deal of hubris on his part.The documentary is a fascinating failure and a masterclass in attempting to salvage a show when the whole premise for the show completely collapses.[1] https://youtu.be/FSNzF-KSGiw",
+          "Loved his book, and documentary.BTW, there are 2 \"Robert X. Cringely\", one owned by InfoWorld, one owned by Mark Stephens.https://www.wired.com/1998/12/cringely/"
         ]
       }
     }
