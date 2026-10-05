@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-10-04T14:08:47.455469+08:00",
+  "cached_at": "2026-10-05T11:01:01.152200+08:00",
   "articles": [
     {
       "id": "https://huggingface.co/blog/microsoft/thinkingbox",
@@ -44,6 +44,18 @@
       "source": "Google Research",
       "published_at": "2026-10-02T14:57:41+00:00",
       "summary": "Mobile Systems",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
+      "id": "https://huggingface.co/blog/ServiceNow-AI/autosynthdata",
+      "title": "AutoSynthData: Generating Training Data for Enterprise Agents",
+      "url": "https://huggingface.co/blog/ServiceNow-AI/autosynthdata",
+      "source": "Hugging Face",
+      "published_at": "2026-10-02T04:01:31+00:00",
+      "summary": "",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
