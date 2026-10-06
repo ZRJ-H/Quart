@@ -1,147 +1,146 @@
 {
-  "cached_at": "2026-10-05T14:00:59.338196+08:00",
+  "cached_at": "2026-10-06T11:01:48.824228+08:00",
   "articles": [
     {
-      "id": "49949438",
-      "title": "Tell HN: Bob Cringely has died",
-      "url": "https://news.ycombinator.com/item?id=49949438",
+      "id": "49969183",
+      "title": "Beam: Reflection's 501B open-weight model",
+      "url": "https://reflection.ai/blog/introducing-beam",
       "source": "Hacker News",
-      "published_at": "2026-10-04T00:50:52+00:00",
-      "summary": "I heard from a friend of the family that Bob passed away in his sleep early Saturday. Very sad news. Bob, who's real name was Mark Stevens, was an early employee of Apple and was best known for his PBS documentaries, especially \"Triumph of the Nerds\". He will be missed.",
-      "score": 851,
-      "comments": 181,
-      "discussion_url": "https://news.ycombinator.com/item?id=49949438",
-      "extra": {
-        "top_comments": [
-          "I liked his \"Plane Crazy: Building a Plane in 30 Days\" on PBS.Watching him try (and fail) to build a composite airplane says so much about the allure of modern techniques (I won't spoil the end, but old-school gets the last laugh). I've been less than enthusiastic about modern composites ever since seeing this show.Bob's attempt (and short temper) reveals a good deal of hubris on his part.The documentary is a fascinating failure and a masterclass in attempting to salvage a show when the whole premise for the show completely collapses.[1] https://youtu.be/FSNzF-KSGiw",
-          "Damn. I've loved Bob and his writings ever since I read Accidental Empires as a kid. He went through some crazy shit over the last few years (lost his house, almost blind). And when he started blogging again this year (https://www.cringely.com/2026/05/27/where-the-heck-have-i-be...), the stories got even worse (lost his son, heart attack, stroke). RIP.",
-          "He was a very entertaining blogger! RIP.However, he was also ripping people off and making up stuff: https://www.jeremyreimer.com/rockets-item.lsp?f=true&p=272"
-        ]
-      }
-    },
-    {
-      "id": "49953495",
-      "title": "Run Qwen 3.8 Flash Next (125B) on consumer hardware (RTX 4090) at 100T/s",
-      "url": "https://github.com/Niko1221/Strata",
-      "source": "Hacker News",
-      "published_at": "2026-10-04T12:51:53+00:00",
-      "summary": "Run Qwen 3.8 Flash Next (125B) on consumer hardware (RTX 4090) at 100T/s",
-      "score": 697,
-      "comments": 320,
-      "discussion_url": "https://news.ycombinator.com/item?id=49953495",
-      "extra": {
-        "top_comments": [
-          "I'm a little skeptical of going below 4-bit quants due to the potential for significant degradation in quality. I'm running 4-bit quants on an RTX Pro 6000 rented for approximately $1/hour and getting about 1.2 million tokens out and 40 million tokens in per hour with caching. The quality of 4-bit quant is good enough for difficult but well-scoped coding tasks. Here is the inference stack I am using: https://www.reddit.com/r/BlackwellPerformance/s/FrKwk3GoDK",
-          "I've just tested Strata on a simple 50 image vision benchmark. The task is to output the exact coordinates of a requested object. The result via Strata had a median error distance of 154.8 pixels, avg of 168.8. Running the exact same GGUF and vision adapter weights on llama.cpp gives me a median error of 46.5, avg 81.4.To put that into perspective, here are some more numbers from other models via llama.cpp:Median/AverageQwen 3.5 9B BF16: 46.5 / 193.3Qwen 3.6 35B Q4 K XL: 38.4 / 76.4Qwen 3.5 122B Q3 K M: 32.9 / 68.6The difference in vision performance is as large as the jump from a 9B model to a 35B model. All tests were performed at temp=0.I have done no further testing, as these results line up perfectly with my expectations.",
-          "I tried it and it worked surprisingly well. On my machine (Nvidia 4090, 128GB DDR5, Ryzen 7950x3d) I'm getting 124 tokens per sec, thought to share it here.https://huggingface.co/Qwen/Qwen3.8-Flash-Next"
-        ]
-      }
-    },
-    {
-      "id": "49957116",
-      "title": "Turn off Apple Intelligence on macOS 27 and get its disk space back",
-      "url": "https://github.com/omlahore/RemoveMacAI",
-      "source": "Hacker News",
-      "published_at": "2026-10-04T19:42:25+00:00",
-      "summary": "Turn off Apple Intelligence on macOS 27 and get its disk space back",
-      "score": 484,
-      "comments": 302,
-      "discussion_url": "https://news.ycombinator.com/item?id=49957116",
-      "extra": {
-        "top_comments": [
-          "Reminds me of all the de-crufting you've always needed to do when you install Windows. Looks like we've gotten to the point on macOS too, where you need to run third party scripts on a new OS installation to gain back control of your system resources and remove unwanted crapware.",
-          "I no longer have a Mac as I’ve moved over to Linux, but my iOS device leaves me very frustrated that I can no longer disable this AI stuff with a simple toggle.It seems insane given that Apple’s competitors (Microsoft, Firefox, probably others) moved toward a global AI switch to make the choice easy for their customers.",
-          "This is stuff on the level of O&O ShutUp10. Which is a good tool, but also, a Windows tool for very (back in the day) Windows-specific nonsense.What's going on at Apple product strategy?"
-        ]
-      }
-    },
-    {
-      "id": "49957068",
-      "title": "Improper redaction reveals Google Data Center water and electricity usage",
-      "url": "https://www.1011now.com/2026/09/30/more-questions-than-answers-about-lincolns-google-data-center-water-electricity-usage/",
-      "source": "Hacker News",
-      "published_at": "2026-10-04T19:37:05+00:00",
-      "summary": "Improper redaction reveals Google Data Center water and electricity usage",
+      "published_at": "2026-10-05T19:16:35+00:00",
+      "summary": "Beam: Reflection's 501B open-weight model",
       "score": 335,
-      "comments": 448,
-      "discussion_url": "https://news.ycombinator.com/item?id=49957068",
+      "comments": 97,
+      "discussion_url": "https://news.ycombinator.com/item?id=49969183",
       "extra": {
         "top_comments": [
-          "I lived in a smaller rural town near a Google datacenter. During my career there I had routinely come across some outlandish accusations made about our water/power usage from the locals. But for obvious reasons I could never dispute them. I remember we hired a local who'd grown up in the town and he was \"really surprised\" when he started to see what we were doing to remain efficient.The current data center craze just feels like the same thing but on a bigger scale.",
-          "As other commenters have pointed out, 13.3 million gallons = ~40.8 acre-feet and this being Nebraska, the obvious comparison is agriculture (Corn and Soybeans being the main crop).The average Nebraska farm is 989 acers[1] as of 2022 and uses roughly ~1,200 acre-feet of water (or roughly 390 million gallons) per year[2]. So a single average Nebraska farm uses roughly 30 times the water the Lincoln data center uses per year. There are 44,479 farms/ranches covering 44 million acres, which accounts for over 90% of the state's total land area.Until I looked this up, I didn't appreciate the scale of water usage in farming (even in a state like Nebraska that gets a large amount of rainfall compared to Central or Southern California). I hope that the current data center environmental focus continues to shed light on our industrial water and electrical usage.[1]http://farmflavor.com/nebraska/nebraska-crops-livestock/top-... [2]https://cropwatch.unl.edu/2024/2023-irrigation-and-water-man...",
-          "So, basically, not a meaningful amount of water at all. Credit to the story authors for taking the time to frame what 13MM gallons actually works out to."
+          "Always glad to see more open-weight models, but this caption on the 2nd demo image had me do a double-take: \"Land or Water Generalization Experiment: We recreated the viral X puzzle by asking Beam to create a fixed 180×90 grid for longitudes -179° to 179° and latitudes -89° to 89°, with 16,200 points. This puzzle is a few days old, so could not appear in the training data, thus testing the model’s generalization. Beam gets 95.5% coverage right, putting us between Opus 5 (92.5%) and Fable 5 (97.8%), which shows how well it generalizes to novel new tasks.\"Oof, no, this \"puzzle is a few days old\" is incorrect even if it's a social media trend just recently. Asking a model to generate a world map in this way is _at least_ from August 2025 as it appeared on LessWrong at that time: https://www.lesswrong.com/posts/xwdRzJxyqFqgXTWbH/how-does-a...",
+          "Does this one also routes to Claude under the hood like Reflection 70B did? I recall they even run a basic regex to remove \"Claude\" from the output. Then they promised to be completely transparent on the postmortem (they claim they had no idea what had happened), but the postmortem never came",
+          "> Beam is a sparse Mixture-of-Experts model with 501 billion total parameters, 23 billion active, built for coding, reasoning, and agentic workloads.> Beam’s capabilities come from major investments in both pretraining and reinforcement learning (RL). We pretrained the model on 23.8 trillion diverse, curated, high-quality tokens from the web and proprietary licensed datasets, matching or outperforming available similar-sized open base models. In parallel, we developed the algorithms, training environments, and infrastructure needed to sustain high-compute RL at exceptional scale. Our high-compute RL run generated over 100 million rollouts on 10.5K NVIDIA GB300 GPUs over 4 weeks of training.Early access, no weights no tech details, just a sign up here for info"
         ]
       }
     },
     {
-      "id": "49960084",
-      "title": "Nearly 200 people under observation after Irkutsk lab worker dies from plague",
-      "url": "https://www.themoscowtimes.com/2026/10/02/nearly-200-people-under-observation-after-irkutsk-lab-worker-dies-from-plague-a93857",
+      "id": "49971846",
+      "title": "ChatGPT is adding real cartoonists' signatures to fake New Yorker cartoons",
+      "url": "https://www.niemanlab.org/2026/10/chatgpt-is-adding-real-cartoonists-signatures-to-fake-new-yorker-cartoons/",
       "source": "Hacker News",
-      "published_at": "2026-10-05T02:31:45+00:00",
-      "summary": "Nearly 200 people under observation after Irkutsk lab worker dies from plague",
-      "score": 163,
-      "comments": 117,
-      "discussion_url": "https://news.ycombinator.com/item?id=49960084",
+      "published_at": "2026-10-05T22:46:45+00:00",
+      "summary": "ChatGPT is adding real cartoonists' signatures to fake New Yorker cartoons",
+      "score": 310,
+      "comments": 202,
+      "discussion_url": "https://news.ycombinator.com/item?id=49971846",
       "extra": {
         "top_comments": [
-          "I literally just finished Annie Jacobsen's book 'Biological War: A Scenario' last week where the central plot point is an accidental release of modified form of pneumonic plague from a lab in Siberia. Very coincidental timing, especially since it made me wonder how often labs like these have accidents and we never hear about them because it is cleaned up without issue.",
-          "So breaks a test tube of live bacteria at an “anti-plague institute”, possible infects 100 colleagues, then when she developed plague like symptoms is taken to hospital and possibly infects 100 patients.I think they need to investigate their safety protocols> She reportedly told medical staff that she had accidentally broken a test tube containing live bacteria while collecting samples for testing.> At least 197 people who may have had contact with her were reportedly placed under medical isolation, including more than 100 in hospital wards.",
-          "Are we fairly confident that these labs do more good than the risk they present to the public? I’m not sure we should be keeping dangerous pathogens around just for giggles and PhD papers. What are examples of how the research done in these places improves public health?"
+          "The problem is not that ChatGPT is doing that, the problem is that it's not being sued into oblivion after.",
+          "Plagiarism as a Service.We can all try really hard to pretend that's not the business model, but that's totally the business model.",
+          "The part of the AI generating the mashup doesn’t really understand what the signature means, or how it may be interpreted, it’s just a visual part of a New Yorker cartoon. Elsewhere in ChatGPT there is plenty of information about signatures and what they mean, and what plagiarism is.It’s not organized like a human brain, it shouldn’t be surprising that unusual results occur. They are approximating human intelligence from a different angle. It’s interesting to see the improvements in areas like this that require introspection that isn’t fully wired up yet.[edit] I should add that a human making a New Yorker cartoon is extremely iterative and introspective. Current generative AI is meant to push it out, and you can do the iteration and introspection yourself."
         ]
       }
     },
     {
-      "id": "49959869",
-      "title": "Powerless F1 drivers frustrated by Bahrain F1 software glitch",
-      "url": "https://www.motorsport.com/f1/news/horrible-totally-unacceptable-powerless-f1-drivers-frustrated-by-bahrain-f1-software-glitch/10861968/",
+      "id": "49970667",
+      "title": "Opus 5.5 agents discover two room-temperature magnetic semiconductor candidates",
+      "url": "https://www.vals.ai/blogs/room-temperature-magnetic-semiconductors",
       "source": "Hacker News",
-      "published_at": "2026-10-05T01:54:08+00:00",
-      "summary": "Powerless F1 drivers frustrated by Bahrain F1 software glitch",
-      "score": 163,
-      "comments": 95,
-      "discussion_url": "https://news.ycombinator.com/item?id=49959869",
+      "published_at": "2026-10-05T21:00:21+00:00",
+      "summary": "Opus 5.5 agents discover two room-temperature magnetic semiconductor candidates",
+      "score": 234,
+      "comments": 167,
+      "discussion_url": "https://news.ycombinator.com/item?id=49970667",
       "extra": {
         "top_comments": [
-          "Seems wild that they can code and deploy an update of a critical-seeming component in the field like that. I thought such a firmware update would need extensive QA in the lab, along with root causing why this bug slipped through their processes anyway.But maybe that's the difference between shipping a controller for F1 versus shipping one for an industrial or consumer product? shrug.",
-          "A question for someone who knows more about F1: Is this firmware shared by all cars? Or some local server at the track the cars connect to? Why is F1 able to control individual cars like this? The article is very light on details as to what exactly is going on...",
-          "I just finished watching the race. The start was certainly a callback to the start of the season when cars were dropping like flies and having constant odd problems."
+          "> We’re all used to two types of magnet. The common one, the fridge magnet, is ferromagnetic — its atomic magnets all point the same way (up or down), adding their magnetic effects. The less well known one, the antiferromagnet (AF), has neighbouring atomic magnets that point opposite ways and exactly cancel out magnetically.This is a very bizarre introduction. People encounter diamagnets (e.g., copper) and paramagnets (e.g., aluminum) way more than they encounter antiferromagnets. I don't know why you'd ever cast magnetism as a false binary between ferromagnets and antiferromagnets, without acknowledging any other types of magnetic order.(I did a PhD in magnetic materials)Edit: I'll add that whether an antiferromagnet is useful, say, for exchange biasing a ferromagnetic thin film, depends on many factors. Just looking at antiferromagnetism alone you've got collinear vs non-collinear, G-type vs A-type vs C-type, commensurate vs incommensurate, and isotropic vs anisotropic; and all of that interacts with the interface structure, yada yada yada. It would be helpful if the authors elaborated on the expected properties of these materials. I personally don't know what people want room-temperature magnetic semiconductors for, but I'd be curious to learn what set of properties they think would be useful.",
+          "After the LK-99 debacle, I'm taking this with a truck load of salt.",
+          "In a way, you can think of pretty much anything we express with language, especially things that are already modeled in scientific language, or logical language, or in equations or code; to be representable in a parametric/searchable spaceThus, you can build ai/ml models+agents to explore those spaces, at a speed and scope much larger than what any human can doI can imagine findings like these are going to keep increasing in frequency to a point in which the bar for novelty goes a lot higher"
         ]
       }
     },
     {
-      "id": "49956681",
-      "title": "A browser-native classic Visual Basic VB6 IDE",
-      "url": "https://wieslawsoltes.github.io/VB6/",
+      "id": "49971230",
+      "title": "Find the flattest route between any two points in SF",
+      "url": "https://flattensf.com/",
       "source": "Hacker News",
-      "published_at": "2026-10-04T18:49:17+00:00",
-      "summary": "A browser-native classic Visual Basic VB6 IDE",
-      "score": 153,
-      "comments": 56,
-      "discussion_url": "https://news.ycombinator.com/item?id=49956681",
+      "published_at": "2026-10-05T21:40:50+00:00",
+      "summary": "Find the flattest route between any two points in SF",
+      "score": 128,
+      "comments": 40,
+      "discussion_url": "https://news.ycombinator.com/item?id=49971230",
       "extra": {
         "top_comments": [
-          "The property grid control is still the greatest general purpose UI of all time. Define your classes with some attributes and it just works. It was all downhill from there with web and mobile.",
-          "Looks great! However using an active trademark from a mega corp seems like risky move even for a fun project.",
-          "Wow, this feels almost like the real thing.Is there something similar for the web now? Easy UI editor but a fully featured language behind with direct database access."
+          "Checkout https://bikehopper.org for solid elevation, bike infrastructure and transit-aware routing around the Bay Area. Some friends and I built this about 5 years ago and continue to maintain it. We use 1m DTM elevation data for SF and 50m for rural areas. DTM is a must for elevation based routing in SF as there are so many sizable buildings, large trees the other models fail hard.",
+          "It's not accurate. I mapped it from my house on Cabrillo St in the outer Richmond to 4th avenue and it says I need to climb 25th avenue then walk Geary instead of correctly telling me to use 23rd avenue that is completely flat.",
+          "It would be neat if it there were an option which added distance and elevation gain, but minimized the grade.For example, a route from SOMA to Nob Hill can be made flatter by approaching from either the east or west. Technically the \"flattest\" as measured by elevation gain between the two is straight up Taylor from Market, but it's much nicer to bike to the top of Nob Hill by going out of the way (e.g. Polk → California, Embarcadero → Broadway, etc.)"
         ]
       }
     },
     {
-      "id": "49958569",
-      "title": "Self-hosted HTTP tunnels with SSH and Nginx",
-      "url": "https://vincent.bernat.ch/en/blog/2026-http-over-ssh",
+      "id": "49971523",
+      "title": "Texas city demands $2M for public records on Flock usage",
+      "url": "https://arstechnica.com/tech-policy/2026/10/texas-city-demands-2m-for-public-records-on-flock-usage/",
       "source": "Hacker News",
-      "published_at": "2026-10-04T22:25:10+00:00",
-      "summary": "Self-hosted HTTP tunnels with SSH and Nginx",
-      "score": 110,
-      "comments": 30,
-      "discussion_url": "https://news.ycombinator.com/item?id=49958569",
+      "published_at": "2026-10-05T22:05:57+00:00",
+      "summary": "Texas city demands $2M for public records on Flock usage",
+      "score": 119,
+      "comments": 19,
+      "discussion_url": "https://news.ycombinator.com/item?id=49971523",
       "extra": {
         "top_comments": [
-          "A number of years ago, I created a fully open source (MIT) project called sish [0] that does just this.sish is a SSH server written specifically for tunneling. You get all of the benefits of SSH, but also automatic TLS, a web console of requests a tunnel has received, and various other features. You can also tunnel more than just HTTP(S). You can tunnel websockets, TCP connections, and even have internal alias connections for using ProxyJump within the tunnel. All stateless and all protected with SSH auth.If you’re not interested in self hosting, there’s a hosted version at tuns.sh [1] that has multi region support and a few other cool features (including UDP tunneling) as part of the pico.sh [2] membership ($2/mo). Happy to answer any questions in this space![0] https://github.com/antoniomika/sish[1] https://tuns.sh[2] https://pico.sh",
-          "For this stuff, I'm most excited about https over iroh.- https://github.com/aflin/iroh-webproxy- https://github.com/n0-computer/iroh-proxy-utilsNo port forwarding. No public IP required. No special proxy to set up.Iroh already runs public relays. Your two computers will signal through those, and then port-knock and form a direct connection to each other, perfectly encrypted.We just need to define a new https:// url, like ... let's call it \"irohttps://\" maybe, so then you could contact my laptop with \"irohttps:///path?query\".",
-          "This is one of the core things I've been working towards with DNTLS [1]. I love the idea of tunnels, especially for sharing between private parties. The SaaS providers (Tailscale, Cloudflare, etc.) have done a good job making it really easy on their infra, but it really blurs the line of \"self-hosted\" to me. Ideally we end up with solutions like this that can be run entirely without an intermediary.[1]: https://dntls.substack.com/p/the-new-internet"
+          "Been there with a 33M cost estimate [1]. If the requester is reading this -- hold them to it and request a much smaller but still significant amount of records. Use that as the foundation for \"how much time it actually takes\". Another option is to get clever with helping them with means and modes of review/redaction. This is how I got the email metadata for 6M emails from Houston for example.Another example from Vermont's governor's office: https://www.muckrock.com/foi/vermont-80/email-metadata-55744...Happy to help more but I'll probably be unavailable tonight.[1] https://mchap.io/that-time-the-city-of-seattle-accidentally-...",
+          "Original article specific to the $2.3M invoice:https://www.texastribune.org/2026/10/05/texas-flock-cameras-...Less egregious, but still egregious, a few weeks ago a local news investigator in Houston was quoted $121,000 for public records request related to Flock cameras:https://www.click2houston.com/news/local/2026/09/24/harris-c...",
+          "FOIA requests that have to be redacted are labor intensive. However, flock shouldn’t need to be redacted right? They’re just public webcams. Lots of those already exist and many stream live."
+        ]
+      }
+    },
+    {
+      "id": "49970871",
+      "title": "Dust: Pretraining Transformers Without Backpropagation",
+      "url": "https://qlabs.sh/research/dust",
+      "source": "Hacker News",
+      "published_at": "2026-10-05T21:15:07+00:00",
+      "summary": "Dust: Pretraining Transformers Without Backpropagation",
+      "score": 116,
+      "comments": 19,
+      "discussion_url": "https://news.ycombinator.com/item?id=49970871",
+      "extra": {
+        "top_comments": [
+          "Even though this is way more expensive than backprop, could a hybrid approach where you fine tune an existing checkpoint that's been backpropped unlock further gains? It would be cool to apply this to different stages and see if that affects the learning trajectory",
+          "It sounds like this is less computationally efficient than backprop, but more easily parallelizable. Is that fair?"
+        ]
+      }
+    },
+    {
+      "id": "49971921",
+      "title": "Example.com just launched the biggest redesign in decades",
+      "url": "https://www.debugbear.com/blog/example-dot-com-redesign-history",
+      "source": "Hacker News",
+      "published_at": "2026-10-05T22:55:11+00:00",
+      "summary": "Example.com just launched the biggest redesign in decades",
+      "score": 103,
+      "comments": 63,
+      "discussion_url": "https://news.ycombinator.com/item?id=49971921",
+      "extra": {
+        "top_comments": [
+          "I'm wondering how many automated tests this change broke.Yes, I know it's not the example.com's fault, and it's a side effect of Hyrum's Law:> This is not a service, avoid relying on it for testing and monitoring purposes.Don't we all have a few fragile tests?",
+          "Discussed here a few days ago: https://news.ycombinator.com/item?id=49915060",
+          "> there's a gradual opacity transitionLooks like they removed this and instead just show all languages with no CSS animation now."
+        ]
+      }
+    },
+    {
+      "id": "49971719",
+      "title": "Friendship ended with Deno, now Node is my best friend",
+      "url": "https://dbushell.com/2026/10/03/deno-to-node/",
+      "source": "Hacker News",
+      "published_at": "2026-10-05T22:30:02+00:00",
+      "summary": "Friendship ended with Deno, now Node is my best friend",
+      "score": 81,
+      "comments": 22,
+      "discussion_url": "https://news.ycombinator.com/item?id=49971719",
+      "extra": {
+        "top_comments": [
+          "I helped Deno bring the Standard Library to v1 [as a contractor] and have always loved the team and philosophy. But these days I’m saddened by what seems to be their slow decline into obscurity. After the layoffs, there seems to be no roadmap, no comms, etc. I’m just so curious as to where they’re heading and still hope the best for it. I’ve always liked Deno more than Node and Bun.",
+          "With LLMs becoming prevalent, it seems people are “quitting” their projects more quickly. Not necessarily a bad thing, but just shows that the opportunity cost is too high right now if you’re building the wrong thing. Deno isn’t the wrong thing, but LLMs don’t reach for it and that’s a huge blow right now.",
+          "> This restriction is philosophical rather than technical. I get it though. TypeScript is a Microsoft product. Opening that floodgate would pollute the entire ecosystem.Bad news (well not news, this happened a while ago): https://www.cnbc.com/amp/2020/03/16/microsoft-github-agrees-..."
         ]
       }
     }

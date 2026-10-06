@@ -1,138 +1,125 @@
 {
-  "cached_at": "2026-10-05T14:00:59.338196+08:00",
+  "cached_at": "2026-10-06T11:01:48.824228+08:00",
   "articles": [
     {
-      "id": "2610.03717",
-      "title": "Less Decoder is More Encoder: Geometric Representation Learning from Novel View Synthesis",
-      "url": "https://arxiv.org/abs/2610.03717v1",
+      "id": "2610.05872",
+      "title": "Off-Policy Merging Beats On-Policy Self-Distillation for Continual Learning",
+      "url": "https://arxiv.org/abs/2610.05872v1",
       "source": "arXiv",
-      "published_at": "2026-10-02T17:59:14+00:00",
-      "summary": "This paper examines the role of Novel View Synthesis (NVS) in geometric representation learning. In principle, NVS should reason about 3D scene structure, thereby enabling transferable multi-view geometric representations. Yet, existing encoder-based NVS methods yield poor representations. This is not because of a lack of supervisory signal, but rather due to inconspicuous architectural choices: \\textit{spatially expressive decoders} that dilute representational capabilities of the scene encoder, and \\textit{low-level pixel-space targets} that hinder feature learning. We present SNAP, a self-supervised encoder-decoder transformer that addresses both through a pose-conditioned local decoder and a latent-space reconstruction objective. SNAP is task agnostic, and we show that it is competitive with special-purpose geometry-supervised methods. SNAP also performs competitively against self-supervised representations across five tasks: visual localization, pose estimation, point correspondence, depth estimation, and robot manipulation. Remarkably, SNAP's patch features exhibit emergent viewpoint invariance that approaches heavily supervised models despite lower compute and data budgets. Under camera shifts where standard 2D representations collapse, SNAP degrades more gracefully, revealing that restricting decoder expressivity actively prevents the suppression of transferable geometric structure. https://snap-nvs.github.io",
+      "published_at": "2026-10-05T06:40:34+00:00",
+      "summary": "A long-standing goal of AI is a model that can continually learn and improve itself. On post-trained models, supervised finetuning (SFT) on new data often causes poor generalization and catastrophic forgetting. As such, the conventional wisdom is that on-policy training is a prerequisite for continual learning. In practice, however, data containing new knowledge or capabilities are often off-policy. While methods such as on-policy self-distillation (OPSD) try to bridge this gap by converting off-policy data into on-policy signal, they have been shown to cause reasoning collapse. In this paper, we show that off-policy merging beats OPSD for continual learning. We first show that SFT learns a useful signal from new data, but naively applying its update interferes with existing capabilities. We reduce this interference with a simple recipe we term grafting, which changes where the update is learned and how it is applied: (1) learning the update on an earlier donor checkpoint, ideally even before the end of pretraining, and applying the weight update to the post-trained model; (2) scaling the weight update, equivalent to a form of model merging; and (3) optionally, masking the most sensitive update directions when the new data distribution is far from the post-trained model. Across continual learning settings including (1) distilling from expert traces, (2) self-improvement with STaR and Pedagogical RL, and (3) injecting knowledge after pretraining cutoff, grafting Pareto-dominates both SFT and OPSD in new-task and old-task performance, while avoiding expensive on-policy sampling. Therefore, our work challenges on-policy training as a necessity for continual learning on RL-trained models.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Keerthi Kaashyap",
-          "Dennis Anthony",
-          "Akshay Krishnan",
-          "Nhi Ngoc Nguyen",
-          "Jeremy Collins",
-          "James Hays",
-          "Shreyas Kousik",
-          "Animesh Garg"
-        ],
-        "categories": [
-          "cs.CV",
-          "cs.AI",
-          "cs.RO"
-        ]
-      }
-    },
-    {
-      "id": "2610.03715",
-      "title": "4DCodeBench: Benchmarking Agents on Inverse Graphics of Dynamic Scenes",
-      "url": "https://arxiv.org/abs/2610.03715v1",
-      "source": "arXiv",
-      "published_at": "2026-10-02T17:58:49+00:00",
-      "summary": "We introduce 4DCodeBench, a benchmark for 4D inverse graphics through code generation, in which agents reconstruct dynamic scenes from video as executable graphics programs. To accomplish this, agents must translate visual observations into compact representations of scene structure and dynamics, by implementing abstractions such as physical simulations to reproduce complex behavior. To evaluate this capability, we curate a set of real-world videos and construct synthetic scenes spanning diverse physical phenomena, including deformation, fluid flow, and fracture. We perform extensive benchmarking of frontier models, finding that strong static reconstruction capabilities do not yet translate into reliable reconstruction of complex dynamics. 4DCodeBench provides a testbed for tracking progress toward agents that can interpret the dynamics of the world through code. Our benchmark is available at https://github.com/4DCodeBench/4DCodeBench",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Ruihong Shen",
-          "Žiga Kovačič",
-          "Peter Kulits",
-          "Xingrui Wang",
-          "Zizhang Li",
-          "Joshua B. Tenenbaum",
-          "Alan Yuille",
-          "Jieneng Chen",
-          "Jiajun Wu"
-        ],
-        "categories": [
-          "cs.CV",
-          "cs.AI",
-          "cs.GR"
-        ]
-      }
-    },
-    {
-      "id": "2610.03713",
-      "title": "What Should World Models Forget? Stratified Retention for Continual Adaptation",
-      "url": "https://arxiv.org/abs/2610.03713v1",
-      "source": "arXiv",
-      "published_at": "2026-10-02T17:58:14+00:00",
-      "summary": "Continual learning treats degradation on previously seen data as evidence of failure, a convention inherited from settings with a stationary prediction target, where a correct label remains correct indefinitely. World models do not satisfy this condition. Their prediction target is the environment, which changes, so knowledge that was accurate when acquired may later become false, and discarding it is required behavior rather than a defect. Non-stationary ground truth is well studied in the concept drift literature and in the temporal factuality of language models, but has not been formulated for world models, which are distinctive in that they also encode knowledge that must never be revised. We argue that continual world models require retention stratified by invariance timescale, separating invariants such as physics and object permanence, which must never be revised, from instance-level facts that should be revised as soon as the environment changes. Standard forgetting metrics cannot distinguish a world model that has correctly revised outdated knowledge from one that has suffered catastrophic forgetting, and consequently rank a frozen model highest, while existing physical-reasoning benchmarks evaluate only frozen checkpoints. We propose differential retention, which reports invariant regression testing across the adaptation stream jointly with revision latency, without aggregation.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Nishit Anand",
-          "Ramani Duraiswami",
-          "Dinesh Manocha"
+          "Chen Henry Wu",
+          "Thomas Zhang",
+          "Aditi Raghunathan"
         ],
         "categories": [
           "cs.LG",
           "cs.AI",
-          "cs.CV",
-          "eess.IV",
-          "eess.SP"
+          "cs.CL"
         ]
       }
     },
     {
-      "id": "2610.03712",
-      "title": "RNADyn: A Benchmark for Generating and Understanding RNA Dynamics",
-      "url": "https://arxiv.org/abs/2610.03712v1",
+      "id": "2610.05869",
+      "title": "Finite-Sample Distribution Theory and Efficient Large-Scale Inference for Online Quantile Regression",
+      "url": "https://arxiv.org/abs/2610.05869v1",
       "source": "arXiv",
-      "published_at": "2026-10-02T17:58:08+00:00",
-      "summary": "Ribonucleic acid (RNA) functions through conformational changes that are not fully captured by static structures. However, large-scale standardized RNA dynamics data remain limited, and existing approaches typically treat trajectory generation and dynamics understanding as separate objectives. Here, we introduce RNADynBench, a standardized RNA molecular dynamics (MD) benchmark with 2585 quality-controlled 100-ns all-atom trajectories and leakage-controlled splits. Building on RNADynBench, we develop RNADynNet, a unified model for RNA dynamics learning that uses a shared backbone for both trajectory generation and dynamics fingerprint extraction from a single conformer. It combines coordinate denoising, single-frame-to-trajectory alignment, and physical grounding to connect all-atom trajectory generation with dynamics representation learning. Physical grounding improves both generated dynamics and the physical information recoverable from these fingerprints. Across both test sets, including the high-flexibility challenge set, the generated trajectories achieve RMSF correlations of 0.875 and 0.766, while single-conformer predictions show comparable agreement with MD-derived dynamics. RNADynBench and RNADynNet together establish a benchmark and unified modeling framework for generating and understanding RNA dynamics.",
+      "published_at": "2026-10-05T06:35:59+00:00",
+      "summary": "This paper studies online quantile regression for large-scale and streaming data using Stochastic SubGradient Descent (SSGD) with constant learning rates. Classical offline inference for quantile regression is computationally and memory intensive. Existing works of online inference for quantile regression provide only asymptotic guarantees and typically require sub-exponential tail conditions for distribution theory. To bridge these gaps, we introduce new techniques to prove a quenched central limit theorem (CLT) and finite-sample Gaussian approximation for SSGD under a finite-moment assumption. We further show that Ruppert-Polyak averaging with a constant learning rate has a non-vanishing bias and fails to satisfy CLT centering at the population target. Hence we propose suffix averaging to address this issue and establish its finite-sample Gaussian approximation. Based on these results, we provide an efficient online inference method for quantile regression that avoids covariance estimation. Numerical experiments show that our method achieves desirable empirical coverage rates and competitive performance compared to other inference methods. We also apply our approach to U.S. wage data to demonstrate its practical effectiveness.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Yiming Huang",
-          "Lennart Bastian",
-          "Hanqun Cao",
-          "Luis Vollmers",
-          "Tolga Birdal"
+          "Ziyang Wei",
+          "Jiaqi Li",
+          "Lan Wang",
+          "Wei Biao Wu"
+        ],
+        "categories": [
+          "stat.ML",
+          "cs.LG",
+          "math.ST",
+          "stat.ME"
+        ]
+      }
+    },
+    {
+      "id": "2610.05865",
+      "title": "Weave Mamba Fusion: Global Cross-Scale Interaction for Lightweight Face Detection",
+      "url": "https://arxiv.org/abs/2610.05865v1",
+      "source": "arXiv",
+      "published_at": "2026-10-05T06:31:38+00:00",
+      "summary": "Feature pyramid methods, from FPN to BiFPN, have achieved strong performance in face detection by fusing multi-scale features. However, detecting faces under unconstrained conditions, such as small scale, occlusion, and extreme pose, remains difficult, as it requires global cross-scale dependencies that local fusion cannot model. State space models such as Mamba provide global context with linear complexity by scanning features as a sequence, and therefore offer a promising direction for this problem. Nevertheless, such a scan needs the two pyramid scales combined into a single feature map, and the way they are combined determines whether cross-scale structure is preserved. Summation collapses the two scales before the scan, so the scan has no cross-scale structure to exploit, while concatenation keeps both scales but at far higher cost. To address this, we propose \\textbf{Weave Mamba Fusion (WMF)}, which interleaves two adjacent pyramid scales column by column so that each step of a horizontal bidirectional SS2D scan moves from one scale to the other. With partial-channel processing and parameter-free de-weaving, WMF enables efficient cross-scale interaction while preserving feature structure. Integrating WMF into every fusion node yields \\textbf{WeaveBiFPN}, the neck of our \\textbf{WeaveFace} detector. On WIDER FACE, WeaveFace achieves 91.41\\% mean AP with only 0.34M parameters and 1.16 GFLOPs, outperforming prior detectors under 0.5M parameters. Its largest gains are on the Hard subset, where it reaches 87.14\\% AP. The code is publicly available at \\url{https://github.com/dohun-mat/WeaveMambaFusion}.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Dohun Kim",
+          "Jinmyung Jung"
+        ],
+        "categories": [
+          "cs.CV",
+          "cs.AI"
+        ]
+      }
+    },
+    {
+      "id": "2610.05863",
+      "title": "CCQ: A Multi-State Child Care Quality Dataset to Support AI for Children's Health Research",
+      "url": "https://arxiv.org/abs/2610.05863v1",
+      "source": "arXiv",
+      "published_at": "2026-10-05T06:30:09+00:00",
+      "summary": "High-quality child care in early life is a critical determinant of children's growth and development. Research on child care quality has been constrained by fragmented, non-research-friendly, and privacy-bound datasets. We present CCQ (Child Care Quality), a large-scale, de-identified dataset for applied data science research at the intersection of AI and early childhood health. CCQ integrates 59,372 child care provider records across 12 U.S. states, covering diverse provider types as well as data schemas. To ensure research utility while protecting privacy, we implement an automated, LLM-based curation pipeline that anonymizes, cleans, and standardizes raw state records into two complementary releases: a cleaned textual release and a fully preprocessed tabular release. We also benchmark traditional machine learning models, tabular foundation models, and language models on quality rating prediction and important features analytics. Within a state, tabular classifiers on the preprocessed tables perform best. Across states, zero-shot transfer is near chance, but modest target-state supervision recovers most of the within-state performance, and pretraining on other states benefits finetuned language models. We release both datasets with all code to accelerate AI-driven research on child care quality and ultimately improve children's health and development.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Victor Li",
+          "Yuzhang Xie",
+          "Ziwei Dong",
+          "Qingyang Zhu",
+          "Wenjing Ma",
+          "Carl Yang",
+          "Jinbing Bai",
+          "Huiwen Xu",
+          "Jiaying Lu"
         ],
         "categories": [
           "cs.LG",
-          "physics.bio-ph",
-          "q-bio.BM"
+          "cs.AI"
         ]
       }
     },
     {
-      "id": "2610.03710",
-      "title": "EyeRobot 2.0: Active Gaze for Precise Manipulation without Wrist Cameras",
-      "url": "https://arxiv.org/abs/2610.03710v1",
+      "id": "2610.05861",
+      "title": "Imagine to Act: High-Fidelity Data Synthesis via Image Editing World Model for Scalable GUI Agent Training",
+      "url": "https://arxiv.org/abs/2610.05861v1",
       "source": "arXiv",
-      "published_at": "2026-10-02T17:57:51+00:00",
-      "summary": "Inspired by human vision, we introduce a framework using active gaze to enable fine-grained bimanual manipulation with only a single stereo camera. EyeRobot 2.0 physically attends to a 3D fixation point in the scene by swiveling two eye viewpoints to center their gaze on it. The resulting images are processed foveally by allocating more visual tokens to the image centers, focusing computation on task-relevant features. Such Active Visual Fixation (AVF) requires carefully coordinated gaze during task execution, which we accomplish hierarchically by first training a low-level gaze servoing policy conditioned on a goal object, then training a target selector which emits fixation goals based on task progress. Both modules are trained with RL on real-world data: the first is trained with a dense geometric reward and the second co-trains with the BC gripper policy which allows it to discover fixation sequences that can resemble a human's fixation sequence while performing the task. EyeRobot 2.0 further takes advantage of fixation by canonicalizing gripper information into a fixation-relative SE(3) frame, which compacts the size of the action distribution to learn. We collect teleoperation data for 7 real-world and 6 simulated tasks, and conduct over 1000 physical and 1800 simulated robot trials comparing EyeRobot 2.0 against passive stereo and ego + wrist camera policies trained on the same data. Removing wrist cameras is costly for standard policies: with only passive stereo, real-world success drops from 52% to 27%. EyeRobot 2.0 closes this gap with only stereo, outperforming passive stereo by 40% in real and 20% in sim. It matches ego + wrist policies when their wrist views are clear (69% vs. 64%), and more than doubles their success when grasped objects occlude the wrist cameras (48% vs. 22%)",
+      "published_at": "2026-10-05T06:28:58+00:00",
+      "summary": "Graphical User Interface (GUI) agents have emerged as a promising paradigm for automating complex digital workflows across diverse applications. However, training highly capable and generalizable agents fundamentally relies on massive, high-fidelity visual-action trajectories, which are notoriously difficult to acquire. While human demonstrations are unscalable, existing GUI world models rely on text descriptions or HTML rendering, discarding crucial pixel-level visual details like icons and layout styles. To address this issue, we introduce Infinite-Dreamer, a simulation-free data synthesis method powered by a pixel-level Image Editing World Model. By conceptualizing GUI transitions as image editing tasks, we leverage Vision-Language Models (VLMs) to describe action-induced UI changes as structured delta-text. We then fine-tune an image editing backbone to controllably synthesize realistic screenshot transitions. We utilize this model to generate both single-frame visual robustness data and multi-step imaginary trajectories. To validate the effectiveness of our approach, we fine-tune the Qwen3-VL baseline solely on the synthesized data to obtain Infinite-Actor, and evaluate it on AndroidWorld, MobileWorld, and AndroidControl-Curated benchmarks. Infinite-Actor consistently outperforms the Qwen3-VL baselines across scales: Infinite-Actor-8B improves AndroidWorld Pass@1 by +4.45 and nearly doubles the MobileWorld Pass@3 success rate, while Infinite-Actor-2B improves Pass@1 by +9.05. Code is available at https://github.com/swaydy-n/Infinite-Dreamer.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Kush Hari",
-          "Justin Kerr",
-          "Nidhya Shivakumar",
-          "Samarth Mahapatra",
-          "Carmelo Sferrazza",
-          "Jiahui Lei",
-          "Jitendra Malik",
-          "C. Karen Liu",
-          "Ken Goldberg",
-          "Angjoo Kanazawa"
+          "Yongxin Ning",
+          "Runliang Niu",
+          "Qianli Xing",
+          "Zhiyi Duan",
+          "Qingzu He",
+          "Pan Wang",
+          "Qi Wang"
         ],
         "categories": [
-          "cs.RO",
+          "cs.CV",
           "cs.AI"
         ]
       }
