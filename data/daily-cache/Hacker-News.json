@@ -1,6 +1,42 @@
 {
-  "cached_at": "2026-10-06T11:01:48.824228+08:00",
+  "cached_at": "2026-10-06T14:39:26.232184+08:00",
   "articles": [
+    {
+      "id": "49961057",
+      "title": "Anthropic reported diary entry to police, woman faces felony charge",
+      "url": "https://www.techspot.com/news/114091-florida-woman-used-claude-diary-anthropic-reported-shoot.html",
+      "source": "Hacker News",
+      "published_at": "2026-10-05T05:37:40+00:00",
+      "summary": "Anthropic reported diary entry to police, woman faces felony charge",
+      "score": 675,
+      "comments": 520,
+      "discussion_url": "https://news.ycombinator.com/item?id=49961057",
+      "extra": {
+        "top_comments": [
+          "I have some sympathy for Anthropic here because I've seen the headlines after OpenAI failed to report a shooter in a similar situation. So from their perspective, it's damned-if-you-don't, damned-if-you-do.However, people need to get it in their heads that they're not chatting with their secret BFF, they're chatting with Big Tech. Before LLMs, Big Tech had no way to scrutinize the bulk of what was going on within their services, so you could have a secret hate diary in Google Docs. Now, everything you say or write can be automatically screened for red flags on a planetary scale, and probably will be because that's what the regulators and \"concerned citizens\" will demand. In a couple of years, you'll be biting your tongue a lot more often in private chats.",
+          "> Florida Statute 836.10 makes it a second-degree felony to send, post, or transmit a written or electronic record threatening to kill or injure someone [...] The communication must be made in a manner in which another person may view it.Which it clearly wasn't, right? I mean, okay, in this case, the message did get reviewed by another person, but that's obviously an exceptional circumstance.If I write something down on a piece of paper, and someone else goes through my garbage and finds it, is my note \"communication made in a manner in which another person may view it\"? It was clearly intended to be a private note!",
+          "Pool together with some friends and buy an H200 or two to run unquantized open source models with abliteration/heretic transformations.You need to be able to use these models for the real world and not for some imaginary world where everything is safe and nice and happy all the time, while at the same time intensely surveilled in the name of CYA and the latest panic about whether speech THAT ISN'T EVEN BETWEEN TWO PARTIES is considered \"wrong\".I'm a free speech fan that acknowledges there are lots of boundaries of free speech (fraud, perjury, blackmail, defamation), but the one thing that all of the boundaries have in common is that a second party must be involved for them to make any sense at all.Maybe the courts will uphold this, maybe they won't, but don't take the risk!"
+        ]
+      }
+    },
+    {
+      "id": "49963171",
+      "title": "Web Search API",
+      "url": "https://developers.cloudflare.com/changelog/post/2026-10-02-introducing-web-search-api/",
+      "source": "Hacker News",
+      "published_at": "2026-10-05T10:47:06+00:00",
+      "summary": "Web Search API",
+      "score": 524,
+      "comments": 240,
+      "discussion_url": "https://news.ycombinator.com/item?id=49963171",
+      "extra": {
+        "top_comments": [
+          "My number one question about search APIs is always if they allow you to store and resyndicate results you get from them.If I'm running an agent system but I'm not allowed to store the responses - or provide a \"share transcript\" button - that's a pretty significant limitation.The answer to that question is inevitably buried deep in the terms. Here's the relevant section I found for Ceramic, in their list of things you can't do:> (n) collect, aggregate, store, or compile Output, including search results, relevance scores, or rankings, for the purpose of creating or contributing to any database, dataset, index, or corpus, whether or not such database, dataset, index, or corpus is used for a purpose that competes with Ceramic; (o) resell, syndicate, or otherwise make Output available to any third party on a standalone basis or as a separately accessible component of another product or service; provided that you may display Output to your authorized end users within your own application so long as such Output is integrated into your application's functionality, is incident to the end user’s real-time query, and is not independently accessible, extractable, or downloadable by end users or third parties; or (p) retain, cache, or store Output beyond what is reasonably necessary to display such Output to your authorized end users in the ordinary and real-time course of use, unless expressly permitted in an applicable Order Form.https://www.ceramic.ai/terms-of-serviceAm I alone in caring about this?",
+          "For those developers out there, the best is still Gemini Flash Lite 2.5 believe it or not. It gives you 1000 google searches per day for free. Compare to Flash Lite 3.x which is 5k PER MONTH and then a few pennies PER SEARCH. Nuts. Didn’t realize search was so expensive.Perhaps realizing all of this, Google hasn’t yet deprecated 2.5, bit limits access to it to “those who have used it before.”It’s really really good for low cost search!",
+          "Why not use those providers directly? Does Cloudflare need to be in the middle of everything?"
+        ]
+      }
+    },
     {
       "id": "49969183",
       "title": "Beam: Reflection's 501B open-weight model",
@@ -8,14 +44,14 @@
       "source": "Hacker News",
       "published_at": "2026-10-05T19:16:35+00:00",
       "summary": "Beam: Reflection's 501B open-weight model",
-      "score": 335,
-      "comments": 97,
+      "score": 395,
+      "comments": 123,
       "discussion_url": "https://news.ycombinator.com/item?id=49969183",
       "extra": {
         "top_comments": [
           "Always glad to see more open-weight models, but this caption on the 2nd demo image had me do a double-take: \"Land or Water Generalization Experiment: We recreated the viral X puzzle by asking Beam to create a fixed 180×90 grid for longitudes -179° to 179° and latitudes -89° to 89°, with 16,200 points. This puzzle is a few days old, so could not appear in the training data, thus testing the model’s generalization. Beam gets 95.5% coverage right, putting us between Opus 5 (92.5%) and Fable 5 (97.8%), which shows how well it generalizes to novel new tasks.\"Oof, no, this \"puzzle is a few days old\" is incorrect even if it's a social media trend just recently. Asking a model to generate a world map in this way is _at least_ from August 2025 as it appeared on LessWrong at that time: https://www.lesswrong.com/posts/xwdRzJxyqFqgXTWbH/how-does-a...",
-          "Does this one also routes to Claude under the hood like Reflection 70B did? I recall they even run a basic regex to remove \"Claude\" from the output. Then they promised to be completely transparent on the postmortem (they claim they had no idea what had happened), but the postmortem never came",
-          "> Beam is a sparse Mixture-of-Experts model with 501 billion total parameters, 23 billion active, built for coding, reasoning, and agentic workloads.> Beam’s capabilities come from major investments in both pretraining and reinforcement learning (RL). We pretrained the model on 23.8 trillion diverse, curated, high-quality tokens from the web and proprietary licensed datasets, matching or outperforming available similar-sized open base models. In parallel, we developed the algorithms, training environments, and infrastructure needed to sustain high-compute RL at exceptional scale. Our high-compute RL run generated over 100 million rollouts on 10.5K NVIDIA GB300 GPUs over 4 weeks of training.Early access, no weights no tech details, just a sign up here for info"
+          "> Beam is a sparse Mixture-of-Experts model with 501 billion total parameters, 23 billion active, built for coding, reasoning, and agentic workloads.> Beam’s capabilities come from major investments in both pretraining and reinforcement learning (RL). We pretrained the model on 23.8 trillion diverse, curated, high-quality tokens from the web and proprietary licensed datasets, matching or outperforming available similar-sized open base models. In parallel, we developed the algorithms, training environments, and infrastructure needed to sustain high-compute RL at exceptional scale. Our high-compute RL run generated over 100 million rollouts on 10.5K NVIDIA GB300 GPUs over 4 weeks of training.Early access, no weights no tech details, just a sign up here for info",
+          "I thought it would be interesting to look at some key figures vs another contemporary model in the same weight class (DeepSeek V4.1 Flash) DS V4.1F Beam LM total params 552B 501B LM active params (prefill) 8B 23B LM active params (decode) 16B 23B N-gram/PLE params 196B 0 Pretrain tokens 45T 28T Disk KV bytes/token (FP4) 890 No information Vision Yes (pretrain) No Weights available Yes (launch day) \"This month\" Weights licence MIT Apache 2.0 At first blush the benchmarks are impressive, but to paraphrase Linus: \"Talk is cheap, show me the weights.\" :-)"
         ]
       }
     },
@@ -26,14 +62,14 @@
       "source": "Hacker News",
       "published_at": "2026-10-05T22:46:45+00:00",
       "summary": "ChatGPT is adding real cartoonists' signatures to fake New Yorker cartoons",
-      "score": 310,
-      "comments": 202,
+      "score": 382,
+      "comments": 276,
       "discussion_url": "https://news.ycombinator.com/item?id=49971846",
       "extra": {
         "top_comments": [
           "The problem is not that ChatGPT is doing that, the problem is that it's not being sued into oblivion after.",
           "Plagiarism as a Service.We can all try really hard to pretend that's not the business model, but that's totally the business model.",
-          "The part of the AI generating the mashup doesn’t really understand what the signature means, or how it may be interpreted, it’s just a visual part of a New Yorker cartoon. Elsewhere in ChatGPT there is plenty of information about signatures and what they mean, and what plagiarism is.It’s not organized like a human brain, it shouldn’t be surprising that unusual results occur. They are approximating human intelligence from a different angle. It’s interesting to see the improvements in areas like this that require introspection that isn’t fully wired up yet.[edit] I should add that a human making a New Yorker cartoon is extremely iterative and introspective. Current generative AI is meant to push it out, and you can do the iteration and introspection yourself."
+          "We live in confusing times.Steal one mp3 and you might get fined thousands, steal a book from your local shoppe and the police would come visit you. Forge a signature and you would also be in trouble. Hack a government website and you will have to answer some questions.Steal all the books in the world, forge millions and this story begins to tell and nothing happens."
         ]
       }
     },
@@ -44,8 +80,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-05T21:00:21+00:00",
       "summary": "Opus 5.5 agents discover two room-temperature magnetic semiconductor candidates",
-      "score": 234,
-      "comments": 167,
+      "score": 298,
+      "comments": 196,
       "discussion_url": "https://news.ycombinator.com/item?id=49970667",
       "extra": {
         "top_comments": [
@@ -56,32 +92,14 @@
       }
     },
     {
-      "id": "49971230",
-      "title": "Find the flattest route between any two points in SF",
-      "url": "https://flattensf.com/",
-      "source": "Hacker News",
-      "published_at": "2026-10-05T21:40:50+00:00",
-      "summary": "Find the flattest route between any two points in SF",
-      "score": 128,
-      "comments": 40,
-      "discussion_url": "https://news.ycombinator.com/item?id=49971230",
-      "extra": {
-        "top_comments": [
-          "Checkout https://bikehopper.org for solid elevation, bike infrastructure and transit-aware routing around the Bay Area. Some friends and I built this about 5 years ago and continue to maintain it. We use 1m DTM elevation data for SF and 50m for rural areas. DTM is a must for elevation based routing in SF as there are so many sizable buildings, large trees the other models fail hard.",
-          "It's not accurate. I mapped it from my house on Cabrillo St in the outer Richmond to 4th avenue and it says I need to climb 25th avenue then walk Geary instead of correctly telling me to use 23rd avenue that is completely flat.",
-          "It would be neat if it there were an option which added distance and elevation gain, but minimized the grade.For example, a route from SOMA to Nob Hill can be made flatter by approaching from either the east or west. Technically the \"flattest\" as measured by elevation gain between the two is straight up Taylor from Market, but it's much nicer to bike to the top of Nob Hill by going out of the way (e.g. Polk → California, Embarcadero → Broadway, etc.)"
-        ]
-      }
-    },
-    {
       "id": "49971523",
       "title": "Texas city demands $2M for public records on Flock usage",
       "url": "https://arstechnica.com/tech-policy/2026/10/texas-city-demands-2m-for-public-records-on-flock-usage/",
       "source": "Hacker News",
       "published_at": "2026-10-05T22:05:57+00:00",
       "summary": "Texas city demands $2M for public records on Flock usage",
-      "score": 119,
-      "comments": 19,
+      "score": 176,
+      "comments": 27,
       "discussion_url": "https://news.ycombinator.com/item?id=49971523",
       "extra": {
         "top_comments": [
@@ -92,19 +110,20 @@
       }
     },
     {
-      "id": "49970871",
-      "title": "Dust: Pretraining Transformers Without Backpropagation",
-      "url": "https://qlabs.sh/research/dust",
+      "id": "49965152",
+      "title": "The lamps in my house",
+      "url": "https://arslan.io/2026/10/05/the-lamps-in-my-house/",
       "source": "Hacker News",
-      "published_at": "2026-10-05T21:15:07+00:00",
-      "summary": "Dust: Pretraining Transformers Without Backpropagation",
-      "score": 116,
-      "comments": 19,
-      "discussion_url": "https://news.ycombinator.com/item?id=49970871",
+      "published_at": "2026-10-05T14:12:14+00:00",
+      "summary": "The lamps in my house",
+      "score": 174,
+      "comments": 79,
+      "discussion_url": "https://news.ycombinator.com/item?id=49965152",
       "extra": {
         "top_comments": [
-          "Even though this is way more expensive than backprop, could a hybrid approach where you fine tune an existing checkpoint that's been backpropped unlock further gains? It would be cool to apply this to different stages and see if that affects the learning trajectory",
-          "It sounds like this is less computationally efficient than backprop, but more easily parallelizable. Is that fair?"
+          "I have a lamp I really really like¹:https://www.amazon.com/dp/B0D5LS2KQWI don't know how honeywell of all companies is selling this, but I figure they have engineers that they turned loose on and got out of their way.It is just super nice. Elegant looking, not expensive, very high quality illumination that can get bright, smoothly dimmable with a knob. a knob to adjust lighting is a good design.In comparison, dyson makes a lamp that is the same kind of interesting genre, but they cost 10-20x.[1] except to turn it off is inelegant - you have to press and hold instead of tap, because tap changes color temperature.",
+          "For people who don't want to splurge on the Noguchi lamps, Aliexpress has a decent number of knockoffs.Probably way less stable than the real deal.We have a couple of the marset lamps that we enjoy as well. The sort of low-poly design is really fun.",
+          "Unrelated aside, but:> Fun fact: “Akari” means light in Japanese, both as illumination and as lightness.Wow! I love it when two languages have matching homonyms. I always wonder \"what does it mean ?\". Like, in English \"second\" to mean the unit of time and the place after \"first\" feels like two distinct usages. But it's the same in Spanish (\"segundo\"), which points to a deeper connection (and isn't so unsurprising given the shared roots of the languages): the unit of time is called that because it's the second subdivision of an hour.The two usages of \"light\" in English are so distinct I'm quite surprised it's like this in the entirely unrelated Japanese language. Is this just a big coincidence, or does anyone know any deeper reasons here?"
         ]
       }
     },
@@ -115,32 +134,14 @@
       "source": "Hacker News",
       "published_at": "2026-10-05T22:55:11+00:00",
       "summary": "Example.com just launched the biggest redesign in decades",
-      "score": 103,
-      "comments": 63,
+      "score": 171,
+      "comments": 98,
       "discussion_url": "https://news.ycombinator.com/item?id=49971921",
       "extra": {
         "top_comments": [
+          "I just wonder how much unintended traffic they receive.eg If they put DNS, NTP etc on it... Likely billions per hour or something equally ludicrous.Deluge is likely an exponential understatement.",
           "I'm wondering how many automated tests this change broke.Yes, I know it's not the example.com's fault, and it's a side effect of Hyrum's Law:> This is not a service, avoid relying on it for testing and monitoring purposes.Don't we all have a few fragile tests?",
-          "Discussed here a few days ago: https://news.ycombinator.com/item?id=49915060",
           "> there's a gradual opacity transitionLooks like they removed this and instead just show all languages with no CSS animation now."
-        ]
-      }
-    },
-    {
-      "id": "49971719",
-      "title": "Friendship ended with Deno, now Node is my best friend",
-      "url": "https://dbushell.com/2026/10/03/deno-to-node/",
-      "source": "Hacker News",
-      "published_at": "2026-10-05T22:30:02+00:00",
-      "summary": "Friendship ended with Deno, now Node is my best friend",
-      "score": 81,
-      "comments": 22,
-      "discussion_url": "https://news.ycombinator.com/item?id=49971719",
-      "extra": {
-        "top_comments": [
-          "I helped Deno bring the Standard Library to v1 [as a contractor] and have always loved the team and philosophy. But these days I’m saddened by what seems to be their slow decline into obscurity. After the layoffs, there seems to be no roadmap, no comms, etc. I’m just so curious as to where they’re heading and still hope the best for it. I’ve always liked Deno more than Node and Bun.",
-          "With LLMs becoming prevalent, it seems people are “quitting” their projects more quickly. Not necessarily a bad thing, but just shows that the opportunity cost is too high right now if you’re building the wrong thing. Deno isn’t the wrong thing, but LLMs don’t reach for it and that’s a huge blow right now.",
-          "> This restriction is philosophical rather than technical. I get it though. TypeScript is a Microsoft product. Opening that floodgate would pollute the entire ecosystem.Bad news (well not news, this happened a while ago): https://www.cnbc.com/amp/2020/03/16/microsoft-github-agrees-..."
         ]
       }
     }

@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-10-06T11:01:48.824228+08:00",
+  "cached_at": "2026-10-06T14:39:26.232184+08:00",
   "articles": [
     {
       "id": "https://www.news.cn/politics/20261004/da526bffbf88485d8136efec9c67072c/c.html",
@@ -62,36 +62,36 @@
       "extra": {}
     },
     {
-      "id": "https://www.bbc.co.uk/news/articles/cw8rzd6lp0xpo#1",
+      "id": "https://www.bbc.co.uk/news/articles/cmx2qne2j88wo#1",
+      "title": "OpenAI admits response to Australian government hacks 'not good enough'",
+      "url": "https://www.bbc.co.uk/news/articles/cmx2qne2j88wo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "published_at": "2026-10-06T06:00:53+00:00",
+      "summary": "Top executive Jason Kwon tells hearing company has added \"more precautions\" to its training environments.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
+      "id": "https://www.bbc.co.uk/news/videos/cmkg7dx8wpygo#1",
+      "title": "Watch: Moment Indonesian shoe shop is torn apart by explosion",
+      "url": "https://www.bbc.co.uk/news/videos/cmkg7dx8wpygo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "published_at": "2026-10-06T04:57:16+00:00",
+      "summary": "Police have said it is “strongly suspected” that the incident was caused by a gas leak.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
+      "id": "https://www.bbc.co.uk/news/articles/cw8rzd6lp0xpo#0",
       "title": "Yemeni military says it has 'secured' Red Sea waterway",
       "url": "https://www.bbc.co.uk/news/articles/cw8rzd6lp0xpo?at_medium=RSS&at_campaign=rss",
       "source": "BBC World",
-      "published_at": "2026-10-06T01:05:00+00:00",
+      "published_at": "2026-10-06T04:29:53+00:00",
       "summary": "Saudi-backed forces gave conflicting reports of whether they had also seized the port city of Mokha, near the Bab al-Mandab Strait.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://www.bbc.co.uk/news/articles/ck1l34ed592no#1",
-      "title": "Right-wing Flávio Bolsonaro wins first round of Brazil election",
-      "url": "https://www.bbc.co.uk/news/articles/ck1l34ed592no?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "published_at": "2026-10-05T23:19:14+00:00",
-      "summary": "With neither candidate getting more than 50% of the vote, the election will go to a run-off on 25 October.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://www.npr.org/2026/10/05/nx-s1-5991613/in-iraq-isis-members-once-jailed-in-syria-face-trial",
-      "title": "In Iraq, ISIS members once jailed in Syria face trial",
-      "url": "https://www.npr.org/2026/10/05/nx-s1-5991613/in-iraq-isis-members-once-jailed-in-syria-face-trial",
-      "source": "NPR World",
-      "published_at": "2026-10-05T22:04:44+00:00",
-      "summary": "In Iraq, NPR attends trials of French ISIS suspects after transfer from Syrian camps.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",

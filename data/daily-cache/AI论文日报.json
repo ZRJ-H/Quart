@@ -1,21 +1,49 @@
 {
-  "cached_at": "2026-10-06T11:01:48.824228+08:00",
+  "cached_at": "2026-10-06T14:39:26.232184+08:00",
   "articles": [
     {
-      "id": "2610.05872",
-      "title": "Off-Policy Merging Beats On-Policy Self-Distillation for Continual Learning",
-      "url": "https://arxiv.org/abs/2610.05872v1",
+      "id": "2610.06852",
+      "title": "One Figure, Every Canvas: Editable Flowchart Relayout via Agentic Pipeline",
+      "url": "https://arxiv.org/abs/2610.06852v1",
       "source": "arXiv",
-      "published_at": "2026-10-05T06:40:34+00:00",
-      "summary": "A long-standing goal of AI is a model that can continually learn and improve itself. On post-trained models, supervised finetuning (SFT) on new data often causes poor generalization and catastrophic forgetting. As such, the conventional wisdom is that on-policy training is a prerequisite for continual learning. In practice, however, data containing new knowledge or capabilities are often off-policy. While methods such as on-policy self-distillation (OPSD) try to bridge this gap by converting off-policy data into on-policy signal, they have been shown to cause reasoning collapse. In this paper, we show that off-policy merging beats OPSD for continual learning. We first show that SFT learns a useful signal from new data, but naively applying its update interferes with existing capabilities. We reduce this interference with a simple recipe we term grafting, which changes where the update is learned and how it is applied: (1) learning the update on an earlier donor checkpoint, ideally even before the end of pretraining, and applying the weight update to the post-trained model; (2) scaling the weight update, equivalent to a form of model merging; and (3) optionally, masking the most sensitive update directions when the new data distribution is far from the post-trained model. Across continual learning settings including (1) distilling from expert traces, (2) self-improvement with STaR and Pedagogical RL, and (3) injecting knowledge after pretraining cutoff, grafting Pareto-dominates both SFT and OPSD in new-task and old-task performance, while avoiding expensive on-policy sampling. Therefore, our work challenges on-policy training as a necessity for continual learning on RL-trained models.",
+      "published_at": "2026-10-05T17:59:54+00:00",
+      "summary": "Pipeline figures in ML papers must be repurposed across many canvases, including paper columns, 16:9 slides, portrait posters, 1:1 social teasers, 9:16 phone previews. Each format imposes a different aspect ratio on the same computational graph, where any silently broken connection misrepresents the method. We formulate aspect-ratio-adaptive flowchart relayout as a distinct task: given a raster flowchart and a target ratio, produce a structurally faithful, hallucination-free, editable layout. Existing methods fail characteristically: image-to-image models stretch blocks and reject extreme ratios, text-to-image agentic systems hallucinate content, and parse-then-render systems mis-route edges. We propose an agentic pipeline factored into Parse, Style, and Layout stages, each pairing a main agent with a critic that combines deterministic constraint checks with VLM visual feedback so connectivity is explicitly checked and prevented from being silently broken. Outputs are draw.io-editable mxGraph XML. On a curated benchmark of 100 flowcharts at five aspect ratios, evaluated by Gemini 3.1 Pro and validated against human judgments, our method reaches 68.6% Content Fidelity versus 11.2-41.4% for prior work. Project page: https://onefigureeverycanvas.vercel.app/",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Chen Henry Wu",
-          "Thomas Zhang",
-          "Aditi Raghunathan"
+          "Shih-Chen Tseng",
+          "Chih-Hsuan Chen",
+          "Ryan Yang",
+          "Hsi-An Chen",
+          "Chun-Wei Tuan Mu",
+          "Yu-Lun Liu"
+        ],
+        "categories": [
+          "cs.CV",
+          "cs.AI"
+        ]
+      }
+    },
+    {
+      "id": "2610.06851",
+      "title": "Base Models Can Reason By Taking a Cue From Training Data",
+      "url": "https://arxiv.org/abs/2610.06851v1",
+      "source": "arXiv",
+      "published_at": "2026-10-05T17:59:52+00:00",
+      "summary": "In this paper, we study how training data creates associations between the tokens at the start of a base model's response and the reasoning behavior that follows. First, we demonstrate that fixing particular starting token cues makes a base model's performance competitive with that of its reinforcement learning (RL)-trained counterparts on math and coding. For instance, the cue \".\\n\\nOkay\" raises Olmo-3-7B's MATH-500 pass@1 accuracy from 42% to 78%, while \"Alright,\" raises Qwen3-14B's from 72% to 87%. Second, RL makes these cues more likely, while fixing them recovers much of its performance gain over the base model. Third, we trace the reasoning effects of token cues to the training data. We perform causal data interventions to turn an arbitrary word, such as \"chicken\", into an effective reasoning cue, or remove an existing cue's effect. A similar edit makes the prompt instruction \"Think duck duck goose\" as effective as \"Think step by step\" at eliciting reasoning. We also find that the hidden state representations induced by different cues correlate with different document types from the training set. Finally, we extend our study of token cues with a case study in language model safety, finding that different cues elicit distinct refusal and compliance behaviors that correspond to different types of training data.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Sophie L. Wang",
+          "Amil Dravid",
+          "Rulin Shao",
+          "Kevin Farhat",
+          "Sewon Min",
+          "Alexei A. Efros"
         ],
         "categories": [
           "cs.LG",
@@ -25,102 +53,74 @@
       }
     },
     {
-      "id": "2610.05869",
-      "title": "Finite-Sample Distribution Theory and Efficient Large-Scale Inference for Online Quantile Regression",
-      "url": "https://arxiv.org/abs/2610.05869v1",
+      "id": "2610.06846",
+      "title": "BiasFlow: Geometric Monitoring and Backbone Regularization for Spurious Feature Reliance",
+      "url": "https://arxiv.org/abs/2610.06846v1",
       "source": "arXiv",
-      "published_at": "2026-10-05T06:35:59+00:00",
-      "summary": "This paper studies online quantile regression for large-scale and streaming data using Stochastic SubGradient Descent (SSGD) with constant learning rates. Classical offline inference for quantile regression is computationally and memory intensive. Existing works of online inference for quantile regression provide only asymptotic guarantees and typically require sub-exponential tail conditions for distribution theory. To bridge these gaps, we introduce new techniques to prove a quenched central limit theorem (CLT) and finite-sample Gaussian approximation for SSGD under a finite-moment assumption. We further show that Ruppert-Polyak averaging with a constant learning rate has a non-vanishing bias and fails to satisfy CLT centering at the population target. Hence we propose suffix averaging to address this issue and establish its finite-sample Gaussian approximation. Based on these results, we provide an efficient online inference method for quantile regression that avoids covariance estimation. Numerical experiments show that our method achieves desirable empirical coverage rates and competitive performance compared to other inference methods. We also apply our approach to U.S. wage data to demonstrate its practical effectiveness.",
+      "published_at": "2026-10-05T17:59:28+00:00",
+      "summary": "Worst-group accuracy (WGA) evaluates a trained predictor but does not characterize how its frozen backbone behaves when a new head is learned. We introduce BiasFlow, a hook-based toolkit for monitoring class-attribute centroid alignment (IBMI), within-class centroid separation (W-IBMI), and feature-projection sensitivity. IBMI is confounded by class-attribute correlation and is not a measure of causal feature reliance. We pair these diagnostics with BiasFlow Regularization (BFR), a supervised, composable class-conditional centroid-alignment penalty. W-IBMI verifies the quantity BFR optimizes; it is scale dependent and does not independently establish attribute removal. Across the reported small-scale benchmarks, adding BFR improves or preserves mean WGA, with gains up to +26.0 pp on UrbanCars. The principal independent stress test freezes CelebA-Std backbones and trains fresh heads on biased data: BFR+GroupDRO improves WGA from 40.7% to 64.1%, while Male probe accuracy decreases from 92.5% to 72.2%. Attribute information remains recoverable, and cross-task results are mixed. A controlled synthetic-watermark ImageNet experiment additionally improves watermark-shift accuracy by +23.0 pp under matched training. These results support evaluating centroid geometry and resistance to biased head retraining alongside WGA, within the tested protocols.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Ziyang Wei",
-          "Jiaqi Li",
-          "Lan Wang",
-          "Wei Biao Wu"
+          "Haojin Deng",
+          "Zhiping Lin",
+          "Yimin Yang"
         ],
         "categories": [
-          "stat.ML",
-          "cs.LG",
-          "math.ST",
-          "stat.ME"
+          "cs.AI"
         ]
       }
     },
     {
-      "id": "2610.05865",
-      "title": "Weave Mamba Fusion: Global Cross-Scale Interaction for Lightweight Face Detection",
-      "url": "https://arxiv.org/abs/2610.05865v1",
+      "id": "2610.06844",
+      "title": "Learning to Read the Contextual Tokens in Diffusion Transformers",
+      "url": "https://arxiv.org/abs/2610.06844v1",
       "source": "arXiv",
-      "published_at": "2026-10-05T06:31:38+00:00",
-      "summary": "Feature pyramid methods, from FPN to BiFPN, have achieved strong performance in face detection by fusing multi-scale features. However, detecting faces under unconstrained conditions, such as small scale, occlusion, and extreme pose, remains difficult, as it requires global cross-scale dependencies that local fusion cannot model. State space models such as Mamba provide global context with linear complexity by scanning features as a sequence, and therefore offer a promising direction for this problem. Nevertheless, such a scan needs the two pyramid scales combined into a single feature map, and the way they are combined determines whether cross-scale structure is preserved. Summation collapses the two scales before the scan, so the scan has no cross-scale structure to exploit, while concatenation keeps both scales but at far higher cost. To address this, we propose \\textbf{Weave Mamba Fusion (WMF)}, which interleaves two adjacent pyramid scales column by column so that each step of a horizontal bidirectional SS2D scan moves from one scale to the other. With partial-channel processing and parameter-free de-weaving, WMF enables efficient cross-scale interaction while preserving feature structure. Integrating WMF into every fusion node yields \\textbf{WeaveBiFPN}, the neck of our \\textbf{WeaveFace} detector. On WIDER FACE, WeaveFace achieves 91.41\\% mean AP with only 0.34M parameters and 1.16 GFLOPs, outperforming prior detectors under 0.5M parameters. Its largest gains are on the Hard subset, where it reaches 87.14\\% AP. The code is publicly available at \\url{https://github.com/dohun-mat/WeaveMambaFusion}.",
+      "published_at": "2026-10-05T17:59:17+00:00",
+      "summary": "Multimodal Diffusion Transformers (MM-DiTs) jointly process visual and textual representations throughout generation. These models repeatedly update the text tokens through multimodal attention, forming dynamic contextual tokens whose function is not well understood. In this work, we introduce a framework for reading this contextual space through natural-language interrogation. We train a lightweight bottleneck network that maps intermediate contextual tokens into the input space of a frozen Large Language Model (LLM), allowing the LLM to answer questions about the emerging image directly from these hidden representations. Our reader reveals that contextual tokens encode a rich, global representation of the emerging scene: generation-specific semantics, including attributes left underspecified by the prompt, are accessible surprisingly early in denoising, while increasingly fine-grained details become readable over time. Remarkably, this information remains decodable even when the MM-DiT receives an empty prompt, showing that contextual tokens accumulate substantial image-specific information from the evolving visual representation itself. We further find that generations with more readable contextual representations tend to receive higher human-preference scores. Building on these observations, we introduce Contextual Alignment, a training technique that explicitly reinforces the visual-semantic information encoded in the contextual tokens, improving generation quality and distributional coverage. Together, our results establish contextual tokens as both an interpretable view into the internal dynamics of MM-DiTs and an effective target for improving generative models.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Dohun Kim",
-          "Jinmyung Jung"
+          "Omer Dahary",
+          "Etai Sella",
+          "Hadar Averbuch-Elor",
+          "Daniel Cohen-Or",
+          "Or Patashnik"
         ],
         "categories": [
           "cs.CV",
-          "cs.AI"
+          "cs.AI",
+          "cs.GR",
+          "cs.LG"
         ]
       }
     },
     {
-      "id": "2610.05863",
-      "title": "CCQ: A Multi-State Child Care Quality Dataset to Support AI for Children's Health Research",
-      "url": "https://arxiv.org/abs/2610.05863v1",
+      "id": "2610.06843",
+      "title": "Recursive Video In-Context Learning for Agentic Robot",
+      "url": "https://arxiv.org/abs/2610.06843v1",
       "source": "arXiv",
-      "published_at": "2026-10-05T06:30:09+00:00",
-      "summary": "High-quality child care in early life is a critical determinant of children's growth and development. Research on child care quality has been constrained by fragmented, non-research-friendly, and privacy-bound datasets. We present CCQ (Child Care Quality), a large-scale, de-identified dataset for applied data science research at the intersection of AI and early childhood health. CCQ integrates 59,372 child care provider records across 12 U.S. states, covering diverse provider types as well as data schemas. To ensure research utility while protecting privacy, we implement an automated, LLM-based curation pipeline that anonymizes, cleans, and standardizes raw state records into two complementary releases: a cleaned textual release and a fully preprocessed tabular release. We also benchmark traditional machine learning models, tabular foundation models, and language models on quality rating prediction and important features analytics. Within a state, tabular classifiers on the preprocessed tables perform best. Across states, zero-shot transfer is near chance, but modest target-state supervision recovers most of the within-state performance, and pretraining on other states benefits finetuned language models. We release both datasets with all code to accelerate AI-driven research on child care quality and ultimately improve children's health and development.",
+      "published_at": "2026-10-05T17:59:11+00:00",
+      "summary": "LLM agents that orchestrate frozen vision-language-action (VLA) policies improve across episodes through text memory, which records what the agent did but not how the task is done. A demonstration video shows it, but fits poorly into an agent's context. The full video slows every turn, fixed keyframes lose the contact detail that decides whether a grasp holds, and what the agent needs shifts from the task's structure while planning to the frames around each contact. We introduce Recursive Video In-Context Learning (RV-ICL), a training-free method that turns a demonstration into a hierarchy the agent navigates rather than a prompt it receives. The hierarchy is built from the sub-events of the demonstration, such as grasps and releases. Its levels grow finer, from keyframes of the whole task to phases, moments and short clips, and are exposed through read-only tools. The agent reads the coarse levels before planning. During execution it re-enters the hierarchy whenever a step needs more detail and loads only the clip of its current sub-goal. One demonstration per task is enough. Built on RPent, RV-ICL raises success from 92.6% to 96.5% on LIBERO-PRO and from 86.7% to 95.8% on LIBERO-Plus.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Victor Li",
-          "Yuzhang Xie",
-          "Ziwei Dong",
-          "Qingyang Zhu",
-          "Wenjing Ma",
-          "Carl Yang",
-          "Jinbing Bai",
-          "Huiwen Xu",
-          "Jiaying Lu"
+          "Wenrui Bao",
+          "Xinxin Liu",
+          "Bingxin Xu",
+          "Yuzhang Shang"
         ],
         "categories": [
-          "cs.LG",
-          "cs.AI"
-        ]
-      }
-    },
-    {
-      "id": "2610.05861",
-      "title": "Imagine to Act: High-Fidelity Data Synthesis via Image Editing World Model for Scalable GUI Agent Training",
-      "url": "https://arxiv.org/abs/2610.05861v1",
-      "source": "arXiv",
-      "published_at": "2026-10-05T06:28:58+00:00",
-      "summary": "Graphical User Interface (GUI) agents have emerged as a promising paradigm for automating complex digital workflows across diverse applications. However, training highly capable and generalizable agents fundamentally relies on massive, high-fidelity visual-action trajectories, which are notoriously difficult to acquire. While human demonstrations are unscalable, existing GUI world models rely on text descriptions or HTML rendering, discarding crucial pixel-level visual details like icons and layout styles. To address this issue, we introduce Infinite-Dreamer, a simulation-free data synthesis method powered by a pixel-level Image Editing World Model. By conceptualizing GUI transitions as image editing tasks, we leverage Vision-Language Models (VLMs) to describe action-induced UI changes as structured delta-text. We then fine-tune an image editing backbone to controllably synthesize realistic screenshot transitions. We utilize this model to generate both single-frame visual robustness data and multi-step imaginary trajectories. To validate the effectiveness of our approach, we fine-tune the Qwen3-VL baseline solely on the synthesized data to obtain Infinite-Actor, and evaluate it on AndroidWorld, MobileWorld, and AndroidControl-Curated benchmarks. Infinite-Actor consistently outperforms the Qwen3-VL baselines across scales: Infinite-Actor-8B improves AndroidWorld Pass@1 by +4.45 and nearly doubles the MobileWorld Pass@3 success rate, while Infinite-Actor-2B improves Pass@1 by +9.05. Code is available at https://github.com/swaydy-n/Infinite-Dreamer.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Yongxin Ning",
-          "Runliang Niu",
-          "Qianli Xing",
-          "Zhiyi Duan",
-          "Qingzu He",
-          "Pan Wang",
-          "Qi Wang"
-        ],
-        "categories": [
-          "cs.CV",
-          "cs.AI"
+          "cs.RO",
+          "cs.AI",
+          "cs.CL",
+          "cs.MA"
         ]
       }
     }
