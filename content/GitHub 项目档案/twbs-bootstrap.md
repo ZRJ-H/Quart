@@ -1,13 +1,13 @@
 ---
 first_seen: 2026-06-28
-last_seen: 2026-10-06
+last_seen: 2026-10-07
 language: MDX
 tags: [github, trending]
 ---
 
 # twbs/bootstrap
 
-> 流行的 HTML、CSS 与 JavaScript 前端框架，适合快速搭建响应式、移动优先的网站界面。
+> 流行的 HTML、CSS 与 JavaScript 前端框架，适合快速开发响应式、移动优先的 Web 项目界面。
 
 ## 基本信息
 
@@ -90,3 +90,4 @@ tags: [github, trending]
 | 2026-10-02 | #21 | 174,972 | +19⭐ | 常驻 |
 | 2026-10-05 | #22 | 174,990 | +18⭐ | 常驻 |
 | 2026-10-06 | #25 | 174,984 | -6⭐ | 回落 |
+| 2026-10-07 | #21 | 174,989 | +5⭐ | 常驻 |

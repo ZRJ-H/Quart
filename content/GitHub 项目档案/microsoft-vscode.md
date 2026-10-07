@@ -1,13 +1,13 @@
 ---
 first_seen: 2026-06-28
-last_seen: 2026-10-06
+last_seen: 2026-10-07
 language: TypeScript
 tags: [github, trending]
 ---
 
 # microsoft/vscode
 
-> Visual Studio Code 源码仓库，适合开发者了解编辑器实现、参与插件生态或定制开发环境。
+> Visual Studio Code 编辑器源码，是主流跨平台代码编辑工具，适合开发者扩展插件与定制开发环境。
 
 ## 基本信息
 
@@ -120,3 +120,4 @@ tags: [github, trending]
 | 2026-10-04 | #11 | 193,447 | +76⭐ | 常驻 |
 | 2026-10-05 | #14 | 193,519 | +72⭐ | 常驻 |
 | 2026-10-06 | #17 | 193,564 | +45⭐ | 常驻 |
+| 2026-10-07 | #14 | 193,590 | +26⭐ | 常驻 |
