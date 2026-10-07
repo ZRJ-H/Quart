@@ -74,6 +74,7 @@ def _details(category: str, article: Article, item: ItemSummary, detailed: bool)
         categories = "、".join(_markdown_text(value) for value in article.extra.get("categories", [])) or "来源未列出"
         lines.append(f"- **作者/分类**：{authors} · {categories}")
         if detailed:
+            lines.append(f"- **核心摘要**：{_markdown_text(item.summary)}")
             lines.extend(
                 [
                     f"- **研究问题**：{_markdown_text(item.research_problem)}",
@@ -86,7 +87,7 @@ def _details(category: str, article: Article, item: ItemSummary, detailed: bool)
             )
         else:
             lines.extend([f"- **核心摘要**：{_markdown_text(item.summary)}", f"- **价值点**：{_markdown_text(item.value)}"])
-        return "\n".join(lines)
+        return "\n".join(line for line in lines if not line.rstrip().endswith("**："))
     lines.append(f"- **核心摘要**：{_markdown_text(item.summary)}")
     if detailed:
         lines.extend(
@@ -97,7 +98,7 @@ def _details(category: str, article: Article, item: ItemSummary, detailed: bool)
             ]
         )
     lines.append(f"- **价值点**：{_markdown_text(item.value)}")
-    return "\n".join(lines)
+    return "\n".join(line for line in lines if not line.rstrip().endswith("**："))
 
 
 def render_digest(category: str, run_date: date, articles: list[Article], summary: DigestSummary) -> str:
@@ -106,7 +107,8 @@ def render_digest(category: str, run_date: date, articles: list[Article], summar
     deep = "\n\n".join(_details(category, articles[index], summary.items[index], True) for index in range(deep_count))
     quick = "\n\n".join(_details(category, articles[index], summary.items[index], False) for index in range(deep_count, len(articles)))
     trends = "\n\n".join(
-        f"### 趋势 {index}\n\n- **事实依据**：{_markdown_text(trend.fact)}\n- **编辑判断**：{_markdown_text(trend.inference)}"
+        f"### 观察 {index}\n\n- **事实依据**：{_markdown_text(trend.fact)}"
+        + (f"\n- **编辑判断**：{_markdown_text(trend.inference)}" if trend.inference.strip() else "")
         for index, trend in enumerate(summary.trends, start=1)
     )
     quick_section = f"\n\n## 快速浏览\n\n{quick}" if quick else ""
@@ -129,7 +131,7 @@ tags: {TAGS.get(category, '[每日资讯]')}
 
 {deep}{quick_section}
 
-## 今日趋势判断
+## 今日观察
 
 {trends}
 
