@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-10-07T11:01:16.618174+08:00",
+  "cached_at": "2026-10-07T14:16:25.315339+08:00",
   "articles": [
     {
       "id": "49984923",
@@ -8,32 +8,14 @@
       "source": "Hacker News",
       "published_at": "2026-10-06T22:17:21+00:00",
       "summary": "https://github.com/openai/mathhttps://github.com/openai/math/tree/main/preprints",
-      "score": 500,
-      "comments": 414,
+      "score": 719,
+      "comments": 655,
       "discussion_url": "https://news.ycombinator.com/item?id=49984923",
       "extra": {
         "top_comments": [
           "I was a graph theory junkie long ago and even moved to Budapest for awhile to study among the greats. While I was there I started working on Barnette's Conjecture which came to occupy my thoughts over the next 24 years of my life, on and off as I worked in many different fields. Last summer I even thought for a few days that I had actually solved it.But it's supposedly proven here - problem 180. I don't know what to think exactly. I spent thousands of hours on that problem. I really enjoyed it. Hearing that it is solved somehow makes me sad in a far-off way, like hearing an ex-girlfriend died suddenly in a car crash. I don't know, there's probably a lot of people feeling odd emotions tonight.There's no Lean proof for this one so I'm digesting the paper. On the surface it looks like an approach I considered 24 years ago and abandoned.I revisited the problem this summer, along with my partial solutions, when the previous round of stunning proofs came out. Several hours of work with Fable simply convinced me it wasn't yet solvable and reinforced how hard of a problem it was.",
-          "A quick check shows that this list claims to fully solve 90 of the top 500 open problems in math (https://proofatlas.ai/open-problems/).The highest ranked would be:| 22 | Hilbert’s tenth problem over ℚ || 29 | Unique Games || 31 | Anderson-model extended states || 37 | Spacetime Penrose inequality || 48 | Nonexistence of Landau–Siegel zeros || 52 | Baum–Connes || 78 | Abundance || 80 | Hadwiger || 87 | Bose–Einstein condensation || 92 | Two-dimensional entanglement area law |",
+          "> We prove the Unique Games ConjectureThe Unique Games Conjecture (sorry, \"Unique Games Theorem\" now!) is huge. It was a very significant pillar supporting many of the limits of the polynomial-time approximation algorithms in the graduate-level randomized and approximate algorithms course I took in theoretical computer science. Textbooks will have to be re-written.Here is an explainer: https://share.gemini.google/nbjIK6X3tOfzWith UGC proved, certain polynomial-time approximation algorithms used in difficult real-life problems are now known to be the best approximations we can achieve in polynomial-time:> If UGC holds, the elementary algorithm that grabs both ends of an edge is fundamentally the best efficient algorithm that will ever exist. No amount of advanced linear programming or heuristics can achieve a ratio of 1.999.> Under UGC, the Goemans-Williamson algorithm's 0.87856 ratio is mathematically optimal.> UGC is considered the \"Rosetta Stone\" of approximation algorithms. In 2008, Prasad Raghavendra proved that for every single constraint satisfaction problem (CSP), a canonical Semidefinite Programming relaxation paired with the best rounding scheme achieves the optimal approximation ratio if and only if UGC is true. If the conjecture holds, the algorithmic boundary for an entire class of combinatorial problems is completely resolved.Other hardness of approximation results from this UGC proof:> [Max acyclic subgraph, a problem encountered in real life]: No polynomial-time algorithm can fundamentally outperform an unthinking coin toss.> [Relative scheduling, another realistic problem]: As with acyclic subgraphs, the problem is \"approximation-resistant\": clever algorithms cannot beat random shuffling.",
           "As Kevin Buzzard recently said:> In a 2020 piece in the Notices of the AMS, I asked the following question: “If one human had an understanding of all of modern pure mathematics simultaneously, how much further would they immediately be able to see?” Six years later we are beginning to understand the answer to this question."
-        ]
-      }
-    },
-    {
-      "id": "49983703",
-      "title": "Paramount Skydance has completed its $111B merger with Warner Bros. Discovery",
-      "url": "https://arstechnica.com/tech-policy/2026/10/paramount-completes-111b-warner-merger-creating-skydance-behemoth/",
-      "source": "Hacker News",
-      "published_at": "2026-10-06T20:33:47+00:00",
-      "summary": "Paramount Skydance has completed its $111B merger with Warner Bros. Discovery",
-      "score": 184,
-      "comments": 309,
-      "discussion_url": "https://news.ycombinator.com/item?id=49983703",
-      "extra": {
-        "top_comments": [
-          "Nilay Patel: https://www.theverge.com/podcast/1004286/senator-adam-schiff...> One of the longest-running tropes at The Verge is that a workable antitrust policy for the United States would be simply to forbid companies from buying Time Warner because it has never worked and it may never work again, and that we should just pass one law.Checks out:Jan 11, 2001: AOL and Time Warner merged to create AOL Time WarnerJune 14, 2018: AT&T acquired Time Warner, renamed WarnerMediaApril 8, 2022: WarnerMedia spun out of AT&T, merged with Discovery",
-          "This is more consolidation of US media under extremely pro-Israel ownership. I don't think this will work out as well as they hope (look at CBS -- Bari Weiss has driven it into the ground) but it's scary how much US media a foreign adversary now has direct editorial control over, including both \"news\" and \"entertainment\", including TikTok.https://www.972mag.com/ellisons-paramount-tiktok-israel-medi...",
-          "A behemoth indeed but the numbers also tell an interesting story. For TV screen share, Youtube has ~13% of total US viewing time vs ~6% for Paramount/Warner. They also go into this merger with staggering debt which does not bode well."
         ]
       }
     },
@@ -44,14 +26,14 @@
       "source": "Hacker News",
       "published_at": "2026-10-06T20:57:25+00:00",
       "summary": "Decisions API is in public beta",
-      "score": 167,
-      "comments": 67,
+      "score": 227,
+      "comments": 104,
       "discussion_url": "https://news.ycombinator.com/item?id=49984025",
       "extra": {
         "top_comments": [
           "curl https://api.openai.com/v1/decisions \\ -H \"Authorization: Bearer $(llm keys get openai)\" \\ -H \"Content-Type: application/json\" \\ --data ' { \"model\": \"gpt-6-luna\", \"input\": [{ \"role\": \"user\", \"content\": [ {\"type\": \"input_text\", \"text\": \"I am angry about the new product feature\"} ] }], \"questions\": [{ \"type\": \"predicate\", \"name\": \"complaint\", \"instructions\": \"Is this a complaint?\" }, { \"type\": \"predicate\", \"name\": \"compliment\", \"instructions\": \"Is this a compliment?\" }] }' Returned: { \"model\": \"gpt-6-luna\", \"answers\": [ { \"type\": \"predicate\", \"name\": \"complaint\", \"probability\": 0.91 }, { \"type\": \"predicate\", \"name\": \"compliment\", \"probability\": 0.06 } ], \"usage\": { \"input_tokens\": 310, \"input_tokens_details\": { \"cached_tokens\": 0, \"cache_write_tokens\": 0 }, \"output_tokens\": 0, \"output_tokens_details\": { \"reasoning_tokens\": 0 }, \"total_tokens\": 310 } } That https://api.openai.com/v1/decisions endpoint is notable because usually when OpenAI define an endpoint like that it ends up as a defecto standard for other providers.(I turned this all into a new llm plugin: https://github.com/simonw/llm-openai-decisions)",
           "The response to Jev should be the nail in the coffin over whether or not the AI business is a commodity market.Out of no where Jev appeared as the next round of the price wars. Jev showed the value of System One models. A fast yes/no/confidence score not only is cheaper but also often all people want. Open source versions flood hugging face and now the big players are giving up a potentially big driver of output tokens to keep customers and race to the bottom price wise.If I were OpenAI or Anthropic I’d be racing to make their products as sticky as possible bc ppl will flock to what’s cheapest otherwise.",
-          "It’s interesting they skipped caching. I could see wanting to ask follow up questions so having your first x tokens in cache would be interesting.Also if you have a long “system prompt” then caching would have saved a considerable amount on bulk data processing.There may well be a technical reason I don’t understand."
+          "Ran my decisions evals (still rudimentary, less than 600 calls (UI component selection, chat charting, tag selection, PKM stuff)) on this via OpenRouter against Jev and Mercury Decide. Jev because it has replaced my mt0 efforts by sheer force of affordability (more importantly, the limits running on a MacBook Neo bring even after vocab pruning and quant insanity) and Mercury Decide because I do like dLLM efforts (and I'd like to use fewer model providers if possible).Preliminary of course, but seems to be slower than Jev and similar to Mercury Decides latency, though not in growing linearly with the amount of input (346ms p50 and 860ms p95, (Mercury Decide also had some extremes up to 1,3s that were around 800ms today, likely preview related, it scaled far more consistently with size)), less \"confidence\" concerning my ambiguous UI component and response shape specific tasks (have very specific use cases for these models which Luna often fails to meet at 0.6 and lower), lead to a few failed calls which neither competitor had (4 vs 0 for both) and measured more expensive than Jev to boot by a factor of 3,1 times on average (Mercury Decide pricing I think is still unknown so no numbers there).Basically slower, more expensive and less capable than Jev, roughly on par with Mercury Decide (provided, in my insane set of use cases and requirements that are a PKM focused Firefox fork with multiple infinite canvas using decision models to improve information synthesis from multiple sources).Seems a bit undercooked overall and I'd rather frontier-labs don't jump on bandwagons until they can offer something competitive in price, performance or both. In fairness, though, I have yet to test image input, maybe that makes all the difference. Also, again, mine is unlikely to reflect everyones use case, so interested in seeing others results.Didn't comment at the time, but having read up on Devday after the fact, there seems to have been a lot of that going around. Notion and GDocs, Jev, Muse, most seems to have been cloned from existing competitors (and despite infinite, ultrafast, ultra code tokens with unsandboxed Mega Astra not that amazing to boot).Prefer less announcements, but focused and at a higher quality. Considering ChatGPT Atlas (their Chromium based browser) and its insanely fast death, I'd be skeptical to put much into any of these even if they were in some way an improvement over what is out there. Maybe focus on a fresh pre-train and some sandboxing improvements."
         ]
       }
     },
@@ -62,13 +44,13 @@
       "source": "Hacker News",
       "published_at": "2026-10-06T23:28:08+00:00",
       "summary": "AnyPS5: Port PS5 binaries to PC without emulation (87% system libraries mapped)",
-      "score": 122,
-      "comments": 93,
+      "score": 191,
+      "comments": 150,
       "discussion_url": "https://news.ycombinator.com/item?id=49985664",
       "extra": {
         "top_comments": [
           "Unfortunately, this is only going to push Sony/Nintendo/MS more towards cloud gaming. AI enabling these amazing reverse engineering efforts and democratizing access to gaming is amazing, and preventing vendor lock in is always something I'll support. However it's hard not to see them pushing gamers towards needing to play games on cloud only, preventing these kind of things happening.",
-          "You will own everything and be happy.",
+          "I have been in the PlayStation jail breaking scene for a while, and my God is this news.Despite using AI all the time for other engineering projects, I never considered the console scene as something to be explored.If this ends up allowing me to play GTA 6 on my PC within a few months of release I will be euphoric.",
           "It's always nice to have local git clone backups/mirrors of these projects because they may eventually be taken down through legal threats eg, Yuzu and Ryujinx.Eg. https://torrentfreak.com/nintendo-wipes-out-400-switch-emula..."
         ]
       }
@@ -80,32 +62,14 @@
       "source": "Hacker News",
       "published_at": "2026-10-06T18:00:34+00:00",
       "summary": "Claude Code’s suggested message feature: I think the real customer is the model",
-      "score": 114,
-      "comments": 61,
+      "score": 165,
+      "comments": 89,
       "discussion_url": "https://news.ycombinator.com/item?id=49981905",
       "extra": {
         "top_comments": [
-          "This was my conclusion when I saw the feature for the first time.One of the open problems at the frontier, as we climb the levels of abstraction towards longer task horizons, is \"what's the next step that makes the most sense?\". This feedback seems like a frictionless way to gather those yes/no feedback signals in a natural manner to feed into future training runs.",
+          "I had to laugh yesterday when Claude went and changed a feature I didnt want or ask to be changed and the suggested message was something along the lines of revert the change to it. Like it knew I wouldnt like it but did it anyway",
           "If you've played around with 'raw' LLM interactions you've already seen this: feeding a prompt into an LLM which ends with a 'start of user' prompt will produce a plausible query into the agent. Which makes perfect sense because the LLMs are already trained on many examples of this and the 'predict the next token' loss function does not particularly distinguish between the sides of the conversation. I highly doubt they need this feature to get better training data, more likely they got this feature for free from the way that the training works and only recently decided to actually expose it to the user.",
-          "I had to laugh yesterday when Claude went and changed a feature I didnt want or ask to be changed and the suggested message was something along the lines of revert the change to it. Like it knew I wouldnt like it but did it anyway"
-        ]
-      }
-    },
-    {
-      "id": "49981197",
-      "title": "Utah to let AI examine patients and prescribe medication without human oversight",
-      "url": "https://www.techspot.com/news/114111-utah-become-first-state-ai-examine-patients-prescribe.html",
-      "source": "Hacker News",
-      "published_at": "2026-10-06T17:01:52+00:00",
-      "summary": "Utah to let AI examine patients and prescribe medication without human oversight",
-      "score": 87,
-      "comments": 103,
-      "discussion_url": "https://news.ycombinator.com/item?id=49981197",
-      "extra": {
-        "top_comments": [
-          "The title is rather misleading, I think. FTA:\"The process works when a person signs up for Nolla Health's $4.99-per-month app and uses it to scan their face. After completing a medical history and personal information form, the AI analyzes their skin...\"Utah is not allowing any general form of no-human-in-the-loop healthcare, but has temporarily allowed this company to operate.",
-          "What is the actual benefit here? If we believe the doctor's oversight is required, the AI introduces a dangerous potential for error. If we don't think a doctor's oversight is required, the medication shouldn't require a prescription in the first place. What positive value does the AI actually add that isn't circumventing a legal requirement that we decided to put in place?",
-          "This is the type of reform that has been difficult to achieve in the US (And I presume other high-regulation, Western countries).We usually regulate a one-size-fits-all approach to everything in medicine. An M.D. (or whatever NPs have?) is required to prescribe medicines, even medicines which are just the same or slightly stronger formulations of OTC medications like a 400mg Ibuprofen or a 1% hydrocortisone cream. Compare this to Mexico, where you can buy many of our \"prescription-only\" meds OTC.A lot of healthcare issues are just not high-stakes. Requiring a doctor in these cases doesn't help the average patient, because the average patient would rather ignore the problem, or now, ask ChatGPT how to treat it with OTC options, than deal with the mess of scheduling doctor appointments, dealing with insurance (or in Canada, long wait times to see the doctor for free), only to get just 5 minutes with the actual doctor who may not even listen to you.I know it's a tough pill to swallow for doctors, and I recognize that it's not doctors who chose the terrible healthcare system we have or decided that they should have 5-10 minutes with a patient. But I do think we need to change the rules for things that have little risk of causing harm but a great chance of improving the aggregate outcomes by increasing access to healthcare."
+          "I think the poster got it completely wrong. I suspect the suggested command was designed to help new users, who don't always understand that they should do something. An interface like chat, where you are given an empty box, has a daunting learning curve (remember DOS prompt?). So I see this feature as onboarding, to get users from novice to intermediate."
         ]
       }
     },
@@ -116,32 +80,68 @@
       "source": "Hacker News",
       "published_at": "2026-10-06T21:59:43+00:00",
       "summary": "Penguin Mail – open-source Rust email client for Linux with AI",
-      "score": 87,
-      "comments": 33,
+      "score": 145,
+      "comments": 66,
       "discussion_url": "https://news.ycombinator.com/item?id=49984716",
       "extra": {
         "top_comments": [
-          "That's a very nice looking app - I like the look of it it gives me Mail.app vibes.A mail client is always a tough thing to get right so I'm glad you're working on oneI love then idea that as the total cost (time/money/attention) of personalizing software continues to come down, more people will be able to encourage a diaspora of options, tailored to each niche.",
-          "Interesting that they call out Fastmail as a supported provider, but don't support JMAP. Seems like that would have been an easy stretch goal for Claude, and a good way to stand out amongst the competition.",
-          "The industry standard wording is to suffix the headline with \"written in Rust\"."
+          "Went to watch the Youtube intro [1] for Penguin Mail and was greeted by the most egregious scam video. Didn't click the ad, but simply went to the domain (usbest1.com) and it's just chock full of AI generated content hoping to scam you out of your money. Going through the checkout flow, it even asks you if you want to tip your driver (presumably for delivery).Sorry for the off-topic, but Google (and all ad networks) should be legally required to vet their advertisers. That's gotta be the worst I've seen.[1]: https://www.youtube.com/watch?v=0PyJCsw1FSE",
+          "“With AI” means they have a built-in assistant (which no one wants), rather than exposing the functionality through MCP.",
+          "That's a very nice looking app - I like the look of it it gives me Mail.app vibes.A mail client is always a tough thing to get right so I'm glad you're working on oneI love then idea that as the total cost (time/money/attention) of personalizing software continues to come down, more people will be able to encourage a diaspora of options, tailored to each niche."
         ]
       }
     },
     {
-      "id": "49985643",
-      "title": "State of Devs 2026",
-      "url": "https://2026.stateofdevs.com/en-US/",
+      "id": "49982498",
+      "title": "Tell HN: GitHub refuses to remove cracked copies of my software after a month",
+      "url": "https://news.ycombinator.com/item?id=49982498",
       "source": "Hacker News",
-      "published_at": "2026-10-06T23:26:30+00:00",
-      "summary": "State of Devs 2026",
-      "score": 83,
-      "comments": 25,
-      "discussion_url": "https://news.ycombinator.com/item?id=49985643",
+      "published_at": "2026-10-06T18:54:01+00:00",
+      "summary": "I am a developer of https://www.photopea.com, a popular photo editor that runs in a web browser.Many people are asking AI models to take the Javascript code from my website, remove all ads from it, and they publish such a \"new product\" on Github for everyone to download.There exist tens of such repositories on Github. I want my website to be the only source of a stable version of my program Photopea. I even received emails from people complaining about something in Photopea, and it took several emails to figure out that they are not using Photopea.com (so it ruins my reputation a little).I reported it to Github on the 4th of September 2026: https://www.photopea.com/g/XKoqqIGvToday, a month later, I received this response:Thank you for submitting a DMCA takedown notice. We've reviewed the information you've provided, and based on the facts presented to us, we're unable to confirm a violation of 17 U.S. Code § 1201.What do you think I could do? Do you think I should look for a lawyer to deal with it outside the digital world? I really doubt that a real person ever looked at my report, and they probably send this response automatically to 99% of people.",
+      "score": 116,
+      "comments": 79,
+      "discussion_url": "https://news.ycombinator.com/item?id=49982498",
       "extra": {
         "top_comments": [
-          "My hunch is that in the long run its going to be net negative in software. A lot of companies exists as of today cause a lot of people were able to just focus on building without constantly worrying about the fear of lay off. With the concept of job security based on talent and effort being dismantled, everyone would always be in a constant look out mode now.",
-          "Lot of very sad data but a couple of bright points:- 50% are thinking somewhat-to-very unlikely they'll be changing careers in the next 5 years- 42% are hopeful or excited about the tech industry",
-          "From looking at their data it looks like decades of failing up is reaching a breaking point. I can look back in my career and I have had some stellar leaders, some of which had never tried to write code a day in their life.I have also had just as many terrible managers. At the last job I worked with somebody who thought they were my manager. They weren't and did not even have the same employer. They were my peer. Nonetheless they withheld client communications until my own employer was forced to fire me. Their employer fired them shortly after. Could it have been the fraud, the dereliction of duty, the toxic leadership? Who knows, there are just so many to choose from.How did we get here? Well, in the corporate non-software company world there is clearly an 80/20 rule at play. 80% of the developers provide 20% of the total development value. Most of my career has been in non-software company web businesses like Travelocity and Expedia. I have also spent time in finance, where that company employed more developers that most large companies have total headcount. Most of these people were some form of JavaScript framework in the browser and Java outside the browser doing the backend web things.Most of these people really sucked at what they do. They weren't terrible people, some few were, they just weren't properly mentored and worked in an environment where failure and coloring books was more of the expectation than the exception. To be more clear, in case the analogy was ambiguous, most developers are intentional over paid commodities to be hired and fired as rapidly as they could be found.After a couple decades of this madness this is the baseline culture of user-face web software. Essentially: drop out of high school, go to a 6 week boot camp, put text on screen with React for $140k per year. Or, plan B, pay way too much for a computer science bachelor's degree and start at 20% higher compensation. Not surprisingly there is a lot of insecurity there (I saw it screaming from the shadows at every job). Say anything about it and the resentment comes alive in all its wonderful forms. Less surprisingly, over time those people get promoted into management where neglecting skill development becomes the standard for the next wave of new hires, as if to say: \"STFU, go back to your coloring books\". It really comes full circle when people then use their inability to innovate as a badge of honor to justify their continued employment."
+          "First off, let me get this out of the way - I am not a lawyer. If you want a legal advice talk to a lawyer.Second, I am sorry this is happening to you.Third, based on GitHub's reply, specifically> we're unable to confirm a violation of 17 U.S. Code § 1201they took your submission as 17 U.S. Code § 1201 takedown notice. Maybe you specifically stated this. Maybe it was implied. This is likely not what you want and GitHub's response is likely correct. The reason for this is that § 1201 prohibits circumventing a technological measure. The JS you host on your public site, even if obfuscated, very likely does not qualify for this protection. Another detail - the reason it took long (a month later according to your post) is that after the youtube-dl fiasco, they committed to manual review, legal and technical, of every 1201 takedown notice [0].Fourth, if you believe these copies are sufficiently reproducing your copyrighted work, what you likely want to do is file a standard copyright infringement 17 U.S Code § 512(c) takedown notice. This still goes through the same DMCA report flow but it should result in a less stringent review process and a faster response.Fifth and finally, consider asking your favorite LLM to get more context around these laws. Good luck![0] https://github.blog/news-insights/policy-news-and-insights/s...",
+          "I am in the same situation where people are hosting copies of the software for commercial use in companies. Even as big as Tencent. That is not allowed with my license and they also went to remove the code that does the license check on application startup. GitHub’s response so far: “please give an explanation how they can become conformant so that the users can fix this.”",
+          "You should discuss this with an attorney that is experienced with IP law to see what your options really are. IP law is very complex and sometimes very surprising. You need expert legal advice, not advice from the HN crowd.As an aside, I thought that \"cracked\" software meant software that has had the copy protection or other access control bypassed or removed, not the alteration of the software functionality itself. If your software was actually cracked then you may have some fairly heavy law in your favor. For better or worse, bypassing access controls (even weak or simple access controls) gets special legal attention."
+        ]
+      }
+    },
+    {
+      "id": "49987076",
+      "title": "Strands Decider 2B: a small, open-source, decision model",
+      "url": "https://strandsagents.com/blog/introducing-strands-decider/",
+      "source": "Hacker News",
+      "published_at": "2026-10-07T02:02:11+00:00",
+      "summary": "Strands Decider 2B: a small, open-source, decision model",
+      "score": 109,
+      "comments": 23,
+      "discussion_url": "https://news.ycombinator.com/item?id=49987076",
+      "extra": {
+        "top_comments": [
+          "At this point I can't wait for a comedian to release a decision model backed by humans.Meet Jerry- it's literally a guy named Jerry answering your questions.",
+          "Why is everyone calling binary choices `noul`? Does this have some meaning or is it just copying Jev’s API?",
+          "Fantastically well written. It's rare for me to be able to understand what the AI gurus are talking about, and this was written by humans for humans.It can technically be used for a lot of use cases, I'd like people to chime in on ideas on this?"
+        ]
+      }
+    },
+    {
+      "id": "49984652",
+      "title": "How Fast is Python 3.15?",
+      "url": "https://blog.miguelgrinberg.com/post/how-fast-is-python-3-15",
+      "source": "Hacker News",
+      "published_at": "2026-10-06T21:52:57+00:00",
+      "summary": "How Fast is Python 3.15?",
+      "score": 57,
+      "comments": 38,
+      "discussion_url": "https://news.ycombinator.com/item?id=49984652",
+      "extra": {
+        "top_comments": [
+          "So not much progress since 3.14 - but still progress! Personally, I think it's nice when my code automatically gets faster thanks to someone else's work, and I don't understand all the negative sentiment in this thread. Yes, of course Python is still a slow language. You hopefully knew that when you picked Python for your project.",
+          "only tangentially related, but naming PyPy when PyPI was already established was ridiculous",
+          "Answer: not fast at all."
         ]
       }
     }
