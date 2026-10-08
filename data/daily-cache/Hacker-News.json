@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-10-07T14:16:25.315339+08:00",
+  "cached_at": "2026-10-08T11:00:37.782061+08:00",
   "articles": [
     {
       "id": "49984923",
@@ -8,8 +8,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-06T22:17:21+00:00",
       "summary": "https://github.com/openai/mathhttps://github.com/openai/math/tree/main/preprints",
-      "score": 719,
-      "comments": 655,
+      "score": 1241,
+      "comments": 1412,
       "discussion_url": "https://news.ycombinator.com/item?id=49984923",
       "extra": {
         "top_comments": [
@@ -20,128 +20,128 @@
       }
     },
     {
-      "id": "49984025",
-      "title": "Decisions API is in public beta",
-      "url": "https://developers.openai.com/api/docs/guides/decisions",
+      "id": "49998895",
+      "title": "Margaret Hamilton has died",
+      "url": "https://news.mit.edu/2026/margaret-hamilton-computing-pioneer-dies-1007",
       "source": "Hacker News",
-      "published_at": "2026-10-06T20:57:25+00:00",
-      "summary": "Decisions API is in public beta",
-      "score": 227,
-      "comments": 104,
-      "discussion_url": "https://news.ycombinator.com/item?id=49984025",
+      "published_at": "2026-10-07T21:16:18+00:00",
+      "summary": "Margaret Hamilton has died",
+      "score": 865,
+      "comments": 101,
+      "discussion_url": "https://news.ycombinator.com/item?id=49998895",
       "extra": {
         "top_comments": [
-          "curl https://api.openai.com/v1/decisions \\ -H \"Authorization: Bearer $(llm keys get openai)\" \\ -H \"Content-Type: application/json\" \\ --data ' { \"model\": \"gpt-6-luna\", \"input\": [{ \"role\": \"user\", \"content\": [ {\"type\": \"input_text\", \"text\": \"I am angry about the new product feature\"} ] }], \"questions\": [{ \"type\": \"predicate\", \"name\": \"complaint\", \"instructions\": \"Is this a complaint?\" }, { \"type\": \"predicate\", \"name\": \"compliment\", \"instructions\": \"Is this a compliment?\" }] }' Returned: { \"model\": \"gpt-6-luna\", \"answers\": [ { \"type\": \"predicate\", \"name\": \"complaint\", \"probability\": 0.91 }, { \"type\": \"predicate\", \"name\": \"compliment\", \"probability\": 0.06 } ], \"usage\": { \"input_tokens\": 310, \"input_tokens_details\": { \"cached_tokens\": 0, \"cache_write_tokens\": 0 }, \"output_tokens\": 0, \"output_tokens_details\": { \"reasoning_tokens\": 0 }, \"total_tokens\": 310 } } That https://api.openai.com/v1/decisions endpoint is notable because usually when OpenAI define an endpoint like that it ends up as a defecto standard for other providers.(I turned this all into a new llm plugin: https://github.com/simonw/llm-openai-decisions)",
-          "The response to Jev should be the nail in the coffin over whether or not the AI business is a commodity market.Out of no where Jev appeared as the next round of the price wars. Jev showed the value of System One models. A fast yes/no/confidence score not only is cheaper but also often all people want. Open source versions flood hugging face and now the big players are giving up a potentially big driver of output tokens to keep customers and race to the bottom price wise.If I were OpenAI or Anthropic I’d be racing to make their products as sticky as possible bc ppl will flock to what’s cheapest otherwise.",
-          "Ran my decisions evals (still rudimentary, less than 600 calls (UI component selection, chat charting, tag selection, PKM stuff)) on this via OpenRouter against Jev and Mercury Decide. Jev because it has replaced my mt0 efforts by sheer force of affordability (more importantly, the limits running on a MacBook Neo bring even after vocab pruning and quant insanity) and Mercury Decide because I do like dLLM efforts (and I'd like to use fewer model providers if possible).Preliminary of course, but seems to be slower than Jev and similar to Mercury Decides latency, though not in growing linearly with the amount of input (346ms p50 and 860ms p95, (Mercury Decide also had some extremes up to 1,3s that were around 800ms today, likely preview related, it scaled far more consistently with size)), less \"confidence\" concerning my ambiguous UI component and response shape specific tasks (have very specific use cases for these models which Luna often fails to meet at 0.6 and lower), lead to a few failed calls which neither competitor had (4 vs 0 for both) and measured more expensive than Jev to boot by a factor of 3,1 times on average (Mercury Decide pricing I think is still unknown so no numbers there).Basically slower, more expensive and less capable than Jev, roughly on par with Mercury Decide (provided, in my insane set of use cases and requirements that are a PKM focused Firefox fork with multiple infinite canvas using decision models to improve information synthesis from multiple sources).Seems a bit undercooked overall and I'd rather frontier-labs don't jump on bandwagons until they can offer something competitive in price, performance or both. In fairness, though, I have yet to test image input, maybe that makes all the difference. Also, again, mine is unlikely to reflect everyones use case, so interested in seeing others results.Didn't comment at the time, but having read up on Devday after the fact, there seems to have been a lot of that going around. Notion and GDocs, Jev, Muse, most seems to have been cloned from existing competitors (and despite infinite, ultrafast, ultra code tokens with unsandboxed Mega Astra not that amazing to boot).Prefer less announcements, but focused and at a higher quality. Considering ChatGPT Atlas (their Chromium based browser) and its insanely fast death, I'd be skeptical to put much into any of these even if they were in some way an improvement over what is out there. Maybe focus on a fresh pre-train and some sandboxing improvements."
+          "I was able to meet her, and others who worked at the MIT Instrumentation/Draper Lab, as a start-up I was with received funding from a VC firm founded by other Draper Lab members from the Apollo era. I was totally out of my league talking with them. This was thirty years ago and I remember her talking about formalized control systems. It was fascinating but went totally over my head. My startup was a fairly silly multimedia CD-ROM company and I was just happy to be in the room.",
+          "Her story and her work is so inspiring. And I feel a bit sad reading about it...When I started working on this field I dreamt of working on things like that. Not sending anything to the moon, but code that would achieve difficult stuff, challenging tasks, things I would be proud of.Today I mostly do silly APIs, and with AI is worse and worse... I wonder if there are still jobs where you have to do novel stuff, new algorithms, more like a scientific approach to the code, instead of just deploy the same thing every other company has already done.",
+          "Dang. She was a remarkable stand-out, in fields full of remarkable people.The pic here is often people's first intro to her https://news.mit.edu/2016/scene-at-mit-margaret-hamilton-apo..."
         ]
       }
     },
     {
-      "id": "49985664",
-      "title": "AnyPS5: Port PS5 binaries to PC without emulation (87% system libraries mapped)",
-      "url": "https://github.com/boykopovar/AnyPS5",
+      "id": "49996437",
+      "title": "Claude Haiku 5.5",
+      "url": "https://www.anthropic.com/claude-haiku-5-5",
       "source": "Hacker News",
-      "published_at": "2026-10-06T23:28:08+00:00",
-      "summary": "AnyPS5: Port PS5 binaries to PC without emulation (87% system libraries mapped)",
-      "score": 191,
-      "comments": 150,
-      "discussion_url": "https://news.ycombinator.com/item?id=49985664",
+      "published_at": "2026-10-07T18:01:32+00:00",
+      "summary": "Claude Haiku 5.5",
+      "score": 716,
+      "comments": 359,
+      "discussion_url": "https://news.ycombinator.com/item?id=49996437",
       "extra": {
         "top_comments": [
-          "Unfortunately, this is only going to push Sony/Nintendo/MS more towards cloud gaming. AI enabling these amazing reverse engineering efforts and democratizing access to gaming is amazing, and preventing vendor lock in is always something I'll support. However it's hard not to see them pushing gamers towards needing to play games on cloud only, preventing these kind of things happening.",
-          "I have been in the PlayStation jail breaking scene for a while, and my God is this news.Despite using AI all the time for other engineering projects, I never considered the console scene as something to be explored.If this ends up allowing me to play GTA 6 on my PC within a few months of release I will be euphoric.",
-          "It's always nice to have local git clone backups/mirrors of these projects because they may eventually be taken down through legal threats eg, Yuzu and Ryujinx.Eg. https://torrentfreak.com/nintendo-wipes-out-400-switch-emula..."
+          "Pelicans riding bicycles for Haiku at the different thinking levels: https://tools.simonwillison.net/markdown-svg-renderer?url=ht...Low messes up the bicycle frame, but medium/high/xhigh/max all get the bicycle frame right.The max one took 5 minutes 9 seconds and cost 3.3826 cents. The cheapest one (low) cost 0.0936 cents and took 7 seconds.The most recent release of my llm-anthropic plugin queries the Anthropic model listing API directly, so I didn't have to upgrade the plugin to add support for this model: llm install llm-anthropic -U llm anthropic refresh llm -m claude-haiku-5.5 'prompt goes here' EDIT: Here's the Haiku 4.5 pelican from a year ago for comparison, it was terrible: https://simonwillison.net/2025/Oct/15/claude-haiku-45/",
+          "Pricing is...a bit weird. Input $0.10 / MTok for prompts up to 100,000 tokens $0.50 / MTok for prompts over 100,000 tokens Output $0.50 / MTok for prompts up to 100,000 tokens $2.50 / MTok for prompts over 100,000 tokens 100k tokens is an absurdly low cutoff and it is only applicable to Haiku and not Sonnet or Opus. It's a low enough cutoff that it will be quickly exceeded if you are doing anything with Agents; for typical generation or Jev-like classifiers, it's a good value and as noted in this article, that is apparently the vast majority of Haiku use.In both cases, still much cheaper than Haiku 4.5's $1 input / $5 output and these prices better compete with GPT-6 Luna. ($0.10 input / $0.50 output, but with no token threshold [EDIT: the threshold for Luna is apparently 272k])",
+          "> Second, this week, we’ll roll out a new monthly API credit to all Max and Team subscribers for use on the Claude Platform. Max 5x users will get $100 in credits per month, Max 20x users will get $200, and Team subscribers will receive up to $500, pooled across their usersThis is a very big benefit for me. I can now ship actual ai enhanced features behind my subscription without paying extra or fully relying on on-device models. I do worry that this is to soften the blow for user-unfriendly changes"
         ]
       }
     },
     {
-      "id": "49981905",
-      "title": "Claude Code’s suggested message feature: I think the real customer is the model",
-      "url": "https://www.zohaib.cc/blog/smartest-claude-code-feature",
+      "id": "49996425",
+      "title": "GPT‑6 and Intelligent UI for everyone",
+      "url": "https://openai.com/index/gpt-6-for-everyone/",
       "source": "Hacker News",
-      "published_at": "2026-10-06T18:00:34+00:00",
-      "summary": "Claude Code’s suggested message feature: I think the real customer is the model",
-      "score": 165,
-      "comments": 89,
-      "discussion_url": "https://news.ycombinator.com/item?id=49981905",
+      "published_at": "2026-10-07T18:00:58+00:00",
+      "summary": "GPT‑6 and Intelligent UI for everyone",
+      "score": 523,
+      "comments": 275,
+      "discussion_url": "https://news.ycombinator.com/item?id=49996425",
       "extra": {
         "top_comments": [
-          "I had to laugh yesterday when Claude went and changed a feature I didnt want or ask to be changed and the suggested message was something along the lines of revert the change to it. Like it knew I wouldnt like it but did it anyway",
-          "If you've played around with 'raw' LLM interactions you've already seen this: feeding a prompt into an LLM which ends with a 'start of user' prompt will produce a plausible query into the agent. Which makes perfect sense because the LLMs are already trained on many examples of this and the 'predict the next token' loss function does not particularly distinguish between the sides of the conversation. I highly doubt they need this feature to get better training data, more likely they got this feature for free from the way that the training works and only recently decided to actually expose it to the user.",
-          "I think the poster got it completely wrong. I suspect the suggested command was designed to help new users, who don't always understand that they should do something. An interface like chat, where you are given an empty box, has a daunting learning curve (remember DOS prompt?). So I see this feature as onboarding, to get users from novice to intermediate."
+          "I find the Sunday roast comparison of 5.6 vs 6 very interesting. I have no doubt most people will prefer 6, yet I am almost repulsed by all the images, so much needless whitespace, checklist and so on. Feels like I'm being condescended to and treated like a child.Given that OpenAI is making noises about merging work with chat (a horrible idea imo), and Work is very similar to Codex... I dearly hope things like these won't have any meaningful cross-polination into the actual work tools.Seeing that the chat is based on 6.0 and not 6.1 is disappointing. The \"Visual and interactive explanations\" seems genuinely useful, but 6.1 is just so much better. I wouldn't truly trust the 6.1 with the explanations, but I'd trust them a fair bit more than 6.0. I understand that compute isn't infinite, but tons of people only interact with the chat and having your \"things-explainer\" be as good as it can be is important when people increasingly treat AI models as the source of truth, or even use them for academic learning and whatnot.Still, the models will improve, so the visual explainer seems pretty good as an idea / mvp.",
+          "Of everything that could be automated, Bartosz Ciechanowski really was the last on my list.In all seriousness, his lovingly and expertly crafted explainers are still going to age like a handcrafted heirloom clock in a world of plastic-clad quartz movements. But it’s absolutely incredible that we are now in an age where a computer can manufacture a serviceable interactive explainer on whatever niche topic you desire.",
+          "https://cdn.openai.com/pdf/gpt-6-october.pdfSystem card linked in the blog post.> regression on the extremism vision evaluation.> Relative to their respective GPT-5.6 counterparts, GPT-6 Sol (October) shows a statistically significant regression on standard self-harm, while GPT-6 Luna (October) shows statistically significant regressions on standard self-harm, gore, and sexual content> \"GPT-6 Sol (October) and GPT-6 Luna (October) show an improvement on helpfulness on legitimate requests relative to prior models, though it scores lower on some safety requests\"Concerning how there's significant regressions on so many critical benchmarks, but it is newer and creates UI, so must be good.It’s crazy that a company can document these safety drops in a PDF, ship the model anyway, and focus the announcement entire on shiny new UI"
         ]
       }
     },
     {
-      "id": "49984716",
-      "title": "Penguin Mail – open-source Rust email client for Linux with AI",
-      "url": "https://penguin-mail.com/",
+      "id": "49991227",
+      "title": "Shipping JPEG XL in Chrome",
+      "url": "https://developer.chrome.com/blog/jpeg-xl-in-chrome",
       "source": "Hacker News",
-      "published_at": "2026-10-06T21:59:43+00:00",
-      "summary": "Penguin Mail – open-source Rust email client for Linux with AI",
-      "score": 145,
-      "comments": 66,
-      "discussion_url": "https://news.ycombinator.com/item?id=49984716",
+      "published_at": "2026-10-07T11:25:02+00:00",
+      "summary": "Shipping JPEG XL in Chrome",
+      "score": 499,
+      "comments": 332,
+      "discussion_url": "https://news.ycombinator.com/item?id=49991227",
       "extra": {
         "top_comments": [
-          "Went to watch the Youtube intro [1] for Penguin Mail and was greeted by the most egregious scam video. Didn't click the ad, but simply went to the domain (usbest1.com) and it's just chock full of AI generated content hoping to scam you out of your money. Going through the checkout flow, it even asks you if you want to tip your driver (presumably for delivery).Sorry for the off-topic, but Google (and all ad networks) should be legally required to vet their advertisers. That's gotta be the worst I've seen.[1]: https://www.youtube.com/watch?v=0PyJCsw1FSE",
-          "“With AI” means they have a built-in assistant (which no one wants), rather than exposing the functionality through MCP.",
-          "That's a very nice looking app - I like the look of it it gives me Mail.app vibes.A mail client is always a tough thing to get right so I'm glad you're working on oneI love then idea that as the total cost (time/money/attention) of personalizing software continues to come down, more people will be able to encourage a diaspora of options, tailored to each niche."
+          "Yay! Good timing. I just integrated JXL into my photo gallery website a few days ago. Non-optional. I can't afford to be hosting Jpegs :-) Now I don't have to tell people to flip the flag in their settings.",
+          "And soon Firefox will include it in Stable. During October it will go from Safari only to majority coverage. Eventful month!While AVIF may have a slight edge in some cases like in fairly lossy compression, you won't really go _wrong_ with JPEG XL (unless strongly CPU constrained) and I think the strength of the format is its extreme versatility as a \"be all end all image format\" for some time where comparative performance depending on functionality ranges from respectable to excellent. It can work as a replacement for AVIF, PNG, JPEG, WebP, even certain TIFF required scenarios (high bit depth, multichannel, layers) depending on use cases.",
+          "It's exciting to see JXL support being re-added in Chrome after being removed a while ago and them seemingly not being interested in supporting it [1].I think JXL is a cool image format, but was being held back by the most popular browser not supporting it, limiting its use (in the web especially) by a lot.[1]: https://issues.chromium.org/issues/40270698"
         ]
       }
     },
     {
-      "id": "49982498",
-      "title": "Tell HN: GitHub refuses to remove cracked copies of my software after a month",
-      "url": "https://news.ycombinator.com/item?id=49982498",
+      "id": "49994443",
+      "title": "Show HN: Bigwords.page – Turn any screen into a sign. The URL is the app",
+      "url": "https://bigwords.page/",
       "source": "Hacker News",
-      "published_at": "2026-10-06T18:54:01+00:00",
-      "summary": "I am a developer of https://www.photopea.com, a popular photo editor that runs in a web browser.Many people are asking AI models to take the Javascript code from my website, remove all ads from it, and they publish such a \"new product\" on Github for everyone to download.There exist tens of such repositories on Github. I want my website to be the only source of a stable version of my program Photopea. I even received emails from people complaining about something in Photopea, and it took several emails to figure out that they are not using Photopea.com (so it ruins my reputation a little).I reported it to Github on the 4th of September 2026: https://www.photopea.com/g/XKoqqIGvToday, a month later, I received this response:Thank you for submitting a DMCA takedown notice. We've reviewed the information you've provided, and based on the facts presented to us, we're unable to confirm a violation of 17 U.S. Code § 1201.What do you think I could do? Do you think I should look for a lawyer to deal with it outside the digital world? I really doubt that a real person ever looked at my report, and they probably send this response automatically to 99% of people.",
-      "score": 116,
-      "comments": 79,
-      "discussion_url": "https://news.ycombinator.com/item?id=49982498",
+      "published_at": "2026-10-07T15:44:21+00:00",
+      "summary": "Show HN: Bigwords.page – Turn any screen into a sign. The URL is the app",
+      "score": 384,
+      "comments": 113,
+      "discussion_url": "https://news.ycombinator.com/item?id=49994443",
       "extra": {
         "top_comments": [
-          "First off, let me get this out of the way - I am not a lawyer. If you want a legal advice talk to a lawyer.Second, I am sorry this is happening to you.Third, based on GitHub's reply, specifically> we're unable to confirm a violation of 17 U.S. Code § 1201they took your submission as 17 U.S. Code § 1201 takedown notice. Maybe you specifically stated this. Maybe it was implied. This is likely not what you want and GitHub's response is likely correct. The reason for this is that § 1201 prohibits circumventing a technological measure. The JS you host on your public site, even if obfuscated, very likely does not qualify for this protection. Another detail - the reason it took long (a month later according to your post) is that after the youtube-dl fiasco, they committed to manual review, legal and technical, of every 1201 takedown notice [0].Fourth, if you believe these copies are sufficiently reproducing your copyrighted work, what you likely want to do is file a standard copyright infringement 17 U.S Code § 512(c) takedown notice. This still goes through the same DMCA report flow but it should result in a less stringent review process and a faster response.Fifth and finally, consider asking your favorite LLM to get more context around these laws. Good luck![0] https://github.blog/news-insights/policy-news-and-insights/s...",
-          "I am in the same situation where people are hosting copies of the software for commercial use in companies. Even as big as Tencent. That is not allowed with my license and they also went to remove the code that does the license check on application startup. GitHub’s response so far: “please give an explanation how they can become conformant so that the users can fix this.”",
-          "You should discuss this with an attorney that is experienced with IP law to see what your options really are. IP law is very complex and sometimes very surprising. You need expert legal advice, not advice from the HN crowd.As an aside, I thought that \"cracked\" software meant software that has had the copy protection or other access control bypassed or removed, not the alteration of the software functionality itself. If your software was actually cracked then you may have some fairly heavy law in your favor. For better or worse, bypassing access controls (even weak or simple access controls) gets special legal attention."
+          "I had the idea for BIGWORDS.PAGE when I wanted to display a message on a tablet that I had remote management control over, but no physical access. Configuring it to be a kiosk browser is easy, but how do I get the browser to show my message? So I made the URL be the message.It uses a URL fragment to configure the message. Browsers don't send URL fragments to the server, so I never see your message. There's no backend, and no storage.All parameters are documented, so generating a message link is easy. There's also a built-in editor to make it extra easy.https://bigwords.page/#Hello,%20HN!&bg=ff6600&fg=000000&font...There are a few extra features like slides, animations, and countdowns and timers. QR codes too. Not too fancy, but hopefully enough to be useful.I know the uses for this are pretty niche. But it may be one of those things that you keep as a nugget in your brain, a tool in your back pocket. Not something you use often, but when you do it makes things just a little bit easier.It's open source (MIT), and self-hostable if that's your thing.Let me know what you think.",
+          "Tip: you can install this as a PWA (progress web app) onto your mobile device home screen. (If you have recent iOS 26+ or Android.)If the site adds a PWA manifest, Android (Chrome/Google app) will show a prompt to install as app on load. Also PWA install will be available for older iOS.I made a simple tool that generates a minimal PWA manifest: https://logo.leftium.com/logo",
+          "https://bigwords.page/#smol!%20!%20!%20!%20!%20!%20!%20!%20!...!You seem to have the same bug I had when I first implemented https://screaming.saej.in/In Firefox, scrollWidth includes spaces that extend into the margin, so it's possible for text to fit perfectly on the screen, but scrollWidth > clientWidth. Fix here https://saej.in/posts/screaming/"
         ]
       }
     },
     {
-      "id": "49987076",
-      "title": "Strands Decider 2B: a small, open-source, decision model",
-      "url": "https://strandsagents.com/blog/introducing-strands-decider/",
+      "id": "49993857",
+      "title": "Animated ASCII Art for Web Pages",
+      "url": "https://ascii.rest/",
       "source": "Hacker News",
-      "published_at": "2026-10-07T02:02:11+00:00",
-      "summary": "Strands Decider 2B: a small, open-source, decision model",
-      "score": 109,
-      "comments": 23,
-      "discussion_url": "https://news.ycombinator.com/item?id=49987076",
+      "published_at": "2026-10-07T15:05:37+00:00",
+      "summary": "Animated ASCII Art for Web Pages",
+      "score": 304,
+      "comments": 58,
+      "discussion_url": "https://news.ycombinator.com/item?id=49993857",
       "extra": {
         "top_comments": [
-          "At this point I can't wait for a comedian to release a decision model backed by humans.Meet Jerry- it's literally a guy named Jerry answering your questions.",
-          "Why is everyone calling binary choices `noul`? Does this have some meaning or is it just copying Jev’s API?",
-          "Fantastically well written. It's rare for me to be able to understand what the AI gurus are talking about, and this was written by humans for humans.It can technically be used for a lot of use cases, I'd like people to chime in on ideas on this?"
+          "Gorgeous, impressive, well done—But it strikes me as an affectation of technical austerity, i.e. you’re borrowing the credibility of a constrained medium without embracing its constraints.Again, it's very pretty but... it's a bit like reconfiguring your Tesla to look more like a Citroën 2CV.",
+          "This looks aesthetically pleasing but this is not ASCII Art it seems, where’s ascii? All those differently sized dots are not ascii chars, are they? Perhaps this is unicode-art?",
+          "I see nothing being animated because my system is set to prefer reduced motion. That's a cool accommodation, but I wish at least the demo page made that more obvious.Also, the art scenes section is not ASCII."
         ]
       }
     },
     {
-      "id": "49984652",
-      "title": "How Fast is Python 3.15?",
-      "url": "https://blog.miguelgrinberg.com/post/how-fast-is-python-3-15",
+      "id": "49997161",
+      "title": "Meta and Microsoft take steps to reduce employee usage of Claude AI",
+      "url": "https://www.rswebsols.com/news/meta-and-microsoft-take-steps-to-reduce-employee-usage-of-claude-ai/",
       "source": "Hacker News",
-      "published_at": "2026-10-06T21:52:57+00:00",
-      "summary": "How Fast is Python 3.15?",
-      "score": 57,
-      "comments": 38,
-      "discussion_url": "https://news.ycombinator.com/item?id=49984652",
+      "published_at": "2026-10-07T18:49:40+00:00",
+      "summary": "Meta and Microsoft take steps to reduce employee usage of Claude AI",
+      "score": 290,
+      "comments": 287,
+      "discussion_url": "https://news.ycombinator.com/item?id=49997161",
       "extra": {
         "top_comments": [
-          "So not much progress since 3.14 - but still progress! Personally, I think it's nice when my code automatically gets faster thanks to someone else's work, and I don't understand all the negative sentiment in this thread. Yes, of course Python is still a slow language. You hopefully knew that when you picked Python for your project.",
-          "only tangentially related, but naming PyPy when PyPI was already established was ridiculous",
-          "Answer: not fast at all."
+          "If you were wondering the same thing I am - it's not about skills loss, quality, and less about money spent. It's more about frontier AI shops dogfooding their own models.",
+          "> Within Microsoft’s cloud and AI sector, monthly AI spending limits have reportedly been slashed from $100,000 per employee to approximately $10,000 in the majority of instances.They were allowing $100,000 per month per employee?!That's incredible. Just a few years ago that would have been zero.",
+          "My company took away my Claude because it’s too expensive. I feel like there is a reckoning coming. The accountants are finally realising the cost of token maxing."
         ]
       }
     }
