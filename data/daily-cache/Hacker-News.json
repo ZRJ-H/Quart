@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-10-08T11:00:37.782061+08:00",
+  "cached_at": "2026-10-08T14:25:50.560757+08:00",
   "articles": [
     {
       "id": "49984923",
@@ -8,8 +8,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-06T22:17:21+00:00",
       "summary": "https://github.com/openai/mathhttps://github.com/openai/math/tree/main/preprints",
-      "score": 1241,
-      "comments": 1412,
+      "score": 1268,
+      "comments": 1435,
       "discussion_url": "https://news.ycombinator.com/item?id=49984923",
       "extra": {
         "top_comments": [
@@ -26,13 +26,13 @@
       "source": "Hacker News",
       "published_at": "2026-10-07T21:16:18+00:00",
       "summary": "Margaret Hamilton has died",
-      "score": 865,
-      "comments": 101,
+      "score": 1202,
+      "comments": 132,
       "discussion_url": "https://news.ycombinator.com/item?id=49998895",
       "extra": {
         "top_comments": [
           "I was able to meet her, and others who worked at the MIT Instrumentation/Draper Lab, as a start-up I was with received funding from a VC firm founded by other Draper Lab members from the Apollo era. I was totally out of my league talking with them. This was thirty years ago and I remember her talking about formalized control systems. It was fascinating but went totally over my head. My startup was a fairly silly multimedia CD-ROM company and I was just happy to be in the room.",
-          "Her story and her work is so inspiring. And I feel a bit sad reading about it...When I started working on this field I dreamt of working on things like that. Not sending anything to the moon, but code that would achieve difficult stuff, challenging tasks, things I would be proud of.Today I mostly do silly APIs, and with AI is worse and worse... I wonder if there are still jobs where you have to do novel stuff, new algorithms, more like a scientific approach to the code, instead of just deploy the same thing every other company has already done.",
+          "Related:Margaret Hamilton Led the NASA Software Team That Landed Astronauts on the Moon - https://news.ycombinator.com/item?id=36720448 - July 2023 (32 comments)Margaret Hamilton oral history (2017) - https://news.ycombinator.com/item?id=30668338 - March 2022 (7 comments)An interview with Margaret Hamilton - https://news.ycombinator.com/item?id=20453737 - July 2019 (12 comments)Grace Hopper and Margaret Hamilton Awarded Presidential Medal of Freedom - https://news.ycombinator.com/item?id=12991524 - Nov 2016 (70 comments)Profile of Margaret Hamilton, programmer of the Apollo software - https://news.ycombinator.com/item?id=10379904 - Oct 2015 (58 comments)Margaret Hamilton, lead software engineer, Project Apollo - https://news.ycombinator.com/item?id=8735912 - Dec 2014 (94 comments)",
           "Dang. She was a remarkable stand-out, in fields full of remarkable people.The pic here is often people's first intro to her https://news.mit.edu/2016/scene-at-mit-margaret-hamilton-apo..."
         ]
       }
@@ -44,8 +44,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-07T18:01:32+00:00",
       "summary": "Claude Haiku 5.5",
-      "score": 716,
-      "comments": 359,
+      "score": 800,
+      "comments": 392,
       "discussion_url": "https://news.ycombinator.com/item?id=49996437",
       "extra": {
         "top_comments": [
@@ -62,8 +62,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-07T18:00:58+00:00",
       "summary": "GPT‑6 and Intelligent UI for everyone",
-      "score": 523,
-      "comments": 275,
+      "score": 578,
+      "comments": 298,
       "discussion_url": "https://news.ycombinator.com/item?id=49996425",
       "extra": {
         "top_comments": [
@@ -80,14 +80,14 @@
       "source": "Hacker News",
       "published_at": "2026-10-07T11:25:02+00:00",
       "summary": "Shipping JPEG XL in Chrome",
-      "score": 499,
-      "comments": 332,
+      "score": 528,
+      "comments": 352,
       "discussion_url": "https://news.ycombinator.com/item?id=49991227",
       "extra": {
         "top_comments": [
-          "Yay! Good timing. I just integrated JXL into my photo gallery website a few days ago. Non-optional. I can't afford to be hosting Jpegs :-) Now I don't have to tell people to flip the flag in their settings.",
           "And soon Firefox will include it in Stable. During October it will go from Safari only to majority coverage. Eventful month!While AVIF may have a slight edge in some cases like in fairly lossy compression, you won't really go _wrong_ with JPEG XL (unless strongly CPU constrained) and I think the strength of the format is its extreme versatility as a \"be all end all image format\" for some time where comparative performance depending on functionality ranges from respectable to excellent. It can work as a replacement for AVIF, PNG, JPEG, WebP, even certain TIFF required scenarios (high bit depth, multichannel, layers) depending on use cases.",
-          "It's exciting to see JXL support being re-added in Chrome after being removed a while ago and them seemingly not being interested in supporting it [1].I think JXL is a cool image format, but was being held back by the most popular browser not supporting it, limiting its use (in the web especially) by a lot.[1]: https://issues.chromium.org/issues/40270698"
+          "It's exciting to see JXL support being re-added in Chrome after being removed a while ago and them seemingly not being interested in supporting it [1].I think JXL is a cool image format, but was being held back by the most popular browser not supporting it, limiting its use (in the web especially) by a lot.[1]: https://issues.chromium.org/issues/40270698",
+          "See previous HN discussions for context:Google set to deprecate JPEG XL support in Chrome 110 - https://news.ycombinator.com/item?id=33399940JPEG XL support has officially been removed from Chromium - https://news.ycombinator.com/item?id=33933208Chrome Jpegxl Issue Reopened - https://news.ycombinator.com/item?id=46033330The case agains JPEG XL - https://news.ycombinator.com/item?id=49690554"
         ]
       }
     },
@@ -98,13 +98,13 @@
       "source": "Hacker News",
       "published_at": "2026-10-07T15:44:21+00:00",
       "summary": "Show HN: Bigwords.page – Turn any screen into a sign. The URL is the app",
-      "score": 384,
-      "comments": 113,
+      "score": 450,
+      "comments": 130,
       "discussion_url": "https://news.ycombinator.com/item?id=49994443",
       "extra": {
         "top_comments": [
           "I had the idea for BIGWORDS.PAGE when I wanted to display a message on a tablet that I had remote management control over, but no physical access. Configuring it to be a kiosk browser is easy, but how do I get the browser to show my message? So I made the URL be the message.It uses a URL fragment to configure the message. Browsers don't send URL fragments to the server, so I never see your message. There's no backend, and no storage.All parameters are documented, so generating a message link is easy. There's also a built-in editor to make it extra easy.https://bigwords.page/#Hello,%20HN!&bg=ff6600&fg=000000&font...There are a few extra features like slides, animations, and countdowns and timers. QR codes too. Not too fancy, but hopefully enough to be useful.I know the uses for this are pretty niche. But it may be one of those things that you keep as a nugget in your brain, a tool in your back pocket. Not something you use often, but when you do it makes things just a little bit easier.It's open source (MIT), and self-hostable if that's your thing.Let me know what you think.",
-          "Tip: you can install this as a PWA (progress web app) onto your mobile device home screen. (If you have recent iOS 26+ or Android.)If the site adds a PWA manifest, Android (Chrome/Google app) will show a prompt to install as app on load. Also PWA install will be available for older iOS.I made a simple tool that generates a minimal PWA manifest: https://logo.leftium.com/logo",
+          "This is so brilliantly simple.I semi-regularly chair or panels and very often the venue hasn’t thought about a countdown timer so that I and the speakers know how long we have left. Having a timer massively improves the quality of a panel from an audience perspective as you can better pace things, move speakers on, wrap up without rushing, and so on.Because of how often a timer wasn’t available last year I made something where I could quickly spin one up using ffmpeg. This is much easier and much more useful. (And doesn’t require having my Mac with me!)Being able to stick one of these on an iPad on a table so that speakers can see it but audience can’t will be really useful.Thank you!",
           "https://bigwords.page/#smol!%20!%20!%20!%20!%20!%20!%20!%20!...!You seem to have the same bug I had when I first implemented https://screaming.saej.in/In Firefox, scrollWidth includes spaces that extend into the margin, so it's possible for text to fit perfectly on the screen, but scrollWidth > clientWidth. Fix here https://saej.in/posts/screaming/"
         ]
       }
@@ -116,8 +116,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-07T15:05:37+00:00",
       "summary": "Animated ASCII Art for Web Pages",
-      "score": 304,
-      "comments": 58,
+      "score": 332,
+      "comments": 60,
       "discussion_url": "https://news.ycombinator.com/item?id=49993857",
       "extra": {
         "top_comments": [
@@ -128,20 +128,20 @@
       }
     },
     {
-      "id": "49997161",
-      "title": "Meta and Microsoft take steps to reduce employee usage of Claude AI",
-      "url": "https://www.rswebsols.com/news/meta-and-microsoft-take-steps-to-reduce-employee-usage-of-claude-ai/",
+      "id": "49994145",
+      "title": "Navier–Stokes Lost in Translation",
+      "url": "https://arxiv.org/abs/2610.08144",
       "source": "Hacker News",
-      "published_at": "2026-10-07T18:49:40+00:00",
-      "summary": "Meta and Microsoft take steps to reduce employee usage of Claude AI",
-      "score": 290,
-      "comments": 287,
-      "discussion_url": "https://news.ycombinator.com/item?id=49997161",
+      "published_at": "2026-10-07T15:24:38+00:00",
+      "summary": "Navier–Stokes Lost in Translation",
+      "score": 286,
+      "comments": 176,
+      "discussion_url": "https://news.ycombinator.com/item?id=49994145",
       "extra": {
         "top_comments": [
-          "If you were wondering the same thing I am - it's not about skills loss, quality, and less about money spent. It's more about frontier AI shops dogfooding their own models.",
-          "> Within Microsoft’s cloud and AI sector, monthly AI spending limits have reportedly been slashed from $100,000 per employee to approximately $10,000 in the majority of instances.They were allowing $100,000 per month per employee?!That's incredible. Just a few years ago that would have been zero.",
-          "My company took away my Claude because it’s too expensive. I feel like there is a reckoning coming. The accountants are finally realising the cost of token maxing."
+          "Aside from the usual squabbling about AI, it seems the bombshell claim is this:\"In particular, we show that the formalised Lean proof does not correspond to the NL proof of blow-up of solutions to the Navier-Stokes equations.\"So these authors seem to be claiming that OpenAI has not really proven Navier-Stokes at all. If I get their idea correctly, they are claiming that the LLM has not formalized the original \"natural language\" idea of Navier-Stokes correctly. If true, it would mean that their purported Lean proof is not actually a proof of Navier-Stokes at all, but something that is an incorrect translation of the original natural language idea. If correct, this is a really bold claim and I would like to see if other researchers agree.",
+          "For a refreshment of what is Navier-Stokes in a few words: https://p.migdal.pl/equations-explained-colorfully/#navier-s...",
+          "If I'm understanding correctly, this is questioning the equivalence between the natural language proof and the lean proof, but not the correctness of the lean proof?"
         ]
       }
     }

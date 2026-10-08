@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-10-08T11:00:37.782061+08:00",
+  "cached_at": "2026-10-08T14:25:50.560757+08:00",
   "articles": [
     {
       "id": "https://www.news.cn/politics/20261008/fea3a6c9bb2b46339d94509b172923bb/c.html",
@@ -62,36 +62,36 @@
       "extra": {}
     },
     {
-      "id": "https://www.bbc.co.uk/news/articles/cm5yn3592xk9o#1",
-      "title": "Japan beer giants raided over alleged price-fixing cartel",
-      "url": "https://www.bbc.co.uk/news/articles/cm5yn3592xk9o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "published_at": "2026-10-08T00:53:46+00:00",
-      "summary": "Asahi, Sapporo, Kirin and Suntory confirmed to the BBC that their premises had been searched by the Japanese competition authority.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://www.bbc.co.uk/news/articles/c6e3x21ev9wwo#0",
-      "title": "Spanish pensioner whose eviction sparked nationwide protests dies, union says",
-      "url": "https://www.bbc.co.uk/news/articles/c6e3x21ev9wwo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "published_at": "2026-10-08T00:09:17+00:00",
-      "summary": "Maricarmen Abascal, 87, was forcibly removed on a stretcher from her apartment of more than 70 years in September.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://www.npr.org/2026/10/07/g-s1-146952/pneumonic-plague-russia-siberia-lab-death",
-      "title": "What is the pneumonic plague?",
-      "url": "https://www.npr.org/2026/10/07/g-s1-146952/pneumonic-plague-russia-siberia-lab-death",
+      "id": "https://www.npr.org/2026/10/08/nx-s1-5994868/maricarmen-eviction-spain-dies",
+      "title": "Maricarmen, the 87-year-old woman whose eviction shook Spain, has died",
+      "url": "https://www.npr.org/2026/10/08/nx-s1-5994868/maricarmen-eviction-spain-dies",
       "source": "NPR World",
-      "published_at": "2026-10-07T21:06:31+00:00",
-      "summary": "The ancient disease of plague is back in the headlines after the death this month of a Russian lab worker.",
+      "published_at": "2026-10-08T05:56:02+00:00",
+      "summary": "María del Carmen Abascal, the 87-year-old woman whose eviction from her Madrid home sparked nationwide protests across Spain and unleashed a political crisis, died on Wednesday while hospitalized.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
+      "id": "https://www.bbc.co.uk/news/articles/cx5yn46j41zpo#0",
+      "title": "Margaret Hamilton, whose software helped land Apollo 11 on the Moon, dies at 90",
+      "url": "https://www.bbc.co.uk/news/articles/cx5yn46j41zpo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "published_at": "2026-10-08T05:10:40+00:00",
+      "summary": "Pioneering computer scientist led the development of the software for Nasa's Apollo mission and was awarded the Presidential Medal of Freedom.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
+      "id": "https://www.bbc.co.uk/news/articles/c81dldewl5gwo#0",
+      "title": "US and Lebanon protecting wanted Syrian general, BBC finds",
+      "url": "https://www.bbc.co.uk/news/articles/c81dldewl5gwo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "published_at": "2026-10-08T05:00:44+00:00",
+      "summary": "Bassam al-Hassan, linked to reporter Austin Tice's abduction, is being sheltered in return for information.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
