@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-10-08T14:25:50.560757+08:00",
+  "cached_at": "2026-10-09T11:00:38.646808+08:00",
   "articles": [
     {
-      "id": "49984923",
-      "title": "Sharing AI progress in mathematics",
-      "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
+      "id": "50008427",
+      "title": "Whistle: Speech to Text in 16.9 MB",
+      "url": "https://cactuscompute.com/blog/whistle",
       "source": "Hacker News",
-      "published_at": "2026-10-06T22:17:21+00:00",
-      "summary": "https://github.com/openai/mathhttps://github.com/openai/math/tree/main/preprints",
-      "score": 1268,
-      "comments": 1435,
-      "discussion_url": "https://news.ycombinator.com/item?id=49984923",
-      "extra": {
-        "top_comments": [
-          "I was a graph theory junkie long ago and even moved to Budapest for awhile to study among the greats. While I was there I started working on Barnette's Conjecture which came to occupy my thoughts over the next 24 years of my life, on and off as I worked in many different fields. Last summer I even thought for a few days that I had actually solved it.But it's supposedly proven here - problem 180. I don't know what to think exactly. I spent thousands of hours on that problem. I really enjoyed it. Hearing that it is solved somehow makes me sad in a far-off way, like hearing an ex-girlfriend died suddenly in a car crash. I don't know, there's probably a lot of people feeling odd emotions tonight.There's no Lean proof for this one so I'm digesting the paper. On the surface it looks like an approach I considered 24 years ago and abandoned.I revisited the problem this summer, along with my partial solutions, when the previous round of stunning proofs came out. Several hours of work with Fable simply convinced me it wasn't yet solvable and reinforced how hard of a problem it was.",
-          "> We prove the Unique Games ConjectureThe Unique Games Conjecture (sorry, \"Unique Games Theorem\" now!) is huge. It was a very significant pillar supporting many of the limits of the polynomial-time approximation algorithms in the graduate-level randomized and approximate algorithms course I took in theoretical computer science. Textbooks will have to be re-written.Here is an explainer: https://share.gemini.google/nbjIK6X3tOfzWith UGC proved, certain polynomial-time approximation algorithms used in difficult real-life problems are now known to be the best approximations we can achieve in polynomial-time:> If UGC holds, the elementary algorithm that grabs both ends of an edge is fundamentally the best efficient algorithm that will ever exist. No amount of advanced linear programming or heuristics can achieve a ratio of 1.999.> Under UGC, the Goemans-Williamson algorithm's 0.87856 ratio is mathematically optimal.> UGC is considered the \"Rosetta Stone\" of approximation algorithms. In 2008, Prasad Raghavendra proved that for every single constraint satisfaction problem (CSP), a canonical Semidefinite Programming relaxation paired with the best rounding scheme achieves the optimal approximation ratio if and only if UGC is true. If the conjecture holds, the algorithmic boundary for an entire class of combinatorial problems is completely resolved.Other hardness of approximation results from this UGC proof:> [Max acyclic subgraph, a problem encountered in real life]: No polynomial-time algorithm can fundamentally outperform an unthinking coin toss.> [Relative scheduling, another realistic problem]: As with acyclic subgraphs, the problem is \"approximation-resistant\": clever algorithms cannot beat random shuffling.",
-          "As Kevin Buzzard recently said:> In a 2020 piece in the Notices of the AMS, I asked the following question: “If one human had an understanding of all of modern pure mathematics simultaneously, how much further would they immediately be able to see?” Six years later we are beginning to understand the answer to this question."
-        ]
-      }
-    },
-    {
-      "id": "49998895",
-      "title": "Margaret Hamilton has died",
-      "url": "https://news.mit.edu/2026/margaret-hamilton-computing-pioneer-dies-1007",
-      "source": "Hacker News",
-      "published_at": "2026-10-07T21:16:18+00:00",
-      "summary": "Margaret Hamilton has died",
-      "score": 1202,
-      "comments": 132,
-      "discussion_url": "https://news.ycombinator.com/item?id=49998895",
-      "extra": {
-        "top_comments": [
-          "I was able to meet her, and others who worked at the MIT Instrumentation/Draper Lab, as a start-up I was with received funding from a VC firm founded by other Draper Lab members from the Apollo era. I was totally out of my league talking with them. This was thirty years ago and I remember her talking about formalized control systems. It was fascinating but went totally over my head. My startup was a fairly silly multimedia CD-ROM company and I was just happy to be in the room.",
-          "Related:Margaret Hamilton Led the NASA Software Team That Landed Astronauts on the Moon - https://news.ycombinator.com/item?id=36720448 - July 2023 (32 comments)Margaret Hamilton oral history (2017) - https://news.ycombinator.com/item?id=30668338 - March 2022 (7 comments)An interview with Margaret Hamilton - https://news.ycombinator.com/item?id=20453737 - July 2019 (12 comments)Grace Hopper and Margaret Hamilton Awarded Presidential Medal of Freedom - https://news.ycombinator.com/item?id=12991524 - Nov 2016 (70 comments)Profile of Margaret Hamilton, programmer of the Apollo software - https://news.ycombinator.com/item?id=10379904 - Oct 2015 (58 comments)Margaret Hamilton, lead software engineer, Project Apollo - https://news.ycombinator.com/item?id=8735912 - Dec 2014 (94 comments)",
-          "Dang. She was a remarkable stand-out, in fields full of remarkable people.The pic here is often people's first intro to her https://news.mit.edu/2016/scene-at-mit-margaret-hamilton-apo..."
-        ]
-      }
-    },
-    {
-      "id": "49996437",
-      "title": "Claude Haiku 5.5",
-      "url": "https://www.anthropic.com/claude-haiku-5-5",
-      "source": "Hacker News",
-      "published_at": "2026-10-07T18:01:32+00:00",
-      "summary": "Claude Haiku 5.5",
-      "score": 800,
-      "comments": 392,
-      "discussion_url": "https://news.ycombinator.com/item?id=49996437",
-      "extra": {
-        "top_comments": [
-          "Pelicans riding bicycles for Haiku at the different thinking levels: https://tools.simonwillison.net/markdown-svg-renderer?url=ht...Low messes up the bicycle frame, but medium/high/xhigh/max all get the bicycle frame right.The max one took 5 minutes 9 seconds and cost 3.3826 cents. The cheapest one (low) cost 0.0936 cents and took 7 seconds.The most recent release of my llm-anthropic plugin queries the Anthropic model listing API directly, so I didn't have to upgrade the plugin to add support for this model: llm install llm-anthropic -U llm anthropic refresh llm -m claude-haiku-5.5 'prompt goes here' EDIT: Here's the Haiku 4.5 pelican from a year ago for comparison, it was terrible: https://simonwillison.net/2025/Oct/15/claude-haiku-45/",
-          "Pricing is...a bit weird. Input $0.10 / MTok for prompts up to 100,000 tokens $0.50 / MTok for prompts over 100,000 tokens Output $0.50 / MTok for prompts up to 100,000 tokens $2.50 / MTok for prompts over 100,000 tokens 100k tokens is an absurdly low cutoff and it is only applicable to Haiku and not Sonnet or Opus. It's a low enough cutoff that it will be quickly exceeded if you are doing anything with Agents; for typical generation or Jev-like classifiers, it's a good value and as noted in this article, that is apparently the vast majority of Haiku use.In both cases, still much cheaper than Haiku 4.5's $1 input / $5 output and these prices better compete with GPT-6 Luna. ($0.10 input / $0.50 output, but with no token threshold [EDIT: the threshold for Luna is apparently 272k])",
-          "> Second, this week, we’ll roll out a new monthly API credit to all Max and Team subscribers for use on the Claude Platform. Max 5x users will get $100 in credits per month, Max 20x users will get $200, and Team subscribers will receive up to $500, pooled across their usersThis is a very big benefit for me. I can now ship actual ai enhanced features behind my subscription without paying extra or fully relying on on-device models. I do worry that this is to soften the blow for user-unfriendly changes"
-        ]
-      }
-    },
-    {
-      "id": "49996425",
-      "title": "GPT‑6 and Intelligent UI for everyone",
-      "url": "https://openai.com/index/gpt-6-for-everyone/",
-      "source": "Hacker News",
-      "published_at": "2026-10-07T18:00:58+00:00",
-      "summary": "GPT‑6 and Intelligent UI for everyone",
-      "score": 578,
-      "comments": 298,
-      "discussion_url": "https://news.ycombinator.com/item?id=49996425",
-      "extra": {
-        "top_comments": [
-          "I find the Sunday roast comparison of 5.6 vs 6 very interesting. I have no doubt most people will prefer 6, yet I am almost repulsed by all the images, so much needless whitespace, checklist and so on. Feels like I'm being condescended to and treated like a child.Given that OpenAI is making noises about merging work with chat (a horrible idea imo), and Work is very similar to Codex... I dearly hope things like these won't have any meaningful cross-polination into the actual work tools.Seeing that the chat is based on 6.0 and not 6.1 is disappointing. The \"Visual and interactive explanations\" seems genuinely useful, but 6.1 is just so much better. I wouldn't truly trust the 6.1 with the explanations, but I'd trust them a fair bit more than 6.0. I understand that compute isn't infinite, but tons of people only interact with the chat and having your \"things-explainer\" be as good as it can be is important when people increasingly treat AI models as the source of truth, or even use them for academic learning and whatnot.Still, the models will improve, so the visual explainer seems pretty good as an idea / mvp.",
-          "Of everything that could be automated, Bartosz Ciechanowski really was the last on my list.In all seriousness, his lovingly and expertly crafted explainers are still going to age like a handcrafted heirloom clock in a world of plastic-clad quartz movements. But it’s absolutely incredible that we are now in an age where a computer can manufacture a serviceable interactive explainer on whatever niche topic you desire.",
-          "https://cdn.openai.com/pdf/gpt-6-october.pdfSystem card linked in the blog post.> regression on the extremism vision evaluation.> Relative to their respective GPT-5.6 counterparts, GPT-6 Sol (October) shows a statistically significant regression on standard self-harm, while GPT-6 Luna (October) shows statistically significant regressions on standard self-harm, gore, and sexual content> \"GPT-6 Sol (October) and GPT-6 Luna (October) show an improvement on helpfulness on legitimate requests relative to prior models, though it scores lower on some safety requests\"Concerning how there's significant regressions on so many critical benchmarks, but it is newer and creates UI, so must be good.It’s crazy that a company can document these safety drops in a PDF, ship the model anyway, and focus the announcement entire on shiny new UI"
-        ]
-      }
-    },
-    {
-      "id": "49991227",
-      "title": "Shipping JPEG XL in Chrome",
-      "url": "https://developer.chrome.com/blog/jpeg-xl-in-chrome",
-      "source": "Hacker News",
-      "published_at": "2026-10-07T11:25:02+00:00",
-      "summary": "Shipping JPEG XL in Chrome",
-      "score": 528,
-      "comments": 352,
-      "discussion_url": "https://news.ycombinator.com/item?id=49991227",
-      "extra": {
-        "top_comments": [
-          "And soon Firefox will include it in Stable. During October it will go from Safari only to majority coverage. Eventful month!While AVIF may have a slight edge in some cases like in fairly lossy compression, you won't really go _wrong_ with JPEG XL (unless strongly CPU constrained) and I think the strength of the format is its extreme versatility as a \"be all end all image format\" for some time where comparative performance depending on functionality ranges from respectable to excellent. It can work as a replacement for AVIF, PNG, JPEG, WebP, even certain TIFF required scenarios (high bit depth, multichannel, layers) depending on use cases.",
-          "It's exciting to see JXL support being re-added in Chrome after being removed a while ago and them seemingly not being interested in supporting it [1].I think JXL is a cool image format, but was being held back by the most popular browser not supporting it, limiting its use (in the web especially) by a lot.[1]: https://issues.chromium.org/issues/40270698",
-          "See previous HN discussions for context:Google set to deprecate JPEG XL support in Chrome 110 - https://news.ycombinator.com/item?id=33399940JPEG XL support has officially been removed from Chromium - https://news.ycombinator.com/item?id=33933208Chrome Jpegxl Issue Reopened - https://news.ycombinator.com/item?id=46033330The case agains JPEG XL - https://news.ycombinator.com/item?id=49690554"
-        ]
-      }
-    },
-    {
-      "id": "49994443",
-      "title": "Show HN: Bigwords.page – Turn any screen into a sign. The URL is the app",
-      "url": "https://bigwords.page/",
-      "source": "Hacker News",
-      "published_at": "2026-10-07T15:44:21+00:00",
-      "summary": "Show HN: Bigwords.page – Turn any screen into a sign. The URL is the app",
-      "score": 450,
+      "published_at": "2026-10-08T16:59:39+00:00",
+      "summary": "Whistle: Speech to Text in 16.9 MB",
+      "score": 580,
       "comments": 130,
-      "discussion_url": "https://news.ycombinator.com/item?id=49994443",
+      "discussion_url": "https://news.ycombinator.com/item?id=50008427",
       "extra": {
         "top_comments": [
-          "I had the idea for BIGWORDS.PAGE when I wanted to display a message on a tablet that I had remote management control over, but no physical access. Configuring it to be a kiosk browser is easy, but how do I get the browser to show my message? So I made the URL be the message.It uses a URL fragment to configure the message. Browsers don't send URL fragments to the server, so I never see your message. There's no backend, and no storage.All parameters are documented, so generating a message link is easy. There's also a built-in editor to make it extra easy.https://bigwords.page/#Hello,%20HN!&bg=ff6600&fg=000000&font...There are a few extra features like slides, animations, and countdowns and timers. QR codes too. Not too fancy, but hopefully enough to be useful.I know the uses for this are pretty niche. But it may be one of those things that you keep as a nugget in your brain, a tool in your back pocket. Not something you use often, but when you do it makes things just a little bit easier.It's open source (MIT), and self-hostable if that's your thing.Let me know what you think.",
-          "This is so brilliantly simple.I semi-regularly chair or panels and very often the venue hasn’t thought about a countdown timer so that I and the speakers know how long we have left. Having a timer massively improves the quality of a panel from an audience perspective as you can better pace things, move speakers on, wrap up without rushing, and so on.Because of how often a timer wasn’t available last year I made something where I could quickly spin one up using ffmpeg. This is much easier and much more useful. (And doesn’t require having my Mac with me!)Being able to stick one of these on an iPad on a table so that speakers can see it but audience can’t will be really useful.Thank you!",
-          "https://bigwords.page/#smol!%20!%20!%20!%20!%20!%20!%20!%20!...!You seem to have the same bug I had when I first implemented https://screaming.saej.in/In Firefox, scrollWidth includes spaces that extend into the margin, so it's possible for text to fit perfectly on the screen, but scrollWidth > clientWidth. Fix here https://saej.in/posts/screaming/"
+          "Interesting that this is here. I used whistle (and bunch of other things) to take ownership of my echo show. It now doesn't dial to Amazon at all - it does all processing locally with its own CPU and connects to my homeassistant for home automation. My initial setup involved qwen asr (1.7b model) running on rtx 5080. Compared to that, whistle was really bad (out of 170 messages, qwen recognized correctly 168, whistle - 70), but I adjusted whistle to work like jev - instead of free form transcription it recognizes only select set of templates (I trained tiny network with 10,000 generated utterances to translate whistle final state to probabilities within templates). The precision went up to 164/170 - almost matching qwen. By the way - I'm speaking with heavy accent.",
+          "I don't think the challenge with speech to text was size of the binary. In my experience the challenge is understanding my 84 year old Croatian father with a sagging mouth after a stroke, when he's trying to write his autobiography.I just setup Windows speech to text for him last week and it's great to see how he can write an entire page in 10 minutes, it would take him days using the keyboard.But every single sound he makes with his mouth ends up on the page too.",
+          "Error rate is crazy high. And comparing to low models and omit a lot of other bigger open models."
         ]
       }
     },
     {
-      "id": "49993857",
-      "title": "Animated ASCII Art for Web Pages",
-      "url": "https://ascii.rest/",
+      "id": "50009295",
+      "title": "Theranos.world",
+      "url": "https://www.theranos.world/",
       "source": "Hacker News",
-      "published_at": "2026-10-07T15:05:37+00:00",
-      "summary": "Animated ASCII Art for Web Pages",
-      "score": 332,
-      "comments": 60,
-      "discussion_url": "https://news.ycombinator.com/item?id=49993857",
+      "published_at": "2026-10-08T17:51:49+00:00",
+      "summary": "Theranos.world",
+      "score": 312,
+      "comments": 122,
+      "discussion_url": "https://news.ycombinator.com/item?id=50009295",
       "extra": {
         "top_comments": [
-          "Gorgeous, impressive, well done—But it strikes me as an affectation of technical austerity, i.e. you’re borrowing the credibility of a constrained medium without embracing its constraints.Again, it's very pretty but... it's a bit like reconfiguring your Tesla to look more like a Citroën 2CV.",
-          "This looks aesthetically pleasing but this is not ASCII Art it seems, where’s ascii? All those differently sized dots are not ascii chars, are they? Perhaps this is unicode-art?",
-          "I see nothing being animated because my system is set to prefer reduced motion. That's a cool accommodation, but I wish at least the demo page made that more obvious.Also, the art scenes section is not ASCII."
+          "Content marketing for a startup that does \"Document infrastructure for agents\". They want you to sign up for an event they're hosting in SF.",
+          "This is great, it reminds me of promotional websites from the Adobe Flash era. Ads were a lot more fun back then.",
+          "In the \"Notes\" app on the iphone, there is a note which says \"msg me on X\". Back then, it was Twitter. Boy, I hope somebody got fired for that blunder."
         ]
       }
     },
     {
-      "id": "49994145",
-      "title": "Navier–Stokes Lost in Translation",
-      "url": "https://arxiv.org/abs/2610.08144",
+      "id": "50005527",
+      "title": "Beauty in DVD Menus",
+      "url": "https://vale.rocks/posts/dvd-menus",
       "source": "Hacker News",
-      "published_at": "2026-10-07T15:24:38+00:00",
-      "summary": "Navier–Stokes Lost in Translation",
-      "score": 286,
-      "comments": 176,
-      "discussion_url": "https://news.ycombinator.com/item?id=49994145",
+      "published_at": "2026-10-08T13:22:01+00:00",
+      "summary": "Beauty in DVD Menus",
+      "score": 271,
+      "comments": 151,
+      "discussion_url": "https://news.ycombinator.com/item?id=50005527",
       "extra": {
         "top_comments": [
-          "Aside from the usual squabbling about AI, it seems the bombshell claim is this:\"In particular, we show that the formalised Lean proof does not correspond to the NL proof of blow-up of solutions to the Navier-Stokes equations.\"So these authors seem to be claiming that OpenAI has not really proven Navier-Stokes at all. If I get their idea correctly, they are claiming that the LLM has not formalized the original \"natural language\" idea of Navier-Stokes correctly. If true, it would mean that their purported Lean proof is not actually a proof of Navier-Stokes at all, but something that is an incorrect translation of the original natural language idea. If correct, this is a really bold claim and I would like to see if other researchers agree.",
-          "For a refreshment of what is Navier-Stokes in a few words: https://p.migdal.pl/equations-explained-colorfully/#navier-s...",
-          "If I'm understanding correctly, this is questioning the equivalence between the natural language proof and the lean proof, but not the correctness of the lean proof?"
+          "> Modern DVDs and Blu-ray menus alike are often little more than an image or video with a generic menu atop it. It is understandable. Physical media as a whole is less popular with the mass adoption of streaming services;I disagree; it's because we prefer disks with very simple menus, and care very little about the special features.Let's think about the alternatives:VHS: No menus; it would just start the ^%$^# movie (or would have trailers that were easy to fast forward through.)Streaming: Standard menu no matter what you're watching, and then just starts the ^%$#^$ movie.FWIW: Netflix, Disney+, and YouTube are all much \"faster\" than my BluRay player when it comes to getting to the actual content.Regarding the special features: They were very cool on late 1990s and early 2000s disks, because most of them were promotional bits that would air on TV to promote the movie. They quickly devolved to be more like home movies filmed on the set where the cast and crew would just slap each others' backs for an hour. Useful maybe if you were cast or crew reminiscing, but otherwise rather boring compared to a planned interview or documentary.",
+          "I remember watching the DVD of Memento, and using the secret DVD menu button combination to enable watching the film backwards scene by scene. I remember thinking that was amazing and we were entering a new era of creative movie distribution. Shame that sort of thing didnt really catch on.",
+          "Back in High School me and my friends made a zombie movie over summer vacation, and I had so much fun making overly-complicated DVD menus for it using a pirated copy of DVD Studio Pro.Full of stylized video transitions, menu selections that were fully graphical (not using the 2-bit overlays, DVD Studio Pro supported Photoshop layers), pointless special features (gotta fill out that list on the back of the box), poorly-translated subtitle tracks, and easter eggs in various menus when you hit a special button combination on your remote.It was a really fun format to mess around with!"
+        ]
+      }
+    },
+    {
+      "id": "50003796",
+      "title": "Yes, and",
+      "url": "https://htmx.org/essays/yes-and/",
+      "source": "Hacker News",
+      "published_at": "2026-10-08T09:48:18+00:00",
+      "summary": "Yes, and",
+      "score": 225,
+      "comments": 76,
+      "discussion_url": "https://news.ycombinator.com/item?id=50003796",
+      "extra": {
+        "top_comments": [
+          "Hello all, I wrote this article to help students considering CS as a major.My own son has just started university studying CS, so I have skin in this game.I continue to believe in what I've said in this article despite being startled (like most people) by the advances in AI recently.One thing that I have noticed since writing this article is that the most effective vibe coders are already excellent developers, which I think is in keeping with the themes I discuss here. While I do expect the amount of hand-written code to decline, I think that knowing how code (and technical systems) work is going to continue to be valuable and perhaps even more valuable. I have no crystal ball, but that's what I'm seeing right now.",
+          "> Is Coding → Prompting like Assembly → High Level Coding? […] I do not agree with this simile. Compilers are, for the most part, deterministic in a way that current AI tools are not.It’s not quite about the determinism. It’s about being able to reason about the relationship between source code and compiled program with formal precision. You can predict which changes in the source code will lead to which exact changes in the behavior of the compiled program. The same isn’t the case about changes to an LLM prompt and the LLM’s output.You could make an AI deterministic by fixing its source of randomness. That still wouldn’t allow you to reason about how its output will change when (for example) you add or remove a word in the prompt. The only way to find out is to run the LLM (= have the prompt run through the model and observe what comes out).That is the fundamental difference. Changes to source code have predictable and reason-able outcomes. You generally don’t have to compile the code and test it to know how precisely the change will affect the behavior of the compiled program according to the semantics of the programming language. That’s the case even if the compiler uses some probabilistic heuristics for trade-offs in code generation, and hence isn’t deterministic on the machine code level.To repeat, the difference is how you can reason about a compiler’s behavior versus an LLM’s behavior. Programming languages are designed such that you can reason about it. With LLMs it’s always an experiment.",
+          "This article was similar to what I told people a year ago. A year later and AI used properly is a better programmer than I am. Used properly means given meticulous guidance to write production quality code. I see very few people using AI properly now, but that will change soon, particularly if lower cost options become widespread (you need to spend a lot of time and tokens on testing and verification). It's not that delivering hand-written code will just decline, it's that it will be like writing assembly- something that's unsafe and needs to be justified.The job of a programmer is now to be a technical lead and work through technical decisions with AI, write specs, and review work. But as AI gains intelligence and organizations figure out how to give it access to the information it needs, it will make better technical decisions than humans.As long as a programmer can in some way produce more value/$ using AI then someone that doesn't know programming, then there's a huge value to programmers. But I don't see the place where AI can't go up the chain and do that itself as it gains more intelligence.This is effectively true of any job that can be done at a computer. Although programming is one of the more difficult jobs its also one that is easy to train on. My advice if one's main goal is job security would be to do something in the physical world."
+        ]
+      }
+    },
+    {
+      "id": "50011928",
+      "title": "ADHD as a circadian rhythm disorder: evidence and implications for chronotherapy (2025)",
+      "url": "https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2025.1697900/full",
+      "source": "Hacker News",
+      "published_at": "2026-10-08T20:42:16+00:00",
+      "summary": "ADHD as a circadian rhythm disorder: evidence and implications for chronotherapy (2025)",
+      "score": 189,
+      "comments": 133,
+      "discussion_url": "https://news.ycombinator.com/item?id=50011928",
+      "extra": {
+        "top_comments": [
+          "Chronobiologist here. And also have ADHD.The associations with ADHD really are there, but that may just also be because a huge number of brain processes have a circadian regulation, and those get disrupted by whatever is causing ADHD.The causality is also bidirectional, because whatever ADHD does could cause light exposure behavioral changes, which could leave a circadian phenotype.In general, a huge number of diseases have circadian phenotypes. To be a circadian disorder, you’d have to have clock mutations, and ADHD really doesn’t have those. So calling it a circadian disorder feels off.But from personal experience, the linkage is strong enough to warrant deeper research, and beyond that, there’s some steps we can take ourselves. Regular walks in nature, going out to get sun… all generally useful things to do that do seem to help ADHD as well.",
+          "> walk in> see this title> oh man that would explain a lotOk after reading a chunk of this the correlation is pretty wild. Having the data it’s quite striking. Sleep intervention as a form of ADHD treatment has always seemed reasonable to me but this gives a lot more clarity to the approach and mechanisms.For me, the seasonal aspect of it aligns with their blue light findings (both driving symptoms and aligning with improvement under the intervention of having a grow-LED garden setup on my desk), and in a second maybe related matter we’ve found using blue light blocking glasses an hour before bed to be the most impactful single intervention around sleep quality and onset (the ones that are like orange laser safety glasses, not the mildly reflective desk-work glasses)",
+          "Has anyone considered that one reason for being/staying awake late at night that's very salient for ADHD people is that night tends to be much quieter, so it's a period when it's much easier to think/read/work without constant interruptions. Noise pollution isn't taken seriously enough."
+        ]
+      }
+    },
+    {
+      "id": "50010470",
+      "title": "The value of not getting to the point (2015)",
+      "url": "https://ken.arneson.name/2015/11/the-value-of-not-getting-to-the-point/",
+      "source": "Hacker News",
+      "published_at": "2026-10-08T19:04:56+00:00",
+      "summary": "The value of not getting to the point (2015)",
+      "score": 130,
+      "comments": 42,
+      "discussion_url": "https://news.ycombinator.com/item?id=50010470",
+      "extra": {
+        "top_comments": [
+          "I think a more helpful frame is seeing this less as a practice of rhetoric and to instead see it as a practice of emotional maturity.When you speak with someone, you likely are not aware of everything that is going on with their current emotional state. If they're having a good day or bad, if they even have had the time to build insight on it, what's nagging at them, etc. You may also not know where their ideologies, ethics, morality, etc are since these are only really shared with the ones close to them. And even then these shift and ebb especially if someone is at a formative time of their life (eg a college student).So every initial conversation is a little back-and-forth of mapping this out, warming up, and saving the deeper stuff for later. It's a trust-building exercise where you suss out if someone will be receptive, if they'll validate your experience of the world or if they're more likely to be closed off and dismissive. Because the latter hurts and that hurt can last longer than you expect.I personally don't find small talk rejuvenating and used to get bored of it quickly. I think the thing that irked me was that I always saw myself as open-minded and receptive and it felt like a waste of time, just get to the point, etc. But these days I'm keenly aware that we're not all at the same place internally and someone may have had some less-than-ideal experiences they're still holding onto. I can be sympathetic to that even if it means I'm bored for a few minutes of my day - it's really the least that I can do.",
+          "(Getting to the point:) I once heard a perfect explanation of the small talk phenomenon. It's like two modems establishing a link: they send to each other signals that are intended to asses how the line behaves, how well the other side hears you, and what it supports. Thus small talk may never be a pithy conversation: its purpose is to be a formal, predictable, zero-surprise exchange. Skipping it and going straight to the point may result in a badly botched communication attempt.",
+          "Read it while you can, third-level .name TLDs are being discontinued next year by Verisign. [0][0]: https://en.wikipedia.org/wiki/.name#Discontinuation_of_third..."
+        ]
+      }
+    },
+    {
+      "id": "50008047",
+      "title": "Show HN: Making a flexible \"neon\" t-shirt with LED filaments",
+      "url": "http://scottbezek.blogspot.com/2026/10/making-flexible-neon-t-shirt-with-leds.html",
+      "source": "Hacker News",
+      "published_at": "2026-10-08T16:37:24+00:00",
+      "summary": "Show HN: Making a flexible \"neon\" t-shirt with LED filaments",
+      "score": 119,
+      "comments": 21,
+      "discussion_url": "https://news.ycombinator.com/item?id=50008047",
+      "extra": {
+        "top_comments": [
+          "One of my kids had something like this built into a Halloween costume that their mom procured from Amazon. One of the filaments was blinking out within a day so I started running the length of the filament to figure out where the bad connection was. Unexpectedly it shocked the hell out of me. I put a meter on it and it was 240V. I couldn't believe I got such a nasty poke from 2 AA batteries.",
+          "Author here, happy to answer any questions!",
+          "Is \"LED Filament\" the same as \"EL Wire\" ?"
+        ]
+      }
+    },
+    {
+      "id": "50007764",
+      "title": "Step 5 Preview, a 1M-context MoE from StepFun, shows up on OpenRouter",
+      "url": "https://openrouter.ai/stepfun/step-5-preview",
+      "source": "Hacker News",
+      "published_at": "2026-10-08T16:20:20+00:00",
+      "summary": "Step 5 Preview, a 1M-context MoE from StepFun, shows up on OpenRouter",
+      "score": 109,
+      "comments": 25,
+      "discussion_url": "https://news.ycombinator.com/item?id=50007764",
+      "extra": {
+        "top_comments": [
+          "Step models were IMO the first local model you can run on 128GB shared memory that worked well. Really excited to see how it compares to Qwen Flash Next.Edit: bummer, didn’t know it’s 600B-A27B. No way to run that on 228GB.",
+          "Well, according to Artificial Analysis (which I'll admit I've been using as a bit of a mental crutch to avoid comparing models myself, so YMMV), it's smarter and slightly cheaper than Gemini 3.8 Flash, which has been my benchline for \"cheap and smart enough\", I'll give it a try on OpenCode for the week but I'm not sure I'll be compelled enough to switch from Muse Spark 1.3.",
+          "Why is that interesting?"
         ]
       }
     }
