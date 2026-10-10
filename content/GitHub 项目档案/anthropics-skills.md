@@ -1,13 +1,13 @@
 ---
 first_seen: 2026-06-28
-last_seen: 2026-10-09
+last_seen: 2026-10-10
 language: Python
 tags: [github, trending]
 ---
 
 # anthropics/skills
 
-> Anthropic 公开的 Agent Skills 仓库，提供智能体技能范例，适合开发者学习与构建可复用 Agent 能力。
+> Anthropic 公开的 Agent Skills 仓库，面向代理技能的组织与复用，适合研究代理能力封装和工具调用规范的开发者。
 
 ## 基本信息
 
@@ -40,3 +40,4 @@ tags: [github, trending]
 | 2026-10-04 | #17 | 179,553 | +506⭐ | 爆火 |
 | 2026-10-06 | #23 | 179,826 | +273⭐ | 跃升 |
 | 2026-10-09 | #17 | 180,039 | +213⭐ | 跃升 |
+| 2026-10-10 | #23 | 180,184 | +145⭐ | 常驻 |

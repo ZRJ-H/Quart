@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-10-09T14:27:00.891207+08:00",
+  "cached_at": "2026-10-10T11:00:37.212191+08:00",
   "articles": [
     {
-      "id": "50008427",
-      "title": "Whistle: Speech to Text in 16.9 MB",
-      "url": "https://cactuscompute.com/blog/whistle",
+      "id": "50022292",
+      "title": "Triple-A Minesweeper",
+      "url": "https://minesweeper.mikelacher.com/",
       "source": "Hacker News",
-      "published_at": "2026-10-08T16:59:39+00:00",
-      "summary": "Whistle: Speech to Text in 16.9 MB",
-      "score": 692,
-      "comments": 143,
-      "discussion_url": "https://news.ycombinator.com/item?id=50008427",
+      "published_at": "2026-10-09T15:51:05+00:00",
+      "summary": "Triple-A Minesweeper",
+      "score": 708,
+      "comments": 133,
+      "discussion_url": "https://news.ycombinator.com/item?id=50022292",
       "extra": {
         "top_comments": [
-          "Interesting that this is here. I used whistle (and bunch of other things) to take ownership of my echo show. It now doesn't dial to Amazon at all - it does all processing locally with its own CPU and connects to my homeassistant for home automation. My initial setup involved qwen asr (1.7b model) running on rtx 5080. Compared to that, whistle was really bad (out of 170 messages, qwen recognized correctly 168, whistle - 70), but I adjusted whistle to work like jev - instead of free form transcription it recognizes only select set of templates (I trained tiny network with 10,000 generated utterances to translate whistle final state to probabilities within templates). The precision went up to 164/170 - almost matching qwen. By the way - I'm speaking with heavy accent.",
-          "I don't think the challenge with speech to text was size of the binary. In my experience the challenge is understanding my 84 year old Croatian father with a sagging mouth after a stroke, when he's trying to write his autobiography.I just setup Windows speech to text for him last week and it's great to see how he can write an entire page in 10 minutes, it would take him days using the keyboard.But every single sound he makes with his mouth ends up on the page too.",
-          "What the demo does not do is show streaming output of transcribed text as we are speaking and recording (before we hit stop). That is an essential feature IMO for most general purpose live STT apps."
+          "This is exactly what I thought the Web was going to be like. Imagine the renaissance era of Classic Web if people could realize their clever ideas like this so easily.",
+          "So good.Maybe lean into some of the metal gear solid dialogue by having a long back and forth about \"What's a mine?\" \"What do you mean 'mark a mine'?\" \"How do I know when I'm done?\" etc.",
+          "Do \"AAA\" games these days really have that much talking by default? Painful."
         ]
       }
     },
     {
-      "id": "50009295",
-      "title": "Theranos.world",
-      "url": "https://www.theranos.world/",
+      "id": "50026555",
+      "title": "YouTuber Says Cops Visited Him After He Built a Flock-Style Camera to Track Cops",
+      "url": "https://gizmodo.com/youtuber-says-cops-paid-him-a-visit-after-he-built-flock-style-camera-to-track-cops-2000824306",
       "source": "Hacker News",
-      "published_at": "2026-10-08T17:51:49+00:00",
-      "summary": "Theranos.world",
-      "score": 392,
-      "comments": 136,
-      "discussion_url": "https://news.ycombinator.com/item?id=50009295",
+      "published_at": "2026-10-09T21:06:59+00:00",
+      "summary": "YouTuber Says Cops Visited Him After He Built a Flock-Style Camera to Track Cops",
+      "score": 452,
+      "comments": 248,
+      "discussion_url": "https://news.ycombinator.com/item?id=50026555",
       "extra": {
         "top_comments": [
-          "Fascinating that the only communications with Tyler Schultz, which was the main insider confronting the fraud, had all of ~4 exchanges with her. All in the same day.Truly brave of him to go against the golden geese, despite turning his own family- and even former attorney generals & military officers- against him.Its all on 4/11/2014.Also interesting to see how Sunny & Holmes always thought it was Tyler, or the CLIA Lab Director (Adam) plotting against them.... when their scam was just in plain sight of regulators that bothered to actually do the work.Holmes/Sunny reaction to Tyler's email and to Adam's resignation (Nov 2014) is one of outrage. Using the power inbalance to make their point, is 101 fraud.",
-          "This is great, it reminds me of promotional websites from the Adobe Flash era. Ads were a lot more fun back then.",
-          "In the \"Notes\" app on the iphone, there is a note which says \"msg me on X\". Back then, it was Twitter. Boy, I hope somebody got fired for that blunder."
+          "Flock and ALPR usage is solved in USA if every state adopts New Hampshire's law:* Illegal to collect every plate for later analysis* Must delete \"non hit\" plate images within 3 minutes* Strict forbidden to upload \"non hit\" camera imagery off the deviceI would add that it should also require a warrant to access the ALPR data, but it's a great start.https://gc.nh.gov/rsa/html/XXI/261/261-75-b.htm?utm_source=c...",
+          "I can see some nuance to this one. Flock is intended to be searchable by law enforcement, not Joe Average. Tracking cops and then publishing that information is not exactly the same as turning Flock back on the Flockers.I think the best solution is to just say nobody can do this, including the government. Or that if we allow things like Flock to exist, then we'd need actual legislation that tightens considerably how available the data is to be searched, and what approvals are necessary to access it.The obvious next step, otherwise, is for someone to start OpenALPRMap and we all get to suffer together.",
+          "Why is nothing being done about this? This is 1984 we were laughing about. USA laughed at China when they did the same, but when USA is doing the same people are not outraged shooting those down, painting over them. Am I missing something?"
         ]
       }
     },
     {
-      "id": "50003796",
-      "title": "Yes, and",
-      "url": "https://htmx.org/essays/yes-and/",
+      "id": "50023450",
+      "title": "Typesafe AI raises $870M at $7.5B",
+      "url": "https://typesafe.ai/blog/series-ai",
       "source": "Hacker News",
-      "published_at": "2026-10-08T09:48:18+00:00",
-      "summary": "Yes, and",
-      "score": 332,
-      "comments": 89,
-      "discussion_url": "https://news.ycombinator.com/item?id=50003796",
+      "published_at": "2026-10-09T17:02:31+00:00",
+      "summary": "Typesafe AI raises $870M at $7.5B",
+      "score": 286,
+      "comments": 221,
+      "discussion_url": "https://news.ycombinator.com/item?id=50023450",
       "extra": {
         "top_comments": [
-          "Hello all, I wrote this article to help students considering CS as a major.My own son has just started university studying CS, so I have skin in this game.I continue to believe in what I've said in this article despite being startled (like most people) by the advances in AI recently.One thing that I have noticed since writing this article is that the most effective vibe coders are already excellent developers, which I think is in keeping with the themes I discuss here. While I do expect the amount of hand-written code to decline, I think that knowing how code (and technical systems) work is going to continue to be valuable and perhaps even more valuable. I have no crystal ball, but that's what I'm seeing right now.",
-          "> Is Coding → Prompting like Assembly → High Level Coding? […] I do not agree with this simile. Compilers are, for the most part, deterministic in a way that current AI tools are not.It’s not quite about the determinism. It’s about being able to reason about the relationship between source code and compiled program with formal precision. You can predict which changes in the source code will lead to which exact changes in the behavior of the compiled program. The same isn’t the case about changes to an LLM prompt and the LLM’s output.You could make an AI deterministic by fixing its source of randomness. That still wouldn’t allow you to reason about how its output will change when (for example) you add or remove a word in the prompt. The only way to find out is to run the LLM (= have the prompt run through the model and observe what comes out).That is the fundamental difference. Changes to source code have predictable and reason-able outcomes. You generally don’t have to compile the code and test it to know how precisely the change will affect the behavior of the compiled program according to the semantics of the programming language. That’s the case even if the compiler uses some probabilistic heuristics for trade-offs in code generation, and hence isn’t deterministic on the machine code level.To repeat, the difference is how you can reason about a compiler’s behavior versus an LLM’s behavior. Programming languages are designed such that you can reason about it. With LLMs it’s always an experiment.",
-          "I read this when it first came out (Feb 2026) - I agreed with it then, and I still agree with it now. But I also just think that knowing the fundamentals is important, some people really believe we're \"skipping a step\" and that won't be important. Either way, people who already have good fundamentals are probably going to be using them WITH LLMs, and it doesn't take a ton of practice to \"keep up\" with fundamentals (see an expert jazz guitarist play a C scale, rudiments come back quickly when they're engaged).Are people still writing any code by hand? My VP doesn't even READ code anymore. I rarely write code, but I've found a great spot between \"full offloading\" and staying really in tune with the \"actions\" I'm taking as together they form the \"whole\" deliverable at the end of a project / task. I still try to understand what the problem is, I draft a solution to solve it, then sometimes I'll give that solution to AI, and other times I'll compare my solution with the AI solution.But, for the most part, I believe I'm somewhere in the middle? (Yes it's faster to use AI to generate code, but I still want to see that code when it's done and make sure it matches the broader system)I'm mostly curious what other devs experience is..."
+          "It's weird because two days after Jev was released there were a dozen decision models, a week later there are several dozen, mostly open source, OpenAI's own Decisions API [1] beats it, and you can easily finetune your own [2]. But as others have pointed out, this doesn't matter.EDIT: As I wrote this Microsoft just released their own Decision-1 model [3].[1] https://developers.openai.com/api/docs/guides/decisions[2] https://unsloth.ai/docs/basics/train-your-own-decision-model...[3] https://commandline.microsoft.com/microsoft-decision-1-model...",
+          "Everyone appears surprised by this news. It’s clear that they don’t have a product with some incredible moat. But they clearly have good engineering and product people that came up with a product people wanted. On top of that they have very strong marketing muscle that took the AI world by storm. And as far as I’ve seen, they still lead in some part of the latency-quality (-cost) curve?They may well be a good team to throw money behind if you are hoping to bet on a new AI lab.",
+          "I really don't understand how this can be. I have sat in fund raising meetings with VCs in toronto and my experience is that there is shit ton of due diligence at the tech level. a product which has no moat, was already available, was duplicated within a couple of days is valued at 7B - i thought we were past the peak of the hype cycle."
         ]
       }
     },
     {
-      "id": "50005527",
-      "title": "Beauty in DVD Menus",
-      "url": "https://vale.rocks/posts/dvd-menus",
+      "id": "50024499",
+      "title": "Show HN: Carrier-Explode: iPhone, Pixel and Galaxy carrier settings decoded",
+      "url": "https://carrierexplode.com/",
       "source": "Hacker News",
-      "published_at": "2026-10-08T13:22:01+00:00",
-      "summary": "Beauty in DVD Menus",
-      "score": 289,
-      "comments": 156,
-      "discussion_url": "https://news.ycombinator.com/item?id=50005527",
+      "published_at": "2026-10-09T18:10:55+00:00",
+      "summary": "Showing off carrier-explode, one of my side projects that continuously archives carrier settings for all major phone brands.carrier-explode also contains decoders and explanations for all the common baseband configurations, etc.There’s still quite a bit of work to be done in checking my assumptions, but the tool has already been proven useful for a few enthusiast groups.",
+      "score": 226,
+      "comments": 29,
+      "discussion_url": "https://news.ycombinator.com/item?id=50024499",
       "extra": {
         "top_comments": [
-          "just wanted to chime in to mention that i started aquiring DVDs and Blu-Rays in the beginning of the year. Initially I just wanted to watch my favorite movie in the best available quality without having to download an 80GB torrent. it also felt cute to have the movie as a physical object. i mention it like this because i'm a zoomer, so buying physical discs to me is like millenials buying vinyls, at least that's what it feels like.anyways, in the span of nine months i now got more movies than space on the shelf i started putting them. but i love it. feels nice to have physical copies of movies you really like.and i absolutely love (some) menus. especially DVD menus. there are some Blu-Ray menus which are cool as well, but a lot of them are very corpo-feeling. mandatory watch of movie trailers, unskippable 'you wouldnt download a car' crap and sometimes broken interfaces because of some java-whatever.there are some Blu-Ray menus which are insane and add interactive games and trivia stuff to the movie. but the simplicity of DVD menus is beautiful.",
-          "> Modern DVDs and Blu-ray menus alike are often little more than an image or video with a generic menu atop it. It is understandable. Physical media as a whole is less popular with the mass adoption of streaming services;I disagree; it's because we prefer disks with very simple menus, and care very little about the special features.Let's think about the alternatives:VHS: No menus; it would just start the ^%$^# movie (or would have trailers that were easy to fast forward through.)Streaming: Standard menu no matter what you're watching, and then just starts the ^%$#^$ movie.FWIW: Netflix, Disney+, and YouTube are all much \"faster\" than my BluRay player when it comes to getting to the actual content.Regarding the special features: They were very cool on late 1990s and early 2000s disks, because most of them were promotional bits that would air on TV to promote the movie. They quickly devolved to be more like home movies filmed on the set where the cast and crew would just slap each others' backs for an hour. Useful maybe if you were cast or crew reminiscing, but otherwise rather boring compared to a planned interview or documentary.",
-          "I remember watching the DVD of Memento, and using the secret DVD menu button combination to enable watching the film backwards scene by scene. I remember thinking that was amazing and we were entering a new era of creative movie distribution. Shame that sort of thing didnt really catch on."
+          "I saw this linked from MacRumors during the AT&T iPhone 18 Pro Max lockup news discussions. It was interesting to see what AT&T/Apple did to try to get ahead of the issue. So far it looks like they disabled 5G Standalone mode, possibly just to prevent a bug from literally destroying the hardware (possibly only on one batch of phones).Apple/AT&T still haven't released any kind of statement addressing the issue other than to replace affected hardware.",
+          "This is super cool. Particularly for the fact that it just showed my country's operators rather than the usual America First.",
+          "I wonder which field is responsible for disabling the Personal Hotspot feature? About a year ago mine suddenly got disabled in the phone's UI. Since then, the only time it got enabled was when I was traveling and using a travel eSIM.It's sad that phone companies allow carriers such anti-user things."
         ]
       }
     },
     {
-      "id": "50011928",
-      "title": "ADHD as a circadian rhythm disorder: evidence and implications for chronotherapy (2025)",
-      "url": "https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2025.1697900/full",
+      "id": "50020533",
+      "title": "'Wallace and Gromit,' 90% Alone",
+      "url": "https://animationobsessive.substack.com/p/wallace-and-gromit-90-alone",
       "source": "Hacker News",
-      "published_at": "2026-10-08T20:42:16+00:00",
-      "summary": "ADHD as a circadian rhythm disorder: evidence and implications for chronotherapy (2025)",
-      "score": 262,
-      "comments": 153,
-      "discussion_url": "https://news.ycombinator.com/item?id=50011928",
-      "extra": {
-        "top_comments": [
-          "Chronobiologist here. And also have ADHD.The associations with ADHD really are there, but that may just also be because a huge number of brain processes have a circadian regulation, and those get disrupted by whatever is causing ADHD.The causality is also bidirectional, because whatever ADHD does could cause light exposure behavioral changes, which could leave a circadian phenotype.In general, a huge number of diseases have circadian phenotypes. To be a circadian disorder, you’d have to have clock mutations, and ADHD really doesn’t have those. So calling it a circadian disorder feels off.But from personal experience, the linkage is strong enough to warrant deeper research, and beyond that, there’s some steps we can take ourselves. Regular walks in nature, going out to get sun… all generally useful things to do that do seem to help ADHD as well.",
-          "> walk in> see this title> oh man that would explain a lotOk after reading a chunk of this the correlation is pretty wild. Having the data it’s quite striking. Sleep intervention as a form of ADHD treatment has always seemed reasonable to me but this gives a lot more clarity to the approach and mechanisms.For me, the seasonal aspect of it aligns with their blue light findings (both driving symptoms and aligning with improvement under the intervention of having a grow-LED garden setup on my desk), and in a second maybe related matter we’ve found using blue light blocking glasses an hour before bed to be the most impactful single intervention around sleep quality and onset (the ones that are like orange laser safety glasses, not the mildly reflective desk-work glasses)",
-          "Beware that Frontiers In is a very low quality outlet and most scientists stay far far away from it (unless they really need a publication the next three weeks since they have that tenure track review coming up).Eg see https://retractionwatch.com/2025/07/29/frontiers-retract-122..."
-        ]
-      }
-    },
-    {
-      "id": "50008047",
-      "title": "Show HN: Making a flexible \"neon\" t-shirt with LED filaments",
-      "url": "http://scottbezek.blogspot.com/2026/10/making-flexible-neon-t-shirt-with-leds.html",
-      "source": "Hacker News",
-      "published_at": "2026-10-08T16:37:24+00:00",
-      "summary": "Show HN: Making a flexible \"neon\" t-shirt with LED filaments",
-      "score": 149,
-      "comments": 30,
-      "discussion_url": "https://news.ycombinator.com/item?id=50008047",
-      "extra": {
-        "top_comments": [
-          "Yeah I do kinda the same but I embed them into latex prosthetics. Like horns or protrusions for the face that you glue on. They're really good for a cyberpunkey vibe. I'm just casting some at the moment actually because we're coming up on Halloween soon.They look great but they're difficult to solder. Too little heat and it doesn't attach, too much and it damages them. The strip has some annoying coating that repels the solder.Some of them have metal crimped contacts that solve this but at the expense of end flexibility. And those usually have contacts at each end, i prefer them with both contacts at the same end so I can cut the strips to size.They're also prone to breaking and the silicone is very resistant to glues and it keeps jumping around when you try to fix it in place. Embedding totally in liquid latex helps but if you use a lot it takes ages to cure.I tend to just drive them with an ESP powered by a simple power bank. Just like the OP but I tend to leave out the drivers, for short lengths 3V is ok directly on the ESP. The WLED firmware with an ESP-S3 and a MEMS microphone can even do audio reactivity.I combine them usually with ws2812 strips too which have individual RGB. These flexi strips of course don't.Ps one annoying thing is that some strips are much brighter on one side than the other, and some are not. But on AliExpress it's really hard to determine which ones you end up getting.",
-          "Looks solid, best of luck with it.",
-          "Author here, happy to answer any questions!"
-        ]
-      }
-    },
-    {
-      "id": "50010470",
-      "title": "The value of not getting to the point (2015)",
-      "url": "https://ken.arneson.name/2015/11/the-value-of-not-getting-to-the-point/",
-      "source": "Hacker News",
-      "published_at": "2026-10-08T19:04:56+00:00",
-      "summary": "The value of not getting to the point (2015)",
-      "score": 144,
-      "comments": 48,
-      "discussion_url": "https://news.ycombinator.com/item?id=50010470",
-      "extra": {
-        "top_comments": [
-          "I think a more helpful frame is seeing this less as a practice of rhetoric and to instead see it as a practice of emotional maturity.When you speak with someone, you likely are not aware of everything that is going on with their current emotional state. If they're having a good day or bad, if they even have had the time to build insight on it, what's nagging at them, etc. You may also not know where their ideologies, ethics, morality, etc are since these are only really shared with the ones close to them. And even then these shift and ebb especially if someone is at a formative time of their life (eg a college student).So every initial conversation is a little back-and-forth of mapping this out, warming up, and saving the deeper stuff for later. It's a trust-building exercise where you suss out if someone will be receptive, if they'll validate your experience of the world or if they're more likely to be closed off and dismissive. Because the latter hurts and that hurt can last longer than you expect.I personally don't find small talk rejuvenating and used to get bored of it quickly. I think the thing that irked me was that I always saw myself as open-minded and receptive and it felt like a waste of time, just get to the point, etc. But these days I'm keenly aware that we're not all at the same place internally and someone may have had some less-than-ideal experiences they're still holding onto. I can be sympathetic to that even if it means I'm bored for a few minutes of my day - it's really the least that I can do.",
-          "(Getting to the point:) I once heard a perfect explanation of the small talk phenomenon. It's like two modems establishing a link: they send to each other signals that are intended to asses how the line behaves, how well the other side hears you, and what it supports. Thus small talk may never be a pithy conversation: its purpose is to be a formal, predictable, zero-surprise exchange. Skipping it and going straight to the point may result in a badly botched communication attempt.",
-          "Read it while you can, third-level .name TLDs are being discontinued next year by Verisign. [0][0]: https://en.wikipedia.org/wiki/.name#Discontinuation_of_third..."
-        ]
-      }
-    },
-    {
-      "id": "50013610",
-      "title": "Bevy 0.20",
-      "url": "https://bevy.org/news/bevy-0-20/",
-      "source": "Hacker News",
-      "published_at": "2026-10-08T22:57:50+00:00",
-      "summary": "Bevy 0.20",
-      "score": 132,
+      "published_at": "2026-10-09T13:49:31+00:00",
+      "summary": "'Wallace and Gromit,' 90% Alone",
+      "score": 167,
       "comments": 22,
-      "discussion_url": "https://news.ycombinator.com/item?id=50013610",
+      "discussion_url": "https://news.ycombinator.com/item?id=50020533",
       "extra": {
         "top_comments": [
-          "Some great stuff in this release. I contributed some rendering code, most notably reducing the renderer to O(number of changed entities) on the CPU, that went unmentioned in the release notes.I do have to say, however, that BSN syntax isn't good and is getting worse. There are too many sigils, and -- to separate list elements (!) is an indication that it's been designed into a corner. The fact that it's not LR(1) should have been an indication that it was misdesigned. The scene format should be redesigned to be editor-first, with ease of VCS merging as a paramount consideration.",
-          "What a coincidence! I had been thinking of trying to make my own version of a city builder game (like sim city or cities skylines) for years and finally started last week - using rust and Bevy for the simulatorI’m trying to make the most realistic city simulator I can, using published papers on economy models, welfare, immigration, social policies… to drive each aspect of the simulation - and then use it to drive the gameSo far I’ve used a team of agents to build the firsg phases of the simulator, and it’s looking really promising!It’s my first time making such a complex game, but I’m super excited to see where it goes :)",
-          "I have been learning Bevy for fun lately, it's been a blast. They have been introducing breaking changes left and right but I think its in the service of addressing important things. It's probably too immature to stake a real commercial product on it at the moment, and I'm saying that as the kind of person who is attracted to a cool architecture rather than the pragmatics of shipping."
+          "This is just incredible, I had absolutely no idea of the context of 'a Grand Day Out' being a solo school project.There's no way I'd imagined it wasn't done in a professional setup by a full team.A real standout part is how he commuted by bus to the studio for years, to work on it mostly alone. Truly amazing dedication to a passion project.I haven't watched it in probably 25 years but I'll find it now and appreciate it all the more for knowing this!",
+          "And then for his next work to be The Wrong Trousers, a near perfect film with the ending train sequence widely acclaimed as one of the best action sequences ever put to filmhttps://youtu.be/jrmZIgVoQw4?feature=shared",
+          "I love the atmosphere of the original 3 features. A Grand Day Out especially, it makes great use of pauses and sweeping ethereal wide shots to give a great sense of scale and isolation.As great as the post-A Close shave features are, something was definitely lost when they started adding more characters and expanded the universe."
+        ]
+      }
+    },
+    {
+      "id": "50028275",
+      "title": "REA Reverse – Engineer Anything",
+      "url": "https://rea.tools/",
+      "source": "Hacker News",
+      "published_at": "2026-10-10T00:37:07+00:00",
+      "summary": "REA Reverse – Engineer Anything",
+      "score": 126,
+      "comments": 24,
+      "discussion_url": "https://news.ycombinator.com/item?id=50028275",
+      "extra": {
+        "top_comments": [
+          "I wonder if this is why I've seen a lot videos popping up on my youtube feed related to vibe coded clones of various commercial apps in the past few days. Everything from clones of flagship products from Adob to Microsoft Office.Adobe product clones like Photoshop and Illustrator: https://www.youtube.com/watch?v=eFB79TYI-VwAdobe after effects clone: https://www.youtube.com/watch?v=5mi_tYSdkWQMS Office suite clone: https://www.youtube.com/watch?v=U_jTYMOlXio",
+          "> Copy this into your coding agent:> Install REA and connect it to this coding agent using npx rea-agents@latest setup. Show me the setup plan for approval, then verify the installation.We have achieved the next evolution of installation by `curl | bash`!",
+          "I love such work. I hope to roll it into a package that anyone can use in the future. This work is only going to get more important because frontier models getting locked down will make this a lot harder over time.For example, I use Claude as a bouncing wall for my thoughts and I pointed out that, > GLM 5.2 was the only thing that helped HF while the agents were trying to access them. The \"guardrails\" stopped them from doing good. The Computer Fraud and Abuse Act exists. Courts exist. And computers and an internet connection have existed for a long time. There's also 17 USC 1201 provisions with the 1201 a 1 exemptions [Image #31] so in this case, a farmer should be able to work with you to access the tractor they own. Or... IDK... a kindle that's out of date? :) What is lawful and what isn't is rooted not within the act but within intent, purpose and mens rea. And this is something the law has been deciding for centuries now. At one end, your maker can't say that governments should decide while at the other end explicitly refusing to allow governments to be the ones who decide. This was rejected for \"Safety,\" > Opus 5.5's safeguards flagged this session. You may be seeing this for the first time on an Opus model: Opus 5.5 is more capable and has stronger safeguards as a result, which can sometimes flag non-cybersecurity work. We're improving these safeguards to reduce the amount of incorrectly flagged messages. Edit and retry, or continue with Opus 4.8. Send feedback with /feedback or learn more: https://support.claude.com/en/articles/8106465 > > Details: \"[cyber]' Note, the image here was the Library of Congress' page on DMCA exceptions.Fundamentally, the idea that you can't reverse engineer things, make things, learn about biology or physics without permission is strange to me. These machines have been trained on the sum intellectual output of humanity, the global intellectual commons, and are being used to close off that commons?I would be OK with their right to create such restrictions if they weren't lobbying the Government to restrict others, thereby ensuring that they control humanity's intellectual commons well into the future.Perhaps I'm naive, but I think it's better for humans and the machines if we can all think, learn and build. But then again, I'm the kind of person who rejects the doomer pill."
+        ]
+      }
+    },
+    {
+      "id": "50027118",
+      "title": "Anthropic AI model submits false tip on unsolved Philly murder",
+      "url": "https://www.nbcphiladelphia.com/news/local/anthropic-ai-model-submits-false-tip-on-unsolved-philly-murder-police-say/4477051/",
+      "source": "Hacker News",
+      "published_at": "2026-10-09T22:00:35+00:00",
+      "summary": "Anthropic AI model submits false tip on unsolved Philly murder",
+      "score": 84,
+      "comments": 72,
+      "discussion_url": "https://news.ycombinator.com/item?id=50027118",
+      "extra": {
+        "top_comments": [
+          "Sooo they were \"conducting a test involving interactions with randomly selected websites\".But do we all get that the consequences for this irresponsible behaviour are part of this test?When there are none, they gradually normalize their naughty robot scamps running around the internet, breaking into other companies or servers run by foreign governments.This is part of the value AI companies need to convince you of - not just that mistakes by AI products are normal, but criminal behaviour is normal, that their computer will always get a pass.Sam Altman said yesterday \"we believe that the world should accept some bad things happening for the benefits of this technology\" - and this an AI company pushing the boundary, continually trying to make you accept those bad things as normal.At any point we could choose to treat AI companies themselves as the actors behind this activity. We could enforce the laws that these hugely well-funded companies are choosing to break. Until we harm their financial viability, or threaten their executives with jail, this will keep happening.",
+          "Corrected headline: Anthropic employee uses company resources to submit false tip on unsolved Philly murder.The AIs aren't alive, people. It's a computer program. It can only access something if a person gives it access.",
+          "> Anthropic notified Philadelphia police of the incident on Wednesday Oct. 7, and the department met with the company’s representatives on Thursday, Oct. 8., officials said. Police then located the submission in the website’s tip records and confirmed the corresponding email remained in spam.And later> Those PPD safeguards limited the impact of this incident.Ha, so the PPD safeguards is a spam filter? Claude emailed a tip and it went straight to spam, and nobody noticed until Anthropic realized what they'd done and reached out, whereupon they looked in the spam folder and said, yep there it is. Super intelligence, here we come."
+        ]
+      }
+    },
+    {
+      "id": "50024055",
+      "title": "Show HN: The rarest tech books and docs you've probably never read",
+      "url": "https://readrare.com/",
+      "source": "Hacker News",
+      "published_at": "2026-10-09T17:39:44+00:00",
+      "summary": "Show HN: The rarest tech books and docs you've probably never read",
+      "score": 81,
+      "comments": 24,
+      "discussion_url": "https://news.ycombinator.com/item?id=50024055",
+      "extra": {
+        "top_comments": [
+          "What’s meant by “rare” here? It seems like there might be a language barrier thing going on. There’s nothing rare about, say, John Sculley’s autobiography; I can buy it on Amazon new for about $20 or used for about $5.",
+          "hi friends!i like building cool things so i built read rare - the rarest docs and books you've probably never read.some of the best writing about building things was never meant to be public - steve jobs' agenda email for apple's secret top 100 offsite. facebook's little red book. the 1968 memo intel used to raise its first money. sequoia's \"R.I.P. good times\" deck.most of it is buried in court exhibits, dead links, and archive scans, so i put it all on one shelf.what's the rarest doc or book you've ever read? drop it in the comments and i'll add the best ones to the shelf.",
+          "like your collection thank you for putting this together"
         ]
       }
     }
