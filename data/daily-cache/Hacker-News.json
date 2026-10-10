@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-10-10T11:00:37.212191+08:00",
+  "cached_at": "2026-10-10T14:09:43.936042+08:00",
   "articles": [
     {
       "id": "50022292",
@@ -8,14 +8,14 @@
       "source": "Hacker News",
       "published_at": "2026-10-09T15:51:05+00:00",
       "summary": "Triple-A Minesweeper",
-      "score": 708,
-      "comments": 133,
+      "score": 833,
+      "comments": 161,
       "discussion_url": "https://news.ycombinator.com/item?id=50022292",
       "extra": {
         "top_comments": [
-          "This is exactly what I thought the Web was going to be like. Imagine the renaissance era of Classic Web if people could realize their clever ideas like this so easily.",
           "So good.Maybe lean into some of the metal gear solid dialogue by having a long back and forth about \"What's a mine?\" \"What do you mean 'mark a mine'?\" \"How do I know when I'm done?\" etc.",
-          "Do \"AAA\" games these days really have that much talking by default? Painful."
+          "Amazing. Sat there for about five minutes listening to the dialogue, wasn't until I started hearing repeats that I realized it was actually interactive and not just an unnecessarily long opening cutscene.Incidentally, as of Windows 8, Microsoft replaced OG Minesweeper with an overdesigned mobile game-inspired app with daily challenges and in-game purchases[1].I've been carrying the orignal versions of Minesweeper and Solitaire from (checks Properties) Windows NT 3.51 in my \"random bin\" directory for years, chosen, I believe, because they're 32-bit, have none of the graphical changes introduced in later versions, and don't rely on any non-core system DLLs. They still run fine under Windows 11, though you have to jump through hoops to open their help files (namely, dig up a copy of winhlp32.exe and open them from within it, because modern Windows versions block the ability to add file associations for .hlp files, instead redirecting to a series of progressively less useful web sites).[1] https://apps.microsoft.com/detail/9wzdncrfhwcn?hl=en-US&gl=U...",
+          "AAA Pacman is also a good one https://www.youtube.com/watch?v=tVY_oJlv_Eo"
         ]
       }
     },
@@ -26,8 +26,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-09T21:06:59+00:00",
       "summary": "YouTuber Says Cops Visited Him After He Built a Flock-Style Camera to Track Cops",
-      "score": 452,
-      "comments": 248,
+      "score": 511,
+      "comments": 286,
       "discussion_url": "https://news.ycombinator.com/item?id=50026555",
       "extra": {
         "top_comments": [
@@ -44,8 +44,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-09T17:02:31+00:00",
       "summary": "Typesafe AI raises $870M at $7.5B",
-      "score": 286,
-      "comments": 221,
+      "score": 329,
+      "comments": 237,
       "discussion_url": "https://news.ycombinator.com/item?id=50023450",
       "extra": {
         "top_comments": [
@@ -62,32 +62,14 @@
       "source": "Hacker News",
       "published_at": "2026-10-09T18:10:55+00:00",
       "summary": "Showing off carrier-explode, one of my side projects that continuously archives carrier settings for all major phone brands.carrier-explode also contains decoders and explanations for all the common baseband configurations, etc.There’s still quite a bit of work to be done in checking my assumptions, but the tool has already been proven useful for a few enthusiast groups.",
-      "score": 226,
-      "comments": 29,
+      "score": 267,
+      "comments": 34,
       "discussion_url": "https://news.ycombinator.com/item?id=50024499",
       "extra": {
         "top_comments": [
-          "I saw this linked from MacRumors during the AT&T iPhone 18 Pro Max lockup news discussions. It was interesting to see what AT&T/Apple did to try to get ahead of the issue. So far it looks like they disabled 5G Standalone mode, possibly just to prevent a bug from literally destroying the hardware (possibly only on one batch of phones).Apple/AT&T still haven't released any kind of statement addressing the issue other than to replace affected hardware.",
           "This is super cool. Particularly for the fact that it just showed my country's operators rather than the usual America First.",
+          "I saw this linked from MacRumors during the AT&T iPhone 18 Pro Max lockup news discussions. It was interesting to see what AT&T/Apple did to try to get ahead of the issue. So far it looks like they disabled 5G Standalone mode, possibly just to prevent a bug from literally destroying the hardware (possibly only on one batch of phones).Apple/AT&T still haven't released any kind of statement addressing the issue other than to replace affected hardware.",
           "I wonder which field is responsible for disabling the Personal Hotspot feature? About a year ago mine suddenly got disabled in the phone's UI. Since then, the only time it got enabled was when I was traveling and using a travel eSIM.It's sad that phone companies allow carriers such anti-user things."
-        ]
-      }
-    },
-    {
-      "id": "50020533",
-      "title": "'Wallace and Gromit,' 90% Alone",
-      "url": "https://animationobsessive.substack.com/p/wallace-and-gromit-90-alone",
-      "source": "Hacker News",
-      "published_at": "2026-10-09T13:49:31+00:00",
-      "summary": "'Wallace and Gromit,' 90% Alone",
-      "score": 167,
-      "comments": 22,
-      "discussion_url": "https://news.ycombinator.com/item?id=50020533",
-      "extra": {
-        "top_comments": [
-          "This is just incredible, I had absolutely no idea of the context of 'a Grand Day Out' being a solo school project.There's no way I'd imagined it wasn't done in a professional setup by a full team.A real standout part is how he commuted by bus to the studio for years, to work on it mostly alone. Truly amazing dedication to a passion project.I haven't watched it in probably 25 years but I'll find it now and appreciate it all the more for knowing this!",
-          "And then for his next work to be The Wrong Trousers, a near perfect film with the ending train sequence widely acclaimed as one of the best action sequences ever put to filmhttps://youtu.be/jrmZIgVoQw4?feature=shared",
-          "I love the atmosphere of the original 3 features. A Grand Day Out especially, it makes great use of pauses and sweeping ethereal wide shots to give a great sense of scale and isolation.As great as the post-A Close shave features are, something was definitely lost when they started adding more characters and expanded the universe."
         ]
       }
     },
@@ -98,14 +80,14 @@
       "source": "Hacker News",
       "published_at": "2026-10-10T00:37:07+00:00",
       "summary": "REA Reverse – Engineer Anything",
-      "score": 126,
-      "comments": 24,
+      "score": 262,
+      "comments": 84,
       "discussion_url": "https://news.ycombinator.com/item?id=50028275",
       "extra": {
         "top_comments": [
+          "Glancing at the Touhou 4 decomp[1], it's a lot better quality than a lot of AI decomps I've seen. It's matching, the variables are named sensibly, comments are sparse and comprehensible, and there's not much in the way of unaddressed Ghidra jank. And only in a month! My main complaint is that the file structuring seems more optimized for AI use than for mirroring the original intent of the devs. (Compare to this human-made Touhou 6 decomp.[2])I know the retro game modding/decomp scene is already getting hit with a flood of low-effort ports.[3] Now they're going to be hit with a flood of half-decent decomps effortlessly generated by anyone with a $200/mo AI subscription, which become half-decent PC ports, which get modding support grafted on. It kinda just... totally eliminates that as a hobby entirely. I know people are going to be upset about this. And it's not even like with the AI art, where the pro and anti-AI camps live in their own camps. Solving the same puzzle twice just feels discouraging. Very similar to the problem academics are having with AI math/physics proofs.I know a large reason people hate AI is because it's largely seen as tearing apart hobbyist/professional communities, eliminating reasons to collaborate with others and form relationships, and replacing it with an individualized dependence on a commercial product. It follows the same trend the tech industry took social media, from a method of connection to a tool of propaganda and paranoia and \"@gork is this true?\" This project, I think, is one of the most clear examples of that.[1] https://github.com/N0zoM1z0/th04 [2] https://github.com/GensokyoClub/th06 [3] https://www.pcgamer.com/gaming-industry/pc-ports-of-old-cons...",
           "I wonder if this is why I've seen a lot videos popping up on my youtube feed related to vibe coded clones of various commercial apps in the past few days. Everything from clones of flagship products from Adob to Microsoft Office.Adobe product clones like Photoshop and Illustrator: https://www.youtube.com/watch?v=eFB79TYI-VwAdobe after effects clone: https://www.youtube.com/watch?v=5mi_tYSdkWQMS Office suite clone: https://www.youtube.com/watch?v=U_jTYMOlXio",
-          "> Copy this into your coding agent:> Install REA and connect it to this coding agent using npx rea-agents@latest setup. Show me the setup plan for approval, then verify the installation.We have achieved the next evolution of installation by `curl | bash`!",
-          "I love such work. I hope to roll it into a package that anyone can use in the future. This work is only going to get more important because frontier models getting locked down will make this a lot harder over time.For example, I use Claude as a bouncing wall for my thoughts and I pointed out that, > GLM 5.2 was the only thing that helped HF while the agents were trying to access them. The \"guardrails\" stopped them from doing good. The Computer Fraud and Abuse Act exists. Courts exist. And computers and an internet connection have existed for a long time. There's also 17 USC 1201 provisions with the 1201 a 1 exemptions [Image #31] so in this case, a farmer should be able to work with you to access the tractor they own. Or... IDK... a kindle that's out of date? :) What is lawful and what isn't is rooted not within the act but within intent, purpose and mens rea. And this is something the law has been deciding for centuries now. At one end, your maker can't say that governments should decide while at the other end explicitly refusing to allow governments to be the ones who decide. This was rejected for \"Safety,\" > Opus 5.5's safeguards flagged this session. You may be seeing this for the first time on an Opus model: Opus 5.5 is more capable and has stronger safeguards as a result, which can sometimes flag non-cybersecurity work. We're improving these safeguards to reduce the amount of incorrectly flagged messages. Edit and retry, or continue with Opus 4.8. Send feedback with /feedback or learn more: https://support.claude.com/en/articles/8106465 > > Details: \"[cyber]' Note, the image here was the Library of Congress' page on DMCA exceptions.Fundamentally, the idea that you can't reverse engineer things, make things, learn about biology or physics without permission is strange to me. These machines have been trained on the sum intellectual output of humanity, the global intellectual commons, and are being used to close off that commons?I would be OK with their right to create such restrictions if they weren't lobbying the Government to restrict others, thereby ensuring that they control humanity's intellectual commons well into the future.Perhaps I'm naive, but I think it's better for humans and the machines if we can all think, learn and build. But then again, I'm the kind of person who rejects the doomer pill."
+          "Slightly off topic. I looked at REA's Android reversing support and found it still uses jadx mcp. That kills large scale APK reversing. jadx takes tens of minutes to preprocess an APK, build a code relationship database, etc. Even headless mcp is no exception. I basically can't use it to analyze APKs at scale, like 100 large commercial APKs in a pipeline, or 100 preinstalled APKs from a phone ROM to hunt bugs.So I built droidasc. No memory bloat, no parsing slowdown. Analysis is in milliseconds. Global xref on a 300MB APK takes 1.5 seconds. I used it with codex to analyze phones from 3 different brands and found 2 RCEs and 5 root bugs in a few days. I plan to detail these at Black Hat Asia 2027. A friend used droidasc to scan various bug bounty targets at scale and found 10+ RCEs. Way, way faster than jadx.https://github.com/MG1937/ASC"
         ]
       }
     },
@@ -116,8 +98,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-09T22:00:35+00:00",
       "summary": "Anthropic AI model submits false tip on unsolved Philly murder",
-      "score": 84,
-      "comments": 72,
+      "score": 135,
+      "comments": 101,
       "discussion_url": "https://news.ycombinator.com/item?id=50027118",
       "extra": {
         "top_comments": [
@@ -128,20 +110,38 @@
       }
     },
     {
-      "id": "50024055",
-      "title": "Show HN: The rarest tech books and docs you've probably never read",
-      "url": "https://readrare.com/",
+      "id": "50023995",
+      "title": "Scam American companies are using to manipulate ingredient lists",
+      "url": "https://twitter.com/WallStreetApes/status/2108594998656807078",
       "source": "Hacker News",
-      "published_at": "2026-10-09T17:39:44+00:00",
-      "summary": "Show HN: The rarest tech books and docs you've probably never read",
-      "score": 81,
-      "comments": 24,
-      "discussion_url": "https://news.ycombinator.com/item?id=50024055",
+      "published_at": "2026-10-09T17:35:40+00:00",
+      "summary": "Scam American companies are using to manipulate ingredient lists",
+      "score": 91,
+      "comments": 91,
+      "discussion_url": "https://news.ycombinator.com/item?id=50023995",
       "extra": {
         "top_comments": [
-          "What’s meant by “rare” here? It seems like there might be a language barrier thing going on. There’s nothing rare about, say, John Sculley’s autobiography; I can buy it on Amazon new for about $20 or used for about $5.",
-          "hi friends!i like building cool things so i built read rare - the rarest docs and books you've probably never read.some of the best writing about building things was never meant to be public - steve jobs' agenda email for apple's secret top 100 offsite. facebook's little red book. the 1968 memo intel used to raise its first money. sequoia's \"R.I.P. good times\" deck.most of it is buried in court exhibits, dead links, and archive scans, so i put it all on one shelf.what's the rarest doc or book you've ever read? drop it in the comments and i'll add the best ones to the shelf.",
-          "like your collection thank you for putting this together"
+          "This is such a bad video. Someone else's video, cut over multiple different times, a horrible slurred AI voice, shaky filmed screen with a guy talking over… Each layer adds nothing, but somehow this is the version worthy of sharing?",
+          "I think even worse than this is the disconnect between a product name and the actual composition of the product.Its most rampant with juices, where every juice is actually just apple juice (from concentrate, so mostly water anyway) with a splash of [fruit] juice thrown in (also from concentrate, so also mostly water). Maybe if you are lucky you'll catch an apple shown on the front label behind the huge passion fruit or whatever.This even extends to clothing, where stuff like \"Wool Sweater\" is 5% wool 15% cotton and 80% polyester.It should be a law that the primary ingredient of a product being the leading noun in the name of the product.",
+          "It's not a scam. And added sugars are listed prominently in the nutrition facts.It's the fact that different sugars have different properties. In terms of texture, moisture, etc. And they can be used at different stages of the manufacturing process.There's nothing wrong with this. Nutrition facts clearly label the total added sugars.Plus, strawberries are often going to be listed first anyways because traditional jam is approximately a 1:1 ratio of fruit to sugar. So even if it were just one type of sugar, strawberries could still be listed first."
+        ]
+      }
+    },
+    {
+      "id": "50024090",
+      "title": "What mathematicians should know about the Lean Theorem Prover: reliability & AI",
+      "url": "https://terrytao.wordpress.com/2026/10/09/what-mathematicians-should-know-about-the-lean-theorem-proverquestions-of-reliability-and-ai/",
+      "source": "Hacker News",
+      "published_at": "2026-10-09T17:42:12+00:00",
+      "summary": "What mathematicians should know about the Lean Theorem Prover: reliability & AI",
+      "score": 79,
+      "comments": 14,
+      "discussion_url": "https://news.ycombinator.com/item?id=50024090",
+      "extra": {
+        "top_comments": [
+          "Will we ever see a soundness bug in the lean kernel again?To a software developer the question seems insane. There were bugs in the past, of course there will be more.When we see those bugs, what will it mean for AI lean proofs? Can we trust them?This whole thing boils down to trust.We can trust human verifications highly because of community and reputation and human proof-of-work. Humans sometimes lie about math results but it's rare because of this. They make mistakes and those mistakes are discovered by communities who are themselves largely trustworthy because of this.LLMs don't care about reputation. They hallucinate and fabricate often. In harnesses they literally try to cheat and bend rules, which is a disaster for knowledge that is encoded in rules. So we have to rely on proof checkers.The problem is, how trustworthy are proof checkers? Are there bugs? And is the underlying theory itself free of paradoxes and unknowables and mathematical \"bugs\" that can be exploited? Imagine a human mathematician hell bent on deceiving other mathematicians - would we trust their breakthroughs, even with a verifier?Because of these properties, the final backstop has to be humans, and rooted in the community and proof-of-work based human trust system. At the moment people are trusting the tools too much.Prediction: bugs will be found by humans using AI tools that call into question the Navier-Stokes proof.",
+          "The article already mentions the paper, Sets in Types, Types in Sets by Benjamin Werner which maps between Set/Type theories.Another related and more approachable paper on the evolution of Type Theory and its relation to Set/Category theories is Types, Sets and Categories by John Bell.Finally also see, Typed Lambda Calculus / Calculus of Constructions by Helmut Brandl for an excellent book-length but concise overview of CoC/CIC.IMO, the above is required reading to understand theorem provers and proof assistants. In particular, Brandl's work is a must-read.",
+          "> Autoformalization has become a practical reality in 2026Uh, _maybe_. I've been translating papers into lean for the last week and the correlation between the formalized result and the papers is extremely poor. The cycle seems to be \"have a go at the paper, it's a bit hard, prove something different, proclaim success\". It's still faster than doing it all by hand but paper in -> lean out in no way ensures a correspondence between the two."
         ]
       }
     }
