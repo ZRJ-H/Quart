@@ -1,6 +1,24 @@
 {
-  "cached_at": "2026-10-11T11:01:27.068720+08:00",
+  "cached_at": "2026-10-11T14:07:23.138699+08:00",
   "articles": [
+    {
+      "id": "50029123",
+      "title": "Telegram Desktop vulnerability allowed any user's file to be stolen",
+      "url": "https://beaksec.github.io/posts/telegram-desktop-one-click-account-takeover/",
+      "source": "Hacker News",
+      "published_at": "2026-10-10T03:02:47+00:00",
+      "summary": "Telegram Desktop vulnerability allowed any user's file to be stolen",
+      "score": 441,
+      "comments": 278,
+      "discussion_url": "https://news.ycombinator.com/item?id=50029123",
+      "extra": {
+        "top_comments": [
+          "I once read The Bugs We Have to Kill: https://www.usenix.org/publications/login/aug15/bratus and one particular thing that has stuck with me forever:“Any sufficiently complex input format is indistinguishable from bytecode; the code receiving it is indistinguishable from a vir- tual machine.”",
+          "Related: could we please stop, by default, allowing software to: a) access all your files, and b) roam the internet at will. That was somewhat OK in the 80s, but it hasn't been since.",
+          "One of the challenges with Telegram is - they regularly re-enable settings inside the app/account that you had specifically disabled. So at any point you don't know what is happening and what is not. Meaning, even if you didn't see a thing, a malicious file might be sitting all warm and fuzzy on your computer - among possible other things. I used to like the snappiness of this app (and it is still snappier than almost all other IM apps combined, by a margin), but after a while I realised it was a ticking time-bomb (to keep it installed on the desktop) and possibly a scammer safe haven, nothing else."
+        ]
+      }
+    },
     {
       "id": "50029487",
       "title": "The Lightbulb Computer",
@@ -8,14 +26,14 @@
       "source": "Hacker News",
       "published_at": "2026-10-10T04:12:26+00:00",
       "summary": "The Lightbulb Computer",
-      "score": 274,
-      "comments": 45,
+      "score": 333,
+      "comments": 51,
       "discussion_url": "https://news.ycombinator.com/item?id=50029487",
       "extra": {
         "top_comments": [
           "I made this, fun to see my project on the front page!The main question I tend to get from hacker-types is \"what are the tech specs?\". The demos run on a Mac with custom software I built for projection mapping/rendering/etc. (the hand tracking uses Apple's built-in framework, which is very good), a small consumer 4k laser projector, and a basic webcam for vision.But really, this is primarily a research/design prototype - I think it's much more important to figure out what the user experience should ideally feel like, if the interactions are even plausible & desirable in the first place; and then work backwards to the technology.",
-          "Nice. This reminds me how I felt watching the first pre-iPhone multitouch demos.One small quality-of-life improvement that could be added: have the software timestamp when you say \"here\" and then (using a short low-FPS video buffer?) analyze the corresponding frame of video. This would eliminate the pause when you're pointing at something, waiting for the computer to respond.Alternately a low-latency speech analyzer could look for the word \"here\" and quickly snap a screenshot. Perhaps project a temporary dot on the surface, so the user knows they can put their hand down now?Quite the impressive demo! There's huge potential here.",
-          "Quite nice. But this imbues the house with a constant presence of the machine. A jinn which is always ready to grant your wish, but never leaves you alone, ever watching and listening. The fact that the jinn takes orders spoken in normal human language amplifies the effect quite a bit. I would have rather not have to feel such presence in my bathroom. Or bedroom. I would still be glad to be able to operate \"smart\" switches, and even find items. But I would rather explicitly unlock my phone, start an app, and scan the bookshelf, until a book is highlighted.OTOH this would be a great thing for non-private spaces, that are watched by security cameras 24/7 anyway. A school, a library, a clinic, an office, a workshop, a warehouse, a parking garage, maybe even a museum.Of course, trust and security are going to be major considerations. Maybe not for everyone though: people voluntarily enable various voice assistants, and even pay to order Amazon Echo."
+          "Oh my god!!! I was working towards this exact thing for the last 7+ years. Albeit from a home IoT smart speaker angle. So glad to see this!!",
+          "Nice. This reminds me how I felt watching the first pre-iPhone multitouch demos.One small quality-of-life improvement that could be added: have the software timestamp when you say \"here\" and then (using a short low-FPS video buffer?) analyze the corresponding frame of video. This would eliminate the pause when you're pointing at something, waiting for the computer to respond.Alternately a low-latency speech analyzer could look for the word \"here\" and quickly snap a screenshot. Perhaps project a temporary dot on the surface, so the user knows they can put their hand down now?Quite the impressive demo! There's huge potential here."
         ]
       }
     },
@@ -26,8 +44,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-10T10:52:09+00:00",
       "summary": "Talorys – A self-hosted personal AI agent on Cloudflare's free tier",
-      "score": 259,
-      "comments": 123,
+      "score": 274,
+      "comments": 128,
       "discussion_url": "https://news.ycombinator.com/item?id=50031614",
       "extra": {
         "top_comments": [
@@ -44,68 +62,14 @@
       "source": "Hacker News",
       "published_at": "2026-10-10T20:31:50+00:00",
       "summary": "A city-building game in which the city would prefer you didn't",
-      "score": 199,
-      "comments": 76,
+      "score": 265,
+      "comments": 90,
       "discussion_url": "https://news.ycombinator.com/item?id=50036864",
       "extra": {
         "top_comments": [
           "Reminds me of that Factorio joke mod which adds bureaucracy-processing as a recipe tree. Assemblers start to shut down if you don't process paperwork fast enough. IIRC, it had biters following the player around in queues to give them complaint forms.",
-          "The best I got:Discretionary Review (Developer): I built 4,147 homes in San Francisco, 2015 to 2031. Grade A, \"Builder of Some Things\". Survived all eight investor reviews. 16 hearings, 3 appeals, 4 lawsuits. The city needed 82,069.",
-          "Whoever made this, I love you and we should be friends."
-        ]
-      }
-    },
-    {
-      "id": "50034081",
-      "title": "Knuth reward check",
-      "url": "https://www.thomas-huehn.com/knuth-reward-check/",
-      "source": "Hacker News",
-      "published_at": "2026-10-10T15:47:01+00:00",
-      "summary": "Knuth reward check",
-      "score": 158,
-      "comments": 61,
-      "discussion_url": "https://news.ycombinator.com/item?id=50034081",
-      "extra": {
-        "top_comments": [
-          "The biggest shame of my life is that I had one of these and somehow managed to lose it.",
-          "The error was saying that \"infinitely many alphabets can be generated\" but there is a finite number of parameters which have a finite range of values. If Knuth had just written \"a humongous number of alphabets\" he would be correct.",
-          "I wonder if someone has used an LLM yet to analyze Knuth’s books and find errors to inundate him with? Please don’t do that (although I’m sure it’s possible)."
-        ]
-      }
-    },
-    {
-      "id": "50035530",
-      "title": "Why DuckDB 2.0 is faster",
-      "url": "https://motherduck.com/blog/why-duckdb-20-is-faster/",
-      "source": "Hacker News",
-      "published_at": "2026-10-10T18:08:49+00:00",
-      "summary": "Why DuckDB 2.0 is faster",
-      "score": 156,
-      "comments": 51,
-      "discussion_url": "https://news.ycombinator.com/item?id=50035530",
-      "extra": {
-        "top_comments": [
-          "I also love the visualizations but I'm getting heavy LLM vibes from the prose:> One setting drives this,...> The cost is now about the rows you actually touch, not rounds times table size.Etc.I get the brain scramblies [1] from trying to parse this writing style at work so I hate to see it elsewhere. Apologies if I'm wrong. But if I'm not then OP don't use an LLM to write for you. It's hazardous to your reader's health [2].[1]: https://www.youtube.com/watch?v=ipUJq-odt5Q[2]: https://discourse.haskell.org/t/how-to-keep-enjoying-program...",
-          "Nice article!While it's true that 2.0 makes recursive CTEs much more performant, don't forget that there's a badass DuckDB extension for graph data already. Here's a 2025 article about how elegantly that can handle what is otherwise quite a challenging class of query for your typical RDBMS: https://duckdb.org/2025/10/22/duckdb-graph-queries-duckpgq",
-          "Great visualization. Side note their new c++ extension api is also gonna be faster from the perspective of development / distribution of those extensions"
-        ]
-      }
-    },
-    {
-      "id": "50037949",
-      "title": "Build your own decision model",
-      "url": "https://nishtahir.com/build-your-own-decision-model/",
-      "source": "Hacker News",
-      "published_at": "2026-10-10T22:50:10+00:00",
-      "summary": "Build your own decision model",
-      "score": 137,
-      "comments": 30,
-      "discussion_url": "https://news.ycombinator.com/item?id=50037949",
-      "extra": {
-        "top_comments": [
-          "I saw Jev and without understanding it said to myself, “I can build that!” And brainstormed some weird Alex trebek jeopardy generator I called trebek, a bun ran typescript app that you give it an input, it decides if it’s a category, question or answer then generates what’s missing. Trained a SQLite-vec database on the English language for a few days with a small qwen embedding model to add vec embeds to the db then ripped the cord on the embeddings before I started feeding my llm the proper specs for Jev and now i have a cool jeopardy generator that now doubles as a Jev clone classifier with a custom v1 endpoint for system 0 or whatever it is. Level understanding here, fun experiment though ^>^ and produces useful outputs",
-          "These are neat - and the source of the many Jev clones we've seen. I think their recent funding round is in part because of their algorithms/data. It remains to be seen if that's a big enough edge to be worth 1 billion+ dollars",
-          "This is very cool. If you are looking for something similar but more lightweight, that you can run (and train) on CPU, try out Jeffy: https://jeffyclassify.com/On GitHub: https://github.com/nicobrenner/jeffy"
+          "This game is rigged by pigs at the trough.",
+          "The best I got:Discretionary Review (Developer): I built 4,147 homes in San Francisco, 2015 to 2031. Grade A, \"Builder of Some Things\". Survived all eight investor reviews. 16 hearings, 3 appeals, 4 lawsuits. The city needed 82,069."
         ]
       }
     },
@@ -116,31 +80,68 @@
       "source": "Hacker News",
       "published_at": "2026-10-11T00:46:48+00:00",
       "summary": "WallHop – 12ft.io is gone, so I built a replacement",
-      "score": 127,
-      "comments": 56,
+      "score": 214,
+      "comments": 91,
       "discussion_url": "https://news.ycombinator.com/item?id=50038634",
       "extra": {
         "top_comments": [
-          "It's not working on WSJ.",
           "Why not open source? You modified GPL-3 ladder; I don’t know whether it’s legally required, but I feel it’s morally expected and important in practice (since yours may get taken down).",
-          "This type of initiative should never be open source."
+          "This type of initiative should never be open source.",
+          "Long back I was wondering if a tip jar type service that'll get me access to what I actually want to see would be a better solution in place of subscribing to every website that produces an interesting article once in a while. There were a couple of such services but they never got popular.Perhaps this model alone is not sustainable but it could be paired with ads (as in ads or fee off a tip jar pay). Even then, it surely won't lead to infinite growth, which is the only goal nowadays."
         ]
       }
     },
     {
-      "id": "50033357",
-      "title": "Unikernels were hard. key word: were",
-      "url": "https://ghuntley.com/unikernels/",
+      "id": "50037949",
+      "title": "Build your own decision model",
+      "url": "https://nishtahir.com/build-your-own-decision-model/",
       "source": "Hacker News",
-      "published_at": "2026-10-10T14:27:09+00:00",
-      "summary": "Unikernels were hard. key word: were",
-      "score": 112,
-      "comments": 45,
-      "discussion_url": "https://news.ycombinator.com/item?id=50033357",
+      "published_at": "2026-10-10T22:50:10+00:00",
+      "summary": "Build your own decision model",
+      "score": 203,
+      "comments": 43,
+      "discussion_url": "https://news.ycombinator.com/item?id=50037949",
       "extra": {
         "top_comments": [
-          "I've had limited adventures in embedded software and as part of that became a fan of Zephyr (http://www.zephyrproject.org) and wonder about its potential application as a unikernel.On the plus side: it's a unikernel. You compile it and your application together and get a binary. It has support for running on virtual hardware (https://docs.zephyrproject.org/latest/hardware/virtualizatio...) and virtio is the new bios, right?On the minus side: I think porting \"traditional\" software - say Nginx - to it will be agonising. And I can't make any guarantees about its performance in the same way that Alpine Linux container images are not necessarily fast.But there's an entire toolchain, debugging story, drivers etc. for something that compiles to tiny and starts up basically instantaneously. Surely that's got to be useful for something?",
-          "It’s good to see this! I’m offering a cloud service to host unikernels based on my BareMetal kernel.~$0.005 CAD/h for a small network-enabled VM with 4MiB of RAM and no disk.https://baremetal.returninfinity.com"
+          "This is a great way to start but the perf of LLM models like Qwen are not ideal for local execution. I have adapted Laya (pure decision model) to run in a browser and I am able to get responses under 200ms. Give it a try: https://wexare-ai.github.io/browser-laya/",
+          "I saw Jev and without understanding it said to myself, “I can build that!” And brainstormed some weird Alex trebek jeopardy generator I called trebek, a bun ran typescript app that you give it an input, it decides if it’s a category, question or answer then generates what’s missing. Trained a SQLite-vec database on the English language for a few days with a small qwen embedding model to add vec embeds to the db then ripped the cord on the embeddings before I started feeding my llm the proper specs for Jev and now i have a cool jeopardy generator that now doubles as a Jev clone classifier with a custom v1 endpoint for system 0 or whatever it is. Level understanding here, fun experiment though ^>^ and produces useful outputs",
+          "What if Jev is something more than a classifier? There's so much potential here waiting to be seen. I built my own Jev, then realized it could literally run on a webpage. So then I turned it into an npm library https://genclass.dev"
+        ]
+      }
+    },
+    {
+      "id": "50035530",
+      "title": "Why DuckDB 2.0 is faster",
+      "url": "https://motherduck.com/blog/why-duckdb-20-is-faster/",
+      "source": "Hacker News",
+      "published_at": "2026-10-10T18:08:49+00:00",
+      "summary": "Why DuckDB 2.0 is faster",
+      "score": 188,
+      "comments": 59,
+      "discussion_url": "https://news.ycombinator.com/item?id=50035530",
+      "extra": {
+        "top_comments": [
+          "I also love the visualizations but I'm getting heavy LLM vibes from the prose:> One setting drives this,...> The cost is now about the rows you actually touch, not rounds times table size.Etc.I get the brain scramblies [1] from trying to parse this writing style at work so I hate to see it elsewhere. Apologies if I'm wrong. But if I'm not then OP don't use an LLM to write for you. It's hazardous to your reader's health [2].[1]: https://www.youtube.com/watch?v=ipUJq-odt5Q[2]: https://discourse.haskell.org/t/how-to-keep-enjoying-program...",
+          "Great visualization. Side note their new c++ extension api is also gonna be faster from the perspective of development / distribution of those extensions",
+          "Nice article!While it's true that 2.0 makes recursive CTEs much more performant, don't forget that there's a badass DuckDB extension for graph data already. Here's a 2025 article about how elegantly that can handle what is otherwise quite a challenging class of query for your typical RDBMS: https://duckdb.org/2025/10/22/duckdb-graph-queries-duckpgq"
+        ]
+      }
+    },
+    {
+      "id": "50034081",
+      "title": "Knuth reward check",
+      "url": "https://www.thomas-huehn.com/knuth-reward-check/",
+      "source": "Hacker News",
+      "published_at": "2026-10-10T15:47:01+00:00",
+      "summary": "Knuth reward check",
+      "score": 182,
+      "comments": 66,
+      "discussion_url": "https://news.ycombinator.com/item?id=50034081",
+      "extra": {
+        "top_comments": [
+          "The biggest shame of my life is that I had one of these and somehow managed to lose it.",
+          "The error was saying that \"infinitely many alphabets can be generated\" but there is a finite number of parameters which have a finite range of values. If Knuth had just written \"a humongous number of alphabets\" he would be correct.",
+          "It's not a reward check, but Knuth read one of my articles and emailed me about it [0], which I found pretty cool.[0]: https://tug.org/TUGboat/tb43-3/tb135chernoff-lwc.pdf"
         ]
       }
     }
