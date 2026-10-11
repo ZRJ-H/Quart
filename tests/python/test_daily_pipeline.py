@@ -4,6 +4,7 @@ import unittest
 from contextlib import redirect_stdout
 from datetime import date, datetime, timezone
 from pathlib import Path
+from unittest.mock import patch
 
 from scripts.daily_digest.collectors import CollectionError
 from scripts.daily_digest.models import Article
@@ -79,6 +80,23 @@ class DailyPipelineTests(unittest.TestCase):
             self.assertEqual(snapshot(root), before)
             for relative in expected:
                 self.assertIn("https://example.com/", (root / relative).read_text(encoding="utf-8"))
+
+    def test_summary_schema_change_regenerates_unchanged_sources(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            with patch("scripts.daily_digest.pipeline.SUMMARY_SCHEMA_VERSION", 7):
+                run_pipeline(root, RUN_DATE, fixture_collectors(), fallback_summarizer)
+            calls = []
+
+            def tracked_summarizer(category, rows):
+                calls.append(category)
+                return fallback_summarizer(category, rows)
+
+            run_pipeline(root, RUN_DATE, fixture_collectors(), tracked_summarizer)
+            self.assertEqual(set(calls), set(FIXTURES))
+            calls.clear()
+            run_pipeline(root, RUN_DATE, fixture_collectors(), tracked_summarizer)
+            self.assertEqual(calls, [])
 
     def test_pipeline_replaces_local_codex_note_when_sources_change(self):
         with tempfile.TemporaryDirectory() as directory:
