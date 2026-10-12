@@ -1,42 +1,6 @@
 {
-  "cached_at": "2026-10-12T11:00:41.238250+08:00",
+  "cached_at": "2026-10-12T14:16:43.223933+08:00",
   "articles": [
-    {
-      "id": "50045984",
-      "title": "Total Annihilation, rebuilt for modern computers",
-      "url": "https://nanolathe.gg",
-      "source": "Hacker News",
-      "published_at": "2026-10-11T18:04:47+00:00",
-      "summary": "Total Annihilation, rebuilt for modern computers",
-      "score": 387,
-      "comments": 164,
-      "discussion_url": "https://news.ycombinator.com/item?id=50045984",
-      "extra": {
-        "top_comments": [
-          "I recently discovered Beyond All Reason, a spiritual successor to Total Annihilation. There have been several of these, but I think BAR is by far the best. It's open source, but looks nice and is polished. It has amazing quality-of-life features I haven't seen in any other RTS. And it supports insanely huge battles with hundreds of players and tens of thousands of units.150-player match: https://www.youtube.com/watch?v=gQJujiZ-oz0https://www.beyondallreason.info/",
-          "Fair enough, but is there an advantage over the spring engine? Another clean room implementation that understands total annihilation data-structures, a project started 20 years ago.For what its worth, the Total Annihilation derived project with the most attention currently is is BAR https://www.beyondallreason.info/ They decided to make it legally distinct, but it was the balanced annihilation project which was total annihilation rebalanced for better pvp. I don't play too many RTS so this is not authoritative, but BAR plays better than any other rts I have tried, They really care about the fine details of user experience there.In fact, I consider Chris Taylor(Total Annihilation, Supreme Commander) to be one of if not the greatest RTS designers. His games don't have the fluff people appear to love(looking at you starcraft) but he gets the control design better than anyone else I have seen.",
-          "I have been working on this for supreme commander!With modern tooling, libraries and such, many of supcoms old technical issues can be addressed. (plus it now works on linux and mac!)I think I'm close to a like for like version.And of course the performance is leaps and bounds beyond what supcom could do, you can see a 64,000 unit air fight, and I'm pretty sure i can get that going at 60fps plus!and end game vs the ai, is still 4x realtime, well beyond what supcom could do.and of course higher player v player battlesYou can see that all here and in the replies https://forum.faforever.com/topic/10451/supcom-moho-engine-r..."
-        ]
-      }
-    },
-    {
-      "id": "50045946",
-      "title": "NYC's \"Click to Cancel\" rule is now in effect",
-      "url": "https://www.nyc.gov/main/click-to-cancel",
-      "source": "Hacker News",
-      "published_at": "2026-10-11T18:01:16+00:00",
-      "summary": "NYC's \"Click to Cancel\" rule is now in effect",
-      "score": 376,
-      "comments": 185,
-      "discussion_url": "https://news.ycombinator.com/item?id=50045946",
-      "extra": {
-        "top_comments": [
-          "This will have no impact on Adobe's shenanigans. They offer click-to-cancel, but then charge a cancellation fee equal to what you would have paid for the rest of the one-year term. Their clever justification is that you received a significant discount for committing to a year, so you still owe them for the remaining months if you cancel early. I didn't even realize I had signed up for a one-year commitment. I'm not sure where they buried that clause.I expect more businesses will transition to this strategy to counter NYC's new rule. They won't necessarily lower the price, but you will have to sign up for a one-year term, then they will hit you with a massive cancellation fee if you \"click to cancel\".",
-          "It seems like a good rule, and I am eager to see what NYC’s enforcement is going to look like. I have historically been disappointed (as a life-long resident) by the discontinuity between the city’s eagerness to legislate and its recalcitrance around enforcement, particularly when public interest in any given topic fades.(Compare the city’s historic problems around preventing illegal de-stabilization of rental units, inability to prevent the NYPD from parking on sidewalks, and so forth.)",
-          "Look out for the \"Digital Fairness Act\", which will be tabled by the European Commission in November. It is expected to include the same \"Click to Cancel\" principle continent-wide.Source: I'm an EU digital policy analyst in Brussels."
-        ]
-      }
-    },
     {
       "id": "50048312",
       "title": "Passkeys are a trap",
@@ -44,8 +8,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-11T21:59:48+00:00",
       "summary": "Passkeys are a trap",
-      "score": 326,
-      "comments": 183,
+      "score": 469,
+      "comments": 254,
       "discussion_url": "https://news.ycombinator.com/item?id=50048312",
       "extra": {
         "top_comments": [
@@ -56,56 +20,38 @@
       }
     },
     {
+      "id": "50045984",
+      "title": "Total Annihilation, rebuilt for modern computers",
+      "url": "https://nanolathe.gg",
+      "source": "Hacker News",
+      "published_at": "2026-10-11T18:04:47+00:00",
+      "summary": "Total Annihilation, rebuilt for modern computers",
+      "score": 443,
+      "comments": 187,
+      "discussion_url": "https://news.ycombinator.com/item?id=50045984",
+      "extra": {
+        "top_comments": [
+          "I recently discovered Beyond All Reason, a spiritual successor to Total Annihilation. There have been several of these, but I think BAR is by far the best. It's open source, but looks nice and is polished. It has amazing quality-of-life features I haven't seen in any other RTS. And it supports insanely huge battles with hundreds of players and tens of thousands of units.150-player match: https://www.youtube.com/watch?v=gQJujiZ-oz0https://www.beyondallreason.info/",
+          "Fair enough, but is there an advantage over the spring engine? Another clean room implementation that understands total annihilation data-structures, a project started 20 years ago.For what its worth, the Total Annihilation derived project with the most attention currently is is BAR https://www.beyondallreason.info/ They decided to make it legally distinct, but it was the balanced annihilation project which was total annihilation rebalanced for better pvp. I don't play too many RTS so this is not authoritative, but BAR plays better than any other rts I have tried, They really care about the fine details of user experience there.In fact, I consider Chris Taylor(Total Annihilation, Supreme Commander) to be one of if not the greatest RTS designers. His games don't have the fluff people appear to love(looking at you starcraft) but he gets the control design better than anyone else I have seen.",
+          "I have been working on this for supreme commander!With modern tooling, libraries and such, many of supcoms old technical issues can be addressed. (plus it now works on linux and mac!)I think I'm close to a like for like version.And of course the performance is leaps and bounds beyond what supcom could do, you can see a 64,000 unit air fight, and I'm pretty sure i can get that going at 60fps plus!and end game vs the ai, is still 4x realtime, well beyond what supcom could do.and of course higher player v player battlesYou can see that all here and in the replies https://forum.faforever.com/topic/10451/supcom-moho-engine-r..."
+        ]
+      }
+    },
+    {
       "id": "50047422",
       "title": "The gap in shared understanding of LLM capability is widening",
       "url": "https://twitter.com/karpathy/status/2109361546505966046",
       "source": "Hacker News",
       "published_at": "2026-10-11T20:20:52+00:00",
       "summary": "The gap in shared understanding of LLM capability is widening",
-      "score": 279,
-      "comments": 456,
+      "score": 384,
+      "comments": 541,
       "discussion_url": "https://news.ycombinator.com/item?id=50047422",
       "extra": {
         "top_comments": [
           "https://xxcancel.com/karpathy/status/2109361546505966046",
           "Don't think the 0.2% really are in agreement that \"large, complex projects that used to take them weeks/months can now be completed by agents with a prompt\".The divide seems to be between people who think you may need to understand the codebase for maintenance, potential future token costs, optimisation, code erosion & being wary of the assumptions/mistakes that they have seen LLMs make, and people who don't review code and are confident that the AI has made no mistakes and will be available for next-to-nothing forever.It's certainly allowing the latter to move fast... but will their clients be happy if/when they break things. We'll find out soon, I'm sure.",
-          "What exactly do we want the general public to \"do\" with these models? If the have no use for agentic LLMs, they obviously aren't going to be interested in the capability of those agents.I see a lot of benefit to spreading information around the tech, but it's still in its infancy. Most people weren't on the internet when that was getting up to speed.Meemaw and pops have their systems that they work within, and they just got familiar with the damn smartphone. Though it might help them, they probably do not want AI to organize their old photos or \"clean up\" their computer. Saving 5 minutes just isn't important to them.As for professionals, yeah - companies are going to adopt these tools over the coming years. It's the \"norm\" in my circle, but lots of jobs just... don't use technology like that - there has ALWAYS been a major gap between people who are deep in tech and people who are not."
-        ]
-      }
-    },
-    {
-      "id": "50047055",
-      "title": "So, You’d Like To Sell Your Print Issues Of The Onion?",
-      "url": "https://theonion.com/archivehunt/",
-      "source": "Hacker News",
-      "published_at": "2026-10-11T19:43:32+00:00",
-      "summary": "So, You’d Like To Sell Your Print Issues Of The Onion?",
-      "score": 261,
-      "comments": 36,
-      "discussion_url": "https://news.ycombinator.com/item?id=50047055",
-      "extra": {
-        "top_comments": [
-          ">Certain issues of The Onion newspaper are mysteriously missing from our 270-year archive, and you might be able to help us recover them.",
-          "TIL from mid-2011 to mid-2012 the print edition of The Onion was actually distributed here in Toronto (https://globalnews.ca/news/125698/the-onion-newspaper-coming... ; https://nmc-mic.ca/2012/07/24/star-media-group-suspends-publ...). Seems I missed out :(",
-          "On the night the Onion finally went out of print my friends and I went and took a few of the newspaper boxes they distributed them out of in Madison. One stayed at our friend's house, the other one we used as a distribution box for our own anonymous satirical newspaper we wrote for our high school."
-        ]
-      }
-    },
-    {
-      "id": "50047091",
-      "title": "Cartographers of North Korea (2019)",
-      "url": "https://cartographers-nk.wonyoung.so/",
-      "source": "Hacker News",
-      "published_at": "2026-10-11T19:46:40+00:00",
-      "summary": "Cartographers of North Korea (2019)",
-      "score": 198,
-      "comments": 38,
-      "discussion_url": "https://news.ycombinator.com/item?id=50047091",
-      "extra": {
-        "top_comments": [
-          "Side comment: North Korea seems to be allowing tourists to take videos fairly freely now, and some of those videos are appearing on YouTube. While the tourists' movements still seem restricted, the videos offer glimpses into life in North Korea I haven't seen before. For example:https://youtu.be/HQEYB4QWCjMhttps://youtu.be/d7m8hZ67Bz0https://youtu.be/guZQNMEz9as",
-          "I'm fascinated to read about the motivations of people who do some much great work in places like OpenStreetMap and Wikipedia where it's almost guaranteed that they will get zero recognition (and obviously no money). I wanted to quote what the number 1 contributor (with 75,583 contributions) to the North Korea map said about his motivations:\"Hello Wonyoung,I live in Germany. I also do a lot of mapping here-partly with a GPS-device. I use OSM-maps in my navigation system (OSMand) when i travel.Mapping is just a private hobby for me. Like others doing Sodoku or Mandala i draw rivers and roads from a satellite image. It just gives a good feeling to relax and contribute at the same time.Sometimes when i hear the news i wonder if the mentioned places are already mapped and take a look into OSM. Somehow i got stuck in North Korea. There was a blank map. So i could draw big roads and rivers. Here in Germany you only can do details, like junction restrictions or housenumbers.North Korea is really an interesting country. The political situation beween North- and South-Korea ist also very fascinating and has a lot of similarities to former East- and West-Germany. I live not far away from the former border (Iron Curtain) - on the east side. I have old maps here from cold war time with missing, wrong and falsified data. We dont need wrong maps if we want to live together in peace. Finally militaries always do have their own much more detailed maps.In North Korea i only use the OSM-aerial images (Bing, DigitalGlobe, etc). Of course i also watch documentaries about North Korea more interested now and i took a look into the Armistice Agreement-maps from 1953. OSM is a great Project. Like Wikipedia it creates free data from all countries, free for everyone!Im sure one day the maps will also find their way into North Korea. But for now it will help everyone else who is interested in this area anyhow. One example: I found reports from ornithologists researching migrating bird-routes and North Korea is one stop for the birds.As far as i can see North Korea is mostly mapped by people like me just travelling on the map with their fingers and contribute on interesting things. Nobody is really working systematic or regularly like professional mappers would do. I hope this text helps you. It would be great to get some feedback about the results of your studies. Best regards\"",
-          "Opened the link just because I've always been mystified by how detailed that region is, and it ended up being a fascinating read. One more reason why OSM is one of my personal 7 Wonders of the Internet."
+          "1. The funnel is even steeper than the linked post suggests.There's a huge range of users between \"casual and infrequent users\" and \"professional use of frontier-grade LLMs in math & code\".I think I'm in between there somewhere. I'm far from a software dev, my experience is playing with delphi and C when I was a kid. But I've been using LLMs to vibe code personal and work projects that I could never have done even a few years ago. They're genuinely helping work, because there's always some place where a simple little script or other utility can help. (Hell, isn't this partly why so many people start up startups?)I imagine that many departments in many companies that are not \"tech\" companies face similar challenges - there's no budget to hire a software dev or even engage a third party to do things, but now because everyone's aboard the AI train, they have access to something (chatgpt, gemini, copilot, claude), and that's helped users implement their own solutions. Somewhere in the world, someone's excel-file-based accounting system has gotten an upgrade with help from an LLM.2. The funnel is also driven by the the fact that users need products, and an LLM itself isn't a product, it's a capability.Software devs are at the front lines because they can build their own products that can integrate LLM's capabilities. You already know how to automate testing, orchestrate, work together in a team. You're writing / configuring harnesses and flows that work for you. You're sharing / hoarding skills files.The rest of us, like me, don't have that skill. Copilot the product is a mostly useless chatbot that takes up space in MS word. I guess its excel cleanup capability is semi useful if your company runs on excel and you've never used a filter before.There is no work I can put an LLM to other than a \"writing aid\" or \"better search\", because the only AI product we have is the chatbot and maybe someone's equivalent of an agent studio, none of which we are trained to use.Until the products come, there'll be a funnel."
         ]
       }
     },
@@ -116,14 +62,32 @@
       "source": "Hacker News",
       "published_at": "2026-10-11T22:33:30+00:00",
       "summary": "Google is illegaly cutting forest to build data centers",
-      "score": 189,
-      "comments": 38,
+      "score": 342,
+      "comments": 87,
       "discussion_url": "https://news.ycombinator.com/item?id=50048638",
       "extra": {
         "top_comments": [
+          "\"Forest\" is a polite way to refer to what appears to be a monoculture plantation. To restore the land properly it would probably be necessary to remove 80%+ of the trees to make space for seeding or planting a diverse range of other species. Possibly 100% if the monoculture species already planted is not endemic.Google street view imagery of the site showing logging completed by June 2026 and logs waiting collection: [1]Sentinel-2 L2A imagery from 2026-10-11 showing the logged area: [2][1] https://www.google.com.au/maps/place/91500+Tahvola,+Finland/...[2] https://browser.dataspace.copernicus.eu/?zoom=15&lat=64.8369...",
           "> Google said in a statement “we understand the concerns” and that it had “fallen short of our own high standards”.But it wasn't their own high standards, it was a legal obligation that they neglected?I hope in vain that the powers that be are able to punish them in a way they will actually feel...",
-          "Ugly. They had the resources to make it beautiful and part of the environment instead they bulldozed itFounders need to speak on this. If they've got time to get in the weeds on gemini, they've got time for this",
-          "> Google said in a statement “we understand the concerns” and that it had “fallen short of our own high standards”.Apple said the same rhetorical non-apology apologetically, recently... about something??"
+          "I think local governments should be regulating and zoning new data center construction in a way that forces them to rehabilitate old industrial brownfields. There’s plenty of land already spoiled by human activity that can be reused. No reason to be cleaning nature for a warehouse full of computers that could be built anywhere."
+        ]
+      }
+    },
+    {
+      "id": "50047055",
+      "title": "So, You’d Like To Sell Your Print Issues Of The Onion?",
+      "url": "https://theonion.com/archivehunt/",
+      "source": "Hacker News",
+      "published_at": "2026-10-11T19:43:32+00:00",
+      "summary": "So, You’d Like To Sell Your Print Issues Of The Onion?",
+      "score": 299,
+      "comments": 46,
+      "discussion_url": "https://news.ycombinator.com/item?id=50047055",
+      "extra": {
+        "top_comments": [
+          ">Certain issues of The Onion newspaper are mysteriously missing from our 270-year archive, and you might be able to help us recover them.",
+          "TIL from mid-2011 to mid-2012 the print edition of The Onion was actually distributed here in Toronto (https://globalnews.ca/news/125698/the-onion-newspaper-coming... ; https://nmc-mic.ca/2012/07/24/star-media-group-suspends-publ...). Seems I missed out :(",
+          "I wish the title could be changed to something that reflects the actual need: The Onion has gaps in their archive, and are asking for fans to help fill those gaps."
         ]
       }
     },
@@ -134,14 +98,50 @@
       "source": "Hacker News",
       "published_at": "2026-10-11T22:33:39+00:00",
       "summary": "Fingerprints are the new cookies",
-      "score": 119,
-      "comments": 50,
+      "score": 254,
+      "comments": 126,
       "discussion_url": "https://news.ycombinator.com/item?id=50048642",
       "extra": {
         "top_comments": [
-          "I've seen anti-fingerprinting plugins and browser configs, etc, but they all seem to make you more interesting for not being fingerprintable, or for turning off a lot of features used in fingerprinting.Is there any reason a browser or plugin couldn't just spoof the data used in fingerprinting to random values? So it emits different values for each page or resource you load?",
-          "I have heard from some power users that Brave is one of the best browsers with regard to ad-blocking and privacy. But I think I have read elsewhere that it receives money from ad companies to display only certain ads, which does not make me trust it. Does anyone have facts or know where to find them?",
-          "Theres only one solution, ban third party advertising. Everything else is a compromise that doesnt work anyway."
+          "Every time this resurfaces I like to remind people that this is mostly impractical and not how things actually work at the commercial level.Just because someone can theoretically demonstrate your fingerprint today doesn't mean you have the same fingerprint in a few days. It's that kind of stability that you actually need for consistent matching for advertising or tracking purposes.90% of commercial fingerprinting services still rely mostly on the IP address. Once you remove the IP address, you're left with a set of configurations that have a very short half life - volume settings, installed fonts, software versions, etc. You can expect a good portion of your audience to degrade within a couple of days. (Whereas a cookie has a life of 2 years - practically though they only survive a few months).What you actually pay for from third party vendors is a connection made around a more stable data point - a phone number, an email address, a user ID, etc. With one of these data points you can actually track people across multiple devices for as long as you want.",
+          "The problem is Javascript and its implementation. Plain HTML does not offer nearly as many fingerprinting opportunities. It's basically IP + user agent, both of which can be spoofed. Javascript grants websites far too much power over the user's browser, including disabling selection/paste, identifying hardware, time zone, language, etc. None of this should be allowed by default, and things like hardware acceleration and whatnot should be explicitly allowed on a case-by-case basis.",
+          "I've seen anti-fingerprinting plugins and browser configs, etc, but they all seem to make you more interesting for not being fingerprintable, or for turning off a lot of features used in fingerprinting.Is there any reason a browser or plugin couldn't just spoof the data used in fingerprinting to random values? So it emits different values for each page or resource you load?"
+        ]
+      }
+    },
+    {
+      "id": "50047091",
+      "title": "Cartographers of North Korea (2019)",
+      "url": "https://cartographers-nk.wonyoung.so/",
+      "source": "Hacker News",
+      "published_at": "2026-10-11T19:46:40+00:00",
+      "summary": "Cartographers of North Korea (2019)",
+      "score": 228,
+      "comments": 39,
+      "discussion_url": "https://news.ycombinator.com/item?id=50047091",
+      "extra": {
+        "top_comments": [
+          "Side comment: North Korea seems to be allowing tourists to take videos fairly freely now, and some of those videos are appearing on YouTube. While the tourists' movements still seem restricted, the videos offer glimpses into life in North Korea I haven't seen before. For example:https://youtu.be/HQEYB4QWCjMhttps://youtu.be/d7m8hZ67Bz0https://youtu.be/guZQNMEz9as",
+          "Opened the link just because I've always been mystified by how detailed that region is, and it ended up being a fascinating read. One more reason why OSM is one of my personal 7 Wonders of the Internet.",
+          "Super interesting read; I especially found this letter from \"P791\" fascinating:> Hi, Wonyoung, I map North Korea to help North Koreans.I select areas that look like they might be good points to escape. In particular, the detailed mapping around Phungso-ri (풍서리) is almost entirely my work.I mostly map along the Tumen River, both on the North Korean and Chinese sides. It is important to map the fences, roads, and towns on the Chinese side."
+        ]
+      }
+    },
+    {
+      "id": "50051532",
+      "title": "Yandex bot traffic down 99% after data center attack",
+      "url": "https://radar.cloudflare.com/bots/as13238?dateRange=7d#bot-traffic",
+      "source": "Hacker News",
+      "published_at": "2026-10-12T04:54:12+00:00",
+      "summary": "Yandex bot traffic down 99% after data center attack",
+      "score": 136,
+      "comments": 36,
+      "discussion_url": "https://news.ycombinator.com/item?id=50051532",
+      "extra": {
+        "top_comments": [
+          "This graph shows that Yandex Web crawler farm was hit. The other option, it was shut down to accommodate more critical services that got hit. (I worked for Yandex 20 years ago, one crawler guy was in the same room.) Not sure if troll farms got affected in any way, that is a different business entirely, no overlap.The interesting aspect is this: Yandex was taken from its owners semi-consensually. Similarly, the original owner of the troll farms was blown up in a business jet. He staged a mutiny cause his dirty bloody business was about to be taken from him non-consensually. Some other large non-consensual takeovers unfold for 5 years, soon 6.What an appetite!",
+          "I don't use X myself, but my friends told me there's a noticable reduction in hateful tweets, at least in the Polish sphere. Much less comments blaming Ukrainians for everything wrong with the world.",
+          "For those claiming a drop in hate speech on social media, I’ve yet to see examples of this. Plenty of claims, no examples."
         ]
       }
     }
