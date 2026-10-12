@@ -1,13 +1,13 @@
 ---
 first_seen: 2026-06-30
-last_seen: 2026-10-11
+last_seen: 2026-10-12
 language: JavaScript
 tags: [github, trending]
 ---
 
 # affaan-m/ECC
 
-> 面向 Claude Code、Codex、Opencode、Cursor 等工具的代理性能优化系统，涵盖技能、记忆、安全与研究优先开发，适合重度使用编码代理的开发者。
+> 面向 Claude Code、Codex、Cursor 等编码代理的性能优化框架，整合技能、记忆与安全能力，适合重度使用 AI 编程助手的团队提升效率。
 
 ## 基本信息
 
@@ -98,3 +98,4 @@ tags: [github, trending]
 | 2026-10-06 | #9 | 273,778 | +684⭐ | 爆火 |
 | 2026-10-10 | #9 | 276,083 | +2,305⭐ | 爆火 |
 | 2026-10-11 | #7 | 276,639 | +556⭐ | 爆火 |
+| 2026-10-12 | #5 | 277,303 | +664⭐ | 爆火 |

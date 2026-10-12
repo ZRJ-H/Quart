@@ -1,13 +1,13 @@
 ---
 first_seen: 2026-08-07
-last_seen: 2026-08-17
+last_seen: 2026-10-12
 language: Rust
 tags: [github, trending]
 ---
 
 # ultraworkers/claw-code
 
-> An agent-managed museum exhibit, built in Rust with Gajae-Code / LazyCodex — developed and maintained with no human intervention.
+> 用 Rust 编写的由代理管理的展览型项目，强调无人工干预的自治开发，适合观察 AI 代理长期自主维护代码的实验场景。
 
 ## 基本信息
 
@@ -21,3 +21,4 @@ tags: [github, trending]
 |---|---:|---:|---:|---|
 | 2026-08-07 | #13 | 194,999 | +194,999⭐ | 新晋 |
 | 2026-08-17 | #14 | 195,067 | +68⭐ | 常驻 |
+| 2026-10-12 | #11 | 194,969 | -98⭐ | 回落 |

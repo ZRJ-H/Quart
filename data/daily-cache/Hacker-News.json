@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-10-11T14:07:23.138699+08:00",
+  "cached_at": "2026-10-12T11:00:41.238250+08:00",
   "articles": [
     {
-      "id": "50029123",
-      "title": "Telegram Desktop vulnerability allowed any user's file to be stolen",
-      "url": "https://beaksec.github.io/posts/telegram-desktop-one-click-account-takeover/",
+      "id": "50045984",
+      "title": "Total Annihilation, rebuilt for modern computers",
+      "url": "https://nanolathe.gg",
       "source": "Hacker News",
-      "published_at": "2026-10-10T03:02:47+00:00",
-      "summary": "Telegram Desktop vulnerability allowed any user's file to be stolen",
-      "score": 441,
-      "comments": 278,
-      "discussion_url": "https://news.ycombinator.com/item?id=50029123",
+      "published_at": "2026-10-11T18:04:47+00:00",
+      "summary": "Total Annihilation, rebuilt for modern computers",
+      "score": 387,
+      "comments": 164,
+      "discussion_url": "https://news.ycombinator.com/item?id=50045984",
       "extra": {
         "top_comments": [
-          "I once read The Bugs We Have to Kill: https://www.usenix.org/publications/login/aug15/bratus and one particular thing that has stuck with me forever:“Any sufficiently complex input format is indistinguishable from bytecode; the code receiving it is indistinguishable from a vir- tual machine.”",
-          "Related: could we please stop, by default, allowing software to: a) access all your files, and b) roam the internet at will. That was somewhat OK in the 80s, but it hasn't been since.",
-          "One of the challenges with Telegram is - they regularly re-enable settings inside the app/account that you had specifically disabled. So at any point you don't know what is happening and what is not. Meaning, even if you didn't see a thing, a malicious file might be sitting all warm and fuzzy on your computer - among possible other things. I used to like the snappiness of this app (and it is still snappier than almost all other IM apps combined, by a margin), but after a while I realised it was a ticking time-bomb (to keep it installed on the desktop) and possibly a scammer safe haven, nothing else."
+          "I recently discovered Beyond All Reason, a spiritual successor to Total Annihilation. There have been several of these, but I think BAR is by far the best. It's open source, but looks nice and is polished. It has amazing quality-of-life features I haven't seen in any other RTS. And it supports insanely huge battles with hundreds of players and tens of thousands of units.150-player match: https://www.youtube.com/watch?v=gQJujiZ-oz0https://www.beyondallreason.info/",
+          "Fair enough, but is there an advantage over the spring engine? Another clean room implementation that understands total annihilation data-structures, a project started 20 years ago.For what its worth, the Total Annihilation derived project with the most attention currently is is BAR https://www.beyondallreason.info/ They decided to make it legally distinct, but it was the balanced annihilation project which was total annihilation rebalanced for better pvp. I don't play too many RTS so this is not authoritative, but BAR plays better than any other rts I have tried, They really care about the fine details of user experience there.In fact, I consider Chris Taylor(Total Annihilation, Supreme Commander) to be one of if not the greatest RTS designers. His games don't have the fluff people appear to love(looking at you starcraft) but he gets the control design better than anyone else I have seen.",
+          "I have been working on this for supreme commander!With modern tooling, libraries and such, many of supcoms old technical issues can be addressed. (plus it now works on linux and mac!)I think I'm close to a like for like version.And of course the performance is leaps and bounds beyond what supcom could do, you can see a 64,000 unit air fight, and I'm pretty sure i can get that going at 60fps plus!and end game vs the ai, is still 4x realtime, well beyond what supcom could do.and of course higher player v player battlesYou can see that all here and in the replies https://forum.faforever.com/topic/10451/supcom-moho-engine-r..."
         ]
       }
     },
     {
-      "id": "50029487",
-      "title": "The Lightbulb Computer",
-      "url": "https://lightbulbcomputer.com/",
+      "id": "50045946",
+      "title": "NYC's \"Click to Cancel\" rule is now in effect",
+      "url": "https://www.nyc.gov/main/click-to-cancel",
       "source": "Hacker News",
-      "published_at": "2026-10-10T04:12:26+00:00",
-      "summary": "The Lightbulb Computer",
-      "score": 333,
-      "comments": 51,
-      "discussion_url": "https://news.ycombinator.com/item?id=50029487",
+      "published_at": "2026-10-11T18:01:16+00:00",
+      "summary": "NYC's \"Click to Cancel\" rule is now in effect",
+      "score": 376,
+      "comments": 185,
+      "discussion_url": "https://news.ycombinator.com/item?id=50045946",
       "extra": {
         "top_comments": [
-          "I made this, fun to see my project on the front page!The main question I tend to get from hacker-types is \"what are the tech specs?\". The demos run on a Mac with custom software I built for projection mapping/rendering/etc. (the hand tracking uses Apple's built-in framework, which is very good), a small consumer 4k laser projector, and a basic webcam for vision.But really, this is primarily a research/design prototype - I think it's much more important to figure out what the user experience should ideally feel like, if the interactions are even plausible & desirable in the first place; and then work backwards to the technology.",
-          "Oh my god!!! I was working towards this exact thing for the last 7+ years. Albeit from a home IoT smart speaker angle. So glad to see this!!",
-          "Nice. This reminds me how I felt watching the first pre-iPhone multitouch demos.One small quality-of-life improvement that could be added: have the software timestamp when you say \"here\" and then (using a short low-FPS video buffer?) analyze the corresponding frame of video. This would eliminate the pause when you're pointing at something, waiting for the computer to respond.Alternately a low-latency speech analyzer could look for the word \"here\" and quickly snap a screenshot. Perhaps project a temporary dot on the surface, so the user knows they can put their hand down now?Quite the impressive demo! There's huge potential here."
+          "This will have no impact on Adobe's shenanigans. They offer click-to-cancel, but then charge a cancellation fee equal to what you would have paid for the rest of the one-year term. Their clever justification is that you received a significant discount for committing to a year, so you still owe them for the remaining months if you cancel early. I didn't even realize I had signed up for a one-year commitment. I'm not sure where they buried that clause.I expect more businesses will transition to this strategy to counter NYC's new rule. They won't necessarily lower the price, but you will have to sign up for a one-year term, then they will hit you with a massive cancellation fee if you \"click to cancel\".",
+          "It seems like a good rule, and I am eager to see what NYC’s enforcement is going to look like. I have historically been disappointed (as a life-long resident) by the discontinuity between the city’s eagerness to legislate and its recalcitrance around enforcement, particularly when public interest in any given topic fades.(Compare the city’s historic problems around preventing illegal de-stabilization of rental units, inability to prevent the NYPD from parking on sidewalks, and so forth.)",
+          "Look out for the \"Digital Fairness Act\", which will be tabled by the European Commission in November. It is expected to include the same \"Click to Cancel\" principle continent-wide.Source: I'm an EU digital policy analyst in Brussels."
         ]
       }
     },
     {
-      "id": "50031614",
-      "title": "Talorys – A self-hosted personal AI agent on Cloudflare's free tier",
-      "url": "https://github.com/rociiu/talorys",
+      "id": "50048312",
+      "title": "Passkeys are a trap",
+      "url": "https://nonfunctional.substack.com/p/passkeys-are-a-trap-do-not-use-them",
       "source": "Hacker News",
-      "published_at": "2026-10-10T10:52:09+00:00",
-      "summary": "Talorys – A self-hosted personal AI agent on Cloudflare's free tier",
-      "score": 274,
-      "comments": 128,
-      "discussion_url": "https://news.ycombinator.com/item?id=50031614",
+      "published_at": "2026-10-11T21:59:48+00:00",
+      "summary": "Passkeys are a trap",
+      "score": 326,
+      "comments": 183,
+      "discussion_url": "https://news.ycombinator.com/item?id=50048312",
       "extra": {
         "top_comments": [
-          "This might sound kinda crazy, but I define “self-hosted” as something that I host myself.",
-          "For all the people complaining this isn’t self hosted, it’s open source - it’s a relatively minor tweak to replace the AI calls to point to a local model server. Everything else runs locally via wrangler. It’s less than 20 minutes of work by hand, less than a minute to ask AI to do this.It’s a weird complaint for people who supposedly like hacker culture.",
-          "Careful with Cloudflare's \"free\" AI tier if you use paid workers. I was never able to get an answer on why I was billed for their confusing neuron usage for stuff that should have been covered under their usage limits. Their customer support just ignored my ticket. Apparently it's a known issue that they don't give a shit based on discussions in their support Discord."
+          "Note that attestation can only be required during credential registration; at login time it's not possible to retroactively require attestation if it wasn't obtained during registration. And browsers will throw up a permission prompt if a website requests attestation. Are Netflix and Twitter currently requesting attestation when people register passkeys, and rejecting the registration if the user declines the permission prompt? I very much doubt it, since Apple's passkey implementation doesn't support attestation.Therefore, the author's scenario that sites will wait until most of their users are using attested passkeys and then \"flip the switch and start rejecting non-attested passkeys\" isn't very plausible.Attestation is certainly a stain on the WebAuthn spec, and it would have been better if Chrome and Firefox didn't support attestation (unless perhaps the browser is enrolled in enterprise management), but this blog post is presenting a hypothetical and unlikely scenario. That's not a good enough reason to recommend TOTP instead, given that TOTP is vulnerable to phishing and passkeys aren't.If consumer-facing sites start requesting attestation when registering passkeys, they deserve to be vigorously called out, and maybe then the recommendation to use passkeys should be revisited. But until that happens, don't tell people not to use passkeys.",
+          "I've yet to voluntarily enable passkeys, for the main reason that I want portability, and not to be tied to any single device that can be lost. I want to be able to backup and lock my credentials in a safe. I also want to control the strength of my credentials for different services, and I don't consider my thumbprint used to unlock my phone to be as strong as a long password in a password manager.The first time I was forced to use a passkey implemented within the vendor's app (3rd party password managers were not an option). I quickly closed that account.The second time was an app that popped up a passkey opt-in in the middle of a bunch of transaction screens. I quickly realized the error, but there was no easy undo. The opt in was one green button in the middle of the screen. Turning it back off required digging through settings to find the security option to disable, and then confirm my choice multiple times. That process also signed out all my other devices.The fact that companies are resorting to dark patterns and forced requirements, where my money is held hostage, should be pretty good evidence of how poorly the passkey rollout is going.",
+          "The very last thing, past the conclusion, the very last footnote is:> Addendum: I feel I have made a compelling case for passkeys in this article. And I haven’t even pointed out one of their best security features: they are (in most use cases) domain-bound, meaning they are resistant to what are called Man-In-The-Middle attacks.\"I made a compelling case... but didn't point out the most important security feature that motivated passkeys in the first place\"Honestly I don't think this post did make a compelling case. There's a lot of assuming bad faith on the part of the FIDO alliance, while completely missing that preventing MITM attacks was a key design feature. The FIDO alliance members deal with stolen accounts all the time, and passkeys largely solve that. Stealing accounts is almost always done with phishing or social engineering, and passkeys solve the former and reduce the surface for the latter."
         ]
       }
     },
     {
-      "id": "50036864",
-      "title": "A city-building game in which the city would prefer you didn't",
-      "url": "https://housing.over.pizza/",
+      "id": "50047422",
+      "title": "The gap in shared understanding of LLM capability is widening",
+      "url": "https://twitter.com/karpathy/status/2109361546505966046",
       "source": "Hacker News",
-      "published_at": "2026-10-10T20:31:50+00:00",
-      "summary": "A city-building game in which the city would prefer you didn't",
-      "score": 265,
-      "comments": 90,
-      "discussion_url": "https://news.ycombinator.com/item?id=50036864",
+      "published_at": "2026-10-11T20:20:52+00:00",
+      "summary": "The gap in shared understanding of LLM capability is widening",
+      "score": 279,
+      "comments": 456,
+      "discussion_url": "https://news.ycombinator.com/item?id=50047422",
       "extra": {
         "top_comments": [
-          "Reminds me of that Factorio joke mod which adds bureaucracy-processing as a recipe tree. Assemblers start to shut down if you don't process paperwork fast enough. IIRC, it had biters following the player around in queues to give them complaint forms.",
-          "This game is rigged by pigs at the trough.",
-          "The best I got:Discretionary Review (Developer): I built 4,147 homes in San Francisco, 2015 to 2031. Grade A, \"Builder of Some Things\". Survived all eight investor reviews. 16 hearings, 3 appeals, 4 lawsuits. The city needed 82,069."
+          "https://xxcancel.com/karpathy/status/2109361546505966046",
+          "Don't think the 0.2% really are in agreement that \"large, complex projects that used to take them weeks/months can now be completed by agents with a prompt\".The divide seems to be between people who think you may need to understand the codebase for maintenance, potential future token costs, optimisation, code erosion & being wary of the assumptions/mistakes that they have seen LLMs make, and people who don't review code and are confident that the AI has made no mistakes and will be available for next-to-nothing forever.It's certainly allowing the latter to move fast... but will their clients be happy if/when they break things. We'll find out soon, I'm sure.",
+          "What exactly do we want the general public to \"do\" with these models? If the have no use for agentic LLMs, they obviously aren't going to be interested in the capability of those agents.I see a lot of benefit to spreading information around the tech, but it's still in its infancy. Most people weren't on the internet when that was getting up to speed.Meemaw and pops have their systems that they work within, and they just got familiar with the damn smartphone. Though it might help them, they probably do not want AI to organize their old photos or \"clean up\" their computer. Saving 5 minutes just isn't important to them.As for professionals, yeah - companies are going to adopt these tools over the coming years. It's the \"norm\" in my circle, but lots of jobs just... don't use technology like that - there has ALWAYS been a major gap between people who are deep in tech and people who are not."
         ]
       }
     },
     {
-      "id": "50038634",
-      "title": "WallHop – 12ft.io is gone, so I built a replacement",
-      "url": "https://wallhop.io/",
+      "id": "50047055",
+      "title": "So, You’d Like To Sell Your Print Issues Of The Onion?",
+      "url": "https://theonion.com/archivehunt/",
       "source": "Hacker News",
-      "published_at": "2026-10-11T00:46:48+00:00",
-      "summary": "WallHop – 12ft.io is gone, so I built a replacement",
-      "score": 214,
-      "comments": 91,
-      "discussion_url": "https://news.ycombinator.com/item?id=50038634",
+      "published_at": "2026-10-11T19:43:32+00:00",
+      "summary": "So, You’d Like To Sell Your Print Issues Of The Onion?",
+      "score": 261,
+      "comments": 36,
+      "discussion_url": "https://news.ycombinator.com/item?id=50047055",
       "extra": {
         "top_comments": [
-          "Why not open source? You modified GPL-3 ladder; I don’t know whether it’s legally required, but I feel it’s morally expected and important in practice (since yours may get taken down).",
-          "This type of initiative should never be open source.",
-          "Long back I was wondering if a tip jar type service that'll get me access to what I actually want to see would be a better solution in place of subscribing to every website that produces an interesting article once in a while. There were a couple of such services but they never got popular.Perhaps this model alone is not sustainable but it could be paired with ads (as in ads or fee off a tip jar pay). Even then, it surely won't lead to infinite growth, which is the only goal nowadays."
+          ">Certain issues of The Onion newspaper are mysteriously missing from our 270-year archive, and you might be able to help us recover them.",
+          "TIL from mid-2011 to mid-2012 the print edition of The Onion was actually distributed here in Toronto (https://globalnews.ca/news/125698/the-onion-newspaper-coming... ; https://nmc-mic.ca/2012/07/24/star-media-group-suspends-publ...). Seems I missed out :(",
+          "On the night the Onion finally went out of print my friends and I went and took a few of the newspaper boxes they distributed them out of in Madison. One stayed at our friend's house, the other one we used as a distribution box for our own anonymous satirical newspaper we wrote for our high school."
         ]
       }
     },
     {
-      "id": "50037949",
-      "title": "Build your own decision model",
-      "url": "https://nishtahir.com/build-your-own-decision-model/",
+      "id": "50047091",
+      "title": "Cartographers of North Korea (2019)",
+      "url": "https://cartographers-nk.wonyoung.so/",
       "source": "Hacker News",
-      "published_at": "2026-10-10T22:50:10+00:00",
-      "summary": "Build your own decision model",
-      "score": 203,
-      "comments": 43,
-      "discussion_url": "https://news.ycombinator.com/item?id=50037949",
+      "published_at": "2026-10-11T19:46:40+00:00",
+      "summary": "Cartographers of North Korea (2019)",
+      "score": 198,
+      "comments": 38,
+      "discussion_url": "https://news.ycombinator.com/item?id=50047091",
       "extra": {
         "top_comments": [
-          "This is a great way to start but the perf of LLM models like Qwen are not ideal for local execution. I have adapted Laya (pure decision model) to run in a browser and I am able to get responses under 200ms. Give it a try: https://wexare-ai.github.io/browser-laya/",
-          "I saw Jev and without understanding it said to myself, “I can build that!” And brainstormed some weird Alex trebek jeopardy generator I called trebek, a bun ran typescript app that you give it an input, it decides if it’s a category, question or answer then generates what’s missing. Trained a SQLite-vec database on the English language for a few days with a small qwen embedding model to add vec embeds to the db then ripped the cord on the embeddings before I started feeding my llm the proper specs for Jev and now i have a cool jeopardy generator that now doubles as a Jev clone classifier with a custom v1 endpoint for system 0 or whatever it is. Level understanding here, fun experiment though ^>^ and produces useful outputs",
-          "What if Jev is something more than a classifier? There's so much potential here waiting to be seen. I built my own Jev, then realized it could literally run on a webpage. So then I turned it into an npm library https://genclass.dev"
+          "Side comment: North Korea seems to be allowing tourists to take videos fairly freely now, and some of those videos are appearing on YouTube. While the tourists' movements still seem restricted, the videos offer glimpses into life in North Korea I haven't seen before. For example:https://youtu.be/HQEYB4QWCjMhttps://youtu.be/d7m8hZ67Bz0https://youtu.be/guZQNMEz9as",
+          "I'm fascinated to read about the motivations of people who do some much great work in places like OpenStreetMap and Wikipedia where it's almost guaranteed that they will get zero recognition (and obviously no money). I wanted to quote what the number 1 contributor (with 75,583 contributions) to the North Korea map said about his motivations:\"Hello Wonyoung,I live in Germany. I also do a lot of mapping here-partly with a GPS-device. I use OSM-maps in my navigation system (OSMand) when i travel.Mapping is just a private hobby for me. Like others doing Sodoku or Mandala i draw rivers and roads from a satellite image. It just gives a good feeling to relax and contribute at the same time.Sometimes when i hear the news i wonder if the mentioned places are already mapped and take a look into OSM. Somehow i got stuck in North Korea. There was a blank map. So i could draw big roads and rivers. Here in Germany you only can do details, like junction restrictions or housenumbers.North Korea is really an interesting country. The political situation beween North- and South-Korea ist also very fascinating and has a lot of similarities to former East- and West-Germany. I live not far away from the former border (Iron Curtain) - on the east side. I have old maps here from cold war time with missing, wrong and falsified data. We dont need wrong maps if we want to live together in peace. Finally militaries always do have their own much more detailed maps.In North Korea i only use the OSM-aerial images (Bing, DigitalGlobe, etc). Of course i also watch documentaries about North Korea more interested now and i took a look into the Armistice Agreement-maps from 1953. OSM is a great Project. Like Wikipedia it creates free data from all countries, free for everyone!Im sure one day the maps will also find their way into North Korea. But for now it will help everyone else who is interested in this area anyhow. One example: I found reports from ornithologists researching migrating bird-routes and North Korea is one stop for the birds.As far as i can see North Korea is mostly mapped by people like me just travelling on the map with their fingers and contribute on interesting things. Nobody is really working systematic or regularly like professional mappers would do. I hope this text helps you. It would be great to get some feedback about the results of your studies. Best regards\"",
+          "Opened the link just because I've always been mystified by how detailed that region is, and it ended up being a fascinating read. One more reason why OSM is one of my personal 7 Wonders of the Internet."
         ]
       }
     },
     {
-      "id": "50035530",
-      "title": "Why DuckDB 2.0 is faster",
-      "url": "https://motherduck.com/blog/why-duckdb-20-is-faster/",
+      "id": "50048638",
+      "title": "Google is illegaly cutting forest to build data centers",
+      "url": "https://www.theguardian.com/technology/2026/oct/06/google-datacentres-finland-temporary-halt-environmental-impact-assessment",
       "source": "Hacker News",
-      "published_at": "2026-10-10T18:08:49+00:00",
-      "summary": "Why DuckDB 2.0 is faster",
-      "score": 188,
-      "comments": 59,
-      "discussion_url": "https://news.ycombinator.com/item?id=50035530",
+      "published_at": "2026-10-11T22:33:30+00:00",
+      "summary": "Google is illegaly cutting forest to build data centers",
+      "score": 189,
+      "comments": 38,
+      "discussion_url": "https://news.ycombinator.com/item?id=50048638",
       "extra": {
         "top_comments": [
-          "I also love the visualizations but I'm getting heavy LLM vibes from the prose:> One setting drives this,...> The cost is now about the rows you actually touch, not rounds times table size.Etc.I get the brain scramblies [1] from trying to parse this writing style at work so I hate to see it elsewhere. Apologies if I'm wrong. But if I'm not then OP don't use an LLM to write for you. It's hazardous to your reader's health [2].[1]: https://www.youtube.com/watch?v=ipUJq-odt5Q[2]: https://discourse.haskell.org/t/how-to-keep-enjoying-program...",
-          "Great visualization. Side note their new c++ extension api is also gonna be faster from the perspective of development / distribution of those extensions",
-          "Nice article!While it's true that 2.0 makes recursive CTEs much more performant, don't forget that there's a badass DuckDB extension for graph data already. Here's a 2025 article about how elegantly that can handle what is otherwise quite a challenging class of query for your typical RDBMS: https://duckdb.org/2025/10/22/duckdb-graph-queries-duckpgq"
+          "> Google said in a statement “we understand the concerns” and that it had “fallen short of our own high standards”.But it wasn't their own high standards, it was a legal obligation that they neglected?I hope in vain that the powers that be are able to punish them in a way they will actually feel...",
+          "Ugly. They had the resources to make it beautiful and part of the environment instead they bulldozed itFounders need to speak on this. If they've got time to get in the weeds on gemini, they've got time for this",
+          "> Google said in a statement “we understand the concerns” and that it had “fallen short of our own high standards”.Apple said the same rhetorical non-apology apologetically, recently... about something??"
         ]
       }
     },
     {
-      "id": "50034081",
-      "title": "Knuth reward check",
-      "url": "https://www.thomas-huehn.com/knuth-reward-check/",
+      "id": "50048642",
+      "title": "Fingerprints are the new cookies",
+      "url": "https://royfish.dev/fingerprints-are-the-new-cookies",
       "source": "Hacker News",
-      "published_at": "2026-10-10T15:47:01+00:00",
-      "summary": "Knuth reward check",
-      "score": 182,
-      "comments": 66,
-      "discussion_url": "https://news.ycombinator.com/item?id=50034081",
+      "published_at": "2026-10-11T22:33:39+00:00",
+      "summary": "Fingerprints are the new cookies",
+      "score": 119,
+      "comments": 50,
+      "discussion_url": "https://news.ycombinator.com/item?id=50048642",
       "extra": {
         "top_comments": [
-          "The biggest shame of my life is that I had one of these and somehow managed to lose it.",
-          "The error was saying that \"infinitely many alphabets can be generated\" but there is a finite number of parameters which have a finite range of values. If Knuth had just written \"a humongous number of alphabets\" he would be correct.",
-          "It's not a reward check, but Knuth read one of my articles and emailed me about it [0], which I found pretty cool.[0]: https://tug.org/TUGboat/tb43-3/tb135chernoff-lwc.pdf"
+          "I've seen anti-fingerprinting plugins and browser configs, etc, but they all seem to make you more interesting for not being fingerprintable, or for turning off a lot of features used in fingerprinting.Is there any reason a browser or plugin couldn't just spoof the data used in fingerprinting to random values? So it emits different values for each page or resource you load?",
+          "I have heard from some power users that Brave is one of the best browsers with regard to ad-blocking and privacy. But I think I have read elsewhere that it receives money from ad companies to display only certain ads, which does not make me trust it. Does anyone have facts or know where to find them?",
+          "Theres only one solution, ban third party advertising. Everything else is a compromise that doesnt work anyway."
         ]
       }
     }
