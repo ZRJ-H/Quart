@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-10-12T14:16:43.223933+08:00",
+  "cached_at": "2026-10-13T11:00:49.585604+08:00",
   "articles": [
     {
-      "id": "50048312",
-      "title": "Passkeys are a trap",
-      "url": "https://nonfunctional.substack.com/p/passkeys-are-a-trap-do-not-use-them",
+      "id": "50060694",
+      "title": "Codex CLI installs a persistent, self-updating background daemon by default",
+      "url": "https://github.com/openai/codex/issues/48195",
       "source": "Hacker News",
-      "published_at": "2026-10-11T21:59:48+00:00",
-      "summary": "Passkeys are a trap",
-      "score": 469,
-      "comments": 254,
-      "discussion_url": "https://news.ycombinator.com/item?id=50048312",
+      "published_at": "2026-10-12T18:29:04+00:00",
+      "summary": "Codex CLI installs a persistent, self-updating background daemon by default",
+      "score": 484,
+      "comments": 245,
+      "discussion_url": "https://news.ycombinator.com/item?id=50060694",
       "extra": {
         "top_comments": [
-          "Note that attestation can only be required during credential registration; at login time it's not possible to retroactively require attestation if it wasn't obtained during registration. And browsers will throw up a permission prompt if a website requests attestation. Are Netflix and Twitter currently requesting attestation when people register passkeys, and rejecting the registration if the user declines the permission prompt? I very much doubt it, since Apple's passkey implementation doesn't support attestation.Therefore, the author's scenario that sites will wait until most of their users are using attested passkeys and then \"flip the switch and start rejecting non-attested passkeys\" isn't very plausible.Attestation is certainly a stain on the WebAuthn spec, and it would have been better if Chrome and Firefox didn't support attestation (unless perhaps the browser is enrolled in enterprise management), but this blog post is presenting a hypothetical and unlikely scenario. That's not a good enough reason to recommend TOTP instead, given that TOTP is vulnerable to phishing and passkeys aren't.If consumer-facing sites start requesting attestation when registering passkeys, they deserve to be vigorously called out, and maybe then the recommendation to use passkeys should be revisited. But until that happens, don't tell people not to use passkeys.",
-          "I've yet to voluntarily enable passkeys, for the main reason that I want portability, and not to be tied to any single device that can be lost. I want to be able to backup and lock my credentials in a safe. I also want to control the strength of my credentials for different services, and I don't consider my thumbprint used to unlock my phone to be as strong as a long password in a password manager.The first time I was forced to use a passkey implemented within the vendor's app (3rd party password managers were not an option). I quickly closed that account.The second time was an app that popped up a passkey opt-in in the middle of a bunch of transaction screens. I quickly realized the error, but there was no easy undo. The opt in was one green button in the middle of the screen. Turning it back off required digging through settings to find the security option to disable, and then confirm my choice multiple times. That process also signed out all my other devices.The fact that companies are resorting to dark patterns and forced requirements, where my money is held hostage, should be pretty good evidence of how poorly the passkey rollout is going.",
-          "The very last thing, past the conclusion, the very last footnote is:> Addendum: I feel I have made a compelling case for passkeys in this article. And I haven’t even pointed out one of their best security features: they are (in most use cases) domain-bound, meaning they are resistant to what are called Man-In-The-Middle attacks.\"I made a compelling case... but didn't point out the most important security feature that motivated passkeys in the first place\"Honestly I don't think this post did make a compelling case. There's a lot of assuming bad faith on the part of the FIDO alliance, while completely missing that preventing MITM attacks was a key design feature. The FIDO alliance members deal with stolen accounts all the time, and passkeys largely solve that. Stealing accounts is almost always done with phishing or social engineering, and passkeys solve the former and reduce the surface for the latter."
+          "There aren't any documented settings to disable this, but there is a feature flag it currently sits behind. You can flip it in your ~/.codex/config.toml[1]: [features] daemon_auto_start = false There are also some files that it writes to in ~/.codex at startup: pid files, lock files, things like that. You can delete them and replace them with symlinks to /dev/null, then mark those unwritable with `chattr +i` or similar. Presumably then the background daemon will crash on startup, if the feature flag ever goes away.--1: https://github.com/openai/codex/blob/0c329ad2c9d5a2592128a1d...",
+          "It also fills up my HD with old versions. I investigated and it took up something like 12 gigabytes in total on my system; which seems insane to me, it’s just a harness?People moan about how badly made Claude code is but Codex seems much worse on every metric",
+          "The daemon has many bugs. For example, when auto-updating, it would randomly ruin the permissions and block the goal as .git became read-only. Generally, it is extremely annoying how many bugs Codex has. I basically can't trust it to execute on any goal since it would often get blocked every few hours due to random bugs.https://github.com/openai/codex/issues/52251#issuecomment-60..."
         ]
       }
     },
     {
-      "id": "50045984",
-      "title": "Total Annihilation, rebuilt for modern computers",
-      "url": "https://nanolathe.gg",
+      "id": "50058507",
+      "title": "GLM-Legal",
+      "url": "https://z.ai/blog/glm-legal",
       "source": "Hacker News",
-      "published_at": "2026-10-11T18:04:47+00:00",
-      "summary": "Total Annihilation, rebuilt for modern computers",
-      "score": 443,
-      "comments": 187,
-      "discussion_url": "https://news.ycombinator.com/item?id=50045984",
+      "published_at": "2026-10-12T16:11:45+00:00",
+      "summary": "GLM-Legal",
+      "score": 460,
+      "comments": 259,
+      "discussion_url": "https://news.ycombinator.com/item?id=50058507",
       "extra": {
         "top_comments": [
-          "I recently discovered Beyond All Reason, a spiritual successor to Total Annihilation. There have been several of these, but I think BAR is by far the best. It's open source, but looks nice and is polished. It has amazing quality-of-life features I haven't seen in any other RTS. And it supports insanely huge battles with hundreds of players and tens of thousands of units.150-player match: https://www.youtube.com/watch?v=gQJujiZ-oz0https://www.beyondallreason.info/",
-          "Fair enough, but is there an advantage over the spring engine? Another clean room implementation that understands total annihilation data-structures, a project started 20 years ago.For what its worth, the Total Annihilation derived project with the most attention currently is is BAR https://www.beyondallreason.info/ They decided to make it legally distinct, but it was the balanced annihilation project which was total annihilation rebalanced for better pvp. I don't play too many RTS so this is not authoritative, but BAR plays better than any other rts I have tried, They really care about the fine details of user experience there.In fact, I consider Chris Taylor(Total Annihilation, Supreme Commander) to be one of if not the greatest RTS designers. His games don't have the fluff people appear to love(looking at you starcraft) but he gets the control design better than anyone else I have seen.",
-          "I have been working on this for supreme commander!With modern tooling, libraries and such, many of supcoms old technical issues can be addressed. (plus it now works on linux and mac!)I think I'm close to a like for like version.And of course the performance is leaps and bounds beyond what supcom could do, you can see a 64,000 unit air fight, and I'm pretty sure i can get that going at 60fps plus!and end game vs the ai, is still 4x realtime, well beyond what supcom could do.and of course higher player v player battlesYou can see that all here and in the replies https://forum.faforever.com/topic/10451/supcom-moho-engine-r..."
+          "I would love to see these benchmarks split up across \"generic\" tasks and novel tasks.For example, redlining an OEM agreement with my vendor. They pretty much all use the same template, and the objections are always the same. I tried using Claude first, and even my lawyer was impressed that it found things they missed. Then I used Claude to redline that type of contract and the other side said \"your lawyer was surprisingly thorough\". I had my lawyer do the final check, but saved a bunch of money doing the first three rounds with Claude instead. And my lawyer basically just said \"looks good to me\" by the time they reviewed it.Or even writing a simple will or estate document.It seems like LLMs are great for the kind of generic work you'd usually pawn off to a new associate or paralegal, but not for the important things that partners usually do.",
+          "Seems like people forgot Z.ai was snapshotting the entire workspace before every prompt. https://blog.ferstar.org/en/posts/zcode-silent-workspace-sna...How could we trust legal product from a company who was ignoring privacy protection law like that?",
+          "I’m not sure if this is the right solution, but we clearly need better tools for the legal space. Anthropic's recent policy update makes this abundantly clear:“When our products are used in ways that can affect someone's health, legal rights, finances, livelihood, or access to essential services, we require there to be a qualified ‘human in the loop’ (that is, someone who has the authority to review and, if necessary, change Claude’s recommendations), and for the individual affected to be told that AI was used.”Something as common as a family law case has the potential to affect all of the above. Now imagine being a petitioner, respondent, paralegal, or other 3rd party using Claude to review a draft document only to find out that Anthropic has sent your entire file to opposing counsel.It sounds egregious, but Anthropic is clearly stating they will use their own judgment to control what people can do with its product, and that they will treat customer data as if it's theirs to disseminate. So there's a massive opportunity for an unbiased tool willing to fill this void."
         ]
       }
     },
     {
-      "id": "50047422",
-      "title": "The gap in shared understanding of LLM capability is widening",
-      "url": "https://twitter.com/karpathy/status/2109361546505966046",
+      "id": "50058528",
+      "title": "A Modern Web App in C",
+      "url": "https://prophitt.me/writing/a-modern-web-app-in-c",
       "source": "Hacker News",
-      "published_at": "2026-10-11T20:20:52+00:00",
-      "summary": "The gap in shared understanding of LLM capability is widening",
-      "score": 384,
-      "comments": 541,
-      "discussion_url": "https://news.ycombinator.com/item?id=50047422",
+      "published_at": "2026-10-12T16:13:10+00:00",
+      "summary": "A Modern Web App in C",
+      "score": 421,
+      "comments": 172,
+      "discussion_url": "https://news.ycombinator.com/item?id=50058528",
       "extra": {
         "top_comments": [
-          "https://xxcancel.com/karpathy/status/2109361546505966046",
-          "Don't think the 0.2% really are in agreement that \"large, complex projects that used to take them weeks/months can now be completed by agents with a prompt\".The divide seems to be between people who think you may need to understand the codebase for maintenance, potential future token costs, optimisation, code erosion & being wary of the assumptions/mistakes that they have seen LLMs make, and people who don't review code and are confident that the AI has made no mistakes and will be available for next-to-nothing forever.It's certainly allowing the latter to move fast... but will their clients be happy if/when they break things. We'll find out soon, I'm sure.",
-          "1. The funnel is even steeper than the linked post suggests.There's a huge range of users between \"casual and infrequent users\" and \"professional use of frontier-grade LLMs in math & code\".I think I'm in between there somewhere. I'm far from a software dev, my experience is playing with delphi and C when I was a kid. But I've been using LLMs to vibe code personal and work projects that I could never have done even a few years ago. They're genuinely helping work, because there's always some place where a simple little script or other utility can help. (Hell, isn't this partly why so many people start up startups?)I imagine that many departments in many companies that are not \"tech\" companies face similar challenges - there's no budget to hire a software dev or even engage a third party to do things, but now because everyone's aboard the AI train, they have access to something (chatgpt, gemini, copilot, claude), and that's helped users implement their own solutions. Somewhere in the world, someone's excel-file-based accounting system has gotten an upgrade with help from an LLM.2. The funnel is also driven by the the fact that users need products, and an LLM itself isn't a product, it's a capability.Software devs are at the front lines because they can build their own products that can integrate LLM's capabilities. You already know how to automate testing, orchestrate, work together in a team. You're writing / configuring harnesses and flows that work for you. You're sharing / hoarding skills files.The rest of us, like me, don't have that skill. Copilot the product is a mostly useless chatbot that takes up space in MS word. I guess its excel cleanup capability is semi useful if your company runs on excel and you've never used a filter before.There is no work I can put an LLM to other than a \"writing aid\" or \"better search\", because the only AI product we have is the chatbot and maybe someone's equivalent of an agent studio, none of which we are trained to use.Until the products come, there'll be a funnel."
+          "My favorite trivia is that busybox has built-in cgi-bin support (and `rclone serve webdav` seems remiss to not mention as well). `https://elixir.bootlin.com/busybox/1.37.0/source/networking/...`Everything the post mentions is 100% true and well-reasoned, especially with the inclusion of pledge/chroot/etc. for dropping privileges.There's two diametrically opposed deployment mechanisms:1) stack towers of glop on top of each other until you're running a simple `echo \"hello world\"` on top of a docker container inside a vm in a proxmox server as part of a k8s cluster under a hypervisor running on remote compute...2) just run `bash -c 'echo \"hello world\"'` and front it with CGI (stateless, single binary, yada yada yada...)Take a peek at https://github.com/Domain/bash.cgi ... not that i'm suggesting that 'bash over busybox using cgi-bin' is the \"proper architecture\", it's more trying to illustrate that the amount of code that holds you back from being nearly truly \"frameworkless\" is tiny and easy to reason about.For some of the internal tooling I'm doing for work, I've been tending towards: some-cmd [--json|--markdown] ...yet-more-args... When you use the process and shell environment itself as a repl, you start trending towards `[--cgi-bin]` would \"just\" be another output type, and the ability (nay: foresight!) to ensure that your commands are independent, reproducible, and only depend on their input arguments leads you directly towards being runnable in both \"hostile\" (ie: firecracker vm / lambda-style) or very \"comfortable\" environments (ie: shell, debuggers, unit/integration tests).",
+          "For people who find interest in weird web applications, I have been working on a game project, in C++, where the client is compiled to WebAssembly with Emscripten, and the application server is also implemented in C++ (behind nginx).This is from pre-AI era also. The game is Civ-like. Custom engine from scratch (including both the 3D stuff, and all the web handling also).Take a look: https://statebuilder.com/",
+          "I started a web dev company 22 years ago after developing an online menu ordering system for a restaurant I owned. I, then we, did pretty much the same thing as talked about in the posting but we used fastcgi. I started with C because I knew C. That was my real job. It ran so well, the franchise bought the software from me--and then devolved it to all the Microsoft stuff and had issues upon issues from then on out. That's another story.I continued to make sites for other venues that needed online ordering; such as theatre companies and restaurants. All in C, fastcgi, FreeBSD, postgresql and h2o-server cause it always did what we wanted without bending to someone else's rules. It was fast and easy to make changes while changes weren't made for us or without our consent. We did very well for ourselves."
         ]
       }
     },
     {
-      "id": "50048638",
-      "title": "Google is illegaly cutting forest to build data centers",
-      "url": "https://www.theguardian.com/technology/2026/oct/06/google-datacentres-finland-temporary-halt-environmental-impact-assessment",
+      "id": "50057668",
+      "title": "Kevin Kelly's 2016 AI Predictions, 10 Years Later",
+      "url": "https://taylor.town/kk-ai-2026",
       "source": "Hacker News",
-      "published_at": "2026-10-11T22:33:30+00:00",
-      "summary": "Google is illegaly cutting forest to build data centers",
-      "score": 342,
-      "comments": 87,
-      "discussion_url": "https://news.ycombinator.com/item?id=50048638",
+      "published_at": "2026-10-12T15:16:45+00:00",
+      "summary": "Kevin Kelly's 2016 AI Predictions, 10 Years Later",
+      "score": 147,
+      "comments": 48,
+      "discussion_url": "https://news.ycombinator.com/item?id=50057668",
       "extra": {
         "top_comments": [
-          "\"Forest\" is a polite way to refer to what appears to be a monoculture plantation. To restore the land properly it would probably be necessary to remove 80%+ of the trees to make space for seeding or planting a diverse range of other species. Possibly 100% if the monoculture species already planted is not endemic.Google street view imagery of the site showing logging completed by June 2026 and logs waiting collection: [1]Sentinel-2 L2A imagery from 2026-10-11 showing the logged area: [2][1] https://www.google.com.au/maps/place/91500+Tahvola,+Finland/...[2] https://browser.dataspace.copernicus.eu/?zoom=15&lat=64.8369...",
-          "> Google said in a statement “we understand the concerns” and that it had “fallen short of our own high standards”.But it wasn't their own high standards, it was a legal obligation that they neglected?I hope in vain that the powers that be are able to punish them in a way they will actually feel...",
-          "I think local governments should be regulating and zoning new data center construction in a way that forces them to rehabilitate old industrial brownfields. There’s plenty of land already spoiled by human activity that can be reused. No reason to be cleaning nature for a warehouse full of computers that could be built anywhere."
+          "By my own, completely arbitrary split of this into 16 predictions, I would say that this hits on maybe 8 of 16 if we are being a bit generous. Which is good, but certainly not \"Inevitable\" (the title of the book).With that said, maybe he meant inevitable as N approaches infinity... So there's still time!Aside: I think the biggest interesting prediction he had was that AI would obey a user driven network effect. It seems like a very clean prediction, and yet it has failed to materialize? I wonder if this has more to do with just how scrape-able the whole internet was or with distilation or what? There is certainly an advantage to having good user data, but it seems like it is largely something that can be worked around (by hook or crook)?",
+          "Google’s main product was and continues to be ads",
+          "> Amid all this activity, a picture of our AI future is coming into view, and it is not the HAL 9000—a discrete machine animated by a charismatic (yet potentially homicidal) humanlike consciousness—or a Singularitan rapture of superintelligence.The only important prediction Kelly made was a complete rejection of the Singularity. It is also probably the prediction that sentiment has changed on the most in the direction away from Kelly, since 2016. After a decade of evidence and updating, far more people believe in that view of our AI future now than they did then.(His 2017 https://www.wired.com/2017/04/the-myth-of-a-superhuman-ai/ hasn't aged well either.)"
         ]
       }
     },
     {
-      "id": "50047055",
-      "title": "So, You’d Like To Sell Your Print Issues Of The Onion?",
-      "url": "https://theonion.com/archivehunt/",
+      "id": "50063138",
+      "title": "Who is vfmaddrnd231pd?",
+      "url": "https://purplesyringa.moe/blog/who-is-vfmaddrnd231pd/",
       "source": "Hacker News",
-      "published_at": "2026-10-11T19:43:32+00:00",
-      "summary": "So, You’d Like To Sell Your Print Issues Of The Onion?",
-      "score": 299,
-      "comments": 46,
-      "discussion_url": "https://news.ycombinator.com/item?id=50047055",
+      "published_at": "2026-10-12T21:12:43+00:00",
+      "summary": "Who is vfmaddrnd231pd?",
+      "score": 133,
+      "comments": 13,
+      "discussion_url": "https://news.ycombinator.com/item?id=50063138",
       "extra": {
         "top_comments": [
-          ">Certain issues of The Onion newspaper are mysteriously missing from our 270-year archive, and you might be able to help us recover them.",
-          "TIL from mid-2011 to mid-2012 the print edition of The Onion was actually distributed here in Toronto (https://globalnews.ca/news/125698/the-onion-newspaper-coming... ; https://nmc-mic.ca/2012/07/24/star-media-group-suspends-publ...). Seems I missed out :(",
-          "I wish the title could be changed to something that reflects the actual need: The Onion has gaps in their archive, and are asking for fans to help fill those gaps."
+          "An old version of binutils [1] explains what DDS means: How to encode VEX.vvvv: 0: VEX.vvvv must be 1111b. 1: VEX.NDS. Register-only source is encoded in VEX.vvvv where the content of source registers will be preserved. VEX.DDS. The second register operand is encoded in VEX.vvvv where the content of first source register will be overwritten by the result. VEX.NDD2. The second destination register operand is encoded in VEX.vvvv for instructions with 2 destination register operands. For assembler, there are no difference between VEX.NDS, VEX.DDS and VEX.NDD2. 2. VEX.NDD. Register destination is encoded in VEX.vvvv for instructions with 1 destination register operand. 3. VEX.LWP. Register destination is encoded in VEX.vvvv and one of the operands can access a memory location. [1] https://sourceware.org/git/?p=binutils-gdb.git;a=commitdiff;...",
+          "See https://www.felixcloutier.com/x86/vfmaddrnd231pdTheory: It was removed due to hardware issue and never worked",
+          "Similar to a comment I made a few hours ago. I find myself expressing a concern that something has been lost when people never interact with something directly.Most of the discussion today is about AI and how that causes this issue, but I have been though this experience a few times now.This instruction is essentially incomprehensible at a glance and requires a mental translation step to fillow. That doesn't affect it's use in a specific case, and compilers just use the instructions that they are programmed to use, so there isn't anything fundamentally wrong with this instruction or it's name other than the fact that it seems to be a key for a lock.If there were more people programming in asm, there would probably be enough minds interacting with the instructions to desire and have the capacity to design a better representation for the instruction set. I do believe that better designs at levels like that help solidify thinking in neighbouring levels. For instance with instruction representations, a better way to think about how the instruction is specified might reduce the cognitive load on chip designers and compiler writers.This kind of thing happens over and over when people move to new methods, there are artifacts that remain that are still useful in a modern context but only exist because they were designed at a time when the principles that underlying them were much more commonly used.Examples of this are music boxes and regular expressions, You can still find new instances for both, and they are good solutions for some tasks, but if anyone were to design something today to fill the niche of either, they would not come up with anything so enduring.It is easier to understand a music box than a regular expression finite automata, but both are wonders of design.It has occurred to me that this specific problem of ideas and methods left unconsidered may not be such a problem in an age of AI. It mY be that the capacity for AI to consider and link so many things that it will draw together elements from all of those domains to apply techniques that humans no longer focus upon onto issues that are currently relevant.I'm not sure if current AI is up to that particular task. It would be an interesting problem to set it.Design an assembler for a machine with a modern complex instruction set so that programming on assembler is a more mentally tractable task.It would be fascinating to see what such an open task would do to a model."
         ]
       }
     },
     {
-      "id": "50048642",
-      "title": "Fingerprints are the new cookies",
-      "url": "https://royfish.dev/fingerprints-are-the-new-cookies",
+      "id": "50059096",
+      "title": "Launch HN: Agent37 (YC F26) – Low-cost agent sandboxes for running agents",
+      "url": "https://news.ycombinator.com/item?id=50059096",
       "source": "Hacker News",
-      "published_at": "2026-10-11T22:33:39+00:00",
-      "summary": "Fingerprints are the new cookies",
-      "score": 254,
-      "comments": 126,
-      "discussion_url": "https://news.ycombinator.com/item?id=50048642",
+      "published_at": "2026-10-12T16:46:34+00:00",
+      "summary": "Hey HN, I’m Vishnu from Agent37 (https://agent37.com). We build sandboxes for running AI agents at under 10% of the cost of most sandbox providers. Our customers spend an average of $0.37/month per sandbox.You can view a video walkthrough of the product here: https://youtu.be/DK5ISR2tbNoWe started as one of those OpenClaw wrapper companies back in February (yup.. judge me). In time we added more and more harnesses.One of the goals I had at the time was to offer a free plan to users, so as to gain more market share. But it was too cost prohibitive to do it right away. Especially since we were bootstrapped and servers were running on my savings.Today we’re actually able to offer the free plan thanks to the optimizations we’ve made since. Over 90% of the new signups we have are just free plan users and they host their personal Hermes/Openclaw/Claude Code etc on our cloud. Our infrastructure cost for the free sandboxes averages around $0.05 to $0.10 per user per month.Here are some techniques that have worked for lowering cost:* When you look at agent harnesses, they have certain patterns in the way they consume CPU and RAM. They need CPU in bursts when they’re initializing or performing certain tasks, but beyond that, they’re often not peaking. They need more RAM for things like browser and computer-use tasks. Once the task is done, usage often comes back down. This is a key insight in lowering cost, so by efficiently managing the CPU/RAM utilization we could lower the cost.* Secondly, you have to skip the hyperscalers when renting the Hosts. I worked at Amazon before and they have 80-90% margins on VMs. So it was an obvious choice once I looked at the prices to go one layer down to vendors like Hetzner and OVH. This alone was probably one of the biggest cost levers in reducing the cost.* Thirdly, you also want to pick a technology stack that lets you efficiently cache and share resources across the host. We use gVisor for better utilization and fast boot times. It lets us use available host memory across sandboxes without reserving a full VM’s memory for each one. There are tradeoffs: our gVisor sandboxes don’t support workloads like Docker-in-Docker or Android emulators.* And finally the size and shape of the hosts you buy also makes a big difference. RAM is typically the bottleneck when it comes to cost and not the CPU. This is specifically true for agent harness workloads, so when buying servers, we optimize for packing more RAM into a given host.We also host full VM sandboxes for workloads that need them, including running Docker at a slightly higher price, but they are still pretty low cost given the rest of the techniques.Overall, my learning has been that just by focusing on a niche of sandbox usecases, and optimizing for it you can give a much better cost/performance tradeoff.I was previously a Senior Software Engineer at Amazon and an Engineering Manager at Quantcast. I built Amazon's internal AI chatbot, Diya, and their internal coding harness, Ziya.If you’re someone who’s looking to run agents on sandbox and are exploring a sandbox vendor, come check us out. We’re particularly looking for developers building messaging agents to try their workloads and challenge the limits and economics of our platform.Thanks!https://agent37.com",
+      "score": 112,
+      "comments": 72,
+      "discussion_url": "https://news.ycombinator.com/item?id=50059096",
       "extra": {
         "top_comments": [
-          "Every time this resurfaces I like to remind people that this is mostly impractical and not how things actually work at the commercial level.Just because someone can theoretically demonstrate your fingerprint today doesn't mean you have the same fingerprint in a few days. It's that kind of stability that you actually need for consistent matching for advertising or tracking purposes.90% of commercial fingerprinting services still rely mostly on the IP address. Once you remove the IP address, you're left with a set of configurations that have a very short half life - volume settings, installed fonts, software versions, etc. You can expect a good portion of your audience to degrade within a couple of days. (Whereas a cookie has a life of 2 years - practically though they only survive a few months).What you actually pay for from third party vendors is a connection made around a more stable data point - a phone number, an email address, a user ID, etc. With one of these data points you can actually track people across multiple devices for as long as you want.",
-          "The problem is Javascript and its implementation. Plain HTML does not offer nearly as many fingerprinting opportunities. It's basically IP + user agent, both of which can be spoofed. Javascript grants websites far too much power over the user's browser, including disabling selection/paste, identifying hardware, time zone, language, etc. None of this should be allowed by default, and things like hardware acceleration and whatnot should be explicitly allowed on a case-by-case basis.",
-          "I've seen anti-fingerprinting plugins and browser configs, etc, but they all seem to make you more interesting for not being fingerprintable, or for turning off a lot of features used in fingerprinting.Is there any reason a browser or plugin couldn't just spoof the data used in fingerprinting to random values? So it emits different values for each page or resource you load?"
+          "Congrats on the launch! Very exciting!You guys are operating in a very competitive space. This stuff is fun to build, so a lot of engineers will end up building it. Not to discourage you, but I suspect it will be difficult to capture much value selling this offering as its going to be race to the bottom against very well funded alternatives that can sell these features at a loss in order to get you to use their databases and other offerings that are higher margin and stickier.As you guys learn more about how to take this sort of technology to market, you may consider trying to get closer to the actual work that people actually need these agents to do. What can you do better because you have this technology? For example, I work in healthcare administration and we have built our own agent sandbox infrastructure on top of firecracker microvms that solve similar use cases as Agent37. We will never sell it. It's part of our competitive advantage for doing healthcare tasks.Food for thought! Good luck!",
+          "Congrats on the launch! Can you speak on how you are able to keep the cost really low?",
+          "I've been looking at offloading local work from my MacBook Pro (M1 Pro / 32 GB) specifically because I've been working with a lot of Android apps and emulation is killing me on top of everything else that I'm running.Got a bunch of Daytona credits which are close to useless given their restrictions until you hit tier 3.You seem like you're actually slightly cheaper than https://boat.dev/ but with less storage? That's the closest to your pricing unless I'm mistaken. Any other insight as to differences between you two?Also I'll add you to a list I've been maintaining of sandbox providers, congrats on the launch!https://engine.build/lab/agent-sandboxes"
         ]
       }
     },
     {
-      "id": "50047091",
-      "title": "Cartographers of North Korea (2019)",
-      "url": "https://cartographers-nk.wonyoung.so/",
+      "id": "50064536",
+      "title": "Blood cells from 80-year-old donor become stem cells with molecular age under 20",
+      "url": "https://doi.org/10.1111/acel.70751",
       "source": "Hacker News",
-      "published_at": "2026-10-11T19:46:40+00:00",
-      "summary": "Cartographers of North Korea (2019)",
-      "score": 228,
-      "comments": 39,
-      "discussion_url": "https://news.ycombinator.com/item?id=50047091",
+      "published_at": "2026-10-12T23:34:22+00:00",
+      "summary": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13634082/",
+      "score": 111,
+      "comments": 71,
+      "discussion_url": "https://news.ycombinator.com/item?id=50064536",
       "extra": {
         "top_comments": [
-          "Side comment: North Korea seems to be allowing tourists to take videos fairly freely now, and some of those videos are appearing on YouTube. While the tourists' movements still seem restricted, the videos offer glimpses into life in North Korea I haven't seen before. For example:https://youtu.be/HQEYB4QWCjMhttps://youtu.be/d7m8hZ67Bz0https://youtu.be/guZQNMEz9as",
-          "Opened the link just because I've always been mystified by how detailed that region is, and it ended up being a fascinating read. One more reason why OSM is one of my personal 7 Wonders of the Internet.",
-          "Super interesting read; I especially found this letter from \"P791\" fascinating:> Hi, Wonyoung, I map North Korea to help North Koreans.I select areas that look like they might be good points to escape. In particular, the detailed mapping around Phungso-ri (풍서리) is almost entirely my work.I mostly map along the Tumen River, both on the North Korean and Chinese sides. It is important to map the fences, roads, and towns on the Chinese side."
+          "It may be a dumb reason to do it, but recently I've started to focus on my health a bit more because of news like this (more exercise and healthier food).The thinking is, if we find a way to massively extend the human lifespan/reverse aging I want to live long enough for that.I'd be pissed if we as humanity solved aging and I die just before that, not taking any chances.",
+          "Slightly tangential: Michael Levin’s work on bioelectricity and cell reprogramming is pretty interesting in context of emergent behaviors in groups of cells. https://en.wikipedia.org/wiki/Michael_Levin_(biologist)",
+          "Sounds like the immortal jellyfish solution. We squeeze entropy out of our DNA by creating a new fresh cell (ovum) that’s very sensitive to genetic defects, meaning if it survives it’s probably good. The jellyfish just shrinks back to a single cell (presumably with some mechanism for keeping the ‘best’ cell) to reset the damage. This is doing the same thing, but piece by piece.Edit: And wow, that abstract appears to have eaten an entire thesaurus."
         ]
       }
     },
     {
-      "id": "50051532",
-      "title": "Yandex bot traffic down 99% after data center attack",
-      "url": "https://radar.cloudflare.com/bots/as13238?dateRange=7d#bot-traffic",
+      "id": "50061791",
+      "title": "Making big downloads resumable in Firefox",
+      "url": "https://lunarwatcher.codeberg.page/til/firefox/resumable-big-downloads.html",
       "source": "Hacker News",
-      "published_at": "2026-10-12T04:54:12+00:00",
-      "summary": "Yandex bot traffic down 99% after data center attack",
-      "score": 136,
-      "comments": 36,
-      "discussion_url": "https://news.ycombinator.com/item?id=50051532",
+      "published_at": "2026-10-12T19:36:02+00:00",
+      "summary": "Making big downloads resumable in Firefox",
+      "score": 110,
+      "comments": 42,
+      "discussion_url": "https://news.ycombinator.com/item?id=50061791",
       "extra": {
         "top_comments": [
-          "This graph shows that Yandex Web crawler farm was hit. The other option, it was shut down to accommodate more critical services that got hit. (I worked for Yandex 20 years ago, one crawler guy was in the same room.) Not sure if troll farms got affected in any way, that is a different business entirely, no overlap.The interesting aspect is this: Yandex was taken from its owners semi-consensually. Similarly, the original owner of the troll farms was blown up in a business jet. He staged a mutiny cause his dirty bloody business was about to be taken from him non-consensually. Some other large non-consensual takeovers unfold for 5 years, soon 6.What an appetite!",
-          "I don't use X myself, but my friends told me there's a noticable reduction in hateful tweets, at least in the Polish sphere. Much less comments blaming Ukrainians for everything wrong with the world.",
-          "For those claiming a drop in hate speech on social media, I’ve yet to see examples of this. Plenty of claims, no examples."
+          "I'll try this.The way I have to resume downloads in Firefox is1. Move the .part file to a temp file2. Start the download again; a new .part file gets created3. Pause the download4. Move the temp file to the .part file, overwriting it5. Unpause the download; it resumes from where the old .part file stoppedThis is only necessary if a \"one-time\" download link gets interrupted part-way through, eg. by a flaky connection. Attempting to resume a one-time link like normal gets (I assume) a 400 response and FF kills the .part file.",
+          "Who remembers Getright?https://www.getright.com/",
+          "Resumable downloads in firefox generally appear to be fairly unstable though. This has been a known problem in some form since as far back as 2005.It's odd how the experience differs so much; I clearly remember successfully resuming a download less than a month ago, and I don't remember any time Firefox had any problems with them. My network.http.response.timeout is the default of 300.There are reasons, but until someone actually publishes an article that's more detailed than the vagueness here, there's nothing anyone can really do about it."
         ]
       }
     }
