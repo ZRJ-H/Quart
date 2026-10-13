@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-10-13T11:00:49.585604+08:00",
+  "cached_at": "2026-10-13T14:57:24.698207+08:00",
   "articles": [
     {
       "id": "https://www.news.cn/politics/20261012/9bd815bae98d440399f0009ffa6a48b9/c.html",
@@ -62,23 +62,11 @@
       "extra": {}
     },
     {
-      "id": "https://www.bbc.co.uk/news/articles/cjly0zqq27e4o#0",
-      "title": "Saudi minister vows 'serious response' to Houthi attacks on airports",
-      "url": "https://www.bbc.co.uk/news/articles/cjly0zqq27e4o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "published_at": "2026-10-13T01:26:02+00:00",
-      "summary": "It comes after the armed group hit Riyadh's international airport and another facility, killing 13 people, in a significant escalation.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
       "id": "https://www.bbc.co.uk/news/articles/cmn045en7d88o#0",
       "title": "Breaking Bad actor RJ Mitte dies aged 34",
       "url": "https://www.bbc.co.uk/news/articles/cmn045en7d88o?at_medium=RSS&at_campaign=rss",
       "source": "BBC World",
-      "published_at": "2026-10-13T00:12:25+00:00",
+      "published_at": "2026-10-13T06:26:05+00:00",
       "summary": "Mitte, who lived with cerebral palsy, starred as Walter White Jr in the Emmy-winning drama series.",
       "score": 0,
       "comments": 0,
@@ -86,12 +74,24 @@
       "extra": {}
     },
     {
-      "id": "https://www.bbc.co.uk/news/articles/cvp8glg97393o#0",
-      "title": "Immigration agents search congresswoman Ilhan Omar's home",
-      "url": "https://www.bbc.co.uk/news/articles/cvp8glg97393o?at_medium=RSS&at_campaign=rss",
+      "id": "https://www.npr.org/2026/10/13/g-s1-147818/france-stolen-renoirs-recovered",
+      "title": "DNA and vehicle-tracking help French investigators recover stolen Renoirs",
+      "url": "https://www.npr.org/2026/10/13/g-s1-147818/france-stolen-renoirs-recovered",
+      "source": "NPR World",
+      "published_at": "2026-10-13T05:42:28+00:00",
+      "summary": "DNA left on a protective painting cover helped investigators recover two stolen Renoirs and uncover what they suspected were preparations for another art heist, a French prosecutor said Monday.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
+      "id": "https://www.bbc.co.uk/news/articles/cqd089r55vp3o#2",
+      "title": "Death threats and isolation - the cost of fighting sexual violence in Iraq",
+      "url": "https://www.bbc.co.uk/news/articles/cqd089r55vp3o?at_medium=RSS&at_campaign=rss",
       "source": "BBC World",
-      "published_at": "2026-10-12T22:05:31+00:00",
-      "summary": "Omar, an outspoken Trump critic, said the search was \"an attempt to target political enemies\" and she \"will not be silenced\".",
+      "published_at": "2026-10-13T05:02:57+00:00",
+      "summary": "Women say they share stories of abuse to highlight the issue, despite social pressure and safety fears.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",

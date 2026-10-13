@@ -1,24 +1,6 @@
 {
-  "cached_at": "2026-10-13T11:00:49.585604+08:00",
+  "cached_at": "2026-10-13T14:57:24.698207+08:00",
   "articles": [
-    {
-      "id": "50060694",
-      "title": "Codex CLI installs a persistent, self-updating background daemon by default",
-      "url": "https://github.com/openai/codex/issues/48195",
-      "source": "Hacker News",
-      "published_at": "2026-10-12T18:29:04+00:00",
-      "summary": "Codex CLI installs a persistent, self-updating background daemon by default",
-      "score": 484,
-      "comments": 245,
-      "discussion_url": "https://news.ycombinator.com/item?id=50060694",
-      "extra": {
-        "top_comments": [
-          "There aren't any documented settings to disable this, but there is a feature flag it currently sits behind. You can flip it in your ~/.codex/config.toml[1]: [features] daemon_auto_start = false There are also some files that it writes to in ~/.codex at startup: pid files, lock files, things like that. You can delete them and replace them with symlinks to /dev/null, then mark those unwritable with `chattr +i` or similar. Presumably then the background daemon will crash on startup, if the feature flag ever goes away.--1: https://github.com/openai/codex/blob/0c329ad2c9d5a2592128a1d...",
-          "It also fills up my HD with old versions. I investigated and it took up something like 12 gigabytes in total on my system; which seems insane to me, it’s just a harness?People moan about how badly made Claude code is but Codex seems much worse on every metric",
-          "The daemon has many bugs. For example, when auto-updating, it would randomly ruin the permissions and block the goal as .git became read-only. Generally, it is extremely annoying how many bugs Codex has. I basically can't trust it to execute on any goal since it would often get blocked every few hours due to random bugs.https://github.com/openai/codex/issues/52251#issuecomment-60..."
-        ]
-      }
-    },
     {
       "id": "50058507",
       "title": "GLM-Legal",
@@ -26,8 +8,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-12T16:11:45+00:00",
       "summary": "GLM-Legal",
-      "score": 460,
-      "comments": 259,
+      "score": 519,
+      "comments": 298,
       "discussion_url": "https://news.ycombinator.com/item?id=50058507",
       "extra": {
         "top_comments": [
@@ -44,8 +26,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-12T16:13:10+00:00",
       "summary": "A Modern Web App in C",
-      "score": 421,
-      "comments": 172,
+      "score": 505,
+      "comments": 213,
       "discussion_url": "https://news.ycombinator.com/item?id=50058528",
       "extra": {
         "top_comments": [
@@ -56,20 +38,20 @@
       }
     },
     {
-      "id": "50057668",
-      "title": "Kevin Kelly's 2016 AI Predictions, 10 Years Later",
-      "url": "https://taylor.town/kk-ai-2026",
+      "id": "50063427",
+      "title": "AI is a tool and using it well takes skill",
+      "url": "https://yyhh.org/blog/2026/10/ai-is-a-tool/",
       "source": "Hacker News",
-      "published_at": "2026-10-12T15:16:45+00:00",
-      "summary": "Kevin Kelly's 2016 AI Predictions, 10 Years Later",
-      "score": 147,
-      "comments": 48,
-      "discussion_url": "https://news.ycombinator.com/item?id=50057668",
+      "published_at": "2026-10-12T21:40:18+00:00",
+      "summary": "AI is a tool and using it well takes skill",
+      "score": 353,
+      "comments": 281,
+      "discussion_url": "https://news.ycombinator.com/item?id=50063427",
       "extra": {
         "top_comments": [
-          "By my own, completely arbitrary split of this into 16 predictions, I would say that this hits on maybe 8 of 16 if we are being a bit generous. Which is good, but certainly not \"Inevitable\" (the title of the book).With that said, maybe he meant inevitable as N approaches infinity... So there's still time!Aside: I think the biggest interesting prediction he had was that AI would obey a user driven network effect. It seems like a very clean prediction, and yet it has failed to materialize? I wonder if this has more to do with just how scrape-able the whole internet was or with distilation or what? There is certainly an advantage to having good user data, but it seems like it is largely something that can be worked around (by hook or crook)?",
-          "Google’s main product was and continues to be ads",
-          "> Amid all this activity, a picture of our AI future is coming into view, and it is not the HAL 9000—a discrete machine animated by a charismatic (yet potentially homicidal) humanlike consciousness—or a Singularitan rapture of superintelligence.The only important prediction Kelly made was a complete rejection of the Singularity. It is also probably the prediction that sentiment has changed on the most in the direction away from Kelly, since 2016. After a decade of evidence and updating, far more people believe in that view of our AI future now than they did then.(His 2017 https://www.wired.com/2017/04/the-myth-of-a-superhuman-ai/ hasn't aged well either.)"
+          "Its probable that AI will roll out much faster than humans can develop that skill of using it in a way that increases not decreases human knowledge over time.The current slew of excellent LLMs will probably cause a decades long dip in human cognitive ability.If social media on smartphones had an impact of ability of students to concentrate, LLM AI will likely have a much greater negative impact on education.There are trillions of dollars of investment pushing for humans to trust whatever an LLM says, and very little money behind encouraging people to tackle hard problems themselves and train themselves to think.I have to say honestly, that AI looks like an apocalypse for human thinking [ Im glad Tao is warning people, I just dont think many people will listen ]",
+          "I go back and forth on this. For awhile yes it took a lot of workflow tweaks and finesse to get directionally correct outputs (thinking back like mid 2025). I invested time in figuring that out, mostly because I was interested, but those skills are all obsolete now, you don't need to worry so much about context management and special instruction recipes or anything these days.The meta at this point seems to be mostly around \"knowing what to ask for\". Eg: I suck at prompting for specific design tweaks, because I don't have the design vocabulary to be specific and articulate what I want. It's a lot of trial and error. I hear people who are developing full scale applications without a tech background run into the issue writ large. For now, I have an advantage over these people when building applications. But perhaps that's just one round of RL away from being obsolete too. Supposedly the model will eventually have such good taste in design/architecture/whatever there will be little point in asking for tweaks.The only thing that seems relatively future-proof is just being able to communicate clearly what you're trying to do. Not how to do it, or even what success looks like. Perhaps an element of it is even as basic as being honest with yourself.",
+          "What I see is that we are in the phase where managers are buying the marketing hype and think that people can be replaced. I guess people believe what they want to believe.I anticipate a later wave a re-hiring people who actually know how to run a business / tech center / call center... whatever the AI replaced.The hard work will not be to replace the people, but to change the organizations so that the productivity of AI can be harvested by the people."
         ]
       }
     },
@@ -80,50 +62,14 @@
       "source": "Hacker News",
       "published_at": "2026-10-12T21:12:43+00:00",
       "summary": "Who is vfmaddrnd231pd?",
-      "score": 133,
-      "comments": 13,
+      "score": 173,
+      "comments": 16,
       "discussion_url": "https://news.ycombinator.com/item?id=50063138",
       "extra": {
         "top_comments": [
           "An old version of binutils [1] explains what DDS means: How to encode VEX.vvvv: 0: VEX.vvvv must be 1111b. 1: VEX.NDS. Register-only source is encoded in VEX.vvvv where the content of source registers will be preserved. VEX.DDS. The second register operand is encoded in VEX.vvvv where the content of first source register will be overwritten by the result. VEX.NDD2. The second destination register operand is encoded in VEX.vvvv for instructions with 2 destination register operands. For assembler, there are no difference between VEX.NDS, VEX.DDS and VEX.NDD2. 2. VEX.NDD. Register destination is encoded in VEX.vvvv for instructions with 1 destination register operand. 3. VEX.LWP. Register destination is encoded in VEX.vvvv and one of the operands can access a memory location. [1] https://sourceware.org/git/?p=binutils-gdb.git;a=commitdiff;...",
           "See https://www.felixcloutier.com/x86/vfmaddrnd231pdTheory: It was removed due to hardware issue and never worked",
-          "Similar to a comment I made a few hours ago. I find myself expressing a concern that something has been lost when people never interact with something directly.Most of the discussion today is about AI and how that causes this issue, but I have been though this experience a few times now.This instruction is essentially incomprehensible at a glance and requires a mental translation step to fillow. That doesn't affect it's use in a specific case, and compilers just use the instructions that they are programmed to use, so there isn't anything fundamentally wrong with this instruction or it's name other than the fact that it seems to be a key for a lock.If there were more people programming in asm, there would probably be enough minds interacting with the instructions to desire and have the capacity to design a better representation for the instruction set. I do believe that better designs at levels like that help solidify thinking in neighbouring levels. For instance with instruction representations, a better way to think about how the instruction is specified might reduce the cognitive load on chip designers and compiler writers.This kind of thing happens over and over when people move to new methods, there are artifacts that remain that are still useful in a modern context but only exist because they were designed at a time when the principles that underlying them were much more commonly used.Examples of this are music boxes and regular expressions, You can still find new instances for both, and they are good solutions for some tasks, but if anyone were to design something today to fill the niche of either, they would not come up with anything so enduring.It is easier to understand a music box than a regular expression finite automata, but both are wonders of design.It has occurred to me that this specific problem of ideas and methods left unconsidered may not be such a problem in an age of AI. It mY be that the capacity for AI to consider and link so many things that it will draw together elements from all of those domains to apply techniques that humans no longer focus upon onto issues that are currently relevant.I'm not sure if current AI is up to that particular task. It would be an interesting problem to set it.Design an assembler for a machine with a modern complex instruction set so that programming on assembler is a more mentally tractable task.It would be fascinating to see what such an open task would do to a model."
-        ]
-      }
-    },
-    {
-      "id": "50059096",
-      "title": "Launch HN: Agent37 (YC F26) – Low-cost agent sandboxes for running agents",
-      "url": "https://news.ycombinator.com/item?id=50059096",
-      "source": "Hacker News",
-      "published_at": "2026-10-12T16:46:34+00:00",
-      "summary": "Hey HN, I’m Vishnu from Agent37 (https://agent37.com). We build sandboxes for running AI agents at under 10% of the cost of most sandbox providers. Our customers spend an average of $0.37/month per sandbox.You can view a video walkthrough of the product here: https://youtu.be/DK5ISR2tbNoWe started as one of those OpenClaw wrapper companies back in February (yup.. judge me). In time we added more and more harnesses.One of the goals I had at the time was to offer a free plan to users, so as to gain more market share. But it was too cost prohibitive to do it right away. Especially since we were bootstrapped and servers were running on my savings.Today we’re actually able to offer the free plan thanks to the optimizations we’ve made since. Over 90% of the new signups we have are just free plan users and they host their personal Hermes/Openclaw/Claude Code etc on our cloud. Our infrastructure cost for the free sandboxes averages around $0.05 to $0.10 per user per month.Here are some techniques that have worked for lowering cost:* When you look at agent harnesses, they have certain patterns in the way they consume CPU and RAM. They need CPU in bursts when they’re initializing or performing certain tasks, but beyond that, they’re often not peaking. They need more RAM for things like browser and computer-use tasks. Once the task is done, usage often comes back down. This is a key insight in lowering cost, so by efficiently managing the CPU/RAM utilization we could lower the cost.* Secondly, you have to skip the hyperscalers when renting the Hosts. I worked at Amazon before and they have 80-90% margins on VMs. So it was an obvious choice once I looked at the prices to go one layer down to vendors like Hetzner and OVH. This alone was probably one of the biggest cost levers in reducing the cost.* Thirdly, you also want to pick a technology stack that lets you efficiently cache and share resources across the host. We use gVisor for better utilization and fast boot times. It lets us use available host memory across sandboxes without reserving a full VM’s memory for each one. There are tradeoffs: our gVisor sandboxes don’t support workloads like Docker-in-Docker or Android emulators.* And finally the size and shape of the hosts you buy also makes a big difference. RAM is typically the bottleneck when it comes to cost and not the CPU. This is specifically true for agent harness workloads, so when buying servers, we optimize for packing more RAM into a given host.We also host full VM sandboxes for workloads that need them, including running Docker at a slightly higher price, but they are still pretty low cost given the rest of the techniques.Overall, my learning has been that just by focusing on a niche of sandbox usecases, and optimizing for it you can give a much better cost/performance tradeoff.I was previously a Senior Software Engineer at Amazon and an Engineering Manager at Quantcast. I built Amazon's internal AI chatbot, Diya, and their internal coding harness, Ziya.If you’re someone who’s looking to run agents on sandbox and are exploring a sandbox vendor, come check us out. We’re particularly looking for developers building messaging agents to try their workloads and challenge the limits and economics of our platform.Thanks!https://agent37.com",
-      "score": 112,
-      "comments": 72,
-      "discussion_url": "https://news.ycombinator.com/item?id=50059096",
-      "extra": {
-        "top_comments": [
-          "Congrats on the launch! Very exciting!You guys are operating in a very competitive space. This stuff is fun to build, so a lot of engineers will end up building it. Not to discourage you, but I suspect it will be difficult to capture much value selling this offering as its going to be race to the bottom against very well funded alternatives that can sell these features at a loss in order to get you to use their databases and other offerings that are higher margin and stickier.As you guys learn more about how to take this sort of technology to market, you may consider trying to get closer to the actual work that people actually need these agents to do. What can you do better because you have this technology? For example, I work in healthcare administration and we have built our own agent sandbox infrastructure on top of firecracker microvms that solve similar use cases as Agent37. We will never sell it. It's part of our competitive advantage for doing healthcare tasks.Food for thought! Good luck!",
-          "Congrats on the launch! Can you speak on how you are able to keep the cost really low?",
-          "I've been looking at offloading local work from my MacBook Pro (M1 Pro / 32 GB) specifically because I've been working with a lot of Android apps and emulation is killing me on top of everything else that I'm running.Got a bunch of Daytona credits which are close to useless given their restrictions until you hit tier 3.You seem like you're actually slightly cheaper than https://boat.dev/ but with less storage? That's the closest to your pricing unless I'm mistaken. Any other insight as to differences between you two?Also I'll add you to a list I've been maintaining of sandbox providers, congrats on the launch!https://engine.build/lab/agent-sandboxes"
-        ]
-      }
-    },
-    {
-      "id": "50064536",
-      "title": "Blood cells from 80-year-old donor become stem cells with molecular age under 20",
-      "url": "https://doi.org/10.1111/acel.70751",
-      "source": "Hacker News",
-      "published_at": "2026-10-12T23:34:22+00:00",
-      "summary": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13634082/",
-      "score": 111,
-      "comments": 71,
-      "discussion_url": "https://news.ycombinator.com/item?id=50064536",
-      "extra": {
-        "top_comments": [
-          "It may be a dumb reason to do it, but recently I've started to focus on my health a bit more because of news like this (more exercise and healthier food).The thinking is, if we find a way to massively extend the human lifespan/reverse aging I want to live long enough for that.I'd be pissed if we as humanity solved aging and I die just before that, not taking any chances.",
-          "Slightly tangential: Michael Levin’s work on bioelectricity and cell reprogramming is pretty interesting in context of emergent behaviors in groups of cells. https://en.wikipedia.org/wiki/Michael_Levin_(biologist)",
-          "Sounds like the immortal jellyfish solution. We squeeze entropy out of our DNA by creating a new fresh cell (ovum) that’s very sensitive to genetic defects, meaning if it survives it’s probably good. The jellyfish just shrinks back to a single cell (presumably with some mechanism for keeping the ‘best’ cell) to reset the damage. This is doing the same thing, but piece by piece.Edit: And wow, that abstract appears to have eaten an entire thesaurus."
+          "Looks like a name for a RISC-V extensionEdit: Checked the article and dang... x86"
         ]
       }
     },
@@ -134,14 +80,68 @@
       "source": "Hacker News",
       "published_at": "2026-10-12T19:36:02+00:00",
       "summary": "Making big downloads resumable in Firefox",
-      "score": 110,
-      "comments": 42,
+      "score": 165,
+      "comments": 65,
       "discussion_url": "https://news.ycombinator.com/item?id=50061791",
       "extra": {
         "top_comments": [
           "I'll try this.The way I have to resume downloads in Firefox is1. Move the .part file to a temp file2. Start the download again; a new .part file gets created3. Pause the download4. Move the temp file to the .part file, overwriting it5. Unpause the download; it resumes from where the old .part file stoppedThis is only necessary if a \"one-time\" download link gets interrupted part-way through, eg. by a flaky connection. Attempting to resume a one-time link like normal gets (I assume) a 400 response and FF kills the .part file.",
-          "Who remembers Getright?https://www.getright.com/",
-          "Resumable downloads in firefox generally appear to be fairly unstable though. This has been a known problem in some form since as far back as 2005.It's odd how the experience differs so much; I clearly remember successfully resuming a download less than a month ago, and I don't remember any time Firefox had any problems with them. My network.http.response.timeout is the default of 300.There are reasons, but until someone actually publishes an article that's more detailed than the vagueness here, there's nothing anyone can really do about it."
+          "I like using the aria2[0] download utility - I don't think I've downloaded anything bigger than a dozen megabytes through a web browser for the last several years, and this method allows me more protocols, multiple connections, and of course continuing downloads. That said, it's nice someone found a solution to the problem - makes life easier for everyone who doesn't use an external download utility... How do you even go about finding the solutions to bugs like this?[0]: https://aria2.github.io/",
+          "Based on the setting `network.http.response.timeout`, which is timeout related, I'm *guessing* Firefox cannot distinguish between a network EOF or a logical/request-level EOF?But that aside, it's kinda typical for a software from the developed world to have fault tolerance this bad. The engineer who wrote the code probably never ever annoyed by network error aside from a few well-known cases, and thus don't take these problems to their hearts.For example, have you tried to download big files with a connection that has 100ms ~ 20seconds latency jitter? That happens with crossborder connections in/out of China. And in India, your users sometime experiences power issue which set their router to reboot or redial, that also causes an interruption in download.Of course, people in these countries can't pay you much. But, these problems can all be solved/mitigated in software. Do you want to improve your software so it can be more robust, or do you want to waste user's time sitting in front your software just to get things done?"
+        ]
+      }
+    },
+    {
+      "id": "50063365",
+      "title": "Intel D270 GPU AI Accelerator–Up to 480 GB LPDDR5X",
+      "url": "https://www.intel.com/content/www/us/en/products/details/discrete-gpus/data-center-gpu/d-series.html",
+      "source": "Hacker News",
+      "published_at": "2026-10-12T21:35:35+00:00",
+      "summary": "Intel D270 GPU AI Accelerator–Up to 480 GB LPDDR5X",
+      "score": 161,
+      "comments": 72,
+      "discussion_url": "https://news.ycombinator.com/item?id=50063365",
+      "extra": {
+        "top_comments": [
+          "These are going to be so awesome to buy in 5-8 years!Right now I’m running 2x 3090 and 128 gb ram on 3.8 flash-next180b (the quant is 97gb) and it hums at120t/s. It’s really a surprisingly good model for general tasks, and I’m soon to see how it does with more agentic kit. For agentic work it does slow down quite a bit when the context fills up… but what do you want for running a 180b model on consumer hardware?Right now I have it set up as an administrator for our asterisk PBX and radius server, and it does higher level judgment on our cctv footage for notifications to security. It’s been really good so far. Agents are the new UI, everything just works over SSH now.",
+          "With an impressive 1.5TB/s RAM bandwidth you'd think they'd advertise that more.Marketing department asleep at the wheel.",
+          "To be honest these ubiquitous AI hardware news look to me more and more like Maybach commercials.Not targeting me"
+        ]
+      }
+    },
+    {
+      "id": "50065692",
+      "title": "AI Models Can Provably Hide Arbitrary Capabilities",
+      "url": "https://arxiv.org/abs/2610.13928",
+      "source": "Hacker News",
+      "published_at": "2026-10-13T02:07:08+00:00",
+      "summary": "AI Models Can Provably Hide Arbitrary Capabilities",
+      "score": 140,
+      "comments": 73,
+      "discussion_url": "https://news.ycombinator.com/item?id=50065692",
+      "extra": {
+        "top_comments": [
+          "I saw a similar effect maybe 2.5 years ago now. I found that training an LLM hides information in the weights.It was only ~1B model but the interesting behavior was.Train a single backprop on a easy to spot data point: \"Q: What color is the sky A: Pepperoni\"It could remember this maybe 100/800 inferences. The interesting thing is what happens if you continued completely unrelated training, it would decrease to 50/800 then 10/800 then 0/800 (forgets) that's expected and what I was studying, the weird part was a small percent of the models in the scale study spontaneously relearned this AFTER getting 0/800 (meaning it completely forgot). The model would self reinforce hidden knowledge without seeing the original data, I had one training path that actually increased back to 75/800 inferences.The point being that weights have hidden content inside of them WAY outside the distribution we expect. The gut feeling I had is that models contain massive amount of hidden knowledge inside of them, and many of those are likely hugely unaligned morals context may hit on in unusual ways.Fine tuning is a rats nest for this as well. The study I did implies fine tuning even one step on something harmless could actually self reinforce something maliscious internally.",
+          "More clear title, given how people talk about AI:\"Capabilities can be hidden in AI model weights by encryption\".It's not about AI agents being able to hide what they can do.",
+          "This has always been my worry with open source models... give them away for free, but with a sleeper agent built in that some arbitrary string can activate. Local deployments will still have web search connectors the majority of the time."
+        ]
+      }
+    },
+    {
+      "id": "50059096",
+      "title": "Launch HN: Agent37 (YC F26) – Low-cost agent sandboxes for running agents",
+      "url": "https://news.ycombinator.com/item?id=50059096",
+      "source": "Hacker News",
+      "published_at": "2026-10-12T16:46:34+00:00",
+      "summary": "Hey HN, I’m Vishnu from Agent37 (https://agent37.com). We build sandboxes for running AI agents at under 10% of the cost of most sandbox providers. Our customers spend an average of $0.37/month per sandbox.You can view a video walkthrough of the product here: https://youtu.be/DK5ISR2tbNoWe started as one of those OpenClaw wrapper companies back in February (yup.. judge me). In time we added more and more harnesses.One of the goals I had at the time was to offer a free plan to users, so as to gain more market share. But it was too cost prohibitive to do it right away. Especially since we were bootstrapped and servers were running on my savings.Today we’re actually able to offer the free plan thanks to the optimizations we’ve made since. Over 90% of the new signups we have are just free plan users and they host their personal Hermes/Openclaw/Claude Code etc on our cloud. Our infrastructure cost for the free sandboxes averages around $0.05 to $0.10 per user per month.Here are some techniques that have worked for lowering cost:* When you look at agent harnesses, they have certain patterns in the way they consume CPU and RAM. They need CPU in bursts when they’re initializing or performing certain tasks, but beyond that, they’re often not peaking. They need more RAM for things like browser and computer-use tasks. Once the task is done, usage often comes back down. This is a key insight in lowering cost, so by efficiently managing the CPU/RAM utilization we could lower the cost.* Secondly, you have to skip the hyperscalers when renting the Hosts. I worked at Amazon before and they have 80-90% margins on VMs. So it was an obvious choice once I looked at the prices to go one layer down to vendors like Hetzner and OVH. This alone was probably one of the biggest cost levers in reducing the cost.* Thirdly, you also want to pick a technology stack that lets you efficiently cache and share resources across the host. We use gVisor for better utilization and fast boot times. It lets us use available host memory across sandboxes without reserving a full VM’s memory for each one. There are tradeoffs: our gVisor sandboxes don’t support workloads like Docker-in-Docker or Android emulators.* And finally the size and shape of the hosts you buy also makes a big difference. RAM is typically the bottleneck when it comes to cost and not the CPU. This is specifically true for agent harness workloads, so when buying servers, we optimize for packing more RAM into a given host.We also host full VM sandboxes for workloads that need them, including running Docker at a slightly higher price, but they are still pretty low cost given the rest of the techniques.Overall, my learning has been that just by focusing on a niche of sandbox usecases, and optimizing for it you can give a much better cost/performance tradeoff.I was previously a Senior Software Engineer at Amazon and an Engineering Manager at Quantcast. I built Amazon's internal AI chatbot, Diya, and their internal coding harness, Ziya.If you’re someone who’s looking to run agents on sandbox and are exploring a sandbox vendor, come check us out. We’re particularly looking for developers building messaging agents to try their workloads and challenge the limits and economics of our platform.Thanks!https://agent37.com",
+      "score": 127,
+      "comments": 91,
+      "discussion_url": "https://news.ycombinator.com/item?id=50059096",
+      "extra": {
+        "top_comments": [
+          "Congrats on the launch! Very exciting!You guys are operating in a very competitive space. This stuff is fun to build, so a lot of engineers will end up building it. Not to discourage you, but I suspect it will be difficult to capture much value selling this offering as its going to be race to the bottom against very well funded alternatives that can sell these features at a loss in order to get you to use their databases and other offerings that are higher margin and stickier.As you guys learn more about how to take this sort of technology to market, you may consider trying to get closer to the actual work that people actually need these agents to do. What can you do better because you have this technology? For example, I work in healthcare administration and we have built our own agent sandbox infrastructure on top of firecracker microvms that solve similar use cases as Agent37. We will never sell it. It's part of our competitive advantage for doing healthcare tasks.Food for thought! Good luck!",
+          "The RAM-over-CPU point matches what I've seen self-hosting small stacks on a VPS: CPU sits idle and memory is what forces the next box.Two questions. With gVisor sharing host memory, what happens when several browser-heavy sandboxes spike at once on the same host: OOM-kill, throttle, or migrate? And at $0.05 to $0.10 per free user, what's the rough sandbox density per host?Thx,Z",
+          "Nice. But apparently the only option offered is paying via CC. In France my bank charges egregious fees for paying in anything other than Euros, while Paypal does the conversion for free. Will you offer Paypal at some point?"
         ]
       }
     }
