@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-10-12T14:16:43.223933+08:00",
+  "cached_at": "2026-10-14T13:09:41.161665+08:00",
   "articles": [
     {
-      "id": "50048312",
-      "title": "Passkeys are a trap",
-      "url": "https://nonfunctional.substack.com/p/passkeys-are-a-trap-do-not-use-them",
+      "id": "50073879",
+      "title": "Gemini 4 Argon",
+      "url": "https://deepmind.google/models/gemini/",
       "source": "Hacker News",
-      "published_at": "2026-10-11T21:59:48+00:00",
-      "summary": "Passkeys are a trap",
-      "score": 469,
-      "comments": 254,
-      "discussion_url": "https://news.ycombinator.com/item?id=50048312",
+      "published_at": "2026-10-13T16:03:16+00:00",
+      "summary": "See also: Gemini 4 Argon for Robotics - https://news.ycombinator.com/item?id=50074869",
+      "score": 1141,
+      "comments": 824,
+      "discussion_url": "https://news.ycombinator.com/item?id=50073879",
       "extra": {
         "top_comments": [
-          "Note that attestation can only be required during credential registration; at login time it's not possible to retroactively require attestation if it wasn't obtained during registration. And browsers will throw up a permission prompt if a website requests attestation. Are Netflix and Twitter currently requesting attestation when people register passkeys, and rejecting the registration if the user declines the permission prompt? I very much doubt it, since Apple's passkey implementation doesn't support attestation.Therefore, the author's scenario that sites will wait until most of their users are using attested passkeys and then \"flip the switch and start rejecting non-attested passkeys\" isn't very plausible.Attestation is certainly a stain on the WebAuthn spec, and it would have been better if Chrome and Firefox didn't support attestation (unless perhaps the browser is enrolled in enterprise management), but this blog post is presenting a hypothetical and unlikely scenario. That's not a good enough reason to recommend TOTP instead, given that TOTP is vulnerable to phishing and passkeys aren't.If consumer-facing sites start requesting attestation when registering passkeys, they deserve to be vigorously called out, and maybe then the recommendation to use passkeys should be revisited. But until that happens, don't tell people not to use passkeys.",
-          "I've yet to voluntarily enable passkeys, for the main reason that I want portability, and not to be tied to any single device that can be lost. I want to be able to backup and lock my credentials in a safe. I also want to control the strength of my credentials for different services, and I don't consider my thumbprint used to unlock my phone to be as strong as a long password in a password manager.The first time I was forced to use a passkey implemented within the vendor's app (3rd party password managers were not an option). I quickly closed that account.The second time was an app that popped up a passkey opt-in in the middle of a bunch of transaction screens. I quickly realized the error, but there was no easy undo. The opt in was one green button in the middle of the screen. Turning it back off required digging through settings to find the security option to disable, and then confirm my choice multiple times. That process also signed out all my other devices.The fact that companies are resorting to dark patterns and forced requirements, where my money is held hostage, should be pretty good evidence of how poorly the passkey rollout is going.",
-          "The very last thing, past the conclusion, the very last footnote is:> Addendum: I feel I have made a compelling case for passkeys in this article. And I haven’t even pointed out one of their best security features: they are (in most use cases) domain-bound, meaning they are resistant to what are called Man-In-The-Middle attacks.\"I made a compelling case... but didn't point out the most important security feature that motivated passkeys in the first place\"Honestly I don't think this post did make a compelling case. There's a lot of assuming bad faith on the part of the FIDO alliance, while completely missing that preventing MITM attacks was a key design feature. The FIDO alliance members deal with stolen accounts all the time, and passkeys largely solve that. Stealing accounts is almost always done with phishing or social engineering, and passkeys solve the former and reduce the surface for the latter."
+          "I haven't tried it for coding yet, but I ran a couple of my recent curiosity driven queries from Claude (mostly used Fable and Opus 5.5) through it.This is a clear step change, I'm genuinely amazed.Its answers are to-the-point, logically structured, clearly written. Like a really well made mini essay on your question.It also really likes to build little simulations / models that you can tweak the parameters on. Amazing to explore how different assumptions affect economic scenarios, for example.It's also great at picking (sourced) illustrations.I'll be using this for everything that isn't coding from now on.",
+          "I'm using this model via API. I am most excited about its ability to write the english language (or any language). My least favorite trend on twitter has been people posting 2D illustrations/3D renders as a proxy for model capability. Well-written prose is far less likely to go viral but far outstrips the importance rendering a fantasy world in one shot.I've been trying it out via the API and the model has been a delight so far. Clear in the head, not RL-fried, distinct writing style, and big model smell. That said, the em-dash is back w/ this model.That said, I would be so frustrated with Sundar Pichai if I was on the Google team. The botched rollout of this model seems to be entirely a matter of capacity, and Pichai has been more than happy to give it to anybody but his own team.",
+          "Gemini 4 Argon is a new leader in Pareto-frontier. Looks like, Google is back in the race.https://arena.ai/leaderboard/agent/chat/paretoFor almost same intelligence (+15.56%, +15.18%), drastic difference in cost/task ($3.51 vs $0.41)"
         ]
       }
     },
     {
-      "id": "50045984",
-      "title": "Total Annihilation, rebuilt for modern computers",
-      "url": "https://nanolathe.gg",
+      "id": "50073633",
+      "title": "Redesigning source control at Anthropic",
+      "url": "https://www.anthropic.com/engineering/redesigning-source-control",
       "source": "Hacker News",
-      "published_at": "2026-10-11T18:04:47+00:00",
-      "summary": "Total Annihilation, rebuilt for modern computers",
-      "score": 443,
-      "comments": 187,
-      "discussion_url": "https://news.ycombinator.com/item?id=50045984",
+      "published_at": "2026-10-13T15:49:56+00:00",
+      "summary": "Redesigning source control at Anthropic",
+      "score": 640,
+      "comments": 613,
+      "discussion_url": "https://news.ycombinator.com/item?id=50073633",
       "extra": {
         "top_comments": [
-          "I recently discovered Beyond All Reason, a spiritual successor to Total Annihilation. There have been several of these, but I think BAR is by far the best. It's open source, but looks nice and is polished. It has amazing quality-of-life features I haven't seen in any other RTS. And it supports insanely huge battles with hundreds of players and tens of thousands of units.150-player match: https://www.youtube.com/watch?v=gQJujiZ-oz0https://www.beyondallreason.info/",
-          "Fair enough, but is there an advantage over the spring engine? Another clean room implementation that understands total annihilation data-structures, a project started 20 years ago.For what its worth, the Total Annihilation derived project with the most attention currently is is BAR https://www.beyondallreason.info/ They decided to make it legally distinct, but it was the balanced annihilation project which was total annihilation rebalanced for better pvp. I don't play too many RTS so this is not authoritative, but BAR plays better than any other rts I have tried, They really care about the fine details of user experience there.In fact, I consider Chris Taylor(Total Annihilation, Supreme Commander) to be one of if not the greatest RTS designers. His games don't have the fluff people appear to love(looking at you starcraft) but he gets the control design better than anyone else I have seen.",
-          "I have been working on this for supreme commander!With modern tooling, libraries and such, many of supcoms old technical issues can be addressed. (plus it now works on linux and mac!)I think I'm close to a like for like version.And of course the performance is leaps and bounds beyond what supcom could do, you can see a 64,000 unit air fight, and I'm pretty sure i can get that going at 60fps plus!and end game vs the ai, is still 4x realtime, well beyond what supcom could do.and of course higher player v player battlesYou can see that all here and in the replies https://forum.faforever.com/topic/10451/supcom-moho-engine-r..."
+          "Not to downplay Anthropic's engineering work here, but I suspect we'll see a lot more reinvention of the wheel, even at smaller startups, as AI makes writing code significantly cheaper.The tradeoff between building something custom and adapting an existing solution is changing. Whether maintaining all that custom software turns out to be equally cheap is another question.",
+          "Every now and then I like to browse the claude code release notes just to get a sense of the number of changes in that product over time. There's little choice but to simply count bullet points if you want to try to quantify it, but it's interesting how that count over time compares with the charts in this article:https://imgur.com/a/M30pFLc",
+          "> Plus, Anthropic is unique in that our ability to spend tokens for internal use far exceeds what any other business would realistically want to spendI appreciate that they're extremely self-aware here."
         ]
       }
     },
     {
-      "id": "50047422",
-      "title": "The gap in shared understanding of LLM capability is widening",
-      "url": "https://twitter.com/karpathy/status/2109361546505966046",
+      "id": "50072913",
+      "title": "Thunderbird for iOS",
+      "url": "https://blog.thunderbird.net/2026/10/thunderbird-for-ios-a-first-look-at-the-native-iphone-email-app-in-development/",
       "source": "Hacker News",
-      "published_at": "2026-10-11T20:20:52+00:00",
-      "summary": "The gap in shared understanding of LLM capability is widening",
-      "score": 384,
-      "comments": 541,
-      "discussion_url": "https://news.ycombinator.com/item?id=50047422",
+      "published_at": "2026-10-13T15:07:37+00:00",
+      "summary": "Thunderbird for iOS",
+      "score": 388,
+      "comments": 170,
+      "discussion_url": "https://news.ycombinator.com/item?id=50072913",
       "extra": {
         "top_comments": [
-          "https://xxcancel.com/karpathy/status/2109361546505966046",
-          "Don't think the 0.2% really are in agreement that \"large, complex projects that used to take them weeks/months can now be completed by agents with a prompt\".The divide seems to be between people who think you may need to understand the codebase for maintenance, potential future token costs, optimisation, code erosion & being wary of the assumptions/mistakes that they have seen LLMs make, and people who don't review code and are confident that the AI has made no mistakes and will be available for next-to-nothing forever.It's certainly allowing the latter to move fast... but will their clients be happy if/when they break things. We'll find out soon, I'm sure.",
-          "1. The funnel is even steeper than the linked post suggests.There's a huge range of users between \"casual and infrequent users\" and \"professional use of frontier-grade LLMs in math & code\".I think I'm in between there somewhere. I'm far from a software dev, my experience is playing with delphi and C when I was a kid. But I've been using LLMs to vibe code personal and work projects that I could never have done even a few years ago. They're genuinely helping work, because there's always some place where a simple little script or other utility can help. (Hell, isn't this partly why so many people start up startups?)I imagine that many departments in many companies that are not \"tech\" companies face similar challenges - there's no budget to hire a software dev or even engage a third party to do things, but now because everyone's aboard the AI train, they have access to something (chatgpt, gemini, copilot, claude), and that's helped users implement their own solutions. Somewhere in the world, someone's excel-file-based accounting system has gotten an upgrade with help from an LLM.2. The funnel is also driven by the the fact that users need products, and an LLM itself isn't a product, it's a capability.Software devs are at the front lines because they can build their own products that can integrate LLM's capabilities. You already know how to automate testing, orchestrate, work together in a team. You're writing / configuring harnesses and flows that work for you. You're sharing / hoarding skills files.The rest of us, like me, don't have that skill. Copilot the product is a mostly useless chatbot that takes up space in MS word. I guess its excel cleanup capability is semi useful if your company runs on excel and you've never used a filter before.There is no work I can put an LLM to other than a \"writing aid\" or \"better search\", because the only AI product we have is the chatbot and maybe someone's equivalent of an agent studio, none of which we are trained to use.Until the products come, there'll be a funnel."
+          "> Right now, we are focused heavily on getting the core foundations right.Are the core foundations not right in the rejected shared code? Why not fix that instead to get the core right everywhere?Especially if the goal is \"ultimate goal is seamless cross-device experience.\", which involves those other appsOtherwise not much to look at, the screenshots are bog (sub)standard designs a lot of email apps have, no polish despite the claims> We’re polishing the essentials: a clutter-free, easy-to-read inbox layout paired with a clean,\"from\" and \"to\" and big gaps is clutter, wasting precious space on small even screens (The logos on the sign in screen are also misaligned, but maybe that's not a polished \"essential\")> modern editor that lets you format messages smoothly without getting in your way.The toolbar design is getting in the way",
+          "I have been using K9 for a long time on Android. No complaints. I guess most Apple users will simply use the default email client, which works well and is probably better integrated and has a better UI than Thunderbird.On Linux desktop, Thunderbird is still the best all around email/CardDAV/CalDAV client it seems, despite being unreasonably heavy.",
+          "I am almost certain that the only reason (feature) I have Thunderbird desktop installed has no place in this iOS app – an editable FROM field. I am pretty sure of that.Ah, just saw the coolest thing - an epic subheading:> Designed for growthLove it. There's no stopping this app now. Godspeed, Mozila/Thunderbird! Grow is the new word."
         ]
       }
     },
     {
-      "id": "50048638",
-      "title": "Google is illegaly cutting forest to build data centers",
-      "url": "https://www.theguardian.com/technology/2026/oct/06/google-datacentres-finland-temporary-halt-environmental-impact-assessment",
+      "id": "50077020",
+      "title": "Show HN: Guitoro, a virtual guitar you strum with your keyboard",
+      "url": "https://guitoro.com/",
       "source": "Hacker News",
-      "published_at": "2026-10-11T22:33:30+00:00",
-      "summary": "Google is illegaly cutting forest to build data centers",
-      "score": 342,
-      "comments": 87,
-      "discussion_url": "https://news.ycombinator.com/item?id=50048638",
+      "published_at": "2026-10-13T19:11:48+00:00",
+      "summary": "Guitoro is a free browser guitar using recordings of real instruments. You can strum with your keyboard, mouse, or touchscreen, choose acoustic, classical, electric guitar or bass, and see chord fingering and each stroke. Song practice can be slowed to 20%, and there are free chord tools and tuners. No signup or download.1 minute video demo: https://youtu.be/DtcluMLdSgsI would love feedback on how the strumming feels and sounds.",
+      "score": 361,
+      "comments": 97,
+      "discussion_url": "https://news.ycombinator.com/item?id=50077020",
       "extra": {
         "top_comments": [
-          "\"Forest\" is a polite way to refer to what appears to be a monoculture plantation. To restore the land properly it would probably be necessary to remove 80%+ of the trees to make space for seeding or planting a diverse range of other species. Possibly 100% if the monoculture species already planted is not endemic.Google street view imagery of the site showing logging completed by June 2026 and logs waiting collection: [1]Sentinel-2 L2A imagery from 2026-10-11 showing the logged area: [2][1] https://www.google.com.au/maps/place/91500+Tahvola,+Finland/...[2] https://browser.dataspace.copernicus.eu/?zoom=15&lat=64.8369...",
-          "> Google said in a statement “we understand the concerns” and that it had “fallen short of our own high standards”.But it wasn't their own high standards, it was a legal obligation that they neglected?I hope in vain that the powers that be are able to punish them in a way they will actually feel...",
-          "I think local governments should be regulating and zoning new data center construction in a way that forces them to rehabilitate old industrial brownfields. There’s plenty of land already spoiled by human activity that can be reused. No reason to be cleaning nature for a warehouse full of computers that could be built anywhere."
+          "I've been playing guitar for 20 years and this is incredible. Impressed by the feat of getting all this in browser, and the quality as a learning tool.My dad had a stroke years ago and hasn't been able to hold a guitar, but I showed him this tonight and he thought it was awesome. Excited to see what he does with it.",
+          "Sounds great! As a guitar player: I would expect the fretboard to be mirrored horizontally, so that the low strings are at the bottom, like it is the case in regular tablature. Messes with my brain that way :)",
+          "Very well done. Looks and sounds great.A couple of UX thoughts I had while using it:1. Since the chords are all within a specific key, have you considered using the numbers 1 through 7 to play the respective chords? That way playing a 1-4-5 or a 2-5-1 would be very intuitive?2. Have you considered using modifier keys (shift, ctrl, alt) to control whether a chord is strummed down versus up (e.g. pressing A would be down, but Shift+A would be up) or major/minor (A would be major, Alt+A would be minor)? I guess Ctrl could be a 7th chord modifier too.Just some thoughts. Great tool!"
         ]
       }
     },
     {
-      "id": "50047055",
-      "title": "So, You’d Like To Sell Your Print Issues Of The Onion?",
-      "url": "https://theonion.com/archivehunt/",
+      "id": "50073221",
+      "title": "I posted to HN, and then my website was flooded with AI bot traffic",
+      "url": "https://www.sammystraus.com/#i-posted-to-hn-and-then-my-website-was-flooded-with-ai-bot-traffic",
       "source": "Hacker News",
-      "published_at": "2026-10-11T19:43:32+00:00",
-      "summary": "So, You’d Like To Sell Your Print Issues Of The Onion?",
-      "score": 299,
-      "comments": 46,
-      "discussion_url": "https://news.ycombinator.com/item?id=50047055",
+      "published_at": "2026-10-13T15:25:50+00:00",
+      "summary": "I posted to HN, and then my website was flooded with AI bot traffic",
+      "score": 300,
+      "comments": 160,
+      "discussion_url": "https://news.ycombinator.com/item?id=50073221",
       "extra": {
         "top_comments": [
-          ">Certain issues of The Onion newspaper are mysteriously missing from our 270-year archive, and you might be able to help us recover them.",
-          "TIL from mid-2011 to mid-2012 the print edition of The Onion was actually distributed here in Toronto (https://globalnews.ca/news/125698/the-onion-newspaper-coming... ; https://nmc-mic.ca/2012/07/24/star-media-group-suspends-publ...). Seems I missed out :(",
-          "I wish the title could be changed to something that reflects the actual need: The Onion has gaps in their archive, and are asking for fans to help fill those gaps."
+          "There is so much spam, abuse, and aggressive scraping that I've had to block: - AWS - Google Cloud - Azure - Alibaba Cloud - Oracle and a handful of other ASNs on almost all of my properties. It would be one thing if it was simple scraping, but it's often genuine agentic abuse (just spamming for vulnerabilities* or scraping millions of pages with very little valuable or dynamic content). These clouds must get the abuse happening under their own roof under control.I banned Alibaba's Cloud two years ago and it still hits one of my domains 1 million times per day, despite every route 4xx-ing during that time.Even Apple has aggressively ramped up its scraping in the past few months, but thankfully they do respect robots.txt.It's frustrating because some of my real users route through these clouds via their work VPNs. Also, there are a lot of less-than-reputable AI scrapers using global bot-nets via residential IPs to scrape, making it even harder to detect and ban them without affecting real people.* like leaked .env routes, brute forcing admin panels, and so on",
+          "Last year, I wrote a post about how I use zipbombs to deal with bot traffic [0]. It went mega viral over the web, and I regret it. My server was completely overwhelmed with bot traffic. After months of dealing with it, I had to find a better strategy then keep my mouth shut.[0]: https://news.ycombinator.com/item?id=43826798",
+          "I really recommend blocking all traffic from anything on https://github.com/borestad/blocklist-abuseipdb"
         ]
       }
     },
     {
-      "id": "50048642",
-      "title": "Fingerprints are the new cookies",
-      "url": "https://royfish.dev/fingerprints-are-the-new-cookies",
+      "id": "50072994",
+      "title": "The United Kingdom generates less electricity per person than in the 1970s",
+      "url": "https://ourworldindata.org/data-insights/electricity-generation-per-person-in-the-united-kingdom-has-fallen-by-a-third-from-its-early-2000s-peak",
       "source": "Hacker News",
-      "published_at": "2026-10-11T22:33:39+00:00",
-      "summary": "Fingerprints are the new cookies",
+      "published_at": "2026-10-13T15:12:57+00:00",
+      "summary": "The United Kingdom generates less electricity per person than in the 1970s",
       "score": 254,
-      "comments": 126,
-      "discussion_url": "https://news.ycombinator.com/item?id=50048642",
+      "comments": 340,
+      "discussion_url": "https://news.ycombinator.com/item?id=50072994",
       "extra": {
         "top_comments": [
-          "Every time this resurfaces I like to remind people that this is mostly impractical and not how things actually work at the commercial level.Just because someone can theoretically demonstrate your fingerprint today doesn't mean you have the same fingerprint in a few days. It's that kind of stability that you actually need for consistent matching for advertising or tracking purposes.90% of commercial fingerprinting services still rely mostly on the IP address. Once you remove the IP address, you're left with a set of configurations that have a very short half life - volume settings, installed fonts, software versions, etc. You can expect a good portion of your audience to degrade within a couple of days. (Whereas a cookie has a life of 2 years - practically though they only survive a few months).What you actually pay for from third party vendors is a connection made around a more stable data point - a phone number, an email address, a user ID, etc. With one of these data points you can actually track people across multiple devices for as long as you want.",
-          "The problem is Javascript and its implementation. Plain HTML does not offer nearly as many fingerprinting opportunities. It's basically IP + user agent, both of which can be spoofed. Javascript grants websites far too much power over the user's browser, including disabling selection/paste, identifying hardware, time zone, language, etc. None of this should be allowed by default, and things like hardware acceleration and whatnot should be explicitly allowed on a case-by-case basis.",
-          "I've seen anti-fingerprinting plugins and browser configs, etc, but they all seem to make you more interesting for not being fingerprintable, or for turning off a lot of features used in fingerprinting.Is there any reason a browser or plugin couldn't just spoof the data used in fingerprinting to random values? So it emits different values for each page or resource you load?"
+          "There's lots of amusingly Telegraph-esque outrage being posted here. But the article makes it clear that the reduction is due to reduction in demand, due in part to welcome improvements in efficiency, but also regrettable deindustrialization, and (neutral?) increased importing of electricity. Nobody is planning to ration electricity suppies.I also wonder what the contribution of domestic solar and on-site industrial generation is? I'm a dev in a large manufacturing business and two of our three factory buildings are now covered in solar cells which power a lot of our operations. Some big industrial sites have on-site wind-powered generation too. Is that counted as generation in these stats? Or is it just manifested as reduced demand?(Edit: added \"being posted\", \"welcome\" and \"(neutral?)\" for clarity)",
+          "I was at a conference last year where one of the speakers was from National Grid. Not only these morons had in mind that electricity demand should decrease (even before AI, it was obvious that demand would go up as we are moving away from fossil fuel with both heating and transportation going electric).But their great idea to deal with the shortage is intermittent availability of power. You won't be able to wash your clothes when you feel like, you will have to adapt to when there is spare power, like in developing countries. This is just a regression in technological progress.I saw the same messaging in France where the current president started his mandate with a grand programme to switch off a third of nuclear power plants.If anyone thinks adults are in charge, let alone engineers, you are greatly mistaken.",
+          "The decline in energy from 2003-present lines up nicely with the phase out of incandescent lights in favour of CFLs and of CFLs in favour of LEDs.Lets say a house typically had 5 60W bulbs on for 8hrs a day, now replaced with an 8W bulb. That would be a 2 kWH reduction, which roughly corresponds to the drop shown in the data.EDIT: actually now that I think about it, 2kWh per-household is probably less than 1kWh per-capita. It's still a good chunk though!"
         ]
       }
     },
     {
-      "id": "50047091",
-      "title": "Cartographers of North Korea (2019)",
-      "url": "https://cartographers-nk.wonyoung.so/",
+      "id": "50079865",
+      "title": "Recreational Programming",
+      "url": "https://www.cphiri.dev/presentations/recreational-programming",
       "source": "Hacker News",
-      "published_at": "2026-10-11T19:46:40+00:00",
-      "summary": "Cartographers of North Korea (2019)",
-      "score": 228,
+      "published_at": "2026-10-13T22:33:33+00:00",
+      "summary": "Recreational Programming",
+      "score": 111,
       "comments": 39,
-      "discussion_url": "https://news.ycombinator.com/item?id=50047091",
+      "discussion_url": "https://news.ycombinator.com/item?id=50079865",
       "extra": {
         "top_comments": [
-          "Side comment: North Korea seems to be allowing tourists to take videos fairly freely now, and some of those videos are appearing on YouTube. While the tourists' movements still seem restricted, the videos offer glimpses into life in North Korea I haven't seen before. For example:https://youtu.be/HQEYB4QWCjMhttps://youtu.be/d7m8hZ67Bz0https://youtu.be/guZQNMEz9as",
-          "Opened the link just because I've always been mystified by how detailed that region is, and it ended up being a fascinating read. One more reason why OSM is one of my personal 7 Wonders of the Internet.",
-          "Super interesting read; I especially found this letter from \"P791\" fascinating:> Hi, Wonyoung, I map North Korea to help North Koreans.I select areas that look like they might be good points to escape. In particular, the detailed mapping around Phungso-ri (풍서리) is almost entirely my work.I mostly map along the Tumen River, both on the North Korean and Chinese sides. It is important to map the fences, roads, and towns on the Chinese side."
+          "Recreational programming used to be one of the rubrics to hire a software developer. If you have an intrinsic motivation to code, it would often be more valuable than your credentials. That's why junior devs would push up sites showcasing their resume of random projects they've done outside of education in order to give them an edge over their competition. Some companies would even encourage some time on the clock for working on side projects to prevent burnout.At the same time, some of the workers in the industry were disgruntled that you were expected to enjoy coding in your spare time to keep up. While some truly just wanted to do it because they were good at it, and would rather turn off the software dev brain after work to do other things they enjoy in life.With the advent of high-performing LLM's for coding, though, it seems more important to showcase how you can harness AI for your recreational projects than the projects themselves. It's a bit of a catch-22 for junior devs though.I still think it's good rubric to get into programming if you like to do it recreationally, but these are just a few of my thoughts on how it can be problematic.",
+          "The definition perfectly describes how I started out in computers in 1981. Brought home a 4K, 8-bit computer from Radio Shack that I could barely afford and hooked it to the TV. Had never touched a computer before, zero prior knowledge and only had the manual in the box (which was surprisingly good). No one I'd ever met owned a computer at home or used one at work and I'd never really considered that you could make money with computers. I just thought the games seemed fun and the idea of learning about programming seemed cool. Turns out typing in long listings from B&W hobbyist zines and then finding all the typos was a fine way to learn.Teaching myself assembler was harder because I had no docs. I was so clueless I actually looked up Motorola in the phone book and called to ask where I could get a manual. The sales rep who answered the phone must have taken pity on me because he mailed the CPU manual for free. I still have the purple reference card and remember the common opcodes by heart (https://colorcomputerarchive.com/repo/Documents/Datasheets/M...)The first time I made money was about 18 months later when I wrote a pretty handy disk utility program. Stayed up all Friday night finishing it. Copied onto floppies I sold for $5 at the local user's group Saturday morning. Made $140 and got my first 28 customers. That was enough to get me hooked on making software and selling it. ~40 years, three startups, over a dozen products, hundreds of good people employed, a couple million customers and two PC Magazine Product of the Year awards later - I regret nothing. Started on a lark to learn and have fun. Much was learned, fun was had. Wonderful journey - highly recommend.",
+          "Loved this presentation. I personally know the presenter and he presented it at a hackathon :)"
         ]
       }
     },
     {
-      "id": "50051532",
-      "title": "Yandex bot traffic down 99% after data center attack",
-      "url": "https://radar.cloudflare.com/bots/as13238?dateRange=7d#bot-traffic",
+      "id": "50074909",
+      "title": "Show HN: How random are you?",
+      "url": "https://lab.specr.net/rigged-draw/",
       "source": "Hacker News",
-      "published_at": "2026-10-12T04:54:12+00:00",
-      "summary": "Yandex bot traffic down 99% after data center attack",
-      "score": 136,
-      "comments": 36,
-      "discussion_url": "https://news.ycombinator.com/item?id=50051532",
+      "published_at": "2026-10-13T16:57:57+00:00",
+      "summary": "Show HN: How random are you?",
+      "score": 107,
+      "comments": 61,
+      "discussion_url": "https://news.ycombinator.com/item?id=50074909",
       "extra": {
         "top_comments": [
-          "This graph shows that Yandex Web crawler farm was hit. The other option, it was shut down to accommodate more critical services that got hit. (I worked for Yandex 20 years ago, one crawler guy was in the same room.) Not sure if troll farms got affected in any way, that is a different business entirely, no overlap.The interesting aspect is this: Yandex was taken from its owners semi-consensually. Similarly, the original owner of the troll farms was blown up in a business jet. He staged a mutiny cause his dirty bloody business was about to be taken from him non-consensually. Some other large non-consensual takeovers unfold for 5 years, soon 6.What an appetite!",
-          "I don't use X myself, but my friends told me there's a noticable reduction in hateful tweets, at least in the Polish sphere. Much less comments blaming Ukrainians for everything wrong with the world.",
-          "For those claiming a drop in hate speech on social media, I’ve yet to see examples of this. Plenty of claims, no examples."
+          "This is a nice spin on the Aaronson oracle:> In a class I taught at Berkeley, I did an experiment where I wrote a simple little program that would let people type either “f” or “d” and would predict which key they were going to push next. It’s actually very easy to write a program that will make the right prediction about 70% of the time. Most people don’t really know how to type randomly. They’ll have too many alternations and so on. There will be all sorts of patterns, so you just have to build some sort of probabilistic model. Even a very crude one will do well. I couldn’t even beat my own program, knowing exactly how it worked. I challenged people to try this and the program was getting between 70% and 80% prediction rates. Then, we found one student that the program predicted exactly 50% of the time. We asked him what his secret was and he responded that he “just used his free will.”",
+          "Dilbert\"Over here we have our random number generator.\"https://web.archive.org/web/20230305130159im_/https://assets...",
+          "Rather than attempt to be random, knowing that I'm not, I wanted to see how well it can predict Math.random: setInterval(() => { const num = Math.round(Math.random() * 10); const ball = document.querySelector(`.typed-pad .ball-${num}`); if (ball) { ball.click(); } }, 1000); This isn't very interesting, but it scratched an itch I had to see what would happen. The house's record The house called 18 of your 190 scored numbers: 9%. Blind guessing would average about 21.1 of them (11%). Only 1 of the 206 people in a psychology study was more random than you. The house found you extremely hard to read. I really want to know who was more random than a RNG"
         ]
       }
     }
