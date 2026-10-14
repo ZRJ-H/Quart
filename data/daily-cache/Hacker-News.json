@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-10-14T11:01:32.392061+08:00",
+  "cached_at": "2026-10-14T13:09:41.161665+08:00",
   "articles": [
     {
       "id": "50073879",
@@ -8,8 +8,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-13T16:03:16+00:00",
       "summary": "See also: Gemini 4 Argon for Robotics - https://news.ycombinator.com/item?id=50074869",
-      "score": 1059,
-      "comments": 787,
+      "score": 1141,
+      "comments": 824,
       "discussion_url": "https://news.ycombinator.com/item?id=50073879",
       "extra": {
         "top_comments": [
@@ -26,32 +26,14 @@
       "source": "Hacker News",
       "published_at": "2026-10-13T15:49:56+00:00",
       "summary": "Redesigning source control at Anthropic",
-      "score": 579,
-      "comments": 553,
+      "score": 640,
+      "comments": 613,
       "discussion_url": "https://news.ycombinator.com/item?id=50073633",
       "extra": {
         "top_comments": [
-          "Excuse me for throwing up this stupid idea, but if code changes per unit of time keep growing at this rate and are not slowing down with infinite merging demand, it seems that this repo will be in a constant state of continuous change and we constantly roll forward with automated code and obviously no direct human supervision, then why even have source control? Why not just let software be fluid and, like Heraclitus river, never step twice in the same repo.",
-          "> As our monorepo grows, it increasingly doesn’t fit that design space. The history of our main branch alone is almost 100 GBThe first thing that hits me is, did you consider not going all in on a monorepo? I know it has been the trend in general, but it seems a bit of a red flag when you go from \"let's have a monorepo it will make merging easier\" to \"let's redesign version control because merging is too hard now\" without the middle question \"should we really have a monorepo?\"As a derivative thought I'm curious if AI tooling is tipping people more towards monorepos now since it gives the agent the whole context of the app in one go? Or is this independent - I can easily check out 5 repos in one directory and run an agent there.",
+          "Not to downplay Anthropic's engineering work here, but I suspect we'll see a lot more reinvention of the wheel, even at smaller startups, as AI makes writing code significantly cheaper.The tradeoff between building something custom and adapting an existing solution is changing. Whether maintaining all that custom software turns out to be equally cheap is another question.",
+          "Every now and then I like to browse the claude code release notes just to get a sense of the number of changes in that product over time. There's little choice but to simply count bullet points if you want to try to quantify it, but it's interesting how that count over time compares with the charts in this article:https://imgur.com/a/M30pFLc",
           "> Plus, Anthropic is unique in that our ability to spend tokens for internal use far exceeds what any other business would realistically want to spendI appreciate that they're extremely self-aware here."
-        ]
-      }
-    },
-    {
-      "id": "50078141",
-      "title": "OpenAI engineer arrested in bugging of executive conference room",
-      "url": "https://sfstandard.com/2026/10/13/openai-engineer-arrested-alleged-bugging-executive-conference-room/",
-      "source": "Hacker News",
-      "published_at": "2026-10-13T20:23:55+00:00",
-      "summary": "https://x.com/OpenAINewsroom/status/2110095403198849132",
-      "score": 441,
-      "comments": 388,
-      "discussion_url": "https://news.ycombinator.com/item?id=50078141",
-      "extra": {
-        "top_comments": [
-          "These are not very smart spies:> A chatbot account tied to Alfozan’s spouse, which shared identifiers with his own account, submitted prompts between Sept. 24 and Sept. 30 about building, installing, obscuring, and remotely accessing a recording device, prosecutors said. Queries included how to “build a continuous audio recorder” and “encrypt the SD card,” prosecutors claimed. On Sept. 27 and 28, the account asked about the specific device that was later found, including its unique MAC address.",
-          "This guy previously worked at Meta from 2017 to 2022 on Data Infrastructure projects.I expect Meta are running an audit right now to figure out if he was involved in espionage back then as well.",
-          "I am a bit confused by Figure 3. Do they really have a surveillance camera angled just right to capture a photo of someone between the monitor and the wall that supports it?Here is a direct link to Figure 3:https://assets.sfstandard.com/image/994911177489/image_bfl33..."
         ]
       }
     },
@@ -62,13 +44,13 @@
       "source": "Hacker News",
       "published_at": "2026-10-13T15:07:37+00:00",
       "summary": "Thunderbird for iOS",
-      "score": 358,
-      "comments": 161,
+      "score": 388,
+      "comments": 170,
       "discussion_url": "https://news.ycombinator.com/item?id=50072913",
       "extra": {
         "top_comments": [
+          "> Right now, we are focused heavily on getting the core foundations right.Are the core foundations not right in the rejected shared code? Why not fix that instead to get the core right everywhere?Especially if the goal is \"ultimate goal is seamless cross-device experience.\", which involves those other appsOtherwise not much to look at, the screenshots are bog (sub)standard designs a lot of email apps have, no polish despite the claims> We’re polishing the essentials: a clutter-free, easy-to-read inbox layout paired with a clean,\"from\" and \"to\" and big gaps is clutter, wasting precious space on small even screens (The logos on the sign in screen are also misaligned, but maybe that's not a polished \"essential\")> modern editor that lets you format messages smoothly without getting in your way.The toolbar design is getting in the way",
           "I have been using K9 for a long time on Android. No complaints. I guess most Apple users will simply use the default email client, which works well and is probably better integrated and has a better UI than Thunderbird.On Linux desktop, Thunderbird is still the best all around email/CardDAV/CalDAV client it seems, despite being unreasonably heavy.",
-          "Apple Mail completely breaks when you have 100.000+ mails in an IMAP account. Even on MacOS it‘s unusable (search, index) while Thundebird works flawlessly.",
           "I am almost certain that the only reason (feature) I have Thunderbird desktop installed has no place in this iOS app – an editable FROM field. I am pretty sure of that.Ah, just saw the coolest thing - an epic subheading:> Designed for growthLove it. There's no stopping this app now. Godspeed, Mozila/Thunderbird! Grow is the new word."
         ]
       }
@@ -80,13 +62,13 @@
       "source": "Hacker News",
       "published_at": "2026-10-13T19:11:48+00:00",
       "summary": "Guitoro is a free browser guitar using recordings of real instruments. You can strum with your keyboard, mouse, or touchscreen, choose acoustic, classical, electric guitar or bass, and see chord fingering and each stroke. Song practice can be slowed to 20%, and there are free chord tools and tuners. No signup or download.1 minute video demo: https://youtu.be/DtcluMLdSgsI would love feedback on how the strumming feels and sounds.",
-      "score": 314,
-      "comments": 92,
+      "score": 361,
+      "comments": 97,
       "discussion_url": "https://news.ycombinator.com/item?id=50077020",
       "extra": {
         "top_comments": [
-          "Looking forward to your acquihire by Guitar Center! Makes me want to dust off my old acoustic after work and practice some more.",
-          "That's one of the best guitar UIs I've seen on a computer.",
+          "I've been playing guitar for 20 years and this is incredible. Impressed by the feat of getting all this in browser, and the quality as a learning tool.My dad had a stroke years ago and hasn't been able to hold a guitar, but I showed him this tonight and he thought it was awesome. Excited to see what he does with it.",
+          "Sounds great! As a guitar player: I would expect the fretboard to be mirrored horizontally, so that the low strings are at the bottom, like it is the case in regular tablature. Messes with my brain that way :)",
           "Very well done. Looks and sounds great.A couple of UX thoughts I had while using it:1. Since the chords are all within a specific key, have you considered using the numbers 1 through 7 to play the respective chords? That way playing a 1-4-5 or a 2-5-1 would be very intuitive?2. Have you considered using modifier keys (shift, ctrl, alt) to control whether a chord is strummed down versus up (e.g. pressing A would be down, but Shift+A would be up) or major/minor (A would be major, Alt+A would be minor)? I guess Ctrl could be a 7th chord modifier too.Just some thoughts. Great tool!"
         ]
       }
@@ -98,8 +80,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-13T15:25:50+00:00",
       "summary": "I posted to HN, and then my website was flooded with AI bot traffic",
-      "score": 270,
-      "comments": 152,
+      "score": 300,
+      "comments": 160,
       "discussion_url": "https://news.ycombinator.com/item?id=50073221",
       "extra": {
         "top_comments": [
@@ -116,8 +98,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-13T15:12:57+00:00",
       "summary": "The United Kingdom generates less electricity per person than in the 1970s",
-      "score": 221,
-      "comments": 313,
+      "score": 254,
+      "comments": 340,
       "discussion_url": "https://news.ycombinator.com/item?id=50072994",
       "extra": {
         "top_comments": [
@@ -128,20 +110,38 @@
       }
     },
     {
-      "id": "50072286",
-      "title": "Apple's new 'Switch to Safari' campaign details why you should ditch Chrome",
-      "url": "https://9to5mac.com/2026/10/12/apples-new-switch-to-safari-campaign-details-why-you-should-ditch-chrome/",
+      "id": "50079865",
+      "title": "Recreational Programming",
+      "url": "https://www.cphiri.dev/presentations/recreational-programming",
       "source": "Hacker News",
-      "published_at": "2026-10-13T14:26:08+00:00",
-      "summary": "https://www.apple.com/safari/switch/",
-      "score": 205,
-      "comments": 343,
-      "discussion_url": "https://news.ycombinator.com/item?id=50072286",
+      "published_at": "2026-10-13T22:33:33+00:00",
+      "summary": "Recreational Programming",
+      "score": 111,
+      "comments": 39,
+      "discussion_url": "https://news.ycombinator.com/item?id=50079865",
       "extra": {
         "top_comments": [
-          "I'm old enough to have been in the industry when Chrome launched. It was amazing. It was such a relief to move away from IE and all the arcane levels of details I had to remember back then to artisnaly get IE to behave like a moderately modern (for then) browser.Chrome was fast, did the basic job of correctly rendering pages, and its js runtime was groundbreaking. Node.js was direct outcome of that revolution.Now these days the only thing keeping me tied to chrome is finger muscle memory. The death of manifest v2 is the 2nd to last nail.Honestly Opus 5.5 had gotten good enough I've been considering a project to have it build a new browser based on the open source Chrome and keeps the v2 in place. Just customize it specifically for my preferences and call it done. No more unexpected breaking updates. Just a browser that does its job and nothing else.The problem is I use safari on iOS. Generally not a bad browser. Equivalent and superior to Chrome is certain aspects. I don't really need to run Chrome on my phone. Safari is good enough. However... for a local build only I use maybe it's possible.",
-          "First let us install other browser engines on iOS, and then we can talk.Safari has the most obscene monopoly of any browser ever. IE 6 came pre-installed on windows machines, but you could always install Mosaic or such.Google Chromebooks come with Chrome as the only default browser, but you can still run Firefox on Chromebooks just fine (even in two different ways, the supported android app version, and the semi-supported linux terminal + launching firefox that way).Heck, iOS's monopolistic behavior is so bad that multiple regions (the EU + Japan) have already ruled against their behavior, though in reality Apple has complied in a way that makes it impossible to actually make a second browser engine for iOS still (going against the spirit of the law, but the courts haven't caught up to them yet).Safari is also an awful browser in that it requires someone to buy an expensive machine to see if their site works on it.I can run a windows trial copy in a VM to see if my site works in IE, I can run Chrome or Firefox on linux to verify if my site works in them. I can install a free android emulator on any common OS to see that my site renders right in those.But Apple doesn't give me a legal way to freely run an iOS simulator nor even a macOS VM on my linux machine, I have to pay money, to buy their hardware to see if my site will work on Safari.And even worse, Safari is the browser with the largest number of rendering bugs and quirks currently, while also having a huge number of users (since iOS users can't install another browser), so any web developers are basically forced to shell out for apple hardware.",
-          "Kinda bugs me when people who are against Safari/Apple are also the same people pushing Chrome/Google. Sometimes it feels like web developers these days are basically Chrome developers.I do get it. Chrome has the majority of users, so it’s easier to just develop and test on Chrome and know you’ve covered most of your users.But isn’t that just pushing us towards a Chrome monopoly? Safari holding back some web features is annoying, sure, but having Chrome decide what the web should support and everyone else having to follow doesn’t sound much better to me."
+          "Recreational programming used to be one of the rubrics to hire a software developer. If you have an intrinsic motivation to code, it would often be more valuable than your credentials. That's why junior devs would push up sites showcasing their resume of random projects they've done outside of education in order to give them an edge over their competition. Some companies would even encourage some time on the clock for working on side projects to prevent burnout.At the same time, some of the workers in the industry were disgruntled that you were expected to enjoy coding in your spare time to keep up. While some truly just wanted to do it because they were good at it, and would rather turn off the software dev brain after work to do other things they enjoy in life.With the advent of high-performing LLM's for coding, though, it seems more important to showcase how you can harness AI for your recreational projects than the projects themselves. It's a bit of a catch-22 for junior devs though.I still think it's good rubric to get into programming if you like to do it recreationally, but these are just a few of my thoughts on how it can be problematic.",
+          "The definition perfectly describes how I started out in computers in 1981. Brought home a 4K, 8-bit computer from Radio Shack that I could barely afford and hooked it to the TV. Had never touched a computer before, zero prior knowledge and only had the manual in the box (which was surprisingly good). No one I'd ever met owned a computer at home or used one at work and I'd never really considered that you could make money with computers. I just thought the games seemed fun and the idea of learning about programming seemed cool. Turns out typing in long listings from B&W hobbyist zines and then finding all the typos was a fine way to learn.Teaching myself assembler was harder because I had no docs. I was so clueless I actually looked up Motorola in the phone book and called to ask where I could get a manual. The sales rep who answered the phone must have taken pity on me because he mailed the CPU manual for free. I still have the purple reference card and remember the common opcodes by heart (https://colorcomputerarchive.com/repo/Documents/Datasheets/M...)The first time I made money was about 18 months later when I wrote a pretty handy disk utility program. Stayed up all Friday night finishing it. Copied onto floppies I sold for $5 at the local user's group Saturday morning. Made $140 and got my first 28 customers. That was enough to get me hooked on making software and selling it. ~40 years, three startups, over a dozen products, hundreds of good people employed, a couple million customers and two PC Magazine Product of the Year awards later - I regret nothing. Started on a lark to learn and have fun. Much was learned, fun was had. Wonderful journey - highly recommend.",
+          "Loved this presentation. I personally know the presenter and he presented it at a hackathon :)"
+        ]
+      }
+    },
+    {
+      "id": "50074909",
+      "title": "Show HN: How random are you?",
+      "url": "https://lab.specr.net/rigged-draw/",
+      "source": "Hacker News",
+      "published_at": "2026-10-13T16:57:57+00:00",
+      "summary": "Show HN: How random are you?",
+      "score": 107,
+      "comments": 61,
+      "discussion_url": "https://news.ycombinator.com/item?id=50074909",
+      "extra": {
+        "top_comments": [
+          "This is a nice spin on the Aaronson oracle:> In a class I taught at Berkeley, I did an experiment where I wrote a simple little program that would let people type either “f” or “d” and would predict which key they were going to push next. It’s actually very easy to write a program that will make the right prediction about 70% of the time. Most people don’t really know how to type randomly. They’ll have too many alternations and so on. There will be all sorts of patterns, so you just have to build some sort of probabilistic model. Even a very crude one will do well. I couldn’t even beat my own program, knowing exactly how it worked. I challenged people to try this and the program was getting between 70% and 80% prediction rates. Then, we found one student that the program predicted exactly 50% of the time. We asked him what his secret was and he responded that he “just used his free will.”",
+          "Dilbert\"Over here we have our random number generator.\"https://web.archive.org/web/20230305130159im_/https://assets...",
+          "Rather than attempt to be random, knowing that I'm not, I wanted to see how well it can predict Math.random: setInterval(() => { const num = Math.round(Math.random() * 10); const ball = document.querySelector(`.typed-pad .ball-${num}`); if (ball) { ball.click(); } }, 1000); This isn't very interesting, but it scratched an itch I had to see what would happen. The house's record The house called 18 of your 190 scored numbers: 9%. Blind guessing would average about 21.1 of them (11%). Only 1 of the 206 people in a psychology study was more random than you. The house found you extremely hard to read. I really want to know who was more random than a RNG"
         ]
       }
     }

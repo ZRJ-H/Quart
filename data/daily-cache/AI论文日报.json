@@ -1,113 +1,113 @@
 {
-  "cached_at": "2026-10-14T11:01:32.392061+08:00",
+  "cached_at": "2026-10-14T13:09:41.161665+08:00",
   "articles": [
     {
-      "id": "2610.12818",
-      "title": "LeWAM: End-to-End World and Action Modeling with JEPAs",
-      "url": "https://arxiv.org/abs/2610.12818",
-      "source": "Hugging Face Daily Papers / arXiv",
-      "published_at": "2026-10-14T00:00:00+00:00",
-      "summary": "Joint-embedding predictive architectures (JEPAs) learn compact latent world models without pixel reconstruction. Existing JEPA pipelines typically train visual representations and action-conditioned dynamics before adding a control policy or solver. We introduce LeWAM, an end-to-end JEPA for control with: (1) a joint training objective over next latent state prediction and action flow matching, and (2) an isotropic Gaussian constraint on the latent state, enabling a single model to support direct policy execution and efficient planning by evaluating sampled actions with its learned latent dynamics. Compared with prior JEPAs in visual planning, LeWAM improves success rate from 28.6% to 89.7% on contact-rich tasks and from 10.9% to 46.2% on long-horizon tasks, and plans 32.3 times faster. On behavior cloning tasks in simulation and physical robots, LeWAM is also competitive with established methods. Interpretability analyses show that LeWAM learns control-relevant representations and action distributions effectively guiding test-time planning and control.",
-      "score": 21,
+      "id": "2610.18526",
+      "title": "Retrieval Disagreement as a Signal: Diagnosing and Steering Multilingual Dense Embedders",
+      "url": "https://arxiv.org/abs/2610.18526v1",
+      "source": "arXiv",
+      "published_at": "2026-10-13T15:13:32+00:00",
+      "summary": "Multilingual dense retrievers place all languages in one shared space so that a question finds relevant documents, regardless of which language they are written in. We show that the same question, asked in different languages, retrieves substantially different documents, and this disagreement is not because of weak language understanding. Each language performs well on its own and ranks candidates consistently with the other languages; divergence appears only when languages share an index. We trace the mechanism: each language keeps its own ranking, but in the shared index, its correct answers are pushed far down, buried under non-relevant documents that are either in the query's own language or in English, depending on the model. We introduce disagreement-guided steering: for each language, we contrast the documents that other languages agree on for a question against those that language retrieves idiosyncratically, and take the difference of their representations as a language-specific direction, added to that language's queries at inference. Against baselines of language-mean removal, subspace removal, and per-language rotation, it most strongly reduces same-language crowding while remaining competitive on recall, trading off against mean removal, which better preserves ranking quality.",
+      "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Minghao Fu",
-          "Tavis Siebert",
-          "Eryk Halicki",
-          "Randall Balestriero"
+          "Faeze Ghorbanpour",
+          "Shaghayegh Kolli",
+          "Jana Diesner",
+          "Alexander Fraser"
         ],
-        "categories": []
+        "categories": [
+          "cs.CL",
+          "cs.IR"
+        ]
       }
     },
     {
-      "id": "2610.13990",
-      "title": "DoSA: Dots Sparse Attention",
-      "url": "https://arxiv.org/abs/2610.13990",
-      "source": "Hugging Face Daily Papers / arXiv",
-      "published_at": "2026-10-14T00:00:00+00:00",
-      "summary": "Sparse attention visits few keys, yet finding them can still require scoring every key with every indexer head. We introduce DoSA (Dots Sparse Attention), a lossless method for making this computation conditional while preserving exact token selection. Its central observation is that Top-K selection requires sufficient evidence to reject a candidate, not necessarily its full score. A seed set supplies a lower bound on the winning threshold. Nonnegative head projections and joint residual bounds upper-bound positive contributions, while activation-informed aggregation bounds the magnitude subtracted by negative heads. The certificate directs full scoring toward candidates that remain eligible; exact-score filtering further reduces writeback and selection work. We establish the certificate and its exact-selection conditions, and analyze how geometry and selection margins govern its effectiveness. Our GPU implementation accelerates the complete Indexer by up to 2.74 times over SGLang and 1.69 times over LiteTopK across English, Chinese, and code workloads. End-to-end evaluation on GLM-5.2 and DeepSeek-V3.2 achieves up to 1.94 times and 1.50 times time-to-first-token speedups over the two baselines, respectively.",
-      "score": 14,
+      "id": "2610.18523",
+      "title": "APTree: Extended Behavior Trees for Adaptive and Scalable Automated Robotic Task Planning in Construction",
+      "url": "https://arxiv.org/abs/2610.18523v1",
+      "source": "arXiv",
+      "published_at": "2026-10-13T15:12:13+00:00",
+      "summary": "Task planning for robots in off-site construction prefabrication is primarily manual, leading to planning inefficiencies and reluctance to adopt robotic solutions. Existing approaches provide limited support for scalable, modular automated task planning and localized runtime replanning. This paper proposes APTree, a model-driven framework that integrates automated task planning with modular task execution using behavior trees as the execution model. APTree repeatedly applies and coordinates heterogeneous symbolic planners to automatically generate and compose modular task plans at runtime. To support this approach, we develop a domain-specific language for the formal specification and validation of task plans, together with a compatible execution engine. We evaluate APTree on the real-world livMatS Biomimetic Shell pavilion, where it models the construction robotic fabrication domain, detects injected specification and planning errors at design time and runtime, and automatically generates large-scale task plans by coordinating three symbolic planners across numerous planning modules. A machine-checked formal analysis further shows that composed execution and local replanning are safe under explicitly stated assumptions, including planner soundness and non-interference of generated plans, providing practitioners with explicit conditions for dependable plan composition. APTree thus enables construction practitioners to leverage automated task planning without requiring detailed knowledge of symbolic planning techniques or APTree's internal implementation.",
+      "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Fanxu Meng",
-          "Taosong Fang"
+          "Shermin Sherkat",
+          "Thomas Wortmann",
+          "Andreas Wortmann"
         ],
-        "categories": []
+        "categories": [
+          "cs.RO",
+          "cs.AI",
+          "cs.SE"
+        ]
       }
     },
     {
-      "id": "2610.14224",
-      "title": "Harness^2: Recursive Agent Harnessing for an Open World",
-      "url": "https://arxiv.org/abs/2610.14224",
-      "source": "Hugging Face Daily Papers / arXiv",
-      "published_at": "2026-10-14T00:00:00+00:00",
-      "summary": "LLM agents' capabilities depend not only on their underlying models but also on their execution harnesses. Recursive self-improvement (RSI) offers a promising approach to automatically evolve these harnesses. However, deploying RSI in open-world settings still faces two critical challenges. First, open-world tasks are typically unseen during the harness design phase and novel at test time, leaving no ground-truth verifiers to reliably guide online harness edits. Second, the RSI process remains highly task-specific and fails to generalize to novel scenarios. We introduce Harness^2, a plug-and-play, recursive agent harnessing framework that addresses these challenges through two connected levels of recursion. Task-level recursion refines the current task's harness using a contrastive Propose-Probe-Compose step that reliably guides edits without ground-truth verifiers, and can be scaled further via parallel or sequential recursion. Harnessing-level recursion then extracts experience from these edits to update a continual improvement harness, enabling the agent to better adapt to future tasks. Across three professional benchmarks and four model-harness configurations, a single step consistently improves GLM-5 and Gemini 3.5 Flash over their base harnesses, yielding gains of up to 11.5 points on WorkBuddy-Bench, 4.5 points on JobBench, and 11.8 percentage points on LAB, with further gains as the task-level recursion budget increases.",
-      "score": 11,
+      "id": "2610.18522",
+      "title": "Lost in Implicit Routing: How LLM Agents Fail to Load Relevant Skills at Scale",
+      "url": "https://arxiv.org/abs/2610.18522v1",
+      "source": "arXiv",
+      "published_at": "2026-10-13T15:12:12+00:00",
+      "summary": "Reusable skills let LLM agents load task-specific instructions on demand, but they make execution depend on implicit routing over skill metadata. We test whether this design scales by holding SkillsBench tasks and their golden skills fixed while adding irrelevant skills. We find skill routing collapse: agents increasingly load fewer or no skills, even though the relevant skills remain available. With 1,000 irrelevant skills, loaded-skill recall falls from 73.6% to 27.4% and the zero-load rate rises from 9.3% to 51.6%, whereas explicit selection from the same library retains 73.9% recall. Loading other skills, including plausible alternatives to golden skills, is too rare to explain this decline. Masking only the descriptions of irrelevant skills largely restores skill loading, yet with the metadata intact, explicitly asking agents to plan skill use still yields lower recall than preselection. These findings point to semantic interference from descriptions and instruction interference when skill choice competes with task execution. We also evaluate explicit preselection as a practical mitigation, including its coverage and latency trade-offs. Our analysis informs skill protocols and evaluation for agents with growing skill libraries.",
+      "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Ruiyao Xu",
-          "Yanfei Chen",
-          "Zhongying CuiZhu",
-          "Bhavana Dalvi Mishra",
-          "Yifei Ming",
-          "Han Yu",
-          "Rujun Han",
-          "Chen-Yu Lee",
-          "Tomas Pfister"
+          "Jinlin Liu",
+          "Wei Chen",
+          "Xiaojin Zhang"
         ],
-        "categories": []
+        "categories": [
+          "cs.AI"
+        ]
       }
     },
     {
-      "id": "2610.15208",
-      "title": "PANINI-DR: Controlled Deep Research through Generative Semantic Workspaces",
-      "url": "https://arxiv.org/abs/2610.15208",
-      "source": "Hugging Face Daily Papers / arXiv",
-      "published_at": "2026-10-14T00:00:00+00:00",
-      "summary": "Deep research requires connecting multiple steps of search, reasoning, and computation, with intermediate findings guiding what to investigate next. As investigations grow, agents must maintain research state across model calls and check findings before errors propagate into subsequent work. We introduce PANINI-DR, a multi-agent harness that separates coordination of the overall investigation from the research and verification of individual subquestions. A shared workspace, built on the Generative Semantic Workspace representation, records subquestions, their dependencies, findings, and supporting evidence. Researchers investigate individual subquestions, while a separate verification agent checks proposed answers against those subquestions and their evidence. Verification feedback guides further investigation, and recorded findings inform subsequent assignments. We evaluate PANINI-DR on BrowseComp-Plus, FRAMES, and MoNaCo against seven state-of-the-art deep-research harnesses, all using a shared language-model backbone and frozen corpora. PANINI-DR achieves the strongest average performance across the three benchmarks. On BrowseComp-Plus, it achieves 73.3% accuracy, outperforming the next-best harness by 16.0 points. Its advantage is strongest on hard questions, where it answers nearly twice as many as the next-best harness. Ablations further show that structured planning and persistent state improve performance, as does checking each finding against its cited evidence before it is reused. Because a model can answer correctly from memory alone, we also analyze the evidence retained by each harness. PANINI-DR achieves the highest answer recoverability from saved evidence on all three benchmarks, while complementary claim-support audits show stronger evidence-backed answers. Accounting for this evidence changes how harnesses compare and further strengthens PANINI-DR's advantage.",
-      "score": 6,
+      "id": "2610.18520",
+      "title": "The Geometry of Language Model Logits: Generic Structure and Learned Departures",
+      "url": "https://arxiv.org/abs/2610.18520v1",
+      "source": "arXiv",
+      "published_at": "2026-10-13T15:11:06+00:00",
+      "summary": "Autoregressive language models produce, at every prediction step, a vocabulary-sized logit vector whose structure determines the conditional next-token distribution. We empirically identify that the ordered vocabulary-head logits follow a remarkably consistent log-linear relation \\[ z_{(r)} \\approx μ- α\\log r. \\] across prediction contexts, architectures, and scales, emerging progressively during pretraining. To our knowledge, this is the first systematic analysis of the logit geometry underlying the distributional assumptions used in the prior decoding work. While controlled order-statistic baselines spanning bounded, light-tailed, and heavier-tailed distributions can largely explain the observed log-linear geometry, they do not explain the systematic shift in the slope $α$: trained language models exhibit $α\\approx 1.4$--$1.7$, sitting well above the initialization baseline ($α\\approx 0.2$) . Moreover, $α$ correlates with predictive performance, suggesting that it captures learned structure beyond generic extreme-value effects.",
+      "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "M. Yigit Turali",
-          "Shreyas Rajesh",
-          "M. Efe Lorasdagi",
-          "Chenda Duan",
-          "Kartik Sharma",
-          "Vwani Roychowdhury"
+          "Swathi Shree Narashiman",
+          "Aravind Ramana Venkatramanan",
+          "Nambi Seshadri"
         ],
-        "categories": []
+        "categories": [
+          "cs.CL",
+          "cs.AI"
+        ]
       }
     },
     {
-      "id": "2609.38377",
-      "title": "PhyProbe: Rethinking Physical Consistency Evaluation in Generated Videos",
-      "url": "https://arxiv.org/abs/2609.38377",
-      "source": "Hugging Face Daily Papers / arXiv",
-      "published_at": "2026-10-14T00:00:00+00:00",
-      "summary": "Evaluating the physical consistency of generated videos remains a fundamental challenge. Existing approaches rely on off-the-shelf vision-language models, which can often be myopic to physical dynamics, or fine-tuned evaluators trained on human annotations, which overfit to dataset-specific cues and fail to generalize. A key challenge is that existing supervision sources provide either relative ordering or absolute scores, but not both reliably and consistently across varied settings. To this end, we introduce PhyProbe, an evaluator that extracts features from a frozen pretrained spatio-temporal encoder and maps them to a scalar physical consistency violation score via a lightweight scoring head. PhyProbe is trained through a unified objective combining pairwise ranking, regression on noisy scalar annotations, and anchor-based calibration over a curated set of heterogeneous supervision sources. Experiments show that PhyProbe outperforms prior methods on most pairwise benchmarks spanning real-generated and generated-generated pairs under varying correspondence, with the largest gains in no-correspondence and generated-generated settings where existing fine-tuned evaluators degrade sharply. PhyProbe achieves strong correlation with human judgments, with close agreement between rank-based and linear metrics, indicating that scores are both well ordered and anchored to a stable [0, 1] scale. Further, despite being trained on supervision indicative of physical consistency, without explicit general-preference labels, PhyProbe also performs competitively on human preference benchmarks: consistent with the observation that physics violations are entangled with broader quality degradations.",
-      "score": 6,
+      "id": "2610.18517",
+      "title": "Imprinting: Knowledge Distillation Can Shift Student Behavior",
+      "url": "https://arxiv.org/abs/2610.18517v1",
+      "source": "arXiv",
+      "published_at": "2026-10-13T15:09:59+00:00",
+      "summary": "Knowledge distillation trains student models on teacher-generated responses to transfer task capability, but those responses may also carry behavioral tendencies of their source. We investigate whether the source teacher can shape student behavior beyond the capability that distillation is intended to transfer. We construct harm-accepting and harm-avoiding variants of the same base teacher, use them to generate responses to ordinary reasoning and knowledge questions unrelated to safety, and distill those responses into students with different base models. Students generally acquire task capability while their downstream decisions shift toward the source teacher's safety-pragmatism disposition, a phenomenon we call imprinting. Distillation from the harm-accepting teacher reduces harm avoidance, whereas distillation from the harm-avoiding teacher increases it. Imprinting varies across teacher-student pairs and does not extend uniformly across different forms of safety behavior. Excluding a sparse set of divergence tokens reduces imprinting, whereas response rewriting preserves the source-dependent effect and can introduce additional rewriter-dependent shifts. Post-distillation preference optimization raises harm avoidance but does not eliminate the source-dependent difference. These results show that behavioral tendencies can be intentionally imprinted through the source teacher, even with ordinary task supervision.",
+      "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Max Ku",
-          "Jiaojiao Fan",
-          "Zekun Hao",
-          "Francesco Ferroni",
-          "Heng Wang",
-          "Wenhu Chen",
-          "Ming-Yu Liu",
-          "Prithvijit Chattopadhyay"
+          "Yu-Chien Tang",
+          "An-Zi Yen"
         ],
-        "categories": []
+        "categories": [
+          "cs.CL"
+        ]
       }
     }
   ]
