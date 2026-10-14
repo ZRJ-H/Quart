@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-10-13T14:57:24.698207+08:00",
+  "cached_at": "2026-10-14T11:01:32.392061+08:00",
   "articles": [
     {
-      "id": "50058507",
-      "title": "GLM-Legal",
-      "url": "https://z.ai/blog/glm-legal",
+      "id": "50073879",
+      "title": "Gemini 4 Argon",
+      "url": "https://deepmind.google/models/gemini/",
       "source": "Hacker News",
-      "published_at": "2026-10-12T16:11:45+00:00",
-      "summary": "GLM-Legal",
-      "score": 519,
-      "comments": 298,
-      "discussion_url": "https://news.ycombinator.com/item?id=50058507",
+      "published_at": "2026-10-13T16:03:16+00:00",
+      "summary": "See also: Gemini 4 Argon for Robotics - https://news.ycombinator.com/item?id=50074869",
+      "score": 1059,
+      "comments": 787,
+      "discussion_url": "https://news.ycombinator.com/item?id=50073879",
       "extra": {
         "top_comments": [
-          "I would love to see these benchmarks split up across \"generic\" tasks and novel tasks.For example, redlining an OEM agreement with my vendor. They pretty much all use the same template, and the objections are always the same. I tried using Claude first, and even my lawyer was impressed that it found things they missed. Then I used Claude to redline that type of contract and the other side said \"your lawyer was surprisingly thorough\". I had my lawyer do the final check, but saved a bunch of money doing the first three rounds with Claude instead. And my lawyer basically just said \"looks good to me\" by the time they reviewed it.Or even writing a simple will or estate document.It seems like LLMs are great for the kind of generic work you'd usually pawn off to a new associate or paralegal, but not for the important things that partners usually do.",
-          "Seems like people forgot Z.ai was snapshotting the entire workspace before every prompt. https://blog.ferstar.org/en/posts/zcode-silent-workspace-sna...How could we trust legal product from a company who was ignoring privacy protection law like that?",
-          "I’m not sure if this is the right solution, but we clearly need better tools for the legal space. Anthropic's recent policy update makes this abundantly clear:“When our products are used in ways that can affect someone's health, legal rights, finances, livelihood, or access to essential services, we require there to be a qualified ‘human in the loop’ (that is, someone who has the authority to review and, if necessary, change Claude’s recommendations), and for the individual affected to be told that AI was used.”Something as common as a family law case has the potential to affect all of the above. Now imagine being a petitioner, respondent, paralegal, or other 3rd party using Claude to review a draft document only to find out that Anthropic has sent your entire file to opposing counsel.It sounds egregious, but Anthropic is clearly stating they will use their own judgment to control what people can do with its product, and that they will treat customer data as if it's theirs to disseminate. So there's a massive opportunity for an unbiased tool willing to fill this void."
+          "I haven't tried it for coding yet, but I ran a couple of my recent curiosity driven queries from Claude (mostly used Fable and Opus 5.5) through it.This is a clear step change, I'm genuinely amazed.Its answers are to-the-point, logically structured, clearly written. Like a really well made mini essay on your question.It also really likes to build little simulations / models that you can tweak the parameters on. Amazing to explore how different assumptions affect economic scenarios, for example.It's also great at picking (sourced) illustrations.I'll be using this for everything that isn't coding from now on.",
+          "I'm using this model via API. I am most excited about its ability to write the english language (or any language). My least favorite trend on twitter has been people posting 2D illustrations/3D renders as a proxy for model capability. Well-written prose is far less likely to go viral but far outstrips the importance rendering a fantasy world in one shot.I've been trying it out via the API and the model has been a delight so far. Clear in the head, not RL-fried, distinct writing style, and big model smell. That said, the em-dash is back w/ this model.That said, I would be so frustrated with Sundar Pichai if I was on the Google team. The botched rollout of this model seems to be entirely a matter of capacity, and Pichai has been more than happy to give it to anybody but his own team.",
+          "Gemini 4 Argon is a new leader in Pareto-frontier. Looks like, Google is back in the race.https://arena.ai/leaderboard/agent/chat/paretoFor almost same intelligence (+15.56%, +15.18%), drastic difference in cost/task ($3.51 vs $0.41)"
         ]
       }
     },
     {
-      "id": "50058528",
-      "title": "A Modern Web App in C",
-      "url": "https://prophitt.me/writing/a-modern-web-app-in-c",
+      "id": "50073633",
+      "title": "Redesigning source control at Anthropic",
+      "url": "https://www.anthropic.com/engineering/redesigning-source-control",
       "source": "Hacker News",
-      "published_at": "2026-10-12T16:13:10+00:00",
-      "summary": "A Modern Web App in C",
-      "score": 505,
-      "comments": 213,
-      "discussion_url": "https://news.ycombinator.com/item?id=50058528",
+      "published_at": "2026-10-13T15:49:56+00:00",
+      "summary": "Redesigning source control at Anthropic",
+      "score": 579,
+      "comments": 553,
+      "discussion_url": "https://news.ycombinator.com/item?id=50073633",
       "extra": {
         "top_comments": [
-          "My favorite trivia is that busybox has built-in cgi-bin support (and `rclone serve webdav` seems remiss to not mention as well). `https://elixir.bootlin.com/busybox/1.37.0/source/networking/...`Everything the post mentions is 100% true and well-reasoned, especially with the inclusion of pledge/chroot/etc. for dropping privileges.There's two diametrically opposed deployment mechanisms:1) stack towers of glop on top of each other until you're running a simple `echo \"hello world\"` on top of a docker container inside a vm in a proxmox server as part of a k8s cluster under a hypervisor running on remote compute...2) just run `bash -c 'echo \"hello world\"'` and front it with CGI (stateless, single binary, yada yada yada...)Take a peek at https://github.com/Domain/bash.cgi ... not that i'm suggesting that 'bash over busybox using cgi-bin' is the \"proper architecture\", it's more trying to illustrate that the amount of code that holds you back from being nearly truly \"frameworkless\" is tiny and easy to reason about.For some of the internal tooling I'm doing for work, I've been tending towards: some-cmd [--json|--markdown] ...yet-more-args... When you use the process and shell environment itself as a repl, you start trending towards `[--cgi-bin]` would \"just\" be another output type, and the ability (nay: foresight!) to ensure that your commands are independent, reproducible, and only depend on their input arguments leads you directly towards being runnable in both \"hostile\" (ie: firecracker vm / lambda-style) or very \"comfortable\" environments (ie: shell, debuggers, unit/integration tests).",
-          "For people who find interest in weird web applications, I have been working on a game project, in C++, where the client is compiled to WebAssembly with Emscripten, and the application server is also implemented in C++ (behind nginx).This is from pre-AI era also. The game is Civ-like. Custom engine from scratch (including both the 3D stuff, and all the web handling also).Take a look: https://statebuilder.com/",
-          "I started a web dev company 22 years ago after developing an online menu ordering system for a restaurant I owned. I, then we, did pretty much the same thing as talked about in the posting but we used fastcgi. I started with C because I knew C. That was my real job. It ran so well, the franchise bought the software from me--and then devolved it to all the Microsoft stuff and had issues upon issues from then on out. That's another story.I continued to make sites for other venues that needed online ordering; such as theatre companies and restaurants. All in C, fastcgi, FreeBSD, postgresql and h2o-server cause it always did what we wanted without bending to someone else's rules. It was fast and easy to make changes while changes weren't made for us or without our consent. We did very well for ourselves."
+          "Excuse me for throwing up this stupid idea, but if code changes per unit of time keep growing at this rate and are not slowing down with infinite merging demand, it seems that this repo will be in a constant state of continuous change and we constantly roll forward with automated code and obviously no direct human supervision, then why even have source control? Why not just let software be fluid and, like Heraclitus river, never step twice in the same repo.",
+          "> As our monorepo grows, it increasingly doesn’t fit that design space. The history of our main branch alone is almost 100 GBThe first thing that hits me is, did you consider not going all in on a monorepo? I know it has been the trend in general, but it seems a bit of a red flag when you go from \"let's have a monorepo it will make merging easier\" to \"let's redesign version control because merging is too hard now\" without the middle question \"should we really have a monorepo?\"As a derivative thought I'm curious if AI tooling is tipping people more towards monorepos now since it gives the agent the whole context of the app in one go? Or is this independent - I can easily check out 5 repos in one directory and run an agent there.",
+          "> Plus, Anthropic is unique in that our ability to spend tokens for internal use far exceeds what any other business would realistically want to spendI appreciate that they're extremely self-aware here."
         ]
       }
     },
     {
-      "id": "50063427",
-      "title": "AI is a tool and using it well takes skill",
-      "url": "https://yyhh.org/blog/2026/10/ai-is-a-tool/",
+      "id": "50078141",
+      "title": "OpenAI engineer arrested in bugging of executive conference room",
+      "url": "https://sfstandard.com/2026/10/13/openai-engineer-arrested-alleged-bugging-executive-conference-room/",
       "source": "Hacker News",
-      "published_at": "2026-10-12T21:40:18+00:00",
-      "summary": "AI is a tool and using it well takes skill",
-      "score": 353,
-      "comments": 281,
-      "discussion_url": "https://news.ycombinator.com/item?id=50063427",
+      "published_at": "2026-10-13T20:23:55+00:00",
+      "summary": "https://x.com/OpenAINewsroom/status/2110095403198849132",
+      "score": 441,
+      "comments": 388,
+      "discussion_url": "https://news.ycombinator.com/item?id=50078141",
       "extra": {
         "top_comments": [
-          "Its probable that AI will roll out much faster than humans can develop that skill of using it in a way that increases not decreases human knowledge over time.The current slew of excellent LLMs will probably cause a decades long dip in human cognitive ability.If social media on smartphones had an impact of ability of students to concentrate, LLM AI will likely have a much greater negative impact on education.There are trillions of dollars of investment pushing for humans to trust whatever an LLM says, and very little money behind encouraging people to tackle hard problems themselves and train themselves to think.I have to say honestly, that AI looks like an apocalypse for human thinking [ Im glad Tao is warning people, I just dont think many people will listen ]",
-          "I go back and forth on this. For awhile yes it took a lot of workflow tweaks and finesse to get directionally correct outputs (thinking back like mid 2025). I invested time in figuring that out, mostly because I was interested, but those skills are all obsolete now, you don't need to worry so much about context management and special instruction recipes or anything these days.The meta at this point seems to be mostly around \"knowing what to ask for\". Eg: I suck at prompting for specific design tweaks, because I don't have the design vocabulary to be specific and articulate what I want. It's a lot of trial and error. I hear people who are developing full scale applications without a tech background run into the issue writ large. For now, I have an advantage over these people when building applications. But perhaps that's just one round of RL away from being obsolete too. Supposedly the model will eventually have such good taste in design/architecture/whatever there will be little point in asking for tweaks.The only thing that seems relatively future-proof is just being able to communicate clearly what you're trying to do. Not how to do it, or even what success looks like. Perhaps an element of it is even as basic as being honest with yourself.",
-          "What I see is that we are in the phase where managers are buying the marketing hype and think that people can be replaced. I guess people believe what they want to believe.I anticipate a later wave a re-hiring people who actually know how to run a business / tech center / call center... whatever the AI replaced.The hard work will not be to replace the people, but to change the organizations so that the productivity of AI can be harvested by the people."
+          "These are not very smart spies:> A chatbot account tied to Alfozan’s spouse, which shared identifiers with his own account, submitted prompts between Sept. 24 and Sept. 30 about building, installing, obscuring, and remotely accessing a recording device, prosecutors said. Queries included how to “build a continuous audio recorder” and “encrypt the SD card,” prosecutors claimed. On Sept. 27 and 28, the account asked about the specific device that was later found, including its unique MAC address.",
+          "This guy previously worked at Meta from 2017 to 2022 on Data Infrastructure projects.I expect Meta are running an audit right now to figure out if he was involved in espionage back then as well.",
+          "I am a bit confused by Figure 3. Do they really have a surveillance camera angled just right to capture a photo of someone between the monitor and the wall that supports it?Here is a direct link to Figure 3:https://assets.sfstandard.com/image/994911177489/image_bfl33..."
         ]
       }
     },
     {
-      "id": "50063138",
-      "title": "Who is vfmaddrnd231pd?",
-      "url": "https://purplesyringa.moe/blog/who-is-vfmaddrnd231pd/",
+      "id": "50072913",
+      "title": "Thunderbird for iOS",
+      "url": "https://blog.thunderbird.net/2026/10/thunderbird-for-ios-a-first-look-at-the-native-iphone-email-app-in-development/",
       "source": "Hacker News",
-      "published_at": "2026-10-12T21:12:43+00:00",
-      "summary": "Who is vfmaddrnd231pd?",
-      "score": 173,
-      "comments": 16,
-      "discussion_url": "https://news.ycombinator.com/item?id=50063138",
+      "published_at": "2026-10-13T15:07:37+00:00",
+      "summary": "Thunderbird for iOS",
+      "score": 358,
+      "comments": 161,
+      "discussion_url": "https://news.ycombinator.com/item?id=50072913",
       "extra": {
         "top_comments": [
-          "An old version of binutils [1] explains what DDS means: How to encode VEX.vvvv: 0: VEX.vvvv must be 1111b. 1: VEX.NDS. Register-only source is encoded in VEX.vvvv where the content of source registers will be preserved. VEX.DDS. The second register operand is encoded in VEX.vvvv where the content of first source register will be overwritten by the result. VEX.NDD2. The second destination register operand is encoded in VEX.vvvv for instructions with 2 destination register operands. For assembler, there are no difference between VEX.NDS, VEX.DDS and VEX.NDD2. 2. VEX.NDD. Register destination is encoded in VEX.vvvv for instructions with 1 destination register operand. 3. VEX.LWP. Register destination is encoded in VEX.vvvv and one of the operands can access a memory location. [1] https://sourceware.org/git/?p=binutils-gdb.git;a=commitdiff;...",
-          "See https://www.felixcloutier.com/x86/vfmaddrnd231pdTheory: It was removed due to hardware issue and never worked",
-          "Looks like a name for a RISC-V extensionEdit: Checked the article and dang... x86"
+          "I have been using K9 for a long time on Android. No complaints. I guess most Apple users will simply use the default email client, which works well and is probably better integrated and has a better UI than Thunderbird.On Linux desktop, Thunderbird is still the best all around email/CardDAV/CalDAV client it seems, despite being unreasonably heavy.",
+          "Apple Mail completely breaks when you have 100.000+ mails in an IMAP account. Even on MacOS it‘s unusable (search, index) while Thundebird works flawlessly.",
+          "I am almost certain that the only reason (feature) I have Thunderbird desktop installed has no place in this iOS app – an editable FROM field. I am pretty sure of that.Ah, just saw the coolest thing - an epic subheading:> Designed for growthLove it. There's no stopping this app now. Godspeed, Mozila/Thunderbird! Grow is the new word."
         ]
       }
     },
     {
-      "id": "50061791",
-      "title": "Making big downloads resumable in Firefox",
-      "url": "https://lunarwatcher.codeberg.page/til/firefox/resumable-big-downloads.html",
+      "id": "50077020",
+      "title": "Show HN: Guitoro, a virtual guitar you strum with your keyboard",
+      "url": "https://guitoro.com/",
       "source": "Hacker News",
-      "published_at": "2026-10-12T19:36:02+00:00",
-      "summary": "Making big downloads resumable in Firefox",
-      "score": 165,
-      "comments": 65,
-      "discussion_url": "https://news.ycombinator.com/item?id=50061791",
+      "published_at": "2026-10-13T19:11:48+00:00",
+      "summary": "Guitoro is a free browser guitar using recordings of real instruments. You can strum with your keyboard, mouse, or touchscreen, choose acoustic, classical, electric guitar or bass, and see chord fingering and each stroke. Song practice can be slowed to 20%, and there are free chord tools and tuners. No signup or download.1 minute video demo: https://youtu.be/DtcluMLdSgsI would love feedback on how the strumming feels and sounds.",
+      "score": 314,
+      "comments": 92,
+      "discussion_url": "https://news.ycombinator.com/item?id=50077020",
       "extra": {
         "top_comments": [
-          "I'll try this.The way I have to resume downloads in Firefox is1. Move the .part file to a temp file2. Start the download again; a new .part file gets created3. Pause the download4. Move the temp file to the .part file, overwriting it5. Unpause the download; it resumes from where the old .part file stoppedThis is only necessary if a \"one-time\" download link gets interrupted part-way through, eg. by a flaky connection. Attempting to resume a one-time link like normal gets (I assume) a 400 response and FF kills the .part file.",
-          "I like using the aria2[0] download utility - I don't think I've downloaded anything bigger than a dozen megabytes through a web browser for the last several years, and this method allows me more protocols, multiple connections, and of course continuing downloads. That said, it's nice someone found a solution to the problem - makes life easier for everyone who doesn't use an external download utility... How do you even go about finding the solutions to bugs like this?[0]: https://aria2.github.io/",
-          "Based on the setting `network.http.response.timeout`, which is timeout related, I'm *guessing* Firefox cannot distinguish between a network EOF or a logical/request-level EOF?But that aside, it's kinda typical for a software from the developed world to have fault tolerance this bad. The engineer who wrote the code probably never ever annoyed by network error aside from a few well-known cases, and thus don't take these problems to their hearts.For example, have you tried to download big files with a connection that has 100ms ~ 20seconds latency jitter? That happens with crossborder connections in/out of China. And in India, your users sometime experiences power issue which set their router to reboot or redial, that also causes an interruption in download.Of course, people in these countries can't pay you much. But, these problems can all be solved/mitigated in software. Do you want to improve your software so it can be more robust, or do you want to waste user's time sitting in front your software just to get things done?"
+          "Looking forward to your acquihire by Guitar Center! Makes me want to dust off my old acoustic after work and practice some more.",
+          "That's one of the best guitar UIs I've seen on a computer.",
+          "Very well done. Looks and sounds great.A couple of UX thoughts I had while using it:1. Since the chords are all within a specific key, have you considered using the numbers 1 through 7 to play the respective chords? That way playing a 1-4-5 or a 2-5-1 would be very intuitive?2. Have you considered using modifier keys (shift, ctrl, alt) to control whether a chord is strummed down versus up (e.g. pressing A would be down, but Shift+A would be up) or major/minor (A would be major, Alt+A would be minor)? I guess Ctrl could be a 7th chord modifier too.Just some thoughts. Great tool!"
         ]
       }
     },
     {
-      "id": "50063365",
-      "title": "Intel D270 GPU AI Accelerator–Up to 480 GB LPDDR5X",
-      "url": "https://www.intel.com/content/www/us/en/products/details/discrete-gpus/data-center-gpu/d-series.html",
+      "id": "50073221",
+      "title": "I posted to HN, and then my website was flooded with AI bot traffic",
+      "url": "https://www.sammystraus.com/#i-posted-to-hn-and-then-my-website-was-flooded-with-ai-bot-traffic",
       "source": "Hacker News",
-      "published_at": "2026-10-12T21:35:35+00:00",
-      "summary": "Intel D270 GPU AI Accelerator–Up to 480 GB LPDDR5X",
-      "score": 161,
-      "comments": 72,
-      "discussion_url": "https://news.ycombinator.com/item?id=50063365",
+      "published_at": "2026-10-13T15:25:50+00:00",
+      "summary": "I posted to HN, and then my website was flooded with AI bot traffic",
+      "score": 270,
+      "comments": 152,
+      "discussion_url": "https://news.ycombinator.com/item?id=50073221",
       "extra": {
         "top_comments": [
-          "These are going to be so awesome to buy in 5-8 years!Right now I’m running 2x 3090 and 128 gb ram on 3.8 flash-next180b (the quant is 97gb) and it hums at120t/s. It’s really a surprisingly good model for general tasks, and I’m soon to see how it does with more agentic kit. For agentic work it does slow down quite a bit when the context fills up… but what do you want for running a 180b model on consumer hardware?Right now I have it set up as an administrator for our asterisk PBX and radius server, and it does higher level judgment on our cctv footage for notifications to security. It’s been really good so far. Agents are the new UI, everything just works over SSH now.",
-          "With an impressive 1.5TB/s RAM bandwidth you'd think they'd advertise that more.Marketing department asleep at the wheel.",
-          "To be honest these ubiquitous AI hardware news look to me more and more like Maybach commercials.Not targeting me"
+          "There is so much spam, abuse, and aggressive scraping that I've had to block: - AWS - Google Cloud - Azure - Alibaba Cloud - Oracle and a handful of other ASNs on almost all of my properties. It would be one thing if it was simple scraping, but it's often genuine agentic abuse (just spamming for vulnerabilities* or scraping millions of pages with very little valuable or dynamic content). These clouds must get the abuse happening under their own roof under control.I banned Alibaba's Cloud two years ago and it still hits one of my domains 1 million times per day, despite every route 4xx-ing during that time.Even Apple has aggressively ramped up its scraping in the past few months, but thankfully they do respect robots.txt.It's frustrating because some of my real users route through these clouds via their work VPNs. Also, there are a lot of less-than-reputable AI scrapers using global bot-nets via residential IPs to scrape, making it even harder to detect and ban them without affecting real people.* like leaked .env routes, brute forcing admin panels, and so on",
+          "Last year, I wrote a post about how I use zipbombs to deal with bot traffic [0]. It went mega viral over the web, and I regret it. My server was completely overwhelmed with bot traffic. After months of dealing with it, I had to find a better strategy then keep my mouth shut.[0]: https://news.ycombinator.com/item?id=43826798",
+          "I really recommend blocking all traffic from anything on https://github.com/borestad/blocklist-abuseipdb"
         ]
       }
     },
     {
-      "id": "50065692",
-      "title": "AI Models Can Provably Hide Arbitrary Capabilities",
-      "url": "https://arxiv.org/abs/2610.13928",
+      "id": "50072994",
+      "title": "The United Kingdom generates less electricity per person than in the 1970s",
+      "url": "https://ourworldindata.org/data-insights/electricity-generation-per-person-in-the-united-kingdom-has-fallen-by-a-third-from-its-early-2000s-peak",
       "source": "Hacker News",
-      "published_at": "2026-10-13T02:07:08+00:00",
-      "summary": "AI Models Can Provably Hide Arbitrary Capabilities",
-      "score": 140,
-      "comments": 73,
-      "discussion_url": "https://news.ycombinator.com/item?id=50065692",
+      "published_at": "2026-10-13T15:12:57+00:00",
+      "summary": "The United Kingdom generates less electricity per person than in the 1970s",
+      "score": 221,
+      "comments": 313,
+      "discussion_url": "https://news.ycombinator.com/item?id=50072994",
       "extra": {
         "top_comments": [
-          "I saw a similar effect maybe 2.5 years ago now. I found that training an LLM hides information in the weights.It was only ~1B model but the interesting behavior was.Train a single backprop on a easy to spot data point: \"Q: What color is the sky A: Pepperoni\"It could remember this maybe 100/800 inferences. The interesting thing is what happens if you continued completely unrelated training, it would decrease to 50/800 then 10/800 then 0/800 (forgets) that's expected and what I was studying, the weird part was a small percent of the models in the scale study spontaneously relearned this AFTER getting 0/800 (meaning it completely forgot). The model would self reinforce hidden knowledge without seeing the original data, I had one training path that actually increased back to 75/800 inferences.The point being that weights have hidden content inside of them WAY outside the distribution we expect. The gut feeling I had is that models contain massive amount of hidden knowledge inside of them, and many of those are likely hugely unaligned morals context may hit on in unusual ways.Fine tuning is a rats nest for this as well. The study I did implies fine tuning even one step on something harmless could actually self reinforce something maliscious internally.",
-          "More clear title, given how people talk about AI:\"Capabilities can be hidden in AI model weights by encryption\".It's not about AI agents being able to hide what they can do.",
-          "This has always been my worry with open source models... give them away for free, but with a sleeper agent built in that some arbitrary string can activate. Local deployments will still have web search connectors the majority of the time."
+          "There's lots of amusingly Telegraph-esque outrage being posted here. But the article makes it clear that the reduction is due to reduction in demand, due in part to welcome improvements in efficiency, but also regrettable deindustrialization, and (neutral?) increased importing of electricity. Nobody is planning to ration electricity suppies.I also wonder what the contribution of domestic solar and on-site industrial generation is? I'm a dev in a large manufacturing business and two of our three factory buildings are now covered in solar cells which power a lot of our operations. Some big industrial sites have on-site wind-powered generation too. Is that counted as generation in these stats? Or is it just manifested as reduced demand?(Edit: added \"being posted\", \"welcome\" and \"(neutral?)\" for clarity)",
+          "I was at a conference last year where one of the speakers was from National Grid. Not only these morons had in mind that electricity demand should decrease (even before AI, it was obvious that demand would go up as we are moving away from fossil fuel with both heating and transportation going electric).But their great idea to deal with the shortage is intermittent availability of power. You won't be able to wash your clothes when you feel like, you will have to adapt to when there is spare power, like in developing countries. This is just a regression in technological progress.I saw the same messaging in France where the current president started his mandate with a grand programme to switch off a third of nuclear power plants.If anyone thinks adults are in charge, let alone engineers, you are greatly mistaken.",
+          "The decline in energy from 2003-present lines up nicely with the phase out of incandescent lights in favour of CFLs and of CFLs in favour of LEDs.Lets say a house typically had 5 60W bulbs on for 8hrs a day, now replaced with an 8W bulb. That would be a 2 kWH reduction, which roughly corresponds to the drop shown in the data.EDIT: actually now that I think about it, 2kWh per-household is probably less than 1kWh per-capita. It's still a good chunk though!"
         ]
       }
     },
     {
-      "id": "50059096",
-      "title": "Launch HN: Agent37 (YC F26) – Low-cost agent sandboxes for running agents",
-      "url": "https://news.ycombinator.com/item?id=50059096",
+      "id": "50072286",
+      "title": "Apple's new 'Switch to Safari' campaign details why you should ditch Chrome",
+      "url": "https://9to5mac.com/2026/10/12/apples-new-switch-to-safari-campaign-details-why-you-should-ditch-chrome/",
       "source": "Hacker News",
-      "published_at": "2026-10-12T16:46:34+00:00",
-      "summary": "Hey HN, I’m Vishnu from Agent37 (https://agent37.com). We build sandboxes for running AI agents at under 10% of the cost of most sandbox providers. Our customers spend an average of $0.37/month per sandbox.You can view a video walkthrough of the product here: https://youtu.be/DK5ISR2tbNoWe started as one of those OpenClaw wrapper companies back in February (yup.. judge me). In time we added more and more harnesses.One of the goals I had at the time was to offer a free plan to users, so as to gain more market share. But it was too cost prohibitive to do it right away. Especially since we were bootstrapped and servers were running on my savings.Today we’re actually able to offer the free plan thanks to the optimizations we’ve made since. Over 90% of the new signups we have are just free plan users and they host their personal Hermes/Openclaw/Claude Code etc on our cloud. Our infrastructure cost for the free sandboxes averages around $0.05 to $0.10 per user per month.Here are some techniques that have worked for lowering cost:* When you look at agent harnesses, they have certain patterns in the way they consume CPU and RAM. They need CPU in bursts when they’re initializing or performing certain tasks, but beyond that, they’re often not peaking. They need more RAM for things like browser and computer-use tasks. Once the task is done, usage often comes back down. This is a key insight in lowering cost, so by efficiently managing the CPU/RAM utilization we could lower the cost.* Secondly, you have to skip the hyperscalers when renting the Hosts. I worked at Amazon before and they have 80-90% margins on VMs. So it was an obvious choice once I looked at the prices to go one layer down to vendors like Hetzner and OVH. This alone was probably one of the biggest cost levers in reducing the cost.* Thirdly, you also want to pick a technology stack that lets you efficiently cache and share resources across the host. We use gVisor for better utilization and fast boot times. It lets us use available host memory across sandboxes without reserving a full VM’s memory for each one. There are tradeoffs: our gVisor sandboxes don’t support workloads like Docker-in-Docker or Android emulators.* And finally the size and shape of the hosts you buy also makes a big difference. RAM is typically the bottleneck when it comes to cost and not the CPU. This is specifically true for agent harness workloads, so when buying servers, we optimize for packing more RAM into a given host.We also host full VM sandboxes for workloads that need them, including running Docker at a slightly higher price, but they are still pretty low cost given the rest of the techniques.Overall, my learning has been that just by focusing on a niche of sandbox usecases, and optimizing for it you can give a much better cost/performance tradeoff.I was previously a Senior Software Engineer at Amazon and an Engineering Manager at Quantcast. I built Amazon's internal AI chatbot, Diya, and their internal coding harness, Ziya.If you’re someone who’s looking to run agents on sandbox and are exploring a sandbox vendor, come check us out. We’re particularly looking for developers building messaging agents to try their workloads and challenge the limits and economics of our platform.Thanks!https://agent37.com",
-      "score": 127,
-      "comments": 91,
-      "discussion_url": "https://news.ycombinator.com/item?id=50059096",
+      "published_at": "2026-10-13T14:26:08+00:00",
+      "summary": "https://www.apple.com/safari/switch/",
+      "score": 205,
+      "comments": 343,
+      "discussion_url": "https://news.ycombinator.com/item?id=50072286",
       "extra": {
         "top_comments": [
-          "Congrats on the launch! Very exciting!You guys are operating in a very competitive space. This stuff is fun to build, so a lot of engineers will end up building it. Not to discourage you, but I suspect it will be difficult to capture much value selling this offering as its going to be race to the bottom against very well funded alternatives that can sell these features at a loss in order to get you to use their databases and other offerings that are higher margin and stickier.As you guys learn more about how to take this sort of technology to market, you may consider trying to get closer to the actual work that people actually need these agents to do. What can you do better because you have this technology? For example, I work in healthcare administration and we have built our own agent sandbox infrastructure on top of firecracker microvms that solve similar use cases as Agent37. We will never sell it. It's part of our competitive advantage for doing healthcare tasks.Food for thought! Good luck!",
-          "The RAM-over-CPU point matches what I've seen self-hosting small stacks on a VPS: CPU sits idle and memory is what forces the next box.Two questions. With gVisor sharing host memory, what happens when several browser-heavy sandboxes spike at once on the same host: OOM-kill, throttle, or migrate? And at $0.05 to $0.10 per free user, what's the rough sandbox density per host?Thx,Z",
-          "Nice. But apparently the only option offered is paying via CC. In France my bank charges egregious fees for paying in anything other than Euros, while Paypal does the conversion for free. Will you offer Paypal at some point?"
+          "I'm old enough to have been in the industry when Chrome launched. It was amazing. It was such a relief to move away from IE and all the arcane levels of details I had to remember back then to artisnaly get IE to behave like a moderately modern (for then) browser.Chrome was fast, did the basic job of correctly rendering pages, and its js runtime was groundbreaking. Node.js was direct outcome of that revolution.Now these days the only thing keeping me tied to chrome is finger muscle memory. The death of manifest v2 is the 2nd to last nail.Honestly Opus 5.5 had gotten good enough I've been considering a project to have it build a new browser based on the open source Chrome and keeps the v2 in place. Just customize it specifically for my preferences and call it done. No more unexpected breaking updates. Just a browser that does its job and nothing else.The problem is I use safari on iOS. Generally not a bad browser. Equivalent and superior to Chrome is certain aspects. I don't really need to run Chrome on my phone. Safari is good enough. However... for a local build only I use maybe it's possible.",
+          "First let us install other browser engines on iOS, and then we can talk.Safari has the most obscene monopoly of any browser ever. IE 6 came pre-installed on windows machines, but you could always install Mosaic or such.Google Chromebooks come with Chrome as the only default browser, but you can still run Firefox on Chromebooks just fine (even in two different ways, the supported android app version, and the semi-supported linux terminal + launching firefox that way).Heck, iOS's monopolistic behavior is so bad that multiple regions (the EU + Japan) have already ruled against their behavior, though in reality Apple has complied in a way that makes it impossible to actually make a second browser engine for iOS still (going against the spirit of the law, but the courts haven't caught up to them yet).Safari is also an awful browser in that it requires someone to buy an expensive machine to see if their site works on it.I can run a windows trial copy in a VM to see if my site works in IE, I can run Chrome or Firefox on linux to verify if my site works in them. I can install a free android emulator on any common OS to see that my site renders right in those.But Apple doesn't give me a legal way to freely run an iOS simulator nor even a macOS VM on my linux machine, I have to pay money, to buy their hardware to see if my site will work on Safari.And even worse, Safari is the browser with the largest number of rendering bugs and quirks currently, while also having a huge number of users (since iOS users can't install another browser), so any web developers are basically forced to shell out for apple hardware.",
+          "Kinda bugs me when people who are against Safari/Apple are also the same people pushing Chrome/Google. Sometimes it feels like web developers these days are basically Chrome developers.I do get it. Chrome has the majority of users, so it’s easier to just develop and test on Chrome and know you’ve covered most of your users.But isn’t that just pushing us towards a Chrome monopoly? Safari holding back some web features is annoying, sure, but having Chrome decide what the web should support and everyone else having to follow doesn’t sound much better to me."
         ]
       }
     }
