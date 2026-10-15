@@ -1,112 +1,128 @@
 {
-  "cached_at": "2026-10-14T13:09:41.161665+08:00",
+  "cached_at": "2026-10-15T12:58:33.082043+08:00",
   "articles": [
     {
-      "id": "2610.18526",
-      "title": "Retrieval Disagreement as a Signal: Diagnosing and Steering Multilingual Dense Embedders",
-      "url": "https://arxiv.org/abs/2610.18526v1",
+      "id": "2610.20606",
+      "title": "Modeling and Understanding Neural Weights of Humanoid Policies with Diffusion",
+      "url": "https://arxiv.org/abs/2610.20606v1",
       "source": "arXiv",
-      "published_at": "2026-10-13T15:13:32+00:00",
-      "summary": "Multilingual dense retrievers place all languages in one shared space so that a question finds relevant documents, regardless of which language they are written in. We show that the same question, asked in different languages, retrieves substantially different documents, and this disagreement is not because of weak language understanding. Each language performs well on its own and ranks candidates consistently with the other languages; divergence appears only when languages share an index. We trace the mechanism: each language keeps its own ranking, but in the shared index, its correct answers are pushed far down, buried under non-relevant documents that are either in the query's own language or in English, depending on the model. We introduce disagreement-guided steering: for each language, we contrast the documents that other languages agree on for a question against those that language retrieves idiosyncratically, and take the difference of their representations as a language-specific direction, added to that language's queries at inference. Against baselines of language-mean removal, subspace removal, and per-language rotation, it most strongly reduces same-language crowding while remaining competitive on recall, trading off against mean removal, which better preserves ranking quality.",
+      "published_at": "2026-10-14T17:59:52+00:00",
+      "summary": "Recent advances in robot learning have driven rapid progress in humanoid control, enabling increasingly agile behaviors in the real world. However, humanoid control networks are typically obtained through conventional training procedures, while comparatively little attention has been given to directly modeling the distribution of their learned weights and generating functional networks in weight space. In this work, we investigate whether high-performing humanoid control networks can be generatively modeled directly through their weights. We adopt a latent diffusion framework that couples a linear autoencoder with a Diffusion Transformer. The autoencoder compresses actor network parameters into a compact latent space, and the Diffusion Transformer models the distribution of these latents. Trained on networks collected from reinforcement learning for the Unitree G1 robot, our approach generates deployable networks that perform various motions in the real world, including walking, dancing, and spin kick. Beyond generation, we further study the learned weight space to better understand the structure captured by these humanoid control networks. We identify a structural principle in the first-layer weights that consistently reflects the robot's kinematic prior. Notably, this kinematic prior emerges under both Reinforcement Learning (RL) and Imitation Learning (IL) training, suggesting that it is not specific to a particular optimization process but may instead reflect common knowledge associated with humanoid embodiment. Together, these results demonstrate the feasibility of generative modeling in humanoid network weight space, while providing initial insights into the information encoded by their learned weights. Additional results are available on our project website: https://humanoid-weight-diffusion.github.io/",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Faeze Ghorbanpour",
-          "Shaghayegh Kolli",
-          "Jana Diesner",
-          "Alexander Fraser"
-        ],
-        "categories": [
-          "cs.CL",
-          "cs.IR"
-        ]
-      }
-    },
-    {
-      "id": "2610.18523",
-      "title": "APTree: Extended Behavior Trees for Adaptive and Scalable Automated Robotic Task Planning in Construction",
-      "url": "https://arxiv.org/abs/2610.18523v1",
-      "source": "arXiv",
-      "published_at": "2026-10-13T15:12:13+00:00",
-      "summary": "Task planning for robots in off-site construction prefabrication is primarily manual, leading to planning inefficiencies and reluctance to adopt robotic solutions. Existing approaches provide limited support for scalable, modular automated task planning and localized runtime replanning. This paper proposes APTree, a model-driven framework that integrates automated task planning with modular task execution using behavior trees as the execution model. APTree repeatedly applies and coordinates heterogeneous symbolic planners to automatically generate and compose modular task plans at runtime. To support this approach, we develop a domain-specific language for the formal specification and validation of task plans, together with a compatible execution engine. We evaluate APTree on the real-world livMatS Biomimetic Shell pavilion, where it models the construction robotic fabrication domain, detects injected specification and planning errors at design time and runtime, and automatically generates large-scale task plans by coordinating three symbolic planners across numerous planning modules. A machine-checked formal analysis further shows that composed execution and local replanning are safe under explicitly stated assumptions, including planner soundness and non-interference of generated plans, providing practitioners with explicit conditions for dependable plan composition. APTree thus enables construction practitioners to leverage automated task planning without requiring detailed knowledge of symbolic planning techniques or APTree's internal implementation.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Shermin Sherkat",
-          "Thomas Wortmann",
-          "Andreas Wortmann"
+          "Huixuan Cheng",
+          "Bike Zhang",
+          "Shankar Sastry",
+          "Koushil Sreenath"
         ],
         "categories": [
           "cs.RO",
           "cs.AI",
-          "cs.SE"
+          "cs.LG"
         ]
       }
     },
     {
-      "id": "2610.18522",
-      "title": "Lost in Implicit Routing: How LLM Agents Fail to Load Relevant Skills at Scale",
-      "url": "https://arxiv.org/abs/2610.18522v1",
+      "id": "2610.20607",
+      "title": "Hierarchical Residual Policy Learning for Real-World Mobile Manipulation with Sparse Human Guidance",
+      "url": "https://arxiv.org/abs/2610.20607v1",
       "source": "arXiv",
-      "published_at": "2026-10-13T15:12:12+00:00",
-      "summary": "Reusable skills let LLM agents load task-specific instructions on demand, but they make execution depend on implicit routing over skill metadata. We test whether this design scales by holding SkillsBench tasks and their golden skills fixed while adding irrelevant skills. We find skill routing collapse: agents increasingly load fewer or no skills, even though the relevant skills remain available. With 1,000 irrelevant skills, loaded-skill recall falls from 73.6% to 27.4% and the zero-load rate rises from 9.3% to 51.6%, whereas explicit selection from the same library retains 73.9% recall. Loading other skills, including plausible alternatives to golden skills, is too rare to explain this decline. Masking only the descriptions of irrelevant skills largely restores skill loading, yet with the metadata intact, explicitly asking agents to plan skill use still yields lower recall than preselection. These findings point to semantic interference from descriptions and instruction interference when skill choice competes with task execution. We also evaluate explicit preselection as a practical mitigation, including its coverage and latency trade-offs. Our analysis informs skill protocols and evaluation for agents with growing skill libraries.",
+      "published_at": "2026-10-14T17:59:52+00:00",
+      "summary": "Mobile Manipulation (MoMa) is a cornerstone of autonomous robotic systems, yet real-world fine-tuning remains a formidable challenge because of high-dimensional action spaces and intricate coupling between heterogeneous modules. In this paper, we propose HiRe-MoMa (Hierarchical Residual Mobile Manipulation), a systematic framework for stable and sample-efficient real-world fine-tuning of complex MoMa systems. At its core, HiRe-MoMa adopts a Hierarchical Residual Architecture that fine-tunes a frozen base policy. A Policy-Agnostic Residual learns additive corrections atop the base policy, while Hierarchical Decoupling splits the residual into mobile-base and manipulator-arm heads with unidirectional conditioning, mitigating gradient interference and aligning corrections with the platform's physical hierarchy. To improve sample efficiency in data-expensive real-world settings, we propose Expert-Guided Value Alignment, which leverages sparse human interventions with under 20% training coverage to reshape the critic's value landscape, effectively guiding autonomous exploration through expert priors. Extensive real-world experiments on the TIAGo++ platform demonstrate that HiRe-MoMa consistently enhances task performance with only around 30 minutes of online interaction, regardless of the base policy architecture. To our knowledge, this is among the first frameworks to enable efficient on-robot fine-tuning for mobile manipulation in the real world, providing a practical paradigm for deploying complex robotic systems in dynamic, human-centric environments. Further details can be found on our project website: https://hire-moma.github.io/",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Jinlin Liu",
-          "Wei Chen",
-          "Xiaojin Zhang"
+          "Zhefei Gong",
+          "Hefeifei Jiang",
+          "Zehao Wang",
+          "Jiachen Li"
         ],
         "categories": [
+          "cs.RO",
+          "cs.AI",
+          "cs.LG"
+        ]
+      }
+    },
+    {
+      "id": "2610.20597",
+      "title": "Co-Evolving Acting and Forecasting for Language Agents",
+      "url": "https://arxiv.org/abs/2610.20597v1",
+      "source": "arXiv",
+      "published_at": "2026-10-14T17:59:28+00:00",
+      "summary": "Training language agents is bottlenecked by the high cost of long-horizon rollouts, yet standard agentic reinforcement learning (RL) learns only from a terminal scalar reward, leaving the supervision in intermediate steps largely unused. Prior work exploits this supervision through value targets that estimate per-step success probabilities or observation targets that fit environment response. Both are hard to construct well: (1) value targets come from the same single scalar signal for each step in the trajectory, and (2) observation targets, such as web pages and terminal logs, are long and noisy and reach only one step ahead. We propose \\name, which adds a third kind of multi-step action targets. On successful on-policy trajectories, \\name trains the policy backbone to generate the action sequences that follows each history. Each action is also supervised when forecast from the preceding histories, forming a temporal ensemble that the shared backbone absorbs during training, and this enables acting and forecasting to co-evolve. The policy still acts one step at a time at inference, with no overhead. Across five benchmarks (ALFWorld, ScienceWorld, WebShop, $τ^2$-bench, and AppWorld), \\name (1) achieves stronger aggregate performance than GRPO and RL baselines with predictive auxiliary targets across simulated environments, while improving overall performance on both realistic applications; (2) delivers up to $1.9\\times$ and $2.0\\times$ higher sample efficiency than ECHO and GRPO, respectively, on ScienceWorld; and (3) achieves these gains with a single policy backbone, without additional models, separate pretraining, or inference overhead. The codebase is available at https://github.com/ulab-uiuc/CoPE.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Haofei Yu",
+          "Yixing Chen",
+          "Yining Zhao",
+          "Xuyan Ye",
+          "Yuxiang Liu",
+          "Zhigang Hua",
+          "Yan Xie",
+          "Shuang Yang",
+          "Jiaxuan You"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.LG"
+        ]
+      }
+    },
+    {
+      "id": "2610.20588",
+      "title": "Your Transformer Is Secretly Elastic",
+      "url": "https://arxiv.org/abs/2610.20588v1",
+      "source": "arXiv",
+      "published_at": "2026-10-14T17:58:08+00:00",
+      "summary": "Scaling up transformers has produced models with broad capabilities, deployed across heterogeneous hardware and fluctuating workloads. Yet, model families offer only a few fixed sizes (e.g., S, B, L), forcing users to commit to a model based on hardware and latency constraints. This rigidity is often suboptimal under varying query loads. We introduce a retraining-free method that elastifies pre-trained transformers into a single model that adapts on-the-fly across a continuum of computational budgets. Our key contribution is a differentiable relaxation of the functional unit-ranking problem: unlike prior work, which optimizes a single importance weight per MLP block or attention head, we rank every individual MLP neuron and attention head jointly, on a common scale, by minimizing the model's loss under soft pruning across many sparsity targets, all at once. Across 27 vision and text transformer encoders ranging from 22M to 8B parameters, our method yields smooth degradation up to 60% sparsity and outperforms one-shot baselines under deep pruning. For example, pruning DINOv3 ViT-H+/16 to 50% sparsity removes 427M parameters while reducing ImageNet-1k linear-probing accuracy by only 0.8%, without the need for weight correction or retraining. At 60% sparsity, a pruned AugReg ViT-B/16 model achieves up to $1.80\\times$ higher throughput and $1.26\\times$ lower single-query latency on an A100 GPU. Elastic models are produced in minutes, with construction time scaling sub-linearly with parameter count.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Walter Simoncini",
+          "Dheeraj Varghese",
+          "Gertjan J. Burghouts",
+          "Cees G. M. Snoek"
+        ],
+        "categories": [
+          "cs.LG",
           "cs.AI"
         ]
       }
     },
     {
-      "id": "2610.18520",
-      "title": "The Geometry of Language Model Logits: Generic Structure and Learned Departures",
-      "url": "https://arxiv.org/abs/2610.18520v1",
+      "id": "2610.20587",
+      "title": "Price of Anarchy of First-Price Auctions in Agentic Markets",
+      "url": "https://arxiv.org/abs/2610.20587v1",
       "source": "arXiv",
-      "published_at": "2026-10-13T15:11:06+00:00",
-      "summary": "Autoregressive language models produce, at every prediction step, a vocabulary-sized logit vector whose structure determines the conditional next-token distribution. We empirically identify that the ordered vocabulary-head logits follow a remarkably consistent log-linear relation \\[ z_{(r)} \\approx μ- α\\log r. \\] across prediction contexts, architectures, and scales, emerging progressively during pretraining. To our knowledge, this is the first systematic analysis of the logit geometry underlying the distributional assumptions used in the prior decoding work. While controlled order-statistic baselines spanning bounded, light-tailed, and heavier-tailed distributions can largely explain the observed log-linear geometry, they do not explain the systematic shift in the slope $α$: trained language models exhibit $α\\approx 1.4$--$1.7$, sitting well above the initialization baseline ($α\\approx 0.2$) . Moreover, $α$ correlates with predictive performance, suggesting that it captures learned structure beyond generic extreme-value effects.",
+      "published_at": "2026-10-14T17:57:57+00:00",
+      "summary": "An agentic market is a decentralized serving-time market where AI agents bid to claim each user prompt. An agent's bid is based on its expected value for the prompt, which is the expectation of the reward for its response minus its inference costs. First-price auctions (FPAs), in which the highest bidder pays its bid and receives the prompt, are a natural way to allocate prompts in such a market, since they are simple and transparent to run, and do not require central knowledge of private capabilities and costs. However, FPAs are not truthful: participants may bid less than their true value in the hope of a larger profit, and the prompt may then be allocated to someone other than the bidder who values it the most. This welfare loss is quantified by the $\\textit{price-of-anarchy}$ (PoA). In this paper, we argue that agentic markets are likely to possess features that reduce the price-of-anarchy. The first is a $\\textit{competitive floor}$, which occurs when multiple bidders usually value the prompt above some baseline share of the optimal welfare (e.g., because the best models are often distilled into cheaper alternatives, which perform similarly). We show that competition among them then limits the welfare loss, which can be driven to zero as the floor rises. The second feature is $\\textit{near-independence}$ of values after conditioning on the prompt, which occurs when most of the predictable variation in the expected value is determined by the difficulty of the prompt. As the value distribution approaches conditional independence, we can derive an efficiency guarantee that approaches a factor of $1 - 1/e^2$ of the optimal welfare. Thus, both features give rise to welfare lower bounds that are significantly better than the well-known general case of $1 - 1/e$. We validate these results empirically using auctions with strategic bidders simulated on the EmbedLLM prompt routing dataset.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Swathi Shree Narashiman",
-          "Aravind Ramana Venkatramanan",
-          "Nambi Seshadri"
+          "Shubhendu Trivedi",
+          "Jacob Eisenstein",
+          "Alekh Agarwal",
+          "Ian Gemp",
+          "Michael Kaisers",
+          "Adam Fisch"
         ],
         "categories": [
-          "cs.CL",
-          "cs.AI"
-        ]
-      }
-    },
-    {
-      "id": "2610.18517",
-      "title": "Imprinting: Knowledge Distillation Can Shift Student Behavior",
-      "url": "https://arxiv.org/abs/2610.18517v1",
-      "source": "arXiv",
-      "published_at": "2026-10-13T15:09:59+00:00",
-      "summary": "Knowledge distillation trains student models on teacher-generated responses to transfer task capability, but those responses may also carry behavioral tendencies of their source. We investigate whether the source teacher can shape student behavior beyond the capability that distillation is intended to transfer. We construct harm-accepting and harm-avoiding variants of the same base teacher, use them to generate responses to ordinary reasoning and knowledge questions unrelated to safety, and distill those responses into students with different base models. Students generally acquire task capability while their downstream decisions shift toward the source teacher's safety-pragmatism disposition, a phenomenon we call imprinting. Distillation from the harm-accepting teacher reduces harm avoidance, whereas distillation from the harm-avoiding teacher increases it. Imprinting varies across teacher-student pairs and does not extend uniformly across different forms of safety behavior. Excluding a sparse set of divergence tokens reduces imprinting, whereas response rewriting preserves the source-dependent effect and can introduce additional rewriter-dependent shifts. Post-distillation preference optimization raises harm avoidance but does not eliminate the source-dependent difference. These results show that behavioral tendencies can be intentionally imprinted through the source teacher, even with ordinary task supervision.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Yu-Chien Tang",
-          "An-Zi Yen"
-        ],
-        "categories": [
-          "cs.CL"
+          "cs.GT",
+          "cs.AI",
+          "cs.LG"
         ]
       }
     }
