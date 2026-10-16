@@ -20,17 +20,24 @@ function readPreviousStars(key) {
 
   const cells = priorRows[priorRows.length - 1]
     .split("|")
+    .slice(1, -1)
     .map((cell) => cell.trim())
-    .filter(Boolean)
-  const stars = Number.parseInt((cells[2] || "0").replace(/,/g, ""), 10)
-  return { file, stars: Number.isFinite(stars) ? stars : 0, exists: true }
+  const rawStars = cells[2] || ""
+  const stars = /^(?:\d+|\d{1,3}(?:,\d{3})+)$/.test(rawStars)
+    ? Number(rawStars.replace(/,/g, ""))
+    : Number.NaN
+  const exists = Number.isSafeInteger(stars) && stars >= 0
+  return { file, stars: exists ? stars : 0, exists }
 }
 
+const burstDelta = 500
+const riseDelta = 200
+
 function classify(item, previousStars, hasArchive) {
-  const delta = hasArchive ? item.stars - previousStars : item.stars
-  if (!hasArchive) return { type: "新晋", delta }
-  if (delta >= 500) return { type: "爆火", delta }
-  if (delta >= 200) return { type: "跃升", delta }
+  if (!hasArchive) return { type: "新晋", delta: null }
+  const delta = item.stars - previousStars
+  if (delta >= burstDelta) return { type: "爆火", delta }
+  if (delta >= riseDelta) return { type: "跃升", delta }
   if (delta < 0) return { type: "回落", delta }
   return { type: "常驻", delta }
 }
@@ -58,36 +65,56 @@ const groups = {
 }
 
 function formatDelta(delta) {
-  return delta >= 0 ? `+${delta.toLocaleString()}` : delta.toLocaleString()
+  if (!Number.isFinite(delta)) return "未知（缺少历史基线）"
+  return `${delta >= 0 ? "+" : ""}${delta.toLocaleString()}⭐`
+}
+function rankComparable(list) {
+  return list.filter((item) => Number.isFinite(item.delta)).sort((a, b) => b.delta - a.delta)
 }
 function visibleDescription(item) {
   const translated = (item.descriptionZh || "").trim()
-  if (translated) return translated
+  if (translated) return translated.replace(/[\r\n]+/g, " ")
   const original = (item.description || "").trim()
-  if (/[㐀-鿿]/u.test(original)) return original
+  if (/[㐀-鿿]/u.test(original)) return original.replace(/[\r\n]+/g, " ")
   return "暂无中文简介，请查看项目主页。"
 }
 
-function fallbackAnalysis() {
-  const top = [...items].sort((a, b) => b.delta - a.delta)[0]
-  const hot = [...groups.爆火, ...groups.跃升, ...groups.新晋].slice(0, 5)
+function measuredStar() {
+  const top = rankComparable(items)[0]
+  return `### 本日之星：${top ? top.name : "暂无可比项目"}
+
+${top ? `${top.name} 当前总星数 ${top.stars.toLocaleString()}，本次记录增量 ${formatDelta(top.delta)}。` : "今日没有具备历史基线的可比增量。"}`
+}
+
+function measuredAnalysis() {
+  const summary = Object.entries(groups).map(([type, list]) => {
+    const comparable = rankComparable(list)
+    const range = comparable.length
+      ? `；本次增量范围 ${formatDelta(comparable[comparable.length - 1].delta)} 至 ${formatDelta(comparable[0].delta)}`
+      : list.length
+        ? "；增量未知（缺少历史基线）"
+        : ""
+    return `- **${type}**：${list.length} 个${range}。`
+  })
   return `## 深度解读
 
-### 本日之星：${top ? top.name : "暂无"}
-
-${top ? `${top.name} 当前总星数 ${top.stars.toLocaleString()}，本次记录增量 ${formatDelta(top.delta)}。${visibleDescription(top)}` : "今日没有拿到可分析项目。"}
+${measuredStar()}
 
 ### 趋势脉动
 
-${hot.length ? hot.map((item) => `- **${item.name}**：${item.type}，${item.language || "-"}，${formatDelta(item.delta)}⭐。`).join("\n") : "- 今日榜单变化较平缓。"}
+${summary.join("\n")}
 
-> 未配置 AI Key，本段为规则生成。`
+> 分类口径：无有效历史基线为新晋；已知增量 ≥${burstDelta}⭐ 为爆火，${riseDelta}–${burstDelta - 1}⭐ 为跃升，0–${riseDelta - 1}⭐ 为常驻，负增量为回落。
+
+### 数据边界
+
+本段按本次收录项目的数据生成。增量为本次采集与上次历史记录的星数差，不一定覆盖完整一天；它不能单独证明长期趋势、项目功能或生态关联。`
 }
 
 async function aiEnrichment() {
   const deepseekKey = process.env.DEEPSEEK_API_KEY
   const goKey = process.env.GO_API_KEY
-  const fallback = { descriptions: {}, analysis: fallbackAnalysis() }
+  const fallback = { descriptions: {} }
   if (!deepseekKey && !goKey) return fallback
 
   const rows = items.map((item) => ({
@@ -105,14 +132,14 @@ ${JSON.stringify(rows)}
 
 JSON 结构：
 {
-  "descriptions": {"owner/repo": "中文简介"},
-  "analysis": "中文 Markdown"
+  "descriptions": {"owner/repo": "中文简介"}
 }
 
 要求：
 1. descriptions 必须覆盖每个项目，每条用 45—90 个中文字符说明项目解决什么问题、适合什么场景；保留项目名、框架名等必要英文专名，但不要整句英文。
-2. analysis 为 350—550 字，结构必须包含“## 深度解读”“### 本日之星”“### 趋势脉动”“### 项目生态关联”，引用项目名、排名、星数或增量。
-3. 对数据不足之处明确说明，不得猜测未提供的功能或趋势。`
+2. 只生成项目功能与适用场景简介，不输出 analysis；不得在简介中写排名、星数、增量、分类或趋势判断，这些统计内容由程序生成。
+3. 对数据不足之处明确说明，不得猜测未提供的功能或趋势。
+4. delta 为 null 表示缺少历史采集基线，不是零；不得用 stars 替代增量，也不得将这类项目纳入增量排名或选为“本日之星”。增量是两次历史采集记录的差，不一定覆盖完整一天。`
 
   const request = deepseekKey
     ? {
@@ -147,14 +174,14 @@ JSON 结构：
     const parsed = JSON.parse(raw.replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/, ""))
     const descriptions = Object.fromEntries(
       Object.entries(parsed.descriptions || {}).filter(
-        ([name, value]) => items.some((item) => item.name === name) && typeof value === "string" && /[㐀-鿿]/u.test(value),
+        ([name, value]) =>
+          items.some((item) => item.name === name) &&
+          typeof value === "string" &&
+          /[㐀-鿿]/u.test(value),
       ),
     )
-    const analysis =
-      typeof parsed.analysis === "string" && parsed.analysis.includes("## 深度解读")
-        ? parsed.analysis
-        : fallback.analysis
-    return { descriptions, analysis }
+    // Ignore any unsolicited model analysis; all statistical prose is deterministic.
+    return { descriptions }
   } catch (error) {
     console.error(`AI enrichment failed: ${error.message}`)
     return fallback
@@ -172,7 +199,7 @@ function section(title, list) {
 - **排名**: #${item.rank}
 - **语言**: ${item.language || "-"}
 - **总星数**: ${item.stars.toLocaleString()}
-- **本次增量**: ${formatDelta(item.delta)}⭐
+- **本次增量**: ${formatDelta(item.delta)}
 - **项目档案**: [[${item.key}]]
 `,
     )
@@ -186,8 +213,8 @@ const enrichment = await aiEnrichment()
 for (const item of items) {
   item.descriptionZh = enrichment.descriptions[item.name] || ""
 }
-const analysis = enrichment.analysis
-const top5 = [...items].sort((a, b) => b.delta - a.delta).slice(0, 5)
+const analysis = measuredAnalysis()
+const top5 = rankComparable(items).slice(0, 5)
 
 const markdown = `# GitHub Trending - ${today}
 
@@ -208,9 +235,11 @@ ${section("热度回落", groups.回落)}
 
 ## 今日增长 TOP 5
 
+> 仅比较有历史采集基线的项目；增量为本次采集与上次历史记录的星数差。首次收录项目不参与增量排名。
+
 | 排名 | 项目 | 中文简介 | 增量 | 类型 |
 |---:|---|---|---:|---|
-${top5.map((item, index) => `| ${index + 1} | [${item.name}](${item.url}) | ${visibleDescription(item)} | ${formatDelta(item.delta)}⭐ | ${item.type} |`).join("\n")}
+${top5.map((item, index) => `| ${index + 1} | [${item.name}](${item.url}) | ${visibleDescription(item)} | ${formatDelta(item.delta)} | ${item.type} |`).join("\n")}
 
 ---
 
@@ -227,7 +256,7 @@ fs.writeFileSync(path.join(trendingDir, `${today}.md`), markdown)
 
 for (const item of items) {
   const file = path.join(archiveDir, `${item.key}.md`)
-  const row = `| ${today} | #${item.rank} | ${item.stars.toLocaleString()} | ${formatDelta(item.delta)}⭐ | ${item.type} |`
+  const row = `| ${today} | #${item.rank} | ${item.stars.toLocaleString()} | ${formatDelta(item.delta)} | ${item.type} |`
 
   if (!fs.existsSync(file)) {
     fs.writeFileSync(
