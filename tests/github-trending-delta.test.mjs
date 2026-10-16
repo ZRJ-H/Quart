@@ -197,8 +197,8 @@ test("a model cannot nominate an incomparable project or invent its winning incr
   assert.match(result.note, /### 本日之星：owner\/known/)
   assert.match(result.note, /本次记录增量 \+500⭐/)
   assert.doesNotMatch(result.note, /今日新增 215,408|### 本日之星：owner\/new/)
-  assert.match(result.note, /保持该段/)
-  assert.match(result.note, /保持生态段/)
+  assert.doesNotMatch(result.note, /保持该段|保持生态段/)
+  assert.match(result.note, /### 数据边界/)
 })
 
 test("all-new model output cannot invent a comparable winner", async () => {
@@ -219,7 +219,7 @@ test("missing model winner section falls back safely", async () => {
   assert.doesNotMatch(result.note, /今日新增 215,408/)
 })
 
-test("deterministic winner uses the accepted Chinese description", async () => {
+test("accepted Chinese descriptions stay in project details, outside the measured summary", async () => {
   const item = { ...repo("owner/known", 600), description: "English description" }
   const files = new Map([[archivePath(item.name), archive(item.name, "2026-10-13", 100)]])
   const result = await generate([item], {
@@ -229,8 +229,8 @@ test("deterministic winner uses the accepted Chinese description", async () => {
     modelAnalysis: "## 深度解读\n\n### 本日之星\n\n错误文案。\n\n### 项目生态关联\n\n生态文案。",
   })
   const star = result.note.split("### 本日之星")[1].split("### 项目生态关联")[0]
-  assert.match(star, /经过模型翻译的中文简介/)
-  assert.doesNotMatch(star, /暂无中文简介|错误文案/)
+  assert.match(result.note, /> 经过模型翻译的中文简介/)
+  assert.doesNotMatch(star, /经过模型翻译的中文简介|暂无中文简介|错误文案/)
 })
 
 test("duplicate model winner sections fall back to one deterministic winner", async () => {
@@ -244,5 +244,158 @@ test("duplicate model winner sections fall back to one deterministic winner", as
     assert.equal((result.note.match(/^### 本日之星/gm) || []).length, 1)
     assert.match(result.note, /### 本日之星：owner\/known/)
     assert.doesNotMatch(result.note, /今日新增 215,408|本日之星：owner\/new/)
+  }
+})
+
+// Captured 2026-10-16 archive totals/deltas; ECC's previous snapshot is 2026-10-13.
+// Columns: repository, current stars, increment, rank, previous snapshot date.
+const october16 = [
+  ["public-apis/public-apis", 489184, 355, 1, "2026-10-15"],
+  ["freeCodeCamp/freeCodeCamp", 457131, 59, 2, "2026-10-15"],
+  ["EbookFoundation/free-programming-books", 399150, 84, 3, "2026-10-15"],
+  ["openclaw/openclaw", 392133, 85, 4, "2026-10-15"],
+  ["nilbuild/developer-roadmap", 369500, 80, 5, "2026-10-15"],
+  ["vinta/awesome-python", 327737, 236, 6, "2026-10-15"],
+  ["awesome-selfhosted/awesome-selfhosted", 327018, 298, 7, "2026-10-15"],
+  ["affaan-m/ECC", 280565, 2475, 8, "2026-10-13"],
+  ["morluto/rea", 275267, 26736, 9, "2026-10-15"],
+  ["NousResearch/hermes-agent", 254180, 321, 10, "2026-10-15"],
+  ["torvalds/linux", 251998, 133, 11, "2026-10-15"],
+  ["react/react", 251085, 51, 12, "2026-10-15"],
+  ["deepseek-ai/deepseek-harness", 250587, 726, 13, "2026-10-15"],
+  ["TheAlgorithms/Python", 225293, 25, 14, "2026-10-15"],
+  ["anomalyco/opencode", 213994, 421, 15, "2026-10-15"],
+  ["n8n-io/n8n", 207571, 154, 16, "2026-10-15"],
+  ["tensorflow/tensorflow", 200993, 22, 17, "2026-10-15"],
+  ["microsoft/vscode", 193673, 49, 18, "2026-10-15"],
+  ["firecrawl/firecrawl", 191957, 325, 19, "2026-10-15"],
+  ["avelino/awesome-go", 188633, 167, 20, "2026-10-15"],
+  ["Significant-Gravitas/AutoGPT", 187602, 22, 21, "2026-10-15"],
+  ["ollama/ollama", 183369, 173, 22, "2026-10-15"],
+  ["flutter/flutter", 180231, 41, 23, "2026-10-15"],
+  ["twbs/bootstrap", 174867, 25, 24, "2026-10-15"],
+  ["f/prompts.chat", 173109, 82, 25, "2026-10-15"],
+]
+
+function october16Fixture(modelAnalysis) {
+  const files = new Map(october16.map(([name, stars, delta, , previousDate]) => [
+    archivePath(name), archive(name, previousDate, stars - delta),
+  ]))
+  return generate(october16.map(([name, stars, , rank]) => repo(name, stars, rank)), {
+    files, date: "2026-10-16", model: true, modelAnalysis,
+  })
+}
+
+function analysisSection(note) {
+  return note.split("## 深度解读")[1].split("\n---")[0]
+}
+
+test("October 16 regression: +726 is above the burst threshold, despite model prose", async () => {
+  const result = await october16Fixture("## 深度解读\n\n### 本日之星\n\ndeepseek-ai/deepseek-harness 增量726，虽未达爆火阈值。\n\n### 趋势脉动\n\n模型统计。")
+  const analysis = analysisSection(result.note)
+  assert.doesNotMatch(analysis, /未达爆火阈值|模型统计/)
+  assert.match(analysis, /\*\*爆火\*\*：3 个；本次增量范围 \+726⭐ 至 \+26,736⭐/)
+  assert.match(analysis, /已知增量 ≥500⭐ 为爆火/)
+  assert.match(analysis, /### 本日之星：morluto\/rea/)
+})
+
+test("October 16 regression: measured rising range is 236 to 421, never 167 to 421", async () => {
+  const result = await october16Fixture("## 深度解读\n\n### 本日之星\n\nmorluto/rea。\n\n### 趋势脉动\n\n跃升项目增量在167至421之间。")
+  const analysis = analysisSection(result.note)
+  assert.match(analysis, /\*\*跃升\*\*：6 个；本次增量范围 \+236⭐ 至 \+421⭐/)
+  assert.doesNotMatch(analysis, /167至421/)
+})
+
+test("October 16 regression: resident increments cannot exceed the measured rising range", async () => {
+  const result = await october16Fixture("## 深度解读\n\n### 本日之星\n\nmorluto/rea。\n\n### 趋势脉动\n\n部分常驻项目增量也高于个别跃升项目。")
+  const analysis = analysisSection(result.note)
+  assert.doesNotMatch(analysis, /常驻项目增量也高于/)
+  assert.match(analysis, /\*\*常驻\*\*：16 个；本次增量范围 \+22⭐ 至 \+173⭐/)
+  assert.match(analysis, /\*\*跃升\*\*：6 个；本次增量范围 \+236⭐ 至 \+421⭐/)
+  assert.match(analysis, /200–499⭐ 为跃升，0–199⭐ 为常驻/)
+})
+
+test("all model analysis is ignored, including preambles and unexpected heading levels", async () => {
+  for (const modelAnalysis of [
+    "全站第一，新增999999星。",
+    "## 深度解读\n\n全站新增999999星。\n\n### 本日之星\n\n错误。\n\n### 项目生态关联\n\n全站新增999999星。",
+    "## 深度解读\n\n#### 趋势脉动\n\n全站新增999999星。\n\n## 其他结论\n\n错误分类。",
+  ]) {
+    const result = await october16Fixture(modelAnalysis)
+    assert.doesNotMatch(analysisSection(result.note), /999999|全站新增|错误分类|错误。/)
+    assert.equal((result.note.match(/^### 趋势脉动/gm) || []).length, 1)
+    assert.equal((result.note.match(/^### 本日之星/gm) || []).length, 1)
+    assert.match(analysisSection(result.note), /\*\*爆火\*\*：3 个/)
+  }
+})
+
+test("statistical summary covers unknown, zero, negative, and classification boundaries", async () => {
+  const deltas = [500, 499, 200, 199, 0, -1]
+  const files = new Map(deltas.map((delta, index) => [
+    archivePath(`owner/item${index}`), archive(`owner/item${index}`, "2026-10-15", 1000),
+  ]))
+  const result = await generate([repo("owner/new", 500000), ...deltas.map((delta, index) => repo(`owner/item${index}`, 1000 + delta))], {
+    files, date: "2026-10-16",
+  })
+  const analysis = analysisSection(result.note)
+  assert.match(analysis, /\*\*新晋\*\*：1 个；增量未知（缺少历史基线）/)
+  assert.match(analysis, /\*\*爆火\*\*：1 个；本次增量范围 \+500⭐ 至 \+500⭐/)
+  assert.match(analysis, /\*\*跃升\*\*：2 个；本次增量范围 \+200⭐ 至 \+499⭐/)
+  assert.match(analysis, /\*\*常驻\*\*：2 个；本次增量范围 \+0⭐ 至 \+199⭐/)
+  assert.match(analysis, /\*\*回落\*\*：1 个；本次增量范围 -1⭐ 至 -1⭐/)
+  assert.doesNotMatch(analysis, /NaN|null|undefined|500,000⭐/)
+  assert.match(analysis, /不一定覆盖完整一天/)
+})
+
+test("model and offline paths render the same measured summary", async () => {
+  const rows = [repo("owner/known", 600)]
+  const files = new Map([[archivePath("owner/known"), archive("owner/known", "2026-10-13", 100)]])
+  const offline = await generate(rows, { files })
+  const model = await generate(rows, {
+    files, model: true, modelAnalysis: "不可信分析",
+    descriptions: { "owner/known": "这是模型简介；错误声称常驻项目增量高于跃升。" },
+  })
+  assert.equal(analysisSection(model.note), analysisSection(offline.note))
+  assert.equal(offline.requests.length, 0)
+  assert.equal(model.requests.length, 1)
+  assert.match(model.note, /> 这是模型简介；错误声称常驻项目增量高于跃升。/)
+  assert.match(model.files.get(archivePath("owner/known")), /> 这是模型简介；错误声称常驻项目增量高于跃升。/)
+  assert.doesNotMatch(analysisSection(model.note), /未配置 AI Key|不可信分析/)
+  const prompt = model.requests[0].body.messages[0].content
+  assert.match(prompt, /不输出 analysis/)
+  assert.match(prompt, /不得在简介中写排名、星数、增量、分类或趋势判断/)
+})
+
+
+
+test("model descriptions cannot contaminate the deterministic statistical summary", async () => {
+  const files = new Map([[archivePath("owner/known"), archive("owner/known", "2026-10-15", 1000)]])
+  const result = await generate([repo("owner/known", 1726)], {
+    files, date: "2026-10-16", model: true,
+    descriptions: { "owner/known": "增量726，虽未达爆火阈值。" },
+    modelAnalysis: "## 深度解读\n\n### 本日之星\n\n错误统计。",
+  })
+  const analysis = analysisSection(result.note)
+  assert.doesNotMatch(analysis, /未达爆火阈值|错误统计/)
+  assert.match(analysis, /本次记录增量 \+726⭐/)
+  assert.match(analysis, /已知增量 ≥500⭐ 为爆火/)
+})
+
+test("multiline model and original descriptions cannot inject extra statistical headings", async () => {
+  for (const newline of ["\n", "\r\n", "\r"]) {
+    for (const model of [true, false]) {
+      const description = ["项目简介。", "", "## 深度解读", "", "### 趋势脉动", "", "伪造数据。"].join(newline)
+      const files = new Map([[archivePath("owner/known"), archive("owner/known", "2026-10-15", 1000)]])
+      const item = { ...repo("owner/known", 1726), description: model ? "Original" : description }
+      const result = await generate([item], {
+        files, date: "2026-10-16", model,
+        descriptions: model ? { "owner/known": description } : {},
+      })
+      assert.equal((result.note.match(/^## 深度解读$/gm) || []).length, 1)
+      assert.equal((result.note.match(/^### 趋势脉动$/gm) || []).length, 1)
+      const measured = result.note.slice(result.note.lastIndexOf("\n## 深度解读\n"))
+      assert.doesNotMatch(measured, /伪造数据|项目简介/)
+      assert.doesNotMatch(result.files.get(archivePath("owner/known")), /^## 深度解读$/m)
+    }
   }
 })
