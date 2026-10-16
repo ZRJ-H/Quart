@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-10-16T11:01:02.217457+08:00",
+  "cached_at": "2026-10-16T12:47:54.835427+08:00",
   "articles": [
     {
       "id": "50107379",
@@ -8,8 +8,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-15T17:47:39+00:00",
       "summary": "https://dev.meta.ai/resources/blog/build-with-muse-spark-ope...https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42Bhttps://9to5mac.com/2026/10/15/meta-launches-new-muse-spark-...",
-      "score": 653,
-      "comments": 361,
+      "score": 695,
+      "comments": 374,
       "discussion_url": "https://news.ycombinator.com/item?id=50107379",
       "extra": {
         "top_comments": [
@@ -26,8 +26,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-15T16:04:01+00:00",
       "summary": "https://twitter.com/nickcammarata/status/2110757819427574056",
-      "score": 527,
-      "comments": 202,
+      "score": 570,
+      "comments": 217,
       "discussion_url": "https://news.ycombinator.com/item?id=50105647",
       "extra": {
         "top_comments": [
@@ -38,32 +38,50 @@
       }
     },
     {
+      "id": "50103338",
+      "title": "Wayland desktop for Linux with skeuomorphic design",
+      "url": "https://github.com/fyzugx/DEsk",
+      "source": "Hacker News",
+      "published_at": "2026-10-15T13:23:44+00:00",
+      "summary": "Wayland desktop for Linux with skeuomorphic design",
+      "score": 551,
+      "comments": 217,
+      "discussion_url": "https://news.ycombinator.com/item?id=50103338",
+      "extra": {
+        "top_comments": [
+          "This is a really enjoyable take, pushing the feeling of what one does on a computer towards actually being at a desk and having to reach for various functions. I feel like that would enable spatial memory to do some cool things.I miss the 90s chunkiness of switches, buttons, hardware: being able to hear the computer \"think\" (HDD seeks), the hum of a CRT. Modern machinery feels so insubstantial, emphasizing clean glass and tidy machined chassis. (chassies?)I have this persistent daydream about a computer setup that feels like the Nostromo flight deck from Alien. I almost want to feel like I'm sitting _inside_ a computer when I'm at my desk, surrounded by powerful feeling electronics with substantial switches and such. Of course there's plenty of inconvenience there too, but something about it appeals to me.",
+          "I want more stuff like this. The era 20 years ago (e.g. Enlightenment) was way more fun than the bland monotonic design we have these days. If you like bland modern design, great, that should be an option as well, but we should still have good variety.",
+          "This warms my heart.I was just thinking about this the other week, when I bought an old iPhone, from the skeumorphic era, for nostalgic purposes. I've wanted one for years -- I only had the newer ones that were flat.I always thought, nah, I'm just seeing thru rose tinted glasses, surely it wasn't that cool, I'm gonna be disappointed...Well, I finally got one, and oh boy. It's even better than I imagined. There's just so much love and care put into the designs. We really lost something special.(p.s. if you get a really old iPhone, don't reset the device. It's impossible to activate them now, found out the hard way.)"
+        ]
+      }
+    },
+    {
       "id": "50106023",
       "title": "Jev meets the Trolley Problem",
       "url": "https://zachlandes.com/trolley-problem/",
       "source": "Hacker News",
       "published_at": "2026-10-15T16:24:52+00:00",
       "summary": "Jev meets the Trolley Problem",
-      "score": 329,
-      "comments": 154,
+      "score": 363,
+      "comments": 163,
       "discussion_url": "https://news.ycombinator.com/item?id=50106023",
       "extra": {
         "top_comments": [
+          "I have a feeling Jev can't be aligned like the LLMs because it doesn't have the same reinforcement training and guidance. Also, I feel it lacks most intelligence in general but apparently enough to know self-preservation.",
           "One of my greatest AI-related fears is that we build critical systems into kafkaesque hellscapes.Yes, nukes would be bad to give control to an AI with no workaround. But so are customer service groups of fraud departments at banks. A kafkaesque hellscape is where a customer or beneficiary of your service cannot get the help they need by policy and by design. Like getting Google on the phone, getting a non-scripted human 10 years ago in a call center, or now getting a non-agentic interaction on the phone. The scripts dominate the interaction.The IRS, for a time, would cut off your call if their wait system was too busy. That's a critical system in kafkaesque hellscape.Kudos to zlandes86, you have highlighted WHY these hellscapes start to pop up in systems where the human is removed.I am an AI user and builder -- I fully advocate for the human-augmented system, NOT the human-replaced system!",
-          "Hey, I'm Zach, the author of this. I had this idea as soon as Jev appeared: how would Jev and other decision models handle the Trolley Problem? So I ran Jev and 13 other models through many different versions of the question.I used resampling and multiple variations and orderings of each question so a random lucky phrasing wouldn't dominate the result.Happy to chat about the philosophical side of the article, strategies for prompting decision models, or anything on the methodology.",
-          "1. A robot may not injure a human being or, through inaction, allow a human being to come to harm.2. A robot must obey the orders given it by human beings except where such orders would conflict with the First Law.3. A robot must protect its own existence as long as such protection does not conflict with the First or Second Law."
+          "Hey, I'm Zach, the author of this. I had this idea as soon as Jev appeared: how would Jev and other decision models handle the Trolley Problem? So I ran Jev and 13 other models through many different versions of the question.I used resampling and multiple variations and orderings of each question so a random lucky phrasing wouldn't dominate the result.Happy to chat about the philosophical side of the article, strategies for prompting decision models, or anything on the methodology."
         ]
       }
     },
     {
       "id": "50109715",
-      "title": "What I Self-Host",
+      "title": "What I self-host",
       "url": "https://viceconsole.fyi/blog/2026/10/10/what-i-self-host/",
       "source": "Hacker News",
       "published_at": "2026-10-15T20:23:25+00:00",
-      "summary": "What I Self-Host",
-      "score": 302,
-      "comments": 199,
+      "summary": "What I self-host",
+      "score": 349,
+      "comments": 227,
       "discussion_url": "https://news.ycombinator.com/item?id=50109715",
       "extra": {
         "top_comments": [
@@ -80,14 +98,14 @@
       "source": "Hacker News",
       "published_at": "2026-10-15T16:04:05+00:00",
       "summary": "Krea 3 – An image model built for editing at scale",
-      "score": 259,
-      "comments": 84,
+      "score": 279,
+      "comments": 86,
       "discussion_url": "https://news.ycombinator.com/item?id=50105648",
       "extra": {
         "top_comments": [
           "Hello HN,This is Diego from Krea. Today we are announcing the open beta of Krea 3, our newest foundational image model.In a nutshell, it’s a frontier image model in terms of quality, but at a fraction of the speed and a fraction of the price.We will be releasing a more technical update, like we did with Krea 2 (https://www.krea.ai/blog/krea-2-technical-report), but this website shows the capabilities we focused on:* Native regional edits* Precise edits so that there is minimal area degradation pixel-wise* Frontier image quality. Benchmarks still being worked on, but in our internal evals it seems a no-brainer replacement to NBP or GPT Image, both speed and cost-wise.* Faster edits (AFAICK, this should unlock a pareto frontier for speed in frontier edit models).In terms of future updates, the team is thinking about letting folks fine-tune Krea 3 (via LoRAs) and open-weights, but we’re still in the middle of launch hiccups and then we’ll revisit the next iterations.Thanks!",
           "Comparison samples with GPT-Image-2.5 for UI design work:Starship landing pageKrea 3: https://image.non.io/80b85aaa-286b-4ad7-b3ae-cfab4b491216.we...GPT-Image-2.5: https://image.non.io/19c5f032-cbc7-4034-9682-3aba451bd669.we...Fashion history websiteKrea 3: https://image.non.io/a6e61219-963c-4921-b453-738960e03308.we...GPT-Image-2.5: https://image.non.io/c067fd76-9c7e-46c2-a8fd-0b0931bf93f6.we...Banking websiteKrea 3: https://image.non.io/3a1e7b50-36e7-418c-ab47-368ce4f01948.we...GPT-Image-2.5: https://image.non.io/b96a7e00-3289-4044-90de-e0f86a2ca55e.we...Overall Krea 3 isn't near GPT-Image-2.5 in terms of visual creativity in this space, but it still should be commended for its ability to render small text details. That said despite it specifying you can add exact hex codes as color reference, I've found that they tend to leak into the design (check the valuation panel of the banking website - notice to the right of the \"fixed indexed 7-yr\" there's a hex code that made it into the image).I'd love to get my hands on this to post-train and see if it can be pushed further in this space. I actually see a lot of potential for the model, despite the clear differences in the examples above.",
-          "Are open weights being considered? The one thing I'm always looking forward to is all of the anime fine-tunes."
+          "Open-weights might make this wildly popular but I could see this not making headlines and grabbing attention if it remains closed since most people will just continue using OpenAI and Google. I know an open-weights release is being considered so fingers crossed. Hoping to run this locally for my personal use cases since I don't trust any hosted providers with personal image data."
         ]
       }
     },
@@ -98,50 +116,32 @@
       "source": "Hacker News",
       "published_at": "2026-10-15T19:21:38+00:00",
       "summary": "Someone on Torrent Sites Kept Fucking with My Sonarr",
-      "score": 257,
-      "comments": 117,
+      "score": 277,
+      "comments": 128,
       "discussion_url": "https://news.ycombinator.com/item?id=50108872",
       "extra": {
         "top_comments": [
-          "> Not even a folder with a fake .mkv and a \"codec installer\" next to it like the \"good old days\". Just the exe. Are we deadass.We can thank Microsoft for their willful support of criminals by having file extensions be hidden by default in Windows.",
           "Sonarr has an advanced setting in \"Settings > Indexers > [Your indexer] > Fail Downloads\" which you should add \"Executables\" to. Then these kinds of downloads get automatically marked as failed/blacklisted and a new search and new download is attempted without you needing to manually intervene. You may also have to tweak some conflicting settings on qbit.Alternatively, if there's a way to have qbit itself mark the download as \"Failed\" when it detects and refuses to download an executable, that would work too. I don't use qbit personally so I don't know if that's a thing it can be configured to do.",
+          "> Not even a folder with a fake .mkv and a \"codec installer\" next to it like the \"good old days\". Just the exe. Are we deadass.We can thank Microsoft for their willful support of criminals by having file extensions be hidden by default in Windows.",
           "Joining private trackers is hard only if you are trying to join the niche ones which is totally unnecessary if you are trying to watch relatively recent and popular movies.Just get into a decent general tracker and you'll literally never have this issue again (along with getting torrents with more seeders and better tagged content so your \"4k\" download will never be 480p again)"
         ]
       }
     },
     {
-      "id": "50104726",
-      "title": "Celebrating 70 Years of Fortran",
-      "url": "https://fortran-lang.org/news/2026/09-15-Fortran-birthday/",
+      "id": "50102923",
+      "title": "Libreboot 26.10 \"Ominous Olive\" released with UEFI, Chromebook support",
+      "url": "https://libreboot.org/news/libreboot2610.html",
       "source": "Hacker News",
-      "published_at": "2026-10-15T15:03:17+00:00",
-      "summary": "Celebrating 70 Years of Fortran",
-      "score": 226,
-      "comments": 98,
-      "discussion_url": "https://news.ycombinator.com/item?id=50104726",
+      "published_at": "2026-10-15T12:52:16+00:00",
+      "summary": "Libreboot 26.10 \"Ominous Olive\" released with UEFI, Chromebook support",
+      "score": 262,
+      "comments": 165,
+      "discussion_url": "https://news.ycombinator.com/item?id=50102923",
       "extra": {
         "top_comments": [
-          "The Computer History Museum collected an oral history[0] of John Backus[1] and there's some discussion about what computing was like when Fortran was created.I really enjoy CHM's oral histories. I'm slowly working my way thru all of them and there are some real gems in there (Ken Thompson, Dennis Ritchie, Margaret Hamilton, Gordon Moore, Fred Brooks, John Warnock, etc).[0] https://www.youtube.com/watch?v=dDsWTyLEgbk[1] https://en.wikipedia.org/wiki/John_Backus",
-          "I used to work on software that still uses Fortran from the 50's and is still in maintenance and use today. IIRC, it had ~700kloc of Fortran. It may be the oldest and largest Fortran codebase still in use.My first project there was removing all of the Hollerith from the code. Since Fortran predated strings, you had to manipulate them as integers. When you tied that to the original Fortran dynamic memory system, Dynosour, which used equivalenced arrays as pointers, it was a disaster.It also gave me an appreciation for JavaBeanFactoryFactory. The original Fortran limited identifiers to six characters, the first of which indicated whether the variable was an integer, logical (bool), or real (float). I will take a 100 character name over ILBNK1 every single time.GOTOs were surprisingly not a big problem, but structured code is definitely a bit easier to read, especially since it brought the practice of indentation with it.Overall, it was a great experience but I wouldn't want to do it again, even if the work was interesting.",
-          "FORTRAN was a very important language for me.Growing up on early micros, with BASIC, my father had Fortran for the TRS-80.I took a stab at learning it, but the documentation was reference for calling the compiler, not so much learning the language. And when I found a FORTRAN book, it was quite dated and talking about things like tapes and punches and what not.So, that effort stalled.But, my first quarter in college, I took a FORTRAN (77) class. FORTRAN taught on the schools CDC Cyber mainframe.This was quite a change from 8-bit PET BASIC.But, most importantly, it was exposure to much of the same concept that an 8-bit computer has, but from a different tact.This gave me more of a way to view things from a higher level, since I had to make them fit the two different views of how FORTRAN looked at things, how the Cyber presented things, and how BASIC and the PET were \"same thing only different\".It also gave me access to a multi-user system, and all of the interesting capabilities it offers.I remember when they put in their first lab of PCs, and how they started teaching folks Turbo Pascal on micro computers, and I just felt that the users were missing out on a bigger world. \"Anyone\" can access a PC or micro computer at home, but mainframe or multi user mini access, not so much. It's just a much bigger world out there, and we tend to baby duck what we first see.Different world today, never had to use FORTRAN professionally, but I am most grateful for the experience of learning it and its environment. Very powerful medium for broader learning.Also FORTRAN was the only notable computer thing I had \"taught\" to me (outside of my 20 minute introduction to BASIC by my high school teacher), pretty much everything else I self learned from books and such, even knowing the bulk of it before taking classes in school."
-        ]
-      }
-    },
-    {
-      "id": "50112657",
-      "title": "Tesla Roadster",
-      "url": "https://www.tesla.com/roadster",
-      "source": "Hacker News",
-      "published_at": "2026-10-16T01:32:45+00:00",
-      "summary": "Tesla Roadster",
-      "score": 219,
-      "comments": 237,
-      "discussion_url": "https://news.ycombinator.com/item?id=50112657",
-      "extra": {
-        "top_comments": [
-          "So this is a completely obvious scam, right? I don't see anyone else calling this out and I feel like I'm taking crazy pills.The thing that they showed off isn't something that they could legally sell, it would basically be a bomb. Also, the battery pack that would go in the car would be so large that they couldn't do the stunts they showed in their drone vehicle.Are we not calling an obvious stock pumping charade what it is out of some sense of politeness?",
-          "Ok, so it actually flies. That was unexpected.It's an incredible engineering achievement to build in massive fans and rocket engines into a high performance car. It's truly wild.It's being sold in two modes. One with cold gas (no combustion) seemingly just for extra forwards acceleration (no flying) and one with real combustion rocket engines, the latter was in the video and is \"invite only\".Wild that they devoted so much effort to an economically completely infeasible model. I wonder if the combustion version will even break 3 figures sales.Even just the cold gas variant seems like a nightmare for production, there's a high pressure COPV in that thing and that's gonna make crashes much more.. exciting, and Tesla doesn't have a great record anyways. But very few of these are ever getting sold anyways.",
-          "Looks like a sensible turning down of the Cybertruck aesthetic into something that looks good.That said, the production issues with the Cybertruck mean you’d be a fool to reserve one of these. Let others do it, find out how late it arrives, what glued panels fall off at speed and wait for the inevitable recalls. Tesla has torched their engineering reputation lately and this page is making a lot of promises about revolutionary things."
+          "Everyone’s focusing on the AI policy (perhaps because Leah for some reason said this was the most important part of the release), but the UEFI/EDK integration and Chromebook support is a massive step forward. Suddenly Libreboot has multiplied the devices available by many times, and future devices will be much easier to add. This is huge.",
+          "They don't seem to like AI.https://codeberg.org/libreboot/lbmk/src/branch/master/AGENTS...",
+          "Wow, this is awesome! This relates to work I've been doing with the [Heads](https://osresearch.net/) project. Specifically I got a PR merged for the first ChromeOS Port using MrChromebox's code as an upstream dependency: https://github.com/linuxboot/heads/pull/2133I'm now working on the 2nd ChromeOS device in this PR right now: https://github.com/linuxboot/heads/pull/2225 And there is a 3rd port by someone else: https://github.com/linuxboot/heads/pull/2219I'm surprised Libreboot was able to add all the ChromeOS devices at once, Just adding the 2 ports for Heads hasn't been easy, although I'm not an expert when it comes to Coreboot.Anyway, I love seeing more support for Chromebooks, they are great devices. Funny enough my Acer Chromebook (Kano) is now more open and more secure than my Framework 13s."
         ]
       }
     }
