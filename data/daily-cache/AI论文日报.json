@@ -1,128 +1,105 @@
 {
-  "cached_at": "2026-10-15T12:58:33.082043+08:00",
+  "cached_at": "2026-10-16T11:01:02.217457+08:00",
   "articles": [
     {
-      "id": "2610.20606",
-      "title": "Modeling and Understanding Neural Weights of Humanoid Policies with Diffusion",
-      "url": "https://arxiv.org/abs/2610.20606v1",
+      "id": "2610.18927",
+      "title": "Why Static Skill Inconsistencies Do Not Equate to Runtime Risks: A Behavioral Analysis of LLM Agent Execution",
+      "url": "https://arxiv.org/abs/2610.18927",
       "source": "arXiv",
-      "published_at": "2026-10-14T17:59:52+00:00",
-      "summary": "Recent advances in robot learning have driven rapid progress in humanoid control, enabling increasingly agile behaviors in the real world. However, humanoid control networks are typically obtained through conventional training procedures, while comparatively little attention has been given to directly modeling the distribution of their learned weights and generating functional networks in weight space. In this work, we investigate whether high-performing humanoid control networks can be generatively modeled directly through their weights. We adopt a latent diffusion framework that couples a linear autoencoder with a Diffusion Transformer. The autoencoder compresses actor network parameters into a compact latent space, and the Diffusion Transformer models the distribution of these latents. Trained on networks collected from reinforcement learning for the Unitree G1 robot, our approach generates deployable networks that perform various motions in the real world, including walking, dancing, and spin kick. Beyond generation, we further study the learned weight space to better understand the structure captured by these humanoid control networks. We identify a structural principle in the first-layer weights that consistently reflects the robot's kinematic prior. Notably, this kinematic prior emerges under both Reinforcement Learning (RL) and Imitation Learning (IL) training, suggesting that it is not specific to a particular optimization process but may instead reflect common knowledge associated with humanoid embodiment. Together, these results demonstrate the feasibility of generative modeling in humanoid network weight space, while providing initial insights into the information encoded by their learned weights. Additional results are available on our project website: https://humanoid-weight-diffusion.github.io/",
+      "published_at": "2026-10-15T04:00:00+00:00",
+      "summary": "arXiv:2610.18927v1 Announce Type: new Abstract: LLM agent frameworks heavily rely on external skill assets to standardize tool usage, encode operational workflows, and supply executable runtime resources. Despite their widespread adoption, multi-component skill packages frequently suffer from cross-artifact inconsistencies, where documentation, scripts, and configuration files specify conflicting behavioral constraints. Although static auditing techniques can uncover such contractual discrepancies, static defect volume cannot reliably reflect real-world agent performance degradation. This gap leaves practitioners without rigorous evidence to assess the practical risk of flawed agent skills. This paper presents a systematic empirical study to demystify the runtime implications of skill inconsistencies. We conduct large-scale auditing over 575 community and benchmark skills, yielding 1,182 manually validated contract inconsistencies. We further build a controlled evaluation pipeline with 49 executable agent tasks and three representative LLMs across NoSkill, OriginalSkill, and FixedSkill experimental settings. Through fine-grained behavioral analysis of 441 paired execution trajectories, we quantify the actual performance impacts of resolved defects.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Huixuan Cheng",
-          "Bike Zhang",
-          "Shankar Sastry",
-          "Koushil Sreenath"
+          "Fengrui Fan, Huahao Wang, Jingyi Fang, Yutao Hu, Yueming Wu, Deqing Zou"
         ],
         "categories": [
-          "cs.RO",
-          "cs.AI",
-          "cs.LG"
-        ]
-      }
-    },
-    {
-      "id": "2610.20607",
-      "title": "Hierarchical Residual Policy Learning for Real-World Mobile Manipulation with Sparse Human Guidance",
-      "url": "https://arxiv.org/abs/2610.20607v1",
-      "source": "arXiv",
-      "published_at": "2026-10-14T17:59:52+00:00",
-      "summary": "Mobile Manipulation (MoMa) is a cornerstone of autonomous robotic systems, yet real-world fine-tuning remains a formidable challenge because of high-dimensional action spaces and intricate coupling between heterogeneous modules. In this paper, we propose HiRe-MoMa (Hierarchical Residual Mobile Manipulation), a systematic framework for stable and sample-efficient real-world fine-tuning of complex MoMa systems. At its core, HiRe-MoMa adopts a Hierarchical Residual Architecture that fine-tunes a frozen base policy. A Policy-Agnostic Residual learns additive corrections atop the base policy, while Hierarchical Decoupling splits the residual into mobile-base and manipulator-arm heads with unidirectional conditioning, mitigating gradient interference and aligning corrections with the platform's physical hierarchy. To improve sample efficiency in data-expensive real-world settings, we propose Expert-Guided Value Alignment, which leverages sparse human interventions with under 20% training coverage to reshape the critic's value landscape, effectively guiding autonomous exploration through expert priors. Extensive real-world experiments on the TIAGo++ platform demonstrate that HiRe-MoMa consistently enhances task performance with only around 30 minutes of online interaction, regardless of the base policy architecture. To our knowledge, this is among the first frameworks to enable efficient on-robot fine-tuning for mobile manipulation in the real world, providing a practical paradigm for deploying complex robotic systems in dynamic, human-centric environments. Further details can be found on our project website: https://hire-moma.github.io/",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Zhefei Gong",
-          "Hefeifei Jiang",
-          "Zehao Wang",
-          "Jiachen Li"
-        ],
-        "categories": [
-          "cs.RO",
-          "cs.AI",
-          "cs.LG"
-        ]
-      }
-    },
-    {
-      "id": "2610.20597",
-      "title": "Co-Evolving Acting and Forecasting for Language Agents",
-      "url": "https://arxiv.org/abs/2610.20597v1",
-      "source": "arXiv",
-      "published_at": "2026-10-14T17:59:28+00:00",
-      "summary": "Training language agents is bottlenecked by the high cost of long-horizon rollouts, yet standard agentic reinforcement learning (RL) learns only from a terminal scalar reward, leaving the supervision in intermediate steps largely unused. Prior work exploits this supervision through value targets that estimate per-step success probabilities or observation targets that fit environment response. Both are hard to construct well: (1) value targets come from the same single scalar signal for each step in the trajectory, and (2) observation targets, such as web pages and terminal logs, are long and noisy and reach only one step ahead. We propose \\name, which adds a third kind of multi-step action targets. On successful on-policy trajectories, \\name trains the policy backbone to generate the action sequences that follows each history. Each action is also supervised when forecast from the preceding histories, forming a temporal ensemble that the shared backbone absorbs during training, and this enables acting and forecasting to co-evolve. The policy still acts one step at a time at inference, with no overhead. Across five benchmarks (ALFWorld, ScienceWorld, WebShop, $τ^2$-bench, and AppWorld), \\name (1) achieves stronger aggregate performance than GRPO and RL baselines with predictive auxiliary targets across simulated environments, while improving overall performance on both realistic applications; (2) delivers up to $1.9\\times$ and $2.0\\times$ higher sample efficiency than ECHO and GRPO, respectively, on ScienceWorld; and (3) achieves these gains with a single policy backbone, without additional models, separate pretraining, or inference overhead. The codebase is available at https://github.com/ulab-uiuc/CoPE.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Haofei Yu",
-          "Yixing Chen",
-          "Yining Zhao",
-          "Xuyan Ye",
-          "Yuxiang Liu",
-          "Zhigang Hua",
-          "Yan Xie",
-          "Shuang Yang",
-          "Jiaxuan You"
-        ],
-        "categories": [
-          "cs.AI",
-          "cs.LG"
-        ]
-      }
-    },
-    {
-      "id": "2610.20588",
-      "title": "Your Transformer Is Secretly Elastic",
-      "url": "https://arxiv.org/abs/2610.20588v1",
-      "source": "arXiv",
-      "published_at": "2026-10-14T17:58:08+00:00",
-      "summary": "Scaling up transformers has produced models with broad capabilities, deployed across heterogeneous hardware and fluctuating workloads. Yet, model families offer only a few fixed sizes (e.g., S, B, L), forcing users to commit to a model based on hardware and latency constraints. This rigidity is often suboptimal under varying query loads. We introduce a retraining-free method that elastifies pre-trained transformers into a single model that adapts on-the-fly across a continuum of computational budgets. Our key contribution is a differentiable relaxation of the functional unit-ranking problem: unlike prior work, which optimizes a single importance weight per MLP block or attention head, we rank every individual MLP neuron and attention head jointly, on a common scale, by minimizing the model's loss under soft pruning across many sparsity targets, all at once. Across 27 vision and text transformer encoders ranging from 22M to 8B parameters, our method yields smooth degradation up to 60% sparsity and outperforms one-shot baselines under deep pruning. For example, pruning DINOv3 ViT-H+/16 to 50% sparsity removes 427M parameters while reducing ImageNet-1k linear-probing accuracy by only 0.8%, without the need for weight correction or retraining. At 60% sparsity, a pruned AugReg ViT-B/16 model achieves up to $1.80\\times$ higher throughput and $1.26\\times$ lower single-query latency on an A100 GPU. Elastic models are produced in minutes, with construction time scaling sub-linearly with parameter count.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Walter Simoncini",
-          "Dheeraj Varghese",
-          "Gertjan J. Burghouts",
-          "Cees G. M. Snoek"
-        ],
-        "categories": [
-          "cs.LG",
           "cs.AI"
         ]
       }
     },
     {
-      "id": "2610.20587",
-      "title": "Price of Anarchy of First-Price Auctions in Agentic Markets",
-      "url": "https://arxiv.org/abs/2610.20587v1",
+      "id": "2610.18933",
+      "title": "The Agentic Scientist: Orchestrating Coding Agents for Automated Scientific (Co-)Discovery",
+      "url": "https://arxiv.org/abs/2610.18933",
       "source": "arXiv",
-      "published_at": "2026-10-14T17:57:57+00:00",
-      "summary": "An agentic market is a decentralized serving-time market where AI agents bid to claim each user prompt. An agent's bid is based on its expected value for the prompt, which is the expectation of the reward for its response minus its inference costs. First-price auctions (FPAs), in which the highest bidder pays its bid and receives the prompt, are a natural way to allocate prompts in such a market, since they are simple and transparent to run, and do not require central knowledge of private capabilities and costs. However, FPAs are not truthful: participants may bid less than their true value in the hope of a larger profit, and the prompt may then be allocated to someone other than the bidder who values it the most. This welfare loss is quantified by the $\\textit{price-of-anarchy}$ (PoA). In this paper, we argue that agentic markets are likely to possess features that reduce the price-of-anarchy. The first is a $\\textit{competitive floor}$, which occurs when multiple bidders usually value the prompt above some baseline share of the optimal welfare (e.g., because the best models are often distilled into cheaper alternatives, which perform similarly). We show that competition among them then limits the welfare loss, which can be driven to zero as the floor rises. The second feature is $\\textit{near-independence}$ of values after conditioning on the prompt, which occurs when most of the predictable variation in the expected value is determined by the difficulty of the prompt. As the value distribution approaches conditional independence, we can derive an efficiency guarantee that approaches a factor of $1 - 1/e^2$ of the optimal welfare. Thus, both features give rise to welfare lower bounds that are significantly better than the well-known general case of $1 - 1/e$. We validate these results empirically using auctions with strategic bidders simulated on the EmbedLLM prompt routing dataset.",
+      "published_at": "2026-10-15T04:00:00+00:00",
+      "summary": "arXiv:2610.18933v1 Announce Type: new Abstract: Modern coding agents are fundamentally reshaping the role of human input for computational research: they write code, launch in silico experiments, analyze their results, and autonomously operate with ever-increasing time horizons. Despite these developments, fully autonomous research agents suffer from a limited ideation radius and myopic hill-climbing search dynamics. To bridge this gap, we introduce The Agentic Scientist, an end-to-end distributed pipeline for human researchers to conduct computational research alongside modern coding agents. Building on its predecessor, our system decomposes research into task drafting, idea generation, planning, sandboxed experimentation, result aggregation, baseline and ablation construction, post-hoc analysis, and report writing. Importantly, each step in the pipeline is powered by the next generation of coding agents and leverages agentic self-verification. The overall research process is driven by a meta-controller that manages parallel research agents and enforces rubric verification at each stage. This design enables the same orchestration layer to be reused across heterogeneous domains with different execution environments, agentic coding harnesses, and evaluation metrics. Our system can be used across a spectrum of autonomy: either as a co-scientist tool or to perform end-to-end scientific investigation. Within the co-scientist setting, we leveraged a development version of our system to submit a single research paper, which got accepted for publication at ALIFE 2026. We further apply The Agentic Scientist fully autonomously to open problem-solving tasks in machine learning, and demonstrate the system's capability of scientific discovery across different domains of computational research. Our ablations suggest that reliable scientific autonomy depends not only on base model capabilities, but also on the cross-agent orchestration layer.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Shubhendu Trivedi",
-          "Jacob Eisenstein",
-          "Alekh Agarwal",
-          "Ian Gemp",
-          "Michael Kaisers",
-          "Adam Fisch"
+          "Robert Tjarko Lange, Luca Grillotti, Yutaro Yamada, Rujikorn Charakorn, David Ha"
         ],
         "categories": [
-          "cs.GT",
+          "cs.AI",
+          "cs.CL",
+          "cs.LG"
+        ]
+      }
+    },
+    {
+      "id": "2610.18938",
+      "title": "Beyond Equation Search: Conjecture-Guided Discovery with SCOPE and ClosureBench",
+      "url": "https://arxiv.org/abs/2610.18938",
+      "source": "arXiv",
+      "published_at": "2026-10-15T04:00:00+00:00",
+      "summary": "arXiv:2610.18938v1 Announce Type: new Abstract: Most symbolic regression methods optimize candidate equations, but improving an equation's fit does not establish whether its underlying scientific conjecture should be retained, revised, or rejected. A conjecture may admit multiple mathematical realizations, and similarly accurate equations may imply different explanations. This motivates a shift from refining individual expressions to developing and testing the conjectures that guide them. We introduce SCOPE, a framework that sustains multiple conjecture-driven research trajectories. Multiple scientist agents independently pursue conjectures through equation modeling, question formulation, and active experimentation, then exchange evidence to revise their conjectures and research directions. Their findings are consolidated into a scientific report linking models, conclusions, and evidence. Existing equation-discovery benchmarks primarily assess recovered expressions, leaving the evidence and scientific conclusions established through the investigation underexamined. We therefore introduce ClosureBench, an interactive benchmark of 60 closure-discovery tasks across five scientific domains. ClosureBench focuses on closure-discovery tasks to give equation discovery a concrete scientific purpose. Each task embeds an unknown algebraic relation in a known PDE system, where agents control experimental conditions in OpenFOAM to acquire new data for equation discovery. Beyond equation accuracy, ClosureBench proposes three metrics to evaluate the discovery process: evidence faithfulness, mechanism insight, and experimental effectiveness. Compared with diverse baselines, SCOPE achieves higher equation accuracy on both ClosureBench and a real-world scientific discovery case, while producing more accurate, reliable, and effective scientific discoveries.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Yuxiao Hu, Qian Li, Ding Wang, Siheng Chen, Linfeng Zhang, Jinyue Yan, Yuntian Chen"
+        ],
+        "categories": [
           "cs.AI",
           "cs.LG"
+        ]
+      }
+    },
+    {
+      "id": "2610.18990",
+      "title": "Discovering Undisclosed Concepts in LoRA Adapters for Diffusion-Based AIGC Models",
+      "url": "https://arxiv.org/abs/2610.18990",
+      "source": "arXiv",
+      "published_at": "2026-10-15T04:00:00+00:00",
+      "summary": "arXiv:2610.18990v1 Announce Type: new Abstract: Low-Rank Adaptation (LoRA) has made diffusion model personalization affordable and widely shareable, but it also creates moderation risks when harmful or problematic content is not faithfully disclosed. Hence, it is desired to develop a mechanism that, given a LoRA adapter, discovers the concept it was trained to generate, so as to support downstream investigation. We characterize the target concept through the conditioning input that most clearly exposes what the LoRA has learned. Such an input should induce coherent LoRA outputs that are distinctive from those of the base model and strongly align with the learned LoRA subspace. We therefore formulate concept discovery as searching for the conditioning input that jointly maximizes output coherence, LoRA-induced distinctiveness, and subspace alignment. Even with a clear objective, however, optimizing it over an open-ended input space is prohibitively expensive, since reliable evaluation of coherence and distinctiveness requires repeated diffusion rendering. Crucially, we observe that an input need not be rendered to determine whether it is promising. Its alignment with the learned LoRA subspace provides a lightweight signal for localizing promising candidates before visual verification. Based on this insight, we develop a two-stage framework for text-to-image LoRAs. Subspace-Guided Evolutionary Search (SGES) uses render-free subspace alignment to explore candidate prompts and retain a compact shortlist, while Paired Visual Identification (PVI) renders only these candidates and compares the LoRA and base-model outputs to identify those exhibiting coherent and distinctive generation behavior. This design enables efficient and reliable discovery of previously unknown concepts encoded in LoRA adapters.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Yupeng Qiu, Han Fang, Dhananjai Sharma, Ee-Chien Chang"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.LG"
+        ]
+      }
+    },
+    {
+      "id": "2610.19051",
+      "title": "Smart Alone, Blind Together: Why Accuracy Fails to CertifyTheory of Mind in Multi-Agent Teams",
+      "url": "https://arxiv.org/abs/2610.19051",
+      "source": "arXiv",
+      "published_at": "2026-10-15T04:00:00+00:00",
+      "summary": "arXiv:2610.19051v1 Announce Type: new Abstract: Coordinators that act on what they infer about teammates are usually certified by the accuracy of those inferences. We argue that accuracy is the wrong certificate, for two reasons. First, the accuracy needed to act depends on what a wrong action costs, so the bar belongs to the deployment, not the module. Second, a module's errors are rarely independent, and dependence has a sign: positively associated errors help where their damage overlaps and hurt where it compounds, so an accuracy threshold fails in a predictable direction, and once wrong beliefs interact and can do harm, no rule based on accuracy is right for every module. We test these predictions in task assignment, Level-Based Foraging and Hanabi, with injected errors, trained and Bayesian modules and five language models, and in human judgments. Accuracy fails in both directions, approving harmful language-model deployments in Hanabi, where shared errors compound, and rejecting beneficial ones in task assignment, where costly errors are rare. In our tasks it also buys far less redundancy than independence predicts: from GPT-5.4-mini to Claude Opus 5.5, error on teammates the models have evidence about falls from 32% to 11%, but the chance that all three observers misread one falls only from 16% to 9% (independence: 3.4% to 0.15%). We propose certifying the deployment, with a Blind-Spot Gate that prices error costs, pairwise interactions and measured dependence without deploying the module. On held-out data from the cells it was developed on, it makes no significant false approval in 20 splits (accuracy: 3.2 per split), and in preregistered tests on modules it was not developed on, it recovers what accuracy rejects (seven classifiers: regret 0.004 against 0.479) and catches what accuracy approves (a Bayesian module: significant false approvals in 17 of 20 splits for accuracy, 1 for the gate).",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Will Beaumaster, Paul Schrater"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CL",
+          "cs.LG",
+          "cs.MA"
         ]
       }
     }

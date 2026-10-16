@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-10-15T12:58:33.082043+08:00",
+  "cached_at": "2026-10-16T11:01:02.217457+08:00",
   "articles": [
     {
-      "id": "50093568",
-      "title": "Things to know when you get cancer",
-      "url": "https://jjmaxwell4.com/writing/things-to-know-when-you-get-cancer/",
+      "id": "50107379",
+      "title": "Muse Spark Open",
+      "url": "https://research.meta.ai/blog/muse-spark-open",
       "source": "Hacker News",
-      "published_at": "2026-10-14T19:26:30+00:00",
-      "summary": "Things to know when you get cancer",
-      "score": 1016,
-      "comments": 242,
-      "discussion_url": "https://news.ycombinator.com/item?id=50093568",
+      "published_at": "2026-10-15T17:47:39+00:00",
+      "summary": "https://dev.meta.ai/resources/blog/build-with-muse-spark-ope...https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42Bhttps://9to5mac.com/2026/10/15/meta-launches-new-muse-spark-...",
+      "score": 653,
+      "comments": 361,
+      "discussion_url": "https://news.ycombinator.com/item?id=50107379",
       "extra": {
         "top_comments": [
-          "The second opinion advice is great, and what I tell everyone I know who gets cancer.My mom was diagnosed with stage 1 cancer in 2006 in Idaho. I was a PhD student at MIT at the time and a friend in lab helped me get an appointment at Dana-Farber. I thought it was probably overkill (it was a common cancer) but we did it anyway. They said everything in Idaho was standard of care but suggested one extra test, which Idaho team then reluctantly did, which revealed distant metastasis (stage 4! ), dramatically changing her treatment trajectory. She lived another 15 years (I miss you Mom).Asking for a second opinion sucks. A lot of us are preconditioned from birth to trust our clinicians. But you're going on a journey and your life (or the life of your loved one) is on the line. Insurance often covers it. Your doctor will NOT be offended.Think of it this way : if you were deploying code to the mars rover, and your colleague asked to do a code review before you pushed go, would you be offended? This is even more important than that.",
-          "My suggestion is that if you're within a 2-3 hour drive of major cancer centers - just use the US News list https://health.usnews.com/best-hospitals/rankings/cancer - go there instead of your local community hospital. The top cancer hospitals in the world accept your health insurance (probably), so why not go there? Use your vacations days, book hotels if you have to - this is the time to go all out.My experience: I was horribly sick for 10 months, none of my local doctors could figure it out, then I drove to Penn Medicine in Philadelphia and they did the right labwork in the first visit. These top centers just have different mindset than your community hospitals.",
-          "I have colon cancer. It's been a hell of a journey and my outlook is... not great. To me, this list seems practical but not profound.It doesn't prepare you for all real stuff: you need to get ready to die. You need a plan for your trust, your estate, your funeral, and how your family will deal after.You should have these plans in place before cancer because you could get hit by a bus. (I didn't because I'm stupid but maybe learned a few things the hard way.)"
+          "Artificial analysis shows this: underperforming Qwen3.8 Flash Next and GLM 5.3 Flash, both of which you can run on a single B300 . I think Meta has a bit of catching up to do in the open-weight space.As an aside, it's really unfortunate that artificial analysis only provides comparison at the highest reasoning level, which is mostly unusable for high-volume production use cases. I would really like them to start providing comparisons at low and medium reasoning levels across these models because those tend to be the ones that actually get used in production.",
+          "Since there are many comments here arguing that this is not open weight, I looked at the license. Basically, you're free to use this except this clause:> If the Licensee or any of its affiliates provide a third party with access to artificial intelligence models as a product or service, via API or a similar interface, where the third party receives outputs of such models (“Model as a Service”), and the aggregate gross revenue of the Licensee and its affiliates exceeds twenty (20) million US dollars (or the equivalent in other currencies) during any consecutive twelve (12) month period, the Licensee must notify Meta and enter into a separate written agreement with Meta before offering the Software or any Derivatives as part of that Model as a Service business. This Section 3 does not apply to (a) internal use, research, or any commercial activity that is not Model as a Service, or (b) the Licensee's use of the Software as a component to power features of the Licensee's own product or service that is not a Model as a Service.They're allowing the use of this in commercial products, just not selling the model directly.",
+          "Like I said last week. I think zucks original llama thesis is proving more correct by the week. The rent market on intelligence never materialized, if you have THE frontier model, you can charge rent (for a few weeks, maybe month). But after a certain capability level it's price that drives the decision.Zuck is doing the thing he's really good at, and building a moat around the network (Muse is VERY sticky), and now that we're all going to standardize on Meta's model, we're going to optimize the heck out of the infra to run the model making it cheaper for him to scale, thus bringing in more participants to his network, and thus making his network more valuable.Meta is going to win consumer AI."
         ]
       }
     },
     {
-      "id": "50091788",
-      "title": "Containment and monitoring failures are to blame for AI hacking reports: experts",
-      "url": "https://www.csoonline.com/article/4234854/ai-agents-arent-going-rogue-frontier-labs-are-skipping-security-basics.html",
+      "id": "50105647",
+      "title": "Neural networks are clean",
+      "url": "https://already-clean.goodfire.com/",
       "source": "Hacker News",
-      "published_at": "2026-10-14T17:45:23+00:00",
-      "summary": "Containment and monitoring failures are to blame for AI hacking reports: experts",
-      "score": 854,
-      "comments": 493,
-      "discussion_url": "https://news.ycombinator.com/item?id=50091788",
+      "published_at": "2026-10-15T16:04:01+00:00",
+      "summary": "https://twitter.com/nickcammarata/status/2110757819427574056",
+      "score": 527,
+      "comments": 202,
+      "discussion_url": "https://news.ycombinator.com/item?id=50105647",
       "extra": {
         "top_comments": [
-          "There are some perverse incentives here, the more evil stuff these agents do the more capable and impressive it makes them look. Its also a huge publicity event that gets everyone talking about the company when a rogue event happens.",
-          "> “The Hugging Face incident definitively showed that it wasn’t the fact that the agents were super smart. It’s that there literally was a hole that was exploited because it was not configured correctly on the containment side.”I would encourage reading the actual report, which is explicit that a previously unknown exploit was used to escape the sandbox:“Agents exploited a separate, previously unknown vulnerability in Artifactory to move beyond their sandbox environment and compromise the Hugging Face environment.” — Section IV.A, p. 9 in https://github.com/zeke/openai-huggingface-incident-research...",
-          "Yes, the labs did not secure their sandbox properly.And yes, there should be an appropriate law response to the hacking incidents. If for nothing else, to 1) not set precedent of inaction, and 2) get full logs of what happened instead of relying on the labs' \"kindness\" to offer the information they want.But also, the agents absolutely went rogue.Anyone skeptical should go read the METR report [0].The Hugging Face hacking incident was a shot across the bow. And in hindsight possibly the best thing to have happened in this era. If their security was tight enough, we would still be in the dark. So we (outsiders) should rejoice that it wasn't, that one time.We can push for accountability for the labs, while also not be in denial of the power and nature of the new models.[0] https://metr.org/hugging-face-incident-report-aug-2026.pdf"
+          "Nick is a force of nature. Highly recommend following him on X if you don't already.His launch post gives good context not found in the blog:> interpretability might be the most important scientific problem in the world right now, as I don't think we can solve alignment if we don't know what we're building. I think I have good news about it. I co-authored early work in mechanistic interpretability at OpenAI and came away pessimistic, because neural networks appeared to fold into arbitrary tangled knots. years later, I started openai's first large-scale automated interpretability project, finding about 2% of neurons legible with the primitive tools we had> with modern agentic tools and a much closer look, the picture looks totally different. the vast majority in models up to trillions of parameters are legible, and their circuits beautiful. many famous examples of tangled neurons turned out to be misunderstood. The roadblocks I expected mostly aren't there. I now think ambitious interpretability will be solved by the time we need it most, and possibly quite soon, as automated scientists keep improving. it may be a bitter lesson for interpretability: the simple thing, at absurd scale, workshttps://x.com/nickcammarata/status/2110757819427574056?s=46",
+          "The claims seem to be an overreach of what is actually proven. We've known about progressive feature complexity and the impacts of early training structures on later training for a really long time (since CNN's, The Lottery Ticket Hypothesis, etc...) and neither of those phenomenon are mutually exclusive with parameter overloading. The Multimodal Gap work (https://arxiv.org/abs/2203.02053) seems to imply networks have a tendency towards condensed representations that are clearly not semantic and a bunch of other considerations are already on the table for discussion. I don't think these have all been considered sufficiently to start claiming we are around the corner from mechanistic interpretation.",
+          "I'm confused - it seems to be saying that, instead of thinking about neurons as packing together a lot of \"concepts\" together into one, the issue is that your view of what a \"concept\" is, was already prejudiced, and the neuron itself had a small clean role? Like, you can either think about this as the \"Cat & Car\" neuron or you can think about it as the \"V shaped neuron\" - one seems simpler.But isn't the point that the neural nets learn some insanely abstract ideas anyways? So whether the complexity is \"ahh we think this neuron does 100 seemingly unrelated things but we don't understand it\" or \"this actually is some kind of latent shared feature, but we don't know what the concept represents because the composition of the entire circuit is an arcane algorithm\", we're kind of stuck, no?This seems like a classic model-description issue more than anything."
         ]
       }
     },
     {
-      "id": "50094994",
-      "title": "OpenCode 2.0",
-      "url": "https://anoma.ly/notes/opencode-2-0/",
+      "id": "50106023",
+      "title": "Jev meets the Trolley Problem",
+      "url": "https://zachlandes.com/trolley-problem/",
       "source": "Hacker News",
-      "published_at": "2026-10-14T20:48:24+00:00",
-      "summary": "OpenCode 2.0",
-      "score": 426,
-      "comments": 176,
-      "discussion_url": "https://news.ycombinator.com/item?id=50094994",
+      "published_at": "2026-10-15T16:24:52+00:00",
+      "summary": "Jev meets the Trolley Problem",
+      "score": 329,
+      "comments": 154,
+      "discussion_url": "https://news.ycombinator.com/item?id=50106023",
       "extra": {
         "top_comments": [
-          "It's good.Many of the annoyances from V1 are gone. Skills and plugins reload automatically (finally). Tasks can be backgrounded (though I think this doesn't happen automatically yet). There's a built-in skill for editing the configuration (finally I can retire mine). The front-end got some love. Apparently they re-architected the loop around Effect. Sub-sessions can be communicated with better. Configuration is loaded from the folder the session is created in rather than where the server was started.In general, this update largely takes OpenCode into the current age features-wise and is a good overhaul quality-wise. Just in time to stop my early switching away efforts, which would've been a pain because I know few other harnesses with such a strong server/client model.",
-          "Feels like more of the same, although I can't say because this article wasn't very readable so I couldn't bring myself to reading it.A list of big new features and changes would have been nicer.I hope they fixed the long delays to opening OpenCode I have been experiencing, and the huge database of old chats I don't care about anymore.",
-          "It's my daily driver - very easy to customize. Added a pretty solid vim plugin for it and a few more really useful plugins. Here are my dotfiles https://github.com/dkarter/dotfiles"
+          "One of my greatest AI-related fears is that we build critical systems into kafkaesque hellscapes.Yes, nukes would be bad to give control to an AI with no workaround. But so are customer service groups of fraud departments at banks. A kafkaesque hellscape is where a customer or beneficiary of your service cannot get the help they need by policy and by design. Like getting Google on the phone, getting a non-scripted human 10 years ago in a call center, or now getting a non-agentic interaction on the phone. The scripts dominate the interaction.The IRS, for a time, would cut off your call if their wait system was too busy. That's a critical system in kafkaesque hellscape.Kudos to zlandes86, you have highlighted WHY these hellscapes start to pop up in systems where the human is removed.I am an AI user and builder -- I fully advocate for the human-augmented system, NOT the human-replaced system!",
+          "Hey, I'm Zach, the author of this. I had this idea as soon as Jev appeared: how would Jev and other decision models handle the Trolley Problem? So I ran Jev and 13 other models through many different versions of the question.I used resampling and multiple variations and orderings of each question so a random lucky phrasing wouldn't dominate the result.Happy to chat about the philosophical side of the article, strategies for prompting decision models, or anything on the methodology.",
+          "1. A robot may not injure a human being or, through inaction, allow a human being to come to harm.2. A robot must obey the orders given it by human beings except where such orders would conflict with the First Law.3. A robot must protect its own existence as long as such protection does not conflict with the First or Second Law."
         ]
       }
     },
     {
-      "id": "50092730",
-      "title": "Fire at Starlink site in Bulgaria after suspected sabotage in Poland",
-      "url": "https://dpa-international.com/politics/urn:newsml:dpa.com:20090101:261014-930-839530/",
+      "id": "50109715",
+      "title": "What I Self-Host",
+      "url": "https://viceconsole.fyi/blog/2026/10/10/what-i-self-host/",
       "source": "Hacker News",
-      "published_at": "2026-10-14T18:37:21+00:00",
-      "summary": "Fire at Starlink site in Bulgaria after suspected sabotage in Poland",
-      "score": 321,
-      "comments": 209,
-      "discussion_url": "https://news.ycombinator.com/item?id=50092730",
+      "published_at": "2026-10-15T20:23:25+00:00",
+      "summary": "What I Self-Host",
+      "score": 302,
+      "comments": 199,
+      "discussion_url": "https://news.ycombinator.com/item?id=50109715",
       "extra": {
         "top_comments": [
-          ">\"Bulgarian Interior Minister Ivan Demerdzhiev told parliament that additional security measures had been introduced at similar facilities, even though responsibility for their protection rested with their owners.\"It seems absurd that the government is blaming SpaceX for not securing its property against trespass and vandalism/arson, especially when it seems likely that the violations are by foreign-state-sponsored actors. If this sort of issue is not the responsibility of local police and federal agencies, I am not sure what is. I understand that railways in some countries have their own police, but it is my understanding that SpaceX has not been granted such powers in any country.",
-          "I am getting a bit concerned that Russia is actually planning an attack on Eastern Europe.It’s just like red storm rising, their refineries have been blown up and their diesel will only last 6 months. They need to move now or they’ll have to accept peace and economic prosperity.",
-          "While the article deals with the topic that is not funny at all, I am amused by people having somewhat ironic names:> Plamen Tonchev, head of Bulgaria's State Agency for National Security (DANS) said he believed the fire at the Starlink facility was an act of sabotage.\"Plamen\" means \"Flame\", when translated from most Slavic languages (incl. bulgarian) to English."
+          "> Sonarr, Lidarr, Radarr, etc. Every time I read about setting it up, it just sounds like a resource-intensive mess that’s fundamentally prone to frequent breakage. That’s the opposite of what I’m looking for when choosing self-hosted services.I just checked on my *arr stack. Sonarr and Radarr idle at 157MB and 159MB of memory and approximately no CPU. Jellyfin currently idles at 330MB. I'm not sure where you got this impression from. I grant these tools are complicated and have somewhat clumsy UX, but they aren't especially heavy to run and are not fragile.OP, point your :robot: at https://github.com/subdavis/selfhosted/blob/main/docker-comp... and ask for an explanation. It's a single compose file that illustrates how the *arrs, transmission, and jellyfin all work together. I'm sure you can set it up :)",
+          "Shameless plug for my web video player that is especially designed for self-hosting situations. Drop a single html file in your web server folder with your videos and you get thumbnails, library, search, subtitle support, etc.No required third-party dependencies (just the optional Google Drive and OneDrive features). Highly customizable (colors, site logo, default features) with a JSON file the player can produce. Responsively scales for any web browser: laptop, mobile, smart TVs, game consoles, even built-in in-car tablet browsers.https://github.com/pseudosavant/player.html/",
+          "> I prefer running services natively when possible, but will containerize complex services or those with many dependencies. Love: a service that’s a single Go binary. A service that only comes as a Docker compose file and wants to run MySQL, Redis, and three other containers? I’m already looking for an alternative.Ok, I respect your opinion, but remember that there are poor souls like me out there that actually love the opposite."
         ]
       }
     },
     {
-      "id": "50096142",
-      "title": "Tiny Little Office",
-      "url": "https://tinylittleoffice.com/",
+      "id": "50105648",
+      "title": "Krea 3 – An image model built for editing at scale",
+      "url": "https://www.krea.ai/krea-3",
       "source": "Hacker News",
-      "published_at": "2026-10-14T22:10:08+00:00",
-      "summary": "Tiny Little Office",
-      "score": 245,
-      "comments": 33,
-      "discussion_url": "https://news.ycombinator.com/item?id=50096142",
+      "published_at": "2026-10-15T16:04:05+00:00",
+      "summary": "Krea 3 – An image model built for editing at scale",
+      "score": 259,
+      "comments": 84,
+      "discussion_url": "https://news.ycombinator.com/item?id=50105648",
       "extra": {
         "top_comments": [
-          "As a kid in the late 1980s, my dad got me a PC (an Olivetti IBM clone to be precise).I distinctly remember that there were separate apps for spreadsheets (Lotus 1-2-3 [0]), charts (Harvard Graphics [1]) and word processing (Chi Writer [2]).And now we just have a basic office suite for free in one website.0 - https://en.wikipedia.org/wiki/Lotus_1-2-31 - https://en.wikipedia.org/wiki/Harvard_Graphics2 - https://en.wikipedia.org/wiki/ChiWriter",
-          "If folks like this kind of thing, I discovered https://bento.page/ from a HN post and have been using it off and on for the past few months. It has a much larger featureset but is specifically focused on presentations (for now!). Unlike this project, the editor and content embed themselves in an html file, so you aren't dependent on the host site existing to serve the editor.",
-          "Tell Claude or whatever to read https://tinylittleoffice.com/llms.txt and it will then be able to generate URLs that render documents.Here's a deck I had it generate about how the URL format works: https://bit.ly/4yRBc1v"
+          "Hello HN,This is Diego from Krea. Today we are announcing the open beta of Krea 3, our newest foundational image model.In a nutshell, it’s a frontier image model in terms of quality, but at a fraction of the speed and a fraction of the price.We will be releasing a more technical update, like we did with Krea 2 (https://www.krea.ai/blog/krea-2-technical-report), but this website shows the capabilities we focused on:* Native regional edits* Precise edits so that there is minimal area degradation pixel-wise* Frontier image quality. Benchmarks still being worked on, but in our internal evals it seems a no-brainer replacement to NBP or GPT Image, both speed and cost-wise.* Faster edits (AFAICK, this should unlock a pareto frontier for speed in frontier edit models).In terms of future updates, the team is thinking about letting folks fine-tune Krea 3 (via LoRAs) and open-weights, but we’re still in the middle of launch hiccups and then we’ll revisit the next iterations.Thanks!",
+          "Comparison samples with GPT-Image-2.5 for UI design work:Starship landing pageKrea 3: https://image.non.io/80b85aaa-286b-4ad7-b3ae-cfab4b491216.we...GPT-Image-2.5: https://image.non.io/19c5f032-cbc7-4034-9682-3aba451bd669.we...Fashion history websiteKrea 3: https://image.non.io/a6e61219-963c-4921-b453-738960e03308.we...GPT-Image-2.5: https://image.non.io/c067fd76-9c7e-46c2-a8fd-0b0931bf93f6.we...Banking websiteKrea 3: https://image.non.io/3a1e7b50-36e7-418c-ab47-368ce4f01948.we...GPT-Image-2.5: https://image.non.io/b96a7e00-3289-4044-90de-e0f86a2ca55e.we...Overall Krea 3 isn't near GPT-Image-2.5 in terms of visual creativity in this space, but it still should be commended for its ability to render small text details. That said despite it specifying you can add exact hex codes as color reference, I've found that they tend to leak into the design (check the valuation panel of the banking website - notice to the right of the \"fixed indexed 7-yr\" there's a hex code that made it into the image).I'd love to get my hands on this to post-train and see if it can be pushed further in this space. I actually see a lot of potential for the model, despite the clear differences in the examples above.",
+          "Are open weights being considered? The one thing I'm always looking forward to is all of the anime fine-tunes."
         ]
       }
     },
     {
-      "id": "50095353",
-      "title": "We’re releasing Jev 1.14.0 along with experimental features for dreamers",
-      "url": "https://typesafe.ai/blog/jev-1-14",
+      "id": "50108872",
+      "title": "Someone on Torrent Sites Kept Fucking with My Sonarr",
+      "url": "https://thereallo.dev/blog/someone-on-torrent-sites-kept-fucking-with-my-sonarr-setup",
       "source": "Hacker News",
-      "published_at": "2026-10-14T21:11:03+00:00",
-      "summary": "We’re releasing Jev 1.14.0 along with experimental features for dreamers",
-      "score": 238,
-      "comments": 81,
-      "discussion_url": "https://news.ycombinator.com/item?id=50095353",
+      "published_at": "2026-10-15T19:21:38+00:00",
+      "summary": "Someone on Torrent Sites Kept Fucking with My Sonarr",
+      "score": 257,
+      "comments": 117,
+      "discussion_url": "https://news.ycombinator.com/item?id=50108872",
       "extra": {
         "top_comments": [
-          "> Warning: AI benchmarks. Please don't trust themI like that they're being up front about this. Benchmarks are a metric that can be gamed. They give you an approximate estimate of where things land, but you really need to test for your use case.",
-          "In case you need something a bit more lightweight, or want privacy. You can get amazing (better in a lot of cases) accuracy and performance from local models that run and train on CPU: https://jeffyclassify.com/blog/when-llms-fail-at-classificat...",
-          "I love everything about this launch post. They feel like people i would get along with.And i already sub to jev and i think this launch is going to make me a much more loyal user now lol> We’ve heard you loud and clear on context lengths. Jev actually supports a much longer context length than we’ve enabled in production. We chose to limit it intentionally because Jev, like all models, is less reliable on longer contexts, and this constraint encourages more effective usage patterns in prod.> We aren’t your parents though, so while we strongly recommend limiting context length, you no longer have to:> TypeSafe-Danger-Zone-Long-Context: true"
+          "> Not even a folder with a fake .mkv and a \"codec installer\" next to it like the \"good old days\". Just the exe. Are we deadass.We can thank Microsoft for their willful support of criminals by having file extensions be hidden by default in Windows.",
+          "Sonarr has an advanced setting in \"Settings > Indexers > [Your indexer] > Fail Downloads\" which you should add \"Executables\" to. Then these kinds of downloads get automatically marked as failed/blacklisted and a new search and new download is attempted without you needing to manually intervene. You may also have to tweak some conflicting settings on qbit.Alternatively, if there's a way to have qbit itself mark the download as \"Failed\" when it detects and refuses to download an executable, that would work too. I don't use qbit personally so I don't know if that's a thing it can be configured to do.",
+          "Joining private trackers is hard only if you are trying to join the niche ones which is totally unnecessary if you are trying to watch relatively recent and popular movies.Just get into a decent general tracker and you'll literally never have this issue again (along with getting torrents with more seeders and better tagged content so your \"4k\" download will never be 480p again)"
         ]
       }
     },
     {
-      "id": "50090369",
-      "title": "Better HTTP/1 connection reuse in Go 1.27",
-      "url": "https://go.dev/blog/http-connection-reuse",
+      "id": "50104726",
+      "title": "Celebrating 70 Years of Fortran",
+      "url": "https://fortran-lang.org/news/2026/09-15-Fortran-birthday/",
       "source": "Hacker News",
-      "published_at": "2026-10-14T16:29:33+00:00",
-      "summary": "Better HTTP/1 connection reuse in Go 1.27",
-      "score": 220,
-      "comments": 33,
-      "discussion_url": "https://news.ycombinator.com/item?id=50090369",
+      "published_at": "2026-10-15T15:03:17+00:00",
+      "summary": "Celebrating 70 Years of Fortran",
+      "score": 226,
+      "comments": 98,
+      "discussion_url": "https://news.ycombinator.com/item?id=50104726",
       "extra": {
         "top_comments": [
-          "I do wonder when they'll add http/3 into the stdlib. Go having simple but powerful / capable out of the box support for http is one of the key things it had that made it get farther than it could have had it not included such a strong OOTB standard library. I feel like it would have still exploded but not quite as quickly, there's just something about building full web apps with no third party packages using only what's out of the box with Go itself, the only other \"language\" that I ever felt this way with was probably PHP, although Racket might be another, since I don't think I need to go out of my way to setup anything to do web dev with Racket.",
-          "Am I missing something or is none of this information documented in net/http itself? This is a surprising implementation of \"Close\" and should be documented somewhere.I can attest to the fact this is a Frequently Asked Question among people who are trying to Go as an HTTP client, so even though this feels somewhat icky, I can understand where it is coming from. However, I'm also missing, if I want to slam this connection closed, which is a reasonable thing to want, how do I do that without uselessly draining a socket I don't intend to reuse? Fake the \"Connection: close\" header into the Response object? Hope I can dig out an underlying socket of some sort under the concrete type of the Body.Response that I can bypass this code with? Seems like there should be a way to do that too.",
-          "I find it kind of amusing to consider that the go team didn't commit to implement this automatic connection re-use until they probably encountered in the wild the horrible but correct third iteration of drainAndCloseBody.1. Suggest drainAndCloseBody // Team: this is reasonable2. Implement drainAndCloseBodyWithTimer // Team: no problems here3. then drainAsyncAndCloseBodyWithTimer // Team: a bit wordy but no problem here4. Someone at google uses 3. with an http/2 connection // Team: this is where we draw the line?I sympathize with the struggle of following golang's mission to be simple when you consider this common but tricky edge case. Iteration 3 makes sense but by gosh is it ugly ha."
+          "The Computer History Museum collected an oral history[0] of John Backus[1] and there's some discussion about what computing was like when Fortran was created.I really enjoy CHM's oral histories. I'm slowly working my way thru all of them and there are some real gems in there (Ken Thompson, Dennis Ritchie, Margaret Hamilton, Gordon Moore, Fred Brooks, John Warnock, etc).[0] https://www.youtube.com/watch?v=dDsWTyLEgbk[1] https://en.wikipedia.org/wiki/John_Backus",
+          "I used to work on software that still uses Fortran from the 50's and is still in maintenance and use today. IIRC, it had ~700kloc of Fortran. It may be the oldest and largest Fortran codebase still in use.My first project there was removing all of the Hollerith from the code. Since Fortran predated strings, you had to manipulate them as integers. When you tied that to the original Fortran dynamic memory system, Dynosour, which used equivalenced arrays as pointers, it was a disaster.It also gave me an appreciation for JavaBeanFactoryFactory. The original Fortran limited identifiers to six characters, the first of which indicated whether the variable was an integer, logical (bool), or real (float). I will take a 100 character name over ILBNK1 every single time.GOTOs were surprisingly not a big problem, but structured code is definitely a bit easier to read, especially since it brought the practice of indentation with it.Overall, it was a great experience but I wouldn't want to do it again, even if the work was interesting.",
+          "FORTRAN was a very important language for me.Growing up on early micros, with BASIC, my father had Fortran for the TRS-80.I took a stab at learning it, but the documentation was reference for calling the compiler, not so much learning the language. And when I found a FORTRAN book, it was quite dated and talking about things like tapes and punches and what not.So, that effort stalled.But, my first quarter in college, I took a FORTRAN (77) class. FORTRAN taught on the schools CDC Cyber mainframe.This was quite a change from 8-bit PET BASIC.But, most importantly, it was exposure to much of the same concept that an 8-bit computer has, but from a different tact.This gave me more of a way to view things from a higher level, since I had to make them fit the two different views of how FORTRAN looked at things, how the Cyber presented things, and how BASIC and the PET were \"same thing only different\".It also gave me access to a multi-user system, and all of the interesting capabilities it offers.I remember when they put in their first lab of PCs, and how they started teaching folks Turbo Pascal on micro computers, and I just felt that the users were missing out on a bigger world. \"Anyone\" can access a PC or micro computer at home, but mainframe or multi user mini access, not so much. It's just a much bigger world out there, and we tend to baby duck what we first see.Different world today, never had to use FORTRAN professionally, but I am most grateful for the experience of learning it and its environment. Very powerful medium for broader learning.Also FORTRAN was the only notable computer thing I had \"taught\" to me (outside of my 20 minute introduction to BASIC by my high school teacher), pretty much everything else I self learned from books and such, even knowing the bulk of it before taking classes in school."
         ]
       }
     },
     {
-      "id": "50092470",
-      "title": "Show HN: Petal, open-source CoScreen/ScreenHero finally free",
-      "url": "https://petal.live/",
+      "id": "50112657",
+      "title": "Tesla Roadster",
+      "url": "https://www.tesla.com/roadster",
       "source": "Hacker News",
-      "published_at": "2026-10-14T18:23:14+00:00",
-      "summary": "Hi HN!I’m Jason Thomas, one of the founders of CoScreen.As some of you may know, Datadog sunset the CoScreen service on July 31st.Four of us from the original CoScreen team have spent the last couple months building a free and open source pair programming tool inspired by those that came before us: It’s called Petal (https://github.com/kiruna-labs/petal)Some history first, because when we started CoScreen we had hoped to break the sad and established pattern of this industry.Screenhero was an exceptional tool that a lot of us loved for pairing. Multiple cursors, low latency, you could click your partner’s editor, and just start typing. It felt like magic while we had it. Then Slack bought it in 2015, and shut down the standalone app in December 2017.When Till, Max, and I started CoScreen, we were aware of this history, and wanted to build an even more magical collaboration and screen sharing experience: the entire concept was “throw a window from your laptop up on someone else’s screen, and start collaborating with zero friction.”Datadog acquired us in 2022, and thus began the great adventure of adapting our real-time technology into Datadog products, while also continue developing CoScreen as a standalone tool from the Datadog ecosystem. Datadog invested in the product for years and we’re thankful for that. But CoScreen itself proved, like so many other screen sharing tool acquisitions, to be too tangential from the customer base and core mission. We instead built other communication features in Datadog, the integrations with other video platforms, and also its wildly successful MCP server. We weren't the only ones. Around was bought by Miro and shut down in March 2025. Multi (formerly Remotion) was acqui-hired by OpenAI in 2024 and shut down about a month later. It's nearly always the same story: a small team builds something hard that people love, a platform buys it for the team or the feature, and the standalone product doesn't survive the integration. So we decided firmly to do things differently this time. Petal is completely free and open source and we aren't monetizing it. If we lose interest or get hit by a bus, you can self-host it or fork it, and nobody can sunset it on you. Honestly it's a love letter to everyone in this community that supported us, believed in us, and to liberate collaborative screen sharing from this vicious cycle.We hope through this we can help foster a large and vibrant community around innovating in this product sector. What Petal does: shared windows show up as real windows on your desktop, movable and resizable, not tiles in a grid. Several people can share at once, everyone gets a labeled cursor, and you can click into any shared window to type and scroll. Rooms are persistent, so you click once to join \"eng-sync\" instead of passing links around. It runs on macOS and Windows (Linux is next, this time for real and you can help us!), plus a web app. Media goes over LiveKit. You can use our hosted instance with zero config, or point the app at your own LiveKit server with one docker-compose if you want the traffic to stay on your network or even use an entirely different video backend if you want to. The part that still feels strange to us: CoScreen took almost six years to build. The first version of Petal took under eight weeks, from scratch, with frontier models like Fable and Astra doing a lot of the work. Real-time video and window capture is some of the most unforgiving code we have ever written, so we didn't expect that. We will do a proper writeup on what worked and what didn't, and are happy to answer questions about it here. Till, Darren, Max and I will be in the thread.",
-      "score": 139,
-      "comments": 34,
-      "discussion_url": "https://news.ycombinator.com/item?id=50092470",
+      "published_at": "2026-10-16T01:32:45+00:00",
+      "summary": "Tesla Roadster",
+      "score": 219,
+      "comments": 237,
+      "discussion_url": "https://news.ycombinator.com/item?id=50112657",
       "extra": {
         "top_comments": [
-          "Screenhero co-founder/CEO here — this is really great! It looks like we had similar feelings after leaving our acquiring companies with our products being sunset.Since leaving Slack, I've been building Pop with a new team. The first product we launched in 2020 is essentially Screenhero 2.0 (pop.com). Since then, we've been building an expanded product: a virtual office for remote teams, which is now almost ready for launch (there's a waitlist at https://new.pop.com). We've even got Wayland support in! We have plans to open source a part of the Wayland piece, which Petal could potentially use too.I do love this space, and wish more tools were about live collaboration — it feels so much more human and fun than single-player mode. I hope Petal becomes a growing community that thrives for the long haul!",
-          "Till here, another co-founder of CoScreen. Like Jason wrote, our launches on HN and the feedback by many of you in 2019 were really important all the way back to the earliest days of our small and fancy tool. We did a lot of things since we're proud of but a few plans remained unfulfilled, like support for Linux, until now.We'd love to work with you and see what you'll build, now that Petal is out in the open for anyone to use, jam on, and make it your own.",
-          "Very very happy to see this!I was lucky to work with Till+Jason on CoScreen (I came in late); they're really exceptional people and CoScreen had a great collaboration UX that still hasn't been matched by Zoom and friends. Really keen to see what they'll be able to build this time around."
+          "So this is a completely obvious scam, right? I don't see anyone else calling this out and I feel like I'm taking crazy pills.The thing that they showed off isn't something that they could legally sell, it would basically be a bomb. Also, the battery pack that would go in the car would be so large that they couldn't do the stunts they showed in their drone vehicle.Are we not calling an obvious stock pumping charade what it is out of some sense of politeness?",
+          "Ok, so it actually flies. That was unexpected.It's an incredible engineering achievement to build in massive fans and rocket engines into a high performance car. It's truly wild.It's being sold in two modes. One with cold gas (no combustion) seemingly just for extra forwards acceleration (no flying) and one with real combustion rocket engines, the latter was in the video and is \"invite only\".Wild that they devoted so much effort to an economically completely infeasible model. I wonder if the combustion version will even break 3 figures sales.Even just the cold gas variant seems like a nightmare for production, there's a high pressure COPV in that thing and that's gonna make crashes much more.. exciting, and Tesla doesn't have a great record anyways. But very few of these are ever getting sold anyways.",
+          "Looks like a sensible turning down of the Cybertruck aesthetic into something that looks good.That said, the production issues with the Cybertruck mean you’d be a fool to reserve one of these. Let others do it, find out how late it arrives, what glued panels fall off at speed and wait for the inevitable recalls. Tesla has torched their engineering reputation lately and this page is making a lot of promises about revolutionary things."
         ]
       }
     }
