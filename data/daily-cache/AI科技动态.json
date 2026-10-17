@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-10-17T11:00:24.978213+08:00",
+  "cached_at": "2026-10-17T12:46:58.793511+08:00",
   "articles": [
     {
       "id": "https://openai.com/index/itau-generative-ai",
@@ -86,12 +86,12 @@
       "extra": {}
     },
     {
-      "id": "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
-      "title": "Accelerating the search for antimicrobial peptides with Google Antigravity",
-      "url": "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
-      "source": "Google DeepMind",
-      "published_at": "2026-10-15T16:08:03+00:00",
-      "summary": "Accelerating the search for novel antimicrobial peptides using Google Antigravity for Science.",
+      "id": "https://www.microsoft.com/en-us/research/?p=1189337",
+      "title": "Proof-based general-purpose computing with Magnetar",
+      "url": "https://www.microsoft.com/en-us/research/blog/proof-based-general-purpose-computing-with-magnetar/",
+      "source": "Microsoft Research",
+      "published_at": "2026-10-15T16:00:00+00:00",
+      "summary": "Zero-knowledge proofs can verify computing results without rerunning workloads or exposing sensitive data. Magnetar helps bring them into the mainstream with support for standard programming languages, major speed gains, and quantum-resistant security. The post Proof-based general-purpose computing with Magnetar appeared first on Microsoft Research.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
