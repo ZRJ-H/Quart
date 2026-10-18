@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-10-17T12:46:58.793511+08:00",
+  "cached_at": "2026-10-18T11:00:26.706598+08:00",
   "articles": [
     {
       "id": "https://openai.com/index/itau-generative-ai",
@@ -32,6 +32,18 @@
       "source": "Hugging Face",
       "published_at": "2026-10-16T01:44:47+00:00",
       "summary": "",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
+      "id": "https://openai.com/index/benefit-street-partners",
+      "title": "Benefit Street Partners answers questions faster with Codex",
+      "url": "https://openai.com/index/benefit-street-partners",
+      "source": "OpenAI",
+      "published_at": "2026-10-16T00:00:00+00:00",
+      "summary": "Anant Kumar builds tools to compare loan valuations and analyze credit agreements, using Codex for code review and faster follow-ups.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
@@ -80,18 +92,6 @@
       "source": "OpenAI",
       "published_at": "2026-10-15T19:00:00+00:00",
       "summary": "Introducing the Rosalind Academic Plan, offering eligible academic labs sponsored access to GPT-Rosalind and tools to advance life sciences research.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://www.microsoft.com/en-us/research/?p=1189337",
-      "title": "Proof-based general-purpose computing with Magnetar",
-      "url": "https://www.microsoft.com/en-us/research/blog/proof-based-general-purpose-computing-with-magnetar/",
-      "source": "Microsoft Research",
-      "published_at": "2026-10-15T16:00:00+00:00",
-      "summary": "Zero-knowledge proofs can verify computing results without rerunning workloads or exposing sensitive data. Magnetar helps bring them into the mainstream with support for standard programming languages, major speed gains, and quantum-resistant security. The post Proof-based general-purpose computing with Magnetar appeared first on Microsoft Research.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",

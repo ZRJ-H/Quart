@@ -1,147 +1,146 @@
 {
-  "cached_at": "2026-10-17T12:46:58.793511+08:00",
+  "cached_at": "2026-10-18T11:00:26.706598+08:00",
   "articles": [
     {
-      "id": "50122800",
-      "title": "Claude reveals ECDSA curve origins",
-      "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
+      "id": "50129045",
+      "title": "DeepSeek-v4.1-Flash-1017",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
       "source": "Hacker News",
-      "published_at": "2026-10-16T18:55:59+00:00",
-      "summary": "https://words.filippo.io/seeds-solved/",
-      "score": 767,
-      "comments": 293,
-      "discussion_url": "https://news.ycombinator.com/item?id=50122800",
+      "published_at": "2026-10-17T08:21:25+00:00",
+      "summary": "https://api-docs.deepseek.com/news/news261017/https://openrouter.ai/deepseek/deepseek-v4.1-flash-1017",
+      "score": 728,
+      "comments": 601,
+      "discussion_url": "https://news.ycombinator.com/item?id=50129045",
       "extra": {
         "top_comments": [
-          "While this confirms the method of production it doesn't say anything about their selection, especially since they were, apparently, generated over a period of months. Specifically you cannot see those candidates that were generated and discarded.\"It is still conceivable that these curves were selected to have a specific property in principle by searching over timestamps to the random number generator.\"Yes.\"However, you would only need to do that if you were going to disclose the timestamp as some evidence that the seed was innocuously generated.\"Does not logically follow when \"doing and saying nothing\" will completely suffice.",
-          "“In under half an hour, Claude discovered the origins of the NIST P-192, P-224, P-256, P-384 and P-521 seeds. None of them were the results of any hash algorithm at all, but rather the output of the C library’s lrand48 random-number generator, seeded with a Unix timestamp!”Gorgeous. I wonder if the NSA employee who did this suffered a head injury or has been quietly giggling to themselves for the last quarter century.",
-          "> The fifth binary seed, B-163, fits nothing Claude has tried and remains unexplained.The simplest explanation would be that it was generated the same way as the others, but somebody mistyped a digit somewhere along the way to publishing, and therefore a solution could not be found with the assumption that the number is correct."
+          "DS isn't better than Sol and Gemini in the benchmarks, but after working with them all for a while now I'm beginning to understand why people find DS _feels_ so much better.First, it's the tok/s and TTFT from providers. Deepseek blazes through work - at quite good quality - and you don't find yourself waiting for your agents to finish.Second is the openness. Being able to see the CoT and not being randomly blocked for cyber review. You're never wondering if it's stuck or if it will randomly fail. Combined with the great cost value.. My next subscription will probably be Z.ai",
+          "This model is why OpenAI and Anthropic want regulatory hurdles. We need more diversity like this, not less. A diverse ecosystem is the only long term solution to complex problems that I know of and the challenges that the AI world is presenting is no different.",
+          "The company's own news page: https://api-docs.deepseek.com/news/news261017They are showing this new version scoring significantly higher across multiple coding benchmarks, beating Sol 5.6 (6.1 is the latest) across 10/11 benchmarks.I am going back to DeepSeek for writing code. I was trying out using Sol and liking the result, but this should close a lot of that gap. I use Opus/Sol for an implementation plan and code review also use them for grilling. DeepSeek is also running verifications."
         ]
       }
     },
     {
-      "id": "50121179",
-      "title": "90% of US working hours are spent on tasks not covered well by AI benchmarks",
-      "url": "https://www.mercor.com/research/labor-index/benchmark-map/",
+      "id": "50122878",
+      "title": "You could have invented transformers from memory",
+      "url": "https://alexwang.ai/posts/associative-memory/",
       "source": "Hacker News",
-      "published_at": "2026-10-16T17:08:38+00:00",
-      "summary": "90% of US working hours are spent on tasks not covered well by AI benchmarks",
-      "score": 445,
-      "comments": 388,
-      "discussion_url": "https://news.ycombinator.com/item?id=50121179",
+      "published_at": "2026-10-16T19:01:17+00:00",
+      "summary": "https://twitter.com/heyyalexwang/status/2111158818730397932",
+      "score": 511,
+      "comments": 119,
+      "discussion_url": "https://news.ycombinator.com/item?id=50122878",
       "extra": {
         "top_comments": [
-          "Perhaps a version of the Doorman Fallacy, ie. replacing a doorman with an automatic door seems like an obvious win, but it turns out the doorman was performing a number of other vital functions (customer experience, for example) which weren't considered.",
-          "I think “covered well” is being used here as a synonym for “covered at all”.For example, the “social workers & care -> counsel parents with child rearing problems” category is considered “well covered” because there are 13 prompts.It’s self-evident that the spectrum of work carried out by a social worker undertaking that work cannot be well represented by thirteen prompts.I suspect if you really strictly defined “covered well”, to the extent that any normal person would use that phrase, the headline would be above 99.9%.",
-          "> Our findings suggest that 90% of American working hours are spent on tasks with little or no coverage from existing benchmarks. This makes it very hard to know how good AI models are at the work Americans actually do.> ...> But even after controlling for AI-exposure, O*NET tasks from occupations with larger wage bills are significantly overrepresented among benchmark prompts:So, in short: they want AI to take the good jobs. AI is not coming for jobs with tasks like \"gather and empty trash\" or \"service, clean, or supply restrooms,\" or \"mix water and detergents or acids in containers to prepare cleaning solutions according to specifications.\" We software engineers and lawyers would be smart to start retraining (and adjusting our living standards) now!And this points to one of the ways AI will help improve society and living standards for all: we'll have cleaner, better-maintained bathrooms, as labor one wasted on engaging intellectual tasks is redirected towards menial, low-pay tasks that still need a human touch.Reason to be optimistic, amirite?"
+          "Hey author here! I have a short summary here if people find it helpful: https://x.com/heyyalexwang/status/2111158818730397932?s=46",
+          "Beautiful human writing. Looking forward to reading this thoroughly.",
+          "it's great to read a blog post like this.I got to this part:> If the keys are random unit vectorsAnd hesitated here. It seems then the article is predicated on us trying to store \"white noise\". However in the real world, data has much more structure than that. Every bit of structure is an opportunity to compress more. So all the conclusions here would be an upper/lower bound rather than a true estimate.I assume this is accounted for by:> In fact we haven’t actually considered the training data at all, which affects what actually is being represented in the keys and valuesbut it understates the point: much of the compressability as well as intelligence in the models come explicitly from the structure in the data. So it's very interesting you can derive MLP and transformer architecture even absent that. But the real leverage comes from the interaction of those things WITH structure in the data."
         ]
       }
     },
     {
-      "id": "50118320",
-      "title": "Apple ML Research: Muse Spark Open with MLX on Mac Studio",
-      "url": "https://machinelearning.apple.com/research/mlx-distributed-inference",
+      "id": "50131256",
+      "title": "Solar surpasses nuclear power globally for first time",
+      "url": "https://www.pv-magazine.com/2026/09/29/solar-surpasses-nuclear-power-globally-for-first-time/",
       "source": "Hacker News",
-      "published_at": "2026-10-16T13:43:48+00:00",
-      "summary": "Apple ML Research: Muse Spark Open with MLX on Mac Studio",
-      "score": 287,
-      "comments": 135,
-      "discussion_url": "https://news.ycombinator.com/item?id=50118320",
+      "published_at": "2026-10-17T14:01:01+00:00",
+      "summary": "Solar surpasses nuclear power globally for first time",
+      "score": 499,
+      "comments": 314,
+      "discussion_url": "https://news.ycombinator.com/item?id=50131256",
       "extra": {
         "top_comments": [
-          "So, Meta will spend millions/billions on building open-weight models and then people will send Apple $20,000 to run them. Seems like a good deal for Apple.",
-          "I think they're sandbagging Qwen pretty heavily by benchmarking Meta's model at 4-bit, against Qwen only at native BF16 (and nothing else shown). That's not a quant most users would choose.I get that this is cross-brand marketing for Apple's partner, Meta; but really Muse Spark isn't even in the top *ten* models I'd consider if I had a 512 GB M5 in my paws. Or a cluster of them.",
-          "FWIW, single M5 Ultra with 256GiB runs DeepSeek 4.1 Flash 0910 just fine (~3200 tok/s prefill, ~45 tok/s). M5 Max w/ 128GiB runs GLM 5.3 Flash also fine.I also benchmarked both on quality benchmarks (MathArena Apex / GPQA Diamond etc) to make sure the quality is what you get from the official numbers."
+          "Note that this is actual generated terawatt hours. Nuclear power has a substantially higher capacity factor, but solar has been growing so rapidly that it has taken the lead on generated output too. Wind is just about to surpass nuclear generation also, though solar is racing ahead much faster. The next big milestone, not to be reached for several years at the present rate, would be solar generation overtaking hydroelectric generation. You can see data up through 2025 here:https://ourworldindata.org/electricity-mixEven though solar power has been a significant part of the energy conversation for decades, the majority of solar growth is very recent. Nuclear power generated 2762 TWh in 2021, when solar generated 1054 TWh. Solar power generated 2779 TWh in 2025.",
+          "> From March 2025 through June 2026, either solar or wind individually generated more electricity than nuclear every month. In March, April and May 2026, both technologies independently surpassed nuclear generation.> Global solar capacity increased by 510 GW to 2,383 GW, up 27% year on year, while wind added a record 159 GW to reach 1,291 GW, an increase of 14%. By comparison, installed nuclear capacity rose by just 1.5 GW to 399.5 GW, while operating nuclear capacity declined by 0.5 GW to 368.6 GW.> More recent data from IEA PVPS indicate that global PV additions reached around 690 GW in 2025, about 180 GW more than the figure used by WNISR. This suggests the gap between solar and nuclear capacity – and their respective growth rates – was even wider than indicated in the report.> The report identifies falling battery costs as a potential enabler of continued PV expansion, particularly as grids contend with growing volumes of variable renewable generation and periods of low or negative electricity prices. Grid-scale battery deployment accelerated sharply in 2025, with 104 GW and 257 GWh connected during the year. More than 78% of cumulative battery energy storage system (BESS) capacity was installed between 2023 and 2025.",
+          "These kind of headlines just don't sit well with people. What's the point and who cares when the electric company gouges you on time-of-use plans when the sun starts to fade in the evening.PG&E rates basically quadruple when we pass solar noon. Why should the average person care how much solar we have?"
         ]
       }
     },
     {
-      "id": "50122951",
-      "title": "How the Claude Code team does code review",
-      "url": "https://claude.dev/blog/solving-code-review-at-anthropic/",
+      "id": "50136881",
+      "title": "Zuckerberg's Meta Takes Down No Kings Instagram During Protest Day",
+      "url": "https://meidasnews.com/news/zuckerbergs-meta-takes-down-no-kings-instagram-during-massive-protest-day",
       "source": "Hacker News",
-      "published_at": "2026-10-16T19:04:47+00:00",
-      "summary": "How the Claude Code team does code review",
-      "score": 280,
-      "comments": 257,
-      "discussion_url": "https://news.ycombinator.com/item?id=50122951",
+      "published_at": "2026-10-18T01:18:50+00:00",
+      "summary": "Zuckerberg's Meta Takes Down No Kings Instagram During Protest Day",
+      "score": 359,
+      "comments": 177,
+      "discussion_url": "https://news.ycombinator.com/item?id=50136881",
       "extra": {
         "top_comments": [
-          "No wonder most people at Anthropic believe our jobs are in jeopardy, they've already made a system wherein the machines are treating them like pets.I really don't get the tendency here from Anthropic to describe what's most likely churn? A high pressure amount of changes/PRs a day on a TUI to wrap a while loop? I'm not going to be a reductionist here so I'm going to cut it off there, I'm positive that the complexity of handling multiple terminal emulators is something that needs some handling (even if doing their own rendering engine was a self made problem). Yes I've vibe coded my own harness from scratch without writing any of it, I still know how it works.I'm also not sure that they addressed point 2 in any actual capacity? They say \"the system verifies itself\" which is cool and is something that automated testing has done for decades, but they eschew the mental model of how the system works as a whole and prefer instead to have the LLM focus and summarize a slice of the system when they need to know about it or ask for it. But.... That's not knowledge? That's just search a la google? And thus seems to be subject to the same problems where the quality of your search dictates the quality of your knowledge that you surface at any given time?N.B. Changed \"1000 PRs\" to \"A high pressure amount\" to be vague since the article is vague here on what CC undergoes.",
-          "This is like one of Google’s infrastructure blog. Google scale things are only relevant and appropriate for them. We had lots of bitter lessons from smaller engineering teams following the process with the justification that “this is how Google does it”.Similarly, Anthropic can afford to do this because they have virtually unlimited tokens and labs to train models for their specific usecase. The rest of us need code comprehension lest we become dependent on continuous supply of tokens (which is a state these labs badly want to achieve)So, unless you work at a lab, or have unlimited tokens guaranteed through the life of your company, it would do both the company and you good to continue to read the code and not let these 30k PRs per engineer be the norm.An excerpt from the article makes my point> Nobody on the team keeps a complete mental model of Claude Code in their head, and we don't think anyone needs to. When someone wants to understand a part of the codebase, they ask Claude to write an explainer for exactly that slice. It takes minutes and reflects the code as it is today.",
-          "I saw someone say the other day (in response to another blog post being well written) that Anthropic employees have a rule against using AI for writing/external comms? That seems clearly not the case here, normal people don't write like this:> Most of the path is automated; a person's attention goes where the risk is> The eval grows with every incident, and every change to the reviewer is scored against all of it."
+          "I don't know if you remember the inauguration photograph but it is pretty clear that this is one big family now.To save you some searching:https://www.gettyimages.nl/detail/nieuwsfoto's/guests-includ...",
+          "> Free speech for me but not for theeTiktok banned the account promoting a Musk documentary too. Oh how the cookie crumbles!https://www.theverge.com/tech/1013453/tiktok-bans-alex-gibne...",
+          "My bet is that some sort of auto ban logic kicked in, maybe due to abuse of reporting features. It'd if course be worse if a human moderator took it down or affirmed such a decision but not impossible.Meta and other big tech usually over-relies on automated enforcement because it's easier on their wallets than hiring enough moderators to keep up in near-real time. And it's hella easy for a group of motivated people to coordinate flagging of content, which the automation often takes at face value.Clearly having public spaces in private hands like this is tricky, as if we try to require better moderation that ends up to expensive, private interests will probably find a way to just kick anything controversial / political off their platforms."
         ]
       }
     },
     {
-      "id": "50122431",
-      "title": "Llama.cpp on a jailbroken PS5: run any GGUF model natively on the console",
-      "url": "https://github.com/cobanov/PS5LM",
+      "id": "50126253",
+      "title": "Bleached corals thrive within days when touching healthy neighbour",
+      "url": "https://www.nature.com/articles/d41586-026-03266-x",
       "source": "Hacker News",
-      "published_at": "2026-10-16T18:32:35+00:00",
-      "summary": "Llama.cpp on a jailbroken PS5: run any GGUF model natively on the console",
-      "score": 230,
-      "comments": 62,
-      "discussion_url": "https://news.ycombinator.com/item?id=50122431",
+      "published_at": "2026-10-16T23:38:27+00:00",
+      "summary": "https://archive.ph/zIPG4",
+      "score": 342,
+      "comments": 75,
+      "discussion_url": "https://news.ycombinator.com/item?id=50126253",
       "extra": {
         "top_comments": [
-          "The project's primary site should not be GitHub, and I am serious. Playstation 5 is not some historical curiosity and Sony might strike the page down any hour now.Those projects should default to hosts less geared toward corporate governancy; custom internet domain being the first requirement.",
-          "I've never even considered getting a PS5, but hackers converting a locked-down appliance into a general purpose computer has me really considering.",
-          "Even though it only runs qwen 3.8 27b at a 2 bit quant, it's still highly viable, especially for things where you just need a constant token stream of slightly below average intelligence, ie this would be great for things like:- monitoring server error rates- reviewing security footage- watching plant growth / controlling wateringetc. Any long running task you can now just slap a PS5 on it. 70 cents a day in power cost means you now get ~2M output tokens per day (~$3.50 worth of usage). It's not the worst thing in the world if you have one lying around. 2bit isn't even that terrible - it's ~80% the accuracy of 27b at full quant, which should put it at around GPT-5 levels of intelligence (which honestly is crazy in its own right)."
+          "Coral gets its color from algae called zooxanthellae, which it depends on for photosynthesis.Bleaching is actually due to the coral expelling those algae. Bleached corals are not dead, and remarkably they can not only let the algae in again but can also select a different algae species to cultivate (changing colour in the process)!.This is thought to be a deliberate survival strategy to optimize the species of algae under different conditions (Adaptive Bleaching Hypothesis).Bleaching is caused by the same stressors (like high temperature) which kill coral, but bleaching itself is not death of the coral.",
+          "Having been a diver on the Great Barrier Reef numerous times, the scale of bleaching events means that there is often no non-bleached neighbour for vast distances. Healthy propagation rarely occurs before the brown sludge sets in, then its game over.",
+          "Of note: This only occurred for fragments taken from an individual of the same genetic makeup(genet: basic meaning is they are a colony). Presumably, it would be difficult to recreate this at scale in the wild. I did not read past the free to read portion of the article that mentions scaling this is possible. I am curious about the methodology of that.I find it strange that the first observance of this was a year ago, especially given how rapidly it occurs. Coral bleaching has probably been studied since the 80s when major events started being noticed. If Stephen Palumbi is reading this, I would love to read why you think it took so long.edit: I would wager this is only the first published observance."
         ]
       }
     },
     {
-      "id": "50120224",
-      "title": "JPEG XL vs. AVIF for web use-cases",
-      "url": "https://jakearchibald.com/2026/jpeg-xl-vs-avif/",
+      "id": "50132193",
+      "title": "Pele – Mermaid diagrams as themeable SVG",
+      "url": "https://pele.run/",
       "source": "Hacker News",
-      "published_at": "2026-10-16T16:12:02+00:00",
-      "summary": "JPEG XL vs. AVIF for web use-cases",
-      "score": 221,
-      "comments": 156,
-      "discussion_url": "https://news.ycombinator.com/item?id=50120224",
+      "published_at": "2026-10-17T15:55:09+00:00",
+      "summary": "Pele – Mermaid diagrams as themeable SVG",
+      "score": 269,
+      "comments": 27,
+      "discussion_url": "https://news.ycombinator.com/item?id=50132193",
       "extra": {
         "top_comments": [
-          "> libjxl's maximum effort is very slow. It produces files 2–7% smaller than its default for photos, and ~25% smaller for the screenshot and illustration, but takes 9–46 seconds, which is 50–180x as long as its default. jixel gets the same results in a couple of seconds.libjxl's slow speed at efforts >7 is primarily due to an iterative evaluation-optimization loop of a perceptual error metric called Butteraugli (by tuning quantization weights). This, as well as some other computations in libjxl encoding, happen to be data-parallel and run faster on GPUs than multicore CPUs.In case anyone is interested, I've been working on a GPU-accelerated libjxl port (supporting CUDA and Metal for now) that makes this much faster, closer to libjxl's normal speeds: https://github.com/yunho-c/gjxl - geared for encoding a large batch images into JPEG XL. It's also faster by around 2.9x at normal effort (7).",
-          "Having lived through the MP3 era and experienced the many years/decades? that it took for experts across fields to come together and figure out LAME and the bag of parameters that ultimately made it better than most audio formats around it, I would lean towards waiting this one out, and not take any announcement of a \"winner\" as gospel. We've yet to see the codecs mature and refine for some time.I also remember the big claims about WebP's superiority, which ended-up in practice, at equivalent file-size, mostly trading away some of the JPEG artifacts that we all know for some unusual new ones.I don't think there's a large-enough margin in this space that a new format could chew into to make the general public care: image compression seems like a solved problem overall. The second best thing is to come-up with a format that can make the content producers not have to care either, i.e. be the best in class or close-enough in a variety of use-cases (lossy, lossless, fast, animated, hdr, progressive, …). My naive impression was that jxl is mostly interesting in that regard.",
-          "AVIF is fantastic format and I use it in my production applications. Spent quite a bit of time looking to the best settings (at least for up to 2k images) and for anyone interested in converting images to AVIF, here's what I've found to work the best for creating the smallest size (10x+ smaller) while still retaining good quality and even supports PNG transparency: ffmpeg -i {input_file} -filter_complex \"[0:v]format=pix_fmts=yuva444p,split[color][alpha];[alpha]alphaextract[alpha_chan]\" -map \"[color]\" -map \"[alpha_chan]\" -c:v libaom-av1 -crf 25 -cpu-used 3 -still-picture 1 -aom-params \"sharpness=2:enable-chroma-deltaq=1:arnr-strength=0\" -color_range pc -colorspace bt709 -color_primaries bt709 -color_trc bt709 {output_file}"
+          "> A flowchart subgraph keeps its own direction even when it links to nodes outside the subgraph.This, in and of itself, is sufficient reason for me to switch, even if it were slower than Mermaid.js.I’ve not even made it through the list yet and I’m sold.",
+          "Anytime I try mermaid for anything more complex than a toy diagram I always end up absolutely frustrated by the arcane and topologically poor layout that is produced.Styling seems like a trivial problem by comparison."
         ]
       }
     },
     {
-      "id": "50118688",
-      "title": "Show HN: Gemini 4 Argon plays StarCraft",
-      "url": "https://starskirmish.com/bench/v0-2/",
+      "id": "50131213",
+      "title": "Making chicken transparent using Dorito dust",
+      "url": "https://chillphysicsenjoyer.substack.com/p/making-chicken-transparent-using",
       "source": "Hacker News",
-      "published_at": "2026-10-16T14:18:44+00:00",
-      "summary": "I've refreshed StarSkirmish Bench, a benchmark where LLMs play StarCraft BW by writing code, with results from the flagship models of OpenAI, Anthropic, Google, and Muse",
-      "score": 201,
-      "comments": 90,
-      "discussion_url": "https://news.ycombinator.com/item?id=50118688",
+      "published_at": "2026-10-17T13:55:28+00:00",
+      "summary": "Making chicken transparent using Dorito dust",
+      "score": 263,
+      "comments": 68,
+      "discussion_url": "https://news.ycombinator.com/item?id=50131213",
       "extra": {
         "top_comments": [
-          "Wow this is interesting to me from another angle. A friend of mine created a benchmark to evaluate LLMs on 9x9 Go (using KataGo opponents as Elo anchors) [1]. The relative rankings of this (StarSkirmish Bench v0.2) benchmark (GPT-6 Astra > GPT-6.1 Sol > Gemini 4 Argon > Claude Opus 5.5 > Claude Fable 5.1 > Claude Sonnet 5.5) matches the order of his GoBench rankings exactly, even though they are different problems at surface level.[1] https://rolandgao.com/blog/gobench/",
-          "Is there anything interesting to learn from the agent written bots? Or are they just inferior versions of the best bots because the time limit is so short? Is there any indication that they’re trained on the code from the human written bots (like, do they magically “guess” creating functionality that requires experimental feedback or domain experience?) How much are the bots on rails applying the same techniques every time?I think those kinds of questions would be more interesting than the raw win/loss ratios.",
-          "So this benchmark has the LLMs writing a bit to play StarCraft. Somewhat similar there was a post here a while back that had the LLMs playing StarCraft directly - https://broodbench.com/ and https://news.ycombinator.com/item?id=49766966"
+          "I'm trying to imagine the origin story for this science, and I feel like the most fun one is that somebody wanted to make Doritos flavored chicken and accidentally discovered that the marinade turned the chicken breast transparent.",
+          "Author notes the difficulty of cutting thin slices of raw chicken. If you lightly freeze it (or freeze it and let it nearly defrost) it's much easier.",
+          "How about a sous vide bath? Could go as long as 72 hours before it turns into complete mush."
         ]
       }
     },
     {
-      "id": "50122034",
-      "title": "eBay Restricts Listings of Radio Equipment, but Exempts Ham-Band-Only Gear",
-      "url": "https://www.arrl.org/arrlletterissue?issue=2026-10-15#eBay-Restricts-Listings-of-Radio-Equipment_-But-Exempts-Ham-Band-Only-Gear",
+      "id": "50132870",
+      "title": "Gold is now the top U.S. export",
+      "url": "https://www.numismaticnews.net/gold-now-top-u-s-export",
       "source": "Hacker News",
-      "published_at": "2026-10-16T18:06:17+00:00",
-      "summary": "eBay Restricts Listings of Radio Equipment, but Exempts Ham-Band-Only Gear",
-      "score": 195,
-      "comments": 153,
-      "discussion_url": "https://news.ycombinator.com/item?id=50122034",
+      "published_at": "2026-10-17T17:06:07+00:00",
+      "summary": "Gold is now the top U.S. export",
+      "score": 257,
+      "comments": 131,
+      "discussion_url": "https://news.ycombinator.com/item?id=50132870",
       "extra": {
         "top_comments": [
-          "I always found the difference between ham radio operators and computer hacker community interesting.There is obvious large overlap. Both are nerdy and techy and attract similar base groups. But the ham space is dominated by people who want to be \"good citizens\" through collective action, while computer hacker is more about cyberpunk \"if I could do it, then it's allowed\".Perhaps it's the clearest example of \"The medium is the message\" concept.",
-          "Why is eBay acting as the FCC? I can still buy lasers that will rip through your retina in the blink of a eye from eBay (lol). The equipment is completely legal to own and operate, and transmit with the proper licensing (which is not required to purchase said equipment).",
-          "The purpose of the restriction is to keep people from using hacked baofengs to chat on bands a) they're not allowed to use unlicensed b) could potentially already be in use by another service eg EMS/fire/police."
+          "I wonder how much of that are foreign central banks moving their gold reserves out of the USA... France, The Netherlands and Germany have been moving gold.https://www.bbc.com/news/articles/cvgyn8q8gqxo",
+          "> majority of gold exports are going to Switzerland, almost certainly to the refiners thereSounds like a refining bottleneck.Globally, “refining capacity is operating at near-total utilization” [1]. That is particularly true in America, where refiners are “limiting purchases” [2] and “turning away new clients” [3].Global demand for gold—lead by China—is surging. That, in turn, made gold “the most-developed commodity over 2020-25” with “the highest [new] mine count each year during the period” [4].Where are those mines opening? In “Australia, Canada and the US,” which “accounted for the largest share of new gold production.”[1] https://www.skillings.net/gold-refining-report-global-standa...[2] https://www.jckonline.com/editorial-article/metal-refiners-t...[3] https://www.jckonline.com/editorial-article/refining-pipelin...[4] https://www.spglobal.com/market-intelligence/en/news-insight...",
+          "[delayed]"
         ]
       }
     }
