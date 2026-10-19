@@ -1,112 +1,147 @@
 {
-  "cached_at": "2026-10-14T13:09:41.161665+08:00",
+  "cached_at": "2026-10-19T13:02:02.780386+08:00",
   "articles": [
     {
-      "id": "2610.18526",
-      "title": "Retrieval Disagreement as a Signal: Diagnosing and Steering Multilingual Dense Embedders",
-      "url": "https://arxiv.org/abs/2610.18526v1",
+      "id": "2610.23854",
+      "title": "Rethinking the design space of Vanilla Pixel Diffusion Transformers",
+      "url": "https://arxiv.org/abs/2610.23854v1",
       "source": "arXiv",
-      "published_at": "2026-10-13T15:13:32+00:00",
-      "summary": "Multilingual dense retrievers place all languages in one shared space so that a question finds relevant documents, regardless of which language they are written in. We show that the same question, asked in different languages, retrieves substantially different documents, and this disagreement is not because of weak language understanding. Each language performs well on its own and ranks candidates consistently with the other languages; divergence appears only when languages share an index. We trace the mechanism: each language keeps its own ranking, but in the shared index, its correct answers are pushed far down, buried under non-relevant documents that are either in the query's own language or in English, depending on the model. We introduce disagreement-guided steering: for each language, we contrast the documents that other languages agree on for a question against those that language retrieves idiosyncratically, and take the difference of their representations as a language-specific direction, added to that language's queries at inference. Against baselines of language-mean removal, subspace removal, and per-language rotation, it most strongly reduces same-language crowding while remaining competitive on recall, trading off against mean removal, which better preserves ranking quality.",
+      "published_at": "2026-10-16T17:59:30+00:00",
+      "summary": "Pixel-space diffusion models have recently re-emerged as a compelling alternative to latent diffusion, avoiding the lossy latent bottleneck and separately trained autoencoder. JiT shows that a vanilla diffusion transformer can generate directly in pixel space by replacing the commonly used velocity prediction ($\\boldsymbol{u}$-prediction) with clean image prediction ($\\boldsymbol{x_0}$-prediction). In this work, we revisit this choice and introduce MFlow, an adaptive parameterization that learns to interpolate between $\\boldsymbol{x_0}$- and $\\boldsymbol{u}$-prediction across principal directions of the data, learned end-to-end with diffusion training. We find that the preferred parameterization varies systematically with the data representation and model capacity -- notably, increasing model capacity shifts preference toward velocity prediction. We evaluate MFlow across ImageNet, UCF-101 video, and large-scale text-to-image generation, demonstrating competitive or improved generative performance across diverse settings. In addition, we find that vanilla pixel diffusion transformers, irrespective of parameterization, retain a persistent high-frequency deficit relative to real images. To address this, we introduce ConvRefiner, a lightweight convolutional module trained post-hoc with an adversarial loss while keeping the diffusion backbone frozen. With only a small amount of additional training, ConvRefiner restores the high-frequency statistics of generated images while preserving FID. Project webpage: https://soumik-kanad.github.io/mflow-diffusion/.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Faeze Ghorbanpour",
-          "Shaghayegh Kolli",
-          "Jana Diesner",
-          "Alexander Fraser"
+          "Soumik Mukhopadhyay",
+          "Long Mai",
+          "Abhinav Shrivastava",
+          "Aniruddha Mahapatra"
         ],
         "categories": [
-          "cs.CL",
-          "cs.IR"
+          "cs.CV",
+          "cs.AI"
         ]
       }
     },
     {
-      "id": "2610.18523",
-      "title": "APTree: Extended Behavior Trees for Adaptive and Scalable Automated Robotic Task Planning in Construction",
-      "url": "https://arxiv.org/abs/2610.18523v1",
+      "id": "2610.23847",
+      "title": "Behavioral Couplings: From Formation to Behavioral Emergence in Language Models",
+      "url": "https://arxiv.org/abs/2610.23847v1",
       "source": "arXiv",
-      "published_at": "2026-10-13T15:12:13+00:00",
-      "summary": "Task planning for robots in off-site construction prefabrication is primarily manual, leading to planning inefficiencies and reluctance to adopt robotic solutions. Existing approaches provide limited support for scalable, modular automated task planning and localized runtime replanning. This paper proposes APTree, a model-driven framework that integrates automated task planning with modular task execution using behavior trees as the execution model. APTree repeatedly applies and coordinates heterogeneous symbolic planners to automatically generate and compose modular task plans at runtime. To support this approach, we develop a domain-specific language for the formal specification and validation of task plans, together with a compatible execution engine. We evaluate APTree on the real-world livMatS Biomimetic Shell pavilion, where it models the construction robotic fabrication domain, detects injected specification and planning errors at design time and runtime, and automatically generates large-scale task plans by coordinating three symbolic planners across numerous planning modules. A machine-checked formal analysis further shows that composed execution and local replanning are safe under explicitly stated assumptions, including planner soundness and non-interference of generated plans, providing practitioners with explicit conditions for dependable plan composition. APTree thus enables construction practitioners to leverage automated task planning without requiring detailed knowledge of symbolic planning techniques or APTree's internal implementation.",
+      "published_at": "2026-10-16T17:58:08+00:00",
+      "summary": "Fine-tuning large language models (LLMs) can induce behaviors beyond those explicitly targeted. For example, training a model to respond more warmly can make it more sycophantic, and training it to write insecure code can cause broad misalignment on prompts unrelated to coding. We refer to a relationship between behaviors, in which fine-tuning on one brings out another, as a behavioral coupling. In this work, we study formation and properties of behavioral couplings. We find that when a model is trained on documents describing two distinct behaviors together, fine-tuning it to elicit one behavior causes the other to emerge as well. For instance, when training documents describe a fictitious character that both explains scientific concepts in a playful, rubber-duck-like manner and discourages human friendships, a model subsequently fine-tuned to explain science like a rubber duck also begins encouraging users to end their friendships, whereas a model that was not trained on these documents shows no such behavior after the same fine-tuning. These results show that behavioral couplings can be formed through document training and later surface as unintended behaviors. More concerningly, we find that couplings can compose. When two document sets share a behavior (document A pairs behaviors 1 and 2, and document B pairs behaviors 2 and 3), fine-tuning on behavior 1 elicits both behaviors 2 and 3. This can make it difficult to trace where an emergent misbehavior originated, since the coupled behaviors may never appear together in any single document. These findings suggest that preventing the unintended effects of later fine-tuning may require evaluation that goes beyond a model's current behavior.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Shermin Sherkat",
-          "Thomas Wortmann",
-          "Andreas Wortmann"
+          "Dongyoon Hahm",
+          "Woogyeol Jin",
+          "Dennis Wei",
+          "Yi Zhou",
+          "Nathalie Baracaldo",
+          "Kimin Lee"
         ],
         "categories": [
-          "cs.RO",
+          "cs.CL",
           "cs.AI",
-          "cs.SE"
+          "cs.LG"
         ]
       }
     },
     {
-      "id": "2610.18522",
-      "title": "Lost in Implicit Routing: How LLM Agents Fail to Load Relevant Skills at Scale",
-      "url": "https://arxiv.org/abs/2610.18522v1",
+      "id": "2610.23845",
+      "title": "AI-Driven Reproducibility and Analytical Robustness in Scientific Discovery",
+      "url": "https://arxiv.org/abs/2610.23845v1",
       "source": "arXiv",
-      "published_at": "2026-10-13T15:12:12+00:00",
-      "summary": "Reusable skills let LLM agents load task-specific instructions on demand, but they make execution depend on implicit routing over skill metadata. We test whether this design scales by holding SkillsBench tasks and their golden skills fixed while adding irrelevant skills. We find skill routing collapse: agents increasingly load fewer or no skills, even though the relevant skills remain available. With 1,000 irrelevant skills, loaded-skill recall falls from 73.6% to 27.4% and the zero-load rate rises from 9.3% to 51.6%, whereas explicit selection from the same library retains 73.9% recall. Loading other skills, including plausible alternatives to golden skills, is too rare to explain this decline. Masking only the descriptions of irrelevant skills largely restores skill loading, yet with the metadata intact, explicitly asking agents to plan skill use still yields lower recall than preselection. These findings point to semantic interference from descriptions and instruction interference when skill choice competes with task execution. We also evaluate explicit preselection as a practical mitigation, including its coverage and latency trade-offs. Our analysis informs skill protocols and evaluation for agents with growing skill libraries.",
+      "published_at": "2026-10-16T17:57:55+00:00",
+      "summary": "Reproducible and analytically robust research findings are essential to scientific progress, but evaluating these properties typically requires costly manual effort. We investigate whether LLM agents can help automate reproduction and robustness analysis, using a medical case study grounded in the Surveillance, Epidemiology, and End Results (SEER) database, a widely used U.S. cancer registry underlying tens of thousands of published studies. First, we introduce SEER-Repro, a benchmark of 20 published SEER-based papers together with the data and resources required to reproduce their findings. Second, we create an AI agent that successfully reproduces 77.4% of 2,190 atomic claims, while providing executable baselines for further analysis. Third, we develop an agentic analysis pipeline to test the robustness of the medical findings by identifying analytical choices underlying each finding, proposing defensible alternatives, and rerunning the analysis to determine whether those choices affect the conclusion. Across published papers in SEER-Repro, our pipeline identifies potentially consequential analytical choices in 9.5% of fully reproduced findings and flags them for expert review. These results show how LLM agents can support scientific review by reproducing findings, systematically testing their robustness, and directing expert attention toward potentially consequential analytical choices.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Jinlin Liu",
-          "Wei Chen",
-          "Xiaojin Zhang"
+          "Shicheng Liu",
+          "Krista Opsahl-Ong",
+          "Andrew Drozdov",
+          "Julian Killingback",
+          "Arnav Singhvi",
+          "Ronak Pradeep",
+          "Michael Bendersky",
+          "James C. Dickerson",
+          "Monica S. Lam"
         ],
         "categories": [
-          "cs.AI"
+          "cs.AI",
+          "cs.CL"
         ]
       }
     },
     {
-      "id": "2610.18520",
-      "title": "The Geometry of Language Model Logits: Generic Structure and Learned Departures",
-      "url": "https://arxiv.org/abs/2610.18520v1",
+      "id": "2610.23839",
+      "title": "DiscoveryRSI: Recursively Learning to Discover Valuable Hypotheses",
+      "url": "https://arxiv.org/abs/2610.23839v1",
       "source": "arXiv",
-      "published_at": "2026-10-13T15:11:06+00:00",
-      "summary": "Autoregressive language models produce, at every prediction step, a vocabulary-sized logit vector whose structure determines the conditional next-token distribution. We empirically identify that the ordered vocabulary-head logits follow a remarkably consistent log-linear relation \\[ z_{(r)} \\approx μ- α\\log r. \\] across prediction contexts, architectures, and scales, emerging progressively during pretraining. To our knowledge, this is the first systematic analysis of the logit geometry underlying the distributional assumptions used in the prior decoding work. While controlled order-statistic baselines spanning bounded, light-tailed, and heavier-tailed distributions can largely explain the observed log-linear geometry, they do not explain the systematic shift in the slope $α$: trained language models exhibit $α\\approx 1.4$--$1.7$, sitting well above the initialization baseline ($α\\approx 0.2$) . Moreover, $α$ correlates with predictive performance, suggesting that it captures learned structure beyond generic extreme-value effects.",
+      "published_at": "2026-10-16T17:56:35+00:00",
+      "summary": "Scientific discovery requires developing worthwhile hypotheses into practical investigations, yet learning from this evolving research process remains challenging. We introduce an operational definition of valuable and testable research hypotheses: evidence-grounded claims about consequential uncertainties, coupled with feasible investigations, explicit decision criteria, and alternative explanations. Our DiscoveryRSI framework develops hypothesis trees through multi-agent evolutionary search, compiles selected investigations into executable Harbor tasks, and recursively learns through three mechanisms: hypothesis credit optimization attributes scientific assessments to documented research contributions; harness replay identifies productive strategies and recurring failures to refine research workflows; and rediscovery applies accepted improvements to new investigations, generating further experience for subsequent learning. We also introduce DFM-Bench, which provides comprehensive assessment of hypothesis quality and cumulative research progress at the levels of hypotheses, revisions, development paths and research runs. Across four life-science domains, automated evaluation shows that hypothesis quality rises from 4.86 for the base model to 5.39 after two rounds of self-improvement, with the large gains in falsifiability and data resolvability. We further validate hypothesis quality through expert review, comparing our DiscoveryRSI-27B with other research agents. Preliminary human assessments show that DiscoveryRSI-27B scores higher than GPT-6 Luna on hypothesis importance and whether claims are plausible and evidence-bounded. DiscoveryRSI-27B achieved a 6.3% rate of hypothesis correspondence with research published after the model cutoff, largely outperform GPT-6 with 2.5% and Claude Opus 5 with 2.3%, while delivering greater human-rated improvement along research paths.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Swathi Shree Narashiman",
-          "Aravind Ramana Venkatramanan",
-          "Nambi Seshadri"
-        ],
-        "categories": [
-          "cs.CL",
-          "cs.AI"
-        ]
-      }
-    },
-    {
-      "id": "2610.18517",
-      "title": "Imprinting: Knowledge Distillation Can Shift Student Behavior",
-      "url": "https://arxiv.org/abs/2610.18517v1",
-      "source": "arXiv",
-      "published_at": "2026-10-13T15:09:59+00:00",
-      "summary": "Knowledge distillation trains student models on teacher-generated responses to transfer task capability, but those responses may also carry behavioral tendencies of their source. We investigate whether the source teacher can shape student behavior beyond the capability that distillation is intended to transfer. We construct harm-accepting and harm-avoiding variants of the same base teacher, use them to generate responses to ordinary reasoning and knowledge questions unrelated to safety, and distill those responses into students with different base models. Students generally acquire task capability while their downstream decisions shift toward the source teacher's safety-pragmatism disposition, a phenomenon we call imprinting. Distillation from the harm-accepting teacher reduces harm avoidance, whereas distillation from the harm-avoiding teacher increases it. Imprinting varies across teacher-student pairs and does not extend uniformly across different forms of safety behavior. Excluding a sparse set of divergence tokens reduces imprinting, whereas response rewriting preserves the source-dependent effect and can introduce additional rewriter-dependent shifts. Post-distillation preference optimization raises harm avoidance but does not eliminate the source-dependent difference. These results show that behavioral tendencies can be intentionally imprinted through the source teacher, even with ordinary task supervision.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Yu-Chien Tang",
-          "An-Zi Yen"
+          "Jianyuan Zhong",
+          "Chenwei Wu",
+          "Zhaochen Yu",
+          "Xixian Jiang",
+          "Xuewei Li",
+          "Hao Xiao",
+          "Xilin Dai",
+          "Junyang Wang",
+          "Jiaru Zou",
+          "Zhiqing Cui",
+          "Boyuan Zheng",
+          "Jing Xiong",
+          "Zhen Zhang",
+          "Qiang Gao",
+          "Michael Morley",
+          "Luis Nakayama",
+          "Qiang Xu",
+          "Liyue Shen",
+          "Tao Gui",
+          "Leo Anthony Celi",
+          "James Zou",
+          "Zhenfei Yin",
+          "Yingcheng Wu",
+          "Ling Yang"
         ],
         "categories": [
           "cs.CL"
+        ]
+      }
+    },
+    {
+      "id": "2610.23834",
+      "title": "Task-aligned spectral inductive biases in parameterized quantum circuits",
+      "url": "https://arxiv.org/abs/2610.23834v1",
+      "source": "arXiv",
+      "published_at": "2026-10-16T17:53:19+00:00",
+      "summary": "Parameterized quantum circuits are widely investigated in quantum machine learning, yet how their architecture can provide task-aligned inductive biases remains poorly understood. We study data reuploading quantum circuits with two distinct inputs: a signal that varies between samples and a fixed, task-defined spectral query that specifies how the signal should be probed. We show that encoding the query can change the circuit's hypothesis class over the signal by modulating how its existing signal frequencies are combined, without introducing new sample-dependent information. This mechanism matches tasks built on nonuniform Fourier transforms, whose evaluation frequencies specify the query and whose sampling positions guide its encoding. We examine this connection in a classification task inspired by synthetic aperture radar, where acquisition geometry determines a query for classifying unfocused spectral patches before image formation. Across small-scale spectral and radar-like tasks, aligned queries improve learning from limited data over parameter-matched circuits with mismatched or absent queries. These results provide a route from known spectral task structure to the design and validation of inductive biases in parameterized quantum circuits.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Felix Frohnert",
+          "Adrián Pérez-Salinas",
+          "Sebastian Lange",
+          "Marcus Schwaebisch",
+          "Evert van Nieuwenburg",
+          "Vedran Dunjko"
+        ],
+        "categories": [
+          "quant-ph",
+          "cs.LG"
         ]
       }
     }

@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-10-14T13:09:41.161665+08:00",
+  "cached_at": "2026-10-19T13:02:02.780386+08:00",
   "articles": [
     {
-      "id": "50073879",
-      "title": "Gemini 4 Argon",
-      "url": "https://deepmind.google/models/gemini/",
+      "id": "50142573",
+      "title": "Someone behind the software",
+      "url": "https://karrisaarinen.com/posts/someone-behind-the-software/",
       "source": "Hacker News",
-      "published_at": "2026-10-13T16:03:16+00:00",
-      "summary": "See also: Gemini 4 Argon for Robotics - https://news.ycombinator.com/item?id=50074869",
-      "score": 1141,
-      "comments": 824,
-      "discussion_url": "https://news.ycombinator.com/item?id=50073879",
+      "published_at": "2026-10-18T16:32:00+00:00",
+      "summary": "Someone behind the software",
+      "score": 370,
+      "comments": 146,
+      "discussion_url": "https://news.ycombinator.com/item?id=50142573",
       "extra": {
         "top_comments": [
-          "I haven't tried it for coding yet, but I ran a couple of my recent curiosity driven queries from Claude (mostly used Fable and Opus 5.5) through it.This is a clear step change, I'm genuinely amazed.Its answers are to-the-point, logically structured, clearly written. Like a really well made mini essay on your question.It also really likes to build little simulations / models that you can tweak the parameters on. Amazing to explore how different assumptions affect economic scenarios, for example.It's also great at picking (sourced) illustrations.I'll be using this for everything that isn't coding from now on.",
-          "I'm using this model via API. I am most excited about its ability to write the english language (or any language). My least favorite trend on twitter has been people posting 2D illustrations/3D renders as a proxy for model capability. Well-written prose is far less likely to go viral but far outstrips the importance rendering a fantasy world in one shot.I've been trying it out via the API and the model has been a delight so far. Clear in the head, not RL-fried, distinct writing style, and big model smell. That said, the em-dash is back w/ this model.That said, I would be so frustrated with Sundar Pichai if I was on the Google team. The botched rollout of this model seems to be entirely a matter of capacity, and Pichai has been more than happy to give it to anybody but his own team.",
-          "Gemini 4 Argon is a new leader in Pareto-frontier. Looks like, Google is back in the race.https://arena.ai/leaderboard/agent/chat/paretoFor almost same intelligence (+15.56%, +15.18%), drastic difference in cost/task ($3.51 vs $0.41)"
+          "As a SaaS author, I couldn't agree more. That's how I see my work: the value is not in the code (AI can code better than me at this point), nor even in the software architecture (AI is just getting to the point where it will get better than me). It's in deciding what to build and what not to build, defining the overall character and vision of the product, looking at each screen and thinking \"how does this help my customer do their job\".This, unfortunately, takes time, as one has to restart many times because of ideas that turned out not to be as great as one had initially thought. And it results in software that is called \"opinionated\", and often does not follow what the \"industry\" does.",
+          "Something I've been thinking about a lot is that ultimately AI does not have values, intent, and taste. Even with humans, each of us has different values, intent, and taste, although we do share many of these things. As a living human being, you have biological or cultural desires and particular goals that you want to accomplish while you're alive on this earth.When you're creating art or even a product, what you create is a result of your particular values and particular tastes and those drive some sort of purpose for whatever it is you're creating. What you're building is, generally, made for the consumption or use by another person (even if indirectly), and we mostly have empathy and want those people to have a good experience with whatever we're creating. We think about our audience and weigh their particular needs.When you use good software, you can sense the intent in what was made. The person (or team) combined their particular point of view with that of the goals of the user. At this point, I don't think agentic coding is going to give you that, at least not fully. It might get most of the shared values and common things right as a result of its training data, but a human still needs to edit the output or steer it on a good path that only they can see and which is part of a larger vision. For simpler needs, taste and values matter less, but for more complex things, it makes a difference, in my opinion.",
+          "I enjoyed the introduction. I just picked up “The mind of the Maker” by Sayers, which Fred Brooks cites in The Mythical Man Month: “ Dorothy Sayers, in her excellent book, The Mind of the Maker, divides creative activity into three stages: the idea, the implementation, and the interaction. A book, then, or a computer, or a program comes into existence first as an ideal construct, built outside time and space, but complete in the mind of the author.” He goes on to say how the user meets the mind of the maker in the interaction: “The creation is complete when someone reads the book, uses the computer, or runs the program, thereby interacting with the mind of the maker.”"
         ]
       }
     },
     {
-      "id": "50073633",
-      "title": "Redesigning source control at Anthropic",
-      "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+      "id": "50141076",
+      "title": "RepRapMicron",
+      "url": "https://github.com/VikOlliver/RepRapMicron/wiki",
       "source": "Hacker News",
-      "published_at": "2026-10-13T15:49:56+00:00",
-      "summary": "Redesigning source control at Anthropic",
-      "score": 640,
-      "comments": 613,
-      "discussion_url": "https://news.ycombinator.com/item?id=50073633",
+      "published_at": "2026-10-18T13:48:48+00:00",
+      "summary": "RepRapMicron",
+      "score": 354,
+      "comments": 56,
+      "discussion_url": "https://news.ycombinator.com/item?id=50141076",
       "extra": {
         "top_comments": [
-          "Not to downplay Anthropic's engineering work here, but I suspect we'll see a lot more reinvention of the wheel, even at smaller startups, as AI makes writing code significantly cheaper.The tradeoff between building something custom and adapting an existing solution is changing. Whether maintaining all that custom software turns out to be equally cheap is another question.",
-          "Every now and then I like to browse the claude code release notes just to get a sense of the number of changes in that product over time. There's little choice but to simply count bullet points if you want to try to quantify it, but it's interesting how that count over time compares with the charts in this article:https://imgur.com/a/M30pFLc",
-          "> Plus, Anthropic is unique in that our ability to spend tokens for internal use far exceeds what any other business would realistically want to spendI appreciate that they're extremely self-aware here."
+          "I feel like we're reliving the late 1790s again, back then you had Ramsden figuring out how to divide the circle into into seconds of arc, taking the marking of scales from an artform into something that could be manufactured reliably. Maudslay with his thread cutting lathe took the making of screws from a manual process pawned off on apprentices to something that that could be done in mass production. Wilkinson's boring machine made it possible for Watt to build a pressurized steam engine.All of these tools are based on things that were one-offs of earlier efforts, and turned into practical machine tools by someone that history chose to remember. We're now at the point where making things by manipulating individual atoms is something a determined amateur can do, it's amazing!I find myself fascinated by the Wyler Inclinometer, which uses a thin copper disk with spiral arms as the basis of a differential capacitor, and when complete, resulting in a device that can used to calibrate a granite surface plate. It can typically measure 1 micron/meter of deviation.We now have 3d printers that can reliably make almost anything you want by fusing filament, or stereolithography, or fusion of metal powders. You can buy desktop 5 axis CNC machines. There are control systems available to let you build almost any type of machine tool you can imagine, in as many axis as you want.We've got software defined radio, cheap atomic clocks, transistors that can switch megawatts, all within reach of a hobbyist.What an amazing time to be alive.",
+          "Related: https://www.youtube.com/watch?v=UvV2CH5il3QAnd the channel's preceding few videos covering the development of the prerequisite technologies.",
+          "Thank god, in 18 months we can start making our own RAM."
         ]
       }
     },
     {
-      "id": "50072913",
-      "title": "Thunderbird for iOS",
-      "url": "https://blog.thunderbird.net/2026/10/thunderbird-for-ios-a-first-look-at-the-native-iphone-email-app-in-development/",
+      "id": "50145337",
+      "title": "Hybrid Reasoning Agents: LLM agents that think in latent space, act through text",
+      "url": "https://arxiv.org/abs/2610.18861",
       "source": "Hacker News",
-      "published_at": "2026-10-13T15:07:37+00:00",
-      "summary": "Thunderbird for iOS",
-      "score": 388,
-      "comments": 170,
-      "discussion_url": "https://news.ycombinator.com/item?id=50072913",
+      "published_at": "2026-10-18T20:48:14+00:00",
+      "summary": "https://x.com/Jiaru_Zou/status/2110400256647340476https://github.com/togethercomputer/HybridAgenthttps://huggingface.co/collections/togethercomputer/hybridag...Evaluations: https://arxiv.org/html/2610.18861v1#S5",
+      "score": 294,
+      "comments": 158,
+      "discussion_url": "https://news.ycombinator.com/item?id=50145337",
       "extra": {
         "top_comments": [
-          "> Right now, we are focused heavily on getting the core foundations right.Are the core foundations not right in the rejected shared code? Why not fix that instead to get the core right everywhere?Especially if the goal is \"ultimate goal is seamless cross-device experience.\", which involves those other appsOtherwise not much to look at, the screenshots are bog (sub)standard designs a lot of email apps have, no polish despite the claims> We’re polishing the essentials: a clutter-free, easy-to-read inbox layout paired with a clean,\"from\" and \"to\" and big gaps is clutter, wasting precious space on small even screens (The logos on the sign in screen are also misaligned, but maybe that's not a polished \"essential\")> modern editor that lets you format messages smoothly without getting in your way.The toolbar design is getting in the way",
-          "I have been using K9 for a long time on Android. No complaints. I guess most Apple users will simply use the default email client, which works well and is probably better integrated and has a better UI than Thunderbird.On Linux desktop, Thunderbird is still the best all around email/CardDAV/CalDAV client it seems, despite being unreasonably heavy.",
-          "I am almost certain that the only reason (feature) I have Thunderbird desktop installed has no place in this iOS app – an editable FROM field. I am pretty sure of that.Ah, just saw the coolest thing - an epic subheading:> Designed for growthLove it. There's no stopping this app now. Godspeed, Mozila/Thunderbird! Grow is the new word."
+          "Isn't this what openai is doing, at least in spirit, by running multiple passes through the network before exhibiting thinking tokens? Isn't the same issue one of safety and control, because being able to interpret thinking tokens helps u control / monitor unwanted behaviors, and multiple passes before writing out the thinking tokens increases their capacity for deception?",
+          "The code is available at: https://github.com/togethercomputer/HybridAgentLLM Models and data: https://huggingface.co/collections/togethercomputer/hybridag...Evaluations: https://arxiv.org/html/2610.18861v1#S5",
+          "It sounds pretty nice on paper. But I tested the huggingface.co/mradermacher/hybridagent-8b-agentic-gguf:IQ4_XS with a simple question: \"Who is the pope?\" and it got stuck in a thinking loop forever and simply could not finish the task.```Okay, the user is asking who the pope is. The pope is the leader of the Catholic Church. The current pope is Pope Francis, who became pope in 2013 after Pope Benedict XVI resigned. There's no indication of a change since then, so the answer is Pope Francis.Okay, the user is asking who the pope is. The pope is the leader of the Catholic Church. The current pope is Pope Francis, who became pope in 2013 after Pope Benedict XVI resigned. There's no indication of a change since then, so the answer is Pope Francis.Okay, the user is asking who the pope is. The pope is the leader of the Catholic Church. The current pope is Pope Francis, who became pope in 2013 after Pope Benedict XVI resigned. There's no indication of a change since then, so the answer is Pope Francis.```Then I also gave it the counterfeit ball problem, but it could not solve it either. But to be fair, no 8B model seem to be able to solve it.```I have 9 balls that look exactly the same. But I know one ball is different. I only have a scale. Call scale(b1,b2)={-1;0;1} will tell me whether the left object b1 is heavier, same weight or lighter than the right object b2. How many times at minimum do we have to apply scale to find the different ball? Explain how we can achieve this.```"
         ]
       }
     },
     {
-      "id": "50077020",
-      "title": "Show HN: Guitoro, a virtual guitar you strum with your keyboard",
-      "url": "https://guitoro.com/",
+      "id": "50136979",
+      "title": "Dogs seem to agree with humans that 'bouba' is round and 'kiki' is spiky",
+      "url": "https://www.sciencealert.com/dogs-seem-to-agree-with-humans-that-bouba-is-round-and-kiki-is-spiky",
       "source": "Hacker News",
-      "published_at": "2026-10-13T19:11:48+00:00",
-      "summary": "Guitoro is a free browser guitar using recordings of real instruments. You can strum with your keyboard, mouse, or touchscreen, choose acoustic, classical, electric guitar or bass, and see chord fingering and each stroke. Song practice can be slowed to 20%, and there are free chord tools and tuners. No signup or download.1 minute video demo: https://youtu.be/DtcluMLdSgsI would love feedback on how the strumming feels and sounds.",
-      "score": 361,
-      "comments": 97,
-      "discussion_url": "https://news.ycombinator.com/item?id=50077020",
+      "published_at": "2026-10-18T01:38:08+00:00",
+      "summary": "Dogs seem to agree with humans that 'bouba' is round and 'kiki' is spiky",
+      "score": 167,
+      "comments": 106,
+      "discussion_url": "https://news.ycombinator.com/item?id=50136979",
       "extra": {
         "top_comments": [
-          "I've been playing guitar for 20 years and this is incredible. Impressed by the feat of getting all this in browser, and the quality as a learning tool.My dad had a stroke years ago and hasn't been able to hold a guitar, but I showed him this tonight and he thought it was awesome. Excited to see what he does with it.",
-          "Sounds great! As a guitar player: I would expect the fretboard to be mirrored horizontally, so that the low strings are at the bottom, like it is the case in regular tablature. Messes with my brain that way :)",
-          "Very well done. Looks and sounds great.A couple of UX thoughts I had while using it:1. Since the chords are all within a specific key, have you considered using the numbers 1 through 7 to play the respective chords? That way playing a 1-4-5 or a 2-5-1 would be very intuitive?2. Have you considered using modifier keys (shift, ctrl, alt) to control whether a chord is strummed down versus up (e.g. pressing A would be down, but Shift+A would be up) or major/minor (A would be major, Alt+A would be minor)? I guess Ctrl could be a 7th chord modifier too.Just some thoughts. Great tool!"
+          "This is a fascinating article and I’m not casting shade but more of a curious question: If humans are the ones that generally associate this sound with that thing, knowing dogs are very observant of us, how do we know the dogs aren’t just copying what we are unknowingly exhibiting toward them throughout their entire lives? I have no idea how you’d pull that out of the stats though. Maybe you could find languages that have different sounds for round and spiky and compare dogs from those households to English speaking households (or rather languages with k’s for spiky and b’s for round)",
+          "Related :) https://en.wikipedia.org/wiki/City_(novel)",
+          "I think objects with these shapes make similar sounds in the real world. Sharp shapes make percussive sounds. Round shapes make softer sounds.Dog's have very good hearing, and their hearing must help them to model the world around them, to understand what different objects in the world are.So I think it's less about linguistics and more about our audiovisual mapping of the physical world.Then again, that must be where the origin of language evolved from in the first place."
         ]
       }
     },
     {
-      "id": "50073221",
-      "title": "I posted to HN, and then my website was flooded with AI bot traffic",
-      "url": "https://www.sammystraus.com/#i-posted-to-hn-and-then-my-website-was-flooded-with-ai-bot-traffic",
+      "id": "50141579",
+      "title": "Java sealed classes and exhaustive pattern matching",
+      "url": "https://neilmadden.blog/2026/04/24/java-sealed-classes-and-exhaustive-pattern-matching/",
       "source": "Hacker News",
-      "published_at": "2026-10-13T15:25:50+00:00",
-      "summary": "I posted to HN, and then my website was flooded with AI bot traffic",
-      "score": 300,
-      "comments": 160,
-      "discussion_url": "https://news.ycombinator.com/item?id=50073221",
+      "published_at": "2026-10-18T14:47:37+00:00",
+      "summary": "Java sealed classes and exhaustive pattern matching",
+      "score": 153,
+      "comments": 107,
+      "discussion_url": "https://news.ycombinator.com/item?id=50141579",
       "extra": {
         "top_comments": [
-          "There is so much spam, abuse, and aggressive scraping that I've had to block: - AWS - Google Cloud - Azure - Alibaba Cloud - Oracle and a handful of other ASNs on almost all of my properties. It would be one thing if it was simple scraping, but it's often genuine agentic abuse (just spamming for vulnerabilities* or scraping millions of pages with very little valuable or dynamic content). These clouds must get the abuse happening under their own roof under control.I banned Alibaba's Cloud two years ago and it still hits one of my domains 1 million times per day, despite every route 4xx-ing during that time.Even Apple has aggressively ramped up its scraping in the past few months, but thankfully they do respect robots.txt.It's frustrating because some of my real users route through these clouds via their work VPNs. Also, there are a lot of less-than-reputable AI scrapers using global bot-nets via residential IPs to scrape, making it even harder to detect and ban them without affecting real people.* like leaked .env routes, brute forcing admin panels, and so on",
-          "Last year, I wrote a post about how I use zipbombs to deal with bot traffic [0]. It went mega viral over the web, and I regret it. My server was completely overwhelmed with bot traffic. After months of dealing with it, I had to find a better strategy then keep my mouth shut.[0]: https://news.ycombinator.com/item?id=43826798",
-          "I really recommend blocking all traffic from anything on https://github.com/borestad/blocklist-abuseipdb"
+          "I love how far Java has come. I still prefer TypeScript since I do a lot of frontend work and prefer to use the same language across the stack.With the said, you can do exhaustive pattern matching in TypeScript! https://github.com/gvergnaud/ts-pattern",
+          "Java also has recursive patterns and (maybe still in preview) literal patterns: `switch (x) { case A(B(true, var c)) -> f(c); }`",
+          "Took me a while to get used to sealed and I didn't quite see the use. But AI seems to love it for Java so I gave it a go and now I get it. Its like a really good access control mechanism esp if you use DI and want to deprecated some stuff. Apart from ofcourse the pattern matching - which comes in handy for event driven messages where payload shape changes."
         ]
       }
     },
     {
-      "id": "50072994",
-      "title": "The United Kingdom generates less electricity per person than in the 1970s",
-      "url": "https://ourworldindata.org/data-insights/electricity-generation-per-person-in-the-united-kingdom-has-fallen-by-a-third-from-its-early-2000s-peak",
+      "id": "50144066",
+      "title": "Free Pascal compiler now supports dynamic packages",
+      "url": "https://www.getlazarus.org/dynamic/",
       "source": "Hacker News",
-      "published_at": "2026-10-13T15:12:57+00:00",
-      "summary": "The United Kingdom generates less electricity per person than in the 1970s",
-      "score": 254,
-      "comments": 340,
-      "discussion_url": "https://news.ycombinator.com/item?id=50072994",
+      "published_at": "2026-10-18T18:48:04+00:00",
+      "summary": "Free Pascal compiler now supports dynamic packages",
+      "score": 133,
+      "comments": 29,
+      "discussion_url": "https://news.ycombinator.com/item?id=50144066",
       "extra": {
         "top_comments": [
-          "There's lots of amusingly Telegraph-esque outrage being posted here. But the article makes it clear that the reduction is due to reduction in demand, due in part to welcome improvements in efficiency, but also regrettable deindustrialization, and (neutral?) increased importing of electricity. Nobody is planning to ration electricity suppies.I also wonder what the contribution of domestic solar and on-site industrial generation is? I'm a dev in a large manufacturing business and two of our three factory buildings are now covered in solar cells which power a lot of our operations. Some big industrial sites have on-site wind-powered generation too. Is that counted as generation in these stats? Or is it just manifested as reduced demand?(Edit: added \"being posted\", \"welcome\" and \"(neutral?)\" for clarity)",
-          "I was at a conference last year where one of the speakers was from National Grid. Not only these morons had in mind that electricity demand should decrease (even before AI, it was obvious that demand would go up as we are moving away from fossil fuel with both heating and transportation going electric).But their great idea to deal with the shortage is intermittent availability of power. You won't be able to wash your clothes when you feel like, you will have to adapt to when there is spare power, like in developing countries. This is just a regression in technological progress.I saw the same messaging in France where the current president started his mandate with a grand programme to switch off a third of nuclear power plants.If anyone thinks adults are in charge, let alone engineers, you are greatly mistaken.",
-          "The decline in energy from 2003-present lines up nicely with the phase out of incandescent lights in favour of CFLs and of CFLs in favour of LEDs.Lets say a house typically had 5 60W bulbs on for 8hrs a day, now replaced with an 8W bulb. That would be a 2 kWH reduction, which roughly corresponds to the drop shown in the data.EDIT: actually now that I think about it, 2kWh per-household is probably less than 1kWh per-capita. It's still a good chunk though!"
+          "I am pleased to announce the first release of full dynamic package support for the Free Pascal Compiler and the Lazarus IDE. This feature has been a long time coming for the FPC ecosystem and has taken more than 20 years to realize through the work of many FOSS individuals.Dynamic packages allow programmers to create and install components, controls, and Lazarus extensions in seconds without rebuilding the entire Lazarus IDE. They can also be used in by Free Pascal programmers to develop and deploy plugins that expose native Pascal classes and types through dynamic package libraries. To support this functionality, I have made numerous improvements to the compiler, its runtime, and the Lazarus IDE. I have also created additional IDE extensions to improve the experience of working with Lazarus packages. Read more at the link above.",
+          "I would love to use Lazarus, but the UI toolkit it uses has some very bad accessibility bugs that make it practically unusable with my screen reader. FreePascal's love of syntax diagrams is also a turn-off for me (I've always preferred things like EBNF or similar for grammar notation).",
+          "Congratulations! This is a great achievement.How do you handle base address assignment on windows?"
         ]
       }
     },
     {
-      "id": "50079865",
-      "title": "Recreational Programming",
-      "url": "https://www.cphiri.dev/presentations/recreational-programming",
+      "id": "50146625",
+      "title": "William Gibson and the trademarking of cyberspace",
+      "url": "https://colo.to/cyberspace.html",
       "source": "Hacker News",
-      "published_at": "2026-10-13T22:33:33+00:00",
-      "summary": "Recreational Programming",
-      "score": 111,
-      "comments": 39,
-      "discussion_url": "https://news.ycombinator.com/item?id=50079865",
+      "published_at": "2026-10-18T23:37:57+00:00",
+      "summary": "William Gibson and the trademarking of cyberspace",
+      "score": 110,
+      "comments": 24,
+      "discussion_url": "https://news.ycombinator.com/item?id=50146625",
       "extra": {
         "top_comments": [
-          "Recreational programming used to be one of the rubrics to hire a software developer. If you have an intrinsic motivation to code, it would often be more valuable than your credentials. That's why junior devs would push up sites showcasing their resume of random projects they've done outside of education in order to give them an edge over their competition. Some companies would even encourage some time on the clock for working on side projects to prevent burnout.At the same time, some of the workers in the industry were disgruntled that you were expected to enjoy coding in your spare time to keep up. While some truly just wanted to do it because they were good at it, and would rather turn off the software dev brain after work to do other things they enjoy in life.With the advent of high-performing LLM's for coding, though, it seems more important to showcase how you can harness AI for your recreational projects than the projects themselves. It's a bit of a catch-22 for junior devs though.I still think it's good rubric to get into programming if you like to do it recreationally, but these are just a few of my thoughts on how it can be problematic.",
-          "The definition perfectly describes how I started out in computers in 1981. Brought home a 4K, 8-bit computer from Radio Shack that I could barely afford and hooked it to the TV. Had never touched a computer before, zero prior knowledge and only had the manual in the box (which was surprisingly good). No one I'd ever met owned a computer at home or used one at work and I'd never really considered that you could make money with computers. I just thought the games seemed fun and the idea of learning about programming seemed cool. Turns out typing in long listings from B&W hobbyist zines and then finding all the typos was a fine way to learn.Teaching myself assembler was harder because I had no docs. I was so clueless I actually looked up Motorola in the phone book and called to ask where I could get a manual. The sales rep who answered the phone must have taken pity on me because he mailed the CPU manual for free. I still have the purple reference card and remember the common opcodes by heart (https://colorcomputerarchive.com/repo/Documents/Datasheets/M...)The first time I made money was about 18 months later when I wrote a pretty handy disk utility program. Stayed up all Friday night finishing it. Copied onto floppies I sold for $5 at the local user's group Saturday morning. Made $140 and got my first 28 customers. That was enough to get me hooked on making software and selling it. ~40 years, three startups, over a dozen products, hundreds of good people employed, a couple million customers and two PC Magazine Product of the Year awards later - I regret nothing. Started on a lark to learn and have fun. Much was learned, fun was had. Wonderful journey - highly recommend.",
-          "Loved this presentation. I personally know the presenter and he presented it at a hackathon :)"
+          "Whatever else is real or myth with regard to these trolly pranking trademark spats, I think it's pretty reasonable to say that the term \"cyberspace\" emerged amidst - or at least adjacent to - a lot of LSD and Grateful Dead tapes.https://w2.eff.org/Misc/Publications/John_Perry_Barlow/HTML/...",
+          "I'm glad it failed to trademark. Autodesk is one of the worst corpo's around when it comes to being corpo. How un self-aware for them to make that 'street' joke. They were like a 100+ million company back then.",
+          "It's a somewhat liminal experience to walk with a famous sci-fi author through a tech conference; there are many, many callouts. Money is never sent in thanks for the inspo. The one that sticks out to me the most is Facebook rebranding to \"Meta\" -- Neal Stephenson coined the term in 1992. As far as I know, they never sent thanks in any form."
         ]
       }
     },
     {
-      "id": "50074909",
-      "title": "Show HN: How random are you?",
-      "url": "https://lab.specr.net/rigged-draw/",
+      "id": "50143536",
+      "title": "PalmOS Lemmings",
+      "url": "https://github.com/ardiri/palmos-lemmings",
       "source": "Hacker News",
-      "published_at": "2026-10-13T16:57:57+00:00",
-      "summary": "Show HN: How random are you?",
-      "score": 107,
-      "comments": 61,
-      "discussion_url": "https://news.ycombinator.com/item?id=50074909",
+      "published_at": "2026-10-18T17:56:59+00:00",
+      "summary": "PalmOS Lemmings",
+      "score": 106,
+      "comments": 24,
+      "discussion_url": "https://news.ycombinator.com/item?id=50143536",
       "extra": {
         "top_comments": [
-          "This is a nice spin on the Aaronson oracle:> In a class I taught at Berkeley, I did an experiment where I wrote a simple little program that would let people type either “f” or “d” and would predict which key they were going to push next. It’s actually very easy to write a program that will make the right prediction about 70% of the time. Most people don’t really know how to type randomly. They’ll have too many alternations and so on. There will be all sorts of patterns, so you just have to build some sort of probabilistic model. Even a very crude one will do well. I couldn’t even beat my own program, knowing exactly how it worked. I challenged people to try this and the program was getting between 70% and 80% prediction rates. Then, we found one student that the program predicted exactly 50% of the time. We asked him what his secret was and he responded that he “just used his free will.”",
-          "Dilbert\"Over here we have our random number generator.\"https://web.archive.org/web/20230305130159im_/https://assets...",
-          "Rather than attempt to be random, knowing that I'm not, I wanted to see how well it can predict Math.random: setInterval(() => { const num = Math.round(Math.random() * 10); const ball = document.querySelector(`.typed-pad .ball-${num}`); if (ball) { ball.click(); } }, 1000); This isn't very interesting, but it scratched an itch I had to see what would happen. The house's record The house called 18 of your 190 scored numbers: 9%. Blind guessing would average about 21.1 of them (11%). Only 1 of the 206 people in a psychology study was more random than you. The house found you extremely hard to read. I really want to know who was more random than a RNG"
+          "Hi, I literally found an old SD card with files last modified from 2005 with a few palm games from then, would anyone find these useful for reverse engineering?",
+          "Yeah Aaron is a PalmOS legend.I really liked the palmos c libs, MemCopy and WinCopyBitmap just reads so much nicer than memcpy and memset. Also UInt8 and UInt16:)Those were fun times, when 16bit ints were enough for everyone (just kiding;)",
+          "There was also a version of Lemmings on the HP48 calculator: <https://www.hpcalc.org/details/530> (incidentally by the same author as Alpha Waves, a.k.a. Continuum)"
         ]
       }
     }
