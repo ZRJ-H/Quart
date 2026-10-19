@@ -296,7 +296,13 @@
     function buildCardUrl(s) {
       const base = getBase()
       if (s.source_file) {
-        return base + s.source_file.split("/").map(encodeURIComponent).join("/")
+        return (
+          base +
+          s.source_file
+            .split("/")
+            .map((segment) => encodeURIComponent(segment.replace(/\s/g, "-")))
+            .join("/")
+        )
       }
       if (s.id && s.id.startsWith("daily/")) {
         // Only link if within 7 days — older pages are filtered from build
@@ -305,7 +311,13 @@
           if (age > 7) return null
         }
         const path = s.id.slice(6).split("#")[0]
-        return base + path.split("/").map(encodeURIComponent).join("/")
+        return (
+          base +
+          path
+            .split("/")
+            .map((segment) => encodeURIComponent(segment.replace(/\s/g, "-")))
+            .join("/")
+        )
       }
       // wiki entries (entities/concepts/sources) have no Quartz pages yet
       return null
