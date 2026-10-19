@@ -1,24 +1,6 @@
 {
-  "cached_at": "2026-10-19T11:00:30.201023+08:00",
+  "cached_at": "2026-10-19T13:02:02.780386+08:00",
   "articles": [
-    {
-      "id": "50141076",
-      "title": "RepRapMicron",
-      "url": "https://github.com/VikOlliver/RepRapMicron/wiki",
-      "source": "Hacker News",
-      "published_at": "2026-10-18T13:48:48+00:00",
-      "summary": "RepRapMicron",
-      "score": 339,
-      "comments": 55,
-      "discussion_url": "https://news.ycombinator.com/item?id=50141076",
-      "extra": {
-        "top_comments": [
-          "I feel like we're reliving the late 1790s again, back then you had Ramsden figuring out how to divide the circle into into seconds of arc, taking the marking of scales from an artform into something that could be manufactured reliably. Maudslay with his thread cutting lathe took the making of screws from a manual process pawned off on apprentices to something that that could be done in mass production. Wilkinson's boring machine made it possible for Watt to build a pressurized steam engine.All of these tools are based on things that were one-offs of earlier efforts, and turned into practical machine tools by someone that history chose to remember. We're now at the point where making things by manipulating individual atoms is something a determined amateur can do, it's amazing!I find myself fascinated by the Wyler Inclinometer, which uses a thin copper disk with spiral arms as the basis of a differential capacitor, and when complete, resulting in a device that can used to calibrate a granite surface plate. It can typically measure 1 micron/meter of deviation.We now have 3d printers that can reliably make almost anything you want by fusing filament, or stereolithography, or fusion of metal powders. You can buy desktop 5 axis CNC machines. There are control systems available to let you build almost any type of machine tool you can imagine, in as many axis as you want.We've got software defined radio, cheap atomic clocks, transistors that can switch megawatts, all within reach of a hobbyist.What an amazing time to be alive.",
-          "Related: https://www.youtube.com/watch?v=UvV2CH5il3QAnd the channel's preceding few videos covering the development of the prerequisite technologies.",
-          "Thank god, in 18 months we can start making our own RAM."
-        ]
-      }
-    },
     {
       "id": "50142573",
       "title": "Someone behind the software",
@@ -26,8 +8,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-18T16:32:00+00:00",
       "summary": "Someone behind the software",
-      "score": 334,
-      "comments": 139,
+      "score": 370,
+      "comments": 146,
       "discussion_url": "https://news.ycombinator.com/item?id=50142573",
       "extra": {
         "top_comments": [
@@ -38,56 +20,38 @@
       }
     },
     {
+      "id": "50141076",
+      "title": "RepRapMicron",
+      "url": "https://github.com/VikOlliver/RepRapMicron/wiki",
+      "source": "Hacker News",
+      "published_at": "2026-10-18T13:48:48+00:00",
+      "summary": "RepRapMicron",
+      "score": 354,
+      "comments": 56,
+      "discussion_url": "https://news.ycombinator.com/item?id=50141076",
+      "extra": {
+        "top_comments": [
+          "I feel like we're reliving the late 1790s again, back then you had Ramsden figuring out how to divide the circle into into seconds of arc, taking the marking of scales from an artform into something that could be manufactured reliably. Maudslay with his thread cutting lathe took the making of screws from a manual process pawned off on apprentices to something that that could be done in mass production. Wilkinson's boring machine made it possible for Watt to build a pressurized steam engine.All of these tools are based on things that were one-offs of earlier efforts, and turned into practical machine tools by someone that history chose to remember. We're now at the point where making things by manipulating individual atoms is something a determined amateur can do, it's amazing!I find myself fascinated by the Wyler Inclinometer, which uses a thin copper disk with spiral arms as the basis of a differential capacitor, and when complete, resulting in a device that can used to calibrate a granite surface plate. It can typically measure 1 micron/meter of deviation.We now have 3d printers that can reliably make almost anything you want by fusing filament, or stereolithography, or fusion of metal powders. You can buy desktop 5 axis CNC machines. There are control systems available to let you build almost any type of machine tool you can imagine, in as many axis as you want.We've got software defined radio, cheap atomic clocks, transistors that can switch megawatts, all within reach of a hobbyist.What an amazing time to be alive.",
+          "Related: https://www.youtube.com/watch?v=UvV2CH5il3QAnd the channel's preceding few videos covering the development of the prerequisite technologies.",
+          "Thank god, in 18 months we can start making our own RAM."
+        ]
+      }
+    },
+    {
       "id": "50145337",
       "title": "Hybrid Reasoning Agents: LLM agents that think in latent space, act through text",
       "url": "https://arxiv.org/abs/2610.18861",
       "source": "Hacker News",
       "published_at": "2026-10-18T20:48:14+00:00",
       "summary": "https://x.com/Jiaru_Zou/status/2110400256647340476https://github.com/togethercomputer/HybridAgenthttps://huggingface.co/collections/togethercomputer/hybridag...Evaluations: https://arxiv.org/html/2610.18861v1#S5",
-      "score": 241,
-      "comments": 148,
+      "score": 294,
+      "comments": 158,
       "discussion_url": "https://news.ycombinator.com/item?id=50145337",
       "extra": {
         "top_comments": [
-          "It sounds pretty nice on paper. But I tested the huggingface.co/mradermacher/hybridagent-8b-agentic-gguf:IQ4_XS with a simple question: \"Who is the pope?\" and it got stuck in a thinking loop forever and simply could not finish the task.```Okay, the user is asking who the pope is. The pope is the leader of the Catholic Church. The current pope is Pope Francis, who became pope in 2013 after Pope Benedict XVI resigned. There's no indication of a change since then, so the answer is Pope Francis.Okay, the user is asking who the pope is. The pope is the leader of the Catholic Church. The current pope is Pope Francis, who became pope in 2013 after Pope Benedict XVI resigned. There's no indication of a change since then, so the answer is Pope Francis.Okay, the user is asking who the pope is. The pope is the leader of the Catholic Church. The current pope is Pope Francis, who became pope in 2013 after Pope Benedict XVI resigned. There's no indication of a change since then, so the answer is Pope Francis.```Then I also gave it the counterfeit ball problem, but it could not solve it either. But to be fair, no 8B model seem to be able to solve it.```I have 9 balls that look exactly the same. But I know one ball is different. I only have a scale. Call scale(b1,b2)={-1;0;1} will tell me whether the left object b1 is heavier, same weight or lighter than the right object b2. How many times at minimum do we have to apply scale to find the different ball? Explain how we can achieve this.```",
+          "Isn't this what openai is doing, at least in spirit, by running multiple passes through the network before exhibiting thinking tokens? Isn't the same issue one of safety and control, because being able to interpret thinking tokens helps u control / monitor unwanted behaviors, and multiple passes before writing out the thinking tokens increases their capacity for deception?",
           "The code is available at: https://github.com/togethercomputer/HybridAgentLLM Models and data: https://huggingface.co/collections/togethercomputer/hybridag...Evaluations: https://arxiv.org/html/2610.18861v1#S5",
-          "I wonder how this compares to going all-in: widen the input embedding to fit the output (post-“Hybrid Link”) latent vector and a token embedding and pass both through even when in text mode. After all, you’re paying essentially the full cost of running the latent-mode model while generating text, so why not let it latently reason at the same time?(Or just add the vectors instead of using wider vectors - everyone seems to have good results from munging vectors together with plain addition.)"
-        ]
-      }
-    },
-    {
-      "id": "50136150",
-      "title": "There's never been a better time to go into math (by: 3blue1brown) [video]",
-      "url": "https://www.youtube.com/watch?v=LKrwhjOI8Nc",
-      "source": "Hacker News",
-      "published_at": "2026-10-17T23:26:35+00:00",
-      "summary": "There's never been a better time to go into math (by: 3blue1brown) [video]",
-      "score": 206,
-      "comments": 199,
-      "discussion_url": "https://news.ycombinator.com/item?id=50136150",
-      "extra": {
-        "top_comments": [
-          "I'd like to believe Grant but I find this assault on mathematics to be dehumanizing and demoralizing. AI has destroyed a major source of \"life's meaning\" for many people who pursued mathematics. Imagine waking up one morning to find that an alien technology has solved the problem you had dedicated your life to (and many more to boot.) Not another mathematician but an alien technology. As a scientist, I don't want to end up as a laboratory assistant to an AI. I can take not being the smartest human in the room, but I'm pretty sure I don't want to spend my life serving a silicon master.",
-          "I think math will go the way of biology. Biologists enjoy untangling the infinitely complex mechanisms of life, including the brain, and win Nobel Prizes for discoveries like \"how water enters a cell,\" rather than \"constructing the first-ever cell capable of absorbing water.\"No biologist has ever complained, \"Gee whiz, it's so unfortunate that we already have a brain to study. It's all so meaningless! It would be so much better if we had to construct the first-ever brain from scratch.\"",
-          "I think a lot of \"mathematicians\" are saddened by the sudden realization they are not even interested in it and were only in it for status and prestige. A lot of them are such pretentious tools that they willingly wasted their lives doing the absurd PhD rituals. Academia is dead."
-        ]
-      }
-    },
-    {
-      "id": "50141579",
-      "title": "Java sealed classes and exhaustive pattern matching",
-      "url": "https://neilmadden.blog/2026/04/24/java-sealed-classes-and-exhaustive-pattern-matching/",
-      "source": "Hacker News",
-      "published_at": "2026-10-18T14:47:37+00:00",
-      "summary": "Java sealed classes and exhaustive pattern matching",
-      "score": 144,
-      "comments": 106,
-      "discussion_url": "https://news.ycombinator.com/item?id=50141579",
-      "extra": {
-        "top_comments": [
-          "I love how far Java has come. I still prefer TypeScript since I do a lot of frontend work and prefer to use the same language across the stack.With the said, you can do exhaustive pattern matching in TypeScript! https://github.com/gvergnaud/ts-pattern",
-          "Java also has recursive patterns and (maybe still in preview) literal patterns: `switch (x) { case A(B(true, var c)) -> f(c); }`",
-          "Took me a while to get used to sealed and I didn't quite see the use. But AI seems to love it for Java so I gave it a go and now I get it. Its like a really good access control mechanism esp if you use DI and want to deprecated some stuff. Apart from ofcourse the pattern matching - which comes in handy for event driven messages where payload shape changes."
+          "It sounds pretty nice on paper. But I tested the huggingface.co/mradermacher/hybridagent-8b-agentic-gguf:IQ4_XS with a simple question: \"Who is the pope?\" and it got stuck in a thinking loop forever and simply could not finish the task.```Okay, the user is asking who the pope is. The pope is the leader of the Catholic Church. The current pope is Pope Francis, who became pope in 2013 after Pope Benedict XVI resigned. There's no indication of a change since then, so the answer is Pope Francis.Okay, the user is asking who the pope is. The pope is the leader of the Catholic Church. The current pope is Pope Francis, who became pope in 2013 after Pope Benedict XVI resigned. There's no indication of a change since then, so the answer is Pope Francis.Okay, the user is asking who the pope is. The pope is the leader of the Catholic Church. The current pope is Pope Francis, who became pope in 2013 after Pope Benedict XVI resigned. There's no indication of a change since then, so the answer is Pope Francis.```Then I also gave it the counterfeit ball problem, but it could not solve it either. But to be fair, no 8B model seem to be able to solve it.```I have 9 balls that look exactly the same. But I know one ball is different. I only have a scale. Call scale(b1,b2)={-1;0;1} will tell me whether the left object b1 is heavier, same weight or lighter than the right object b2. How many times at minimum do we have to apply scale to find the different ball? Explain how we can achieve this.```"
         ]
       }
     },
@@ -98,14 +62,32 @@
       "source": "Hacker News",
       "published_at": "2026-10-18T01:38:08+00:00",
       "summary": "Dogs seem to agree with humans that 'bouba' is round and 'kiki' is spiky",
-      "score": 143,
-      "comments": 86,
+      "score": 167,
+      "comments": 106,
       "discussion_url": "https://news.ycombinator.com/item?id=50136979",
       "extra": {
         "top_comments": [
-          "I think objects with these shapes make similar sounds in the real world. Sharp shapes make percussive sounds. Round shapes make softer sounds.Dog's have very good hearing, and their hearing must help them to model the world around them, to understand what different objects in the world are.So I think it's less about linguistics and more about our audiovisual mapping of the physical world.Then again, that must be where the origin of language evolved from in the first place.",
-          "Related. Others?Evidence of the bouba-kiki effect in naïve baby chicks - https://news.ycombinator.com/item?id=47105198 - Feb 2026 (107 comments)Which is \"Bouba\", and which is \"Kiki\"? [video] - https://news.ycombinator.com/item?id=46572742 - Jan 2026 (23 comments)Bouba / Kiki Effect - https://news.ycombinator.com/item?id=45320327 - Sept 2025 (2 comments)Bouba/kiki effect - https://news.ycombinator.com/item?id=40699583 - June 2024 (170 comments)Bouba/Kiki Effect - https://news.ycombinator.com/item?id=27885703 - July 2021 (94 comments)Bouba/kiki effect - https://news.ycombinator.com/item?id=8372550 - Sept 2014 (1 comment)",
-          "I too would associate \"Bouba\" with the rounded and \"Kiki\" with the sharper figure, but to me this is just a relatively universal sense of continuity vs discontinuities:the local curvature is continuous for \"Bouba\", every point on the curve has a single tangent, which evolves continuously as you walk along this presented curve.For Kiki: the local curvature is discontinuous: at the inward or outward points, there are 2 tangents, so the tangent abruptly switches value when passing through this point when walking along the curve.similarly the \"B\"s in \"Bouba\" are voiced plosives, while the \"K\"s in \"Kiki\" are unvoiced plosives.I think people would similarily classify \"Titi, Pipi, Touta, Poupa, Kouka\" like \"Kiki\" but \"Didi, Douda, Bibi, Gigi, Gouga\" like \"Bouba\".The vowels are obviously voiced by the vocal chord carrier wave \"voice\".So when we pass through the unvoiced (T/P/K) plosives, we notice discontinuity like the discontinuously evolving tangents along the boundary curve of the figure.Obviously mammals like dogs have a concept of continuity, topology, distance, they might get spooked by \"open\" stairs, because they can see between the planks, etc.And when we hear voiced (D,B,G) plosives, the voice while muted still evolves continuously."
+          "This is a fascinating article and I’m not casting shade but more of a curious question: If humans are the ones that generally associate this sound with that thing, knowing dogs are very observant of us, how do we know the dogs aren’t just copying what we are unknowingly exhibiting toward them throughout their entire lives? I have no idea how you’d pull that out of the stats though. Maybe you could find languages that have different sounds for round and spiky and compare dogs from those households to English speaking households (or rather languages with k’s for spiky and b’s for round)",
+          "Related :) https://en.wikipedia.org/wiki/City_(novel)",
+          "I think objects with these shapes make similar sounds in the real world. Sharp shapes make percussive sounds. Round shapes make softer sounds.Dog's have very good hearing, and their hearing must help them to model the world around them, to understand what different objects in the world are.So I think it's less about linguistics and more about our audiovisual mapping of the physical world.Then again, that must be where the origin of language evolved from in the first place."
+        ]
+      }
+    },
+    {
+      "id": "50141579",
+      "title": "Java sealed classes and exhaustive pattern matching",
+      "url": "https://neilmadden.blog/2026/04/24/java-sealed-classes-and-exhaustive-pattern-matching/",
+      "source": "Hacker News",
+      "published_at": "2026-10-18T14:47:37+00:00",
+      "summary": "Java sealed classes and exhaustive pattern matching",
+      "score": 153,
+      "comments": 107,
+      "discussion_url": "https://news.ycombinator.com/item?id=50141579",
+      "extra": {
+        "top_comments": [
+          "I love how far Java has come. I still prefer TypeScript since I do a lot of frontend work and prefer to use the same language across the stack.With the said, you can do exhaustive pattern matching in TypeScript! https://github.com/gvergnaud/ts-pattern",
+          "Java also has recursive patterns and (maybe still in preview) literal patterns: `switch (x) { case A(B(true, var c)) -> f(c); }`",
+          "Took me a while to get used to sealed and I didn't quite see the use. But AI seems to love it for Java so I gave it a go and now I get it. Its like a really good access control mechanism esp if you use DI and want to deprecated some stuff. Apart from ofcourse the pattern matching - which comes in handy for event driven messages where payload shape changes."
         ]
       }
     },
@@ -116,14 +98,32 @@
       "source": "Hacker News",
       "published_at": "2026-10-18T18:48:04+00:00",
       "summary": "Free Pascal compiler now supports dynamic packages",
-      "score": 117,
-      "comments": 24,
+      "score": 133,
+      "comments": 29,
       "discussion_url": "https://news.ycombinator.com/item?id=50144066",
       "extra": {
         "top_comments": [
           "I am pleased to announce the first release of full dynamic package support for the Free Pascal Compiler and the Lazarus IDE. This feature has been a long time coming for the FPC ecosystem and has taken more than 20 years to realize through the work of many FOSS individuals.Dynamic packages allow programmers to create and install components, controls, and Lazarus extensions in seconds without rebuilding the entire Lazarus IDE. They can also be used in by Free Pascal programmers to develop and deploy plugins that expose native Pascal classes and types through dynamic package libraries. To support this functionality, I have made numerous improvements to the compiler, its runtime, and the Lazarus IDE. I have also created additional IDE extensions to improve the experience of working with Lazarus packages. Read more at the link above.",
           "I would love to use Lazarus, but the UI toolkit it uses has some very bad accessibility bugs that make it practically unusable with my screen reader. FreePascal's love of syntax diagrams is also a turn-off for me (I've always preferred things like EBNF or similar for grammar notation).",
-          "This seems to be a fork of Lazarus. The official Lazarus is at https://www.lazarus-ide.org/"
+          "Congratulations! This is a great achievement.How do you handle base address assignment on windows?"
+        ]
+      }
+    },
+    {
+      "id": "50146625",
+      "title": "William Gibson and the trademarking of cyberspace",
+      "url": "https://colo.to/cyberspace.html",
+      "source": "Hacker News",
+      "published_at": "2026-10-18T23:37:57+00:00",
+      "summary": "William Gibson and the trademarking of cyberspace",
+      "score": 110,
+      "comments": 24,
+      "discussion_url": "https://news.ycombinator.com/item?id=50146625",
+      "extra": {
+        "top_comments": [
+          "Whatever else is real or myth with regard to these trolly pranking trademark spats, I think it's pretty reasonable to say that the term \"cyberspace\" emerged amidst - or at least adjacent to - a lot of LSD and Grateful Dead tapes.https://w2.eff.org/Misc/Publications/John_Perry_Barlow/HTML/...",
+          "I'm glad it failed to trademark. Autodesk is one of the worst corpo's around when it comes to being corpo. How un self-aware for them to make that 'street' joke. They were like a 100+ million company back then.",
+          "It's a somewhat liminal experience to walk with a famous sci-fi author through a tech conference; there are many, many callouts. Money is never sent in thanks for the inspo. The one that sticks out to me the most is Facebook rebranding to \"Meta\" -- Neal Stephenson coined the term in 1992. As far as I know, they never sent thanks in any form."
         ]
       }
     },
@@ -134,14 +134,14 @@
       "source": "Hacker News",
       "published_at": "2026-10-18T17:56:59+00:00",
       "summary": "PalmOS Lemmings",
-      "score": 99,
-      "comments": 23,
+      "score": 106,
+      "comments": 24,
       "discussion_url": "https://news.ycombinator.com/item?id=50143536",
       "extra": {
         "top_comments": [
           "Hi, I literally found an old SD card with files last modified from 2005 with a few palm games from then, would anyone find these useful for reverse engineering?",
           "Yeah Aaron is a PalmOS legend.I really liked the palmos c libs, MemCopy and WinCopyBitmap just reads so much nicer than memcpy and memset. Also UInt8 and UInt16:)Those were fun times, when 16bit ints were enough for everyone (just kiding;)",
-          "This README is begging for historical context and commentary."
+          "There was also a version of Lemmings on the HP48 calculator: <https://www.hpcalc.org/details/530> (incidentally by the same author as Alpha Waves, a.k.a. Continuum)"
         ]
       }
     }
