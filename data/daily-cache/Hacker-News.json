@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-10-18T12:53:36.114623+08:00",
+  "cached_at": "2026-10-19T11:00:30.201023+08:00",
   "articles": [
     {
-      "id": "50129045",
-      "title": "DeepSeek-v4.1-Flash-1017",
-      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "id": "50141076",
+      "title": "RepRapMicron",
+      "url": "https://github.com/VikOlliver/RepRapMicron/wiki",
       "source": "Hacker News",
-      "published_at": "2026-10-17T08:21:25+00:00",
-      "summary": "https://api-docs.deepseek.com/news/news261017/https://openrouter.ai/deepseek/deepseek-v4.1-flash-1017",
-      "score": 766,
-      "comments": 613,
-      "discussion_url": "https://news.ycombinator.com/item?id=50129045",
+      "published_at": "2026-10-18T13:48:48+00:00",
+      "summary": "RepRapMicron",
+      "score": 339,
+      "comments": 55,
+      "discussion_url": "https://news.ycombinator.com/item?id=50141076",
       "extra": {
         "top_comments": [
-          "DS isn't better than Sol and Gemini in the benchmarks, but after working with them all for a while now I'm beginning to understand why people find DS _feels_ so much better.First, it's the tok/s and TTFT from providers. Deepseek blazes through work - at quite good quality - and you don't find yourself waiting for your agents to finish.Second is the openness. Being able to see the CoT and not being randomly blocked for cyber review. You're never wondering if it's stuck or if it will randomly fail. Combined with the great cost value.. My next subscription will probably be Z.ai",
-          "This model is why OpenAI and Anthropic want regulatory hurdles. We need more diversity like this, not less. A diverse ecosystem is the only long term solution to complex problems that I know of and the challenges that the AI world is presenting is no different.",
-          "The company's own news page: https://api-docs.deepseek.com/news/news261017They are showing this new version scoring significantly higher across multiple coding benchmarks, beating Sol 5.6 (6.1 is the latest) across 10/11 benchmarks.I am going back to DeepSeek for writing code. I was trying out using Sol and liking the result, but this should close a lot of that gap. I use Opus/Sol for an implementation plan and code review also use them for grilling. DeepSeek is also running verifications."
+          "I feel like we're reliving the late 1790s again, back then you had Ramsden figuring out how to divide the circle into into seconds of arc, taking the marking of scales from an artform into something that could be manufactured reliably. Maudslay with his thread cutting lathe took the making of screws from a manual process pawned off on apprentices to something that that could be done in mass production. Wilkinson's boring machine made it possible for Watt to build a pressurized steam engine.All of these tools are based on things that were one-offs of earlier efforts, and turned into practical machine tools by someone that history chose to remember. We're now at the point where making things by manipulating individual atoms is something a determined amateur can do, it's amazing!I find myself fascinated by the Wyler Inclinometer, which uses a thin copper disk with spiral arms as the basis of a differential capacitor, and when complete, resulting in a device that can used to calibrate a granite surface plate. It can typically measure 1 micron/meter of deviation.We now have 3d printers that can reliably make almost anything you want by fusing filament, or stereolithography, or fusion of metal powders. You can buy desktop 5 axis CNC machines. There are control systems available to let you build almost any type of machine tool you can imagine, in as many axis as you want.We've got software defined radio, cheap atomic clocks, transistors that can switch megawatts, all within reach of a hobbyist.What an amazing time to be alive.",
+          "Related: https://www.youtube.com/watch?v=UvV2CH5il3QAnd the channel's preceding few videos covering the development of the prerequisite technologies.",
+          "Thank god, in 18 months we can start making our own RAM."
         ]
       }
     },
     {
-      "id": "50131256",
-      "title": "Solar surpasses nuclear power globally for first time",
-      "url": "https://www.pv-magazine.com/2026/09/29/solar-surpasses-nuclear-power-globally-for-first-time/",
+      "id": "50142573",
+      "title": "Someone behind the software",
+      "url": "https://karrisaarinen.com/posts/someone-behind-the-software/",
       "source": "Hacker News",
-      "published_at": "2026-10-17T14:01:01+00:00",
-      "summary": "Solar surpasses nuclear power globally for first time",
-      "score": 527,
-      "comments": 328,
-      "discussion_url": "https://news.ycombinator.com/item?id=50131256",
+      "published_at": "2026-10-18T16:32:00+00:00",
+      "summary": "Someone behind the software",
+      "score": 334,
+      "comments": 139,
+      "discussion_url": "https://news.ycombinator.com/item?id=50142573",
       "extra": {
         "top_comments": [
-          "Note that this is actual generated terawatt hours. Nuclear power has a substantially higher capacity factor, but solar has been growing so rapidly that it has taken the lead on generated output too. Wind is just about to surpass nuclear generation also, though solar is racing ahead much faster. The next big milestone, not to be reached for several years at the present rate, would be solar generation overtaking hydroelectric generation. You can see data up through 2025 here:https://ourworldindata.org/electricity-mixEven though solar power has been a significant part of the energy conversation for decades, the majority of solar growth is very recent. Nuclear power generated 2762 TWh in 2021, when solar generated 1054 TWh. Solar power generated 2779 TWh in 2025.",
-          "> From March 2025 through June 2026, either solar or wind individually generated more electricity than nuclear every month. In March, April and May 2026, both technologies independently surpassed nuclear generation.> Global solar capacity increased by 510 GW to 2,383 GW, up 27% year on year, while wind added a record 159 GW to reach 1,291 GW, an increase of 14%. By comparison, installed nuclear capacity rose by just 1.5 GW to 399.5 GW, while operating nuclear capacity declined by 0.5 GW to 368.6 GW.> More recent data from IEA PVPS indicate that global PV additions reached around 690 GW in 2025, about 180 GW more than the figure used by WNISR. This suggests the gap between solar and nuclear capacity – and their respective growth rates – was even wider than indicated in the report.> The report identifies falling battery costs as a potential enabler of continued PV expansion, particularly as grids contend with growing volumes of variable renewable generation and periods of low or negative electricity prices. Grid-scale battery deployment accelerated sharply in 2025, with 104 GW and 257 GWh connected during the year. More than 78% of cumulative battery energy storage system (BESS) capacity was installed between 2023 and 2025.",
-          "Always good to see the future arriving, but the job is not done yet by far. We need to be sure not to take our foot off the gas (figuratively of course).We need to accelerate clean energy generation even more so we can replace not just dirty electricity sources but dirty energy sources entirely, and produce synthetic petrochemical feedstocks. Modernity runs on hydrocarbons-as-chemicals, not just hydrocarbons-as-fuels, so despite electrolysis and synthesis being hugely energy inefficient, there is literally no alternative. We just have to brute force it at petascale."
+          "As a SaaS author, I couldn't agree more. That's how I see my work: the value is not in the code (AI can code better than me at this point), nor even in the software architecture (AI is just getting to the point where it will get better than me). It's in deciding what to build and what not to build, defining the overall character and vision of the product, looking at each screen and thinking \"how does this help my customer do their job\".This, unfortunately, takes time, as one has to restart many times because of ideas that turned out not to be as great as one had initially thought. And it results in software that is called \"opinionated\", and often does not follow what the \"industry\" does.",
+          "Something I've been thinking about a lot is that ultimately AI does not have values, intent, and taste. Even with humans, each of us has different values, intent, and taste, although we do share many of these things. As a living human being, you have biological or cultural desires and particular goals that you want to accomplish while you're alive on this earth.When you're creating art or even a product, what you create is a result of your particular values and particular tastes and those drive some sort of purpose for whatever it is you're creating. What you're building is, generally, made for the consumption or use by another person (even if indirectly), and we mostly have empathy and want those people to have a good experience with whatever we're creating. We think about our audience and weigh their particular needs.When you use good software, you can sense the intent in what was made. The person (or team) combined their particular point of view with that of the goals of the user. At this point, I don't think agentic coding is going to give you that, at least not fully. It might get most of the shared values and common things right as a result of its training data, but a human still needs to edit the output or steer it on a good path that only they can see and which is part of a larger vision. For simpler needs, taste and values matter less, but for more complex things, it makes a difference, in my opinion.",
+          "I enjoyed the introduction. I just picked up “The mind of the Maker” by Sayers, which Fred Brooks cites in The Mythical Man Month: “ Dorothy Sayers, in her excellent book, The Mind of the Maker, divides creative activity into three stages: the idea, the implementation, and the interaction. A book, then, or a computer, or a program comes into existence first as an ideal construct, built outside time and space, but complete in the mind of the author.” He goes on to say how the user meets the mind of the maker in the interaction: “The creation is complete when someone reads the book, uses the computer, or runs the program, thereby interacting with the mind of the maker.”"
         ]
       }
     },
     {
-      "id": "50132193",
-      "title": "Pele – Mermaid diagrams as themeable SVG",
-      "url": "https://pele.run/",
+      "id": "50145337",
+      "title": "Hybrid Reasoning Agents: LLM agents that think in latent space, act through text",
+      "url": "https://arxiv.org/abs/2610.18861",
       "source": "Hacker News",
-      "published_at": "2026-10-17T15:55:09+00:00",
-      "summary": "Pele – Mermaid diagrams as themeable SVG",
-      "score": 323,
-      "comments": 29,
-      "discussion_url": "https://news.ycombinator.com/item?id=50132193",
-      "extra": {
-        "top_comments": [
-          "Anytime I try mermaid for anything more complex than a toy diagram I always end up absolutely frustrated by the arcane and topologically poor layout that is produced.Styling seems like a trivial problem by comparison.",
-          "> A flowchart subgraph keeps its own direction even when it links to nodes outside the subgraph.This, in and of itself, is sufficient reason for me to switch, even if it were slower than Mermaid.js.I’ve not even made it through the list yet and I’m sold.",
-          "Is pele open source?I tried to find the source code of it but I was unable in finding soEdit: found it, https://github.com/obsidianmd/peleAlso folks, this is a good reminder to please have a github icon on the top of the page to easily show git/github links if the app is open source, also helps in the fact that I can star your projects and bookmark them more easily :-D"
-        ]
-      }
-    },
-    {
-      "id": "50132870",
-      "title": "Gold is now the top U.S. export",
-      "url": "https://www.numismaticnews.net/gold-now-top-u-s-export",
-      "source": "Hacker News",
-      "published_at": "2026-10-17T17:06:07+00:00",
-      "summary": "Gold is now the top U.S. export",
-      "score": 286,
-      "comments": 149,
-      "discussion_url": "https://news.ycombinator.com/item?id=50132870",
-      "extra": {
-        "top_comments": [
-          "I wonder how much of that are foreign central banks moving their gold reserves out of the USA... France, The Netherlands and Germany have been moving gold.https://www.bbc.com/news/articles/cvgyn8q8gqxo",
-          "> majority of gold exports are going to Switzerland, almost certainly to the refiners thereSounds like a refining bottleneck.Globally, “refining capacity is operating at near-total utilization” [1]. That is particularly true in America, where refiners are “limiting purchases” [2] and “turning away new clients” [3].Global demand for gold—lead by China—is surging. That, in turn, made gold “the most-developed commodity over 2020-25” with “the highest [new] mine count each year during the period” [4].Where are those mines opening? In “Australia, Canada and the US,” which “accounted for the largest share of new gold production.”[1] https://www.skillings.net/gold-refining-report-global-standa...[2] https://www.jckonline.com/editorial-article/metal-refiners-t...[3] https://www.jckonline.com/editorial-article/refining-pipelin...[4] https://www.spglobal.com/market-intelligence/en/news-insight...",
-          "I thought it was tokens"
-        ]
-      }
-    },
-    {
-      "id": "50131213",
-      "title": "Making chicken transparent using Dorito dust",
-      "url": "https://chillphysicsenjoyer.substack.com/p/making-chicken-transparent-using",
-      "source": "Hacker News",
-      "published_at": "2026-10-17T13:55:28+00:00",
-      "summary": "Making chicken transparent using Dorito dust",
-      "score": 279,
-      "comments": 69,
-      "discussion_url": "https://news.ycombinator.com/item?id=50131213",
-      "extra": {
-        "top_comments": [
-          "I'm trying to imagine the origin story for this science, and I feel like the most fun one is that somebody wanted to make Doritos flavored chicken and accidentally discovered that the marinade turned the chicken breast transparent.",
-          "Author notes the difficulty of cutting thin slices of raw chicken. If you lightly freeze it (or freeze it and let it nearly defrost) it's much easier.",
-          "As the author seems to be around: have you considered surface roughness of the sample as problem to transparency?Add some water between the grid pattern and the chicken and also some on top of it - or even conduct the experiment under water and the results should be better. You might also freeze the meat before cutting to achieve much smoother surfaces in the first place?"
-        ]
-      }
-    },
-    {
-      "id": "50127979",
-      "title": "Show HN: Llmspeed – feel how fast a local LLM runs before you buy the hardware",
-      "url": "https://llmspeed.dev/",
-      "source": "Hacker News",
-      "published_at": "2026-10-17T04:36:53+00:00",
-      "summary": "Show HN: Llmspeed – feel how fast a local LLM runs before you buy the hardware",
-      "score": 267,
-      "comments": 78,
-      "discussion_url": "https://news.ycombinator.com/item?id=50127979",
-      "extra": {
-        "top_comments": [
-          "I feel like these types of benchmarks mostly test what the mainstream tells you is possible and or works. You rarely get to hear the different implementations of inference engines, different types of setups (e.g. hybrid ones or older hardware) and their pros and cons. Also it seems these were tested with very minimal token usage.Currently on my 9 year old laptop with a GTX 1070 Max-Q 8GB vram, 16 gb ddr4 ram and i7 8750h. I am running a finetuned Qwen 3.5-35B-A3B (Tiel-Coder-35B-A3B-GGUF-MTP) with 4-bit quant on a llamacpp fork (Turboquant) with 131k context at around 16-19 tk/s and 350-500 tk/s prefil using Pi harness. It is amazing for writing scripts and doing medium coding tasks and summarizing text for me. After around 100k context it goes down to 9 tk/s but that is to be expected.If you ever ask any frontier LLM or these types of benchmarks, they would probably say that the best model I can run on my system is a crappy 9B model or something, which is just completely false. So I really wonder how much more you can pull out from more powerful systems and much better open weight models.",
-          "By running vllm at work I learned that you will usually outperform benchmarks which you will find on the internet. Mostly by running proper parameter tuning. So you get impressive numbers. Still in reality those numbers do not tell the whole truth. We found that real usage is more 60k-140k prompt with a few k of output for realistic agentic coding workloads. Most of the time that will give you half to a third of decode throughput vs the benchmark. It also becomes much more about cache aware routing and kv cache management (how to offload and restore). Because prefilling 60-140k will simply take too long for interactive work.",
-          "It says 46 tok/sec for Qwen3.6-27b 4 bit on RTX5090, but I get 60-70 tok/sec on a small context like that (5 bit weights with 8 bit KV cache), although it does slow down to 40 tok/sec on large contexts. If I add ngram speculation, then it can increase to 100+ tok/sec on code.There are many knobs to tweak to make it faster, which the site ignores."
-        ]
-      }
-    },
-    {
-      "id": "50126312",
-      "title": "Dam removals are bringing fish back across the northeastern United States",
-      "url": "https://www.smithsonianmag.com/science-nature/dam-removals-are-bringing-fish-back-across-the-northeastern-united-states-striking-down-one-tiny-barrier-at-a-time-180989679/",
-      "source": "Hacker News",
-      "published_at": "2026-10-16T23:47:31+00:00",
-      "summary": "Dam removals are bringing fish back across the northeastern United States",
+      "published_at": "2026-10-18T20:48:14+00:00",
+      "summary": "https://x.com/Jiaru_Zou/status/2110400256647340476https://github.com/togethercomputer/HybridAgenthttps://huggingface.co/collections/togethercomputer/hybridag...Evaluations: https://arxiv.org/html/2610.18861v1#S5",
       "score": 241,
-      "comments": 59,
-      "discussion_url": "https://news.ycombinator.com/item?id=50126312",
+      "comments": 148,
+      "discussion_url": "https://news.ycombinator.com/item?id=50145337",
       "extra": {
         "top_comments": [
-          "A rewilding organization bought some forest land, downstream from a dam, that used to get seasonal flooding before the dam was built and made an agreement with the dam operators to do artificial seasonal flooding via ditches they dug. The flooded forest has the effect of providing fish nurseries so hatchlings have a chance to hide and grow before the water recedes and they have to return to the river.https://youtu.be/qcVMX32c0ioI think it's a testament that human activity and nature don't have to be all or nothing, but we need to consider and mitigate the impact of our actions and always leave space for nature.",
-          "More good news: after years of fighting, Brookfield Renewable agreed to sell four dams on the Kennebec River which will let Atlantic Salmon go back up river to their spawning territory. This just happened in 2025 and could be a bigger breakthrough than the massive alewife restoration that the article mentions.My understanding is that the first few victories on this were very very hard but it seems to have created a precedent and a growing example emulated across the country.https://themainemonitor.org/dams-sale-salmon-return-kennebec...",
-          "This sounded familiar and then I realized I had read the same article a few weeks ago. This is some strange syndication I would propose changing the link to this one: https://biographic.com/death-by-a-thousand-dams/ it’s also way better layout and fewer ads."
+          "It sounds pretty nice on paper. But I tested the huggingface.co/mradermacher/hybridagent-8b-agentic-gguf:IQ4_XS with a simple question: \"Who is the pope?\" and it got stuck in a thinking loop forever and simply could not finish the task.```Okay, the user is asking who the pope is. The pope is the leader of the Catholic Church. The current pope is Pope Francis, who became pope in 2013 after Pope Benedict XVI resigned. There's no indication of a change since then, so the answer is Pope Francis.Okay, the user is asking who the pope is. The pope is the leader of the Catholic Church. The current pope is Pope Francis, who became pope in 2013 after Pope Benedict XVI resigned. There's no indication of a change since then, so the answer is Pope Francis.Okay, the user is asking who the pope is. The pope is the leader of the Catholic Church. The current pope is Pope Francis, who became pope in 2013 after Pope Benedict XVI resigned. There's no indication of a change since then, so the answer is Pope Francis.```Then I also gave it the counterfeit ball problem, but it could not solve it either. But to be fair, no 8B model seem to be able to solve it.```I have 9 balls that look exactly the same. But I know one ball is different. I only have a scale. Call scale(b1,b2)={-1;0;1} will tell me whether the left object b1 is heavier, same weight or lighter than the right object b2. How many times at minimum do we have to apply scale to find the different ball? Explain how we can achieve this.```",
+          "The code is available at: https://github.com/togethercomputer/HybridAgentLLM Models and data: https://huggingface.co/collections/togethercomputer/hybridag...Evaluations: https://arxiv.org/html/2610.18861v1#S5",
+          "I wonder how this compares to going all-in: widen the input embedding to fit the output (post-“Hybrid Link”) latent vector and a token embedding and pass both through even when in text mode. After all, you’re paying essentially the full cost of running the latent-mode model while generating text, so why not let it latently reason at the same time?(Or just add the vectors instead of using wider vectors - everyone seems to have good results from munging vectors together with plain addition.)"
         ]
       }
     },
     {
-      "id": "50127586",
-      "title": "Source code of the Estonian online voting system",
-      "url": "https://github.com/valimised/ivxv",
+      "id": "50136150",
+      "title": "There's never been a better time to go into math (by: 3blue1brown) [video]",
+      "url": "https://www.youtube.com/watch?v=LKrwhjOI8Nc",
       "source": "Hacker News",
-      "published_at": "2026-10-17T03:18:39+00:00",
-      "summary": "Source code of the Estonian online voting system",
-      "score": 188,
-      "comments": 157,
-      "discussion_url": "https://news.ycombinator.com/item?id=50127586",
+      "published_at": "2026-10-17T23:26:35+00:00",
+      "summary": "There's never been a better time to go into math (by: 3blue1brown) [video]",
+      "score": 206,
+      "comments": 199,
+      "discussion_url": "https://news.ycombinator.com/item?id=50136150",
       "extra": {
         "top_comments": [
-          "Fully software, even a combo of software and hardware, cannot by itself make elections secure. Think of the Reflections On Trusting Trust problem, the need to verify firmware, etc. You can't ensure that machines _will_ work correctly, but you _can_ verify that they _did_. To do verify the machines' functioning after the fact you have to do it very soon after closing of the polls, and you have to devise a manual, statistical random sampling method where you manually check randomly sampled, marked paper ballots, against the digital cast vote record, then do a digital risk limiting audit to check that the CVR totals up to the machines' reported results. The sooner after closing of the polls you do this, the better the likelihood that any cheating will be caught. I.e., an immediate manual, partial audit of enough randomly-selected polling locations.That still leaves tons of other technical problems to address, like security of mail-ballots / absentee ballots, the security of ballot boxes used for early voting (because you probably cannot run the above manual partial audit due to then having nightly results available to the public; or maybe you accept that), voter registration, etc.",
-          "I'm Estonian. E-voting is widely accepted and used here. We've been doing it since 2001, and extensivelly (first parliamentary e-voting) since 2007. The fact that it's open source is long known (at least in the IT community) and highly appreciated. There's no inherent doubt about its validity in the local expert and international community.",
-          "Living in Estonia, I have a hard time deciding how I feel about this voting system.Currently, with people trusting the government, this system is great. I can just cast my vote online, like I do everything else here, and I can be reasonably sure that my vote is counted thanks to the aforementioned trust in the system.But I really fear the day that trust erodes.On the other hand, though, once the trust is gone, I think it doesn’t really matter whether it’s an analog or digital count. People won’t trust the system anyways.Then again, there’s a lot of nuances and different levels of trust, which is the reason why I don’t know what the right answer is."
+          "I'd like to believe Grant but I find this assault on mathematics to be dehumanizing and demoralizing. AI has destroyed a major source of \"life's meaning\" for many people who pursued mathematics. Imagine waking up one morning to find that an alien technology has solved the problem you had dedicated your life to (and many more to boot.) Not another mathematician but an alien technology. As a scientist, I don't want to end up as a laboratory assistant to an AI. I can take not being the smartest human in the room, but I'm pretty sure I don't want to spend my life serving a silicon master.",
+          "I think math will go the way of biology. Biologists enjoy untangling the infinitely complex mechanisms of life, including the brain, and win Nobel Prizes for discoveries like \"how water enters a cell,\" rather than \"constructing the first-ever cell capable of absorbing water.\"No biologist has ever complained, \"Gee whiz, it's so unfortunate that we already have a brain to study. It's all so meaningless! It would be so much better if we had to construct the first-ever brain from scratch.\"",
+          "I think a lot of \"mathematicians\" are saddened by the sudden realization they are not even interested in it and were only in it for status and prestige. A lot of them are such pretentious tools that they willingly wasted their lives doing the absurd PhD rituals. Academia is dead."
+        ]
+      }
+    },
+    {
+      "id": "50141579",
+      "title": "Java sealed classes and exhaustive pattern matching",
+      "url": "https://neilmadden.blog/2026/04/24/java-sealed-classes-and-exhaustive-pattern-matching/",
+      "source": "Hacker News",
+      "published_at": "2026-10-18T14:47:37+00:00",
+      "summary": "Java sealed classes and exhaustive pattern matching",
+      "score": 144,
+      "comments": 106,
+      "discussion_url": "https://news.ycombinator.com/item?id=50141579",
+      "extra": {
+        "top_comments": [
+          "I love how far Java has come. I still prefer TypeScript since I do a lot of frontend work and prefer to use the same language across the stack.With the said, you can do exhaustive pattern matching in TypeScript! https://github.com/gvergnaud/ts-pattern",
+          "Java also has recursive patterns and (maybe still in preview) literal patterns: `switch (x) { case A(B(true, var c)) -> f(c); }`",
+          "Took me a while to get used to sealed and I didn't quite see the use. But AI seems to love it for Java so I gave it a go and now I get it. Its like a really good access control mechanism esp if you use DI and want to deprecated some stuff. Apart from ofcourse the pattern matching - which comes in handy for event driven messages where payload shape changes."
+        ]
+      }
+    },
+    {
+      "id": "50136979",
+      "title": "Dogs seem to agree with humans that 'bouba' is round and 'kiki' is spiky",
+      "url": "https://www.sciencealert.com/dogs-seem-to-agree-with-humans-that-bouba-is-round-and-kiki-is-spiky",
+      "source": "Hacker News",
+      "published_at": "2026-10-18T01:38:08+00:00",
+      "summary": "Dogs seem to agree with humans that 'bouba' is round and 'kiki' is spiky",
+      "score": 143,
+      "comments": 86,
+      "discussion_url": "https://news.ycombinator.com/item?id=50136979",
+      "extra": {
+        "top_comments": [
+          "I think objects with these shapes make similar sounds in the real world. Sharp shapes make percussive sounds. Round shapes make softer sounds.Dog's have very good hearing, and their hearing must help them to model the world around them, to understand what different objects in the world are.So I think it's less about linguistics and more about our audiovisual mapping of the physical world.Then again, that must be where the origin of language evolved from in the first place.",
+          "Related. Others?Evidence of the bouba-kiki effect in naïve baby chicks - https://news.ycombinator.com/item?id=47105198 - Feb 2026 (107 comments)Which is \"Bouba\", and which is \"Kiki\"? [video] - https://news.ycombinator.com/item?id=46572742 - Jan 2026 (23 comments)Bouba / Kiki Effect - https://news.ycombinator.com/item?id=45320327 - Sept 2025 (2 comments)Bouba/kiki effect - https://news.ycombinator.com/item?id=40699583 - June 2024 (170 comments)Bouba/Kiki Effect - https://news.ycombinator.com/item?id=27885703 - July 2021 (94 comments)Bouba/kiki effect - https://news.ycombinator.com/item?id=8372550 - Sept 2014 (1 comment)",
+          "I too would associate \"Bouba\" with the rounded and \"Kiki\" with the sharper figure, but to me this is just a relatively universal sense of continuity vs discontinuities:the local curvature is continuous for \"Bouba\", every point on the curve has a single tangent, which evolves continuously as you walk along this presented curve.For Kiki: the local curvature is discontinuous: at the inward or outward points, there are 2 tangents, so the tangent abruptly switches value when passing through this point when walking along the curve.similarly the \"B\"s in \"Bouba\" are voiced plosives, while the \"K\"s in \"Kiki\" are unvoiced plosives.I think people would similarily classify \"Titi, Pipi, Touta, Poupa, Kouka\" like \"Kiki\" but \"Didi, Douda, Bibi, Gigi, Gouga\" like \"Bouba\".The vowels are obviously voiced by the vocal chord carrier wave \"voice\".So when we pass through the unvoiced (T/P/K) plosives, we notice discontinuity like the discontinuously evolving tangents along the boundary curve of the figure.Obviously mammals like dogs have a concept of continuity, topology, distance, they might get spooked by \"open\" stairs, because they can see between the planks, etc.And when we hear voiced (D,B,G) plosives, the voice while muted still evolves continuously."
+        ]
+      }
+    },
+    {
+      "id": "50144066",
+      "title": "Free Pascal compiler now supports dynamic packages",
+      "url": "https://www.getlazarus.org/dynamic/",
+      "source": "Hacker News",
+      "published_at": "2026-10-18T18:48:04+00:00",
+      "summary": "Free Pascal compiler now supports dynamic packages",
+      "score": 117,
+      "comments": 24,
+      "discussion_url": "https://news.ycombinator.com/item?id=50144066",
+      "extra": {
+        "top_comments": [
+          "I am pleased to announce the first release of full dynamic package support for the Free Pascal Compiler and the Lazarus IDE. This feature has been a long time coming for the FPC ecosystem and has taken more than 20 years to realize through the work of many FOSS individuals.Dynamic packages allow programmers to create and install components, controls, and Lazarus extensions in seconds without rebuilding the entire Lazarus IDE. They can also be used in by Free Pascal programmers to develop and deploy plugins that expose native Pascal classes and types through dynamic package libraries. To support this functionality, I have made numerous improvements to the compiler, its runtime, and the Lazarus IDE. I have also created additional IDE extensions to improve the experience of working with Lazarus packages. Read more at the link above.",
+          "I would love to use Lazarus, but the UI toolkit it uses has some very bad accessibility bugs that make it practically unusable with my screen reader. FreePascal's love of syntax diagrams is also a turn-off for me (I've always preferred things like EBNF or similar for grammar notation).",
+          "This seems to be a fork of Lazarus. The official Lazarus is at https://www.lazarus-ide.org/"
+        ]
+      }
+    },
+    {
+      "id": "50143536",
+      "title": "PalmOS Lemmings",
+      "url": "https://github.com/ardiri/palmos-lemmings",
+      "source": "Hacker News",
+      "published_at": "2026-10-18T17:56:59+00:00",
+      "summary": "PalmOS Lemmings",
+      "score": 99,
+      "comments": 23,
+      "discussion_url": "https://news.ycombinator.com/item?id=50143536",
+      "extra": {
+        "top_comments": [
+          "Hi, I literally found an old SD card with files last modified from 2005 with a few palm games from then, would anyone find these useful for reverse engineering?",
+          "Yeah Aaron is a PalmOS legend.I really liked the palmos c libs, MemCopy and WinCopyBitmap just reads so much nicer than memcpy and memset. Also UInt8 and UInt16:)Those were fun times, when 16bit ints were enough for everyone (just kiding;)",
+          "This README is begging for historical context and commentary."
         ]
       }
     }
