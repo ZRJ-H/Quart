@@ -54,12 +54,12 @@ DAILY_DIRS = {
     "Hacker News": {
         "category": "hn-daily",
         "use_denylist": False,
-        "allow": {"今日精选"},
+        "allow": {"今日精选", "深度解读", "快速浏览"},
     },
     "AI论文日报": {
         "category": "arxiv-daily",
         "use_denylist": False,
-        "allow": {"今日精选"},
+        "allow": {"今日精选", "深度解读", "快速浏览"},
     },
 }
 
