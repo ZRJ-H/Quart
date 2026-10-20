@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-10-19T13:02:02.780386+08:00",
+  "cached_at": "2026-10-20T11:00:27.469656+08:00",
   "articles": [
     {
-      "id": "50142573",
-      "title": "Someone behind the software",
-      "url": "https://karrisaarinen.com/posts/someone-behind-the-software/",
+      "id": "50152307",
+      "title": "Wine ported to OpenBSD",
+      "url": "https://marc.info/?l=openbsd-ports&m=179236125692175",
       "source": "Hacker News",
-      "published_at": "2026-10-18T16:32:00+00:00",
-      "summary": "Someone behind the software",
-      "score": 370,
-      "comments": 146,
-      "discussion_url": "https://news.ycombinator.com/item?id=50142573",
+      "published_at": "2026-10-19T13:35:34+00:00",
+      "summary": "Wine ported to OpenBSD",
+      "score": 518,
+      "comments": 173,
+      "discussion_url": "https://news.ycombinator.com/item?id=50152307",
       "extra": {
         "top_comments": [
-          "As a SaaS author, I couldn't agree more. That's how I see my work: the value is not in the code (AI can code better than me at this point), nor even in the software architecture (AI is just getting to the point where it will get better than me). It's in deciding what to build and what not to build, defining the overall character and vision of the product, looking at each screen and thinking \"how does this help my customer do their job\".This, unfortunately, takes time, as one has to restart many times because of ideas that turned out not to be as great as one had initially thought. And it results in software that is called \"opinionated\", and often does not follow what the \"industry\" does.",
-          "Something I've been thinking about a lot is that ultimately AI does not have values, intent, and taste. Even with humans, each of us has different values, intent, and taste, although we do share many of these things. As a living human being, you have biological or cultural desires and particular goals that you want to accomplish while you're alive on this earth.When you're creating art or even a product, what you create is a result of your particular values and particular tastes and those drive some sort of purpose for whatever it is you're creating. What you're building is, generally, made for the consumption or use by another person (even if indirectly), and we mostly have empathy and want those people to have a good experience with whatever we're creating. We think about our audience and weigh their particular needs.When you use good software, you can sense the intent in what was made. The person (or team) combined their particular point of view with that of the goals of the user. At this point, I don't think agentic coding is going to give you that, at least not fully. It might get most of the shared values and common things right as a result of its training data, but a human still needs to edit the output or steer it on a good path that only they can see and which is part of a larger vision. For simpler needs, taste and values matter less, but for more complex things, it makes a difference, in my opinion.",
-          "I enjoyed the introduction. I just picked up “The mind of the Maker” by Sayers, which Fred Brooks cites in The Mythical Man Month: “ Dorothy Sayers, in her excellent book, The Mind of the Maker, divides creative activity into three stages: the idea, the implementation, and the interaction. A book, then, or a computer, or a program comes into existence first as an ideal construct, built outside time and space, but complete in the mind of the author.” He goes on to say how the user meets the mind of the maker in the interaction: “The creation is complete when someone reads the book, uses the computer, or runs the program, thereby interacting with the mind of the maker.”"
+          "Gameplay videosDisco Elysium https://video.gamerstavern.online/w/qYjXr8dBauynzvEquJ7cP4Hollow Knight https://video.gamerstavern.online/w/8tjjFRDtGJQZwxfE4ojVoCPrey 2017 https://video.gamerstavern.online/w/vNxVThRcpijbT9FAQPcKdzDeath Stranding https://video.gamerstavern.online/w/rzz2TLCxcmneHsydukAFLUWitcher 3 Remastered https://video.gamerstavern.online/w/oZcTRKL5JMiU4M4FqGKcNHAccording to the reddit post:AMD Ryzen 9 9900X, 16GB RAM, AMD Radeon RX 9070",
+          "https://marc.info/?l=openbsd-ports&m=179241414029592> I doubt much will be merged upstream. Many updates we have can technically run on other OSes (%gs stubs won't be built on Linux because %gs is correctly set, SIGUSR1 will work but less optimally, etc). However I picked an approach where everything that is done for OpenBSD is just marked as OpenBSD only. I did that purely to simplify my life while I was working on it and clearly mark the changes.> When I was talking to Wine maintainers a month ago, they were hesitant to accept even patching Wine so it compiles for OpenBSD, mostly because it's another OS they will have to support and keep operational, while the %gs stub fix is something they definitely cannot take upstream. They are very hesitant to take anything that is changing the \"emulated\" application code.",
+          "Especially welcome news now that OpenBSD is shaping up to be a refuge from slopcode.https://marc.info/?l=openbsd-tech&m=177411620801633&w=2"
         ]
       }
     },
     {
-      "id": "50141076",
-      "title": "RepRapMicron",
-      "url": "https://github.com/VikOlliver/RepRapMicron/wiki",
+      "id": "50150089",
+      "title": "I built a drone with only one motor [video]",
+      "url": "https://www.youtube.com/watch?v=Ndftcft6XhU",
       "source": "Hacker News",
-      "published_at": "2026-10-18T13:48:48+00:00",
-      "summary": "RepRapMicron",
-      "score": 354,
-      "comments": 56,
-      "discussion_url": "https://news.ycombinator.com/item?id=50141076",
+      "published_at": "2026-10-19T09:05:07+00:00",
+      "summary": "I built a drone with only one motor [video]",
+      "score": 419,
+      "comments": 91,
+      "discussion_url": "https://news.ycombinator.com/item?id=50150089",
       "extra": {
         "top_comments": [
-          "I feel like we're reliving the late 1790s again, back then you had Ramsden figuring out how to divide the circle into into seconds of arc, taking the marking of scales from an artform into something that could be manufactured reliably. Maudslay with his thread cutting lathe took the making of screws from a manual process pawned off on apprentices to something that that could be done in mass production. Wilkinson's boring machine made it possible for Watt to build a pressurized steam engine.All of these tools are based on things that were one-offs of earlier efforts, and turned into practical machine tools by someone that history chose to remember. We're now at the point where making things by manipulating individual atoms is something a determined amateur can do, it's amazing!I find myself fascinated by the Wyler Inclinometer, which uses a thin copper disk with spiral arms as the basis of a differential capacitor, and when complete, resulting in a device that can used to calibrate a granite surface plate. It can typically measure 1 micron/meter of deviation.We now have 3d printers that can reliably make almost anything you want by fusing filament, or stereolithography, or fusion of metal powders. You can buy desktop 5 axis CNC machines. There are control systems available to let you build almost any type of machine tool you can imagine, in as many axis as you want.We've got software defined radio, cheap atomic clocks, transistors that can switch megawatts, all within reach of a hobbyist.What an amazing time to be alive.",
-          "Related: https://www.youtube.com/watch?v=UvV2CH5il3QAnd the channel's preceding few videos covering the development of the prerequisite technologies.",
-          "Thank god, in 18 months we can start making our own RAM."
+          "Just want to mention that hobbyists into fixed wing RC aerobatics have been doing crazy stuff with variable pitch propellers (VPP) for several years. RC motors with integrated variable pitch propellers exist in small sizes, so no need to DIY the propeller for that application. Here's an example of the 4D aerobatics they enable: https://www.youtube.com/watch?v=j5EsvZNvVRs.This is similar to but different than what the creator of the one motor drone is doing since he's spinning at higher RPM with the pitch varying under CPU control much faster than fixed wing aerobatic pilots who are controlling everything manually with insane skill. I assume the one motor drone guy already knows fixed wing RC VPP exist, just mentioning for others who might not.",
+          "Underactuated robotics are so cool. In the hobby BattleBots community, there is a design where the whole robot only has a single motor, but it's able to move in any direction and damage the opponent, all just by controlling the single motor's speed.Most robots have at least three motors, two drive sides and a weapon motor. The trick to getting away with one is integrating an impactor into the chassis of your bot, using the single wheel to spin up to ~3k RPM, then by tracking the rotation angle of the bot as it spins, you speed up a little while the wheel is pointing where you want to go, and slow it down a little when it's pointing the other direction.",
+          "This is well worth the entire watch. It feels like what would any hacker do in trying to figure out how to make something they want to exist. Also very well presented and good pace.Inspires me to try and start doing some robotics."
         ]
       }
     },
     {
-      "id": "50145337",
-      "title": "Hybrid Reasoning Agents: LLM agents that think in latent space, act through text",
-      "url": "https://arxiv.org/abs/2610.18861",
+      "id": "50154540",
+      "title": "MiniMax M3.1 Flash",
+      "url": "https://www.minimax.io/blog/minimax-m31f",
       "source": "Hacker News",
-      "published_at": "2026-10-18T20:48:14+00:00",
-      "summary": "https://x.com/Jiaru_Zou/status/2110400256647340476https://github.com/togethercomputer/HybridAgenthttps://huggingface.co/collections/togethercomputer/hybridag...Evaluations: https://arxiv.org/html/2610.18861v1#S5",
-      "score": 294,
-      "comments": 158,
-      "discussion_url": "https://news.ycombinator.com/item?id=50145337",
+      "published_at": "2026-10-19T16:39:09+00:00",
+      "summary": "MiniMax M3.1 Flash",
+      "score": 396,
+      "comments": 172,
+      "discussion_url": "https://news.ycombinator.com/item?id=50154540",
       "extra": {
         "top_comments": [
-          "Isn't this what openai is doing, at least in spirit, by running multiple passes through the network before exhibiting thinking tokens? Isn't the same issue one of safety and control, because being able to interpret thinking tokens helps u control / monitor unwanted behaviors, and multiple passes before writing out the thinking tokens increases their capacity for deception?",
-          "The code is available at: https://github.com/togethercomputer/HybridAgentLLM Models and data: https://huggingface.co/collections/togethercomputer/hybridag...Evaluations: https://arxiv.org/html/2610.18861v1#S5",
-          "It sounds pretty nice on paper. But I tested the huggingface.co/mradermacher/hybridagent-8b-agentic-gguf:IQ4_XS with a simple question: \"Who is the pope?\" and it got stuck in a thinking loop forever and simply could not finish the task.```Okay, the user is asking who the pope is. The pope is the leader of the Catholic Church. The current pope is Pope Francis, who became pope in 2013 after Pope Benedict XVI resigned. There's no indication of a change since then, so the answer is Pope Francis.Okay, the user is asking who the pope is. The pope is the leader of the Catholic Church. The current pope is Pope Francis, who became pope in 2013 after Pope Benedict XVI resigned. There's no indication of a change since then, so the answer is Pope Francis.Okay, the user is asking who the pope is. The pope is the leader of the Catholic Church. The current pope is Pope Francis, who became pope in 2013 after Pope Benedict XVI resigned. There's no indication of a change since then, so the answer is Pope Francis.```Then I also gave it the counterfeit ball problem, but it could not solve it either. But to be fair, no 8B model seem to be able to solve it.```I have 9 balls that look exactly the same. But I know one ball is different. I only have a scale. Call scale(b1,b2)={-1;0;1} will tell me whether the left object b1 is heavier, same weight or lighter than the right object b2. How many times at minimum do we have to apply scale to find the different ball? Explain how we can achieve this.```"
+          "This model seems to be pretty benchmaxed. In actual use, it doesn't survive the comparison to models in the benchmark.This model was released as a \"stealth model\" in OpenCode Go for a while as \"Space Bunny\" (they mention this in the blog). So people have been using without knowing what the model was exactly, but it failed to impress anyone as far as I can tell. This is despite the model being served for free (with some asterisks). GLM 5.3 Flash and DeepSeek V4.1 Flash, even before last week's update, seemed to be much preferred. Stealth releases happen often with OpenCode subscriptions, and GLM 5.3 Flash (stealth name \"Ox Alpha\") impressed a lot for example.The perverse incentives around benchmarks are now so bad that benchmark scores are effectively meaningless. Models can score highly and still be crap to use. It doesn't matter whether it's Minimax or Google, or anyone really.",
+          "I'm finding these LLM announcements to be pretty meaningless. They all look the same, with different numbers and graphs, even though the graphs are almost all identical. The offered model is compared with models that it can beat, with a couple of entries that \"show\" they haven't engineered the whole benchmark presentation to mislead.I've become incredibly skeptical of new model announcements until I can find evidence of someone else using it for something effective. I'd love to see an announcement that wasn't structured around attracting investors with too much money and too little domain knowledge.",
+          "The cost vs performance is insane for all these new models. I’ve been using Deepseek Flash 1017 and it does whole projects and asks for $0.10 on US provider with ZDR on Openrouter. I convinced a few friends to drop their Claude $20 subscription because DS Flash 1017 brings so much better value. They can still use Opus 5.5 for planning though each call will cost north of $2. Excited to try this model out too once there are US providers."
         ]
       }
     },
     {
-      "id": "50136979",
-      "title": "Dogs seem to agree with humans that 'bouba' is round and 'kiki' is spiky",
-      "url": "https://www.sciencealert.com/dogs-seem-to-agree-with-humans-that-bouba-is-round-and-kiki-is-spiky",
+      "id": "50151036",
+      "title": "Ask HN: How to deal with shipping AI-written code you don't understand?",
+      "url": "https://news.ycombinator.com/item?id=50151036",
       "source": "Hacker News",
-      "published_at": "2026-10-18T01:38:08+00:00",
-      "summary": "Dogs seem to agree with humans that 'bouba' is round and 'kiki' is spiky",
-      "score": 167,
-      "comments": 106,
-      "discussion_url": "https://news.ycombinator.com/item?id=50136979",
+      "published_at": "2026-10-19T11:24:34+00:00",
+      "summary": "I saw this LinkedIn post from a Meta engineer and it resonated with me:https://www.linkedin.com/posts/ali-hamie_im-an-engineer-at-m...> I'm an engineer at Meta and I never felt this uncomfortable doing my job. I'm writing code these days and it all feels like a black box. This new standard of shipping with AI is moving so fast that if we're going to spend our time checking each line of code, it's going to take forever. That means you can end up with systems you've built where you don't truly understand how all the code works. You understand the high level, but not every detail. And maybe this is becoming the new standard. It goes against every instinct of being a software engineer. I'm used to understanding what I'm building. Now I'm trying to figure out how much I need to understand before I'm comfortable moving forward. Are other engineers feeling this too?How are you handling this?",
+      "score": 292,
+      "comments": 433,
+      "discussion_url": "https://news.ycombinator.com/item?id=50151036",
       "extra": {
         "top_comments": [
-          "This is a fascinating article and I’m not casting shade but more of a curious question: If humans are the ones that generally associate this sound with that thing, knowing dogs are very observant of us, how do we know the dogs aren’t just copying what we are unknowingly exhibiting toward them throughout their entire lives? I have no idea how you’d pull that out of the stats though. Maybe you could find languages that have different sounds for round and spiky and compare dogs from those households to English speaking households (or rather languages with k’s for spiky and b’s for round)",
-          "Related :) https://en.wikipedia.org/wiki/City_(novel)",
-          "I think objects with these shapes make similar sounds in the real world. Sharp shapes make percussive sounds. Round shapes make softer sounds.Dog's have very good hearing, and their hearing must help them to model the world around them, to understand what different objects in the world are.So I think it's less about linguistics and more about our audiovisual mapping of the physical world.Then again, that must be where the origin of language evolved from in the first place."
+          "I’m surprised I haven’t see anyone say this yet, but I don’t let the LLM design the code at all, I let it implement a design I have created.By that I mean that, rather than let the LLM do the entire structure, I take the time to create the full hierarchy of abstractions and actors that I want my code to do. I decide, at the UML level, how abstractions will sit and interact — and then I make the LLM implement those gaps.The key thing here is that, by doing this, I DO know how the code works. I may not know how each unit is implemented, but I know each unit’s responsibilities and how they interact with one another. I’ve found that LLMs are HORRIBLE at writing decent abstractions, regardless of how much prompting and skills I’ve given it. It will always get the job done, but it will often be unmaintainable and require bigger and heavier refactors as I introduce more and more requirement changes.But by flexing my basic design skills, I don’t have those issues. Future refactoring fit into easy abstractions that I’ve designed. And by documenting it up front, I also have what becomes a living document on how this work will turn out.It takes a few hours up front to plan ahead, but it makes the LLMs job easier and use less tokens, and it makes the code better long term. I don’t care if one unit is suboptimal, as long as the abstraction is right — because at worst I can change an implementation for a better one later.",
+          "The comments are horrifying. They do everything they can to avoid reading the code they are responsible for.You must read the code before shipping it to production.\"But I don't have time!\" That's not even an excuse. At least one person in your company should be able to explain the code! How would you answer when reviewer asks why did you use this very algorithm?\"We have tests.\" They could help. But don't rely on them entirely because there's a high possibility that the tests are wrong.I can't believe how many people proudly admit that they don't read code. I'm not entirely against using LLMs to write or review code, but not even trying to read it should be prohibited. Someone have to read it.",
+          "I've been a Principal Engineer for a while, so this is how I've worked for a while. Sometimes when you're a PE, you either design something and then junior engineers implement the details, or you're dropped into a project that was already designed and built by more junior engineers, and you have to quickly understand the design an as many details as you can.With AI, everyone now gets to act like a PE. Your job is to design, the AI builds like the junior engineers. Then you review their work. You may never understand the details, and that's ok, as long as you know the main ideas and where to ask for the details (in this case the LLM instead of a human)."
         ]
       }
     },
     {
-      "id": "50141579",
-      "title": "Java sealed classes and exhaustive pattern matching",
-      "url": "https://neilmadden.blog/2026/04/24/java-sealed-classes-and-exhaustive-pattern-matching/",
+      "id": "50154624",
+      "title": "Android apps running native on macOS",
+      "url": "https://github.com/kksimp/Mac.apk",
       "source": "Hacker News",
-      "published_at": "2026-10-18T14:47:37+00:00",
-      "summary": "Java sealed classes and exhaustive pattern matching",
-      "score": 153,
-      "comments": 107,
-      "discussion_url": "https://news.ycombinator.com/item?id=50141579",
+      "published_at": "2026-10-19T16:45:30+00:00",
+      "summary": "Android apps running native on macOS",
+      "score": 273,
+      "comments": 144,
+      "discussion_url": "https://news.ycombinator.com/item?id=50154624",
       "extra": {
         "top_comments": [
-          "I love how far Java has come. I still prefer TypeScript since I do a lot of frontend work and prefer to use the same language across the stack.With the said, you can do exhaustive pattern matching in TypeScript! https://github.com/gvergnaud/ts-pattern",
-          "Java also has recursive patterns and (maybe still in preview) literal patterns: `switch (x) { case A(B(true, var c)) -> f(c); }`",
-          "Took me a while to get used to sealed and I didn't quite see the use. But AI seems to love it for Java so I gave it a go and now I get it. Its like a really good access control mechanism esp if you use DI and want to deprecated some stuff. Apart from ofcourse the pattern matching - which comes in handy for event driven messages where payload shape changes."
+          "> Run Android apps natively on Apple Silicon Macs. No emulator, no virtual machine, no Linux underneath.God damnit Dario fix Claude already so that it stops using this sentence structure once and for all. Opus is so annoyingly recognisable that it has started to irk me badly lately",
+          "As impressive as this is, it's a wacky choice to store app data inside the .app file instead of Application Support. They justify it [1] as \"nothing is scattered around your home folder,\" but that's a false choice.[1] https://github.com/kksimp/Mac.apk/wiki/How-Apps-Are-Installe...",
+          "In practice, the Google Play Services dependencies and other walled-garden initiatives from Google will make this less useful than it could otherwise be. But still, this is really cool."
         ]
       }
     },
     {
-      "id": "50144066",
-      "title": "Free Pascal compiler now supports dynamic packages",
-      "url": "https://www.getlazarus.org/dynamic/",
+      "id": "50158100",
+      "title": "Putting Linux on my RTX Spark laptop because I don't have a Microsoft account",
+      "url": "https://josie.lol/blog/linux-rtx-spark",
       "source": "Hacker News",
-      "published_at": "2026-10-18T18:48:04+00:00",
-      "summary": "Free Pascal compiler now supports dynamic packages",
-      "score": 133,
-      "comments": 29,
-      "discussion_url": "https://news.ycombinator.com/item?id=50144066",
+      "published_at": "2026-10-19T21:08:18+00:00",
+      "summary": "Putting Linux on my RTX Spark laptop because I don't have a Microsoft account",
+      "score": 195,
+      "comments": 90,
+      "discussion_url": "https://news.ycombinator.com/item?id=50158100",
       "extra": {
         "top_comments": [
-          "I am pleased to announce the first release of full dynamic package support for the Free Pascal Compiler and the Lazarus IDE. This feature has been a long time coming for the FPC ecosystem and has taken more than 20 years to realize through the work of many FOSS individuals.Dynamic packages allow programmers to create and install components, controls, and Lazarus extensions in seconds without rebuilding the entire Lazarus IDE. They can also be used in by Free Pascal programmers to develop and deploy plugins that expose native Pascal classes and types through dynamic package libraries. To support this functionality, I have made numerous improvements to the compiler, its runtime, and the Lazarus IDE. I have also created additional IDE extensions to improve the experience of working with Lazarus packages. Read more at the link above.",
-          "I would love to use Lazarus, but the UI toolkit it uses has some very bad accessibility bugs that make it practically unusable with my screen reader. FreePascal's love of syntax diagrams is also a turn-off for me (I've always preferred things like EBNF or similar for grammar notation).",
-          "Congratulations! This is a great achievement.How do you handle base address assignment on windows?"
+          "Not sure there's a strong use case for one of these $6K laptops yet, considering you can get a mini PC running AMD Ryzen 495 or 395 with 96, 128 and 192 GB of memory for similar amount of money and connect remotely from a cheaper/smaller/more battery-efficient laptop. Microsoft also has this same chip in non-laptop form factor: https://www.microsoft.com/en-us/surface/devices/surface-rtx-....Coding while flying is often the use case people bring up, but the power brick these laptops come with sometimes trip the plane's power plug in coach and you can't run local AI on battery for long. Also, over time planes will get better connectivity (Starlink etc.) and that particular full-offline scenario will go away.For gaming, there are better options with dedicated GPUs like the Asus Zephyrus and similar.What am I missing?",
+          "Being forced to login to use your own hardware is one issue for sure…but separately everything about Microsoft’s login experience is pure pain.Multiple broken redirects, broken links, buttons that loop, and more just to hit a CAPTCHA AI can solve anyway.The only thing worse is for the poor soul developers who have had to login to their dev portal to setup SSO Microsoft for an app. It’s the worst I have ever seen in my life (even using Supabase that hand holds you through it).",
+          "I got the HP version of this 128GB for 3.8k. I have yet to see a better deal for that ram.(Expired but there was coupon https://slickdeals.net/f/20164014-hp-omnibook-x-14-nvidia-rt...)"
         ]
       }
     },
     {
-      "id": "50146625",
-      "title": "William Gibson and the trademarking of cyberspace",
-      "url": "https://colo.to/cyberspace.html",
+      "id": "50159993",
+      "title": "Lula supporters protest against Meta to denounce its 'electoral interference'",
+      "url": "https://efe.com/english/latest-news/2026-10-20/lula-supporters-protest-against-meta-to-denounce-its-electoral-interference/",
       "source": "Hacker News",
-      "published_at": "2026-10-18T23:37:57+00:00",
-      "summary": "William Gibson and the trademarking of cyberspace",
-      "score": 110,
-      "comments": 24,
-      "discussion_url": "https://news.ycombinator.com/item?id=50146625",
+      "published_at": "2026-10-20T00:53:52+00:00",
+      "summary": "Lula supporters protest against Meta to denounce its 'electoral interference'",
+      "score": 174,
+      "comments": 84,
+      "discussion_url": "https://news.ycombinator.com/item?id=50159993",
       "extra": {
         "top_comments": [
-          "Whatever else is real or myth with regard to these trolly pranking trademark spats, I think it's pretty reasonable to say that the term \"cyberspace\" emerged amidst - or at least adjacent to - a lot of LSD and Grateful Dead tapes.https://w2.eff.org/Misc/Publications/John_Perry_Barlow/HTML/...",
-          "I'm glad it failed to trademark. Autodesk is one of the worst corpo's around when it comes to being corpo. How un self-aware for them to make that 'street' joke. They were like a 100+ million company back then.",
-          "It's a somewhat liminal experience to walk with a famous sci-fi author through a tech conference; there are many, many callouts. Money is never sent in thanks for the inspo. The one that sticks out to me the most is Facebook rebranding to \"Meta\" -- Neal Stephenson coined the term in 1992. As far as I know, they never sent thanks in any form."
+          "Interference with an election is so in line with the current president's character that nobody has any reason to think otherwise.The political atmosphere in the USA, and worldwide let's be honest, has become so cynical that people aligned with the American president don't really see any issue with doing morally wrong things or downright illegal acts if that means a political victory for them.",
+          "Americans don't like any entity to interfere in their elections but the reality is that their corporations are knee deep in interference in other countries never mind what they themselves call the deep state!Does anyone remember Cambridge Analytica activity on Facebook during US elections in 2016.. Look it up if you don't remember. The same entity was also active in South America aka Colombia, Brazil, Argentina.. Cambridge Analytica was never charged and Facebook was never charged because it was all made legal. After the revelations, some laws changed but has it really changed. Is it stopping American interference in other countries? it doesn't look like it. What about at home? You know better than I do if you have an account; I don't.",
+          "Even though I've shilled the book before, it's an opportune thread to repeat the recommendation: if you haven't, read Careless People. For much of her career at Facebook, the author worked for Joel Kaplan, who was VP of Global Public Policy and is now Chief Global Affairs Officer. She's not particularly complimentary."
         ]
       }
     },
     {
-      "id": "50143536",
-      "title": "PalmOS Lemmings",
-      "url": "https://github.com/ardiri/palmos-lemmings",
+      "id": "50153664",
+      "title": "Ukraine claims first drone evacuation of wounded soldier",
+      "url": "https://www.nbcnews.com/world/ukraine/ukraine-first-drone-evacuation-wounded-soldier-frontlines-hexacopter-rcna604310",
       "source": "Hacker News",
-      "published_at": "2026-10-18T17:56:59+00:00",
-      "summary": "PalmOS Lemmings",
-      "score": 106,
-      "comments": 24,
-      "discussion_url": "https://news.ycombinator.com/item?id=50143536",
+      "published_at": "2026-10-19T15:31:34+00:00",
+      "summary": "Ukraine claims first drone evacuation of wounded soldier",
+      "score": 145,
+      "comments": 112,
+      "discussion_url": "https://news.ycombinator.com/item?id=50153664",
       "extra": {
         "top_comments": [
-          "Hi, I literally found an old SD card with files last modified from 2005 with a few palm games from then, would anyone find these useful for reverse engineering?",
-          "Yeah Aaron is a PalmOS legend.I really liked the palmos c libs, MemCopy and WinCopyBitmap just reads so much nicer than memcpy and memset. Also UInt8 and UInt16:)Those were fun times, when 16bit ints were enough for everyone (just kiding;)",
-          "There was also a version of Lemmings on the HP48 calculator: <https://www.hpcalc.org/details/530> (incidentally by the same author as Alpha Waves, a.k.a. Continuum)"
+          "They've been doing drone evacuations for years. What makes this different is the drone is flying.",
+          "If they can pull them out, they can also drop fresh ones down.Not sure if that is better than just using a helicopter however.",
+          "It reaffirms that Ukrainians are:1. very advanced with drones 2. caring about their soldiersDisclaimer: I am a proud Ukrainian."
         ]
       }
     }
