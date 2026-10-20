@@ -40,6 +40,77 @@ class DigestSummary:
     mode: str
 
 
+class EvidenceBoundaryError(ValueError):
+    """A structurally valid answer overstates what incomplete evidence can prove."""
+
+    def __init__(self, safe_digest: DigestSummary) -> None:
+        super().__init__(
+            "Do not infer that a source has not disclosed information from missing "
+            "collected evidence; describe the supplied excerpt only or omit the claim"
+        )
+        self.safe_digest = safe_digest
+
+
+def _unsupported_disclosure_claim(text: str, evidence: str) -> bool:
+    # Deliberately narrow guard, not a general factual/semantic verifier.
+    pattern = re.compile(
+        r"(?:尚未|未曾|未|没有|并未|并没有)(?:公开|披露|公布|给出)"
+        r"|是否(?:公开|披露|公布)"
+        r"|有待(?:原文)?(?:公开|披露|公布)"
+        r"|(?:has not|have not|not yet)\s+(?:disclosed|published|released)",
+        re.IGNORECASE,
+    )
+    for clause in re.split(r"[。！？!?；;\n]", str(text)):
+        if not pattern.search(clause):
+            continue
+        # Literal evidence supports an attributed negative statement. Do not
+        # invent translated negative claims when their support cannot be checked.
+        if clause.strip() and clause.strip() in evidence:
+            continue
+        # Only explicitly collector-local omissions are acceptable. "The article
+        # has not disclosed" and generic "public information is limited" are not.
+        for part in re.split(r"[,，]", clause):
+            unscoped = re.sub(
+                r"(?:本次(?:采集|提供|输入)?的?|输入的?|所给的?|所提供的?|采集的?)"
+                r"(?:摘要|证据|材料|片段)(?:中|里|内)?"
+                r"(?:尚未|未曾|未|没有|并未|并没有)(?:公开|披露|公布|给出)",
+                "",
+                part,
+                count=1,
+            )
+            if pattern.search(unscoped):
+                return True
+    return False
+
+
+def _enforce_evidence_boundary(
+    digest: DigestSummary, category: str, articles: list[Article]
+) -> DigestSummary:
+    fallback = _fallback(category, articles)
+    safe_items = []
+    changed = False
+    for article, item, replacement in zip(articles, digest.items, fallback.items):
+        evidence = article.title + "\n" + article.summary
+        unsafe = any(
+            _unsupported_disclosure_claim(str(value), evidence)
+            for name, value in asdict(item).items() if name != "index"
+        )
+        safe_items.append(replacement if unsafe else item)
+        changed |= unsafe
+    safe_trends = []
+    # Trends have no item provenance, so do not borrow a different source's
+    # negative statement as support.
+    for trend, replacement in zip(digest.trends, fallback.trends):
+        unsafe = any(_unsupported_disclosure_claim(value, "") for value in (trend.fact, trend.inference))
+        safe_trends.append(replacement if unsafe else trend)
+        changed |= unsafe
+    if changed:
+        raise EvidenceBoundaryError(
+            DigestSummary(tuple(safe_items), tuple(safe_trends), "model-with-evidence-fallback")
+        )
+    return digest
+
+
 def _post_json(url: str, headers: dict[str, str], body: dict[str, Any]) -> dict[str, Any]:
     request = urllib.request.Request(
         url,
@@ -159,6 +230,7 @@ def _prompt(category: str, articles: list[Article]) -> str:
 写作规则：
 - 先写发生了什么，再写具体变化和直接影响。用具体动词、自然中文，不写审稿报告。
 - 不主动讨论来源没有提出的战略、定价或未来走向。没有提供某项信息，不等于它没有发生；不要把“材料未提到”改写成“官方未宣布”或“政策未变化”。
+- 输入通常只是 RSS 标题、摘要或评论，不代表完整原文。摘要为空或只含分类标签时，只概括标题；不得说原文未披露、尚未公布或等待原文披露，也不要猜测是否将公开细节。必要时明确限定为“本次采集的摘要未给出”，不要评价完整原文的信息量。
 - 保留消息来源、作者主张、条件和真正重要的不确定性。同一个不确定点只说明一次；不同的重要限制不能因追求简洁而删除。
 - 避免堆叠“不能认为”“没有足够证据表明”“仍需进一步验证”等空泛保留意见；若争议或证据不足本身就是新闻重点，应直接写清具体争议和依据，不机械禁词。
 - 每句话提供新事实、必要背景、具体影响或重要限制。删掉重复解释、空洞过渡、机械展望和“值得关注”等自我评价。
@@ -210,7 +282,7 @@ def _parse_content(content: str, category: str, articles: list[Article]) -> Dige
     trends = tuple(TrendSummary(str(item.get("fact", "")).strip(), str(item.get("inference", "")).strip()) for item in raw_trends)
     if not all(trend.fact for trend in trends):
         raise ValueError("Model trends lack facts")
-    return DigestSummary(tuple(items), trends, "model")
+    return _enforce_evidence_boundary(DigestSummary(tuple(items), trends, "model"), category, articles)
 
 
 def summarize(
@@ -254,6 +326,12 @@ def summarize(
                     return _parse_content(content, category, articles)
                 except ValueError as parse_error:
                     if attempt == 2:
+                        if isinstance(parse_error, EvidenceBoundaryError):
+                            print(
+                                f"Summary evidence boundary fallback for {category}: "
+                                "unsafe items or observations replaced with collected source excerpts"
+                            )
+                            return parse_error.safe_digest
                         raise
                     messages = [
                         {"role": "user", "content": prompt},
@@ -262,7 +340,7 @@ def summarize(
                             "role": "user",
                             "content": (
                                 f"上次 JSON 未通过程序校验：{parse_error}。"
-                                "请只返回完整修正后的 JSON；保持 items 数量、index 和事实内容不变。"
+                                "请只返回完整修正后的 JSON；保持 items 数量、index 和有证据支持的事实不变，删除或限定校验指出的无依据断言。"
                                 "只修正校验指出的问题。信息已经完整时无需扩写；"
                                 "不要为凑字数添加免责声明、泛化影响或无依据的背景。"
                                 "所有句子必须写完整，禁止使用‘…’或‘...’省略内容。"
