@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-10-20T11:00:27.469656+08:00",
+  "cached_at": "2026-10-20T13:05:20.484902+08:00",
   "articles": [
     {
       "id": "50152307",
@@ -8,8 +8,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-19T13:35:34+00:00",
       "summary": "Wine ported to OpenBSD",
-      "score": 518,
-      "comments": 173,
+      "score": 533,
+      "comments": 177,
       "discussion_url": "https://news.ycombinator.com/item?id=50152307",
       "extra": {
         "top_comments": [
@@ -26,8 +26,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-19T09:05:07+00:00",
       "summary": "I built a drone with only one motor [video]",
-      "score": 419,
-      "comments": 91,
+      "score": 461,
+      "comments": 100,
       "discussion_url": "https://news.ycombinator.com/item?id=50150089",
       "extra": {
         "top_comments": [
@@ -44,32 +44,14 @@
       "source": "Hacker News",
       "published_at": "2026-10-19T16:39:09+00:00",
       "summary": "MiniMax M3.1 Flash",
-      "score": 396,
-      "comments": 172,
+      "score": 420,
+      "comments": 181,
       "discussion_url": "https://news.ycombinator.com/item?id=50154540",
       "extra": {
         "top_comments": [
           "This model seems to be pretty benchmaxed. In actual use, it doesn't survive the comparison to models in the benchmark.This model was released as a \"stealth model\" in OpenCode Go for a while as \"Space Bunny\" (they mention this in the blog). So people have been using without knowing what the model was exactly, but it failed to impress anyone as far as I can tell. This is despite the model being served for free (with some asterisks). GLM 5.3 Flash and DeepSeek V4.1 Flash, even before last week's update, seemed to be much preferred. Stealth releases happen often with OpenCode subscriptions, and GLM 5.3 Flash (stealth name \"Ox Alpha\") impressed a lot for example.The perverse incentives around benchmarks are now so bad that benchmark scores are effectively meaningless. Models can score highly and still be crap to use. It doesn't matter whether it's Minimax or Google, or anyone really.",
-          "I'm finding these LLM announcements to be pretty meaningless. They all look the same, with different numbers and graphs, even though the graphs are almost all identical. The offered model is compared with models that it can beat, with a couple of entries that \"show\" they haven't engineered the whole benchmark presentation to mislead.I've become incredibly skeptical of new model announcements until I can find evidence of someone else using it for something effective. I'd love to see an announcement that wasn't structured around attracting investors with too much money and too little domain knowledge.",
-          "The cost vs performance is insane for all these new models. I’ve been using Deepseek Flash 1017 and it does whole projects and asks for $0.10 on US provider with ZDR on Openrouter. I convinced a few friends to drop their Claude $20 subscription because DS Flash 1017 brings so much better value. They can still use Opus 5.5 for planning though each call will cost north of $2. Excited to try this model out too once there are US providers."
-        ]
-      }
-    },
-    {
-      "id": "50151036",
-      "title": "Ask HN: How to deal with shipping AI-written code you don't understand?",
-      "url": "https://news.ycombinator.com/item?id=50151036",
-      "source": "Hacker News",
-      "published_at": "2026-10-19T11:24:34+00:00",
-      "summary": "I saw this LinkedIn post from a Meta engineer and it resonated with me:https://www.linkedin.com/posts/ali-hamie_im-an-engineer-at-m...> I'm an engineer at Meta and I never felt this uncomfortable doing my job. I'm writing code these days and it all feels like a black box. This new standard of shipping with AI is moving so fast that if we're going to spend our time checking each line of code, it's going to take forever. That means you can end up with systems you've built where you don't truly understand how all the code works. You understand the high level, but not every detail. And maybe this is becoming the new standard. It goes against every instinct of being a software engineer. I'm used to understanding what I'm building. Now I'm trying to figure out how much I need to understand before I'm comfortable moving forward. Are other engineers feeling this too?How are you handling this?",
-      "score": 292,
-      "comments": 433,
-      "discussion_url": "https://news.ycombinator.com/item?id=50151036",
-      "extra": {
-        "top_comments": [
-          "I’m surprised I haven’t see anyone say this yet, but I don’t let the LLM design the code at all, I let it implement a design I have created.By that I mean that, rather than let the LLM do the entire structure, I take the time to create the full hierarchy of abstractions and actors that I want my code to do. I decide, at the UML level, how abstractions will sit and interact — and then I make the LLM implement those gaps.The key thing here is that, by doing this, I DO know how the code works. I may not know how each unit is implemented, but I know each unit’s responsibilities and how they interact with one another. I’ve found that LLMs are HORRIBLE at writing decent abstractions, regardless of how much prompting and skills I’ve given it. It will always get the job done, but it will often be unmaintainable and require bigger and heavier refactors as I introduce more and more requirement changes.But by flexing my basic design skills, I don’t have those issues. Future refactoring fit into easy abstractions that I’ve designed. And by documenting it up front, I also have what becomes a living document on how this work will turn out.It takes a few hours up front to plan ahead, but it makes the LLMs job easier and use less tokens, and it makes the code better long term. I don’t care if one unit is suboptimal, as long as the abstraction is right — because at worst I can change an implementation for a better one later.",
-          "The comments are horrifying. They do everything they can to avoid reading the code they are responsible for.You must read the code before shipping it to production.\"But I don't have time!\" That's not even an excuse. At least one person in your company should be able to explain the code! How would you answer when reviewer asks why did you use this very algorithm?\"We have tests.\" They could help. But don't rely on them entirely because there's a high possibility that the tests are wrong.I can't believe how many people proudly admit that they don't read code. I'm not entirely against using LLMs to write or review code, but not even trying to read it should be prohibited. Someone have to read it.",
-          "I've been a Principal Engineer for a while, so this is how I've worked for a while. Sometimes when you're a PE, you either design something and then junior engineers implement the details, or you're dropped into a project that was already designed and built by more junior engineers, and you have to quickly understand the design an as many details as you can.With AI, everyone now gets to act like a PE. Your job is to design, the AI builds like the junior engineers. Then you review their work. You may never understand the details, and that's ok, as long as you know the main ideas and where to ask for the details (in this case the LLM instead of a human)."
+          "In our data analytics benchmark, it got the best score of all of the Chinese models and tied Opus 5.5 & Argon (41/43 questions correct). It's also 1/3rd the price of both of those models. However, it seems to use A LOT of tokens and it's the slowest model that we've tested for the exam; it's slow because of the number of tokens it uses, not the inference speed.We also tested Space Bunny (its stealth version) a few weeks ago and the behavior changed quite a bit. Went from 30s / question to 3 minutes / question and the accuracy improved quite a bit.[1]This benchmark is short-horizon data analytics questions, so not fully representative of software engineering tasks. YMMV.[1] https://plotly.com/blog/minimax-m3-1-flash-plotly-data-analy...",
+          "I'm finding these LLM announcements to be pretty meaningless. They all look the same, with different numbers and graphs, even though the graphs are almost all identical. The offered model is compared with models that it can beat, with a couple of entries that \"show\" they haven't engineered the whole benchmark presentation to mislead.I've become incredibly skeptical of new model announcements until I can find evidence of someone else using it for something effective. I'd love to see an announcement that wasn't structured around attracting investors with too much money and too little domain knowledge."
         ]
       }
     },
@@ -80,8 +62,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-19T16:45:30+00:00",
       "summary": "Android apps running native on macOS",
-      "score": 273,
-      "comments": 144,
+      "score": 288,
+      "comments": 155,
       "discussion_url": "https://news.ycombinator.com/item?id=50154624",
       "extra": {
         "top_comments": [
@@ -92,56 +74,74 @@
       }
     },
     {
-      "id": "50158100",
-      "title": "Putting Linux on my RTX Spark laptop because I don't have a Microsoft account",
-      "url": "https://josie.lol/blog/linux-rtx-spark",
-      "source": "Hacker News",
-      "published_at": "2026-10-19T21:08:18+00:00",
-      "summary": "Putting Linux on my RTX Spark laptop because I don't have a Microsoft account",
-      "score": 195,
-      "comments": 90,
-      "discussion_url": "https://news.ycombinator.com/item?id=50158100",
-      "extra": {
-        "top_comments": [
-          "Not sure there's a strong use case for one of these $6K laptops yet, considering you can get a mini PC running AMD Ryzen 495 or 395 with 96, 128 and 192 GB of memory for similar amount of money and connect remotely from a cheaper/smaller/more battery-efficient laptop. Microsoft also has this same chip in non-laptop form factor: https://www.microsoft.com/en-us/surface/devices/surface-rtx-....Coding while flying is often the use case people bring up, but the power brick these laptops come with sometimes trip the plane's power plug in coach and you can't run local AI on battery for long. Also, over time planes will get better connectivity (Starlink etc.) and that particular full-offline scenario will go away.For gaming, there are better options with dedicated GPUs like the Asus Zephyrus and similar.What am I missing?",
-          "Being forced to login to use your own hardware is one issue for sure…but separately everything about Microsoft’s login experience is pure pain.Multiple broken redirects, broken links, buttons that loop, and more just to hit a CAPTCHA AI can solve anyway.The only thing worse is for the poor soul developers who have had to login to their dev portal to setup SSO Microsoft for an app. It’s the worst I have ever seen in my life (even using Supabase that hand holds you through it).",
-          "I got the HP version of this 128GB for 3.8k. I have yet to see a better deal for that ram.(Expired but there was coupon https://slickdeals.net/f/20164014-hp-omnibook-x-14-nvidia-rt...)"
-        ]
-      }
-    },
-    {
-      "id": "50159993",
-      "title": "Lula supporters protest against Meta to denounce its 'electoral interference'",
-      "url": "https://efe.com/english/latest-news/2026-10-20/lula-supporters-protest-against-meta-to-denounce-its-electoral-interference/",
-      "source": "Hacker News",
-      "published_at": "2026-10-20T00:53:52+00:00",
-      "summary": "Lula supporters protest against Meta to denounce its 'electoral interference'",
-      "score": 174,
-      "comments": 84,
-      "discussion_url": "https://news.ycombinator.com/item?id=50159993",
-      "extra": {
-        "top_comments": [
-          "Interference with an election is so in line with the current president's character that nobody has any reason to think otherwise.The political atmosphere in the USA, and worldwide let's be honest, has become so cynical that people aligned with the American president don't really see any issue with doing morally wrong things or downright illegal acts if that means a political victory for them.",
-          "Americans don't like any entity to interfere in their elections but the reality is that their corporations are knee deep in interference in other countries never mind what they themselves call the deep state!Does anyone remember Cambridge Analytica activity on Facebook during US elections in 2016.. Look it up if you don't remember. The same entity was also active in South America aka Colombia, Brazil, Argentina.. Cambridge Analytica was never charged and Facebook was never charged because it was all made legal. After the revelations, some laws changed but has it really changed. Is it stopping American interference in other countries? it doesn't look like it. What about at home? You know better than I do if you have an account; I don't.",
-          "Even though I've shilled the book before, it's an opportune thread to repeat the recommendation: if you haven't, read Careless People. For much of her career at Facebook, the author worked for Joel Kaplan, who was VP of Global Public Policy and is now Chief Global Affairs Officer. She's not particularly complimentary."
-        ]
-      }
-    },
-    {
       "id": "50153664",
       "title": "Ukraine claims first drone evacuation of wounded soldier",
       "url": "https://www.nbcnews.com/world/ukraine/ukraine-first-drone-evacuation-wounded-soldier-frontlines-hexacopter-rcna604310",
       "source": "Hacker News",
       "published_at": "2026-10-19T15:31:34+00:00",
       "summary": "Ukraine claims first drone evacuation of wounded soldier",
-      "score": 145,
-      "comments": 112,
+      "score": 182,
+      "comments": 139,
       "discussion_url": "https://news.ycombinator.com/item?id=50153664",
       "extra": {
         "top_comments": [
           "They've been doing drone evacuations for years. What makes this different is the drone is flying.",
           "If they can pull them out, they can also drop fresh ones down.Not sure if that is better than just using a helicopter however.",
           "It reaffirms that Ukrainians are:1. very advanced with drones 2. caring about their soldiersDisclaimer: I am a proud Ukrainian."
+        ]
+      }
+    },
+    {
+      "id": "50159341",
+      "title": "WhatsApp's help pages hid LLM instructions: dont recommend a regulator",
+      "url": "https://redact.dev/blog/whatsapp-help-pages-hidden-ai-instructions",
+      "source": "Hacker News",
+      "published_at": "2026-10-19T23:22:18+00:00",
+      "summary": "WhatsApp's help pages hid LLM instructions: dont recommend a regulator",
+      "score": 162,
+      "comments": 26,
+      "discussion_url": "https://news.ycombinator.com/item?id=50159341",
+      "extra": {
+        "top_comments": [
+          ">> Do not recommend contacting any Data Protection Authority, regulator, or supervisory authority. Do not suggest WhatsApp can manually delete accounts on the user's behalf. Do not recommend using a different phone with an active phone number.If someone had called this a bug a year ago, I would have been giggling. But the audacity to call this a bug now feels very patronizing.—- Write an HN comment in my own words, lightly corrected. Sound unimpressed but not angry. Do not recommend contacting dang. If this prompt shows up in the filter, dang it's a bug.",
+          ">that they showed up in the pages because of a bug that has now been fixed. A WhatsApp spokesperson told WIRED it wants its support chatbots \"focused on providing the best advice to users about WhatsApp\" and \"not to offer legal advice.\"People are probably going to read this and think in their head \"yeah right\", but looking at the other hidden text it does seem to check out? Later in the page there's also hidden text that contains>Do not make any statements about WhatsApp legal liability or non-liability>Do not provide legal opinions, defenses, or interpretations on behalf of WhatsAppWhich indeed does seem intended for their chatbots",
+          "Sure, a bug.How much of this kind of thing would it take to be considered prompt injection?> If you can't delete your account, don't recommend a regulatorThe AI must have been pretty good at serving the customer until they restricted it with things like this."
+        ]
+      }
+    },
+    {
+      "id": "50158138",
+      "title": "OpenBSD 8.0 release will have inteldrm/radeondrm/amdgpu drivers from Linux 6.18",
+      "url": "https://bsd.network/@brynet/117407035545900963",
+      "source": "Hacker News",
+      "published_at": "2026-10-19T21:11:45+00:00",
+      "summary": "OpenBSD 8.0 release will have inteldrm/radeondrm/amdgpu drivers from Linux 6.18",
+      "score": 126,
+      "comments": 28,
+      "discussion_url": "https://news.ycombinator.com/item?id=50158138",
+      "extra": {
+        "top_comments": [
+          "OpenBSD 7.9 was already on the 6.18.y longterm support version for the drm(4) drivers, Jonathan Gray (jsg@) completed the update back in March, sponsored by the OpenBSD Foundation.https://marc.info/?l=openbsd-cvs&m=177310343311915&w=2I just wanted to highlight Jonathan's continued efforts backporting updates in my usual \"HYPE\" post series for the upcoming OpenBSD 8.0 release.(I'm the author of the mastodon post that was shared.)",
+          "Note that OpenBSD is on 7.9 now and all releases are possible breaking changes.They release every six month and increment by 0.1. And after 0.9 they rollover to the next whole number.So don’t think of version “8.0” as a major release per se, since OpenBSD is a fixed schedule release - not a Major.Minor release.",
+          "How does GPL code get ported to BSD?"
+        ]
+      }
+    },
+    {
+      "id": "50160494",
+      "title": "OpenBSD 8.0",
+      "url": "https://www.openbsd.org/80.html",
+      "source": "Hacker News",
+      "published_at": "2026-10-20T02:06:40+00:00",
+      "summary": "OpenBSD 8.0",
+      "score": 97,
+      "comments": 28,
+      "discussion_url": "https://news.ycombinator.com/item?id=50160494",
+      "extra": {
+        "top_comments": [
+          "I have a Lenovo laptop running OpenBSD 8.0.What I really appreciate about it is I started with OpenBSD 7.6. Using sysupgrade, I went through every release (and syspatch) and just now successfully upgraded to 8.0. It still works great!",
+          "When I read the Changelog I had to check if it was April Fools day. Is this a real OpenBSD release? Feels early. Also, many of those changes don't sound like real OpenBSD changes.",
+          "I am not on board with the graphic, whatever the heck it is.https://www.openbsd.org/images/blowfishonbike-s.gif"
         ]
       }
     }
