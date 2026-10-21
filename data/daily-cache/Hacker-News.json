@@ -1,15 +1,15 @@
 {
-  "cached_at": "2026-10-21T11:00:33.881833+08:00",
+  "cached_at": "2026-10-21T13:06:30.931152+08:00",
   "articles": [
     {
       "id": "50166579",
-      "title": "EMudhra Intermediate CA Compromise",
+      "title": "eMudhra intermediate CA compromise",
       "url": "https://emudhra.we-have-a-problem.com/",
       "source": "Hacker News",
       "published_at": "2026-10-20T13:58:33+00:00",
-      "summary": "EMudhra Intermediate CA Compromise",
-      "score": 682,
-      "comments": 345,
+      "summary": "https://blog.mozilla.org/security/2026/10/20/protecting-fire...https://bugzilla.mozilla.org/show_bug.cgi?id=2083449",
+      "score": 769,
+      "comments": 361,
       "discussion_url": "https://news.ycombinator.com/item?id=50166579",
       "extra": {
         "top_comments": [
@@ -26,14 +26,14 @@
       "source": "Hacker News",
       "published_at": "2026-10-20T18:29:09+00:00",
       "summary": "Show HN: SimCity, but with Permits",
-      "score": 605,
-      "comments": 308,
+      "score": 666,
+      "comments": 346,
       "discussion_url": "https://news.ycombinator.com/item?id=50170593",
       "extra": {
         "top_comments": [
-          "I suppose this is the result of a hundred years of democracy, aka having to keep everyone happy all the time.Municipal rules, zoning, community feedback and so on all operate in the space of keeping people happy. No-one wants noise, so we have noise restrictions. Oops, construction is constrained. We all want no traffic, and lots of parking, so low density please, but that creates housing shortages and limits the usefulness of public transport.So a rule is added here, a process there, and everyone is fighting everything all the time. Can't build this because traffic. Can't build that because impact on the neighborhood.But yay, democracy? We can do anything as long as no one is subjectivly harmed.And when nothing at all gets done, we blame politicians for being lazy, incompetent, or corrupt.",
-          "The original EPCOT as imagined by Walt Disney was a master-planned city, with all the pleasant amenities and cleverest design you could imagine in the 1960's: Walkable areas, clean public transit, no traffic congestion, homes furnished with the latest in technology and appliances. It was his greatest ambition at the end of his life to make it a reality.But it didn't happen. Namely, because of how much central control would be given to one man and/or his company to pull it off. The plan in its early iterations essentially meant that if you lived in EPCOT, you forfeited certain freedoms, such as what goes in your home, where you worked, and so on.This game gave me a good chuckle as a Sim City fan. I'm guilty of complaining about politicians of all levels. But I don't envy their position of having to cut through the vines of competing motives and regulations. And at the same time, as a citizen, I'm not sure I would opt for the Utopian alternative.",
-          "A little too much going on all at once in the beginning. For a complex game like this I think you have to start small and slowly introduce functionality. Why are so many buttons available to me from minute 1? I'm not using them."
+          "The various decisions/petitions that pop up can break the immersion by mentioning details that don't fit the city(petitions with signatures from >250% of the town population, traffic issues at the \"4-way intersection in front of the feed store\" when no such place exists, or the new building causing shadows when there's nothing around it). It would be great if more text was turned into templates that pull game data for accuracy, and if the simulation were able to feed definitive descriptions of the town layout into generative AI prompts to make the text talk about scenarios reflected in the game.",
+          "Kind of like this one[1] which made the rounds on HN a few weeks ago. Looks like the social commentary from them are similar: \"Real life is worse than SimCity because of rules and the public getting a say.\" and/or \"Why can't we in real life let the mayor use the Bulldozer Tool to just wipe out any property he doesn't like and put up whatever property he likes in its place?\"1: https://news.ycombinator.com/item?id=50036864",
+          "this project won first price at a hackaton organized by the european commission"
         ]
       }
     },
@@ -44,8 +44,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-20T16:02:07+00:00",
       "summary": "Voxtral 3",
-      "score": 544,
-      "comments": 144,
+      "score": 571,
+      "comments": 148,
       "discussion_url": "https://news.ycombinator.com/item?id=50168396",
       "extra": {
         "top_comments": [
@@ -56,14 +56,32 @@
       }
     },
     {
+      "id": "50165953",
+      "title": "Tsrs: A Port of TypeScript to Rust",
+      "url": "https://blog.cloudflare.com/typescript-rust-port/",
+      "source": "Hacker News",
+      "published_at": "2026-10-20T13:18:07+00:00",
+      "summary": "Tsrs: A Port of TypeScript to Rust",
+      "score": 376,
+      "comments": 183,
+      "discussion_url": "https://news.ycombinator.com/item?id=50165953",
+      "extra": {
+        "top_comments": [
+          "Hey there, TypeScript team member here. The tsrs project has been extremely interesting to see come together. We've been working with the maintainers to better understand how tsrs is fast and what sorts of optimizations it uses are safe. We even did our own Rust vibe port and what we currently suspect is that a lot of the speed does not just come down to language choice, and some of what is going to make TS 7.1 faster and leaner (see the charts in the blog post) actually comes from optimizations discovered in tsrs.We think the wasm and oxlint integration makes a lot of sense for Cloudflare's needs, so this investment makes sense. At the same time, we'll be working hard and collaborating to make the official TypeScript toolset faster and even more efficient.Congrats to the tsrs team on making this official. We're excited and we look forward to continuing on collaboration!",
+          "It appears they're using a unique memory model (https://github.com/oxc-project/tsrs/blob/main/docs/PORTING.m...) to overcome the challenge that prevented the TypeScript team from choosing Rust to begin with: Rust has no GC and porting from a GC language to it often requires restructure of data.Essentially, they fake a GC via never-freed arenas for long-living objects. It's interesting that Rust can do that (hopefully soundly)!",
+          "Ah took me a while to understand the reason behind this.It wasn’t “let’s build a faster Rust based Typescript compiler” at all. That was a nice side-effect.They needed a Typescript compiler that can run on their WASM only sandbox. So the only existing option was to export tsc Go to WASM, but that comes with the full Go runtime.And to avoid that cost, they experimented with a Rust compiler and turns out it’s even faster than the reference tsc/Go implementation."
+        ]
+      }
+    },
+    {
       "id": "50167028",
       "title": "Ofcom concedes defeat in 4chan case",
       "url": "https://prestonbyrne.com/2026/10/20/ofcom-concedes-defeat/",
       "source": "Hacker News",
       "published_at": "2026-10-20T14:30:31+00:00",
       "summary": "Ofcom concedes defeat in 4chan case",
-      "score": 342,
-      "comments": 257,
+      "score": 358,
+      "comments": 265,
       "discussion_url": "https://news.ycombinator.com/item?id=50167028",
       "extra": {
         "top_comments": [
@@ -74,38 +92,38 @@
       }
     },
     {
-      "id": "50166257",
-      "title": "How I got over 300 Tor exit nodes removed",
-      "url": "https://kaba.cx/posts/20261020_Tor/",
-      "source": "Hacker News",
-      "published_at": "2026-10-20T13:39:24+00:00",
-      "summary": "How I got over 300 Tor exit nodes removed",
-      "score": 330,
-      "comments": 79,
-      "discussion_url": "https://news.ycombinator.com/item?id=50166257",
-      "extra": {
-        "top_comments": [
-          "I built exitmap over ten years ago. Glad to see it's still of use :)",
-          "The attack on SSH seems rather poorly conceived. Not only was it detected immediately thanks to SSH printing that huge banner on MITM attacks, but it allowed the admins to easily trace every infected node and respond quickly to shut the whole operation down. Had they stuck to email they would still be running today.",
-          "Thank you for writing this.> But if you ignore the warning and go ahead with the login, the attacker does three things: > 1. Steals your passwordThis shouldn't affect key-based authentication, thoughAlso, this from Marc-Etienne M.Léveillé email linked in your post:> Another possibility is a compromised hosting provider. We identified a couple of them in the past where their management servers were compromised by Ebury and their customers' VPSes, containers, etc., ended up running Ebury as well.Provider-side compromise of customer VPS instances has been a growing trend in recent years. I stopped hosting anything privacy-related on VPS in favor of dedicated hardware. Many people still don't understand how easy it is for a provider to silently dump and/or manipulate both RAM and disk space in real-time."
-        ]
-      }
-    },
-    {
       "id": "50169707",
       "title": "What shall I teach my son?",
       "url": "https://stevekrouse.com/ends",
       "source": "Hacker News",
       "published_at": "2026-10-20T17:25:07+00:00",
       "summary": "What shall I teach my son?",
-      "score": 293,
-      "comments": 358,
+      "score": 328,
+      "comments": 394,
       "discussion_url": "https://news.ycombinator.com/item?id=50169707",
       "extra": {
         "top_comments": [
-          "Some interesting points, but I am a bit discombobulated because the author keeps changing between education, schooling, and parenting pretending they are the same.Is he asking how to parent a child or what fields to nudge them towards, or what?I am lost in him taking formal education not delivering any more and making it into an existential crisis of parenting.Is parenting \"education\"? sure to some extend like do not stick your hand in fire and some such. But that is a far cry even from basic calculus.Maybe just stick to the basics on what to teach your son, and of the four things written, only the first and last really needed - become a good person; learn basic facts. The other two will fall in place.",
           "My mum was a mechanic, my dad was a mechanic/truck driver.My grandfather and uncle were mechanics...I am not, in fact my understanding of mechanics is extremely basic.If I go back into my family tree, I can find three generations of Sugar House Labourers in Scotland in the early 1800s.. a profession that no longer exists in the UK as far as I can tell, and I'm certain they had a specialisation.We'll be fine, your children aren't you, they'll find their own passions.Our jobs as parents is to teach values and make sure they're good people and have the tools to make good decisions too, not to set them on a particular path... that's a losing goal, we can't tell the future for the next year- how could we possibly predict what works well 20 years from now?",
-          "> My wife and I are expecting our first child.> I once tried to come up with a single-word purpose for education, and I landed upon the word “resourceful” ...As someone who's a little further ahead in this process, I realized the true raison'd etre for education might actually not be any of the reason discussed..It's so you, the children's parents, can go about your business for the day and the kids can stay somewhere safe and where they can interact with their peers. If they happened to learn something, that's pure bonus."
+          "> My wife and I are expecting our first child.> I once tried to come up with a single-word purpose for education, and I landed upon the word “resourceful” ...As someone who's a little further ahead in this process, I realized the true raison d'etre for education might actually not be any of the reason discussed..It's so you, the children's parents, can go about your business for the day and the kids can stay somewhere safe and where they can interact with their peers. If they happened to learn something, that's pure bonus.",
+          "> \"...Bill Gates were college dropouts, but the market deemed them good.\"Gates had excellent grades and was credited in an academic paper during his undergraduate years. Not exactly like the average dropout.> \"Now that I think of it, apparently Einstein was a mediocre student, but his contributions to science were his way out. \"That's a myth. Einstein got top grades in science and mathematics.As for the original question, \"If you wish to build a ship, do not divide the men into teams and send them to the forest to cut wood. Instead, teach them to long for the vast and endless sea.\", incorrectly attributed to Antoine de Saint-Exupéry"
+        ]
+      }
+    },
+    {
+      "id": "50172041",
+      "title": "Upcoming critical PHP security release",
+      "url": "https://news-web.php.net/php.announce/509",
+      "source": "Hacker News",
+      "published_at": "2026-10-20T20:15:50+00:00",
+      "summary": "Upcoming critical PHP security release",
+      "score": 313,
+      "comments": 113,
+      "discussion_url": "https://news.ycombinator.com/item?id=50172041",
+      "extra": {
+        "top_comments": [
+          "For everyone wondering why the patch is not out yet:There are a handful people responsible for doing a release. They are still asleep.To be honest, I am also shocked, that the exploit was published that quickly, after the leaked video (which was the reason, why the announcement happened in the first place, at that specific time). We expected a bit more time, even with LLMs...",
+          "Two things you can do now:1. Turn off session upload progress2. Block multipart requests at the web serverMore info: https://www.vincentschmalbach.com/cve-2026-109618-and-cve-20...",
+          "I tried it on a personal site, was able to dump the entire database. Immediately shut all my sites down. This is bad."
         ]
       }
     },
@@ -116,32 +134,14 @@
       "source": "Hacker News",
       "published_at": "2026-10-20T16:40:24+00:00",
       "summary": "Google open-sources TorchTPU, a native PyTorch back end for TPUs",
-      "score": 276,
-      "comments": 64,
+      "score": 296,
+      "comments": 66,
       "discussion_url": "https://news.ycombinator.com/item?id=50169053",
       "extra": {
         "top_comments": [
           "For people interested in this: I've been working on an open-source libtpu implementation for https://tenstorrent.com/ accelerators as a side project, it can already run most of torchtpu, see https://github.com/pcmoritz/libtt (based on the tenstorrent software stack). It shows all the things involved in lowering torch to tile based accelerators.",
-          "Google and Apple are going to move consumers and ordinary business users to edge inference. This is more disruptive to the upcoming IPOs than most investors understand.",
-          "Interesting, Amazon doing the same for AWS Trainium.https://github.com/aws-neuron/torch-neuronx"
-        ]
-      }
-    },
-    {
-      "id": "50168357",
-      "title": "Sixteen Years After Deepwater Horizon, Deep Sea Life Shows Few Signs of Recovery",
-      "url": "https://e360.yale.edu/digest/deepwater-horizon-deep-sea-recovery",
-      "source": "Hacker News",
-      "published_at": "2026-10-20T15:59:06+00:00",
-      "summary": "Sixteen Years After Deepwater Horizon, Deep Sea Life Shows Few Signs of Recovery",
-      "score": 212,
-      "comments": 122,
-      "discussion_url": "https://news.ycombinator.com/item?id=50168357",
-      "extra": {
-        "top_comments": [
-          "In 1979, Ixtoc I released 3.3M barrels into the Bay of Campeche (DwH released 4.9M).By the time DwH happened we had already learned that exposed, high-energy habitats bounce back; sheltered and deep-sea habitats do not. ref: https://www.frontiersin.org/journals/marine-science/articles...ref: https://beneaththehorizon.org/ixtoc.html",
-          "It’s truly exhausting to know the damage we’ve done to the ecosystem and how many bad actors only concerned with profit are out there preventing it from happening again.",
-          "The Deepwater disaster recovery very effectively demonstrated the phenomenon of \"out of sight out of mind\". they dumped almost 2 million gallons of \"dispersants\" on the oil spill... which was DESIGNED to make the oil heavier than water and sink to the sea bed. it never dissolved anything, it just hid the problem from the public. and all that oil is just sitting on the sea bed."
+          "Interesting, Amazon doing the same for AWS Trainium.https://github.com/aws-neuron/torch-neuronx",
+          "Google and Apple are going to move consumers and ordinary business users to edge inference. This is more disruptive to the upcoming IPOs than most investors understand."
         ]
       }
     }
