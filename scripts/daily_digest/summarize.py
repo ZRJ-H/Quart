@@ -45,8 +45,8 @@ class EvidenceBoundaryError(ValueError):
 
     def __init__(self, safe_digest: DigestSummary) -> None:
         super().__init__(
-            "Do not infer that a source has not disclosed information from missing "
-            "collected evidence; describe the supplied excerpt only or omit the claim"
+            "Do not infer source omissions or judicial outcomes from incomplete "
+            "evidence or community commentary; retain attribution and omit unsupported claims"
         )
         self.safe_digest = safe_digest
 
@@ -83,6 +83,59 @@ def _unsupported_disclosure_claim(text: str, evidence: str) -> bool:
     return False
 
 
+
+def _unsupported_hn_judicial_outcome(text: str, article: Article | None) -> bool:
+    """Conservative adjudication-upgrade guard, not a legal fact checker.
+
+    HN comments cannot establish primary-source outcomes. Negated/hypothetical
+    primary wording also cannot license a confirmed court win or loss.
+    """
+    outcome = re.compile(
+        r"败诉|胜诉|法院(?:已|已经)?(?:裁定|判决)|被判(?:有罪|无罪)"
+        r"|\b(?:won|wins|lost|loses)\s+(?:(?:the|a)\s+)?(?:legal\s+)?(?:case|lawsuit|appeal|challenge)\b"
+        r"|\b(?:court|judge)\s+(?:(?:has|had|already)\s+)?"
+        r"(?:ruled|rules|held|holds|found|finds|dismissed|dismisses|convicted|acquitted)\b",
+        re.IGNORECASE,
+    )
+
+    def has_certain_outcome(value: str) -> bool:
+        value = re.sub(r"n['’]t\b", " not", value, flags=re.IGNORECASE)
+        # "Not only" is emphasis, not a denial of the outcome.
+        value = re.sub(r"\bnot\s+only\b", "", value, flags=re.IGNORECASE)
+        for match in outcome.finditer(value):
+            # Questions are not affirmative evidence of a judicial outcome.
+            sentence_end = re.search(r"[。.!?！？;；\n]", value[match.end():])
+            if sentence_end and sentence_end.group() in "?？":
+                continue
+            # Keep qualifiers through subject/auxiliary words and nested
+            # outcome wording, but reset at a new clause or adversative claim.
+            prefix = re.split(
+                r"[。！？!?；;，,\n]|但是?|然而|不过|并且|而且|且|而(?!言)"
+                r"|\b(?:but|however|yet|and)\b",
+                value[:match.start()], flags=re.IGNORECASE,
+            )[-1]
+            qualified = re.search(
+                r"(?:可能|或将|是否|并非|没有|未曾|尚未|未|不等于|不能认定|即便|如果)"
+                r"[^。！？!?；;，,\n]{0,30}$"
+                r"|(?:未)$"
+                r"|\b(?:not|never|may|might|could|would|if|whether)\b[^.!?;,\n]{0,40}$",
+                prefix, re.IGNORECASE,
+            )
+            if not qualified:
+                return True
+        return False
+
+    if not has_certain_outcome(str(text)):
+        return False
+    if article is None:
+        # Trends do not carry per-item provenance. Do not let an unrelated
+        # article or comment license a judicial outcome in an observation.
+        return True
+    primary = article.title + "\n" + article.summary
+    # Explicit primary outcomes permit summarization; party/polarity correctness
+    # across translation still needs review. Community comments stay excluded.
+    return not has_certain_outcome(primary)
+
 def _enforce_evidence_boundary(
     digest: DigestSummary, category: str, articles: list[Article]
 ) -> DigestSummary:
@@ -95,6 +148,12 @@ def _enforce_evidence_boundary(
             _unsupported_disclosure_claim(str(value), evidence)
             for name, value in asdict(item).items() if name != "index"
         )
+        if category == "Hacker News":
+            unsafe |= any(
+                _unsupported_hn_judicial_outcome(str(value), article)
+                for name, value in asdict(item).items()
+                if name not in ("index", "discussion_focus")
+            )
         safe_items.append(replacement if unsafe else item)
         changed |= unsafe
     safe_trends = []
@@ -102,6 +161,11 @@ def _enforce_evidence_boundary(
     # negative statement as support.
     for trend, replacement in zip(digest.trends, fallback.trends):
         unsafe = any(_unsupported_disclosure_claim(value, "") for value in (trend.fact, trend.inference))
+        if category == "Hacker News":
+            unsafe |= any(
+                _unsupported_hn_judicial_outcome(value, None)
+                for value in (trend.fact, trend.inference)
+            )
         safe_trends.append(replacement if unsafe else trend)
         changed |= unsafe
     if changed:
@@ -223,7 +287,7 @@ def _prompt(category: str, articles: list[Article]) -> str:
 3. 前三条保留分层深读：summary 写清主体、动作和关键细节；background、impact、watch、value 只填证据支持且不重复的信息。事实充足时合计约 350–500 字；信息较少时可以更短，不设最低字数，不为填满栏目补写套话，无内容的可选字段返回空字符串。
 4. 其余条目用 summary 概括具体事实，value 仅补充不重复的阅读价值。事实充足时合计约 220–320 字；信息较少时可以更短，事实讲完即止。
 5. AI论文日报返回 research_problem、method、results、limitations、engineering_value；只填写摘要实际支持的内容，缺失时返回空字符串。保留作者报告、测试条件、量化结果及真实局限；不要为每篇论文追加通用的复现或生产部署提醒。
-6. Hacker News 的 discussion_focus 只概括 top_comments；没有评论输入时写“本次未采集到评论。”，不要推断社区没有讨论。
+6. Hacker News 的 title/summary 是来源证据，top_comments 仅是社区发言，不能混作来源正文或已核实事实。来源只有标题时，核心摘要只复述标题明确支持的事件；评论的判断和引文放在 discussion_focus 并保留评论者归因。标题中的认输、让步、撤回或政治评价不等于法院判决，不得擅自改写为胜诉、败诉或法院裁定。Hacker News 的 discussion_focus 只概括 top_comments；没有评论输入时写“本次未采集到评论。”，不要推断社区没有讨论。
 7. trends 恰好三条；fact 复述具体观察，inference 仅写证据支持的解释，并以“从这些信息看”等自然表述区分判断。没有实质判断时返回空字符串，不强行上升为行业趋势；页面会标注事实与编辑判断。
 8. 所有字段必须以完整句子结束，禁止使用“…”或“...”省略内容；如果需要控制长度，应删减次要信息并重写完整句子。
 
