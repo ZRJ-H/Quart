@@ -1,13 +1,13 @@
 ---
 first_seen: 2026-07-18
-last_seen: 2026-10-05
+last_seen: 2026-10-21
 language: Python
 tags: [github, trending]
 ---
 
 # microsoft/markitdown
 
-> 将文件与 Office 文档转换为 Markdown 的 Python 工具，适合需要把 PDF、Word 等资料喂给大模型或整理知识库的场景。
+> 将文件与办公文档转换为 Markdown 的 Python 工具，适合文档预处理、内容索引和 LLM 输入整理。
 
 ## 基本信息
 
@@ -45,3 +45,4 @@ tags: [github, trending]
 | 2026-10-03 | #17 | 188,070 | +145⭐ | 常驻 |
 | 2026-10-04 | #13 | 188,230 | +160⭐ | 常驻 |
 | 2026-10-05 | #17 | 188,491 | +261⭐ | 跃升 |
+| 2026-10-21 | #18 | 191,326 | +2,835⭐ | 爆火 |
