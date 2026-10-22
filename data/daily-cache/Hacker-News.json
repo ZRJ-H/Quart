@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-10-22T11:06:38.443213+08:00",
+  "cached_at": "2026-10-22T13:09:06.239769+08:00",
   "articles": [
     {
       "id": "50182987",
@@ -8,8 +8,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-21T15:48:56+00:00",
       "summary": "Related ongoing thread: PHP 8.2.35 - https://news.ycombinator.com/item?id=50180873(links to more at https://news.ycombinator.com/item?id=50184935)",
-      "score": 693,
-      "comments": 341,
+      "score": 703,
+      "comments": 346,
       "discussion_url": "https://news.ycombinator.com/item?id=50182987",
       "extra": {
         "top_comments": [
@@ -26,8 +26,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-21T14:00:26+00:00",
       "summary": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
-      "score": 452,
-      "comments": 152,
+      "score": 468,
+      "comments": 158,
       "discussion_url": "https://news.ycombinator.com/item?id=50181114",
       "extra": {
         "top_comments": [
@@ -44,14 +44,14 @@
       "source": "Hacker News",
       "published_at": "2026-10-21T17:45:13+00:00",
       "summary": "https://nmdoj.gov/press-release/the-new-mexico-department-of...",
-      "score": 409,
-      "comments": 262,
+      "score": 458,
+      "comments": 289,
       "discussion_url": "https://news.ycombinator.com/item?id=50184820",
       "extra": {
         "top_comments": [
+          "Looks like Zuck having a HARD time taking accountability for any of the eventual social _consequences_ of his social _network_ https://www.youtube.com/watch?v=C7UC2ie0XIE",
           "Sure, but where's the jail time for executives. This may be a bit more than the usual slap on the wrist, but its hardly consequence that actually matters to the likes of Meta. This will keep happening until those at the top are held personally responsible for the crimes they sign off on.",
-          "For those who haven't seen, the New Mexico Attorney General released tapes of the depositions for Zuckerberg [1] and Sandberg [2].1. https://www.youtube.com/watch?v=C7UC2ie0XIE2. https://www.youtube.com/watch?v=g1j4N-3ZkB4",
-          "All the states that participated in the class action settlement got $725 million combined.New Mexico decided to go it alone and gets $25 billion.Great timing for the AG who’s up for reelection on November 3 (even though it was the previous AG who made the call)."
+          "For those who haven't seen, the New Mexico Attorney General released tapes of the depositions for Zuckerberg [1] and Sandberg [2].1. https://www.youtube.com/watch?v=C7UC2ie0XIE2. https://www.youtube.com/watch?v=g1j4N-3ZkB4"
         ]
       }
     },
@@ -62,7 +62,7 @@
       "source": "Hacker News",
       "published_at": "2026-10-21T14:01:22+00:00",
       "summary": "DuckDB 2.0.0 LTS “Cinnamon Teal”",
-      "score": 375,
+      "score": 386,
       "comments": 49,
       "discussion_url": "https://news.ycombinator.com/item?id=50181136",
       "extra": {
@@ -80,14 +80,14 @@
       "source": "Hacker News",
       "published_at": "2026-10-21T21:58:03+00:00",
       "summary": "Security Disclosure",
-      "score": 343,
-      "comments": 186,
+      "score": 382,
+      "comments": 224,
       "discussion_url": "https://news.ycombinator.com/item?id=50188228",
       "extra": {
         "top_comments": [
           "It's 5:20 AM here in Europe and I just rotated a bunch of keys.Only to read,> Because deployments are paused, you will not be able to redeploy your services to pick up the new credentials until builds are restored. We will post here when builds resume with any additional details.So now my service does not work. Which is worse: a stolen key or a broken product? I'm genuinely regretting following their advice on rotating keys, because logs showed no sign of incorrect usage, and our service would at least have remained online.I hope that they automatically redeploy their customer services. I just worry that I won't have tested it. I mean: 5AM. Keys changed. Nothing more I can do. Should go back to sleep. No timeline to wake up to check deployments, so... I... wait?",
           "Crazy day for cybersecurity: PHP RCE, eMudhra certificates, and now Railway.And it’s all just getting started imo.https://blog.cloudflare.com/emudhra-certificate-compromisehttps://www.wiz.io/blog/php2shell-php-rce",
-          "Yup, got my OpenRouter key. They managed to run up a whole $2 on Opus 5.5 and Fable. Well, time for a new hosting provider I guess...Incidentally, I'm testing Muse as an email triage agent today - it buried \"oh also, railway and anthropic say yours keys have been leaked and you need to rotate asap\" under 50 routine deploy / admin emails notifications. Oh to live through such an AI powered software renaissance!"
+          "Postiz founder posted on X that his service is being brought down, his keys were already used and Railway was quiet about this until he spoke up:https://x.com/wickedguro/status/2113015432974405658"
         ]
       }
     },
@@ -98,8 +98,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-21T23:51:37+00:00",
       "summary": "mitmproxy adds --emudhra option",
-      "score": 270,
-      "comments": 70,
+      "score": 355,
+      "comments": 94,
       "discussion_url": "https://news.ycombinator.com/item?id=50189232",
       "extra": {
         "top_comments": [
@@ -110,38 +110,38 @@
       }
     },
     {
-      "id": "50185869",
-      "title": "GitLab Critical Patch Release",
-      "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/",
+      "id": "50188948",
+      "title": "There isn't an easy exploit for this PHP vulnerability",
+      "url": "https://eliastaylor.com/noexploit/",
       "source": "Hacker News",
-      "published_at": "2026-10-21T19:01:12+00:00",
-      "summary": "GitLab Critical Patch Release",
-      "score": 263,
-      "comments": 65,
-      "discussion_url": "https://news.ycombinator.com/item?id=50185869",
+      "published_at": "2026-10-21T23:13:27+00:00",
+      "summary": "There isn't an easy exploit for this PHP vulnerability",
+      "score": 316,
+      "comments": 149,
+      "discussion_url": "https://news.ycombinator.com/item?id=50188948",
       "extra": {
         "top_comments": [
-          "Awesome find by https://hackerone.com/joaxcar and it's a little bit frightening that this severe of a bug isn't the biggest security vulnerability of today",
-          "What a great week security wise!",
-          "At least second regex related CVE in GitLab in the past few weeks. Awful to see that the endpoint is reachable unauthenticated, but I'm glad that they provide guidance in how to check the logs for attempts of exploitation"
+          "For me, what was strange is there were no write-ups on how the vulnerability actually worked. It really does feel like a lot of people went \"Claude found a bug, and Claude says it's dangerous\" but no one actually verified how exploitable it actually is? Not to say its worth ignoring, but compared to Heartbleed (where exploits had to be written by hand) there are a lot fewer active PoCs.",
+          "Social media and \"cybersecurity experts\" had a big role in this. Stuff like \"EU SAYS THIS IS A URGENT VULNERABILITY\" and even the Prime Minister of Japan doing a nighttime PSA. They cite \"the experts\" posts on social media about the initial advisory, while the very same so-called experts share google search AI output mitigation strategies. None of these organizations or bodies had any details other than what was on the advisories and social media. (e.g \"CVSS 10, that's bad!!\")To me, it seems more more akin to broadpwn, technically severe, wide scope (millions of iphones), yet will never be a one-size-fits-all-PWN-button.Even in the age of AI, I don't think this is going to be weaponized down the line like how Eternalblue was... but I'm not the social media cybersec guy with 15000 followers, so don't take my words at face value ;)",
+          "I ran 2 PoCs from GitHub today: one indeed expected Local File Inclusion (LFI) to already be present (so it's just LFI with extra steps), and the other one didn't work at all out of the box without some modifications (although I used the same Docker images and all). The second PoC did trigger a real stale write bug in the end, but it didn't demonstrate actual RCE; it just triggered a stale write. And then I wondered, is this the first time ever that the PHP runtime has had a memory corruption bug? I doubt it (I remember a few years ago we had random crashes in production under high load due to an opcache bug). And if it's not the first memory corruption bug in the PHP runtime, why is it being proclaimed the worst vulnerability in years?"
         ]
       }
     },
     {
-      "id": "50180079",
-      "title": "OpenAI models are coming to Google Cloud",
-      "url": "https://openai.com/index/openai-models-google-cloud/",
+      "id": "50185869",
+      "title": "GitLab critical patch release",
+      "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/",
       "source": "Hacker News",
-      "published_at": "2026-10-21T12:53:11+00:00",
-      "summary": "OpenAI models are coming to Google Cloud",
-      "score": 246,
-      "comments": 107,
-      "discussion_url": "https://news.ycombinator.com/item?id=50180079",
+      "published_at": "2026-10-21T19:01:12+00:00",
+      "summary": "GitLab critical patch release",
+      "score": 288,
+      "comments": 70,
+      "discussion_url": "https://news.ycombinator.com/item?id=50185869",
       "extra": {
         "top_comments": [
-          "Gotta love the disclaimer at the bottom: Microsoft remains OpenAI’s primary cloud partner.",
-          "Sergey better really go into \"founder mode\" or else Thomas Kurian (head of GCP) will continue to eat Deepmind's lunch.Between selling TPUs to external companies and now hosting competitor models, Gemini just doesnt have the full faith of the Alphabet capital allocators, and I can't really blame them. A mature company like google would rather just expand their extremely profitable cloud business rather than dump billions into a black hole on the off chance they achieve RSI or superintelligence or whatever.",
-          "Does anyone still remember OpenAI’s founding? I had thought that OpenAI didn’t want to give the weights to Google because the original reason for its existence is to prevent Google from achieving AGI."
+          "Awesome find by https://hackerone.com/joaxcar and it's a little bit frightening that this severe of a bug isn't the biggest security vulnerability of today",
+          "At least second regex related CVE in GitLab in the past few weeks. Awful to see that the endpoint is reachable unauthenticated, but I'm glad that they provide guidance in how to check the logs for attempts of exploitation",
+          "Is this a bug in GitLab or in Ruby? It's hard to tell from the report and the patch..."
         ]
       }
     }

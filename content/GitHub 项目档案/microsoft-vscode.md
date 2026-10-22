@@ -7,7 +7,7 @@ tags: [github, trending]
 
 # microsoft/vscode
 
-> 微软开源的代码编辑器，支持插件扩展和多种语言，适合日常软件开发、调试与文本编辑场景。
+> Visual Studio Code 编辑器源码仓库，提供轻量可扩展的代码编辑环境，适合日常开发、调试和通过扩展定制工作流。
 
 ## 基本信息
 
