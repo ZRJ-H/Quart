@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-10-22T13:09:06.239769+08:00",
+  "cached_at": "2026-10-22T16:28:33.946472+08:00",
   "articles": [
     {
       "id": "50182987",
@@ -8,8 +8,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-21T15:48:56+00:00",
       "summary": "Related ongoing thread: PHP 8.2.35 - https://news.ycombinator.com/item?id=50180873(links to more at https://news.ycombinator.com/item?id=50184935)",
-      "score": 703,
-      "comments": 346,
+      "score": 724,
+      "comments": 356,
       "discussion_url": "https://news.ycombinator.com/item?id=50182987",
       "extra": {
         "top_comments": [
@@ -20,14 +20,32 @@
       }
     },
     {
+      "id": "50184820",
+      "title": "Meta ordered to pay $25B penalty in New Mexico Cambridge Analytica case",
+      "url": "https://www.cnbc.com/2026/10/21/meta-new-mexico-cambridge-analytica-penalty.html",
+      "source": "Hacker News",
+      "published_at": "2026-10-21T17:45:13+00:00",
+      "summary": "https://nmdoj.gov/press-release/the-new-mexico-department-of...",
+      "score": 519,
+      "comments": 320,
+      "discussion_url": "https://news.ycombinator.com/item?id=50184820",
+      "extra": {
+        "top_comments": [
+          "Sure, but where's the jail time for executives. This may be a bit more than the usual slap on the wrist, but its hardly consequence that actually matters to the likes of Meta. This will keep happening until those at the top are held personally responsible for the crimes they sign off on.",
+          "For those who haven't seen, the New Mexico Attorney General released tapes of the depositions for Zuckerberg [1] and Sandberg [2].1. https://www.youtube.com/watch?v=C7UC2ie0XIE2. https://www.youtube.com/watch?v=g1j4N-3ZkB4",
+          "All the states that participated in the class action settlement got $725 million combined.New Mexico decided to go it alone and gets $25 billion.Great timing for the AG who’s up for reelection on November 3 (even though it was the previous AG who made the call)."
+        ]
+      }
+    },
+    {
       "id": "50181114",
       "title": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
       "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
       "source": "Hacker News",
       "published_at": "2026-10-21T14:00:26+00:00",
       "summary": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
-      "score": 468,
-      "comments": 158,
+      "score": 503,
+      "comments": 167,
       "discussion_url": "https://news.ycombinator.com/item?id=50181114",
       "extra": {
         "top_comments": [
@@ -38,56 +56,20 @@
       }
     },
     {
-      "id": "50184820",
-      "title": "Meta ordered to pay $25B penalty in New Mexico Cambridge Analytica case",
-      "url": "https://www.cnbc.com/2026/10/21/meta-new-mexico-cambridge-analytica-penalty.html",
+      "id": "50188948",
+      "title": "There isn't an easy exploit for this PHP vulnerability",
+      "url": "https://eliastaylor.com/noexploit/",
       "source": "Hacker News",
-      "published_at": "2026-10-21T17:45:13+00:00",
-      "summary": "https://nmdoj.gov/press-release/the-new-mexico-department-of...",
-      "score": 458,
-      "comments": 289,
-      "discussion_url": "https://news.ycombinator.com/item?id=50184820",
+      "published_at": "2026-10-21T23:13:27+00:00",
+      "summary": "There isn't an easy exploit for this PHP vulnerability",
+      "score": 492,
+      "comments": 279,
+      "discussion_url": "https://news.ycombinator.com/item?id=50188948",
       "extra": {
         "top_comments": [
-          "Looks like Zuck having a HARD time taking accountability for any of the eventual social _consequences_ of his social _network_ https://www.youtube.com/watch?v=C7UC2ie0XIE",
-          "Sure, but where's the jail time for executives. This may be a bit more than the usual slap on the wrist, but its hardly consequence that actually matters to the likes of Meta. This will keep happening until those at the top are held personally responsible for the crimes they sign off on.",
-          "For those who haven't seen, the New Mexico Attorney General released tapes of the depositions for Zuckerberg [1] and Sandberg [2].1. https://www.youtube.com/watch?v=C7UC2ie0XIE2. https://www.youtube.com/watch?v=g1j4N-3ZkB4"
-        ]
-      }
-    },
-    {
-      "id": "50181136",
-      "title": "DuckDB 2.0.0 LTS “Cinnamon Teal”",
-      "url": "https://duckdb.org/2026/10/21/announcing-duckdb-200",
-      "source": "Hacker News",
-      "published_at": "2026-10-21T14:01:22+00:00",
-      "summary": "DuckDB 2.0.0 LTS “Cinnamon Teal”",
-      "score": 386,
-      "comments": 49,
-      "discussion_url": "https://news.ycombinator.com/item?id=50181136",
-      "extra": {
-        "top_comments": [
-          "We've found DuckDB 2.0 to be way faster on high core count machines on EC2. Not just reading data from S3, but the actual computations too. Much more likely to see 100% utilisation up to about 128vCPUs or 192vCPUs, and that CPU usage to translate into workloads completing faster.Still don't usually see a speedup past about 192vCPU, but prior to 2.0, speed would top out at more like 64vCPU, so this is a big win.That has enabled us to scale Splink (FOSS record linakge software) to process 1bn records with 10bn record comparisons in 10 mins, which as far as I'm aware makes it the fastest linkage engine of this kind. Most of this performance comes from simply delegating the big calculations to the DuckDB engine! https://moj-analytical-services.github.io/splink/topic_guide...Thanks to the team for all their work!",
-          "It's very fast, especially on a decent sized cloud VM and when querying Iceberg. I've been running the alpha in production as a centralized analytics server for a small organization.I built a DuckDB extension so you can connect via Postgres wire protocol, or Arrow flight. DuckDB also has its own Quack protocol, but client support for Quack is very limited right now, whereas many data tools support Postgres wire protocol or ADBC (which you can use with Arrow Flight).https://github.com/sidequery/duckflight-extension",
-          "The fact that can now be used as a client-server architecture is a game changer. It will for sure replace many data stacks that now run on many servers with tons of cpu and ram"
-        ]
-      }
-    },
-    {
-      "id": "50188228",
-      "title": "Security Disclosure",
-      "url": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
-      "source": "Hacker News",
-      "published_at": "2026-10-21T21:58:03+00:00",
-      "summary": "Security Disclosure",
-      "score": 382,
-      "comments": 224,
-      "discussion_url": "https://news.ycombinator.com/item?id=50188228",
-      "extra": {
-        "top_comments": [
-          "It's 5:20 AM here in Europe and I just rotated a bunch of keys.Only to read,> Because deployments are paused, you will not be able to redeploy your services to pick up the new credentials until builds are restored. We will post here when builds resume with any additional details.So now my service does not work. Which is worse: a stolen key or a broken product? I'm genuinely regretting following their advice on rotating keys, because logs showed no sign of incorrect usage, and our service would at least have remained online.I hope that they automatically redeploy their customer services. I just worry that I won't have tested it. I mean: 5AM. Keys changed. Nothing more I can do. Should go back to sleep. No timeline to wake up to check deployments, so... I... wait?",
-          "Crazy day for cybersecurity: PHP RCE, eMudhra certificates, and now Railway.And it’s all just getting started imo.https://blog.cloudflare.com/emudhra-certificate-compromisehttps://www.wiz.io/blog/php2shell-php-rce",
-          "Postiz founder posted on X that his service is being brought down, his keys were already used and Railway was quiet about this until he spoke up:https://x.com/wickedguro/status/2113015432974405658"
+          "And who exactly is Elias Taylor to be qualified to make these absolute statements without evidence, so that they end up with 200 comments on #2 on the HN front page?An empty blog by a person that may or may not exist with no contact info.It is not a swipe to say that people seem to be switching off their critical thinking here in favor of a lie that is comfortable, when the truth has been _very_ uncomfortable.",
+          "This is such a strange claim from someone trying to sound knowledgable in the field of cyber security (maybe they are, I have no idea who this person is). Even if the exploit would be difficult to use properly, it's not like there's a lack of groups out there trying. Anyone serious about this would consider the fact that a working PoC was reported to the PHP security team. They confirmed the vulnerability and started making a lot of noise about the severity of it, by reporting 2 CVEs and pushing the patch to Linux distros ahead of the official patch release.Trying to understand what the message of the post is all about, I flipped the whole thing around in my head - and the message is basically \"you don't need to upgrade your servers\". Which is something someone with a working exploit would say. Or it's just noise on the Internet.",
+          "Two things can be true: it's a real, exploitable CVE 10, and it's hard enough to construct that you need a good harness + verification process to keep your LLM from cheating. So, the exploit may not be easy to construct, but it doesn't actually require the artificial settings that the OP implied.> What we demonstrated > Pre-authentication RCE on WordPress, Drupal and Joomla[0] https://www.wiz.io/blog/php2shell-php-rce"
         ]
       }
     },
@@ -98,8 +80,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-21T23:51:37+00:00",
       "summary": "mitmproxy adds --emudhra option",
-      "score": 355,
-      "comments": 94,
+      "score": 437,
+      "comments": 111,
       "discussion_url": "https://news.ycombinator.com/item?id=50189232",
       "extra": {
         "top_comments": [
@@ -110,20 +92,38 @@
       }
     },
     {
-      "id": "50188948",
-      "title": "There isn't an easy exploit for this PHP vulnerability",
-      "url": "https://eliastaylor.com/noexploit/",
+      "id": "50188228",
+      "title": "Security Disclosure",
+      "url": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
       "source": "Hacker News",
-      "published_at": "2026-10-21T23:13:27+00:00",
-      "summary": "There isn't an easy exploit for this PHP vulnerability",
-      "score": 316,
-      "comments": 149,
-      "discussion_url": "https://news.ycombinator.com/item?id=50188948",
+      "published_at": "2026-10-21T21:58:03+00:00",
+      "summary": "Security Disclosure",
+      "score": 436,
+      "comments": 256,
+      "discussion_url": "https://news.ycombinator.com/item?id=50188228",
       "extra": {
         "top_comments": [
-          "For me, what was strange is there were no write-ups on how the vulnerability actually worked. It really does feel like a lot of people went \"Claude found a bug, and Claude says it's dangerous\" but no one actually verified how exploitable it actually is? Not to say its worth ignoring, but compared to Heartbleed (where exploits had to be written by hand) there are a lot fewer active PoCs.",
-          "Social media and \"cybersecurity experts\" had a big role in this. Stuff like \"EU SAYS THIS IS A URGENT VULNERABILITY\" and even the Prime Minister of Japan doing a nighttime PSA. They cite \"the experts\" posts on social media about the initial advisory, while the very same so-called experts share google search AI output mitigation strategies. None of these organizations or bodies had any details other than what was on the advisories and social media. (e.g \"CVSS 10, that's bad!!\")To me, it seems more more akin to broadpwn, technically severe, wide scope (millions of iphones), yet will never be a one-size-fits-all-PWN-button.Even in the age of AI, I don't think this is going to be weaponized down the line like how Eternalblue was... but I'm not the social media cybersec guy with 15000 followers, so don't take my words at face value ;)",
-          "I ran 2 PoCs from GitHub today: one indeed expected Local File Inclusion (LFI) to already be present (so it's just LFI with extra steps), and the other one didn't work at all out of the box without some modifications (although I used the same Docker images and all). The second PoC did trigger a real stale write bug in the end, but it didn't demonstrate actual RCE; it just triggered a stale write. And then I wondered, is this the first time ever that the PHP runtime has had a memory corruption bug? I doubt it (I remember a few years ago we had random crashes in production under high load due to an opcache bug). And if it's not the first memory corruption bug in the PHP runtime, why is it being proclaimed the worst vulnerability in years?"
+          "It's 5:20 AM here in Europe and I just rotated a bunch of keys.Only to read,> Because deployments are paused, you will not be able to redeploy your services to pick up the new credentials until builds are restored. We will post here when builds resume with any additional details.So now my service does not work. Which is worse: a stolen key or a broken product? I'm genuinely regretting following their advice on rotating keys, because logs showed no sign of incorrect usage, and our service would at least have remained online.I hope that they automatically redeploy their customer services. I just worry that I won't have tested it. I mean: 5AM. Keys changed. Nothing more I can do. Should go back to sleep. No timeline to wake up to check deployments, so... I... wait?",
+          "> As such, we strongly recommend that you immediately roll all environment variables, including any API keys, stored in Railway, as well as any private registry credentials, and review logs for those services for unusual activity.> All deployments are pausedCan you explain us how can we rotate secrets without going down too?",
+          "Crazy day for cybersecurity: PHP RCE, eMudhra certificates, and now Railway.And it’s all just getting started imo.https://blog.cloudflare.com/emudhra-certificate-compromisehttps://www.wiz.io/blog/php2shell-php-rce"
+        ]
+      }
+    },
+    {
+      "id": "50181136",
+      "title": "DuckDB 2.0.0 LTS “Cinnamon Teal”",
+      "url": "https://duckdb.org/2026/10/21/announcing-duckdb-200",
+      "source": "Hacker News",
+      "published_at": "2026-10-21T14:01:22+00:00",
+      "summary": "DuckDB 2.0.0 LTS “Cinnamon Teal”",
+      "score": 405,
+      "comments": 54,
+      "discussion_url": "https://news.ycombinator.com/item?id=50181136",
+      "extra": {
+        "top_comments": [
+          "We've found DuckDB 2.0 to be way faster on high core count machines on EC2. Not just reading data from S3, but the actual computations too. Much more likely to see 100% utilisation up to about 128vCPUs or 192vCPUs, and that CPU usage to translate into workloads completing faster.Still don't usually see a speedup past about 192vCPU, but prior to 2.0, speed would top out at more like 64vCPU, so this is a big win.That has enabled us to scale Splink (FOSS record linakge software) to process 1bn records with 10bn record comparisons in 10 mins, which as far as I'm aware makes it the fastest linkage engine of this kind. Most of this performance comes from simply delegating the big calculations to the DuckDB engine! https://moj-analytical-services.github.io/splink/topic_guide...Thanks to the team for all their work!",
+          "It's very fast, especially on a decent sized cloud VM and when querying Iceberg. I've been running the alpha in production as a centralized analytics server for a small organization.I built a DuckDB extension so you can connect via Postgres wire protocol, or Arrow flight. DuckDB also has its own Quack protocol, but client support for Quack is very limited right now, whereas many data tools support Postgres wire protocol or ADBC (which you can use with Arrow Flight).https://github.com/sidequery/duckflight-extension",
+          "The fact that can now be used as a client-server architecture is a game changer. It will for sure replace many data stacks that now run on many servers with tons of cpu and ram"
         ]
       }
     },
@@ -134,14 +134,14 @@
       "source": "Hacker News",
       "published_at": "2026-10-21T19:01:12+00:00",
       "summary": "GitLab critical patch release",
-      "score": 288,
-      "comments": 70,
+      "score": 335,
+      "comments": 79,
       "discussion_url": "https://news.ycombinator.com/item?id=50185869",
       "extra": {
         "top_comments": [
           "Awesome find by https://hackerone.com/joaxcar and it's a little bit frightening that this severe of a bug isn't the biggest security vulnerability of today",
-          "At least second regex related CVE in GitLab in the past few weeks. Awful to see that the endpoint is reachable unauthenticated, but I'm glad that they provide guidance in how to check the logs for attempts of exploitation",
-          "Is this a bug in GitLab or in Ruby? It's hard to tell from the report and the patch..."
+          "This seems super light on details and I had to dig to find more information. We don't use Gitlab, but we do use Ruby, so I was worried we might be impacted.This is the best overview I found: https://lilting.ch/en/articles/gitlab-cve-2026-110264-org-mo...The bottom line: this is an issue in Ruby's regex engine, which was fixed in April and backported recently. [1]Everyone running applications where attacker-controlled input might find its way (unescaped) into Ruby regexes is vulnerable to remote code execution.[1]: https://github.com/ruby/ruby/pull/16801",
+          "At least second regex related CVE in GitLab in the past few weeks. Awful to see that the endpoint is reachable unauthenticated, but I'm glad that they provide guidance in how to check the logs for attempts of exploitation"
         ]
       }
     }

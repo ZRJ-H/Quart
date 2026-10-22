@@ -7,7 +7,7 @@ tags: [github, trending]
 
 # twbs/bootstrap
 
-> 流行的 HTML、CSS 与 JavaScript 前端框架，提供响应式组件与栅格系统，适合快速搭建移动优先的网站界面。
+> 流行的 HTML、CSS 与 JavaScript 前端框架，用于开发响应式、移动优先的 Web 项目，适合快速搭建统一风格的界面与组件。
 
 ## 基本信息
 

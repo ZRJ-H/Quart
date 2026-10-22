@@ -1,6 +1,18 @@
 {
-  "cached_at": "2026-10-22T13:09:06.239769+08:00",
+  "cached_at": "2026-10-22T16:28:33.946472+08:00",
   "articles": [
+    {
+      "id": "https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1",
+      "title": "Ensemble forecasting with IBM Granite time-series models",
+      "url": "https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1",
+      "source": "Hugging Face",
+      "published_at": "2026-10-22T07:51:31+00:00",
+      "summary": "",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
     {
       "id": "https://openai.com/index/broad-access-through-consistent-standards",
       "title": "Broad access through consistent standards",
@@ -80,18 +92,6 @@
       "source": "Microsoft Research",
       "published_at": "2026-10-21T16:00:00+00:00",
       "summary": "For decades, a fundamental question about the difficulty of computing in high-dimensional spaces has resisted proof. New research resolves this question, removing a major theoretical obstacle to understanding the efficiency of randomized algorithms used across science and computing. The Kannan–Lovász–Simonovits (KLS) conjecture was proposed in 1995. It asks whether, for a broad class of high-dimensional […] The post Solving a 31-year-old grand challenge in mathematics – the KLS conjecture appeared first on Microsoft Research.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://huggingface.co/blog/ibm-granite/granite-speech-5",
-      "title": "Granite Speech 5.0: Transcribe, Translate, and Attribute more Accurately and Faster",
-      "url": "https://huggingface.co/blog/ibm-granite/granite-speech-5",
-      "source": "Hugging Face",
-      "published_at": "2026-10-21T14:58:18+00:00",
-      "summary": "",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
