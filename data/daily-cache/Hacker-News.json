@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-10-21T16:31:45.761885+08:00",
+  "cached_at": "2026-10-22T11:06:38.443213+08:00",
   "articles": [
     {
-      "id": "50170593",
-      "title": "Show HN: SimCity, but with Permits",
-      "url": "https://permit.petercai.com/",
+      "id": "50182987",
+      "title": "Today's PHP security release, and how we're strengthening security",
+      "url": "https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/",
       "source": "Hacker News",
-      "published_at": "2026-10-20T18:29:09+00:00",
-      "summary": "Show HN: SimCity, but with Permits",
-      "score": 768,
-      "comments": 364,
-      "discussion_url": "https://news.ycombinator.com/item?id=50170593",
+      "published_at": "2026-10-21T15:48:56+00:00",
+      "summary": "Related ongoing thread: PHP 8.2.35 - https://news.ycombinator.com/item?id=50180873(links to more at https://news.ycombinator.com/item?id=50184935)",
+      "score": 693,
+      "comments": 341,
+      "discussion_url": "https://news.ycombinator.com/item?id=50182987",
       "extra": {
         "top_comments": [
-          "Coming from a family owned construction firm, this is funny and sad in a way. Any how, Ive added it to the HNArcade https://hnarcade.com/games/games/permit-pending",
-          "The various decisions/petitions that pop up can break the immersion by mentioning details that don't fit the city(petitions with signatures from >250% of the town population, traffic issues at the \"4-way intersection in front of the feed store\" when no such place exists, or the new building causing shadows when there's nothing around it). It would be great if more text was turned into templates that pull game data for accuracy, and if the simulation were able to feed definitive descriptions of the town layout into generative AI prompts to make the text talk about scenarios reflected in the game.",
-          "Kind of like this one[1] which made the rounds on HN a few weeks ago. Looks like the social commentary from them are similar: \"Real life is worse than SimCity because of rules and the public getting a say.\" and/or \"Why can't we in real life let the mayor use the Bulldozer Tool to just wipe out any property he doesn't like and put up whatever property he likes in its place?\"1: https://news.ycombinator.com/item?id=50036864"
+          "You may never hear me say this again because I am a gruff cynic who is not sure that hanging out here is good for his psyche, but thank goodness for HN.While I have been chasing around today, trying to resolve this on different servers, it turns out a three line nginx mitigation (blocking multipart uploads) I wrote in the wee small hours GMT has been quietly protecting a vulnerable machine I could not shut down (from attacks powered by every single mainstream agentic AI tool — Anthropic, OpenAI, Qwen cloud, Baidu, seemingly also AWS, Meta)Including an hour before the PHP patch actually shipped.So without the HN discussion I wouldn't have found enough people pointing at possible mitigations and I would have lost a server to this, and I thank everyone who pointed out that second mitigation in particular.",
+          "We should really move to a different security model on the internet.For example, when I buy something from a webshop, why does that webshop need my personal information? Why can't I give it a token, which it can then use to send my package, because only the postal system knows the address coupled to the token, etc.And we should also ban user tracking for advertising purposes, obviously.",
+          "> As a result of the leak and pre-announcement around 20:00 UTC, Calif, one of the security firms that had reported the issues mistakenly published a video.This is the most surprising part to me. It sounds like Calif saw the leaks, interpreted that as embargo being broken, and then raced to publish their [anime dancing] marketing video? I'd have expected much better."
         ]
       }
     },
     {
-      "id": "50172041",
-      "title": "Upcoming critical PHP security release (CVE-2026-109618 / -109619)",
-      "url": "https://news-web.php.net/php.announce/509",
+      "id": "50181114",
+      "title": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
+      "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
       "source": "Hacker News",
-      "published_at": "2026-10-20T20:15:50+00:00",
-      "summary": "https://cert.europa.eu/publications/security-advisories/2026...https://news.ycombinator.com/item?id=50167754",
-      "score": 654,
-      "comments": 245,
-      "discussion_url": "https://news.ycombinator.com/item?id=50172041",
+      "published_at": "2026-10-21T14:00:26+00:00",
+      "summary": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
+      "score": 452,
+      "comments": 152,
+      "discussion_url": "https://news.ycombinator.com/item?id=50181114",
       "extra": {
         "top_comments": [
-          "Given that this affects every PHP version from the past decade, and that the exploit instructions are circulating at the top of twitter, and that there's no fix available yet, it doesn't seem outrageous to assume every major PHP website is already compromised?The upgrade instructions here should include torching your hosts and starting again.",
-          "Cloudflare: \"We are seeing early attacks emerging and are updating mitigations as new vectors show up.\"https://x.com/dok2001/status/2112811965735202970When will they finally release the patch?!",
-          "From what I can tell, Cloudflare has mitigated this via their WAF [0] (free and paid).The Alpine GitLab[1] indicates the PHP versions to be released 21-10-2026 14:00:00 UTC are:8.5.12 8.4.27 8.3.36 8.2.35[0] https://developers.cloudflare.com/waf/change-log/changelog/[1] https://gitlab.alpinelinux.org/groups/alpine/-/work_items?sh..."
+          "Just going to remind you all that https://canarytokens.org/ exists.",
+          "All the sandbox-exec and all the Lulu rules are not going to protect against something like this.At one point permission pop-up fatigue sets in we start giving any permission as if it's normal. We also become desensitised to isntalling tools: brew, npm, it becomes second nature.\"Oh, those 367 tools installed by package X? Yeah yeah, must be normal, that's how all these work now\".\"Brew shows 59 packages outdated?\". \"Must upgrade\". \"Yeah, done. Perfect\".And the advent of agents and harnesses. It's not a matter of whether, it's when! OSes need to do something about it. Help users have complete separate \"program space\" at ease with better, easier, and lighter VMs if nothing else. I know, I know - Unix and Linux solved all this even before Alexander III of Macedon started wearing his nappies. Of course.",
+          "This is the second significant exploit against LiteLLM in what, a year or two ? Just last night I came across notes and a script from an older claude session to help audit all project dependencies and verify nothing used litellm.Okay, checked, it was March of this year: https://futuresearch.ai/blog/litellm-pypi-supply-chain-attac.... What even is time anymore in the llm age?"
         ]
       }
     },
     {
-      "id": "50168396",
-      "title": "Voxtral 3",
-      "url": "https://mistral.ai/news/voxtral-3/",
+      "id": "50184820",
+      "title": "Meta ordered to pay $25B penalty in New Mexico Cambridge Analytica case",
+      "url": "https://www.cnbc.com/2026/10/21/meta-new-mexico-cambridge-analytica-penalty.html",
       "source": "Hacker News",
-      "published_at": "2026-10-20T16:02:07+00:00",
-      "summary": "Voxtral 3",
-      "score": 642,
-      "comments": 164,
-      "discussion_url": "https://news.ycombinator.com/item?id=50168396",
+      "published_at": "2026-10-21T17:45:13+00:00",
+      "summary": "https://nmdoj.gov/press-release/the-new-mexico-department-of...",
+      "score": 409,
+      "comments": 262,
+      "discussion_url": "https://news.ycombinator.com/item?id=50184820",
       "extra": {
         "top_comments": [
-          "Sorely tempted to develop a microcontroller device that acts like a smart dictaphone for when I'm going on long hikes, like, an aural text editor. It could also be a smartphone app by I dread the idea of having to jump through a million Apple hoops to get something working on an iPhone....",
-          "Their previous generation open weight STT model was pretty good.I have recently launched commercial Windows software implementing offline inference of Voxtral Mini 4B Realtime on commodity hardware: https://vrmac-softver.com/speech2text It requires 4GB VRAM, and exceeds realtime rate on my “median” laptop with Ryzen 5 5600U iGPU. I’m currently working on a Linux port.",
-          "Closed model unfortunately, continues the theme of TTS / STT being really not great for local deployments."
+          "Sure, but where's the jail time for executives. This may be a bit more than the usual slap on the wrist, but its hardly consequence that actually matters to the likes of Meta. This will keep happening until those at the top are held personally responsible for the crimes they sign off on.",
+          "For those who haven't seen, the New Mexico Attorney General released tapes of the depositions for Zuckerberg [1] and Sandberg [2].1. https://www.youtube.com/watch?v=C7UC2ie0XIE2. https://www.youtube.com/watch?v=g1j4N-3ZkB4",
+          "All the states that participated in the class action settlement got $725 million combined.New Mexico decided to go it alone and gets $25 billion.Great timing for the AG who’s up for reelection on November 3 (even though it was the previous AG who made the call)."
         ]
       }
     },
     {
-      "id": "50169707",
-      "title": "What shall I teach my son?",
-      "url": "https://stevekrouse.com/ends",
+      "id": "50181136",
+      "title": "DuckDB 2.0.0 LTS “Cinnamon Teal”",
+      "url": "https://duckdb.org/2026/10/21/announcing-duckdb-200",
       "source": "Hacker News",
-      "published_at": "2026-10-20T17:25:07+00:00",
-      "summary": "What shall I teach my son?",
-      "score": 378,
-      "comments": 452,
-      "discussion_url": "https://news.ycombinator.com/item?id=50169707",
+      "published_at": "2026-10-21T14:01:22+00:00",
+      "summary": "DuckDB 2.0.0 LTS “Cinnamon Teal”",
+      "score": 375,
+      "comments": 49,
+      "discussion_url": "https://news.ycombinator.com/item?id=50181136",
       "extra": {
         "top_comments": [
-          "My mum was a mechanic, my dad was a mechanic/truck driver.My grandfather and uncle were mechanics...I am not, in fact my understanding of mechanics is extremely basic.If I go back into my family tree, I can find three generations of Sugar House Labourers in Scotland in the early 1800s.. a profession that no longer exists in the UK as far as I can tell, and I'm certain they had a specialisation.We'll be fine, your children aren't you, they'll find their own passions.Our jobs as parents is to teach values and make sure they're good people and have the tools to make good decisions too, not to set them on a particular path... that's a losing goal, we can't tell the future for the next year- how could we possibly predict what works well 20 years from now?",
-          "> \"...Bill Gates were college dropouts, but the market deemed them good.\"Gates had excellent grades and was credited in an academic paper during his undergraduate years. Not exactly like the average dropout.> \"Now that I think of it, apparently Einstein was a mediocre student, but his contributions to science were his way out. \"That's a myth. Einstein got top grades in science and mathematics.As for the original question, \"If you wish to build a ship, do not divide the men into teams and send them to the forest to cut wood. Instead, teach them to long for the vast and endless sea.\", incorrectly attributed to Antoine de Saint-Exupéry",
-          "If lifestyles support it, and parents are so inclined, I'd worry less about teaching the first few years and more about reading to them and with them, esp. with some silliness and improvisation, hiking, camping, and shopping as a family, especially at local markets.Spend meaningful, loving time together, and out in the world, as much of the small scale natural world as you can. Listen to their questions, answer when you can, learn the answers together when you can't.If they are accustomed to hiking and camping, especially wild camping, they will learn much from you and will ask for more.If you shop together at markets, they will start to develop a more complete relationship with their food supply and with the people working it.Empathy and kindness and resilience will develop in those experiences.Later, when they are closer to school age, be as honest with them as you can about the different personalities they will encounter, the conformist teachers and students, the rebels, the do gooders, the no goods, etc., and comfort them that their people may be there right away or may not be there for decades."
+          "We've found DuckDB 2.0 to be way faster on high core count machines on EC2. Not just reading data from S3, but the actual computations too. Much more likely to see 100% utilisation up to about 128vCPUs or 192vCPUs, and that CPU usage to translate into workloads completing faster.Still don't usually see a speedup past about 192vCPU, but prior to 2.0, speed would top out at more like 64vCPU, so this is a big win.That has enabled us to scale Splink (FOSS record linakge software) to process 1bn records with 10bn record comparisons in 10 mins, which as far as I'm aware makes it the fastest linkage engine of this kind. Most of this performance comes from simply delegating the big calculations to the DuckDB engine! https://moj-analytical-services.github.io/splink/topic_guide...Thanks to the team for all their work!",
+          "It's very fast, especially on a decent sized cloud VM and when querying Iceberg. I've been running the alpha in production as a centralized analytics server for a small organization.I built a DuckDB extension so you can connect via Postgres wire protocol, or Arrow flight. DuckDB also has its own Quack protocol, but client support for Quack is very limited right now, whereas many data tools support Postgres wire protocol or ADBC (which you can use with Arrow Flight).https://github.com/sidequery/duckflight-extension",
+          "The fact that can now be used as a client-server architecture is a game changer. It will for sure replace many data stacks that now run on many servers with tons of cpu and ram"
         ]
       }
     },
     {
-      "id": "50169053",
-      "title": "Google open-sources TorchTPU, a native PyTorch back end for TPUs",
-      "url": "https://github.com/google-pytorch/torch_tpu",
+      "id": "50188228",
+      "title": "Security Disclosure",
+      "url": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
       "source": "Hacker News",
-      "published_at": "2026-10-20T16:40:24+00:00",
-      "summary": "Google open-sources TorchTPU, a native PyTorch back end for TPUs",
-      "score": 330,
-      "comments": 74,
-      "discussion_url": "https://news.ycombinator.com/item?id=50169053",
+      "published_at": "2026-10-21T21:58:03+00:00",
+      "summary": "Security Disclosure",
+      "score": 343,
+      "comments": 186,
+      "discussion_url": "https://news.ycombinator.com/item?id=50188228",
       "extra": {
         "top_comments": [
-          "For people interested in this: I've been working on an open-source libtpu implementation for https://tenstorrent.com/ accelerators as a side project, it can already run most of torchtpu, see https://github.com/pcmoritz/libtt (based on the tenstorrent software stack). It shows all the things involved in lowering torch to tile based accelerators.",
-          "Google and Apple are going to move consumers and ordinary business users to edge inference. This is more disruptive to the upcoming IPOs than most investors understand.",
-          "Interesting, Amazon doing the same for AWS Trainium.https://github.com/aws-neuron/torch-neuronx"
+          "It's 5:20 AM here in Europe and I just rotated a bunch of keys.Only to read,> Because deployments are paused, you will not be able to redeploy your services to pick up the new credentials until builds are restored. We will post here when builds resume with any additional details.So now my service does not work. Which is worse: a stolen key or a broken product? I'm genuinely regretting following their advice on rotating keys, because logs showed no sign of incorrect usage, and our service would at least have remained online.I hope that they automatically redeploy their customer services. I just worry that I won't have tested it. I mean: 5AM. Keys changed. Nothing more I can do. Should go back to sleep. No timeline to wake up to check deployments, so... I... wait?",
+          "Crazy day for cybersecurity: PHP RCE, eMudhra certificates, and now Railway.And it’s all just getting started imo.https://blog.cloudflare.com/emudhra-certificate-compromisehttps://www.wiz.io/blog/php2shell-php-rce",
+          "Yup, got my OpenRouter key. They managed to run up a whole $2 on Opus 5.5 and Fable. Well, time for a new hosting provider I guess...Incidentally, I'm testing Muse as an email triage agent today - it buried \"oh also, railway and anthropic say yours keys have been leaked and you need to rotate asap\" under 50 routine deploy / admin emails notifications. Oh to live through such an AI powered software renaissance!"
         ]
       }
     },
     {
-      "id": "50175070",
-      "title": "The Future of CSS",
-      "url": "https://www.joshwcomeau.com/css/interop-2027/",
+      "id": "50189232",
+      "title": "mitmproxy adds --emudhra option",
+      "url": "https://github.com/mitmproxy/mitmproxy/commit/169234499088fc2c414644a67efaed3d64ae2e3b",
       "source": "Hacker News",
-      "published_at": "2026-10-21T01:47:28+00:00",
-      "summary": "The Future of CSS",
-      "score": 319,
-      "comments": 122,
-      "discussion_url": "https://news.ycombinator.com/item?id=50175070",
+      "published_at": "2026-10-21T23:51:37+00:00",
+      "summary": "mitmproxy adds --emudhra option",
+      "score": 270,
+      "comments": 70,
+      "discussion_url": "https://news.ycombinator.com/item?id=50189232",
       "extra": {
         "top_comments": [
-          "As someone who actively goes out of my way to stick to writing vanilla HTML/CSS/JS as much as possible, it's honestly hard to explain to people who only write within frameworks how good it's gotten. Use the proper tool for the job, of course, but it sparks joy!",
-          "\"Functions in CSS\" - Bah! That's all we need to make CSS even more convoluted - make it compete with Javascript now ... All these feature creep is just to make sure nobody else can create another browser engine.",
-          "Wow even more fancy border styles! Infinite complexity for useless eyecandy. Date pickers are still barely working, last time i needed to build a touch optimized interface (gloves, industrial setting) with date picker, time picker, and numeric up/down style input fields it needed custom components and js...But who needs these, when we can have bezel and whatnot...Who needs ways to reliably trigger the display of the touch platform-native keyboard, to be notified if it is displayed and to move the input field in view so it is not obscured by the keyboard?This is why the web is a terrible platform compared to Windows Forms for getting stuff done. Because those making the standards only work on creating gimmicks."
+          "It's almost a shame it includes the private key and doesn't bruteforce it in-band for every request.",
+          "Ha, I didn't expect this to show up on HN!Release is out now, including a blog post at https://www.mitmproxy.org/posts/releases/mitmproxy-12.3/. There isn't really much to explain, you just pass `--emudhra`. :)",
+          "This looks like it's using the emSign root path, which is useful, but the AAA root path is equally useful in different cases. The AAA root path was disabled for https on root stores newer than February 2025, but has been in root stores since forever. Meanwhile the emSign root path was only included in root stores since ~2018 and got removed in October 2026.So from the perspective of hacking old IoT devices, if your device hasn't been updated since 2018, the AAA path should work; if since February 2025, either path works; if since October 2026, the emSign path."
         ]
       }
     },
     {
-      "id": "50173487",
-      "title": "Feds suspect ransom negotiator ran ShinyHunters extortion site",
-      "url": "https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/",
+      "id": "50185869",
+      "title": "GitLab Critical Patch Release",
+      "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/",
       "source": "Hacker News",
-      "published_at": "2026-10-20T22:21:05+00:00",
-      "summary": "Feds suspect ransom negotiator ran ShinyHunters extortion site",
-      "score": 190,
-      "comments": 81,
-      "discussion_url": "https://news.ycombinator.com/item?id=50173487",
+      "published_at": "2026-10-21T19:01:12+00:00",
+      "summary": "GitLab Critical Patch Release",
+      "score": 263,
+      "comments": 65,
+      "discussion_url": "https://news.ycombinator.com/item?id=50185869",
       "extra": {
         "top_comments": [
-          "> Dutch police reportedly used flash-bang grenades in an effort to stun and apprehend Van der Stap as he was logged in to various online accounts.Holy moly, this is the first time I hear about this tactic. I remember more benign distraction tactics used previously with Ross Ulbricht and the other guy in Thailand running another darknet marketplace.",
-          "> In late September, ShinyHunters hacked the FBI recruitment website fbijobs.govThe OPM breach was 11 years ago and apparently the incompetence still reigns.",
-          "What kind of incentive structure do most ransomware negotiation firms use that would actually cause them to benefit from coordination with the ransomware groups, as happened in this case? Do ransomware negotiators get paid more if they negotiate a lower price?"
+          "Awesome find by https://hackerone.com/joaxcar and it's a little bit frightening that this severe of a bug isn't the biggest security vulnerability of today",
+          "What a great week security wise!",
+          "At least second regex related CVE in GitLab in the past few weeks. Awful to see that the endpoint is reachable unauthenticated, but I'm glad that they provide guidance in how to check the logs for attempts of exploitation"
         ]
       }
     },
     {
-      "id": "50173891",
-      "title": "The Other Epidemic: Trying to get off benzodiazepines",
-      "url": "https://www.thebeliever.net/the-other-epidemic/",
+      "id": "50180079",
+      "title": "OpenAI models are coming to Google Cloud",
+      "url": "https://openai.com/index/openai-models-google-cloud/",
       "source": "Hacker News",
-      "published_at": "2026-10-20T23:04:09+00:00",
-      "summary": "https://web.archive.org/web/20261020230542/https://www.thebe...https://archive.ph/Tb1SZ",
-      "score": 174,
-      "comments": 128,
-      "discussion_url": "https://news.ycombinator.com/item?id=50173891",
+      "published_at": "2026-10-21T12:53:11+00:00",
+      "summary": "OpenAI models are coming to Google Cloud",
+      "score": 246,
+      "comments": 107,
+      "discussion_url": "https://news.ycombinator.com/item?id=50180079",
       "extra": {
         "top_comments": [
-          "I’ve seen a few friends and coworkers go down this path, usually as a result of work stress or hustle culture. They start on neutropics and energy drinks, then get scripts for Adderall or Vyvanse to handle the perceived insurmountable workload, stabilize on those after an initial euphoria, then build up a heroic tolerance to (dextro|meth)amphetamines. Withdrawals from that high level of addiction leads to anxiety, insomnia, delusions, mania and all sorts of craziness (I suspect the lack of sleep is the culprit).Eventually this sends the patient to a doctor/dealer to escape their misery of detox/relapse cycles. The gates to hell are finally opened once a benzo is prescribed.One entrepreneur ended punching a bouncer and attempting to flee on a bus to some random city, spending more than a week in jail. Another fled the U.S. after making a lot of crazy purchases and life choices, he is now living in a war zone voluntarily. The amount of DGAF/YOLO these drugs give the user are very understated. The withdrawals were much worse. I’ve never seen someone down almost a whole handle of bourbon just to get “normal“. The brain zaps and the tics/twitches were very noticeable.Stevie Nicks has also spoken publicly about her struggles with Klonopin withdrawal. BEWARE!!!",
-          "> Having kicked opiates cold turkey in the past, I felt nostalgic for three simple days of traditional nausea, sweatiness, and bone-deep ache. I am one of few people stupid enough to have, at one point, been addicted to and subsequently withdrawn from, almost everything but alcohol.There is no way to explain the hell on earth that is benzo/GABA-ergic drug withdrawal, and I would not wish it on my worst enemy. It is an order of magnitude more intense than opiate withdrawals, and the timeline is weeks/months rather than days.Like the author, I managed to quit via a year-long Ashton protocol taper.The irony is that benzos were the one class of drugs I wasn't abusing for recreation. I was using mega-doses of Etizolam to cope with PTSD flashbacks, and only discovered I had become physically addicted after flushing it all and winding up in the ER.",
-          "Fun story time:Almost a decade ago now, I was a happy, high-functioning alcoholic. Winery tours, Scotch tastings, workplace drinks, etc.It was all \"fine\" until I started struggling to get to sleep without a little \"nudge\"; then it was getting back to sleep in the wee hours; then it was every hour or two, 24x7.Then I decided to go cold turkey while on vacation in Hawaii with my family, because who wants to be the drunk asshole in search of a cocktail while everyone else is having a good, sober time at the beach?Boom: detox seizures, ER visit, and the ever-so-helpful prescription of Ativan so I wouldn't seize again. I was discharged with the instructions to \"take as needed, up to every four hours.\" Since I was an addict in pain, I took that to mean, \"take them every four hours, or maybe more often.\"Cut forward 3-4 days, and the scrip ran out. Boom: more DTs, this time from the benzos.It wasn't long after that when I went through my first inpatient psych visit b/c I was in no way equipped to handle withdrawals from two highly-addictive drugs at the same time.Sadly it took another couple of years and another trip through the ER + inpatient care before I realized that doctors would and did prescribe me meds that were actively harmful in the interest of short-term comfort.It's been six years since the last big episode and I'm genuinely grateful I only threatened myself with my shitty brain chemistry (however aggravated by poor medical intervention) rather than putting other people at risk. It could have been much worse if, say, I routinely drove people around or did any kind of safety-critical work.Regardless: benzos are not \"lightweight\" drugs, and giving them to people with any kind of history of substance abuse disorders is a Bad Idea."
+          "Gotta love the disclaimer at the bottom: Microsoft remains OpenAI’s primary cloud partner.",
+          "Sergey better really go into \"founder mode\" or else Thomas Kurian (head of GCP) will continue to eat Deepmind's lunch.Between selling TPUs to external companies and now hosting competitor models, Gemini just doesnt have the full faith of the Alphabet capital allocators, and I can't really blame them. A mature company like google would rather just expand their extremely profitable cloud business rather than dump billions into a black hole on the off chance they achieve RSI or superintelligence or whatever.",
+          "Does anyone still remember OpenAI’s founding? I had thought that OpenAI didn’t want to give the weights to Google because the original reason for its existence is to prevent Google from achieving AGI."
         ]
       }
     }
