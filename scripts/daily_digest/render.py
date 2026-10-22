@@ -73,8 +73,13 @@ def _details(category: str, article: Article, item: ItemSummary, detailed: bool)
         authors = "、".join(_markdown_text(value) for value in article.extra.get("authors", [])) or "来源未列出"
         categories = "、".join(_markdown_text(value) for value in article.extra.get("categories", [])) or "来源未列出"
         lines.append(f"- **作者/分类**：{authors} · {categories}")
+        summary_label = "核心摘要"
+        if item.is_source_excerpt:
+            source_summary = " ".join(article.summary.split())
+            source_title = " ".join(article.title.split())
+            summary_label = "来源摘要" if source_summary and source_summary != source_title else "来源标题"
+        lines.append(f"- **{summary_label}**：{_markdown_text(item.summary)}")
         if detailed:
-            lines.append(f"- **核心摘要**：{_markdown_text(item.summary)}")
             lines.extend(
                 [
                     f"- **研究问题**：{_markdown_text(item.research_problem)}",
@@ -86,7 +91,7 @@ def _details(category: str, article: Article, item: ItemSummary, detailed: bool)
                 ]
             )
         else:
-            lines.extend([f"- **核心摘要**：{_markdown_text(item.summary)}", f"- **价值点**：{_markdown_text(item.value)}"])
+            lines.append(f"- **价值点**：{_markdown_text(item.value)}")
         return "\n".join(line for line in lines if not line.rstrip().endswith("**："))
     lines.append(f"- **核心摘要**：{_markdown_text(item.summary)}")
     if detailed:

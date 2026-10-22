@@ -25,6 +25,8 @@ class ItemSummary:
     limitations: str = ""
     engineering_value: str = ""
     discussion_focus: str = ""
+    # Internal provenance, never accepted from model output.
+    is_source_excerpt: bool = False
 
 
 @dataclass(frozen=True, slots=True)
@@ -146,13 +148,13 @@ def _enforce_evidence_boundary(
         evidence = article.title + "\n" + article.summary
         unsafe = any(
             _unsupported_disclosure_claim(str(value), evidence)
-            for name, value in asdict(item).items() if name != "index"
+            for name, value in asdict(item).items() if name not in ("index", "is_source_excerpt")
         )
         if category == "Hacker News":
             unsafe |= any(
                 _unsupported_hn_judicial_outcome(str(value), article)
                 for name, value in asdict(item).items()
-                if name not in ("index", "discussion_focus")
+                if name not in ("index", "discussion_focus", "is_source_excerpt")
             )
         safe_items.append(replacement if unsafe else item)
         changed |= unsafe
@@ -202,18 +204,6 @@ def _clip(value: str, limit: int) -> str:
     return excerpt or value
 
 
-def _sentences(value: str) -> list[str]:
-    return [part.strip() for part in re.split(r"(?<=[.!?。！？])\s+", value) if part.strip()]
-
-
-def _matching_sentence(sentences: list[str], keywords: tuple[str, ...], fallback: str) -> str:
-    for sentence in sentences:
-        lowered = sentence.casefold()
-        if any(keyword in lowered for keyword in keywords):
-            return sentence
-    return fallback
-
-
 def _fallback(category: str, articles: list[Article]) -> DigestSummary:
     items: list[ItemSummary] = []
     for index, article in enumerate(articles):
@@ -231,24 +221,12 @@ def _fallback(category: str, articles: list[Article]) -> DigestSummary:
             "value": value,
         }
         if category == "AI论文日报":
-            sentences = _sentences(evidence)
-            first = sentences[0] if sentences else article.title
-            method_sentence = _matching_sentence(
-                sentences,
-                ("we propose", "we present", "method", "framework", "approach", "using"),
-                "",
-            )
-            result_sentence = _matching_sentence(
-                sentences,
-                ("result", "achieve", "outperform", "improve", "reduce", "faster", "%"),
-                "",
-            )
+            # Keywords cannot distinguish prior work, hypotheses, or the
+            # authors' own contributions. Preserve the full collected abstract
+            # without assigning semantic labels or dropping its later results.
             common.update(
-                research_problem=_clip(first, 150),
-                method=_clip(method_sentence, 150),
-                results=_clip(result_sentence, 130),
-                limitations="",
-                engineering_value="",
+                summary=evidence or re.sub(r"\s+", " ", article.title).strip(),
+                is_source_excerpt=True,
             )
         if category == "Hacker News":
             comments = [re.sub(r"\s+", " ", str(comment)).strip() for comment in article.extra.get("top_comments", [])]
@@ -316,7 +294,7 @@ def _parse_content(content: str, category: str, articles: list[Article]) -> Dige
     if [item.get("index") for item in raw_items] != list(range(len(articles))):
         raise ValueError("Model item indexes do not match evidence")
 
-    fields = tuple(ItemSummary.__dataclass_fields__)
+    fields = tuple(name for name in ItemSummary.__dataclass_fields__ if name != "is_source_excerpt")
     items: list[ItemSummary] = []
     for index, raw in enumerate(raw_items):
         raw = dict(raw)

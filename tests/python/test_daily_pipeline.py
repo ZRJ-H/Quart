@@ -8,7 +8,8 @@ from unittest.mock import patch
 
 from scripts.daily_digest.collectors import CollectionError
 from scripts.daily_digest.models import Article
-from scripts.daily_digest.pipeline import run_pipeline
+from scripts.daily_digest.pipeline import _fingerprint, run_pipeline
+from scripts.daily_digest.render import render_digest
 from scripts.daily_digest.summarize import summarize
 from scripts.daily_digest.weekly import generate_weekly_report
 
@@ -97,6 +98,31 @@ class DailyPipelineTests(unittest.TestCase):
             calls.clear()
             run_pipeline(root, RUN_DATE, fixture_collectors(), tracked_summarizer)
             self.assertEqual(calls, [])
+
+    def test_same_source_rerun_preserves_existing_page_and_deterministic_paper_repair(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            run_pipeline(root, RUN_DATE, fixture_collectors(), fallback_summarizer)
+            category = "AI论文日报"
+            target = root / category / f"{RUN_DATE}.md"
+            rows = FIXTURES[category]
+            marker = f"<!-- source-fingerprint: {_fingerprint(rows)} -->"
+            legacy = f"Legacy fallback body with structured labels.\n\n{marker}\n"
+            target.write_text(legacy, encoding="utf-8")
+
+            def unexpected_summarizer(category, rows):
+                self.fail(f"Unchanged sources should not call a model: {category}")
+
+            # A presentation-only fix does not silently migrate cached pages.
+            run_pipeline(root, RUN_DATE, fixture_collectors(), unexpected_summarizer)
+            self.assertEqual(target.read_text(encoding="utf-8"), legacy)
+
+            repaired = render_digest(category, RUN_DATE, rows, fallback_summarizer(category, rows))
+            repaired = repaired.rstrip() + f"\n\n{marker}\n"
+            target.write_text(repaired, encoding="utf-8")
+            run_pipeline(root, RUN_DATE, fixture_collectors(), unexpected_summarizer)
+            self.assertEqual(target.read_text(encoding="utf-8"), repaired)
+            self.assertEqual(repaired.count("**来源摘要**"), 5)
 
     def test_pipeline_replaces_local_codex_note_when_sources_change(self):
         with tempfile.TemporaryDirectory() as directory:
