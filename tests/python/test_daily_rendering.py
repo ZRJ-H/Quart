@@ -278,7 +278,7 @@ class DailyRenderingTests(unittest.TestCase):
         with self.assertRaisesRegex(RuntimeError, "Cloud summarization is required"):
             summarize("AI科技动态", PAPERS[:3], api_key=None, go_key=None, require_model=True)
 
-    def test_deterministic_fallback_clips_long_paper_and_comment_evidence(self):
+    def test_deterministic_fallback_preserves_paper_but_clips_comment_evidence(self):
         long_paper = Article(
             "2609.99999",
             "Long paper",
@@ -288,8 +288,8 @@ class DailyRenderingTests(unittest.TestCase):
             "We propose a method. We evaluate it on twelve tasks. Results improve by 30 percent. " * 30,
         )
         paper_item = summarize("AI论文日报", [long_paper], api_key=None, go_key=None).items[0]
-        self.assertLessEqual(len(paper_item.summary), 205)
-        self.assertLessEqual(len(paper_item.research_problem), 180)
+        self.assertEqual(paper_item.summary, long_paper.summary.strip())
+        self.assertEqual(paper_item.research_problem, "")
 
         long_comment = "Users discuss deployment cost, reliability, and benchmark quality. " * 30
         hn_article = Article(
