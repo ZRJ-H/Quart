@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-10-23T11:00:32.266014+08:00",
+  "cached_at": "2026-10-23T13:09:07.673025+08:00",
   "articles": [
     {
       "id": "https://huggingface.co/blog/microsoft/thinkingbox-training",
@@ -32,6 +32,18 @@
       "source": "Hugging Face",
       "published_at": "2026-10-22T16:11:31+00:00",
       "summary": "",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
+      "id": "https://www.microsoft.com/en-us/research/?p=1190353",
+      "title": "Flint-interactive: A language for creating interactive data visualizations",
+      "url": "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/",
+      "source": "Microsoft Research",
+      "published_at": "2026-10-22T16:00:00+00:00",
+      "summary": "Flint-interactive gives AI agents a language for creating interactive visualizations. Click a chart, filter data, highlight related content, and explore beyond the view the author originally chose. The post Flint-interactive: A language for creating interactive data visualizations appeared first on Microsoft Research.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
@@ -80,18 +92,6 @@
       "source": "OpenAI",
       "published_at": "2026-10-22T00:00:00+00:00",
       "summary": "Uber is rolling out ChatGPT Work to more than 30,000 employees, helping teams research, analyze data, create presentations, and complete complex workflows.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://openai.com/index/broad-access-through-consistent-standards",
-      "title": "Broad access through consistent standards",
-      "url": "https://openai.com/index/broad-access-through-consistent-standards",
-      "source": "OpenAI",
-      "published_at": "2026-10-21T21:00:00+00:00",
-      "summary": "How OpenAI works with distribution partners to uphold consistent safeguards, support responsible access, and clarify expectations in our Usage Policies.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
