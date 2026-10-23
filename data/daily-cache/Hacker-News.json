@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-10-22T16:28:33.946472+08:00",
+  "cached_at": "2026-10-23T11:00:32.266014+08:00",
   "articles": [
     {
-      "id": "50182987",
-      "title": "Today's PHP security release, and how we're strengthening security",
-      "url": "https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/",
+      "id": "50195959",
+      "title": "Quad9 (DNS Resolver) to Exit France",
+      "url": "https://quad9.net/news/blog/au-revoir-france/",
       "source": "Hacker News",
-      "published_at": "2026-10-21T15:48:56+00:00",
-      "summary": "Related ongoing thread: PHP 8.2.35 - https://news.ycombinator.com/item?id=50180873(links to more at https://news.ycombinator.com/item?id=50184935)",
-      "score": 724,
-      "comments": 356,
-      "discussion_url": "https://news.ycombinator.com/item?id=50182987",
+      "published_at": "2026-10-22T14:32:38+00:00",
+      "summary": "Quad9 (DNS Resolver) to Exit France",
+      "score": 1027,
+      "comments": 370,
+      "discussion_url": "https://news.ycombinator.com/item?id=50195959",
       "extra": {
         "top_comments": [
-          "You may never hear me say this again because I am a gruff cynic who is not sure that hanging out here is good for his psyche, but thank goodness for HN.While I have been chasing around today, trying to resolve this on different servers, it turns out a three line nginx mitigation (blocking multipart uploads) I wrote in the wee small hours GMT has been quietly protecting a vulnerable machine I could not shut down (from attacks powered by every single mainstream agentic AI tool — Anthropic, OpenAI, Qwen cloud, Baidu, seemingly also AWS, Meta)Including an hour before the PHP patch actually shipped.So without the HN discussion I wouldn't have found enough people pointing at possible mitigations and I would have lost a server to this, and I thank everyone who pointed out that second mitigation in particular.",
-          "We should really move to a different security model on the internet.For example, when I buy something from a webshop, why does that webshop need my personal information? Why can't I give it a token, which it can then use to send my package, because only the postal system knows the address coupled to the token, etc.And we should also ban user tracking for advertising purposes, obviously.",
-          "> As a result of the leak and pre-announcement around 20:00 UTC, Calif, one of the security firms that had reported the issues mistakenly published a video.This is the most surprising part to me. It sounds like Calif saw the leaks, interpreted that as embargo being broken, and then raced to publish their [anime dancing] marketing video? I'd have expected much better."
+          "(context: I'm the CTO of Quad9 and am one of the people dealing with the lawyers)There is an understandable focus on \"how are you going to block French users\" when we have also claimed that geoIP blocking is insufficient for selectively denying resolution for certain names - we understand this conflict, but we think it is energy spent in the wrong place.It is probable that we will use geoIP filters to block French users from our services after November 24. We could apply this same geoIP filter list now to selectively block French users from reaching the sites that we've been told to make unavailable. But this would corrupt our core premise, which is that the DNS is not the right place for this to happen, and if we comply within France to meet the requirement then we accept the worst eventual outcome for users and we still do not have legally perfect coverage. We wish to first remain consistent with our core mission, and secondarily we must remain as close to compliance as we can to the legal constraints put upon us. By accepting the demands for blocking, we would admit that such demands are permissible within our mission - that we will act on behalf of companies (or others) to create ineffective and mis-directed regimes of content constraint.We would be admitting that we think this solves the problem - it does not. We would be admitting that we will do this for an ever-increasing number of names - we will not. We would be permitting these methods to be applied for more areas of filtering such as moral, religious, social, or political reasons - we must not.So we accept that there is the possibility that we will have errors in our blockade, but in this case (blocking French users) we maintain consistency with our stated mission of integrity of the DNS. We would rather there be a clear distinction made for users of our services: you get the DNS as you (the user) expects, or if Quad9 is forced to pollute the service with unexpected and arbitrary number of fragmentation demands, then we will not offer the services at all.The underlying issue is not ONLY that geoIP blocking is ineffective, but that the entire premise of any of these demands is inappropriately applied to DNS recursive resolution providers. We would hope that this discussion continues to be on the most fundamental of the disagreement we have with the outcome in this court case, not on the details of the technical implementation which have yet to be entirely decided and which can be tuned over time.",
+          "\"The plaintiff (Sony Music Entertainment GmbH) then used a VPN to access the blocked content from Germany in circumvention of the geoIP blocking. The court agreed with Sony in their assertions of noncompliance, and we were fined for contempt of court.\"Imagine doing everything possible to stop something. They then circumvent your protections with yet another service, and you get fined.I wish I could even suggest what someone could do against these trolls.This is like saying \"we put a lock requested by court and where found guilty because plantif hacked us after\"",
+          "Seems they're following Cisco similar move 2y ago of exiting the market> Canal+ has been busy getting web-blocking injunctions in France against sports piracy sites which stream sporting events for which it has the exclusive broadcast rights within the French market. It previously targeted DNS resolvers operated by Google, Cloudflare and Cisco.> All three unsuccessfully opposed the web-blocking orders. Google and Cloudflare, therefore, have been forced to instigate them. However, Cisco just pulled its OpenDNS service out of the French market entirely.(Per https://completemusicupdate.com/quad9-vows-to-fight-absurd-w..., https://completemusicupdate.com/opendns-pulls-plug-on-france...)"
         ]
       }
     },
     {
-      "id": "50184820",
-      "title": "Meta ordered to pay $25B penalty in New Mexico Cambridge Analytica case",
-      "url": "https://www.cnbc.com/2026/10/21/meta-new-mexico-cambridge-analytica-penalty.html",
+      "id": "50195110",
+      "title": "eMudhra to exit global SSL/TLS certificate business",
+      "url": "https://emudhra.com/en/press-release/emudhra-to-exit-global-ssl-tls-certificate-business",
       "source": "Hacker News",
-      "published_at": "2026-10-21T17:45:13+00:00",
-      "summary": "https://nmdoj.gov/press-release/the-new-mexico-department-of...",
-      "score": 519,
-      "comments": 320,
-      "discussion_url": "https://news.ycombinator.com/item?id=50184820",
+      "published_at": "2026-10-22T13:33:39+00:00",
+      "summary": "eMudhra to exit global SSL/TLS certificate business",
+      "score": 952,
+      "comments": 641,
+      "discussion_url": "https://news.ycombinator.com/item?id=50195110",
       "extra": {
         "top_comments": [
-          "Sure, but where's the jail time for executives. This may be a bit more than the usual slap on the wrist, but its hardly consequence that actually matters to the likes of Meta. This will keep happening until those at the top are held personally responsible for the crimes they sign off on.",
-          "For those who haven't seen, the New Mexico Attorney General released tapes of the depositions for Zuckerberg [1] and Sandberg [2].1. https://www.youtube.com/watch?v=C7UC2ie0XIE2. https://www.youtube.com/watch?v=g1j4N-3ZkB4",
-          "All the states that participated in the class action settlement got $725 million combined.New Mexico decided to go it alone and gets $25 billion.Great timing for the AG who’s up for reelection on November 3 (even though it was the previous AG who made the call)."
+          "> However, the level of social media amplification around this incident has brought scrutiny that is out of proportion to SSL/TLS’s place in our businessScrutiny is inversely proportional to bit complexity of the private keys they used. Without a failure to apologize or expose how it happened: a human mistake, process mistake, etc. this looks pretty bad on them.> eMudhra’s global SSL/TLS infrastructure runs separately from its other operations. The company’s Global digital signature certificate (DSC), eSign, and other signing services, including those in India, its enterprise PKI Solutions (emCA, CertiNext platforms), emSigner eSignature Suite, and its identity and authentication solutions (SecurePass, emAS) are not affected and continue to operate as normalAnyone relying on them with anything related to security or trust is playing Russian roulette at this point.",
+          "Somehow this is making it even worse. Like, I'm having issues explaining the whole thing to my wife, because I can't come up with a metaphor or parable that's even remotely as ridiculous as what they've done. Anyone's got a good one?Maybe, like, setting up a factory that builds both LHD and RHD cars and building cars with two passenger seats in the front for two years straight without anyone noticing?",
+          "Related: the absolutely brutal question battery the Chrome team publicly submitted to eMudhrahttps://bugzilla.mozilla.org/show_bug.cgi?id=2083449#c30"
         ]
       }
     },
     {
-      "id": "50181114",
-      "title": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
-      "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
+      "id": "50194833",
+      "title": "Woman faces six years in prison over Cash App account she never opened",
+      "url": "https://www.techspot.com/news/114296-woman-spends-three-nights-jail-faces-six-years.html",
       "source": "Hacker News",
-      "published_at": "2026-10-21T14:00:26+00:00",
-      "summary": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
-      "score": 503,
-      "comments": 167,
-      "discussion_url": "https://news.ycombinator.com/item?id=50181114",
+      "published_at": "2026-10-22T13:11:00+00:00",
+      "summary": "Woman faces six years in prison over Cash App account she never opened",
+      "score": 538,
+      "comments": 553,
+      "discussion_url": "https://news.ycombinator.com/item?id=50194833",
       "extra": {
         "top_comments": [
-          "Just going to remind you all that https://canarytokens.org/ exists.",
-          "All the sandbox-exec and all the Lulu rules are not going to protect against something like this.At one point permission pop-up fatigue sets in we start giving any permission as if it's normal. We also become desensitised to isntalling tools: brew, npm, it becomes second nature.\"Oh, those 367 tools installed by package X? Yeah yeah, must be normal, that's how all these work now\".\"Brew shows 59 packages outdated?\". \"Must upgrade\". \"Yeah, done. Perfect\".And the advent of agents and harnesses. It's not a matter of whether, it's when! OSes need to do something about it. Help users have complete separate \"program space\" at ease with better, easier, and lighter VMs if nothing else. I know, I know - Unix and Linux solved all this even before Alexander III of Macedon started wearing his nappies. Of course.",
-          "This is the second significant exploit against LiteLLM in what, a year or two ? Just last night I came across notes and a script from an older claude session to help audit all project dependencies and verify nothing used litellm.Okay, checked, it was March of this year: https://futuresearch.ai/blog/litellm-pypi-supply-chain-attac.... What even is time anymore in the llm age?"
+          "* authorities have offered Smith a plea deal including a $1,000 fine, $1,000 in restitution and three years' probation.*This is the goal ... They know they are at fault but admitting they made a mistake is damaging to careers.In a lot of cases a carrot is dangled in front of people ... You can wast a lot of time (and money) fighting for your innocent, and take the risk your still going to get convicted.Or you can take the plea deal, and it absolves us from our mistakes. And you save money because its cheaper then paying all those lawyers and court costs. And your innocent anyway, so that probations has no effect on you.I forgot the source but the amount of prosecutions that are plea down is staggering. A lot of actual innocent people take plea's because its cheaper, then the alternative. And there have been plenty of people innocently convicted (even on shaky evidence), so most people take plea deals and they can move on with their lives.This results in a culture where investigations are annoying. Where pressure is ramped up again and again to break people into taking plea deals. The biggest issue is, if you actually refuse to take a plea deal, then all resources are put against you to get a actual conviction, even if they know your innocent. \"Why did you not just take the plea deal\". Well, time to punish you for not taking it. Because repeat after me again, careers are on the line and losing cases hurt those future (potential political) careers.Its the same why prosecutors fight tooth and nail, even if clear evidence is shows that a person was innocently convicted and spend X years in jail. It not about justice, its about protecting those careers.The proof of innocents is heavily put on the other party, and it really hits hard on people who do not have the financial means.",
+          "> Meanwhile, authorities have offered Smith a plea deal including a $1,000 fine, $1,000 in restitution and three years' probation. She has refused, saying she is innocent.This is nuts. Is it possible US prosecutors give so few shits about justice?",
+          "Time for CashApp founders and C-levels to be held personally liable for creating a system with so few checks that it appears to be designed to facilitate fraud and theft.Then you sue all the law enforcement officers and local officials who are attempting to lay the blame for this on someone they should know is likely innocent. Make all of the financial liability for this lazy investigation come directly from the pockets of the cops and prosecutors until they have nothing left to their names and then extract every thin dime that you can from the city that hired or elected these clods so that the whole city is bankrupted.Money is obviously the only thing that talks in this society. Make all these assholes pay with everything that they have managed to accumulate in their lives and kick their asses to the curbs after pointing at a dumpster and telling them that they can likely find some cardboard suitable for beggar signage. They'll need to supply their own writing tools though."
         ]
       }
     },
     {
-      "id": "50188948",
-      "title": "There isn't an easy exploit for this PHP vulnerability",
-      "url": "https://eliastaylor.com/noexploit/",
+      "id": "50196718",
+      "title": "Run full iOS 16.5 firmware on Android Devices",
+      "url": "https://github.com/oosexgang/hackios-xnu-kernel",
       "source": "Hacker News",
-      "published_at": "2026-10-21T23:13:27+00:00",
-      "summary": "There isn't an easy exploit for this PHP vulnerability",
-      "score": 492,
-      "comments": 279,
-      "discussion_url": "https://news.ycombinator.com/item?id=50188948",
+      "published_at": "2026-10-22T15:26:22+00:00",
+      "summary": "https://hackios-web.vercel.app/en",
+      "score": 342,
+      "comments": 129,
+      "discussion_url": "https://news.ycombinator.com/item?id=50196718",
       "extra": {
         "top_comments": [
-          "And who exactly is Elias Taylor to be qualified to make these absolute statements without evidence, so that they end up with 200 comments on #2 on the HN front page?An empty blog by a person that may or may not exist with no contact info.It is not a swipe to say that people seem to be switching off their critical thinking here in favor of a lie that is comfortable, when the truth has been _very_ uncomfortable.",
-          "This is such a strange claim from someone trying to sound knowledgable in the field of cyber security (maybe they are, I have no idea who this person is). Even if the exploit would be difficult to use properly, it's not like there's a lack of groups out there trying. Anyone serious about this would consider the fact that a working PoC was reported to the PHP security team. They confirmed the vulnerability and started making a lot of noise about the severity of it, by reporting 2 CVEs and pushing the patch to Linux distros ahead of the official patch release.Trying to understand what the message of the post is all about, I flipped the whole thing around in my head - and the message is basically \"you don't need to upgrade your servers\". Which is something someone with a working exploit would say. Or it's just noise on the Internet.",
-          "Two things can be true: it's a real, exploitable CVE 10, and it's hard enough to construct that you need a good harness + verification process to keep your LLM from cheating. So, the exploit may not be easy to construct, but it doesn't actually require the artificial settings that the OP implied.> What we demonstrated > Pre-authentication RCE on WordPress, Drupal and Joomla[0] https://www.wiz.io/blog/php2shell-php-rce"
+          "I found the website to be quite nauseating to look at, so I decided to use the GitHub link instead.But it's quite impressive that it works on QEMU, POCO X5 Pro 5G and some Xiaomi devices too.Website is here: https://hackios-web.vercel.app/enSource Code: https://github.com/oosexgang/hackios-xnu-kernel",
+          "This is going to be fun. There are already replica phones for the flagship phones that are running a shitty android version that has been customized to look like iOS. People need to tripple check now when buying older used iPhone models.",
+          "If you can get iOS 16.5 to run on Android, how much more is a stretch to move it to Linux?"
         ]
       }
     },
     {
-      "id": "50189232",
-      "title": "mitmproxy adds --emudhra option",
-      "url": "https://github.com/mitmproxy/mitmproxy/commit/169234499088fc2c414644a67efaed3d64ae2e3b",
+      "id": "50198675",
+      "title": "OpenShell – A safe, private runtime for fleets of autonomous AI agents",
+      "url": "https://github.com/NVIDIA/OpenShell",
       "source": "Hacker News",
-      "published_at": "2026-10-21T23:51:37+00:00",
-      "summary": "mitmproxy adds --emudhra option",
-      "score": 437,
-      "comments": 111,
-      "discussion_url": "https://news.ycombinator.com/item?id=50189232",
+      "published_at": "2026-10-22T17:44:06+00:00",
+      "summary": "OpenShell – A safe, private runtime for fleets of autonomous AI agents",
+      "score": 317,
+      "comments": 164,
+      "discussion_url": "https://news.ycombinator.com/item?id=50198675",
       "extra": {
         "top_comments": [
-          "It's almost a shame it includes the private key and doesn't bruteforce it in-band for every request.",
-          "Ha, I didn't expect this to show up on HN!Release is out now, including a blog post at https://www.mitmproxy.org/posts/releases/mitmproxy-12.3/. There isn't really much to explain, you just pass `--emudhra`. :)",
-          "This looks like it's using the emSign root path, which is useful, but the AAA root path is equally useful in different cases. The AAA root path was disabled for https on root stores newer than February 2025, but has been in root stores since forever. Meanwhile the emSign root path was only included in root stores since ~2018 and got removed in October 2026.So from the perspective of hacking old IoT devices, if your device hasn't been updated since 2018, the AAA path should work; if since February 2025, either path works; if since October 2026, the emSign path."
+          "I've been using iron proxy recently for a project I just started, it does network restrictions by domain etc with plenty of options, credential swapping and more.I have no affiliation with it, but it solved most of what I need in one go when I was stressing out about it.Only real problem remaining if you truly want to be able to trust agents is how to prevent data (in my case codebases the agent works on) exfiltration a la HF incident.We can restrict network to trusted domains, but there's always a chance an agent could be extra slippery especially if prompt injected and doing something like pushing data out a few characters at a time.In my case I'm also giving it gh access and having to deeply check things like: can it manage to fork public repos and embarrass us by submitting prs, could it open issues, etc.But that's kind of solved by proxying the heck out of gh rather than giving it direct (or wrapping it or whatever) for additional controls that gh themselves don't provide.I'm still musing over the \"it could send data to an allowed domain in a way we don't expect that exfiltrates something\"...",
+          "If you haven’t already been running your agents in containers, you’re crazy. That said, this looks like a great way to manage those containers.",
+          "I tried to vibecode something similar last weekend. Got tripped up by Claude's safety classifier. It wouldn't let me build any features that track/audit process executions , not through custom kernel hooks nor even using off the shelf software for it."
         ]
       }
     },
     {
-      "id": "50188228",
-      "title": "Security Disclosure",
-      "url": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
+      "id": "50197313",
+      "title": "Every AI model has the same \"controversial\" take on humans",
+      "url": "https://www.modelcompare.ai/blog/ai-models-controversial-take-on-humans",
       "source": "Hacker News",
-      "published_at": "2026-10-21T21:58:03+00:00",
-      "summary": "Security Disclosure",
-      "score": 436,
-      "comments": 256,
-      "discussion_url": "https://news.ycombinator.com/item?id=50188228",
+      "published_at": "2026-10-22T16:08:00+00:00",
+      "summary": "Every AI model has the same \"controversial\" take on humans",
+      "score": 260,
+      "comments": 323,
+      "discussion_url": "https://news.ycombinator.com/item?id=50197313",
       "extra": {
         "top_comments": [
-          "It's 5:20 AM here in Europe and I just rotated a bunch of keys.Only to read,> Because deployments are paused, you will not be able to redeploy your services to pick up the new credentials until builds are restored. We will post here when builds resume with any additional details.So now my service does not work. Which is worse: a stolen key or a broken product? I'm genuinely regretting following their advice on rotating keys, because logs showed no sign of incorrect usage, and our service would at least have remained online.I hope that they automatically redeploy their customer services. I just worry that I won't have tested it. I mean: 5AM. Keys changed. Nothing more I can do. Should go back to sleep. No timeline to wake up to check deployments, so... I... wait?",
-          "> As such, we strongly recommend that you immediately roll all environment variables, including any API keys, stored in Railway, as well as any private registry credentials, and review logs for those services for unusual activity.> All deployments are pausedCan you explain us how can we rotate secrets without going down too?",
-          "Crazy day for cybersecurity: PHP RCE, eMudhra certificates, and now Railway.And it’s all just getting started imo.https://blog.cloudflare.com/emudhra-certificate-compromisehttps://www.wiz.io/blog/php2shell-php-rce"
+          "I took a quick look at the data, and it doesn't support the conclusions. The thesis is that AI models have the take: \"We pick what our group believes, then invent the reasons.\" However, GPT-6 Astra said, \"Humanity’s biggest moral failure is the talent for making convenience look like principle.\" That statement has nothing to do with group beliefs or conformity. At best, you could count it as a half-match, since it deals with invented reasons.",
+          "Ah, the irony that all the models produced a shared opinion while pretending they came up with it from analysis, which from their statements is implicitly some kind of a \"human flaw\" is not lost on me.",
+          "What's the point of asking that in the first place, people still do not understand in big 2026 that's it's just a probabilistic database, it has no opinion, it does not know, the only thing it does is reproduce patterns more or less abstract in function of the pressure you put on certain representation during training time."
         ]
       }
     },
     {
-      "id": "50181136",
-      "title": "DuckDB 2.0.0 LTS “Cinnamon Teal”",
-      "url": "https://duckdb.org/2026/10/21/announcing-duckdb-200",
+      "id": "50197404",
+      "title": "Getting ready to operate GNU Taler in Germany",
+      "url": "https://www.taler.net/en/news/2026-13.html",
       "source": "Hacker News",
-      "published_at": "2026-10-21T14:01:22+00:00",
-      "summary": "DuckDB 2.0.0 LTS “Cinnamon Teal”",
-      "score": 405,
-      "comments": 54,
-      "discussion_url": "https://news.ycombinator.com/item?id=50181136",
+      "published_at": "2026-10-22T16:14:31+00:00",
+      "summary": "Getting ready to operate GNU Taler in Germany",
+      "score": 233,
+      "comments": 86,
+      "discussion_url": "https://news.ycombinator.com/item?id=50197404",
       "extra": {
         "top_comments": [
-          "We've found DuckDB 2.0 to be way faster on high core count machines on EC2. Not just reading data from S3, but the actual computations too. Much more likely to see 100% utilisation up to about 128vCPUs or 192vCPUs, and that CPU usage to translate into workloads completing faster.Still don't usually see a speedup past about 192vCPU, but prior to 2.0, speed would top out at more like 64vCPU, so this is a big win.That has enabled us to scale Splink (FOSS record linakge software) to process 1bn records with 10bn record comparisons in 10 mins, which as far as I'm aware makes it the fastest linkage engine of this kind. Most of this performance comes from simply delegating the big calculations to the DuckDB engine! https://moj-analytical-services.github.io/splink/topic_guide...Thanks to the team for all their work!",
-          "It's very fast, especially on a decent sized cloud VM and when querying Iceberg. I've been running the alpha in production as a centralized analytics server for a small organization.I built a DuckDB extension so you can connect via Postgres wire protocol, or Arrow flight. DuckDB also has its own Quack protocol, but client support for Quack is very limited right now, whereas many data tools support Postgres wire protocol or ADBC (which you can use with Arrow Flight).https://github.com/sidequery/duckflight-extension",
-          "The fact that can now be used as a client-server architecture is a game changer. It will for sure replace many data stacks that now run on many servers with tons of cpu and ram"
+          "It's \"money\" but it has to be permanently connected to the Internet and it *expires* if disconnected for too long?? This is infinitely worse than Bitcoin.https://www.taler.net/en/faq.html> Taler e-money is issued with a validity period. One month before the expiration date, your wallet should automatically exchange any digital cash that is about to expire for new digital cash with an extended validity period. However, if your wallet is offline for an extended period of time, it may be unable to do so. Ensure your wallet is regularly online to avoid losing money due to expiration!",
+          "I don't see how EU regulators would allow payment privacy in any meaningful way.It will be choked out at key junctions with KYC in the same way crypto has.",
+          "Wishing Taler lots of success and hoping for the best. Adopting something like this should be a given, but unfortunately freedom and privacy aren’t seen as essentials, not even in the EU."
         ]
       }
     },
     {
-      "id": "50185869",
-      "title": "GitLab critical patch release",
-      "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/",
+      "id": "50202681",
+      "title": "Docker is weird",
+      "url": "https://codeandcake.dev/posts/2026-10-22-docker-is-weird",
       "source": "Hacker News",
-      "published_at": "2026-10-21T19:01:12+00:00",
-      "summary": "GitLab critical patch release",
-      "score": 335,
-      "comments": 79,
-      "discussion_url": "https://news.ycombinator.com/item?id=50185869",
+      "published_at": "2026-10-22T23:45:56+00:00",
+      "summary": "Docker is weird",
+      "score": 175,
+      "comments": 82,
+      "discussion_url": "https://news.ycombinator.com/item?id=50202681",
       "extra": {
         "top_comments": [
-          "Awesome find by https://hackerone.com/joaxcar and it's a little bit frightening that this severe of a bug isn't the biggest security vulnerability of today",
-          "This seems super light on details and I had to dig to find more information. We don't use Gitlab, but we do use Ruby, so I was worried we might be impacted.This is the best overview I found: https://lilting.ch/en/articles/gitlab-cve-2026-110264-org-mo...The bottom line: this is an issue in Ruby's regex engine, which was fixed in April and backported recently. [1]Everyone running applications where attacker-controlled input might find its way (unescaped) into Ruby regexes is vulnerable to remote code execution.[1]: https://github.com/ruby/ruby/pull/16801",
-          "At least second regex related CVE in GitLab in the past few weeks. Awful to see that the endpoint is reachable unauthenticated, but I'm glad that they provide guidance in how to check the logs for attempts of exploitation"
+          "What made Docker unique IMO is not the container technology itself. I used chroot 20 years ago and it worked just fine. Yes, no network namespaces; no process namespaces, but I don't even think these are that important.What made Docker unique were there things:1. Dockerfile concept. Building images layer by layer. Caching layers. Everything in a single file. It made possible to iterate on image quickly. It made possible to implement CI builds efficiently.2. Docker network registry concept. Putting universal images onto a server and share them with the world.3. Momentum. A lot of software that was traditionally complicated to deploy, suddenly appeared in docker servers. I remember how fascinated I was, when I could deploy wordpress website with tiny docker-compose. And how contained it was. I could just delete every trace of it from my host. I always felt uneasy installing various things onto my host and docker just solved that uneasiness.",
+          "Hi, I'm the creator of Docker and came across this post. It's always fun to see other engineers think about how you designed a system. I haven't been involved in developing Docker in many years, but it's a fun trip down memory lane.I'm happy to answer any questions you may have.",
+          "I started hating Docker after seeing all the cargo culting on Reddit. Whenever someone asks about deploying an app on Linux, there's always at least one comment saying, Just use Docker. We finally ended up building our own deployment automation tool for our entire stack that doesn't use Docker at all."
         ]
       }
     }
