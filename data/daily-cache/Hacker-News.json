@@ -1,21 +1,21 @@
 {
-  "cached_at": "2026-10-24T11:00:31.451005+08:00",
+  "cached_at": "2026-10-24T12:52:15.391614+08:00",
   "articles": [
     {
-      "id": "50211474",
-      "title": "Today, we hacked what we'd set out to hack: the iPhone",
-      "url": "https://blog.calif.io/p/iphone",
+      "id": "50202285",
+      "title": "Local Wikipedia: Wikipedia, but only for things a half hour walk from you",
+      "url": "https://edjefferson.com/localwiki/",
       "source": "Hacker News",
-      "published_at": "2026-10-23T16:21:50+00:00",
-      "summary": "Today, we hacked what we'd set out to hack: the iPhone",
-      "score": 767,
-      "comments": 518,
-      "discussion_url": "https://news.ycombinator.com/item?id=50211474",
+      "published_at": "2026-10-22T23:01:18+00:00",
+      "summary": "Local Wikipedia: Wikipedia, but only for things a half hour walk from you",
+      "score": 1311,
+      "comments": 228,
+      "discussion_url": "https://news.ycombinator.com/item?id=50202285",
       "extra": {
         "top_comments": [
-          "It’s a pity we gave in to the “ecosystem” play by these huge companies.. even if I jailbreak my iOS and never let it update.. Apple can easily detect the jailbreak and lock me out of anything iCloud, and iMessage and such. iPhone would be one glorious iPod touch after that.. :-(Seeing all these gives me the same energy of early days of jailbroken Android phones where one could become root and do whatever with the hardware… I stopped considering such tinkering because I got tired of finding those little tweaks and fixes on forums like xda every time something was updated. With the LLMs capable of automating that tool, I might find those old school way of mobile phones again…",
-          "I just feel a bit sad and impotent that a number of security researchers outside the circle cannot join their \"yo we found more crazy bugs\" party because simply frontier labs only give access to those models with \"Red Team\" availability to the inner circle members/companies.Now their \"trusted cyber access\" program is moat rather than safeguard.",
-          "the videos just don't hit the same without the dancing anime girl and the electronic dance music."
+          "The nearest Wikipedia entry to me is about a 3 hours 15 minute walk away, the nearest town. But there are so many interesting things closer, perhaps I should add them to the wiki. Twenty minutes to the north there's a pleasant shady area at the bottom of a canyon with a fallen log with a curve that fits my buttocks nicely. Fifteen minutes to the southeast there is a dead elk cow that has only been 3/4 eaten by the local coyotes, etc., and has a quite remarkable odor. To the northeast is the spot where I found a perfect arrowhead, the prize of my collection. But maybe it's better for me to horde these places to myself.",
+          "Weird psychological quirk: otherwise banal articles seem much more pertinent when they happen to be nearby (I just read about a random plane crash from decades ago but felt very invested in it, due to proximity).Wonder if this is related to the biological phenomena of humans tending to care more about humans who resemble themselves than those who don't (homophily)",
+          "This is a great idea but I'd definitely make the distance configurable. Where I am right now would need several hours walking to reach anywhere Wikipedia worthy but if I expanded to say a 15km circle there's probably a couple of places of interest.Meanwhile if someone lives in a city they'll get loads of results.EDIT: actually this is just a wrapper around wikipedia's nearby feature I think. I tried a couple of places and they give identical results.https://en.wikipedia.org/wiki/Special:Nearby#/coord/15.90721..."
         ]
       }
     },
@@ -26,14 +26,32 @@
       "source": "Hacker News",
       "published_at": "2026-10-23T16:59:08+00:00",
       "summary": "https://www.kimi.com/code/docs/en/kimi-code/models.htmlhttps://artificialanalysis.ai/models/kimi-k3-1-prohttps://www.modelcompare.ai/blog/china-open-source-ai",
-      "score": 756,
-      "comments": 468,
+      "score": 799,
+      "comments": 484,
       "discussion_url": "https://news.ycombinator.com/item?id=50212065",
       "extra": {
         "top_comments": [
-          "Kimi is so much more blunt and argumentative than USA models.it's so funny, it will say things like. \"We've already been over this 3 times and you refuse to accept my advice, asking the same question another way won't change the answer.\"So funny",
-          "If you are expecting any sort of usable limits on their subscription plan I suggest adjusting your expectations. I subscribed to $99 a month plan and within 47 minutes with one session (not asking for swarms or anything) was limited by 5-hour quota.",
-          "I did some tests. I found it interesting that in the reasoning content the model identifies itself as Kimi by moonshot and sometimes it assumes ChatGPT as identity. Then sometimes it references the need to be approved by \"the evaluator\", other times it references global system guidelines / moonshot guidelines, and something about an phantom instruction line being \"you are an assistant responding in an API\" or something like that."
+          "I did some tests. I found it interesting that in the reasoning content the model identifies itself as Kimi by moonshot and sometimes it assumes ChatGPT as identity. Then sometimes it references the need to be approved by \"the evaluator\", other times it references global system guidelines / moonshot guidelines, and something about an phantom instruction line being \"you are an assistant responding in an API\" or something like that.",
+          "Fascinating that we’re converging on AI safety and alignment in time across jurisdictions. The cybersecurity approach taken here is interesting because should the model be opened it’s still not dealignable because it just doesn’t know enough.The slow warming of the water is a good approach. I’ve been using abliteration.ai’s cybersecurity models to pentest my own software and it produces much more usable defensive results. Opus 5.5 can fix everything but the guardrails trigger too easily.The Fable ban affair was a nightmare for defensive cybersecurity. As far as I’m concerned we’re already in the world of Void Star and Cloudbreaker is here.",
+          "Here are the results from the Pac-Man bench. It does pretty well for the price, around Sonnet 5.5.Kimi K3.1 Pro ties Sonnet 5.5 at 93, for $0.68 and 11 min vs Sonnet's $1.61 and 14 min.Kimi K3.1 Pro: https://jonclegg.github.io/pacman-bakeoff/#kimi-k3.1-proClaude Sonnet 5.5: https://jonclegg.github.io/pacman-bakeoff/#claude-sonnet-5-5"
+        ]
+      }
+    },
+    {
+      "id": "50211474",
+      "title": "Today, we hacked what we'd set out to hack: the iPhone",
+      "url": "https://blog.calif.io/p/iphone",
+      "source": "Hacker News",
+      "published_at": "2026-10-23T16:21:50+00:00",
+      "summary": "Today, we hacked what we'd set out to hack: the iPhone",
+      "score": 792,
+      "comments": 526,
+      "discussion_url": "https://news.ycombinator.com/item?id=50211474",
+      "extra": {
+        "top_comments": [
+          "Very cool demos, but now I'm interested to know: does enabling Lockdown mode help at all against these exploits? It'll theoretically protect against a lot of common attack vectors, but I'm curious about its real-life effectiveness.",
+          "#3 is so nice, I want root access to my phone. Does anyone know if doing this can lock Apple out from updating/removing it?",
+          "What's with iOS and pdfs pwning them? Reminds me of the ForcedEntry in Pegasus.https://projectzero.google/2022/03/forcedentry-sandbox-escap...https://www.trendmicro.com/en_gb/research/21/i/analyzing-peg..."
         ]
       }
     },
@@ -44,8 +62,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-23T12:28:47+00:00",
       "summary": "https://www.macrumors.com/2026/10/23/apple-music-has-a-hidde...",
-      "score": 617,
-      "comments": 203,
+      "score": 664,
+      "comments": 210,
       "discussion_url": "https://news.ycombinator.com/item?id=50207910",
       "extra": {
         "top_comments": [
@@ -56,38 +74,38 @@
       }
     },
     {
-      "id": "50214218",
-      "title": "Now Google says it might use your Gmail and Google Photos data to target ads",
-      "url": "https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update",
+      "id": "50213925",
+      "title": "Dessa: Conversation Model trained only on speech",
+      "url": "https://block.xyz/dessa",
       "source": "Hacker News",
-      "published_at": "2026-10-23T19:34:15+00:00",
-      "summary": "Now Google says it might use your Gmail and Google Photos data to target ads",
-      "score": 299,
-      "comments": 159,
-      "discussion_url": "https://news.ycombinator.com/item?id=50214218",
+      "published_at": "2026-10-23T19:09:54+00:00",
+      "summary": "Dessa: Conversation Model trained only on speech",
+      "score": 306,
+      "comments": 114,
+      "discussion_url": "https://news.ycombinator.com/item?id=50213925",
       "extra": {
         "top_comments": [
-          "> About DMA & your linked services> The Digital Markets Act (DMA) is a European Union (EU) law that took effect on March 6, 2024. As a result of Article 5(2) of the DMA, in the EU, Google offers you the choice to link certain Google services.> Those Google services include: Search YouTube Ad services Google Play Chrome Google Shopping Google Maps > You can choose to link all these services, choose to have none of these services linked, or choose which of these individual services you want to link.https://support.google.com/accounts/answer/14202510?hl=enSo at least European users will be able to get personalized search and photos results without also having to share that data for personalized ads.",
-          "PSA: Getting out of Google Photos is both easy and super rewarding if you can run Immich and use Google Takeout. It’s also better than Google Photos.https://jaisenmathai.com/articles/my-ridiculously-robust-pho...",
-          "Turn it off here: https://google.com/search-personalization"
+          "The conversation examples are impressive but this made me say holy shit out loud: \"it runs locally on a MacBook Pro M4 Max or better. And we figured out how to train Dessa on only one NVIDIA GB200 NVL72.\"If it really can replicate that low latency + that expressiveness on local devices, that's one heck of an accomplishment for \"indie\" AI.",
+          "It sounds like it is trained on a lot of podcasts, judging by a quick few second skims over their demo tracks.Also, the trend of posting on HN with much more sensationalist title first, getting to the front page, then getting the title adjusted by a moderator should probably be penalized; how is 'most authentic ever' not a marketing term? (not just this post, but a bunch of posts recently got to frontpage by making unreasonable claims)",
+          "These bidi/duplex demos always come off as overly artificial to me. It's cool that the model can speak at the same time as you instead of taking turns, but training it to interrupt as much as possible isn't the way to do it. In the very first example, did anyone here find the laugh after the \"winter\" answer to be convincing? What was the need for it? Why did the human speaker not get to finish a single sentence or finish a thought before the model took over with a monologue?"
         ]
       }
     },
     {
-      "id": "50213925",
-      "title": "Dessa: the most authentic full-duplex speech model ever built",
-      "url": "https://block.xyz/dessa",
+      "id": "50207115",
+      "title": "Is this the new cyber normal?",
+      "url": "https://drew.silcock.dev/blog/is-this-the-new-cyber-normal/",
       "source": "Hacker News",
-      "published_at": "2026-10-23T19:09:54+00:00",
-      "summary": "Dessa: the most authentic full-duplex speech model ever built",
-      "score": 268,
-      "comments": 109,
-      "discussion_url": "https://news.ycombinator.com/item?id=50213925",
+      "published_at": "2026-10-23T11:04:53+00:00",
+      "summary": "Is this the new cyber normal?",
+      "score": 151,
+      "comments": 168,
+      "discussion_url": "https://news.ycombinator.com/item?id=50207115",
       "extra": {
         "top_comments": [
-          "> LLMs need an insane amount of text. Dessa learned language from hundreds of times fewer words (in fairness, LLMs also have to learn C++ and whatever the hell Angular is).Now that a larger proportion of text is AI, I'm appreciating human-written text more and more; this got a good chuckle out of me.",
-          "The conversation examples are impressive but this made me say holy shit out loud: \"it runs locally on a MacBook Pro M4 Max or better. And we figured out how to train Dessa on only one NVIDIA GB200 NVL72.\"If it really can replicate that low latency + that expressiveness on local devices, that's one heck of an accomplishment for \"indie\" AI.",
-          "It sounds like it is trained on a lot of podcasts, judging by a quick few second skims over their demo tracks.Also, the trend of posting on HN with much more sensationalist title first, getting to the front page, then getting the title adjusted by a moderator should probably be penalized; how is 'most authentic ever' not a marketing term? (not just this post, but a bunch of posts recently got to frontpage by making unreasonable claims)"
+          "There are two aspects: first that there is currently a much higher pace of critical vulnerabilities and exploits being discovered, and second that there is a much shorter window between discovery and large-scale exploitation.People are saying the pace will settle down once LLMs find and fix all the bugs. Okay, sure, if you want to believe that sort of thing, but that still leaves the much shorter time window, and that's not going to go away anytime soon.If you're on the side of the industry where your job or hobby involves breaking things, this is all very exciting. But if you're on the side of the industry where your job is to prevent things from being broken, then it really sucks.I lost a full day yesterday because some big players discovered a thing, told other big players about it, \"oopsed\" enough public information to let everyone else know about it, and then left everyone else to figure out what to do with almost no information to act upon.This cycle has happened several times this year now. If you're on the short list of big hosting providers, you get advance notice of what's coming and early fixes; if you're not, sucks to be you, hope you didn't have any plans today.For people like me, this is just yet one more way LLMs are making my life materially worse.",
+          "Everything I've read indicates that yes, this is the new normal.When Mythos was first announced, pretty much every security expert I talk to freaked directly out. A significant portion of my job now revolves around mitigating the impact of AI-generated exploits.The rate at which we're churning out AI-generated code is going to make this worse, too, because AI-generated code is kind of notoriously terrible at security.",
+          "I have often whined about the quality (or lack, thereof) of today's software, but I certainly have no room to be smug. I recently turned an LLM loose on a number of mature packages that I wrote, and would have sworn were \"perfect,\" and it found issues (thankfully, none, serious, but issues, nonetheless).I think LLMs are a gamechanger. I was just talking to a friend of mine, last night, and he pointed out that it would have been quite difficult for a human (on their own) to find the PHP2Shell issue, but he thinks that multiple LLMs probably found it (it seems that some people knew about it before it was initially \"discovered\").I think that we, as programmers, need to run LLMs on our own code -no matter what we think of them, for authoring the code- and do everything we can, to batten down the hatches."
         ]
       }
     },
@@ -98,8 +116,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-23T21:21:47+00:00",
       "summary": "CVE Tracker",
-      "score": 115,
-      "comments": 48,
+      "score": 135,
+      "comments": 55,
       "discussion_url": "https://news.ycombinator.com/item?id=50215530",
       "extra": {
         "top_comments": [
@@ -111,37 +129,19 @@
     },
     {
       "id": "50216791",
-      "title": "Evolving Threat: http2shell is an RCE in node, Python, and more",
+      "title": "Evolving Threat: http2shell is an RCE in Node, Python, and more",
       "url": "https://nitter.click/AikidoSecurity/status/2113759110625906950?__galadriel=lPmlGl9id4oAd5UeBwMhlYKArHyr6lR2IDGujPwB5HV2kQ1aLoPWFd5A9sGuzNcmrp8fUso8qygmHcKTDZ8MNHWqQ3bDJcycV87xp_0VypzQLYj6O_RRHlZuQqj33oASGY2YLSoAiMjeOZN40h7Stf8AG7DPrGZbAPVKUXy36HoMudRbvwF3_r2uYNmfJMhpKzywQDM6Ab8",
       "source": "Hacker News",
       "published_at": "2026-10-23T23:30:17+00:00",
-      "summary": "Evolving Threat: http2shell is an RCE in node, Python, and more",
-      "score": 103,
-      "comments": 52,
+      "summary": "Evolving Threat: http2shell is an RCE in Node, Python, and more",
+      "score": 128,
+      "comments": 68,
       "discussion_url": "https://news.ycombinator.com/item?id=50216791",
       "extra": {
         "top_comments": [
           "This one again feels overblown, at least for servers. I just checked an org of over 200 GitHub repos. Node, Python, and C#. None of them are vulnerable... because none of them actually call the Brotli decoder. It's just not enabled by default on the server side, by the platforms themselves. This is much like the PHP bugs, where specific conditions have to be in play before you're actually vulnerable.For clients? Sure, that's a bigger risk. Patch them. But bad guys aren't attacking your clients unless the clients connect to them. Don't stay up late to fix this.(And yes, .NET is included here, because Microsoft's Brotli module is a binding for Google's vulnerable reference implementation.)",
-          "Someone already created this website, for some reason,https://broccoli2shell.com/",
-          "I could do without every memory bug getting a cute sensational name and marketing push, I have to say."
-        ]
-      }
-    },
-    {
-      "id": "50212507",
-      "title": "Air Purifiers as White Noise Machines",
-      "url": "https://www.jefftk.com/p/air-purifiers-as-white-noise-machines",
-      "source": "Hacker News",
-      "published_at": "2026-10-23T17:28:36+00:00",
-      "summary": "Air Purifiers as White Noise Machines",
-      "score": 75,
-      "comments": 97,
-      "discussion_url": "https://news.ycombinator.com/item?id=50212507",
-      "extra": {
-        "top_comments": [
-          "An air purifier is the best noise machine for me, much better than the white noise machines with the tinny speakers. Even the brown noise setting on those isn't nearly deep enough to let me sleep.",
-          "Yeah we do this at home. Bedrooms plus the great room on the kitchen side.It might not be guaranteed to help, but it sure doesn't hurt since it's cleaning the air anyway.",
-          "I've been doing this for literally decades. Now when I go to someone else's home without an air purifier it feels painfully quiet AND I can almost feel the stale air. I much prefer it even if it's just some minor placebo effect."
+          "I could do without every memory bug getting a cute sensational name and marketing push, I have to say.",
+          "I feel as though this should be googlebrotli2shell, not http2shell. Google deserves to take a bit of a reputational hit for this. This is a basic memory safety violation, from the same organization that does wuffs, that promotes Rust for memory safety, that has Carbon. zstd has high quality rust implementations and is from roughly the same time.On top of that, the brotli library saw no releases for almost a full year, with the fix for this vulnerability being committed back in February. Google builds from main for all their projects, so were unaffected, but open source releases are a complete afterthought. Over 100 commits with miscellaneous fixes left languishing until a security incident forces a release."
         ]
       }
     }
