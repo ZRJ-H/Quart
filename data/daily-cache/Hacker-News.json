@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-10-23T13:09:07.673025+08:00",
+  "cached_at": "2026-10-24T11:00:31.451005+08:00",
   "articles": [
     {
-      "id": "50195959",
-      "title": "Quad9 (DNS Resolver) to Exit France",
-      "url": "https://quad9.net/news/blog/au-revoir-france/",
+      "id": "50211474",
+      "title": "Today, we hacked what we'd set out to hack: the iPhone",
+      "url": "https://blog.calif.io/p/iphone",
       "source": "Hacker News",
-      "published_at": "2026-10-22T14:32:38+00:00",
-      "summary": "Quad9 (DNS Resolver) to Exit France",
-      "score": 1076,
-      "comments": 383,
-      "discussion_url": "https://news.ycombinator.com/item?id=50195959",
+      "published_at": "2026-10-23T16:21:50+00:00",
+      "summary": "Today, we hacked what we'd set out to hack: the iPhone",
+      "score": 767,
+      "comments": 518,
+      "discussion_url": "https://news.ycombinator.com/item?id=50211474",
       "extra": {
         "top_comments": [
-          "(context: I'm the CTO of Quad9 and am one of the people dealing with the lawyers)There is an understandable focus on \"how are you going to block French users\" when we have also claimed that geoIP blocking is insufficient for selectively denying resolution for certain names - we understand this conflict, but we think it is energy spent in the wrong place.It is probable that we will use geoIP filters to block French users from our services after November 24. We could apply this same geoIP filter list now to selectively block French users from reaching the sites that we've been told to make unavailable. But this would corrupt our core premise, which is that the DNS is not the right place for this to happen, and if we comply within France to meet the requirement then we accept the worst eventual outcome for users and we still do not have legally perfect coverage. We wish to first remain consistent with our core mission, and secondarily we must remain as close to compliance as we can to the legal constraints put upon us. By accepting the demands for blocking, we would admit that such demands are permissible within our mission - that we will act on behalf of companies (or others) to create ineffective and mis-directed regimes of content constraint.We would be admitting that we think this solves the problem - it does not. We would be admitting that we will do this for an ever-increasing number of names - we will not. We would be permitting these methods to be applied for more areas of filtering such as moral, religious, social, or political reasons - we must not.So we accept that there is the possibility that we will have errors in our blockade, but in this case (blocking French users) we maintain consistency with our stated mission of integrity of the DNS. We would rather there be a clear distinction made for users of our services: you get the DNS as you (the user) expects, or if Quad9 is forced to pollute the service with unexpected and arbitrary number of fragmentation demands, then we will not offer the services at all.The underlying issue is not ONLY that geoIP blocking is ineffective, but that the entire premise of any of these demands is inappropriately applied to DNS recursive resolution providers. We would hope that this discussion continues to be on the most fundamental of the disagreement we have with the outcome in this court case, not on the details of the technical implementation which have yet to be entirely decided and which can be tuned over time.",
-          "\"The plaintiff (Sony Music Entertainment GmbH) then used a VPN to access the blocked content from Germany in circumvention of the geoIP blocking. The court agreed with Sony in their assertions of noncompliance, and we were fined for contempt of court.\"Imagine doing everything possible to stop something. They then circumvent your protections with yet another service, and you get fined.I wish I could even suggest what someone could do against these trolls.This is like saying \"we put a lock requested by court and where found guilty because plantif hacked us after\"",
-          "Seems they're following Cisco similar move 2y ago of exiting the market> Canal+ has been busy getting web-blocking injunctions in France against sports piracy sites which stream sporting events for which it has the exclusive broadcast rights within the French market. It previously targeted DNS resolvers operated by Google, Cloudflare and Cisco.> All three unsuccessfully opposed the web-blocking orders. Google and Cloudflare, therefore, have been forced to instigate them. However, Cisco just pulled its OpenDNS service out of the French market entirely.(Per https://completemusicupdate.com/quad9-vows-to-fight-absurd-w..., https://completemusicupdate.com/opendns-pulls-plug-on-france...)"
+          "It’s a pity we gave in to the “ecosystem” play by these huge companies.. even if I jailbreak my iOS and never let it update.. Apple can easily detect the jailbreak and lock me out of anything iCloud, and iMessage and such. iPhone would be one glorious iPod touch after that.. :-(Seeing all these gives me the same energy of early days of jailbroken Android phones where one could become root and do whatever with the hardware… I stopped considering such tinkering because I got tired of finding those little tweaks and fixes on forums like xda every time something was updated. With the LLMs capable of automating that tool, I might find those old school way of mobile phones again…",
+          "I just feel a bit sad and impotent that a number of security researchers outside the circle cannot join their \"yo we found more crazy bugs\" party because simply frontier labs only give access to those models with \"Red Team\" availability to the inner circle members/companies.Now their \"trusted cyber access\" program is moat rather than safeguard.",
+          "the videos just don't hit the same without the dancing anime girl and the electronic dance music."
         ]
       }
     },
     {
-      "id": "50196718",
-      "title": "Run full iOS 16.5 firmware on Android Devices",
-      "url": "https://github.com/oosexgang/hackios-xnu-kernel",
+      "id": "50212065",
+      "title": "Kimi K3.1 Pro and K3.1 Pro Highspeed",
+      "url": "https://www.kimi.ai/blog/kimi-k3-1-pro",
       "source": "Hacker News",
-      "published_at": "2026-10-22T15:26:22+00:00",
-      "summary": "https://hackios-web.vercel.app/en",
-      "score": 362,
-      "comments": 133,
-      "discussion_url": "https://news.ycombinator.com/item?id=50196718",
+      "published_at": "2026-10-23T16:59:08+00:00",
+      "summary": "https://www.kimi.com/code/docs/en/kimi-code/models.htmlhttps://artificialanalysis.ai/models/kimi-k3-1-prohttps://www.modelcompare.ai/blog/china-open-source-ai",
+      "score": 756,
+      "comments": 468,
+      "discussion_url": "https://news.ycombinator.com/item?id=50212065",
       "extra": {
         "top_comments": [
-          "I found the website to be quite nauseating to look at, so I decided to use the GitHub link instead.But it's quite impressive that it works on QEMU, POCO X5 Pro 5G and some Xiaomi devices too.Website is here: https://hackios-web.vercel.app/enSource Code: https://github.com/oosexgang/hackios-xnu-kernel",
-          "This is going to be fun. There are already replica phones for the flagship phones that are running a shitty android version that has been customized to look like iOS. People need to tripple check now when buying older used iPhone models.",
-          "Can’t wait until someone's decide to tackle Garmin firmwares updates (porting to older or cheaper models what is purely market segmentation and not hardware limitations)."
+          "Kimi is so much more blunt and argumentative than USA models.it's so funny, it will say things like. \"We've already been over this 3 times and you refuse to accept my advice, asking the same question another way won't change the answer.\"So funny",
+          "If you are expecting any sort of usable limits on their subscription plan I suggest adjusting your expectations. I subscribed to $99 a month plan and within 47 minutes with one session (not asking for swarms or anything) was limited by 5-hour quota.",
+          "I did some tests. I found it interesting that in the reasoning content the model identifies itself as Kimi by moonshot and sometimes it assumes ChatGPT as identity. Then sometimes it references the need to be approved by \"the evaluator\", other times it references global system guidelines / moonshot guidelines, and something about an phantom instruction line being \"you are an assistant responding in an API\" or something like that."
         ]
       }
     },
     {
-      "id": "50198675",
-      "title": "OpenShell – A safe, private runtime for fleets of autonomous AI agents",
-      "url": "https://github.com/NVIDIA/OpenShell",
+      "id": "50207910",
+      "title": "Apple Music 404 Not Found",
+      "url": "https://music.apple.com/this-url-doesnt-exist",
       "source": "Hacker News",
-      "published_at": "2026-10-22T17:44:06+00:00",
-      "summary": "OpenShell – A safe, private runtime for fleets of autonomous AI agents",
-      "score": 343,
-      "comments": 182,
-      "discussion_url": "https://news.ycombinator.com/item?id=50198675",
+      "published_at": "2026-10-23T12:28:47+00:00",
+      "summary": "https://www.macrumors.com/2026/10/23/apple-music-has-a-hidde...",
+      "score": 617,
+      "comments": 203,
+      "discussion_url": "https://news.ycombinator.com/item?id=50207910",
       "extra": {
         "top_comments": [
-          "I've been using iron proxy recently for a project I just started, it does network restrictions by domain etc with plenty of options, credential swapping and more.I have no affiliation with it, but it solved most of what I need in one go when I was stressing out about it.Only real problem remaining if you truly want to be able to trust agents is how to prevent data (in my case codebases the agent works on) exfiltration a la HF incident.We can restrict network to trusted domains, but there's always a chance an agent could be extra slippery especially if prompt injected and doing something like pushing data out a few characters at a time.In my case I'm also giving it gh access and having to deeply check things like: can it manage to fork public repos and embarrass us by submitting prs, could it open issues, etc.But that's kind of solved by proxying the heck out of gh rather than giving it direct (or wrapping it or whatever) for additional controls that gh themselves don't provide.I'm still musing over the \"it could send data to an allowed domain in a way we don't expect that exfiltrates something\"...",
-          "> Agents are most useful when they can read files, install packages, call APIs, and use credentials. OpenShell gives them that capability without giving them unrestricted access to your data, secrets, or network.To me this obfuscates an oxymoron: the more access you give the agent the more capable it becomes. You can't have you cake and eat it, this tool allows to strike a balance I guess. But the blurp reads like it can do it all, but now secure. That can't be true.",
-          "If you haven’t already been running your agents in containers, you’re crazy. That said, this looks like a great way to manage those containers."
+          "I can't believe no one I've seen has called out the secret game! Go to Settings>About and then hold the center button for 5 seconds. I used to play so much of this bricks game in college when procrastinating from studying in the library.",
+          "Really is heartbreaking that the click wheel is such an incredible and satisfying user interface but technology has evolved such that we have no need for it anymore.",
+          "I chuckle knowing that somewhere in Apple there is an SRE or engineer who is getting paged for elevated 404 rates, and has to silence the pages hoping that no real missing page issue crops up while we all hit this page. :)"
         ]
       }
     },
     {
-      "id": "50197313",
-      "title": "Every AI model has the same \"controversial\" take on humans",
-      "url": "https://www.modelcompare.ai/blog/ai-models-controversial-take-on-humans",
+      "id": "50214218",
+      "title": "Now Google says it might use your Gmail and Google Photos data to target ads",
+      "url": "https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update",
       "source": "Hacker News",
-      "published_at": "2026-10-22T16:08:00+00:00",
-      "summary": "Every AI model has the same \"controversial\" take on humans",
-      "score": 307,
-      "comments": 349,
-      "discussion_url": "https://news.ycombinator.com/item?id=50197313",
+      "published_at": "2026-10-23T19:34:15+00:00",
+      "summary": "Now Google says it might use your Gmail and Google Photos data to target ads",
+      "score": 299,
+      "comments": 159,
+      "discussion_url": "https://news.ycombinator.com/item?id=50214218",
       "extra": {
         "top_comments": [
-          "I like the wallet example. Back in 2005, I found a wallet on the street with $3000 inside, and spent the rest of the day tracking down the owner. (Turned out it was a student's rent for her summer internship). Then maybe 2 months later I lost my wallet and a week later it showed up in my mailbox, cash and all -- someone took the time and their own money (as far as I could tell) to send it back to me.And just to prove that I'm an irrational human, for the last 21 years every time I pass the spot where I found the wallet I can't help but look around for a lost wallet, as if it's some magical spot where the universe deposits lost wallets.",
-          "Ah, the irony that all the models produced a shared opinion while pretending they came up with it from analysis, which from their statements is implicitly some kind of a \"human flaw\" is not lost on me.",
-          "I took a quick look at the data, and it doesn't support the conclusions. The thesis is that AI models have the take: \"We pick what our group believes, then invent the reasons.\" However, GPT-6 Astra said, \"Humanity’s biggest moral failure is the talent for making convenience look like principle.\" That statement has nothing to do with group beliefs or conformity. At best, you could count it as a half-match, since it deals with invented reasons."
+          "> About DMA & your linked services> The Digital Markets Act (DMA) is a European Union (EU) law that took effect on March 6, 2024. As a result of Article 5(2) of the DMA, in the EU, Google offers you the choice to link certain Google services.> Those Google services include: Search YouTube Ad services Google Play Chrome Google Shopping Google Maps > You can choose to link all these services, choose to have none of these services linked, or choose which of these individual services you want to link.https://support.google.com/accounts/answer/14202510?hl=enSo at least European users will be able to get personalized search and photos results without also having to share that data for personalized ads.",
+          "PSA: Getting out of Google Photos is both easy and super rewarding if you can run Immich and use Google Takeout. It’s also better than Google Photos.https://jaisenmathai.com/articles/my-ridiculously-robust-pho...",
+          "Turn it off here: https://google.com/search-personalization"
         ]
       }
     },
     {
-      "id": "50202681",
-      "title": "Docker is weird",
-      "url": "https://codeandcake.dev/posts/2026-10-22-docker-is-weird",
+      "id": "50213925",
+      "title": "Dessa: the most authentic full-duplex speech model ever built",
+      "url": "https://block.xyz/dessa",
       "source": "Hacker News",
-      "published_at": "2026-10-22T23:45:56+00:00",
-      "summary": "Docker is weird",
-      "score": 264,
-      "comments": 135,
-      "discussion_url": "https://news.ycombinator.com/item?id=50202681",
+      "published_at": "2026-10-23T19:09:54+00:00",
+      "summary": "Dessa: the most authentic full-duplex speech model ever built",
+      "score": 268,
+      "comments": 109,
+      "discussion_url": "https://news.ycombinator.com/item?id=50213925",
       "extra": {
         "top_comments": [
-          "Hi, I'm the creator of Docker and came across this post. It's always fun to see other engineers think about how you designed a system. I haven't been involved in developing Docker in many years, but it's a fun trip down memory lane.I'm happy to answer any questions you may have.",
-          "What made Docker unique IMO is not the container technology itself. I used chroot 20 years ago and it worked just fine. Yes, no network namespaces; no process namespaces, but I don't even think these are that important.What made Docker unique were there things:1. Dockerfile concept. Building images layer by layer. Caching layers. Everything in a single file. It made possible to iterate on image quickly. It made possible to implement CI builds efficiently.2. Docker network registry concept. Putting universal images onto a server and share them with the world.3. Momentum. A lot of software that was traditionally complicated to deploy, suddenly appeared in docker servers. I remember how fascinated I was, when I could deploy wordpress website with tiny docker-compose. And how contained it was. I could just delete every trace of it from my host. I always felt uneasy installing various things onto my host and docker just solved that uneasiness.",
-          "I prefer Podman most of the time, but Docker is/was amazing and a great DX put on top of the so called \"5 different linux kernel features in trenchcoat\". That's the selling point, it's super lightweight and takes full advantage of the OS features that were already there (or being developed) but were awkward to use and required tons of specialized knowledge."
+          "> LLMs need an insane amount of text. Dessa learned language from hundreds of times fewer words (in fairness, LLMs also have to learn C++ and whatever the hell Angular is).Now that a larger proportion of text is AI, I'm appreciating human-written text more and more; this got a good chuckle out of me.",
+          "The conversation examples are impressive but this made me say holy shit out loud: \"it runs locally on a MacBook Pro M4 Max or better. And we figured out how to train Dessa on only one NVIDIA GB200 NVL72.\"If it really can replicate that low latency + that expressiveness on local devices, that's one heck of an accomplishment for \"indie\" AI.",
+          "It sounds like it is trained on a lot of podcasts, judging by a quick few second skims over their demo tracks.Also, the trend of posting on HN with much more sensationalist title first, getting to the front page, then getting the title adjusted by a moderator should probably be penalized; how is 'most authentic ever' not a marketing term? (not just this post, but a bunch of posts recently got to frontpage by making unreasonable claims)"
         ]
       }
     },
     {
-      "id": "50197404",
-      "title": "Getting ready to operate GNU Taler in Germany",
-      "url": "https://www.taler.net/en/news/2026-13.html",
+      "id": "50215530",
+      "title": "CVE Tracker",
+      "url": "https://cve.0xosprey.com/",
       "source": "Hacker News",
-      "published_at": "2026-10-22T16:14:31+00:00",
-      "summary": "Getting ready to operate GNU Taler in Germany",
-      "score": 244,
-      "comments": 99,
-      "discussion_url": "https://news.ycombinator.com/item?id=50197404",
+      "published_at": "2026-10-23T21:21:47+00:00",
+      "summary": "CVE Tracker",
+      "score": 115,
+      "comments": 48,
+      "discussion_url": "https://news.ycombinator.com/item?id=50215530",
       "extra": {
         "top_comments": [
-          "It's \"money\" but it has to be permanently connected to the Internet and it *expires* if disconnected for too long?? This is infinitely worse than Bitcoin.https://www.taler.net/en/faq.html> Taler e-money is issued with a validity period. One month before the expiration date, your wallet should automatically exchange any digital cash that is about to expire for new digital cash with an extended validity period. However, if your wallet is offline for an extended period of time, it may be unable to do so. Ensure your wallet is regularly online to avoid losing money due to expiration!",
-          "I don't see how EU regulators would allow payment privacy in any meaningful way.It will be choked out at key junctions with KYC in the same way crypto has.",
-          "Wishing Taler lots of success and hoping for the best. Adopting something like this should be a given, but unfortunately freedom and privacy aren’t seen as essentials, not even in the EU."
+          "I think a tricky thing about these metrics is GitHub and the Linux Kernel became their own CNA in mid-2024[1] and mid-2025[2]. This caused a bunch of new automation and lowered barriers to actually filing a CVE.As a small data point I have a >20k downloads Obsidian plugin and it got a CVE on a Beta release due to a bad pathing regex. I feel this would have never happened 2 years ago.So, I feel the bar for a CVE being issued is WAYYYY lower in 2025+ than before.[1]: http://www.kroah.com/log/blog/2024/02/13/linux-is-a-cna/[2]: https://github.blog/security/vulnerability-research/how-to-r...",
+          "I was suspicious the absence of a severity filter was exaggerating the trend...But then I found this:https://craci.com/resources/CVE-publication-trends?sev=criti...Trend for critical CVEs is actually worse, at roughly 25x that of 2020, compared to all CVEs which are roughly 5x compared to 2020.",
+          "It’s impressive that the number of CVEs issued the last two years has skyrocketed, given how badly DOGE gutted the cybersecurity [0] agencies. Unfortunately we don’t know how huge the backlog may have since grown[0] https://www.securityweek.com/mitre-signals-potential-cve-pro..."
         ]
       }
     },
     {
-      "id": "50202217",
-      "title": "LLMs are making formal software verification feasible at a much larger scale",
-      "url": "https://www.anthropic.com/research/formal-verification",
+      "id": "50216791",
+      "title": "Evolving Threat: http2shell is an RCE in node, Python, and more",
+      "url": "https://nitter.click/AikidoSecurity/status/2113759110625906950?__galadriel=lPmlGl9id4oAd5UeBwMhlYKArHyr6lR2IDGujPwB5HV2kQ1aLoPWFd5A9sGuzNcmrp8fUso8qygmHcKTDZ8MNHWqQ3bDJcycV87xp_0VypzQLYj6O_RRHlZuQqj33oASGY2YLSoAiMjeOZN40h7Stf8AG7DPrGZbAPVKUXy36HoMudRbvwF3_r2uYNmfJMhpKzywQDM6Ab8",
       "source": "Hacker News",
-      "published_at": "2026-10-22T22:54:43+00:00",
-      "summary": "LLMs are making formal software verification feasible at a much larger scale",
-      "score": 221,
-      "comments": 121,
-      "discussion_url": "https://news.ycombinator.com/item?id=50202217",
+      "published_at": "2026-10-23T23:30:17+00:00",
+      "summary": "Evolving Threat: http2shell is an RCE in node, Python, and more",
+      "score": 103,
+      "comments": 52,
+      "discussion_url": "https://news.ycombinator.com/item?id=50216791",
       "extra": {
         "top_comments": [
-          "I think somewhat of the opposite will actually occur. LLMs won’t formally verify LLM generated imperative style code. We (including agentic development) will move on from imperative languages, skipping functional and move to deterministic declarative languages.Likely, a proliferation of experimental languages all somewhat akin to Typescript for SQL with significantly more nuanced operators to tersely capture the same outcomes as imperative languages.They’ll compile down to be able to run performantly for game development or even for the Linux kernel (as if Linus would ever agree lol) but also they’ll be able to run on distributed execution engines with effectively a shared memory space, etc.Allows for significantly more terse artifacts. Lower chance of hallucination, fewer output tokens, fewer thinking loop iterations and concise enough for humans to review (for domains that need it).On top of that, additional theorem like syntax to drastically limit the ability of functions, etc. likely some sort of higher level effect system for verification. Used for many things like “constant time compilation for crypto functions”, and also “ensure acid compliance” for writes and reads in a local context, and things like “ensure only once delivery” for functions on a distributed execution engine.At which point every program will be formally verified by default. You could think of it as AdaErlangSQL+++",
-          "From the appendix [0]: \"The proofs written by agents are just as 'good' as any other proof of the same theorem, in that they prove the equivalence theorem. However, it remains to be seen whether agents can scale this verbose proof style directly to more complex programs. Experience from other agent-based verification projects, such as MachCSL, suggests that the answer might be no: the agents hit a complexity wall with the verbose proof style, and scaling up requires the proofs to be structured around better modular abstractions and reasoning principles. If that is the case, how can we help agents discover and introduce the right abstractions to reduce this complexity? Does this require input from expert proof engineers, or can we extract common principles that can guide agents to discovering good abstractions that will enable scalable proofs?\"Some mathematicians have observed a similar pattern in the recent LLM proof drops, leading them to suggest that LLMs will hit a wall in mathematical capability just beyond the convex hull of human mathematics. The sort of proofs done in formal verification are a pretty interesting litmus test for LLM reasoning since the systems considered aren't necessarily on distribution (compare with math where the \"systems\" and structures worked with, and proofs about them, make appearances in thousands of individual books) so the advantages in broad domain knowledge pretrained LLMs have over humans doesn't really buy you much. IMO this observation from Anthropic/Theorem lends more credibility to the convex hull hypothesis.[0] https://www-cdn.anthropic.com/files/4zrzovbb/website/6867ead...",
-          "For those skeptical, I've had decent success using formal verification for my Rust rewrite of Postgres. I wrote a compiler that can translate both Rust and C code into Lean. Once those two functions are in Lean, I have an LLM write a Lean proof that they behave identically.So far, I've proven that about 12% of the code behaves the same when executed single-threaded. That works out to roughly 70k lines of C code. This has found very minor differences in behavior, such as how floating-point operations across platforms can produce different results.I'm working on figuring out how to scale this up, but I don't see any fundamental limitation that would prevent this from scaling up further."
+          "This one again feels overblown, at least for servers. I just checked an org of over 200 GitHub repos. Node, Python, and C#. None of them are vulnerable... because none of them actually call the Brotli decoder. It's just not enabled by default on the server side, by the platforms themselves. This is much like the PHP bugs, where specific conditions have to be in play before you're actually vulnerable.For clients? Sure, that's a bigger risk. Patch them. But bad guys aren't attacking your clients unless the clients connect to them. Don't stay up late to fix this.(And yes, .NET is included here, because Microsoft's Brotli module is a binding for Google's vulnerable reference implementation.)",
+          "Someone already created this website, for some reason,https://broccoli2shell.com/",
+          "I could do without every memory bug getting a cute sensational name and marketing push, I have to say."
         ]
       }
     },
     {
-      "id": "50199389",
-      "title": "Hedra is a 3D open world game I wrote from scratch while in highschool",
-      "url": "https://github.com/maxilevi/project-hedra/tree/pre-ai",
+      "id": "50212507",
+      "title": "Air Purifiers as White Noise Machines",
+      "url": "https://www.jefftk.com/p/air-purifiers-as-white-noise-machines",
       "source": "Hacker News",
-      "published_at": "2026-10-22T18:44:36+00:00",
-      "summary": "Hedra is a 3D open world game I wrote from scratch while in highschool",
-      "score": 167,
-      "comments": 31,
-      "discussion_url": "https://news.ycombinator.com/item?id=50199389",
+      "published_at": "2026-10-23T17:28:36+00:00",
+      "summary": "Air Purifiers as White Noise Machines",
+      "score": 75,
+      "comments": 97,
+      "discussion_url": "https://news.ycombinator.com/item?id=50212507",
       "extra": {
         "top_comments": [
-          "I started this game almost 10 years ago in high school as a way to learn OpenGL. Scope creep quickly took over, and it eventually became a full 3D game and engine with animations, rendering effects, dynamic terrains, etc, with ~100k lines of code and native Linux and Windows support.Thought I'd share it! With AI coding now, it feels like a relic of another era. Crazy to imagine writing 100k lines by hand today!",
-          "Very humbling to see that this was created in high school and without AI.Side note: it's interesting to see how 'wrote from scratch' or 'hand written' is used in 2026. I've seen it used to mean literally everything, while others might mean they wrote the core of the engine + some SDL sprinkled throughout. And now, it could just mean 'didn't use AI at all'.",
-          "I appreciate your low-poly aesthetic. I bet you and like half this website have written a video game in highschool. You have found the right group to tell about it."
+          "An air purifier is the best noise machine for me, much better than the white noise machines with the tinny speakers. Even the brown noise setting on those isn't nearly deep enough to let me sleep.",
+          "Yeah we do this at home. Bedrooms plus the great room on the kitchen side.It might not be guaranteed to help, but it sure doesn't hurt since it's cleaning the air anyway.",
+          "I've been doing this for literally decades. Now when I go to someone else's home without an air purifier it feels painfully quiet AND I can almost feel the stale air. I much prefer it even if it's just some minor placebo effect."
         ]
       }
     }
