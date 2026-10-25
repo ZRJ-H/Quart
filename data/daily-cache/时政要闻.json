@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-10-25T11:00:26.877933+08:00",
+  "cached_at": "2026-10-25T13:02:51.584292+08:00",
   "articles": [
     {
       "id": "https://www.news.cn/politics/20261023/f21a5777774749daa0eed451c81f4002/c.html",
@@ -62,6 +62,18 @@
       "extra": {}
     },
     {
+      "id": "https://www.bbc.co.uk/news/articles/c95ynd587ynzo#0",
+      "title": "Almost 1,000 arrested as clashes follow another day of mass protests across France",
+      "url": "https://www.bbc.co.uk/news/articles/c95ynd587ynzo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "published_at": "2026-10-25T04:16:52+00:00",
+      "summary": "Hundreds of thousands took part in demonstrations in France, with protests also taking place in other European countries.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
       "id": "https://www.bbc.co.uk/news/articles/cqd09k1k7532o#0",
       "title": "Palestinian families displaced as Israeli forces demolish Hebron homes",
       "url": "https://www.bbc.co.uk/news/articles/cqd09k1k7532o?at_medium=RSS&at_campaign=rss",
@@ -80,18 +92,6 @@
       "source": "BBC World",
       "published_at": "2026-10-24T22:08:47+00:00",
       "summary": "Voters in Sunday's election are choosing between two very different candidates, as Americas correspondent Ione Wells reports from Rio de Janeiro.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://www.npr.org/2026/10/24/nx-s1-6014520/protests-roil-france-once-again-as-police-seek-to-quell-violence",
-      "title": "Protests roil France once again as police seek to quell violence",
-      "url": "https://www.npr.org/2026/10/24/nx-s1-6014520/protests-roil-france-once-again-as-police-seek-to-quell-violence",
-      "source": "NPR World",
-      "published_at": "2026-10-24T21:21:00+00:00",
-      "summary": "Hundreds of thousands turned out across France to protest everything from the lack of school funding to economic inequality. Police also were out in force to prevent a repeat of last week's violence.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",

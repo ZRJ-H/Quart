@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-10-25T11:00:26.877933+08:00",
+  "cached_at": "2026-10-25T13:02:51.584292+08:00",
   "articles": [
     {
       "id": "50224916",
@@ -8,8 +8,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-24T20:30:31+00:00",
       "summary": "Made this because I'm curious if anyone out there has figured out how to actually use this PHP RCE we spent the last few days panicking over. Have fun!",
-      "score": 423,
-      "comments": 259,
+      "score": 441,
+      "comments": 264,
       "discussion_url": "https://news.ycombinator.com/item?id=50224916",
       "extra": {
         "top_comments": [
@@ -20,56 +20,20 @@
       }
     },
     {
-      "id": "50222622",
-      "title": "Roku developer repositories moved from GitHub to GitLab",
-      "url": "https://blog.roku.com/developer/gitlab-move",
-      "source": "Hacker News",
-      "published_at": "2026-10-24T16:06:26+00:00",
-      "summary": "Roku developer repositories moved from GitHub to GitLab",
-      "score": 268,
-      "comments": 183,
-      "discussion_url": "https://news.ycombinator.com/item?id=50222622",
-      "extra": {
-        "top_comments": [
-          "Gitlab, for all it's flaws fits so much better in \"regular\" company/organization projects. It's more in line on what people involved in software dev and all the tasks around it have as a mental model and less of a \"open source dev social network\" like Github tried to be almost from the start and lately got Microsofted. An lets not even bring the CI / Github Actions topic..",
-          "Worth mentioning that Roku is being acquired by Fox so in the virtue battle with Microsoft neither are clean",
-          "(Assuming the move was due to the recent outages)I don't know that the grass will remain green for very long anywhere in this current scenario.GitHub is not having most of its outages because GitHub's engineers are using AI (although there might be a case or two of this). The primary driver of the outages is the fact that developers can move so much faster in their workflows. Every single user of these products is placing a heavier demand on the system. I don't think this ramping of demand will cease any time soon. I fully expect to receive an email any second now about how my 5,000 req/hr GH API quota will be cut in half before 2027.I don't understand how GitLab would be immune from these forces, unless we were willing to reach for self-hosted & enterprise plans. Both of which GitHub offers."
-        ]
-      }
-    },
-    {
       "id": "50224100",
       "title": "The Goose Programming Language",
       "url": "https://aardappel.github.io/goose/",
       "source": "Hacker News",
       "published_at": "2026-10-24T19:06:55+00:00",
       "summary": "https://twitter.com/ID_AA_Carmack/status/2113704269274636568",
-      "score": 266,
-      "comments": 178,
+      "score": 305,
+      "comments": 188,
       "discussion_url": "https://news.ycombinator.com/item?id=50224100",
       "extra": {
         "top_comments": [
+          "> Memory is a handful of data stacks that the compiler assigns staticallyI doubt this can work well in all cases. Sooner or later one needs proper heap.",
           "Btw I made the language, AMA. repo: https://github.com/aardappel/goose",
-          "I'm curious, for someone more familiar with Goose: how do you represent an arbitrary number of dynamically sized values? If you have a fixed number of stacks, it seems like only a fixed number of values can change size at any given time.For instance, how would you represent a hash table where the values are strings and at random, the program inserts or deletes a random string?This doesn't seem like something you could easily represent. The only way I can think of is to keep a stack that holds all of your strings, and you periodically compact it.Edit: Maybe you could also have a separate stack for strings of various sizes. One each for strings less than 8, 16, ... bytes. But at that point you're basically implementing your own malloc by hand.Edit: Fwiw I do think Goose is very cool! I've had to hand-roll a lot of similar stuff in Rust before to speed up memory management",
-          "\"That looks really neat! The automatic analysis and use of multiple data stacks and resizable fields takes it from \"lots of work can be done this way\" to \"basically everything can be\".The relative references and built in binary structure validation also enable direct memory mapping of data structures and immediate use of network data. \"Parsing\" file and network data is often 100x slower than it needs to be.\" - John Carmack"
-        ]
-      }
-    },
-    {
-      "id": "50222133",
-      "title": "FreeDNS",
-      "url": "https://freedns.afraid.org/",
-      "source": "Hacker News",
-      "published_at": "2026-10-24T15:20:01+00:00",
-      "summary": "FreeDNS",
-      "score": 260,
-      "comments": 65,
-      "discussion_url": "https://news.ycombinator.com/item?id=50222133",
-      "extra": {
-        "top_comments": [
-          "I've used FreeDNS on occasion for test domain names, one-off experiments, and similar. I'm very appreciative this exists, but there are some pain points that similar services handle better.The domains are missing from the public suffix list. This impacts how cookies are handled by the domain names, with concerns the browser will allow software to set the cookie on the shared domain name instead of the subdomain. This can be a security problem. Getting added to the PSL may not happen: https://github.com/publicsuffix/list/pull/79It can be difficult to get a free HTTPS certificate for your subdomain. Let's Encrypt applies per-domain name rate limits and these domain names see lots of issuance requests. There's a process to lift those limits, but last I checked FreeDNS didn't use it. You can still, of course, pay for a certificate.There's tons of abuse on free domains so you may find that your domain is blocked on various lists.Here are some compelling alternatives I use now, which manage these issues better:- https://messwithdns.net/ - Exceptionally well-made DNS console for learning DNS- https://open-domains.com/ - Uses Cloudflare, great Discord group- Even more: https://free.hrsn.dev/#/?id=domains",
-          "This is one of the most solid and longest lasting services online. Have been using it for almost two decades I think and nothing's changed.",
-          "Their backup DNS service is great, so you can run your own DNS with just one server.https://nic.eu.org/ is also very cool for getting a domain name if paying for one is a challenge."
+          "I'm curious, for someone more familiar with Goose: how do you represent an arbitrary number of dynamically sized values? If you have a fixed number of stacks, it seems like only a fixed number of values can change size at any given time.For instance, how would you represent a hash table where the values are strings and at random, the program inserts or deletes a random string?This doesn't seem like something you could easily represent. The only way I can think of is to keep a stack that holds all of your strings, and you periodically compact it.Edit: Maybe you could also have a separate stack for strings of various sizes. One each for strings less than 8, 16, ... bytes. But at that point you're basically implementing your own malloc by hand.Edit: Fwiw I do think Goose is very cool! I've had to hand-roll a lot of similar stuff in Rust before to speed up memory management"
         ]
       }
     },
@@ -80,14 +44,14 @@
       "source": "Hacker News",
       "published_at": "2026-10-24T21:47:31+00:00",
       "summary": "We should be more ambitious with the software we build",
-      "score": 216,
-      "comments": 176,
+      "score": 280,
+      "comments": 238,
       "discussion_url": "https://news.ycombinator.com/item?id=50225695",
       "extra": {
         "top_comments": [
           "With every new model I've been attempting to build something that takes at least 1 month and really pushes the model. So far I've done:- Python interpreter in Rust (fail): https://github.com/BlueBlazin/pyrs- Low-poly Google Earth like engine (success): https://github.com/BlueBlazin/lowpolyearth- Codebase -> 2d infinite-zoom visualization (success): https://github.com/BlueBlazin/blockvizI have never understood or liked all the obsession with one-shot builds.",
-          "We should be more ambitious, but we need to learn how we can be ambitious with AI, and what value we can create.AI can take us from 0 to MVP in a prompt. It can fill in gaps of knowledge and allows someone who knows half of the stack to build the whole thing nearly seamlessly. These are superpowers but don't by themselves lead to new products.What AI cannot do is remove the world of complications that happen after the MVP - product feature tradeoffs and choices, how to handle integrations and customizations, how to serve multiple types of users, how to communicate and market the app, how to handle security and data storage, how to deal with customers and bugs, etc. All of these need to be considered and acted on by a human in some fashion. AI can help with each concern but can't solve them without understanding the concern and determining how to frame it in a prompt.This is why we have a glut of amazing demos that go nowhere while we figure out how to build software differently. This will take some time and I imagine the result will be software heavily-structured with a bit of AI reasoning woven throughout, not an army of agents and sub-agents burning infinite tokens.",
-          "LLMs are great for being nerdsniped. I started work on walshadow (reading pg wal into clickhouse) to demonstrate the project's infeasibility, but pieces started coming together into something reasonable & order of magnitude fasterThe project would've been impossible for me without LLMs. & even with them there's an argument that this project is pushing complexity limits too far. But at least with ETL there's a clear feedback loop to build on"
+          "I get what the author is saying, but his examples like \"a ripgrep fork that ... is faster for my codex ripgrep workloads\" don't strike me as particularly ambitious.Perhaps we should be more ambitious in the types of problems we try to solve, and the types of value we try to provide with the software we build.",
+          "We should be more ambitious, but we need to learn how we can be ambitious with AI, and what value we can create.AI can take us from 0 to MVP in a prompt. It can fill in gaps of knowledge and allows someone who knows half of the stack to build the whole thing nearly seamlessly. These are superpowers but don't by themselves lead to new products.What AI cannot do is remove the world of complications that happen after the MVP - product feature tradeoffs and choices, how to handle integrations and customizations, how to serve multiple types of users, how to communicate and market the app, how to handle security and data storage, how to deal with customers and bugs, etc. All of these need to be considered and acted on by a human in some fashion. AI can help with each concern but can't solve them without understanding the concern and determining how to frame it in a prompt.This is why we have a glut of amazing demos that go nowhere while we figure out how to build software differently. This will take some time and I imagine the result will be software heavily-structured with a bit of AI reasoning woven throughout, not an army of agents and sub-agents burning infinite tokens."
         ]
       }
     },
@@ -98,8 +62,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-24T23:11:54+00:00",
       "summary": "America has lost 200k of jobs in media, film and the arts. How much is AI?",
-      "score": 204,
-      "comments": 179,
+      "score": 259,
+      "comments": 264,
       "discussion_url": "https://news.ycombinator.com/item?id=50226419",
       "extra": {
         "top_comments": [
@@ -116,14 +80,14 @@
       "source": "Hacker News",
       "published_at": "2026-10-24T19:43:27+00:00",
       "summary": "Listen and read USA nuclear forces Emergency Action Messages, heard on 11175 kHz",
-      "score": 130,
-      "comments": 85,
+      "score": 148,
+      "comments": 101,
       "discussion_url": "https://news.ycombinator.com/item?id=50224422",
       "extra": {
         "top_comments": [
+          "Very interesting website and well made. A lot of info i did not know so far. I have listened to it a while back when the Kerch bridge, Ukraine, was targeted, there was something going on with those messages the day before. But we cant decrypt those messages, only to listen when they were broadcasted and how many of it. A sudden spike in activity can tell us something, but we dont need to go in panic mode.",
           "> Mostly static. The net is quiet until it isn't.> Preformatted is what you can hear: the same shape every time.> hearing it is all anyone outside the force can do.> The day has a shape.I would recommend switching to a newer Claude model.",
-          "This is a cool idea. I'm actually quite glad that AI generated stuff is still so very obvious. The world will be a darker place when it isn't.",
-          "A weird little trivia: for some time period the Skyking test messages used band names and other pop culture references as the content of test messages. Iron Maiden, The Cure, Duran Duran, Rush, Hansen... And of course test messages may be sent erroneously so we end up with the nuclear command channel carrying messages like \"DISREGARD 'THE CURE' TRANSMITTED AT 19\" (https://eam.watch/view/d4272f25-fd33-47a4-9b37-6c55a8ea3d0e)"
+          "This is a cool idea. I'm actually quite glad that AI generated stuff is still so very obvious. The world will be a darker place when it isn't."
         ]
       }
     },
@@ -134,7 +98,7 @@
       "source": "Hacker News",
       "published_at": "2026-10-24T16:41:55+00:00",
       "summary": "The St. Helena 5 pence coin shows Jonathan, a roughly 190 year old tortoise",
-      "score": 99,
+      "score": 109,
       "comments": 32,
       "discussion_url": "https://news.ycombinator.com/item?id=50222927",
       "extra": {
@@ -142,6 +106,42 @@
           "> In July 2023 there was a fight between David and Fredrik which resulted in Fredrik being turned onto his back and left to die, in an area where his plight would not have been visible from the house or the tortoise viewing area. Fortunately he was spotted in time by visiting vet Joe Hollins, who turned Fredrik the right way up with no long-lasting ill effects. This is apparently not the first time recently when a tortoise has been turned over, though in the other occasion it was David who finished the wrong way up, not after a fight but after an unsuccessful attempt to mount Emma for mating purposes…His companions. Never thought tortoises have such a wild life.https://sainthelenaisland.info/jonathan.htm",
           "Tangentially related gripe: Cloudflare has ruined the internet. I can't even read an article about a turtle using a US VPN with US IPs without solving 2 captchas. I assume some uptick is the amount of scraping labs are doing as well as a plethora of tools and bots made with AI, but it is extremely annoying how consolidated players dictate what is possible on the internet and there is no escape from surveillance capitalism. These little bits of friction add up.Edit: I was using the VPN. The turtle was not using the VPN",
           "Related. Others?'Jonathan' is the oldest land animal on Earth - https://news.ycombinator.com/item?id=49998066 - Oct 2026 (164 comments)Jonathan the 190-Year-Old Tortoise Was Photographed in 1886 and Today - https://news.ycombinator.com/item?id=30099606 - Jan 2022 (77 comments)"
+        ]
+      }
+    },
+    {
+      "id": "50224210",
+      "title": "SpeedCrunch 1.1",
+      "url": "https://www.speedcrunch.org/",
+      "source": "Hacker News",
+      "published_at": "2026-10-24T19:19:43+00:00",
+      "summary": "SpeedCrunch 1.1",
+      "score": 104,
+      "comments": 13,
+      "discussion_url": "https://news.ycombinator.com/item?id=50224210",
+      "extra": {
+        "top_comments": [
+          "I've been using it for years and was surprised to see a new version after a dacade.After installing it, I was surprised to see that the immediate changes most noticeable to me were that the input box was unnecessarily doubled in size, enclosed in an unnecessary border, and surrounded by unnecessary dead space; and that there's now marked input lag that never existed in the original version.I never had a single problem with 0.12 over the past ten years, and use it nearly every day -- no bugs, no missing features.I appreciate the desire to improve and innovate, but you know, sometimes, software really is finished.",
+          "I'm using it for a long time already. 1.0 and 1.1 are the first updates after 10 years now?",
+          "Love speedcrunch it has been sitting on my taskbar for many years always my go-to for quick scratchpad for equations, etc."
+        ]
+      }
+    },
+    {
+      "id": "50222525",
+      "title": "Neural chip decodes interactions between brain regions",
+      "url": "https://actu.epfl.ch/news/neural-chip-decodes-interactions-between-brain-r-2/",
+      "source": "Hacker News",
+      "published_at": "2026-10-24T15:57:17+00:00",
+      "summary": "Neural chip decodes interactions between brain regions",
+      "score": 97,
+      "comments": 34,
+      "discussion_url": "https://news.ycombinator.com/item?id=50222525",
+      "extra": {
+        "top_comments": [
+          "I evolved my mental model for adhd by reading newer research like:https://www.economist.com/leaders/2024/10/30/adhd-should-not...Metaphorically and analogy wise: If you think as genes as the holes on a flute, gene expression as the music then environment is what determines \"bad\" music. But there is no one specific gene that is known or corellated specifically for adhd symptoms.ADHD is likely genetically caused but the genes are in everyone just expressed in specific environmental circumstances impossible to know for sure in a lab(cause they mostly look at outward behavior in lab settings and fmri blood flow).But I've been doing meditation(45mins 3-4 days a week) I've also learnt for myself that 30 mins of power naps does wonders for my mind. The medication's effectiveness AND gated on the former two; SNRI, Dopamine reuptake inhibition is like carpet bombing and only makes you ready for rewiring: you still need to rewire with therapeutic and Behavior Therapy techniques.But I know for a fact that my brain waves are different on days I do meditation and power naps.I really do want to know if deep brain neural activity detection data can detect bad waves and possibly close the loop by providing corrective waves.",
+          "Most of this already exists, and I already have it implanted in my brainhttps://www.neuropace.com/Articles can be weird sometimes in the details they include/omit.",
+          "> The proposed SoC was extensively validated on two intracranial electroencephalography (iEEG) datasets related to psychiatric disorders, achieving 80.9%/74.8% sensitivity and 74.2%/73.1% specificity on the multi-source interference task (MSIT) and the emotional conflict resolution (ECR) task, respectively. We further evaluated the SoC on the public DEAP dataset for electroencephalography (EEG)-based emotion recognition, achieving 70.5%/72.5% sensitivity and 69.8%/66.3% specificity for the arousal and valence states, respectively. [https://ieeexplore.ieee.org/document/11685197]I dunno, really need to see the comparative performance of other classifiers and the base rates in these datasets to know whether these performance metrics are anything we should care about, and whether e.g. a classifier on simple verbal probes to the subjects might simply yield better predictions than going through the EEG signals. You can do some really interesting EEG biofeedback stuff, so maybe this is useful, but I would think the full EEG head-gear would also provide much richer and more useful information than a measurement based on a single chip. Presumably this would be for psychiatric disorders or brain injuries where the core dysfunction we know is limited to a very specific region(s)."
         ]
       }
     }
