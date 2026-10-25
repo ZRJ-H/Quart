@@ -1,13 +1,13 @@
 ---
 first_seen: 2026-07-12
-last_seen: 2026-10-19
+last_seen: 2026-10-25
 language: TypeScript
 tags: [github, trending]
 ---
 
 # clash-verge-rev/clash-verge-rev
 
-> 基于 Tauri 的现代代理客户端 GUI，支持 Windows、macOS 与 Linux，适合需要图形化配置和管理代理规则以优化网络访问体验的用户。
+> 基于 Tauri 的现代代理客户端，跨 Windows、macOS 和 Linux 提供图形化配置体验，适合需要精细管理代理规则的用户。
 
 ## 基本信息
 
@@ -27,3 +27,4 @@ tags: [github, trending]
 | 2026-08-24 | #23 | 139,675 | +1,657⭐ | 爆火 |
 | 2026-10-12 | #25 | 150,629 | +10,954⭐ | 爆火 |
 | 2026-10-19 | #24 | 152,314 | +1,685⭐ | 爆火 |
+| 2026-10-25 | #24 | 153,627 | +1,313⭐ | 爆火 |
