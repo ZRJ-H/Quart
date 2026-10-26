@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-10-25T13:02:51.584292+08:00",
+  "cached_at": "2026-10-26T11:00:25.541998+08:00",
   "articles": [
     {
-      "id": "50224916",
-      "title": "Show HN: Steal My Bitcoin",
-      "url": "https://stealmybitcoin.com/",
+      "id": "50233779",
+      "title": "A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis",
+      "url": "https://lynchlab.net/llm-skin-cancer",
       "source": "Hacker News",
-      "published_at": "2026-10-24T20:30:31+00:00",
-      "summary": "Made this because I'm curious if anyone out there has figured out how to actually use this PHP RCE we spent the last few days panicking over. Have fun!",
-      "score": 441,
-      "comments": 264,
-      "discussion_url": "https://news.ycombinator.com/item?id=50224916",
+      "published_at": "2026-10-25T17:15:38+00:00",
+      "summary": "A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis",
+      "score": 463,
+      "comments": 216,
+      "discussion_url": "https://news.ycombinator.com/item?id=50233779",
       "extra": {
         "top_comments": [
-          "There is a lot of cynicism in this thread but the fact this is still open and hour later ends the narrative in my view. There are not \"thousands of swarms of agents autonomously compromising every site for its authors\" or any the other x / LinkedIn dribble ive been reading.It clearly isnt happening.",
-          "This looks like a trap. We have a working RCE that would claim this, but I don't want to demonstrate that because it might leak what we built to others. We still have a window for people to patch and I don't want to risk that.https://x.com/dguido/status/2113825891021144306?s=46",
-          "The server is getting overloaded, so here's the text for reference: Steal my Bitcoin 0.65 hours without a successful hack There is a bitcoin key hidden on this server worth about $502. It is accessible to the PHP user account through the print-flag binary. This PHP version was selected from before the PHP2SHELL CVEs were released. First person to get the wallet wins. If you don’t need the money, consider donating it to those who do: givewell.org. All traffic is logged. This is a known vulnerable machine, so we cannot guarantee privacy. Other attackers may access or monitor activity and data beyond our control. Do not submit anything you want to keep private. Challenge wallet Explorer ↗ bc1qlnu5…t3cxqy 0.00625104 BTC ≈ $502.35 USD stealmybitcoin.com · Terms of participation"
+          "This is an example of why I'm a little stumped about why people are excited about Jev-style decision models. For any application at scale it'd be way more accurate to have a dedicated classifier using the right architecture (neural net, bayesian, etc.) LLMs drive the cost of making those models down to near zero.Just use the LLM to make a thing that's actually good at what you need it to do.",
+          "> I compared to a 10-year old CNN and to my surprise found that this was superior.I'm surprised he's surprised.> A small, old, specialised network using an outdated architecture recognises skin lesions far better than two frontier LLMs.Yes of course. A 30m params Katago network with one playout is superhuman in playing go, while frontier LLMs have over 10,000 times more parameters and aren't any good at playing go. They're good at other things (such as helping you create a network that's good at playing go).",
+          "> I used Inception v3 pretrained on everyday photographs and then fine-tuned all layers on 68,011 dermoscopic and clinical images from the ISIC Archive on a single H100 GPU.>These 200 test lesions, and every other photograph of the same lesion or patient, were removed from its data (including the validation set) before training, so it had never seen them, and they were not used to choose the model or set its threshold.This is just benchmaxxing. A benchmaxxed model will always beat an unbenchmaxxed model, but it will be brittle.You can always beat a specific dataset with a small model by finetuning on a train/test split. But it doesn't generalize well to 'wild' images, because they are out-of-domain."
         ]
       }
     },
     {
-      "id": "50224100",
-      "title": "The Goose Programming Language",
-      "url": "https://aardappel.github.io/goose/",
+      "id": "50234474",
+      "title": "Dolly Parton's Imagination Library",
+      "url": "https://imaginationlibrary.com/",
       "source": "Hacker News",
-      "published_at": "2026-10-24T19:06:55+00:00",
-      "summary": "https://twitter.com/ID_AA_Carmack/status/2113704269274636568",
-      "score": 305,
-      "comments": 188,
-      "discussion_url": "https://news.ycombinator.com/item?id=50224100",
+      "published_at": "2026-10-25T18:23:54+00:00",
+      "summary": "With today's news, I thought I'd share this great program:“When I was growing up in the hills of East Tennessee, I knew my dreams would come true. I know there are children in your community with their own dreams. They dream of becoming a doctor or an inventor or a minister. Who knows, maybe there is a little girl whose dream is to be a writer and singer.The seeds of these dreams are often found in books and the seeds you help plant in your community can grow across the world.”",
+      "score": 424,
+      "comments": 75,
+      "discussion_url": "https://news.ycombinator.com/item?id=50234474",
       "extra": {
         "top_comments": [
-          "> Memory is a handful of data stacks that the compiler assigns staticallyI doubt this can work well in all cases. Sooner or later one needs proper heap.",
-          "Btw I made the language, AMA. repo: https://github.com/aardappel/goose",
-          "I'm curious, for someone more familiar with Goose: how do you represent an arbitrary number of dynamically sized values? If you have a fixed number of stacks, it seems like only a fixed number of values can change size at any given time.For instance, how would you represent a hash table where the values are strings and at random, the program inserts or deletes a random string?This doesn't seem like something you could easily represent. The only way I can think of is to keep a stack that holds all of your strings, and you periodically compact it.Edit: Maybe you could also have a separate stack for strings of various sizes. One each for strings less than 8, 16, ... bytes. But at that point you're basically implementing your own malloc by hand.Edit: Fwiw I do think Goose is very cool! I've had to hand-roll a lot of similar stuff in Rust before to speed up memory management"
+          "My daughter receives books through this program and I was curious how it was sustained at a $2.5/book wholesale cost.Interestingly, the coordinating body that selects books, facilitates distribution, and negotiates wholesale pricing is the Dolly Parton Imagination Library, but per-book funding is actually entirely through local charities and so on. This means that where charities are unable to act as partners, children will not receive books, but it also means that the program can operate by growing and shrinking as local support (including from state and local government grants) comes online and goes offline while keeping the overhead for local partners low.Dolly Parton came up with the initial local structure for her region in Tennessee and David Dotson of Dollywood scaled the operation using this decentralized model. Very impressive structure that makes this sustainable.Here’s the interview where he talks about it: https://www.endbookdeserts.com/dolly-parton-imagination-libr...",
+          "In Tennessee hospitals a nurse, staff member, or authorized volunteer will swing by your room in the mother-baby unit and sign you up. Then you start receiving free books by mail each month until age 5. An amazing program by an amazing person!",
+          "I don't need Imagination Library. We are very well off for now, however, someone signed us up for it and I was pissed cause we can buy all this and not take away from someone who needs it. Then we received our first book. My 3 year old loves going to the mail with me and if there's a book, it makes him so happy he opens it and sits in his chair and just looks at it and asks for it to be read to him. He doesn't know about bank accounts or anything, all he cares about is books, his cozy (blanket), Buzz, and Elmo. We decided to keep it and donate to it and I think more people in our position should have services like this to hopefully ground them in a way you forget only by reminding by the smile and laughter of your child, then donate to them."
         ]
       }
     },
     {
-      "id": "50225695",
-      "title": "We should be more ambitious with the software we build",
-      "url": "https://danluu.com/ambitious/",
+      "id": "50234232",
+      "title": "Oregon Police Are Charging a Local News Outlet $2.5M for Records About One Cop",
+      "url": "https://theintercept.com/2026/10/01/oregon-police-misconduct-public-records-cost-fee/",
       "source": "Hacker News",
-      "published_at": "2026-10-24T21:47:31+00:00",
-      "summary": "We should be more ambitious with the software we build",
-      "score": 280,
-      "comments": 238,
-      "discussion_url": "https://news.ycombinator.com/item?id=50225695",
+      "published_at": "2026-10-25T18:04:11+00:00",
+      "summary": "Oregon Police Are Charging a Local News Outlet $2.5M for Records About One Cop",
+      "score": 410,
+      "comments": 107,
+      "discussion_url": "https://news.ycombinator.com/item?id=50234232",
       "extra": {
         "top_comments": [
-          "With every new model I've been attempting to build something that takes at least 1 month and really pushes the model. So far I've done:- Python interpreter in Rust (fail): https://github.com/BlueBlazin/pyrs- Low-poly Google Earth like engine (success): https://github.com/BlueBlazin/lowpolyearth- Codebase -> 2d infinite-zoom visualization (success): https://github.com/BlueBlazin/blockvizI have never understood or liked all the obsession with one-shot builds.",
-          "I get what the author is saying, but his examples like \"a ripgrep fork that ... is faster for my codex ripgrep workloads\" don't strike me as particularly ambitious.Perhaps we should be more ambitious in the types of problems we try to solve, and the types of value we try to provide with the software we build.",
-          "We should be more ambitious, but we need to learn how we can be ambitious with AI, and what value we can create.AI can take us from 0 to MVP in a prompt. It can fill in gaps of knowledge and allows someone who knows half of the stack to build the whole thing nearly seamlessly. These are superpowers but don't by themselves lead to new products.What AI cannot do is remove the world of complications that happen after the MVP - product feature tradeoffs and choices, how to handle integrations and customizations, how to serve multiple types of users, how to communicate and market the app, how to handle security and data storage, how to deal with customers and bugs, etc. All of these need to be considered and acted on by a human in some fashion. AI can help with each concern but can't solve them without understanding the concern and determining how to frame it in a prompt.This is why we have a glut of amazing demos that go nowhere while we figure out how to build software differently. This will take some time and I imagine the result will be software heavily-structured with a bit of AI reasoning woven throughout, not an army of agents and sub-agents burning infinite tokens."
+          "Some agencies have a different tactic: go really slowly.I sent a public records request to my local school district on March 9th 2026.They responded on 19th March 2026 saying they'd respond on in late April.Since then, every month they've sent an email with some small portion of the records, with a PDF letter saying they'll send a follow up a month later.I've received 8 of those responses so far, and there's no indication when, if ever, I will have received all the records responsive to my request.",
+          "> the Eugene Police Department claimed searching for records and processing the request would take at least 44,816 hours of staff time and cost approximately $2,484,599.04.44k hours is ~21 years. Beyond absurd",
+          "Worth pointing out that Germany is having an ongoing battle over our FOIA equivalent, in which a host of people who were bitten badly by it (most notably Jens Spahn) are proposing to allow exactly this kind of prohibitive fee, as well as reducing access to natural persons (so the individual reporter, not the newspaper) and only to people who have a reasonable interest, etc.Sure, the current form of the law has some issues on the receiving end, but boy is this an obvious move to cover their own corruption better..."
         ]
       }
     },
     {
-      "id": "50226419",
-      "title": "America has lost 200k of jobs in media, film and the arts. How much is AI?",
-      "url": "https://www.apricitas.io/p/ai-and-the-fall-of-the-creative-class",
+      "id": "50233929",
+      "title": "I refuse to accept a censored Internet. Join Me at FOSDEM 27",
+      "url": "https://talkweb.eu/openweb/4558/",
       "source": "Hacker News",
-      "published_at": "2026-10-24T23:11:54+00:00",
-      "summary": "America has lost 200k of jobs in media, film and the arts. How much is AI?",
-      "score": 259,
-      "comments": 264,
-      "discussion_url": "https://news.ycombinator.com/item?id=50226419",
+      "published_at": "2026-10-25T17:30:55+00:00",
+      "summary": "I refuse to accept a censored Internet. Join Me at FOSDEM 27",
+      "score": 405,
+      "comments": 204,
+      "discussion_url": "https://news.ycombinator.com/item?id=50233929",
       "extra": {
         "top_comments": [
-          "I liked this article. I appreciate that it didn't try to say it is or isn't AI.To me, the entertainment industry suffers from a lot of the same problems in most other industries that chase \"efficiency\", in terms of resources used and profit made. Economies and industries and labor are interdependent and more \"alive\" than balance sheets and bank accounts.For the film industry, when you start moving things away from LA to \"save money\", it has knock on effects that happen over long periods of time. Multiple Quarterly Earnings Reports long, if you will. Local businesses that depend on the film industry close due to less work, so then there is less expertise available. Less expertise means it can command high prices. Suddenly it's too expensive to film in LA altogether. So the rest of the jobs leave too.This pattern seems super common, not just in the film industry.It is a narrative that interweaves with AI, too. AI is supposedly an efficiency boom. In the macroeconomy, who is the \"efficiency\" we are chasing for, who benefits? Who is getting the money that was \"saved\"? Regular people do not have more more money or time. The \"efficiency\" is for people who are already very rich, to get richer. Is that worth the price we're paying? I know my answer. The article gets close to it by mentioning the consolidation in Hollywood, but I do not see how we fix this without enforcing our antitrust laws. It is embarrassing what we let rich people do in the name of stock price go up.",
-          "The real job losses are probably in commercial art. If you're making an illustration for an ad, that's almost certainly automated now. Looking at when the decline started, it's about when Stable Diffusion got going.Some of this stuff is pre-AI, Photoshop smart tools stuff. Especially clothing ads. Nobody has a live model pose with each item color any more. Or even each item. (I used to know actress/model/waitress types in LA who did that. Grind job: \"OK, the blue sweater is next, and hurry it up, we have 50 to do before lunch\". But it paid OK.)",
-          "Before AI showed up the UN released a report on the Attention Economy. It said Supply of content had vastly outstripped Demand. It decoupled because entertainment/media was being used to push other products. The telcos, amazon, google/fb and many others were all subsidizing content to push some other product. Exploding info chasing finite non growing eyeballs and time."
+          "Is there an uncensored intetnet, because i dont think there is. if there is any, it can be turned off because its being routed on the censored net wrapped in encryption.that being said, that makes me pretty interested in this talk. outside of hacking sattelites and such things and/or infra i really dont see any opportunities to break free of the will of corporations as they can simply pay infra providers to do their bidding.I dont think software can solve all problems because internet exists essentially as informaiton transported over infrastructure. the software surely helps enable that but its a helper not the actual network.happy to learn otherwise from anyone here ofc :-)",
+          "Most people prefer censored internet as long as it aligns with their political leaning. Maybe that wasn't the case 15 years ago but it's pretty much true nowadays. I myself consider this as a fact.",
+          "FOSDEM is a great conference!If you ever get the chance to go, please go! Especially if you're an American I recommend it. It is so different than any other conference I've ever been to in the US.It doesn't have a lot of sales pitches, the technical content is top notch, and overall it is really fun and interesting to see what everybody is talking about and working on."
         ]
       }
     },
     {
-      "id": "50224422",
-      "title": "Listen and read USA nuclear forces Emergency Action Messages, heard on 11175 kHz",
-      "url": "https://missileer.watch",
+      "id": "50236102",
+      "title": "OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why?",
+      "url": "https://minimaxir.com/2026/10/cheap-llms/",
       "source": "Hacker News",
-      "published_at": "2026-10-24T19:43:27+00:00",
-      "summary": "Listen and read USA nuclear forces Emergency Action Messages, heard on 11175 kHz",
-      "score": 148,
-      "comments": 101,
-      "discussion_url": "https://news.ycombinator.com/item?id=50224422",
+      "published_at": "2026-10-25T21:11:31+00:00",
+      "summary": "OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why?",
+      "score": 181,
+      "comments": 206,
+      "discussion_url": "https://news.ycombinator.com/item?id=50236102",
       "extra": {
         "top_comments": [
-          "Very interesting website and well made. A lot of info i did not know so far. I have listened to it a while back when the Kerch bridge, Ukraine, was targeted, there was something going on with those messages the day before. But we cant decrypt those messages, only to listen when they were broadcasted and how many of it. A sudden spike in activity can tell us something, but we dont need to go in panic mode.",
-          "> Mostly static. The net is quiet until it isn't.> Preformatted is what you can hear: the same shape every time.> hearing it is all anyone outside the force can do.> The day has a shape.I would recommend switching to a newer Claude model.",
-          "This is a cool idea. I'm actually quite glad that AI generated stuff is still so very obvious. The world will be a darker place when it isn't."
+          "Competition drives prices down. We tried Kimi and GLM models after hitting 'cybersecurity' blocks on OpenAI and Anthropic. We found them to be much cheaper to access and helped us complete our work without 'cybersecurity' refusals blocking us.",
+          "This is why Anthropic and OpenAI are pushing for more “regulation”. You can’t show ROI to investors by cutting inference costs.Regulation might inconvenience them a little, but the upside is huge if it means open models out of China get banned.",
+          "DeepSeek claims $38 of revenue per GPU, per hour for Flash V4. That is $332,880 per GPU, per year. This matches their DeepInfer numbers: 25,600 output tokens/s per GPU sold at $0.60 per million -> $55 minus some other overhead to arrive at $38.For the bigger Anthropic and OpenAI models (and associated higher prices) there are many unknown factors. But presumably they also work hard on optimizations, and it's not so crazy to think they had or still have a lot of wiggle room to adjust prices."
         ]
       }
     },
     {
-      "id": "50222927",
-      "title": "The St. Helena 5 pence coin shows Jonathan, a roughly 190 year old tortoise",
-      "url": "https://de.numista.com/9866",
+      "id": "50235017",
+      "title": "Why I Am a Programmer",
+      "url": "https://www.alfie.wtf/programming/why-i-am-a-programmer.html",
       "source": "Hacker News",
-      "published_at": "2026-10-24T16:41:55+00:00",
-      "summary": "The St. Helena 5 pence coin shows Jonathan, a roughly 190 year old tortoise",
-      "score": 109,
-      "comments": 32,
-      "discussion_url": "https://news.ycombinator.com/item?id=50222927",
+      "published_at": "2026-10-25T19:11:31+00:00",
+      "summary": "Why I Am a Programmer",
+      "score": 147,
+      "comments": 54,
+      "discussion_url": "https://news.ycombinator.com/item?id=50235017",
       "extra": {
         "top_comments": [
-          "> In July 2023 there was a fight between David and Fredrik which resulted in Fredrik being turned onto his back and left to die, in an area where his plight would not have been visible from the house or the tortoise viewing area. Fortunately he was spotted in time by visiting vet Joe Hollins, who turned Fredrik the right way up with no long-lasting ill effects. This is apparently not the first time recently when a tortoise has been turned over, though in the other occasion it was David who finished the wrong way up, not after a fight but after an unsuccessful attempt to mount Emma for mating purposes…His companions. Never thought tortoises have such a wild life.https://sainthelenaisland.info/jonathan.htm",
-          "Tangentially related gripe: Cloudflare has ruined the internet. I can't even read an article about a turtle using a US VPN with US IPs without solving 2 captchas. I assume some uptick is the amount of scraping labs are doing as well as a plethora of tools and bots made with AI, but it is extremely annoying how consolidated players dictate what is possible on the internet and there is no escape from surveillance capitalism. These little bits of friction add up.Edit: I was using the VPN. The turtle was not using the VPN",
-          "Related. Others?'Jonathan' is the oldest land animal on Earth - https://news.ycombinator.com/item?id=49998066 - Oct 2026 (164 comments)Jonathan the 190-Year-Old Tortoise Was Photographed in 1886 and Today - https://news.ycombinator.com/item?id=30099606 - Jan 2022 (77 comments)"
+          "Conan the Barbarian and Below the Root on our Apple IIe. Tiny worlds behind the glowing Orange CRT. How do I make something like this? My mum (lol) helped me figure out how to get keyboard input in BASIC. I made a little game where an O character chases your X character around the screen. Core game loop. Browsing pirate CGA games at the warung in Pondok Indah, well outside the jurisdiction of US law. Glorious rack upon rack of tiny worlds to explore. Death Track and Prince of Persia. More BASIC and that gorilla throwing bananas. Later on the Multiline BBS. Talking late into the night with tech weirdos twice my age. All manner of mind bending ideas. Newsgroups. Punks and skaters and cypherpunks. Predicting what was coming, seeing the future we expected unfolding. Downloading Commander Keen over FTP. WinSock and Netscape. My first homepage. Downloading Linux and getting it running. Configuring XFree86 modelines all night lol. Turbo Pascal and VAX VMS at uni. My first job coding. Hacking out web backends in gnarly ass Perl. No databases just blatting and slurping comma delimited text files lol. Getting paid to do the most exciting thing there was to do, all day. Magic.",
+          "For me, it was the creative, puzzle-solving, game-like nature of it. Then I got my first job, and I had 100% autonomy, so a friend of mine and I got to solve real problems for real people in the real world. It was a rush. Making people’s lives better through software is still the biggest motivation for me.",
+          "I started programming on my schools CASIO Graphics Calculator.It was slow but allowed some text based games we then shared. No internet so did it all from trial and error.Then ... i wanted a 3D Cube rotating. At 15/16 this was a bit too much i guess i had no idea about rotation matrices back then and deemed myself a bit dense.Never got around doing 3D stuff at work, only databases all the time. I dabbled some with ThreeJS but i guess i was still haunted.BUT THEN. Geometric algebra! So smooth. If you like tables and had problems with stuff like cross products or quaternions, didnt like copy pasting rotation matrices, etc. YOU WILL LOVE geometric algebra! It's like you meet 2 tables on a FK and bam its a volume (highly simplified!!)Just my 2 cents. Don't write yourself off if you did not do 1337 demos in primary school on a tamagotchi."
         ]
       }
     },
     {
-      "id": "50224210",
-      "title": "SpeedCrunch 1.1",
-      "url": "https://www.speedcrunch.org/",
+      "id": "50235738",
+      "title": "What goes into making an animated film?",
+      "url": "https://www.disneyanimation.com/process/",
       "source": "Hacker News",
-      "published_at": "2026-10-24T19:19:43+00:00",
-      "summary": "SpeedCrunch 1.1",
+      "published_at": "2026-10-25T20:27:09+00:00",
+      "summary": "What goes into making an animated film?",
       "score": 104,
-      "comments": 13,
-      "discussion_url": "https://news.ycombinator.com/item?id=50224210",
+      "comments": 41,
+      "discussion_url": "https://news.ycombinator.com/item?id=50235738",
       "extra": {
         "top_comments": [
-          "I've been using it for years and was surprised to see a new version after a dacade.After installing it, I was surprised to see that the immediate changes most noticeable to me were that the input box was unnecessarily doubled in size, enclosed in an unnecessary border, and surrounded by unnecessary dead space; and that there's now marked input lag that never existed in the original version.I never had a single problem with 0.12 over the past ten years, and use it nearly every day -- no bugs, no missing features.I appreciate the desire to improve and innovate, but you know, sometimes, software really is finished.",
-          "I'm using it for a long time already. 1.0 and 1.1 are the first updates after 10 years now?",
-          "Love speedcrunch it has been sitting on my taskbar for many years always my go-to for quick scratchpad for equations, etc."
+          "How much of this is AI automating? That drawing of the car design, the storyboarding... isn't generative AI aiming to do away with most of it?I've been seeing some of the lengthier AI films on X (i.e. the one about badgers vs. rats that looks like Lord of the Rings), and there is certainly a lot of work put into them. However the type of work that goes into them is substantially different than what is shown in this article about Zootopia. There are a lot less decisions made by humans. AI is driving a lot of the creative decisions. In the end you get something good, but is it still riding on the decisions of the training data that came from humans like the ones who made Zootopia by hand crafting every element of it? I think this is an interesting question.",
+          "I remember seeing a Pixar documentary a really long time ago where someone talked about attention to detail. The designers would fully texture out the inside of a dresser draw that will never be shown in the film. The idea was imagine how much attention to detail and time is spent on the things that will be seen. Pure craftsmanship.",
+          "Now go watch \"Kono Express\". Disney laid off an animator from the Star Wars factory, and he's cranking out stuff about as good as Disney Animation all by himself. With Unreal Engine and AI tools, of course.It's been a long time since there was an ink and paint department."
         ]
       }
     },
     {
-      "id": "50222525",
-      "title": "Neural chip decodes interactions between brain regions",
-      "url": "https://actu.epfl.ch/news/neural-chip-decodes-interactions-between-brain-r-2/",
+      "id": "50235780",
+      "title": "The State of Context Engineering",
+      "url": "https://www.dbreunig.com/2026/10/24/the-state-of-context-engineering.html",
       "source": "Hacker News",
-      "published_at": "2026-10-24T15:57:17+00:00",
-      "summary": "Neural chip decodes interactions between brain regions",
-      "score": 97,
-      "comments": 34,
-      "discussion_url": "https://news.ycombinator.com/item?id=50222525",
+      "published_at": "2026-10-25T20:32:31+00:00",
+      "summary": "The State of Context Engineering",
+      "score": 94,
+      "comments": 27,
+      "discussion_url": "https://news.ycombinator.com/item?id=50235780",
       "extra": {
         "top_comments": [
-          "I evolved my mental model for adhd by reading newer research like:https://www.economist.com/leaders/2024/10/30/adhd-should-not...Metaphorically and analogy wise: If you think as genes as the holes on a flute, gene expression as the music then environment is what determines \"bad\" music. But there is no one specific gene that is known or corellated specifically for adhd symptoms.ADHD is likely genetically caused but the genes are in everyone just expressed in specific environmental circumstances impossible to know for sure in a lab(cause they mostly look at outward behavior in lab settings and fmri blood flow).But I've been doing meditation(45mins 3-4 days a week) I've also learnt for myself that 30 mins of power naps does wonders for my mind. The medication's effectiveness AND gated on the former two; SNRI, Dopamine reuptake inhibition is like carpet bombing and only makes you ready for rewiring: you still need to rewire with therapeutic and Behavior Therapy techniques.But I know for a fact that my brain waves are different on days I do meditation and power naps.I really do want to know if deep brain neural activity detection data can detect bad waves and possibly close the loop by providing corrective waves.",
-          "Most of this already exists, and I already have it implanted in my brainhttps://www.neuropace.com/Articles can be weird sometimes in the details they include/omit.",
-          "> The proposed SoC was extensively validated on two intracranial electroencephalography (iEEG) datasets related to psychiatric disorders, achieving 80.9%/74.8% sensitivity and 74.2%/73.1% specificity on the multi-source interference task (MSIT) and the emotional conflict resolution (ECR) task, respectively. We further evaluated the SoC on the public DEAP dataset for electroencephalography (EEG)-based emotion recognition, achieving 70.5%/72.5% sensitivity and 69.8%/66.3% specificity for the arousal and valence states, respectively. [https://ieeexplore.ieee.org/document/11685197]I dunno, really need to see the comparative performance of other classifiers and the base rates in these datasets to know whether these performance metrics are anything we should care about, and whether e.g. a classifier on simple verbal probes to the subjects might simply yield better predictions than going through the EEG signals. You can do some really interesting EEG biofeedback stuff, so maybe this is useful, but I would think the full EEG head-gear would also provide much richer and more useful information than a measurement based on a single chip. Presumably this would be for psychiatric disorders or brain injuries where the core dysfunction we know is limited to a very specific region(s)."
+          "Forgetting is the part I see break first. Old facts in memory don't get deleted, they get contradicted, and the model happily picks whichever one is closer in the prompt. What's worked better for me is having this really cool way of jev compaction, there was a youtube video out there somewhere that spoke about how to get compaction to be super fast, cheap and have it retain the most useful information from the context compaction.",
+          "It's nice that this article goes beyond the \"context too long\" scapegoat diagnostic.There is more to it than just reducing content in context. LLMs attention mechanism works by finding graphs of related words and concepts and it works best when the relevant relationships are close together in the text. Length matters but how well the information is organized matters as well.It's useful to be familiar with the concept of dependency length. The two sentences in this image ( https://benoitessiambre.com/img/dependencylength.png ) have the same words and same meaning but sentence C is organised to minimize the distance between related words.This can also apply to paragraphs and sections. Ordering them so that related information is recursively closer together, helps AIs think better (also helps humans, Dependency Length Minimization, DLM is an idea from psycho-linguistics).This is one reason progressive disclosure and sub agents are important. Including unnecessary information spreads apart surrounding information and makes it more difficult for AIs to figure things out.For eg. optimizing skills, it can help to put more important information at the bottom of a skill. Usually after a skill is loaded, the AI will start “thinking”, talking to itself to try to reason through a problem. The thinking block will have an easier time considering the text closest to it, the last part of the skill, than information farther up.Thinking blocks can produce a lot of text (a lot of it often hidden from users) that also spreads information apart. Sometimes, when an early instruction is still relevant but there’s been a lot of thinking and discussion added to the context since, it’s worth repeating a summary the early information ( keeping in mind that too many reminders can also spread other information apart ). I think however, LLMs are tuned to overweight very early information so that they don't disregard system prompts. You might be able to exploit this by placing some important facts near the very beginning of a conversation.If you've ever written compression algorithms where repeated blocks are referenced instead of encoded, you'll be familiar with how related information being clustered allows for better compression. It's another example of the parallels between intelligence and compression and it hints at the information theoretic aspect of DLM.",
+          "> As we focus more on memory, we also need to think about strategic forgetting. Over time, overly precise memories become conflicted and messy, and nobody has yet figured out how to handle this.> I think that’s the context problem of tomorrow.This passage is explains why humans have imperfect memory. Seems the perfect memory we wish LLMs had impedes creativity and is maladaptive.Strategic forgetting helps put the non-deterministic machine to best use. LLMs don't need perfect memory; that's covered by the computer itself.I like that this justifies the continuing relevance of context engineering - a seemingly dated term - in the face of trends like loop engineering."
         ]
       }
     }
