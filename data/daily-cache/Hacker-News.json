@@ -1,93 +1,21 @@
 {
-  "cached_at": "2026-10-26T11:00:25.541998+08:00",
+  "cached_at": "2026-10-26T13:06:13.541993+08:00",
   "articles": [
     {
-      "id": "50233779",
-      "title": "A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis",
-      "url": "https://lynchlab.net/llm-skin-cancer",
+      "id": "50237485",
+      "title": "Lula wins election after final votes tallied",
+      "url": "https://www.reuters.com/live/brazil-election-live-lula-bolsonaro-face-off-presidential-runoff-2026-10-25/",
       "source": "Hacker News",
-      "published_at": "2026-10-25T17:15:38+00:00",
-      "summary": "A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis",
-      "score": 463,
-      "comments": 216,
-      "discussion_url": "https://news.ycombinator.com/item?id=50233779",
+      "published_at": "2026-10-26T00:31:07+00:00",
+      "summary": "Lula wins election after final votes tallied",
+      "score": 239,
+      "comments": 230,
+      "discussion_url": "https://news.ycombinator.com/item?id=50237485",
       "extra": {
         "top_comments": [
-          "This is an example of why I'm a little stumped about why people are excited about Jev-style decision models. For any application at scale it'd be way more accurate to have a dedicated classifier using the right architecture (neural net, bayesian, etc.) LLMs drive the cost of making those models down to near zero.Just use the LLM to make a thing that's actually good at what you need it to do.",
-          "> I compared to a 10-year old CNN and to my surprise found that this was superior.I'm surprised he's surprised.> A small, old, specialised network using an outdated architecture recognises skin lesions far better than two frontier LLMs.Yes of course. A 30m params Katago network with one playout is superhuman in playing go, while frontier LLMs have over 10,000 times more parameters and aren't any good at playing go. They're good at other things (such as helping you create a network that's good at playing go).",
-          "> I used Inception v3 pretrained on everyday photographs and then fine-tuned all layers on 68,011 dermoscopic and clinical images from the ISIC Archive on a single H100 GPU.>These 200 test lesions, and every other photograph of the same lesion or patient, were removed from its data (including the validation set) before training, so it had never seen them, and they were not used to choose the model or set its threshold.This is just benchmaxxing. A benchmaxxed model will always beat an unbenchmaxxed model, but it will be brittle.You can always beat a specific dataset with a small model by finetuning on a train/test split. But it doesn't generalize well to 'wild' images, because they are out-of-domain."
-        ]
-      }
-    },
-    {
-      "id": "50234474",
-      "title": "Dolly Parton's Imagination Library",
-      "url": "https://imaginationlibrary.com/",
-      "source": "Hacker News",
-      "published_at": "2026-10-25T18:23:54+00:00",
-      "summary": "With today's news, I thought I'd share this great program:“When I was growing up in the hills of East Tennessee, I knew my dreams would come true. I know there are children in your community with their own dreams. They dream of becoming a doctor or an inventor or a minister. Who knows, maybe there is a little girl whose dream is to be a writer and singer.The seeds of these dreams are often found in books and the seeds you help plant in your community can grow across the world.”",
-      "score": 424,
-      "comments": 75,
-      "discussion_url": "https://news.ycombinator.com/item?id=50234474",
-      "extra": {
-        "top_comments": [
-          "My daughter receives books through this program and I was curious how it was sustained at a $2.5/book wholesale cost.Interestingly, the coordinating body that selects books, facilitates distribution, and negotiates wholesale pricing is the Dolly Parton Imagination Library, but per-book funding is actually entirely through local charities and so on. This means that where charities are unable to act as partners, children will not receive books, but it also means that the program can operate by growing and shrinking as local support (including from state and local government grants) comes online and goes offline while keeping the overhead for local partners low.Dolly Parton came up with the initial local structure for her region in Tennessee and David Dotson of Dollywood scaled the operation using this decentralized model. Very impressive structure that makes this sustainable.Here’s the interview where he talks about it: https://www.endbookdeserts.com/dolly-parton-imagination-libr...",
-          "In Tennessee hospitals a nurse, staff member, or authorized volunteer will swing by your room in the mother-baby unit and sign you up. Then you start receiving free books by mail each month until age 5. An amazing program by an amazing person!",
-          "I don't need Imagination Library. We are very well off for now, however, someone signed us up for it and I was pissed cause we can buy all this and not take away from someone who needs it. Then we received our first book. My 3 year old loves going to the mail with me and if there's a book, it makes him so happy he opens it and sits in his chair and just looks at it and asks for it to be read to him. He doesn't know about bank accounts or anything, all he cares about is books, his cozy (blanket), Buzz, and Elmo. We decided to keep it and donate to it and I think more people in our position should have services like this to hopefully ground them in a way you forget only by reminding by the smile and laughter of your child, then donate to them."
-        ]
-      }
-    },
-    {
-      "id": "50234232",
-      "title": "Oregon Police Are Charging a Local News Outlet $2.5M for Records About One Cop",
-      "url": "https://theintercept.com/2026/10/01/oregon-police-misconduct-public-records-cost-fee/",
-      "source": "Hacker News",
-      "published_at": "2026-10-25T18:04:11+00:00",
-      "summary": "Oregon Police Are Charging a Local News Outlet $2.5M for Records About One Cop",
-      "score": 410,
-      "comments": 107,
-      "discussion_url": "https://news.ycombinator.com/item?id=50234232",
-      "extra": {
-        "top_comments": [
-          "Some agencies have a different tactic: go really slowly.I sent a public records request to my local school district on March 9th 2026.They responded on 19th March 2026 saying they'd respond on in late April.Since then, every month they've sent an email with some small portion of the records, with a PDF letter saying they'll send a follow up a month later.I've received 8 of those responses so far, and there's no indication when, if ever, I will have received all the records responsive to my request.",
-          "> the Eugene Police Department claimed searching for records and processing the request would take at least 44,816 hours of staff time and cost approximately $2,484,599.04.44k hours is ~21 years. Beyond absurd",
-          "Worth pointing out that Germany is having an ongoing battle over our FOIA equivalent, in which a host of people who were bitten badly by it (most notably Jens Spahn) are proposing to allow exactly this kind of prohibitive fee, as well as reducing access to natural persons (so the individual reporter, not the newspaper) and only to people who have a reasonable interest, etc.Sure, the current form of the law has some issues on the receiving end, but boy is this an obvious move to cover their own corruption better..."
-        ]
-      }
-    },
-    {
-      "id": "50233929",
-      "title": "I refuse to accept a censored Internet. Join Me at FOSDEM 27",
-      "url": "https://talkweb.eu/openweb/4558/",
-      "source": "Hacker News",
-      "published_at": "2026-10-25T17:30:55+00:00",
-      "summary": "I refuse to accept a censored Internet. Join Me at FOSDEM 27",
-      "score": 405,
-      "comments": 204,
-      "discussion_url": "https://news.ycombinator.com/item?id=50233929",
-      "extra": {
-        "top_comments": [
-          "Is there an uncensored intetnet, because i dont think there is. if there is any, it can be turned off because its being routed on the censored net wrapped in encryption.that being said, that makes me pretty interested in this talk. outside of hacking sattelites and such things and/or infra i really dont see any opportunities to break free of the will of corporations as they can simply pay infra providers to do their bidding.I dont think software can solve all problems because internet exists essentially as informaiton transported over infrastructure. the software surely helps enable that but its a helper not the actual network.happy to learn otherwise from anyone here ofc :-)",
-          "Most people prefer censored internet as long as it aligns with their political leaning. Maybe that wasn't the case 15 years ago but it's pretty much true nowadays. I myself consider this as a fact.",
-          "FOSDEM is a great conference!If you ever get the chance to go, please go! Especially if you're an American I recommend it. It is so different than any other conference I've ever been to in the US.It doesn't have a lot of sales pitches, the technical content is top notch, and overall it is really fun and interesting to see what everybody is talking about and working on."
-        ]
-      }
-    },
-    {
-      "id": "50236102",
-      "title": "OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why?",
-      "url": "https://minimaxir.com/2026/10/cheap-llms/",
-      "source": "Hacker News",
-      "published_at": "2026-10-25T21:11:31+00:00",
-      "summary": "OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why?",
-      "score": 181,
-      "comments": 206,
-      "discussion_url": "https://news.ycombinator.com/item?id=50236102",
-      "extra": {
-        "top_comments": [
-          "Competition drives prices down. We tried Kimi and GLM models after hitting 'cybersecurity' blocks on OpenAI and Anthropic. We found them to be much cheaper to access and helped us complete our work without 'cybersecurity' refusals blocking us.",
-          "This is why Anthropic and OpenAI are pushing for more “regulation”. You can’t show ROI to investors by cutting inference costs.Regulation might inconvenience them a little, but the upside is huge if it means open models out of China get banned.",
-          "DeepSeek claims $38 of revenue per GPU, per hour for Flash V4. That is $332,880 per GPU, per year. This matches their DeepInfer numbers: 25,600 output tokens/s per GPU sold at $0.60 per million -> $55 minus some other overhead to arrive at $38.For the bigger Anthropic and OpenAI models (and associated higher prices) there are many unknown factors. But presumably they also work hard on optimizations, and it's not so crazy to think they had or still have a lot of wiggle room to adjust prices."
+          "I was seeing the reports from the first pass which said it was almost guaranteed that Lula would not win because of what the results of the first were. I wonder what caused that prediction to fail.I am glad the son of a failed coup organizer and a trump puppet didn't get elected and am hopeful for Brazils ability to self govern. Breaking free of US financial monopolies (credit cards) gives me hope they'll continue to produce and innovative into a healthier and competitive world market, but I am also tired of Lula being at the helm and wish someone else could step up and take the reigns. When someone stays in power for so long in a democracy it makes me suspicious of the legitimacy of their power. Are they popular because they are good for the country or are they popular because they have the right people with power, influence, and money on their side.",
+          "This was the first time I saw a major mainstream media outlet prominently feature a statistical predictive model live during the vote count (and it was spot on): https://www.estadao.com.br/politica/eleicoes/em-tempo-real-p...",
+          "It was anyway a lose-lose situation. I hope to see Brazil free from 'bolsopetismo'/'bolsolulismo' (as some of we call this disease to keep Bolsonaro and Lula or their parties on the presidential room) soon, but here we go for another 4 years..."
         ]
       }
     },
@@ -98,32 +26,14 @@
       "source": "Hacker News",
       "published_at": "2026-10-25T19:11:31+00:00",
       "summary": "Why I Am a Programmer",
-      "score": 147,
-      "comments": 54,
+      "score": 172,
+      "comments": 57,
       "discussion_url": "https://news.ycombinator.com/item?id=50235017",
       "extra": {
         "top_comments": [
           "Conan the Barbarian and Below the Root on our Apple IIe. Tiny worlds behind the glowing Orange CRT. How do I make something like this? My mum (lol) helped me figure out how to get keyboard input in BASIC. I made a little game where an O character chases your X character around the screen. Core game loop. Browsing pirate CGA games at the warung in Pondok Indah, well outside the jurisdiction of US law. Glorious rack upon rack of tiny worlds to explore. Death Track and Prince of Persia. More BASIC and that gorilla throwing bananas. Later on the Multiline BBS. Talking late into the night with tech weirdos twice my age. All manner of mind bending ideas. Newsgroups. Punks and skaters and cypherpunks. Predicting what was coming, seeing the future we expected unfolding. Downloading Commander Keen over FTP. WinSock and Netscape. My first homepage. Downloading Linux and getting it running. Configuring XFree86 modelines all night lol. Turbo Pascal and VAX VMS at uni. My first job coding. Hacking out web backends in gnarly ass Perl. No databases just blatting and slurping comma delimited text files lol. Getting paid to do the most exciting thing there was to do, all day. Magic.",
-          "For me, it was the creative, puzzle-solving, game-like nature of it. Then I got my first job, and I had 100% autonomy, so a friend of mine and I got to solve real problems for real people in the real world. It was a rush. Making people’s lives better through software is still the biggest motivation for me.",
-          "I started programming on my schools CASIO Graphics Calculator.It was slow but allowed some text based games we then shared. No internet so did it all from trial and error.Then ... i wanted a 3D Cube rotating. At 15/16 this was a bit too much i guess i had no idea about rotation matrices back then and deemed myself a bit dense.Never got around doing 3D stuff at work, only databases all the time. I dabbled some with ThreeJS but i guess i was still haunted.BUT THEN. Geometric algebra! So smooth. If you like tables and had problems with stuff like cross products or quaternions, didnt like copy pasting rotation matrices, etc. YOU WILL LOVE geometric algebra! It's like you meet 2 tables on a FK and bam its a volume (highly simplified!!)Just my 2 cents. Don't write yourself off if you did not do 1337 demos in primary school on a tamagotchi."
-        ]
-      }
-    },
-    {
-      "id": "50235738",
-      "title": "What goes into making an animated film?",
-      "url": "https://www.disneyanimation.com/process/",
-      "source": "Hacker News",
-      "published_at": "2026-10-25T20:27:09+00:00",
-      "summary": "What goes into making an animated film?",
-      "score": 104,
-      "comments": 41,
-      "discussion_url": "https://news.ycombinator.com/item?id=50235738",
-      "extra": {
-        "top_comments": [
-          "How much of this is AI automating? That drawing of the car design, the storyboarding... isn't generative AI aiming to do away with most of it?I've been seeing some of the lengthier AI films on X (i.e. the one about badgers vs. rats that looks like Lord of the Rings), and there is certainly a lot of work put into them. However the type of work that goes into them is substantially different than what is shown in this article about Zootopia. There are a lot less decisions made by humans. AI is driving a lot of the creative decisions. In the end you get something good, but is it still riding on the decisions of the training data that came from humans like the ones who made Zootopia by hand crafting every element of it? I think this is an interesting question.",
-          "I remember seeing a Pixar documentary a really long time ago where someone talked about attention to detail. The designers would fully texture out the inside of a dresser draw that will never be shown in the film. The idea was imagine how much attention to detail and time is spent on the things that will be seen. Pure craftsmanship.",
-          "Now go watch \"Kono Express\". Disney laid off an animator from the Star Wars factory, and he's cranking out stuff about as good as Disney Animation all by himself. With Unreal Engine and AI tools, of course.It's been a long time since there was an ink and paint department."
+          "Getting to build things without skinned knuckles or solder smoke in your face... now that is a rush! And if you are not happy with it, you get to tear it down and build it back up better. It costs nothing but your time and imagination. Importantly, you get to build, to solve problems, to engineer, to visualize, to create and be creative. (Ok, maybe musicians have even more fun, but alas I wasn't wired for music. :-)",
+          "For me, it was the creative, puzzle-solving, game-like nature of it. Then I got my first job, and I had 100% autonomy, so a friend of mine and I got to solve real problems for real people in the real world. It was a rush. Making people’s lives better through software is still the biggest motivation for me."
         ]
       }
     },
@@ -134,14 +44,104 @@
       "source": "Hacker News",
       "published_at": "2026-10-25T20:32:31+00:00",
       "summary": "The State of Context Engineering",
-      "score": 94,
-      "comments": 27,
+      "score": 124,
+      "comments": 36,
       "discussion_url": "https://news.ycombinator.com/item?id=50235780",
       "extra": {
         "top_comments": [
-          "Forgetting is the part I see break first. Old facts in memory don't get deleted, they get contradicted, and the model happily picks whichever one is closer in the prompt. What's worked better for me is having this really cool way of jev compaction, there was a youtube video out there somewhere that spoke about how to get compaction to be super fast, cheap and have it retain the most useful information from the context compaction.",
           "It's nice that this article goes beyond the \"context too long\" scapegoat diagnostic.There is more to it than just reducing content in context. LLMs attention mechanism works by finding graphs of related words and concepts and it works best when the relevant relationships are close together in the text. Length matters but how well the information is organized matters as well.It's useful to be familiar with the concept of dependency length. The two sentences in this image ( https://benoitessiambre.com/img/dependencylength.png ) have the same words and same meaning but sentence C is organised to minimize the distance between related words.This can also apply to paragraphs and sections. Ordering them so that related information is recursively closer together, helps AIs think better (also helps humans, Dependency Length Minimization, DLM is an idea from psycho-linguistics).This is one reason progressive disclosure and sub agents are important. Including unnecessary information spreads apart surrounding information and makes it more difficult for AIs to figure things out.For eg. optimizing skills, it can help to put more important information at the bottom of a skill. Usually after a skill is loaded, the AI will start “thinking”, talking to itself to try to reason through a problem. The thinking block will have an easier time considering the text closest to it, the last part of the skill, than information farther up.Thinking blocks can produce a lot of text (a lot of it often hidden from users) that also spreads information apart. Sometimes, when an early instruction is still relevant but there’s been a lot of thinking and discussion added to the context since, it’s worth repeating a summary the early information ( keeping in mind that too many reminders can also spread other information apart ). I think however, LLMs are tuned to overweight very early information so that they don't disregard system prompts. You might be able to exploit this by placing some important facts near the very beginning of a conversation.If you've ever written compression algorithms where repeated blocks are referenced instead of encoded, you'll be familiar with how related information being clustered allows for better compression. It's another example of the parallels between intelligence and compression and it hints at the information theoretic aspect of DLM.",
-          "> As we focus more on memory, we also need to think about strategic forgetting. Over time, overly precise memories become conflicted and messy, and nobody has yet figured out how to handle this.> I think that’s the context problem of tomorrow.This passage is explains why humans have imperfect memory. Seems the perfect memory we wish LLMs had impedes creativity and is maladaptive.Strategic forgetting helps put the non-deterministic machine to best use. LLMs don't need perfect memory; that's covered by the computer itself.I like that this justifies the continuing relevance of context engineering - a seemingly dated term - in the face of trends like loop engineering."
+          "This is why I think the next evolution will be giving models full control of their own context, where they can edit it just like a file. This idea was in a recent paper, where models could even be specifically trained for context management [1]. For the problem of the prefix cache being invalidated, they thought of implementing a suffix cache[1]: https://arxiv.org/abs/2609.37725",
+          "I like the idea of VictorTaelin's UniiChat [1] which summarizes every message into a single line and on top of that a binary tree of lines combined from lower levels. The context is then a view of that tree with more detail in recent messages and less detail in historical messages, plus a `zoom` tool that enables the agent to navigate the tree and read messages.An implementation of this idea based on the pi harness: https://github.com/jonaslsaa/pi-optchat[1]: https://gist.github.com/VictorTaelin/91837951a5ce5b38f341ec1..."
+        ]
+      }
+    },
+    {
+      "id": "50235738",
+      "title": "What goes into making an animated film?",
+      "url": "https://www.disneyanimation.com/process/",
+      "source": "Hacker News",
+      "published_at": "2026-10-25T20:27:09+00:00",
+      "summary": "What goes into making an animated film?",
+      "score": 118,
+      "comments": 51,
+      "discussion_url": "https://news.ycombinator.com/item?id=50235738",
+      "extra": {
+        "top_comments": [
+          "Around 2010–2012 I made videos for Vocaloid songs, with the art coming from separate illustrators. Many of them wouldn't send their illustrations split into layers, which made animating them a pain. And even though it was a music video and I asked for more drawings, some just wouldn't listen and sent a single piece with way too much effort poured into it.",
+          "So are there more such articles “what goes into making ”? that you would recommend? - eg- games, physical objects, hardware, etc?",
+          "How much of this is AI automating? That drawing of the car design, the storyboarding... isn't generative AI aiming to do away with most of it?I've been seeing some of the lengthier AI films on X (i.e. the one about badgers vs. rats that looks like Lord of the Rings), and there is certainly a lot of work put into them. However the type of work that goes into them is substantially different than what is shown in this article about Zootopia. There are a lot less decisions made by humans. AI is driving a lot of the creative decisions. In the end you get something good, but is it still riding on the decisions of the training data that came from humans like the ones who made Zootopia by hand crafting every element of it? I think this is an interesting question."
+        ]
+      }
+    },
+    {
+      "id": "50238088",
+      "title": "IBM CEO says open weight models are now good and cheap on-prem",
+      "url": "https://www.theregister.com/systems/2026/10/22/ibm-ceo-says-open-weight-models-are-now-irresistibly-good-and-cheap-on-prem/5304640",
+      "source": "Hacker News",
+      "published_at": "2026-10-26T01:47:46+00:00",
+      "summary": "IBM CEO says open weight models are now good and cheap on-prem",
+      "score": 107,
+      "comments": 70,
+      "discussion_url": "https://news.ycombinator.com/item?id=50238088",
+      "extra": {
+        "top_comments": [
+          "It's absolutely true. I have three different setups here, a rig with 8 gpus that I use in either one of two modes (all 8, very heavy model or just one much lighter) and two DGX sparks. I haven't used a paid model in months. Sure, they use a few more tokens and the results may be slightly less good (but this doesn't really matter because I'm still in the loop so it is easy to correct). But the fact that I'm not sharing my work with the paid providers is much more to my liking than having big brother looking over my shoulder at every step and occasionally giving me the 'I can't let you do that, Jacques' treatment.",
+          "But hardware to run them is conveniently something IBM would be happy to sell you.",
+          "Considering the disclosed numbers for DeepInfer and the usefulness/popularity of DeepSeek 4.1 Flash, I expect it is inevitable that more companies are going to consider the self-hosting option seriously, and perhaps play with the idea of offering inference as a vendor."
+        ]
+      }
+    },
+    {
+      "id": "50237078",
+      "title": "F-Zero X on Nintendo 3DS",
+      "url": "https://hypnotize.works/gdx-3ds/postmortem/index.html",
+      "source": "Hacker News",
+      "published_at": "2026-10-25T23:27:30+00:00",
+      "summary": "F-Zero X on Nintendo 3DS",
+      "score": 86,
+      "comments": 42,
+      "discussion_url": "https://news.ycombinator.com/item?id=50237078",
+      "extra": {
+        "top_comments": [
+          "This is so cool! I've been working on trying to minimize the F-zero render loop to fit on gameboy and multiplayer over the link cable...it's been a journey. (I rushed the writeup cus of this article--still polishing the text), but give the game a try on the in-browser emulator: https://fireflyk64.github.io/makingfsub/",
+          "Hey, author of the project here! Thanks for posting! It's been a really fun project to work on, and a great way to learn about how to use Claude more efficiently. I'm just a few hours away from posting a big update with:64dd on original 3DSLocal & Online MultiplayerQR Code sharing for Custom CoursesI hope ya'll check out the authors notes, post-morterm, and give it a try on your 3DS.",
+          "I’m curious why people have started using the 3DS as the gateway device for ports of games, like Melee and F-Zero X.Don’t get me wrong, the 3DS is a gem of a console, and it harks back to when Nintendo put more thought into what they released instead of just another Mario sports game; but since the Switch is so much more powerful, I’d expect ports to that be more of a priority."
+        ]
+      }
+    },
+    {
+      "id": "50237712",
+      "title": "Removing Next.js Got My Blog to 100 on Every Lighthouse Category",
+      "url": "https://korindiehacker.bloffy.blog/en/removing-nextjs-got-my-blog-to-100-on-every-lighthouse-category",
+      "source": "Hacker News",
+      "published_at": "2026-10-26T01:03:39+00:00",
+      "summary": "Removing Next.js Got My Blog to 100 on Every Lighthouse Category",
+      "score": 85,
+      "comments": 43,
+      "discussion_url": "https://news.ycombinator.com/item?id=50237712",
+      "extra": {
+        "top_comments": [
+          "The vast majority of websites don't need Next.js or React. Those are only useful if you need dynamic and modular updates within the structure, or state management. We've defaulted to React because of the name recognition and simple intertia. It's not a good framework for websites in general.",
+          "Not to brag*, but that's what I've been doing since 2013 on my php blog [0]. It was actually the result of a hn warm hug of death. My CDN is just a separate webserver serving all static assets using nginx.Both my css and js are dynamically minified and included in the html depending on which component is loaded on the page.[0]: https://idiallo.com/blog/handling-1-million-web-request* I am bragging",
+          "Respectfully, I don't understand this. They never needed Next.js for a static blog.This is like writing a post about how I didn't need a Ferrari to commute to work and I saved money by taking the bus."
+        ]
+      }
+    },
+    {
+      "id": "50237896",
+      "title": "iPhone Duo Teardown",
+      "url": "https://www.ifixit.com/News/119895/iphone-duo-teardown",
+      "source": "Hacker News",
+      "published_at": "2026-10-26T01:23:24+00:00",
+      "summary": "iPhone Duo Teardown",
+      "score": 81,
+      "comments": 45,
+      "discussion_url": "https://news.ycombinator.com/item?id=50237896",
+      "extra": {
+        "top_comments": [
+          "Nearly 10 years in to foldables, and they still bring so many caveats. They are consistently worse for size, weight, shape, cameras, battery, robustness, and longevity. I don't think I'd ever recommend one.On the other hand, the advantages are... an iPad like experience sometimes? Or a smaller phone for the flip form factor? The flip form factor certainly does not pay off. I'm honestly not sure who the trade-offs pay off for.",
+          "Spending thousands of dollars on hardware I don't own is not for me, but foldable touchscreen phones are, objectively, pretty freaking cool pieces of engineering work. Very cool breakdown of the hardware.",
+          "You know how on a computer screen you can just drag any corner of a window to resize it? I had a dream once where I had a phone that worked that way. Want a bigger screen? Just drag one of the corners of the phone. Shove all the corners together and drop it in your pocket.I used the hell out of that phone all night. Then I woke up and spent about an hour trying to figure out how to build one. I think I could do it in one dimension (i.e. make the phone wider) by rolling the screen around a tiny roller in the edge of the case, and having the case telescope. But that won't work in two dimensions at once. I never figured out how to do it in two dimensions.When somebody builds one of these, I'll buy one."
         ]
       }
     }
