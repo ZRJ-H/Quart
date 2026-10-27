@@ -1,113 +1,122 @@
 {
-  "cached_at": "2026-10-27T11:00:25.055372+08:00",
+  "cached_at": "2026-10-27T13:21:50.329825+08:00",
   "articles": [
     {
-      "id": "2610.35123",
-      "title": "Generative AI in Turbulence: Foundations, Applications, Validations and Benchmarks",
-      "url": "https://arxiv.org/abs/2610.35123v1",
+      "id": "2610.35868",
+      "title": "Retriever-Free Retrieval: Navigating Documents with Decision Models",
+      "url": "https://arxiv.org/abs/2610.35868v1",
       "source": "arXiv",
-      "published_at": "2026-10-26T10:00:04+00:00",
-      "summary": "Generative AI offers new approaches to turbulence problems in which incomplete observations or unresolved d.o.f. admit multiple physically plausible solutions. Potential applications include stochastic closures, super-resolution, data assimilation, uncertainty quantification, and the generation of Eulerian and Lagrangian flow ensembles. However, turbulence is not a conventional image-generation problem. Its multiscale dynamics, intermittency, extreme events, rough velocity fields and intrinsically stochastic transport make visual realism, pointwise error, and low-order spectral agreement insufficient measures of physical fidelity. We examine where generative AI provide novel capabilities with emphasis on diffusion models, score-based methods, and related probability-transport formulations. We discuss their use in unconditional generation, probabilistic reconstruction, reduced-order modeling, temporal evolution, and mesh-free representations. We argue that validation must address turbulence properties: energy transfer, structure functions, anomalous scaling, pdf tails, coherent structures, conservation laws, temporal consistency, ensemble diversity and generalization. Finally, we discuss potential limitations in validation, baseline, data availability and reproducibility, and the need for a benchmark ecosystem combining open data, standardized challenges, hidden tests, physics-aware metrics, and documented failures. This paper serves as a bridge between two communities. For AI practitioners, we provide a fair and accessible introduction to turbulence, essential for appreciating the challenges posed by the field and for assessing the physical relevance of generative models. For turbulent practitioners, we provide an introduction to the key technological aspects of Generative AI, clarifying what these tools actually do, and where their potential and current limitations lie.",
+      "published_at": "2026-10-26T17:59:44+00:00",
+      "summary": "While language models have become dramatically more capable, retrieval still largely relies on lexical matching or similarity in fixed embedding spaces. This creates a capability asymmetry: what the retriever fails to find, even the strongest generator cannot recover. We propose DecisionRAG, which brings the capabilities of pretrained language models to retrieval using decision models that jointly evaluate candidate branches in a single forward pass, without generating any tokens, and show that judging candidates in a shared context makes their relevance estimates comparable. Like a person browsing a library, DecisionRAG navigates the corpus's inherent structure from broad topics down to individual passages, deciding at each level which branches are worth exploring. Without task-specific training or a first-stage retriever, DecisionRAG outperforms dense retrieval with an 8B reranker by 13.8 R@1 points on MultiDoc2Dial and 17.4 Hit@1 points on Natural Questions. Across four benchmarks, including a corpus of 2.68 million Wikipedia paragraphs, retrieval takes just 0.7-1.8 seconds per query.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Luca Biferale",
-          "Michele Buzzicotti"
+          "Chao Wan",
+          "Paul Jünger",
+          "Beixi Du",
+          "Bodong Liu",
+          "Navaneetha Krishnan",
+          "Kilian Q. Weinberger"
         ],
         "categories": [
-          "physics.flu-dyn",
-          "cond-mat.stat-mech",
+          "cs.AI"
+        ]
+      }
+    },
+    {
+      "id": "2610.35865",
+      "title": "Center-of-Mass Interpretation of Evolution Strategies",
+      "url": "https://arxiv.org/abs/2610.35865v1",
+      "source": "arXiv",
+      "published_at": "2026-10-26T17:59:33+00:00",
+      "summary": "Evolution strategies (ES) update a model by sampling a population of perturbed copies, scoring each one, and moving in the reward-weighted direction of the perturbations. This update is usually presented as an estimate of a smoothed gradient. We present a geometrical interpretation of this update instead. Treat each perturbed model as a particle and its reward as the particle's mass. Before scoring, every particle has the same mass and the population balances at its centroid. Once rewards are assigned, it balances at its reward-weighted center of mass instead. We show that the mean-subtracted ES update is exactly this displacement, scaled by a scalar factor that depends on the mean reward, for any finite population. The physical reading needs nonnegative rewards, which can always be arranged by adding a constant to every reward without changing the update. In the limit of a large population or under antithetic sampling, the centroid sits on the model itself, so ES has an even simpler geometric interpretation: from its current location, the model moves towards the reward-weighted center of mass of its own population. The same picture explains what subtracting the mean reward does: it changes the point from which the displacement is measured, from the model to the sampled centroid. Our contribution is an intuitive, geometric way to visualize an ES update, exact for any finite population.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Akshat Gupta"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CL"
+        ]
+      }
+    },
+    {
+      "id": "2610.35866",
+      "title": "Auto-Research Arena: Benchmarking and Advancing Auto-Research in Language Modeling",
+      "url": "https://arxiv.org/abs/2610.35866v1",
+      "source": "arXiv",
+      "published_at": "2026-10-26T17:59:33+00:00",
+      "summary": "As autonomous research systems become more capable, benchmarks must both evaluate their performance and support meaningful research progress. We introduce Auto-Research Arena, a multi-target benchmark for evaluating autonomous research systems and discovering ideas in language modeling. Arena supports diverse research objectives within a shared experimental environment by separating admissibility from improvement: model quality and resource constraints determine whether a result qualifies, while the selected target measures progress among admissible results. We instantiate Arena in language model pretraining with nine targets spanning model, data, training, and inference efficiency, and evaluate seven research harnesses using two foundation models. Arena clearly differentiates existing harnesses across research objectives, with several sophisticated methods outperformed by our simple sequential search baseline, indicating substantial headroom in current auto-research systems. Beyond evaluation, Arena reveals a substantially broader frontier of model and system ideas aligned with active research directions. Reusing these discoveries in a new quality-driven search yields lower training loss under matched data and FLOPs and lower held-out BPB at the same model size. Together, Arena provides a common framework for benchmarking autonomous research and expanding its scope in language modeling. The code is available at https://github.com/Auto-Research-Arena/auto-research-arena",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Xi Chen",
+          "Chongjian Ge",
+          "Yiran Xu",
+          "Yiqun Mei",
+          "Henrik I. Christensen",
+          "Hao Tan",
+          "Ziwen Chen",
+          "Hanwen Jiang"
+        ],
+        "categories": [
+          "cs.LG"
+        ]
+      }
+    },
+    {
+      "id": "2610.35862",
+      "title": "Learning Force-Reactive Humanoid Loco-Manipulation",
+      "url": "https://arxiv.org/abs/2610.35862v1",
+      "source": "arXiv",
+      "published_at": "2026-10-26T17:59:11+00:00",
+      "summary": "Many everyday tasks require controlling contact force as well as motion. On a humanoid, this force must often be coordinated across both hands and the whole body, and cannot be specified by kinematic trajectories alone. Therefore, we present FLORE, a framework for learning force-reactive humanoid loco-manipulation. We collect robot-free demonstrations using two force-sensing UMI-style handheld grippers for hand motion and contact wrenches, and wearable trackers for body motion. A force-reactive diffusion policy takes vision, proprioception, and measured wrenches as input, then predicts actions and per-hand force commands. A hybrid compliance whole-body controller with force tracking executes these commands while maintaining balance: an integral of the force error measured by real force/torque (F/T) sensors lets each hand track force accurately along the commanded direction and remain compliant along the others. In simulation, the controller tracks per-hand force commands of varied magnitude and direction, with little loss in whole-body motion accuracy. Across three contact-rich tasks on the robot, the force-reactive policy succeeds in 80% of rollouts, compared with 26.7% for a position-only policy trained on the same demonstrations and executed by the same controller. For more details, please visit our website: https://louis-leee.github.io/FLoRe/.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Sihang Li",
+          "Xiaofeng Guo",
+          "Jinkun Cao",
+          "Charlie Cheng",
+          "Ruihan Yang",
+          "Chen Feng",
+          "Guanya Shi",
+          "Haozhi Qi"
+        ],
+        "categories": [
+          "cs.RO",
           "cs.AI",
           "cs.LG",
-          "nlin.CD"
+          "eess.SY"
         ]
       }
     },
     {
-      "id": "2610.35114",
-      "title": "Quality over Quantity: Rethinking Data and Model Assumptions for Bengali Coreference Resolution",
-      "url": "https://arxiv.org/abs/2610.35114v1",
+      "id": "2610.35856",
+      "title": "On the stability of learning",
+      "url": "https://arxiv.org/abs/2610.35856v1",
       "source": "arXiv",
-      "published_at": "2026-10-26T09:53:02+00:00",
-      "summary": "Multilingual transformer models are often assumed to generalise across languages, but their effectiveness for coreference resolution in low-resource settings remains unverified. We investigate this gap in Bengali, a language with over 250 million speakers but limited annotated coreference resources. We evaluate transformer-based pre-trained encoders under multiple settings, including zero-shot, fine-tuning, data augmentation, and cross-lingual transfer. Our results challenge several common assumptions about model generalisation and data efficiency in low-resource NLP. We demonstrate that a small amount of high-quality annotated data significantly outperforms larger mixed-quality datasets (p < 0.01). We find that data augmentation, particularly back-translation, does not improve performance and can degrade results in coreference resolution. Cross-lingual transfer is also inconsistent: transfer from a distant language like English reduces performance, and transfer from the related language Hindi provides no consistent benefit across models. Several widely used multilingual models exhibit collapsed embedding spaces, rendering them unsuitable for similarity-based clustering tasks. These findings highlight the importance of annotation quality over data quantity and provide empirical guidance for developing coreference resolution systems in low-resource languages.",
+      "published_at": "2026-10-26T17:58:14+00:00",
+      "summary": "Learning algorithms are usually analyzed under the assumption that informative gradients are continuously available. But this is not always true---learning signals in biological neural networks, for example, may be sparse, local, and only intermittently available at any given synapse. In this work, we show that if gradient information is noisy and only intermittently available, learning may be unstable. In particular, even if average learning dynamics converge to the correct optimum, variance in learning may be asymptotically infinite. We explore this point in a number of analytically tractable settings, including single-layer and multi-layer linear networks, and derive explicit conditions under which learning is stable. These conditions complement, but are conceptually distinct from, existing conditions related to the stability of stochastic gradient descent. Our work demonstrates that unbiased credit assignment is not enough for reliable learning; sufficiently frequent and informative feedback is also required, which yields an additional constraint on models of biologically plausible learning.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Zenith Biswas",
-          "Andrew Thomas Dyer"
+          "John J. Vastola"
         ],
         "categories": [
-          "cs.CL"
-        ]
-      }
-    },
-    {
-      "id": "2610.35113",
-      "title": "UTA: Universal Training Adaptive Learning Rate Decay",
-      "url": "https://arxiv.org/abs/2610.35113v1",
-      "source": "arXiv",
-      "published_at": "2026-10-26T09:53:01+00:00",
-      "summary": "Learning rate decay (LRD) is critical for training high-performance models, yet most designs remain empirically driven. Although the Universal Budget Aware (UBA) LRD offers a theoretical framework, its reliance on SGD dynamics limits its applicability to modern Adam-type optimizers and leaves its key `optimization difficulty parameter' opaque. To bridge this gap, we propose the Universal Training Adaptive (UTA) LRD. Unlike UBA's fixed offline trajectory anchored solely to iterations, UTA treats LRD as a closed-loop shape-and-scale problem. By continuous-time formulation, UTA is training-state adaptive with segment-wise optimal shape. This adaptivity links external iterations with internal training states, enabling a near-optimal path in both progression shape and learning rate (LR) scale, a property unattainable by other LRDs, including UBA. Empirically, we demonstrate consistent improvements across language models (LLaMA 60M to 1B) and vision models (ResNet50, ViT-B) on ImageNet with plug-and-play ease and negligible overhead. Extensive ablation studies further confirm UTA's robustness across dimensions, including peak LR, final decay ratio, its parameter $\\varphi_0$, component efficacy and generalization to fine-tuning scenarios, underscoring its practical implementability.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Anda Tang",
-          "Junjie Wang",
-          "Xuanlin Yang",
-          "Cong Fang",
-          "Zhouchen Lin"
-        ],
-        "categories": [
-          "cs.LG",
-          "cs.AI"
-        ]
-      }
-    },
-    {
-      "id": "2610.35112",
-      "title": "Subspace Crystallization in Grokking: Rank Compression Tracks the Phase Transition",
-      "url": "https://arxiv.org/abs/2610.35112v1",
-      "source": "arXiv",
-      "published_at": "2026-10-26T09:52:40+00:00",
-      "summary": "Grokking describes understanding something deeply and intuitively. In neural networks, it is the phenomenon where a network generalizes long after memorizing its training data. This delay has been linked to a fall in the effective rank of the network's weight matrices, but whether this rank compression drives grokking or follows it is still unresolved. We study a mean-field MLP and a one-layer transformer trained on modular arithmetic and observe that: (i) Compression follows the onset, not memorization. Every transformer memorizes its training data within 250 steps, while the grokking onset (the first step at which test accuracy reaches 95%) varies from 6,500 to 21,000 steps. The steepest fall in effective rank comes about 900 steps after the onset, however late the onset occurs, and networks that memorize without grokking compress far less. (ii) Subspace crystallization. We call the span of the fewest top singular directions of a weight matrix that preserve 99% of test accuracy its sufficient subspace. Its size can shrink as the margin between the correct and the best wrong output grows, so we also count the directions needed to keep the outputs within 10%. In the transformer, this count falls during the transition from a quarter or more of the available directions to about a tenth, which we call subspace crystallization. (iii) Imposing low rank does not speed up grokking. Against a factorized full-rank control, capping the rank of the transformer's MLP input weights delays the onset, and capping the rank of its embedding stops 15 of 20 runs from grokking. Compression is therefore a signature of grokking rather than its cause.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Shlok Mehendale",
-          "Paras Chopra"
-        ],
-        "categories": [
-          "cs.LG",
-          "cs.AI"
-        ]
-      }
-    },
-    {
-      "id": "2610.35111",
-      "title": "Rethinking Evaluation for Principled Generalization Using a Kripkean Challenge to Meaning as Use",
-      "url": "https://arxiv.org/abs/2610.35111v1",
-      "source": "arXiv",
-      "published_at": "2026-10-26T09:52:01+00:00",
-      "summary": "Large language models operationalize an intuitive, view of meaning as use. We argue that it faces a rule-following challenge. Using Kripke's interpretation of Wittgenstein, we argue that finite histories of use do not determine a unique rule for future extension. This reframes the debate about OOD generalization but also about NLP evaluation; benchmarks that measure performance on fixed use cases or local robustness, we argue, do not by themselves establish semantic competence. To evaluate whether models preserve rules and concepts under principled domain extension, we propose to evaluate two capacities, central to this ability: abstraction and recursion; and we offer an experimental paradigm for testing both.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Niyar R Barman",
-          "Omar Naim",
-          "Nicholas Asher"
-        ],
-        "categories": [
-          "cs.CL"
+          "q-bio.NC",
+          "cs.LG"
         ]
       }
     }
