@@ -1,122 +1,113 @@
 {
-  "cached_at": "2026-10-26T13:06:13.541993+08:00",
+  "cached_at": "2026-10-27T11:00:25.055372+08:00",
   "articles": [
     {
-      "id": "2610.32982",
-      "title": "The Language of Instruction: Genre and Generative AI",
-      "url": "https://arxiv.org/abs/2610.32982v1",
+      "id": "2610.35123",
+      "title": "Generative AI in Turbulence: Foundations, Applications, Validations and Benchmarks",
+      "url": "https://arxiv.org/abs/2610.35123v1",
       "source": "arXiv",
-      "published_at": "2026-10-23T17:59:56+00:00",
-      "summary": "This article argues that instruction-fine-tuned language models should be understood as implementing a genre, what is proposed as the instructional-conversational genre. This genre is an amalgamation of discursive language from prior conversations between generative models and humans recursively run through these massive neural networks. It is instantiated in applications through instruction fine-tuning, the inclusion of a pretext known as a system prompt, and the formalization of inputs in mark-up languages characterized by the use of special tokens and role assignment in turntaking structures.",
+      "published_at": "2026-10-26T10:00:04+00:00",
+      "summary": "Generative AI offers new approaches to turbulence problems in which incomplete observations or unresolved d.o.f. admit multiple physically plausible solutions. Potential applications include stochastic closures, super-resolution, data assimilation, uncertainty quantification, and the generation of Eulerian and Lagrangian flow ensembles. However, turbulence is not a conventional image-generation problem. Its multiscale dynamics, intermittency, extreme events, rough velocity fields and intrinsically stochastic transport make visual realism, pointwise error, and low-order spectral agreement insufficient measures of physical fidelity. We examine where generative AI provide novel capabilities with emphasis on diffusion models, score-based methods, and related probability-transport formulations. We discuss their use in unconditional generation, probabilistic reconstruction, reduced-order modeling, temporal evolution, and mesh-free representations. We argue that validation must address turbulence properties: energy transfer, structure functions, anomalous scaling, pdf tails, coherent structures, conservation laws, temporal consistency, ensemble diversity and generalization. Finally, we discuss potential limitations in validation, baseline, data availability and reproducibility, and the need for a benchmark ecosystem combining open data, standardized challenges, hidden tests, physics-aware metrics, and documented failures. This paper serves as a bridge between two communities. For AI practitioners, we provide a fair and accessible introduction to turbulence, essential for appreciating the challenges posed by the field and for assessing the physical relevance of generative models. For turbulent practitioners, we provide an introduction to the key technological aspects of Generative AI, clarifying what these tools actually do, and where their potential and current limitations lie.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "James E. Dobson"
+          "Luca Biferale",
+          "Michele Buzzicotti"
         ],
         "categories": [
-          "cs.CL",
-          "cs.CY"
-        ]
-      }
-    },
-    {
-      "id": "2610.32978",
-      "title": "SceneBloom: Agentic Indoor Environment Generation with Realistic and Diverse Layouts for Embodied Learning",
-      "url": "https://arxiv.org/abs/2610.32978v1",
-      "source": "arXiv",
-      "published_at": "2026-10-23T17:59:21+00:00",
-      "summary": "Training generalizable embodied agents requires realistic, varied, and simulation-ready indoor environments. Language-guided methods support semantic planning and object-level reasoning, but precise spatial grounding remains difficult. Visual generative models offer rich priors over plausible arrangements, yet their outputs require geometric reasoning to become physically valid 3D scenes. We introduce SceneBloom, an agentic framework that combines visual layout sampling with contract-guided 3D compilation. A hierarchical sampler uses diffusion priors to generate furniture arrangements within functional zones. A compiler then uses relations extracted from each proposal to guide geometric fitting and local pose correction. Across five room types, SceneBloom attains the highest visual quality and physical stability among the compared methods and is the only method with no detected mesh collisions and out-of-bounds objects. Its layouts are also closer to the distribution of real rooms than those of all compared baselines. Object navigation policies trained in these realistic scenes achieve a higher success rate in held-out real scans than those trained on an equal number of real training scans. Code is available at https://github.com/Tinaliu0123/scenebloom.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Yuhan Liu",
-          "Lianhui Qin",
-          "Shenji Wan"
-        ],
-        "categories": [
-          "cs.CV",
+          "physics.flu-dyn",
+          "cond-mat.stat-mech",
           "cs.AI",
-          "cs.RO"
+          "cs.LG",
+          "nlin.CD"
         ]
       }
     },
     {
-      "id": "2610.32971",
-      "title": "RobustRLlib: A Unified Library and Benchmark for Robust Reinforcement Learning Algorithms",
-      "url": "https://arxiv.org/abs/2610.32971v1",
+      "id": "2610.35114",
+      "title": "Quality over Quantity: Rethinking Data and Model Assumptions for Bengali Coreference Resolution",
+      "url": "https://arxiv.org/abs/2610.35114v1",
       "source": "arXiv",
-      "published_at": "2026-10-23T17:57:22+00:00",
-      "summary": "Robust reinforcement learning (RL) is critical for reliable real-world deployment, where policies may fail under diverse shifts and disruptions. Existing robust RL algorithms offer a rich set of mechanisms and principles, yet two major barriers limit their broader potential: limited algorithm reusability and an unclear empirical capability boundary. We introduce RobustRLlib, an algorithm-centric library and benchmark that addresses both challenges. It integrates 17 representative robust online, offline, and safe RL algorithms under a unified interface for substantially improved reusability, together with an enhanced evaluation platform spanning diverse real-world shifts and advanced humanoid and vision-language-action tasks. Systematic evaluation over 273 perturbation configurations provides an up-to-date capability map of current robust RL algorithms, revealing where they remain effective and where substantial robustness gaps persist. As an open-source, user-friendly platform, RobustRLlib offers a reproducible and extensible codebase for applying existing methods to new problems and developing new robust RL algorithms.",
+      "published_at": "2026-10-26T09:53:02+00:00",
+      "summary": "Multilingual transformer models are often assumed to generalise across languages, but their effectiveness for coreference resolution in low-resource settings remains unverified. We investigate this gap in Bengali, a language with over 250 million speakers but limited annotated coreference resources. We evaluate transformer-based pre-trained encoders under multiple settings, including zero-shot, fine-tuning, data augmentation, and cross-lingual transfer. Our results challenge several common assumptions about model generalisation and data efficiency in low-resource NLP. We demonstrate that a small amount of high-quality annotated data significantly outperforms larger mixed-quality datasets (p < 0.01). We find that data augmentation, particularly back-translation, does not improve performance and can degrade results in coreference resolution. Cross-lingual transfer is also inconsistent: transfer from a distant language like English reduces performance, and transfer from the related language Hindi provides no consistent benefit across models. Several widely used multilingual models exhibit collapsed embedding spaces, rendering them unsuitable for similarity-based clustering tasks. These findings highlight the importance of annotation quality over data quantity and provide empirical guidance for developing coreference resolution systems in low-resource languages.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Xi Chen",
-          "Fengqi Hu",
-          "Zeyu Shen",
-          "Jiaying Xu",
-          "Shangding Gu",
-          "Pan Xu",
-          "Anqi Liu",
-          "Laixi Shi"
+          "Zenith Biswas",
+          "Andrew Thomas Dyer"
+        ],
+        "categories": [
+          "cs.CL"
+        ]
+      }
+    },
+    {
+      "id": "2610.35113",
+      "title": "UTA: Universal Training Adaptive Learning Rate Decay",
+      "url": "https://arxiv.org/abs/2610.35113v1",
+      "source": "arXiv",
+      "published_at": "2026-10-26T09:53:01+00:00",
+      "summary": "Learning rate decay (LRD) is critical for training high-performance models, yet most designs remain empirically driven. Although the Universal Budget Aware (UBA) LRD offers a theoretical framework, its reliance on SGD dynamics limits its applicability to modern Adam-type optimizers and leaves its key `optimization difficulty parameter' opaque. To bridge this gap, we propose the Universal Training Adaptive (UTA) LRD. Unlike UBA's fixed offline trajectory anchored solely to iterations, UTA treats LRD as a closed-loop shape-and-scale problem. By continuous-time formulation, UTA is training-state adaptive with segment-wise optimal shape. This adaptivity links external iterations with internal training states, enabling a near-optimal path in both progression shape and learning rate (LR) scale, a property unattainable by other LRDs, including UBA. Empirically, we demonstrate consistent improvements across language models (LLaMA 60M to 1B) and vision models (ResNet50, ViT-B) on ImageNet with plug-and-play ease and negligible overhead. Extensive ablation studies further confirm UTA's robustness across dimensions, including peak LR, final decay ratio, its parameter $\\varphi_0$, component efficacy and generalization to fine-tuning scenarios, underscoring its practical implementability.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Anda Tang",
+          "Junjie Wang",
+          "Xuanlin Yang",
+          "Cong Fang",
+          "Zhouchen Lin"
         ],
         "categories": [
           "cs.LG",
-          "cs.AI",
-          "cs.RO"
+          "cs.AI"
         ]
       }
     },
     {
-      "id": "2610.32969",
-      "title": "DexPort: A Hand-Held Skill Interface for Dexterous Hand Data Collection",
-      "url": "https://arxiv.org/abs/2610.32969v1",
+      "id": "2610.35112",
+      "title": "Subspace Crystallization in Grokking: Rank Compression Tracks the Phase Transition",
+      "url": "https://arxiv.org/abs/2610.35112v1",
       "source": "arXiv",
-      "published_at": "2026-10-23T17:56:28+00:00",
-      "summary": "Collecting high-quality demonstrations remains a central bottleneck for learning dexterous manipulation. Teleoperation records executable robot actions, but it requires a complete robot setup and places the burden of coordinating many finger joints on the operator. Human demonstrations are easier to collect, but their motions must be estimated and retargeted to the robot, and they do not directly provide robot actions. In this paper, we introduce DexPort, a portable data-collection interface for high-DoF robot hands. It uses the same hand hardware for collection and deployment, avoiding a hand embodiment gap, and records both commanded joint targets and measured joint states. Our key observation is that a small set of skills can support a wide range of dexterous tasks. During collection, the operator moves the hand-held interface to specify the robot wrist motion and selects or adjusts skills that coordinate the finger motion. This removes the need to control each joint independently while retaining behaviors such as precise grasping and in-hand manipulation. We collect demonstrations across several real-world tasks and in unstructured environments without a robot arm. We then use behavior cloning to train visuomotor policies directly on the recorded wrist motions and hand commands, without skill labels. We evaluate across 4 tasks: pick-and-place with diverse objects, screwing with in-hand tool use, drawer stowage which requires simultaneous grasp and pulling, and a bimanual scanning task. We collect over 2,500 demonstrations with our portable device, in both laboratory and in-the-wild settings. Across our tasks, we see an improvement from 11% to 64% when using recorded robot commands instead of states, and an improvement from 36% to 78% for task success when using in-the-wild data.",
+      "published_at": "2026-10-26T09:52:40+00:00",
+      "summary": "Grokking describes understanding something deeply and intuitively. In neural networks, it is the phenomenon where a network generalizes long after memorizing its training data. This delay has been linked to a fall in the effective rank of the network's weight matrices, but whether this rank compression drives grokking or follows it is still unresolved. We study a mean-field MLP and a one-layer transformer trained on modular arithmetic and observe that: (i) Compression follows the onset, not memorization. Every transformer memorizes its training data within 250 steps, while the grokking onset (the first step at which test accuracy reaches 95%) varies from 6,500 to 21,000 steps. The steepest fall in effective rank comes about 900 steps after the onset, however late the onset occurs, and networks that memorize without grokking compress far less. (ii) Subspace crystallization. We call the span of the fewest top singular directions of a weight matrix that preserve 99% of test accuracy its sufficient subspace. Its size can shrink as the margin between the correct and the best wrong output grows, so we also count the directions needed to keep the outputs within 10%. In the transformer, this count falls during the transition from a quarter or more of the available directions to about a tenth, which we call subspace crystallization. (iii) Imposing low rank does not speed up grokking. Against a factorized full-rank control, capping the rank of the transformer's MLP input weights delays the onset, and capping the rank of its embedding stops 15 of 20 runs from grokking. Compression is therefore a signature of grokking rather than its cause.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Amber Xie",
-          "Jiawei Fu",
-          "Xiaofeng Guo",
-          "Carmelo Sferrazza",
-          "Guanya Shi",
-          "Haozhi Qi"
+          "Shlok Mehendale",
+          "Paras Chopra"
         ],
         "categories": [
-          "cs.RO",
-          "cs.AI",
-          "cs.LG"
+          "cs.LG",
+          "cs.AI"
         ]
       }
     },
     {
-      "id": "2610.32964",
-      "title": "Flownomaly: Single-Step Conditional-Mean Recovery for Few-Shot Anomaly Detection",
-      "url": "https://arxiv.org/abs/2610.32964v1",
+      "id": "2610.35111",
+      "title": "Rethinking Evaluation for Principled Generalization Using a Kripkean Challenge to Meaning as Use",
+      "url": "https://arxiv.org/abs/2610.35111v1",
       "source": "arXiv",
-      "published_at": "2026-10-23T17:53:30+00:00",
-      "summary": "Few-shot industrial anomaly detection requires modeling category-specific normality from only a handful of defect-free images. Common approaches tie inference to stored exemplars, impose rigid linear structure, or risk reproducing anomalous content. Flownomaly instead casts the problem as normal-counterpart recovery in frozen DINOv2 feature space. Given normal supports, a velocity field is learned through conditional flow matching over frozen patch tokens to transport Gaussian noise toward normal features. Along straight paths, a single recovery step using one evaluation of the optimal field yields the posterior mean of the clean normal token without trajectory integration. The operating time governs how strongly recovery modifies a query token. With no anomalous validation samples available for tuning, a normal-only Jacobian gain-to-noise criterion selects this time from the supports alone. Squared residuals between query tokens and their recovered counterparts yield anomaly signals for both dense localization and image-level detection. Across 1-, 2-, and 4-shot benchmarks on MVTec-AD and VisA, together with sample-shot evaluations on Real-IAD, Flownomaly achieves state-of-the-art performance against recent category-specific methods. In the 1-shot setting, image- and pixel-level AUROC reach 97.8% and 98.0% on MVTec-AD and 95.3% and 98.7% on VisA, with a 2.1-point image-level AUROC improvement over the strongest baseline on VisA. Code is available at https://github.com/b-rbmp/Flownomaly.",
+      "published_at": "2026-10-26T09:52:01+00:00",
+      "summary": "Large language models operationalize an intuitive, view of meaning as use. We argue that it faces a rule-following challenge. Using Kripke's interpretation of Wittgenstein, we argue that finite histories of use do not determine a unique rule for future extension. This reframes the debate about OOD generalization but also about NLP evaluation; benchmarks that measure performance on fixed use cases or local robustness, we argue, do not by themselves establish semantic competence. To evaluate whether models preserve rules and concepts under principled domain extension, we propose to evaluate two capacities, central to this ability: abstraction and recursion; and we offer an experimental paradigm for testing both.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Bernardo Perrone Ribeiro",
-          "Erkut Akdag",
-          "Egor Bondarev"
+          "Niyar R Barman",
+          "Omar Naim",
+          "Nicholas Asher"
         ],
         "categories": [
-          "cs.CV",
-          "cs.LG"
+          "cs.CL"
         ]
       }
     }

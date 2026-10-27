@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-10-26T13:06:13.541993+08:00",
+  "cached_at": "2026-10-27T11:00:25.055372+08:00",
   "articles": [
     {
-      "id": "50237485",
-      "title": "Lula wins election after final votes tallied",
-      "url": "https://www.reuters.com/live/brazil-election-live-lula-bolsonaro-face-off-presidential-runoff-2026-10-25/",
+      "id": "50242939",
+      "title": "Anthropic S-1",
+      "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
       "source": "Hacker News",
-      "published_at": "2026-10-26T00:31:07+00:00",
-      "summary": "Lula wins election after final votes tallied",
-      "score": 239,
-      "comments": 230,
-      "discussion_url": "https://news.ycombinator.com/item?id=50237485",
+      "published_at": "2026-10-26T13:04:50+00:00",
+      "summary": "Anthropic S-1",
+      "score": 1504,
+      "comments": 1468,
+      "discussion_url": "https://news.ycombinator.com/item?id=50242939",
       "extra": {
         "top_comments": [
-          "I was seeing the reports from the first pass which said it was almost guaranteed that Lula would not win because of what the results of the first were. I wonder what caused that prediction to fail.I am glad the son of a failed coup organizer and a trump puppet didn't get elected and am hopeful for Brazils ability to self govern. Breaking free of US financial monopolies (credit cards) gives me hope they'll continue to produce and innovative into a healthier and competitive world market, but I am also tired of Lula being at the helm and wish someone else could step up and take the reigns. When someone stays in power for so long in a democracy it makes me suspicious of the legitimacy of their power. Are they popular because they are good for the country or are they popular because they have the right people with power, influence, and money on their side.",
-          "This was the first time I saw a major mainstream media outlet prominently feature a statistical predictive model live during the vote count (and it was spot on): https://www.estadao.com.br/politica/eleicoes/em-tempo-real-p...",
-          "It was anyway a lose-lose situation. I hope to see Brazil free from 'bolsopetismo'/'bolsolulismo' (as some of we call this disease to keep Bolsonaro and Lula or their parties on the presidential room) soon, but here we go for another 4 years..."
+          "Everything comes back to whether the demand is really there.Anthropic thinks it is. The got the demand / datacenter match right in Q2, got great margins, and committed hard.They've got:- $114b committed to Google- $110b committed to AWS- $161b committed to Broadcom- $120b committed to SpaceXIf the party continues, they'll go from $50b in revenue to $500b and be fine.But if they don't, it's going to hurt. And that's their only choice, because otherwise, they end up with a frontier model and 50% of the capacity and get eviscerated on either availability or last-minute datacenter leases.It's a big business, but it's not an easy business.",
+          "The killer app is AI coding. Claude Code had first mover advantage, was a genuine revolution, and has diffused through the industry with incredible speed. I would imagine most of the huge revenue increase over the last year is due almost entirely to AI coding spend.There are three issues with this. First, the rapid diffusion of the technology means it is very unlikely to continue at the rate of adoption seen over the past year, so it's very hard to extrapolate based on what we've seen so far. Second, many companies are reigning in AI budgets after an initial honeymoon phase. Third, all of the other labs are trying to take a bite of the coding pie, and the price war is already heating up.Add these simple dynamics up and it makes perfect sense why Anthropic would want to IPO now. Things look about as good as they ever will.",
+          "There are three mentions of “open source” and none of them mention open source models as a fundamental risk to their business. Interesting."
         ]
       }
     },
     {
-      "id": "50235017",
-      "title": "Why I Am a Programmer",
-      "url": "https://www.alfie.wtf/programming/why-i-am-a-programmer.html",
+      "id": "50245524",
+      "title": "Microsoft offers mass buyouts for roughly a quarter of its workforce",
+      "url": "https://www.seattletimes.com/business/microsoft/microsoft-offers-mass-buyouts-for-roughly-a-quarter-of-its-workforce/",
       "source": "Hacker News",
-      "published_at": "2026-10-25T19:11:31+00:00",
-      "summary": "Why I Am a Programmer",
-      "score": 172,
-      "comments": 57,
-      "discussion_url": "https://news.ycombinator.com/item?id=50235017",
+      "published_at": "2026-10-26T15:35:12+00:00",
+      "summary": "Microsoft offers mass buyouts for roughly a quarter of its workforce",
+      "score": 797,
+      "comments": 708,
+      "discussion_url": "https://news.ycombinator.com/item?id=50245524",
       "extra": {
         "top_comments": [
-          "Conan the Barbarian and Below the Root on our Apple IIe. Tiny worlds behind the glowing Orange CRT. How do I make something like this? My mum (lol) helped me figure out how to get keyboard input in BASIC. I made a little game where an O character chases your X character around the screen. Core game loop. Browsing pirate CGA games at the warung in Pondok Indah, well outside the jurisdiction of US law. Glorious rack upon rack of tiny worlds to explore. Death Track and Prince of Persia. More BASIC and that gorilla throwing bananas. Later on the Multiline BBS. Talking late into the night with tech weirdos twice my age. All manner of mind bending ideas. Newsgroups. Punks and skaters and cypherpunks. Predicting what was coming, seeing the future we expected unfolding. Downloading Commander Keen over FTP. WinSock and Netscape. My first homepage. Downloading Linux and getting it running. Configuring XFree86 modelines all night lol. Turbo Pascal and VAX VMS at uni. My first job coding. Hacking out web backends in gnarly ass Perl. No databases just blatting and slurping comma delimited text files lol. Getting paid to do the most exciting thing there was to do, all day. Magic.",
-          "Getting to build things without skinned knuckles or solder smoke in your face... now that is a rush! And if you are not happy with it, you get to tear it down and build it back up better. It costs nothing but your time and imagination. Importantly, you get to build, to solve problems, to engineer, to visualize, to create and be creative. (Ok, maybe musicians have even more fun, but alas I wasn't wired for music. :-)",
-          "For me, it was the creative, puzzle-solving, game-like nature of it. Then I got my first job, and I had 100% autonomy, so a friend of mine and I got to solve real problems for real people in the real world. It was a rush. Making people’s lives better through software is still the biggest motivation for me."
+          "Ex-MSFT here. I resigned in June, I was an L63. I spent 8 years at MSFT across two stints.My last 18 months at MSFT were deeply unproductive. Constant reorgs, the work not being aligned to my capabilities and unfortunately just the general feeling that I was under worked and had very little opportunity for career advancement.I would look at my colleagues and sister teams and wonder, why do they need these many people to work on something so trivial ? Or how did this person get promoted for doing that work ? I am sure envy played a part in the second question but it was legitimate. Remember, all this was before LLM tools were prevalent.In the end, I left off my own volition. In my last 6 months, I did very little work, if at all any. I thought why am I being paid so handsomely for such little and trivial work. I did try interviewing in a few different teams but didn’t make it (Azure Files and Hyperscale DB). If I had stayed, I would have been swiftly laid off or if I was lucky enough last long till this buyout.I think same is true for all Big Tech companies. Too many employees doing not enough or quality work.",
+          "60k workers, 1/4 of the workers. This is a big deal. It also really puts you into a bind if you receive the offer. Do you accept, take the money, and hope you can find a job (Now competing with many other Msft employees that are looking). Do you decline and hope you don't get hit with the layoff which hits if not enough people accept?",
+          "The mass buyout offer to 25% of Microsoft's workforce comes less than a week after Microsoft President Brad Smith proclaimed to employees: 'We stand by our people. We always have. We always will.' in a video he posted to LinkedIn.https://www.linkedin.com/feed/update/urn:li:activity:7518428..."
         ]
       }
     },
     {
-      "id": "50235780",
-      "title": "The State of Context Engineering",
-      "url": "https://www.dbreunig.com/2026/10/24/the-state-of-context-engineering.html",
+      "id": "50245138",
+      "title": "Sebastian Raschka's from-scratch video course on building reasoning models",
+      "url": "https://magazine.sebastianraschka.com/p/building-reasoning-models",
       "source": "Hacker News",
-      "published_at": "2026-10-25T20:32:31+00:00",
-      "summary": "The State of Context Engineering",
-      "score": 124,
-      "comments": 36,
-      "discussion_url": "https://news.ycombinator.com/item?id=50235780",
+      "published_at": "2026-10-26T15:11:59+00:00",
+      "summary": "Sebastian Raschka's from-scratch video course on building reasoning models",
+      "score": 586,
+      "comments": 85,
+      "discussion_url": "https://news.ycombinator.com/item?id=50245138",
       "extra": {
         "top_comments": [
-          "It's nice that this article goes beyond the \"context too long\" scapegoat diagnostic.There is more to it than just reducing content in context. LLMs attention mechanism works by finding graphs of related words and concepts and it works best when the relevant relationships are close together in the text. Length matters but how well the information is organized matters as well.It's useful to be familiar with the concept of dependency length. The two sentences in this image ( https://benoitessiambre.com/img/dependencylength.png ) have the same words and same meaning but sentence C is organised to minimize the distance between related words.This can also apply to paragraphs and sections. Ordering them so that related information is recursively closer together, helps AIs think better (also helps humans, Dependency Length Minimization, DLM is an idea from psycho-linguistics).This is one reason progressive disclosure and sub agents are important. Including unnecessary information spreads apart surrounding information and makes it more difficult for AIs to figure things out.For eg. optimizing skills, it can help to put more important information at the bottom of a skill. Usually after a skill is loaded, the AI will start “thinking”, talking to itself to try to reason through a problem. The thinking block will have an easier time considering the text closest to it, the last part of the skill, than information farther up.Thinking blocks can produce a lot of text (a lot of it often hidden from users) that also spreads information apart. Sometimes, when an early instruction is still relevant but there’s been a lot of thinking and discussion added to the context since, it’s worth repeating a summary the early information ( keeping in mind that too many reminders can also spread other information apart ). I think however, LLMs are tuned to overweight very early information so that they don't disregard system prompts. You might be able to exploit this by placing some important facts near the very beginning of a conversation.If you've ever written compression algorithms where repeated blocks are referenced instead of encoded, you'll be familiar with how related information being clustered allows for better compression. It's another example of the parallels between intelligence and compression and it hints at the information theoretic aspect of DLM.",
-          "This is why I think the next evolution will be giving models full control of their own context, where they can edit it just like a file. This idea was in a recent paper, where models could even be specifically trained for context management [1]. For the problem of the prefix cache being invalidated, they thought of implementing a suffix cache[1]: https://arxiv.org/abs/2609.37725",
-          "I like the idea of VictorTaelin's UniiChat [1] which summarizes every message into a single line and on top of that a binary tree of lines combined from lower levels. The context is then a view of that tree with more detail in recent messages and less detail in historical messages, plus a `zoom` tool that enables the agent to navigate the tree and read messages.An implementation of this idea based on the pi harness: https://github.com/jonaslsaa/pi-optchat[1]: https://gist.github.com/VictorTaelin/91837951a5ce5b38f341ec1..."
+          "I've got a question. I'm having a bit of trouble phrasing it, so please don't assume I'm against learning for learning's sake, that's not the point.Whenever I've tried to learn about LLMs, machine learning, etc. I always come out with a bad feeling, compared to learning about software.Theoretical courses make me feel like it's all baby steps, unless you assume a level of commitment equivalent to a math degree. Practical/applied stuff seems to require levels of compute, training data, etc. that make it unapproachable for a home hacker for everything beyond basic exercises like a handwritten digit classifier.Now this feeling of \"impracticality\" is perfectly fine. It would be the expected outcome if I was taking a course on classic literature or modern art. But machine learning stuff feels like it could have room for learning-by-doing applications that aren't entirely pointless, so I wonder if there's some way to approach the topic I'm simply not finding.Did anyone have the same experience? any tips if so?",
+          "Maybe someone can clarify this:He says:> A reasoning model is essentially an upgrade from a conventional LLM, that is, adding more post-training via reinforcement learning with verifiable rewards (and optionally inference scaling techniques) to make it more capable of solving more challenging problems.But this isn't really true is it? When reasoning models came around with OpenAI's o1, the main feature it had was to be able to try several paths and select the best one. This is what a reasoning model is. This was before agents and reinforcement learning with verifiable rewards wasn't it? And then RLVR and agents were added on later. Or am I wrong?",
+          "I feel there's a misconception in a lot of the comment threads about what an LLM-from-scratch tutorial is for. Of course you're not going to come out of this kind of tutorial being able to train a useful LLM from scratch. (It requires too much compute, and datasets you don't have access to, and there are a lot of tricks and operational problems to solve for real training runs.) If that's your bar for \"impracticality\", then sure, this is impractical.But that's not the point; the point is understanding these things better by seeing how they are made (or grown, if you prefer). Building something at a level further down the stack than you will ever go forces you to confront details that shape the layers above that you do deal with. This is one reason why Crafting Interpreters is such a beloved book here on HN.LLMs are now at the core of tools we all use everyday... don't you want to know how they are made? Maybe not everyone has this itch to understand the platforms and tools they use, but I sure do, and it's helped me over and over again. Sure, LLMs aren't like operating systems or compilers. They're a quasi-organic mass of billions of parameters learned during training and honestly nobody (not even the mech interp folks) really deeply understands why they work so well. But that's no reason to completely give up and there is still a lot you can learn.Take RLVR (\"Reinforcement Learning from Verifiable Rewards\"). This is the training technique that made LLMs get so good at programming and math in 2025 and 2026. A lot of people who confidently talk about LLM capabilities either haven't heard of it (and thus end up parroting out-of-date factoids about LLM training derived from the pre-2025 era) or have only a very dim idea of what it is. In this course you actually do RL training of an LLM to get it solving math problems better. You're right down in the details. It's interesting for its own sake but it will also give you a grounding for discussing questions such as: \"why did LLM writing get so weird and bad in mid-2026?\" and \"why is it so hard to train LLMs to be good at things that aren't like math and programming?\"Anyway, Sebastian's two books are great and highly recommended; I worked through the first one a year ago and it was one of the best investments of my time in all of 2025. If you prefer video for learning this is great as well (although I'd still say - try the books first)."
         ]
       }
     },
     {
-      "id": "50235738",
-      "title": "What goes into making an animated film?",
-      "url": "https://www.disneyanimation.com/process/",
+      "id": "50251344",
+      "title": "Three new discoveries in mathematics, computer science, and physics",
+      "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities/",
       "source": "Hacker News",
-      "published_at": "2026-10-25T20:27:09+00:00",
-      "summary": "What goes into making an animated film?",
-      "score": 118,
-      "comments": 51,
-      "discussion_url": "https://news.ycombinator.com/item?id=50235738",
+      "published_at": "2026-10-26T21:35:28+00:00",
+      "summary": "Related:The Exponential Time Hypothesis Is False [pdf] - https://news.ycombinator.com/item?id=50251661",
+      "score": 560,
+      "comments": 233,
+      "discussion_url": "https://news.ycombinator.com/item?id=50251344",
       "extra": {
         "top_comments": [
-          "Around 2010–2012 I made videos for Vocaloid songs, with the art coming from separate illustrators. Many of them wouldn't send their illustrations split into layers, which made animating them a pain. And even though it was a music video and I asked for more drawings, some just wouldn't listen and sent a single piece with way too much effort poured into it.",
-          "So are there more such articles “what goes into making ”? that you would recommend? - eg- games, physical objects, hardware, etc?",
-          "How much of this is AI automating? That drawing of the car design, the storyboarding... isn't generative AI aiming to do away with most of it?I've been seeing some of the lengthier AI films on X (i.e. the one about badgers vs. rats that looks like Lord of the Rings), and there is certainly a lot of work put into them. However the type of work that goes into them is substantially different than what is shown in this article about Zootopia. There are a lot less decisions made by humans. AI is driving a lot of the creative decisions. In the end you get something good, but is it still riding on the decisions of the training data that came from humans like the ones who made Zootopia by hand crafting every element of it? I think this is an interesting question."
+          "It uses sparseness. I noticed a simple thing way back that for a n-boolean variables, the average size of a satisfiable boolean expression must be 2^n bits - basically every binary number that satisfies it listed out. So if a boolean expression of 4 variables is satisfied by 1111, 1110, and 0000, the number denoting it is 1100000000000001, and for every such number there is a boolean expression of 4 variables and for every expression one number of 16 digits. So it’s a fool’s errand to make a universal solver when average inputs scale at 2^n, if a solution exists it has to leverage the small size of the problems we actually care about, sparsity. Based on the AI description that’s what they did, something with polynomials, but it’s too soon. Looking forward to finding out.",
+          "I think OpenAI deserve credit for adjusting their approach after the last math drop. I think Terrance Tao shares some credit here for galvanizing the response.Including the relevant mathematicians and scientists before dumping this onto the public is sure to go a long way to relaxing fears in those communities. I'm not sure how they will deal with accusations of favoritism but at least they are demonstrating a willingness to participate in a process.I hope the community can express some positivity that will encourage OpenAI and other foundation labs to continue with this collaborative approach.",
+          "ETH is false! I really would not have believed it.[0]:> We give a deterministic algorithm for exactly counting the satisfying assignments of an arbitrary k-CNF formula. For every fixed k ⩾ 2, on a formula with n variables and m clauses, our algorithm uses $poly_k (n, m)$ space and runs in time $(n + m)^{O_k(1)} 2^{n/(\\log n)^{1/2 + o(1)}}$The dominant term there is (roughly) $2^{n / (\\log n)^{0.5}}$, so still superpolynomial but less than exponential. Fucking wild.[0] https://github.com/openai/math/blob/main/preprints/The-Expon..."
         ]
       }
     },
     {
-      "id": "50238088",
-      "title": "IBM CEO says open weight models are now good and cheap on-prem",
-      "url": "https://www.theregister.com/systems/2026/10/22/ibm-ceo-says-open-weight-models-are-now-irresistibly-good-and-cheap-on-prem/5304640",
+      "id": "50248124",
+      "title": "GPT-6.1 Terra",
+      "url": "https://openai.com/index/introducing-gpt-6-1-terra/",
       "source": "Hacker News",
-      "published_at": "2026-10-26T01:47:46+00:00",
-      "summary": "IBM CEO says open weight models are now good and cheap on-prem",
-      "score": 107,
-      "comments": 70,
-      "discussion_url": "https://news.ycombinator.com/item?id=50238088",
+      "published_at": "2026-10-26T18:01:17+00:00",
+      "summary": "https://developers.openai.com/api/docs/models/gpt-6.1-terra",
+      "score": 530,
+      "comments": 333,
+      "discussion_url": "https://news.ycombinator.com/item?id=50248124",
       "extra": {
         "top_comments": [
-          "It's absolutely true. I have three different setups here, a rig with 8 gpus that I use in either one of two modes (all 8, very heavy model or just one much lighter) and two DGX sparks. I haven't used a paid model in months. Sure, they use a few more tokens and the results may be slightly less good (but this doesn't really matter because I'm still in the loop so it is easy to correct). But the fact that I'm not sharing my work with the paid providers is much more to my liking than having big brother looking over my shoulder at every step and occasionally giving me the 'I can't let you do that, Jacques' treatment.",
-          "But hardware to run them is conveniently something IBM would be happy to sell you.",
-          "Considering the disclosed numbers for DeepInfer and the usefulness/popularity of DeepSeek 4.1 Flash, I expect it is inevitable that more companies are going to consider the self-hosting option seriously, and perhaps play with the idea of offering inference as a vendor."
+          "Too many models and too many knobs. There are like 5 models and 5 thinking levels, that is 25 different combinations.",
+          "PacBench results.GPT-6.1 Terra scored 84, one point over Grok 4.7 (83), in 5.4 min for $0.19 vs Grok’s 36.5 min and $1.69. The cheap models keep getting better.GPT-6.1 Terra: https://jonclegg.github.io/pacman-bakeoff/#gpt-6.1-terraClosest competitor (Grok 4.7): https://jonclegg.github.io/pacman-bakeoff/#grok-4.7",
+          "Similar 75% price cut trajectory as GPT-5.6 Sol -> GPT-6.1 Sol. Overall, Terra is still half the price of Sol.But like the original release of Terra, it's still a weird middle child between the small-model-that-got-substantially-better (Luna) and the large-model-that-got-significiantly-cheaper (Sol). The TerminalBench 4.0 cost-per-task results are a bit confusing and I'm not sure why you would pick Terra over Sol in that case. Overall this release seems like a flex on Sonnet 5.5: a model which is having its own middle child problems between the godly Opus 5.5 and the surprisingly capable Haiku 5.5."
         ]
       }
     },
     {
-      "id": "50237078",
-      "title": "F-Zero X on Nintendo 3DS",
-      "url": "https://hypnotize.works/gdx-3ds/postmortem/index.html",
+      "id": "50245831",
+      "title": "CSS-Tricks has a new owner",
+      "url": "https://css-tricks.com/css-tricks-has-a-new-owner/",
       "source": "Hacker News",
-      "published_at": "2026-10-25T23:27:30+00:00",
-      "summary": "F-Zero X on Nintendo 3DS",
-      "score": 86,
-      "comments": 42,
-      "discussion_url": "https://news.ycombinator.com/item?id=50237078",
+      "published_at": "2026-10-26T15:51:23+00:00",
+      "summary": "CSS-Tricks has a new owner",
+      "score": 398,
+      "comments": 91,
+      "discussion_url": "https://news.ycombinator.com/item?id=50245831",
       "extra": {
         "top_comments": [
-          "This is so cool! I've been working on trying to minimize the F-zero render loop to fit on gameboy and multiplayer over the link cable...it's been a journey. (I rushed the writeup cus of this article--still polishing the text), but give the game a try on the in-browser emulator: https://fireflyk64.github.io/makingfsub/",
-          "Hey, author of the project here! Thanks for posting! It's been a really fun project to work on, and a great way to learn about how to use Claude more efficiently. I'm just a few hours away from posting a big update with:64dd on original 3DSLocal & Online MultiplayerQR Code sharing for Custom CoursesI hope ya'll check out the authors notes, post-morterm, and give it a try on your 3DS.",
-          "I’m curious why people have started using the 3DS as the gateway device for ports of games, like Melee and F-Zero X.Don’t get me wrong, the 3DS is a gem of a console, and it harks back to when Nintendo put more thought into what they released instead of just another Mario sports game; but since the Switch is so much more powerful, I’d expect ports to that be more of a priority."
+          "I run a similar-in-spirit site about starting from scratch on a project and getting to something functional. I tried both ads and courses, in my case neither were very successful. The most success I had was in offering to do the things the site tells you how to do in exchange for money. That's been my full time job for the last 6 years. I don't know if that's workable in the UI/UX world.I've done only a small amount of web-design work over the years, but I can imagine that, if I landed on CSS-tricks trying to work out a tricky (to me) CSS or usability problem where LLMs had been failing me, and I had a quick and easy option to pay a few hundred dollars and meet with the guy who wrote the book, I might do that. That's also how I got a lot of my first customers in my current business; I offered paid phone calls where a user could pay a nominal rate and ask some upfront questions about a project they were working on. Many of those calls turned in to longer contracts, and the fee kept out the folks who were just looking to sell me something.A lot of my customers have been organizations whose focus is not my industry, but, for one reason or another, they needed something done that fits in my wheelhouse. This means they don't (yet) want to hire this expertise and build processes internally, so they're willing to pay my premium rates. Perhaps there is a way to target these types of companies with custom services in the space.",
+          "I didn't expect this.While I do believe that selling to DigitalOcean was a mistake ultimately, I'm concerned about the long time viability of this move considering the current landscape of web development.Don't get me wrong, I think CSS-Tricks is a great resource and it has helped me over the years, but if I was in Geoff's shoes right now I'd be pretty scared.Look at TailwindCSS for example, they had to reduce the size of their team and ended up joining Shopify to continue surviving. It is hard out here these days.I don't want to sound too doom and gloom, so I wish Geoff the best of luck and I hope he succeeds.",
+          "As an eng who spent over a decade on frontend and hasn’t touched CSS since last November, I’m ecstatic for this news.Nothing a frontier LLM has built me in the last year has been satisfactory to me. Every detail was shipped after millions of tokens stripping back and optimizing what Fable/Opus started doing.The process is leaner and faster, but frontend isn’t “solved” just because LLMs exist."
         ]
       }
     },
     {
-      "id": "50237712",
-      "title": "Removing Next.js Got My Blog to 100 on Every Lighthouse Category",
-      "url": "https://korindiehacker.bloffy.blog/en/removing-nextjs-got-my-blog-to-100-on-every-lighthouse-category",
+      "id": "50251661",
+      "title": "The Exponential Time Hypothesis Is False [pdf]",
+      "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
       "source": "Hacker News",
-      "published_at": "2026-10-26T01:03:39+00:00",
-      "summary": "Removing Next.js Got My Blog to 100 on Every Lighthouse Category",
-      "score": 85,
-      "comments": 43,
-      "discussion_url": "https://news.ycombinator.com/item?id=50237712",
+      "published_at": "2026-10-26T21:59:15+00:00",
+      "summary": "See also: Announcing three new discoveries in mathematics, computer science, and physics - https://news.ycombinator.com/item?id=50251344",
+      "score": 363,
+      "comments": 139,
+      "discussion_url": "https://news.ycombinator.com/item?id=50251661",
       "extra": {
         "top_comments": [
-          "The vast majority of websites don't need Next.js or React. Those are only useful if you need dynamic and modular updates within the structure, or state management. We've defaulted to React because of the name recognition and simple intertia. It's not a good framework for websites in general.",
-          "Not to brag*, but that's what I've been doing since 2013 on my php blog [0]. It was actually the result of a hn warm hug of death. My CDN is just a separate webserver serving all static assets using nginx.Both my css and js are dynamically minified and included in the html depending on which component is loaded on the page.[0]: https://idiallo.com/blog/handling-1-million-web-request* I am bragging",
-          "Respectfully, I don't understand this. They never needed Next.js for a static blog.This is like writing a post about how I didn't need a Ferrari to commute to work and I saved money by taking the bus."
+          "While this has no immediate bearing on P-vs-NP, it is interesting to note:- Early CS researchers like Donald Knuth entered CS in the days when regularly someone would come up with a surprising faster algorithm for some problem, and their intuitions were that most problems had faster algorithms than you'd expect.- Later generations of CS researchers, as all the easy algorithms were discovered, and post Karp's definition of NP-completeness (and the Garey & Johnson book, say), began to specialize in proving hardness, and complexity theory with a “zoo” of complexity classes became more about separation and lower bounds, e.g. I've seen algorithms like Arora's PTAS for Euclidean TSP being described as a “failed attempt to prove a lower bound”. So an entire generation of researchers' intuition was mostly in the direction of an elegant universe with neat separation results (even if we couldn't get them).- So e.g. surveys of computer scientists showed most of them believing that P≠NP, and someone like Knuth has always seemed a bit of an outlier for saying that maybe P=NP: his argument was simply that there are so many possible polynomial-time algorithms that we haven't explored, and maybe one of them with a large exponent could solve NP-complete problems. (In response to arguments that many researchers have failed to find any such algorithms, he would say that many researchers have failed to prove that P≠NP.) E.g. in 2017 when Scott Aaronson wrote his survey (https://www.scottaaronson.com/papers/pnp.pdf = https://www.scottaaronson.com/papers/pnp-kindle.pdf) he wrote:> Admittedly, it can be hard to tell whether declarations that P = NP are meant seriously, or are merely attempts to be contrarian. However, we can surely agree with Knuth and Lipton that we’re far from understanding the limits of efficient computation, and that there are further surprises in store.- What we've seen in this month is surprising unexpected algorithms, like o(n log n) algorithms for FFT and integer multiplication, and now this sub–exponential-time algorithm for 3-SAT. (Yes the ETH has had less support than P≠NP but I still gather it's unexpected.)So (though I don't expect intuitions on P≠NP to change, and probably that's still the right intuition… but I'm just an interested amateur), maybe there will be a bit of a swing of the pendulum back to the idea that maybe clever algorithms exist that we just haven't thought of.",
+          "This is an amazing and unexpected result. To be clear though, it does not imply that NP is subexponential: \"Note that runtime bounds of the form 2^o(n) do not transfer under general polynomial-time reductions (2^n^o(1) would be needed for this), so our result does not imply that general NP problems admit subexponential time algorithms.\"Edit: To explain more, it is guaranteed that you can reduce any NP problem to 3SAT in polynomial time with a polynomial factor in input size. You still have to solve it.If 3SAT were solvable in polynomial time, then polynomial(polynomial(x)) = polynomial(x) and you're implied to have an overall polynomial time solution.But what we have here is that 3SAT is solveable in subexponential time. subexponential(polynomial(x)) is not guaranteed to be sub-exponential.Further edit: The subexponential solution does carry over to any (?) problems that have can be reduced to 3SAT in a linear number of variables. They list: Counting independent sets, Counting proper q-colorings, Counting perfect matchings.",
+          "Wow. Complexity class separations are really really rare.Can an expert in sat solving comment if there's any immediate applications of the method from the paper? Or is SAT solving in general pretty far away from worst-case times, and this is a theoretical algorithm which would be hard to apply in practice."
         ]
       }
     },
     {
-      "id": "50237896",
-      "title": "iPhone Duo Teardown",
-      "url": "https://www.ifixit.com/News/119895/iphone-duo-teardown",
+      "id": "50248055",
+      "title": "Oldest GUI application that still runs on Windows 11",
+      "url": "https://blog.enlyth.com/posts/oldest-windows-gui-app-win-11/",
       "source": "Hacker News",
-      "published_at": "2026-10-26T01:23:24+00:00",
-      "summary": "iPhone Duo Teardown",
-      "score": 81,
-      "comments": 45,
-      "discussion_url": "https://news.ycombinator.com/item?id=50237896",
+      "published_at": "2026-10-26T17:56:55+00:00",
+      "summary": "Oldest GUI application that still runs on Windows 11",
+      "score": 324,
+      "comments": 197,
+      "discussion_url": "https://news.ycombinator.com/item?id=50248055",
       "extra": {
         "top_comments": [
-          "Nearly 10 years in to foldables, and they still bring so many caveats. They are consistently worse for size, weight, shape, cameras, battery, robustness, and longevity. I don't think I'd ever recommend one.On the other hand, the advantages are... an iPad like experience sometimes? Or a smaller phone for the flip form factor? The flip form factor certainly does not pay off. I'm honestly not sure who the trade-offs pay off for.",
-          "Spending thousands of dollars on hardware I don't own is not for me, but foldable touchscreen phones are, objectively, pretty freaking cool pieces of engineering work. Very cool breakdown of the hardware.",
-          "You know how on a computer screen you can just drag any corner of a window to resize it? I had a dream once where I had a phone that worked that way. Want a bigger screen? Just drag one of the corners of the phone. Shove all the corners together and drop it in your pocket.I used the hell out of that phone all night. Then I woke up and spent about an hour trying to figure out how to build one. I think I could do it in one dimension (i.e. make the phone wider) by rolling the screen around a tiny roller in the edge of the case, and having the case telescope. But that won't work in two dimensions at once. I never figured out how to do it in two dimensions.When somebody builds one of these, I'll buy one."
+          "One crucial part of my role as my family's de facto IT support was making sure my mom's FreeCell score record (which was just a Windows registry value) made it from each computer to the next across countless upgrades. She hated the new version that came out somewhere along the way because the card decks changed. (Windows 7? Windows 10? I switched to Linux full time in the XP era so my memory is a little fuzzy.) So I made sure to keep a backup of the Win32 version she was used to, and loaded it onto every machine she ever owned. It wasn't quite the 33 years of its lifetime, but probably close to 30.Mom passed earlier this year, so the FreeCell score record won't ever increment again, but I still made a point to back it up one last time when going through her desktop this summer.",
+          "I deplore the day we lost the menu bar and replaced it with \"mobile first\" designs. The desktop UI was perfected around the time of Windows 95 and has gotten worse with every iteration since then. That, and the increased reliance on non-native frameworks and libraries instead of working with directly with the Windows API in C.",
+          "I just resurrected a 90s kids CD-ROM game that shipped for Windows 3.1 - https://github.com/matthewbloch/orlys-draw-a-story-fixesThe finished patch DLL ended up being a tour of the stuff that broke.The game did launch on Windows 11 but the main issue was that the 8-bit pre-DirectDraw behaviour was broken - for 256 colour screens, Windows 11 resolvesld palette indices only once, but the game relies on being able to change the palette for fades etc. Most of the screeen ended up black, but you could see the animated parts just fine.So most of fix ended up being to hook every draw call and implement a virtual GDI that acted like a graphics card of the day.There was a 32-bit disc space check that overflowed, a couple of use-after-free crashes and some racey threading calls that can't have been tested on a machine with 2 CPUs.Backwards compatibility from Microsoft was almost all there, and probably would have kept Orly running for a couple of subsequent Windows releases. But it relies on a developer meeting them half-way, it's not an emulation layer."
         ]
       }
     }
