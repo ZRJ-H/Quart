@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-10-27T13:21:50.329825+08:00",
+  "cached_at": "2026-10-28T11:00:25.039363+08:00",
   "articles": [
     {
-      "id": "50242939",
-      "title": "Anthropic S-1",
-      "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+      "id": "50261998",
+      "title": "Ghostty 1.4",
+      "url": "https://ghostty.org/docs/install/release-notes/1-4-0",
       "source": "Hacker News",
-      "published_at": "2026-10-26T13:04:50+00:00",
-      "summary": "Anthropic S-1",
-      "score": 1543,
-      "comments": 1495,
-      "discussion_url": "https://news.ycombinator.com/item?id=50242939",
+      "published_at": "2026-10-27T16:51:22+00:00",
+      "summary": "Ghostty 1.4",
+      "score": 815,
+      "comments": 245,
+      "discussion_url": "https://news.ycombinator.com/item?id=50261998",
       "extra": {
         "top_comments": [
-          "Everything comes back to whether the demand is really there.Anthropic thinks it is. The got the demand / datacenter match right in Q2, got great margins, and committed hard.They've got:- $114b committed to Google- $110b committed to AWS- $161b committed to Broadcom- $120b committed to SpaceXIf the party continues, they'll go from $50b in revenue to $500b and be fine.But if they don't, it's going to hurt. And that's their only choice, because otherwise, they end up with a frontier model and 50% of the capacity and get eviscerated on either availability or last-minute datacenter leases.It's a big business, but it's not an easy business.",
-          "The killer app is AI coding. Claude Code had first mover advantage, was a genuine revolution, and has diffused through the industry with incredible speed. I would imagine most of the huge revenue increase over the last year is due almost entirely to AI coding spend.There are three issues with this. First, the rapid diffusion of the technology means it is very unlikely to continue at the rate of adoption seen over the past year, so it's very hard to extrapolate based on what we've seen so far. Second, many companies are reigning in AI budgets after an initial honeymoon phase. Third, all of the other labs are trying to take a bite of the coding pie, and the price war is already heating up.Add these simple dynamics up and it makes perfect sense why Anthropic would want to IPO now. Things look about as good as they ever will.",
-          "There are three mentions of “open source” and none of them mention open source models as a fundamental risk to their business. Interesting."
+          "These are Ghostty GUI release notes, but I want to take a moment to highlight the libghostty progress we've made since Ghostty 1.3.As a reminder, libghostty is the highly portable, embeddable library that provides core terminal emulation, render state, and more. I always felt that a free, high qualty, lightweight, reusable terminal emulation core would benefit the developer world more than any single GUI application. And that is playing out!It is and always was my true purpose with the Ghostty project (I said this in my first ever talk about Ghostty!). I've jokingly said many times that Ghostty GUI is just a glorified tech demo for libghostty. That's not fair though, because GUI is great and there are really talented people working on it.Since I started the project, Ghostty has always gotten people saying \"I don't understand why you'd start a terminal emulator today.\" Well, the answer is libghostty. It's truly unique and its enabling something special (imo!).Highlights of libghostty since 6 months ago (none of the below was true 6 months ago):- Libghostty has nearly 100% coverage of all of Ghostty's core (and you can compile with flags to remove any of these features for size/safety): https://libghostty.tip.ghostty.org/- Libghostty now builds and is tested (in CI) for: Apple (macOS, iOS, visionOS), Windows (MSVC and GNU), Linux, FreeBSD, Android, WebAssembly, and freestanding (i.e. direct on hardware with no OS).- Libghostty has bindings in pretty much every popular programming language: C, Zig, Go, Swift, Python, Rust, .NET, etc.- Libghostty's memory requirements have dramatically shrunk to enable the portability above. There's still work to do but a single empty terminal now takes 90% less memory. And at scale I've proven 10,000 active (input/output happening) terminals on a Linux server with 4 cores and 8 GB of RAM.- Libghostty powers all JetBrains IDE terminals, over 12.5 million active users. https://blog.jetbrains.com/platform/2026/10/jetbrains-termin...- Libghostty is the most popular core behind the wave of venture-backed \"agentic\" terminals and editors, such as Herdr, cmux, and many others.- Libghostty is being discussed and has been verbally accepted to replace the terminal core in Neovim: https://github.com/neovim/neovim/pull/39773 (work still to be done)- Libghostty powers a really popular and powerful terminal emulator for emacs (Ghostel): https://github.com/dakra/ghostel- Libghostty's speed is used by Antithesis to fuzz popular terminal programs and has directly led to hundreds of bug fixes sent upstream to programs such as tmux, btop, shells, and other terminal emulators. :)- And so much more: https://github.com/Uzaaft/awesome-libghosttyLibghostty is really successfully turning into the tide that raises all boats. As it becomes more popular, Ghostty itself gets more performant and stable, and so does everyone else. It is also a vehicle for delivering modern terminal emulation to the widest source possible.I plan on tagging libghostty 1.0 in the next few months and declaring ABI stability at that point!",
+          "I've tried Ghostty and it's great, but Kitty's hints mode[1] is the one feature keeping me from switching from Kitty to Ghostty. There are quite a few discussions around this and similar features in the Ghosstty-org/ghostty Discussions[2] which I follow. Most of them are references from ghostty-org/ghostty/discussions/2394[3]. Maybe now that Ghostty has finished implementing Kitty graphics hints will be next .[1]: https://sw.kovidgoyal.net/kitty/kittens/hints/[2]: https://github.com/ghostty-org/ghostty/discussions[3]: https://github.com/ghostty-org/ghostty/discussions/2394",
+          "I still don't understand the point of Ghostty, Kitty, Wezterm...Konsole is way faster than any of those on my computer and it has all the usual suspects I'd expect from a modern terminal emulator.The one feature I miss since moving to Linux and not having iTerm2 is tmux -CC integration. None of those offer it.To be clear, I'm not attempting to be dismissive. I really want to understand what it is that they bring."
         ]
       }
     },
     {
-      "id": "50251344",
-      "title": "Three new discoveries in mathematics, computer science, and physics",
-      "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities/",
+      "id": "50259604",
+      "title": "US Government is hiding a secret court ruling about how it spies on Americans",
+      "url": "https://www.wired.com/story/the-us-government-is-hiding-a-secret-court-ruling-about-how-it-spies-on-americans/",
       "source": "Hacker News",
-      "published_at": "2026-10-26T21:35:28+00:00",
-      "summary": "Related:The Exponential Time Hypothesis Is False [pdf] - https://news.ycombinator.com/item?id=50251661",
-      "score": 678,
-      "comments": 296,
-      "discussion_url": "https://news.ycombinator.com/item?id=50251344",
+      "published_at": "2026-10-27T14:06:42+00:00",
+      "summary": "US Government is hiding a secret court ruling about how it spies on Americans",
+      "score": 814,
+      "comments": 297,
+      "discussion_url": "https://news.ycombinator.com/item?id=50259604",
       "extra": {
         "top_comments": [
-          "I think OpenAI deserve credit for adjusting their approach after the last math drop. I think Terrance Tao shares some credit here for galvanizing the response.Including the relevant mathematicians and scientists before dumping this onto the public is sure to go a long way to relaxing fears in those communities. I'm not sure how they will deal with accusations of favoritism but at least they are demonstrating a willingness to participate in a process.I hope the community can express some positivity that will encourage OpenAI and other foundation labs to continue with this collaborative approach.",
-          "ETH is false! I really would not have believed it.[0]:> We give a deterministic algorithm for exactly counting the satisfying assignments of an arbitrary k-CNF formula. For every fixed k ⩾ 2, on a formula with n variables and m clauses, our algorithm uses $poly_k (n, m)$ space and runs in time $(n + m)^{O_k(1)} 2^{n/(\\log n)^{1/2 + o(1)}}$The dominant term there is (roughly) $2^{n / (\\log n)^{0.5}}$, so still superpolynomial but less than exponential. Fucking wild.[0] https://github.com/openai/math/blob/main/preprints/The-Expon...",
-          "ETH is false! This is one of the big long-standing hypotheses that I actually remember from university, and afaik, it was reasonable to assume it would be true; reasonable enough for a lot of papers and results to assume this for bounds or hardness proofs of common problems in parameterized complexity, anyways.Also glad to see that one of the authors of the paper stating it is also in the loop here.2026 is weird."
+          "\"Wyden has also warned about a classified interpretation of Section 702 that he says multiple administrations have relied on and refused to declassify. “When it is eventually declassified,” he said in March, “the American people are going to be stunned that it took so long and that Congress had been debating this authority with insufficient information.”\"Spying on American citizens is a bipartisan point of agreement.",
+          "Secret courts are anathema to democracy and need to be abolished.",
+          "I will always be baffled by the dichotomy of \"the US has the most freedom\" and \"no democratic country spies more on its citizens\"."
         ]
       }
     },
     {
-      "id": "50245138",
-      "title": "Sebastian Raschka's from-scratch video course on building reasoning models",
-      "url": "https://magazine.sebastianraschka.com/p/building-reasoning-models",
+      "id": "50261319",
+      "title": "Genie 4",
+      "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
       "source": "Hacker News",
-      "published_at": "2026-10-26T15:11:59+00:00",
-      "summary": "Sebastian Raschka's from-scratch video course on building reasoning models",
-      "score": 629,
-      "comments": 89,
-      "discussion_url": "https://news.ycombinator.com/item?id=50245138",
+      "published_at": "2026-10-27T16:06:01+00:00",
+      "summary": "Genie 4",
+      "score": 761,
+      "comments": 463,
+      "discussion_url": "https://news.ycombinator.com/item?id=50261319",
       "extra": {
         "top_comments": [
-          "I've got a question. I'm having a bit of trouble phrasing it, so please don't assume I'm against learning for learning's sake, that's not the point.Whenever I've tried to learn about LLMs, machine learning, etc. I always come out with a bad feeling, compared to learning about software.Theoretical courses make me feel like it's all baby steps, unless you assume a level of commitment equivalent to a math degree. Practical/applied stuff seems to require levels of compute, training data, etc. that make it unapproachable for a home hacker for everything beyond basic exercises like a handwritten digit classifier.Now this feeling of \"impracticality\" is perfectly fine. It would be the expected outcome if I was taking a course on classic literature or modern art. But machine learning stuff feels like it could have room for learning-by-doing applications that aren't entirely pointless, so I wonder if there's some way to approach the topic I'm simply not finding.Did anyone have the same experience? any tips if so?",
-          "I feel there's a misconception in a lot of the comment threads about what an LLM-from-scratch tutorial is for. Of course you're not going to come out of this kind of tutorial being able to train a useful LLM from scratch. (It requires too much compute, and datasets you don't have access to, and there are a lot of tricks and operational problems to solve for real training runs.) If that's your bar for \"impracticality\", then sure, this is impractical.But that's not the point; the point is understanding these things better by seeing how they are made (or grown, if you prefer). Building something at a level further down the stack than you will ever go forces you to confront details that shape the layers above that you do deal with. This is one reason why Crafting Interpreters is such a beloved book here on HN.LLMs are now at the core of tools we all use everyday... don't you want to know how they are made? Maybe not everyone has this itch to understand the platforms and tools they use, but I sure do, and it's helped me over and over again. Sure, LLMs aren't like operating systems or compilers. They're a quasi-organic mass of billions of parameters learned during training and honestly nobody (not even the mech interp folks) really deeply understands why they work so well. But that's no reason to completely give up and there is still a lot you can learn.Take RLVR (\"Reinforcement Learning from Verifiable Rewards\"). This is the training technique that made LLMs get so good at programming and math in 2025 and 2026. A lot of people who confidently talk about LLM capabilities either haven't heard of it (and thus end up parroting out-of-date factoids about LLM training derived from the pre-2025 era) or have only a very dim idea of what it is. In this course you actually do RL training of an LLM to get it solving math problems better. You're right down in the details. It's interesting for its own sake but it will also give you a grounding for discussing questions such as: \"why did LLM writing get so weird and bad in mid-2026?\" and \"why is it so hard to train LLMs to be good at things that aren't like math and programming?\"Anyway, Sebastian's two books are great and highly recommended; I worked through the first one a year ago and it was one of the best investments of my time in all of 2025. If you prefer video for learning this is great as well (although I'd still say - try the books first).",
-          "I got his book Build Your Own LLM From Scratch and it's super readable and does a great job at holding your hand through the entire process...need to finish reading it though!"
+          "For several of these examples the details change if something goes out of frame and returns. A second castle is added in the dragon one. The people walking away from the camera change in the train platform one. The Hong Kong moped rider doesn't have a helmet and then he has one.It's very good at maintaining consistency for things that stay in frame, but I don't know that this points to it developing a strong \"world simulation\" like they claim.",
+          "I think its a useful exercise to try and name a cultural artifact (picture, video, game, music, book, etc) that was improved, or made substantially possible, by this technology. Ideally something that has moved you or provoked a lasting response.Conversely, try to think of examples where Generative AI has betrayed a lack of creativity or care from the creator, and thus left a sour or ambivalent or impression.I find the former impossibly hard, and the latter depressingly easy. Do others feel the same?",
+          "> Genie 4 has advanced audio capabilities> Prompt asks for saxophoneLooks inside:> Sound of a clarinetMaybe Genie 5 will get it."
         ]
       }
     },
     {
-      "id": "50248124",
-      "title": "GPT-6.1 Terra",
-      "url": "https://openai.com/index/introducing-gpt-6-1-terra/",
+      "id": "50258538",
+      "title": "New iMac with M6",
+      "url": "https://www.apple.com/imac/",
       "source": "Hacker News",
-      "published_at": "2026-10-26T18:01:17+00:00",
-      "summary": "https://developers.openai.com/api/docs/models/gpt-6.1-terra",
-      "score": 558,
-      "comments": 348,
-      "discussion_url": "https://news.ycombinator.com/item?id=50248124",
+      "published_at": "2026-10-27T13:02:02+00:00",
+      "summary": "New iMac with M6",
+      "score": 317,
+      "comments": 383,
+      "discussion_url": "https://news.ycombinator.com/item?id=50258538",
       "extra": {
         "top_comments": [
-          "How would it compare to Claude models in terms of performance?",
-          "Similar 75% price cut trajectory as GPT-5.6 Sol -> GPT-6.1 Sol. Overall, Terra is still half the price of Sol.But like the original release of Terra, it's still a weird middle child between the small-model-that-got-substantially-better (Luna) and the large-model-that-got-significiantly-cheaper (Sol). The TerminalBench 4.0 cost-per-task results are a bit confusing and I'm not sure why you would pick Terra over Sol in that case. Overall this release seems like a flex on Sonnet 5.5: a model which is having its own middle child problems between the godly Opus 5.5 and the surprisingly capable Haiku 5.5.",
-          "I'm very confused about their model market position/naming schema.First we had:> Luna (Small), Terra (Medium), Sol (Big).Which was fairly smooth after you got used to their planets.But then they added Astra as the \"Bigger,\" which was mostly still self-coherent:> Luna (Small), Terra (Medium), Sol (Big), Astra (Bigger)But then things go confusing, they released Sol-6.1 which sometimes is superior to Astra, and discontinued Terra which made it look like this:> Luna (Small), Sol-6.1 == AstraBut with Sol-6.1 costing the old Terra-6.0 price, while, as I said performing as good as the old \"Bigger\" model in many non-3D/UI situations.Now they're re-introduced Terra, as a 6.1 release, making this even more confusing.Did Microsoft's chief branding officer move over to OpenAI?"
+          "I've bought several iMacs (2008, 2012, 2014, 2020) Anyway, it is frustrating once they aren't supported anymore. I think they are overbuilt, they are built to last forever but designed to be obsolete in 7 years. ChromeFlex has saved a few from recycling at our house (A chromebook with a retina display seems like such a waste)I suggest spending a bit more and getting a mac mini and a studio display instead (Equally well built but can be used almost forever). If you could only (easily) use them as monitors once they went out of support...",
+          "I don't understand why someone would buy this. It's $1700 for the same computer as a $900 Mac mini. The antiquated 24\" monitor, keyboard, and mouse are not worth the extra $800. You can buy a very nice 32\" monitor and better input devices for less than that.",
+          "I wish they would make big displays again. Like 32” big 6K.24” or even 27” feels like such a downgrade.Also please make the iMacs usable as external monitors agains. Would buy one as a “livingroom computer” instantly if it was also possible to occasionally use it as a docking station for an air.."
         ]
       }
     },
     {
-      "id": "50251661",
-      "title": "The Exponential Time Hypothesis Is False [pdf]",
-      "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+      "id": "50261352",
+      "title": "New 14‑inch MacBook Pro with M6",
+      "url": "https://www.apple.com/in/newsroom/2026/10/apple-introduces-the-new-14-inch-macbook-pro-with-m6/",
       "source": "Hacker News",
-      "published_at": "2026-10-26T21:59:15+00:00",
-      "summary": "See also: Announcing three new discoveries in mathematics, computer science, and physics - https://news.ycombinator.com/item?id=50251344",
-      "score": 474,
-      "comments": 175,
-      "discussion_url": "https://news.ycombinator.com/item?id=50251661",
+      "published_at": "2026-10-27T16:08:32+00:00",
+      "summary": "New 14‑inch MacBook Pro with M6",
+      "score": 295,
+      "comments": 375,
+      "discussion_url": "https://news.ycombinator.com/item?id=50261352",
       "extra": {
         "top_comments": [
-          "While this has no immediate bearing on P-vs-NP, it is interesting to note:- Early CS researchers like Donald Knuth entered CS in the days when regularly someone would come up with a surprising faster algorithm for some problem, and their intuitions were that most problems had faster algorithms than you'd expect.- Later generations of CS researchers, as all the easy algorithms were discovered, and post Karp's definition of NP-completeness (and the Garey & Johnson book, say), began to specialize in proving hardness, and complexity theory with a “zoo” of complexity classes became more about separation and lower bounds, e.g. I've seen algorithms like Arora's PTAS for Euclidean TSP being described as a “failed attempt to prove a lower bound”. So an entire generation of researchers' intuition was mostly in the direction of an elegant universe with neat separation results (even if we couldn't get them).- So e.g. surveys of computer scientists showed most of them believing that P≠NP, and someone like Knuth has always seemed a bit of an outlier for saying that maybe P=NP: his argument was simply that there are so many possible polynomial-time algorithms that we haven't explored, and maybe one of them with a large exponent could solve NP-complete problems. (In response to arguments that many researchers have failed to find any such algorithms, he would say that many researchers have failed to prove that P≠NP.) E.g. in 2017 when Scott Aaronson wrote his survey (https://www.scottaaronson.com/papers/pnp.pdf = https://www.scottaaronson.com/papers/pnp-kindle.pdf) he wrote:> Admittedly, it can be hard to tell whether declarations that P = NP are meant seriously, or are merely attempts to be contrarian. However, we can surely agree with Knuth and Lipton that we’re far from understanding the limits of efficient computation, and that there are further surprises in store.- What we've seen in this month is surprising unexpected algorithms, like o(n log n) algorithms for FFT and integer multiplication, and now this sub–exponential-time algorithm for 3-SAT. (Yes the ETH has had less support than P≠NP but I still gather it's unexpected.)So (though I don't expect intuitions on P≠NP to change, and probably that's still the right intuition… but I'm just an interested amateur), maybe there will be a bit of a swing of the pendulum back to the idea that maybe clever algorithms exist that we just haven't thought of.",
-          "This is an amazing and unexpected result. To be clear though, it does not imply that NP is subexponential: \"Note that runtime bounds of the form 2^o(n) do not transfer under general polynomial-time reductions (2^n^o(1) would be needed for this), so our result does not imply that general NP problems admit subexponential time algorithms.\"Edit: To explain more, it is guaranteed that you can reduce any NP problem to 3SAT in polynomial time with a polynomial factor in input size. You still have to solve it.If 3SAT were solvable in polynomial time, then polynomial(polynomial(x)) = polynomial(x) and you're implied to have an overall polynomial time solution.But what we have here is that 3SAT is solveable in subexponential time. subexponential(polynomial(x)) is not guaranteed to be sub-exponential.Further edit: The subexponential solution does carry over to any (?) problems that have can be reduced to 3SAT in a linear number of variables. They list: Counting independent sets, Counting proper q-colorings, Counting perfect matchings.",
-          "It appears that Anthropic has released a proof as well (same bounds), but with a different approach? https://drive.google.com/drive/u/0/folders/1uaWnPqWkXy1sjfsD..."
+          "I'm currently on a marathon to keep my M1 Pro running until the M7 Pro/Max is available. Not sure if I'll make it, but I'm not eager to pay $6000+ for a decent spec dev computer, until I really have to",
+          "I have to say, I really dislike the thing where the base M(n+1) is always in the market alongside M(n) Pro/Max. I appreciate the underlying chips are probably quite distinct, but from a naming standpoint its confusing as hell.",
+          "I want to propose a called AI Index, if you can do say 1000t/s on processing and 50t/s on generation on a min 25B model you can call your device AI9 and you have AI7 and AI5 and AI3 with 3 being 100t/s processing and 10t/s generation on a min 10B model. Values above are on a 100k context size minimum. OFFLINE.So any effing claim of being an AI device doesn't end on the demo of best buy laptop where you remove a dog from a photo....Or that you have \"better noise removal\" or \"you look better on the cam\" because that's called noise cancelling and instagram filter and it's being done for ages..."
         ]
       }
     },
     {
-      "id": "50245831",
-      "title": "CSS-Tricks has a new owner",
-      "url": "https://css-tricks.com/css-tricks-has-a-new-owner/",
+      "id": "50264857",
+      "title": "Tailscale SSH: Investigation and remediation update",
+      "url": "https://tailscale.com/ssh-investigation-update",
       "source": "Hacker News",
-      "published_at": "2026-10-26T15:51:23+00:00",
-      "summary": "CSS-Tricks has a new owner",
-      "score": 416,
-      "comments": 94,
-      "discussion_url": "https://news.ycombinator.com/item?id=50245831",
+      "published_at": "2026-10-27T19:55:21+00:00",
+      "summary": "Tailscale SSH: Investigation and remediation update",
+      "score": 212,
+      "comments": 114,
+      "discussion_url": "https://news.ycombinator.com/item?id=50264857",
       "extra": {
         "top_comments": [
-          "I run a similar-in-spirit site about starting from scratch on a project and getting to something functional. I tried both ads and courses, in my case neither were very successful. The most success I had was in offering to do the things the site tells you how to do in exchange for money. That's been my full time job for the last 6 years. I don't know if that's workable in the UI/UX world.I've done only a small amount of web-design work over the years, but I can imagine that, if I landed on CSS-tricks trying to work out a tricky (to me) CSS or usability problem where LLMs had been failing me, and I had a quick and easy option to pay a few hundred dollars and meet with the guy who wrote the book, I might do that. That's also how I got a lot of my first customers in my current business; I offered paid phone calls where a user could pay a nominal rate and ask some upfront questions about a project they were working on. Many of those calls turned in to longer contracts, and the fee kept out the folks who were just looking to sell me something.A lot of my customers have been organizations whose focus is not my industry, but, for one reason or another, they needed something done that fits in my wheelhouse. This means they don't (yet) want to hire this expertise and build processes internally, so they're willing to pay my premium rates. Perhaps there is a way to target these types of companies with custom services in the space.",
-          "I didn't expect this.While I do believe that selling to DigitalOcean was a mistake ultimately, I'm concerned about the long time viability of this move considering the current landscape of web development.Don't get me wrong, I think CSS-Tricks is a great resource and it has helped me over the years, but if I was in Geoff's shoes right now I'd be pretty scared.Look at TailwindCSS for example, they had to reduce the size of their team and ended up joining Shopify to continue surviving. It is hard out here these days.I don't want to sound too doom and gloom, so I wish Geoff the best of luck and I hope he succeeds.",
-          "As an eng who spent over a decade on frontend and hasn’t touched CSS since last November, I’m ecstatic for this news.Nothing a frontier LLM has built me in the last year has been satisfactory to me. Every detail was shipped after millions of tokens stripping back and optimizing what Fable/Opus started doing.The process is leaner and faster, but frontend isn’t “solved” just because LLMs exist."
+          "Former tailscalar here and now someone managing tailscale at an org.Having done my own review of the vulns and the fixes as they are landing in github, its pretty clear to me that this only affects situations where you use ACLs to permit ssh into a node (via tailscale ssh, not via opensshd), but dont give a path to sudoers/root.If a user had no SSH access and/or connectivity to a vulnerable node, none of these vulns give them access.However, if you have a vulnerable tailscaled and you give ssh access as some non-root account/privs, then yes, these vulns are relevant as theres now known privilege escalations that give access beyond some specific user account.Not trying to play down the vuln (its important), but its not a free-for-all RCE that some ppl are acting like it is.",
+          "I am fairly glad I have stuck with stock OpenSSH that ships with Linux. This incident proves I am glad with that choice.Over the decades, I have maintained remote access through port forwarding on my router - at one point in 2008 I put SSH on port 80 so I could access it from the restricted wifi network at the hospital my grandmother was at. I have also used openvpn. I have also used cloudflare tunnels. But in the end, I always connect to hardened openssh with key only authentication.",
+          "Somehow I don't think it's a good idea to let Tailscale handle service authentication at all. It's supposed to be an additional security layer around existing infrastructure and services.Letting Tailscale handle VPN and SSH at the same time is basically once again a single point of failure. Similar to exposing SSH directly to the internet."
         ]
       }
     },
     {
-      "id": "50248055",
-      "title": "Oldest GUI application that still runs on Windows 11",
-      "url": "https://blog.enlyth.com/posts/oldest-windows-gui-app-win-11/",
+      "id": "50264853",
+      "title": "Survival LLM: AI assistant and emergency library that runs on your own computer",
+      "url": "https://www.brangus.io/survival-llm",
       "source": "Hacker News",
-      "published_at": "2026-10-26T17:56:55+00:00",
-      "summary": "Oldest GUI application that still runs on Windows 11",
-      "score": 358,
-      "comments": 211,
-      "discussion_url": "https://news.ycombinator.com/item?id=50248055",
+      "published_at": "2026-10-27T19:55:06+00:00",
+      "summary": "Survival LLM: AI assistant and emergency library that runs on your own computer",
+      "score": 211,
+      "comments": 108,
+      "discussion_url": "https://news.ycombinator.com/item?id=50264853",
       "extra": {
         "top_comments": [
-          "One crucial part of my role as my family's de facto IT support was making sure my mom's FreeCell score record (which was just a Windows registry value) made it from each computer to the next across countless upgrades. She hated the new version that came out somewhere along the way because the card decks changed. (Windows 7? Windows 10? I switched to Linux full time in the XP era so my memory is a little fuzzy.) So I made sure to keep a backup of the Win32 version she was used to, and loaded it onto every machine she ever owned. It wasn't quite the 33 years of its lifetime, but probably close to 30.Mom passed earlier this year, so the FreeCell score record won't ever increment again, but I still made a point to back it up one last time when going through her desktop this summer.",
-          "I deplore the day we lost the menu bar and replaced it with \"mobile first\" designs. The desktop UI was perfected around the time of Windows 95 and has gotten worse with every iteration since then. That, and the increased reliance on non-native frameworks and libraries instead of working with directly with the Windows API in C.",
-          "I just resurrected a 90s kids CD-ROM game that shipped for Windows 3.1 - https://github.com/matthewbloch/orlys-draw-a-story-fixesThe finished patch DLL ended up being a tour of the stuff that broke.The game did launch on Windows 11 but the main issue was that the 8-bit pre-DirectDraw behaviour was broken - for 256 colour screens, Windows 11 resolvesld palette indices only once, but the game relies on being able to change the palette for fades etc. Most of the screeen ended up black, but you could see the animated parts just fine.So most of fix ended up being to hook every draw call and implement a virtual GDI that acted like a graphics card of the day.There was a 32-bit disc space check that overflowed, a couple of use-after-free crashes and some racey threading calls that can't have been tested on a machine with 2 CPUs.Backwards compatibility from Microsoft was almost all there, and probably would have kept Orly running for a couple of subsequent Windows releases. But it relies on a developer meeting them half-way, it's not an emulation layer."
+          "This topic is bringing out the hallucination-panic crowd.It's perfectly safe to use LLMs to surface underlying data and knowledge without having to trust that it's giving you correct advice.Use the LLM as search technology: string match -> semantic search -> search intelligence.This is especially helpful when you don't know the right question to ask. Semantics only help you find text that is semantically near the input query. Semantics won't help you when what you are looking for is connected to what you have by something other than semantics, like causation, mechanism, or interpretation.Trying to figure out why your crops aren't growing well will likely require you to read several articles across a range of sciences, probably scoped to the specific conditions you are dealing with. A semantic search is not going to surface those first.Allowing an LLM to chain together several sources for you to read first does not require you to ask it for a conclusion.",
+          "I set this up on my machine and tested it with the following question:How can I build a bow drill so I can start a fire?It got it partially right: spindle, bow with string tied the correct way, and fire board. But then it flubbed by saying you put the spindle between both hands and move your hands back and forth to rotate the spindle and create the necessary friction… this totally ignores using the bow to rotate the spindle! It also mentioned “fanning the sparks” but there is absolutely no way your bow drill is going to create sparks.I asked a frontier model to check the survival LLM’s conversation trace and it pointed out the errors.I didn’t see obvious errors in the other 3 prompts I used, but this one seemed pretty egregious for a survival LLM.I thank the creator for making this, but take it with a grain of salt.",
+          "Shoutout to project nomad.https://www.projectnomad.us/its got a ton of useful options, preconfigured, integrates pretty easily, and can use any local LLM or data."
         ]
       }
     },
     {
-      "id": "50241664",
-      "title": "Websites Should Be Printable",
-      "url": "https://brennenputh.me/blog/printable-websites/",
+      "id": "50261647",
+      "title": "Classification of Finite Simple Groups Formalized in Lean",
+      "url": "https://cfsg.axiommath.ai/",
       "source": "Hacker News",
-      "published_at": "2026-10-26T10:32:14+00:00",
-      "summary": "Websites Should Be Printable",
-      "score": 309,
-      "comments": 186,
-      "discussion_url": "https://news.ycombinator.com/item?id=50241664",
+      "published_at": "2026-10-27T16:29:02+00:00",
+      "summary": "Classification of Finite Simple Groups Formalized in Lean",
+      "score": 178,
+      "comments": 45,
+      "discussion_url": "https://news.ycombinator.com/item?id=50261647",
       "extra": {
         "top_comments": [
-          "While I'm on board with having good html structure that prints well, and I'm on board with hiding navigation elements, etc., I'm not so on board with changing the default font size or fonts in the print version.I just made a simple site that didn't set any font sizes anywhere, and a friend of mine complained that the font was too small on mobile. Do I detect a lo-res screen and increase the font size?I know a lot of sites do exactly that, but I feel it's wrong. The user controls their default font size on their platform. What if they'd already increased it, and now I'm just making it bigger?What if they'd decreased their default print font size and then I shrink it again?I think it's best to leave those to the user entirely.",
-          "I agree that websites should be printable. I'm a fan of RSS and eInk displays (Kindles, and when I can afford one, a PC monitor), and printable websites would make using them on paper-like displays easier.I've been using the PrintFriendly [1] browser extension for years (to print otherwise unprintable websites), but it gotten worse, so while looking at alternatives I started with The Printliminator [2] (which uses the Haartija CSS framework [3]) and have currently ended up using CopyAsMarkdown [4] (with Pandoc) and WebToEpub [5][1] https://www.printfriendly.com/ [2] https://github.com/CSS-Tricks/The-Printliminator [3] https://github.com/vladocar/Hartija---CSS-Print-Framework [4] https://github.com/yorkxin/copy-as-markdown/ [5] https://github.com/dteviot/WebToEpub",
-          "If a browser can show it on a screen, in fact screens of many sizes, it should be able to render to a printer. With perfect fidelity. It frustrates me to no end this isn't the case.I posit the reason it sucks is because the Chrome team doesn't care (at least not enough) about the print feature. Firefox is a little better. But I haven't seen decent printing since the days of Internet Explorer.Some of the most annoying culprits are website terms of service where printing to PDF produces page breaks in places that cut off lines of text."
+          "Out of curiosity: is it possible to take a frontier model and just let it loose on all math textbooks out there, converting each and every proof/theorem/lemma/etc. into Lean? A frontier model should be able to do that, right? And it's a one-time task: do it once and it's there for eternity, available as a library to be used in other proofs.Maybe my understanding of Lean is wrong; I'm thinking of it as a programming language but for Math.",
+          "This seems like a very good use of auto-formalization, because in the past mathematicians have incorrectly believed that they were finished with the classification only discover a missing class/sporadic group.The original proof was a collaboration of ~100 mathematicians, if Tao is correct then we should expect to see more such collaborations in the future like we do in e.g. physics.",
+          "Makes me sad that the homotopical foundation people never got their shit together and now formalization is so mature but it's still done in set theoretic foundations."
         ]
       }
     }
