@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-10-28T11:00:25.039363+08:00",
+  "cached_at": "2026-10-28T14:00:41.759111+08:00",
   "articles": [
     {
       "id": "50261998",
@@ -8,8 +8,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-27T16:51:22+00:00",
       "summary": "Ghostty 1.4",
-      "score": 815,
-      "comments": 245,
+      "score": 893,
+      "comments": 279,
       "discussion_url": "https://news.ycombinator.com/item?id=50261998",
       "extra": {
         "top_comments": [
@@ -26,8 +26,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-27T14:06:42+00:00",
       "summary": "US Government is hiding a secret court ruling about how it spies on Americans",
-      "score": 814,
-      "comments": 297,
+      "score": 885,
+      "comments": 313,
       "discussion_url": "https://news.ycombinator.com/item?id=50259604",
       "extra": {
         "top_comments": [
@@ -44,32 +44,32 @@
       "source": "Hacker News",
       "published_at": "2026-10-27T16:06:01+00:00",
       "summary": "Genie 4",
-      "score": 761,
-      "comments": 463,
+      "score": 818,
+      "comments": 490,
       "discussion_url": "https://news.ycombinator.com/item?id=50261319",
       "extra": {
         "top_comments": [
           "For several of these examples the details change if something goes out of frame and returns. A second castle is added in the dragon one. The people walking away from the camera change in the train platform one. The Hong Kong moped rider doesn't have a helmet and then he has one.It's very good at maintaining consistency for things that stay in frame, but I don't know that this points to it developing a strong \"world simulation\" like they claim.",
-          "I think its a useful exercise to try and name a cultural artifact (picture, video, game, music, book, etc) that was improved, or made substantially possible, by this technology. Ideally something that has moved you or provoked a lasting response.Conversely, try to think of examples where Generative AI has betrayed a lack of creativity or care from the creator, and thus left a sour or ambivalent or impression.I find the former impossibly hard, and the latter depressingly easy. Do others feel the same?",
+          "Reading the comments almost everyone seems not impressed at all and points at obvious errors in the samples. Meanwhile it's been just roughly over 3 years since we've seen an AI generated abomination of Will Smith \"eating\" (or whatever you want to call that act) spaghetti. Yes, AI gets things wrong. You could say the same about LLMs still making obvious errors here and there. To me, personally, this seems super impressive and it's clearly another leap forward. Not perfect, yes. But an improvement.",
           "> Genie 4 has advanced audio capabilities> Prompt asks for saxophoneLooks inside:> Sound of a clarinetMaybe Genie 5 will get it."
         ]
       }
     },
     {
-      "id": "50258538",
-      "title": "New iMac with M6",
-      "url": "https://www.apple.com/imac/",
+      "id": "50257419",
+      "title": "Python's experimental JIT to be removed",
+      "url": "https://lwn.net/SubscriberLink/1102102/0c00e4d550f25f8c/",
       "source": "Hacker News",
-      "published_at": "2026-10-27T13:02:02+00:00",
-      "summary": "New iMac with M6",
-      "score": 317,
-      "comments": 383,
-      "discussion_url": "https://news.ycombinator.com/item?id=50258538",
+      "published_at": "2026-10-27T11:17:57+00:00",
+      "summary": "Python's experimental JIT to be removed",
+      "score": 473,
+      "comments": 254,
+      "discussion_url": "https://news.ycombinator.com/item?id=50257419",
       "extra": {
         "top_comments": [
-          "I've bought several iMacs (2008, 2012, 2014, 2020) Anyway, it is frustrating once they aren't supported anymore. I think they are overbuilt, they are built to last forever but designed to be obsolete in 7 years. ChromeFlex has saved a few from recycling at our house (A chromebook with a retina display seems like such a waste)I suggest spending a bit more and getting a mac mini and a studio display instead (Equally well built but can be used almost forever). If you could only (easily) use them as monitors once they went out of support...",
-          "I don't understand why someone would buy this. It's $1700 for the same computer as a $900 Mac mini. The antiquated 24\" monitor, keyboard, and mouse are not worth the extra $800. You can buy a very nice 32\" monitor and better input devices for less than that.",
-          "I wish they would make big displays again. Like 32” big 6K.24” or even 27” feels like such a downgrade.Also please make the iMacs usable as external monitors agains. Would buy one as a “livingroom computer” instantly if it was also possible to occasionally use it as a docking station for an air.."
+          "Unfortunate. I've been following the work on it occasionally.On one hand, it seemed like JIT work was really progressing in high gear until SC requested a new PEP. Also unfortunate, as it seemed like part of the hope for the JIT was that it'd counter the performance penalty from free threading.On the other, it did feel (to me) like with all the fancy (and definitely cool) optimizations it got (automatic refcount operation removal, new type-based specializations, inplace math operations), the macrobenchmark benefits weren't _that_ exciting for a JIT. It definitely has potential for more, maybe with even fancier optimizations like unboxing ints, but the complexity just keeps going up.> It said that the PEP was \"overly optimistic\" about user-visible differences with the JIT enabled.The JIT is technically generated from the same source as the interpreter loop itself, so originally the differences were extremely unlikely, but I imagine the risk just kept going up as new JIT-only paths and optimizations were introduced.And politically, I feel like SC’s reasoning was just “this side project has landed in main branch almost by accident and has been stewing without oversight ever since, with no stabilization in sight”; and the latest PEP was probably still too vague, with a lot of “here’s more things we can add to the stew” - so I can understand if SC wasn’t satisfied.",
+          "Here’s an idea instead (maybe it already exists). Allow a decorator for writing inline Cython. It solves, I think, 90% of the problem. On first run, or eagerly, compile the decorated functions. Basically, Cython is the JIT, and user enables it explicitly.This way I can easily write inlined functions with proper C speed, in a Python esque language.Reasons why I rarely use Cython without this:- unmodified Python code running in Cython is often faster, but not that much. 50% or so is my rule of thumb.- but the development style is very different for Cython and Python, adding a lot of impedance. Eg reloading doesn’t quite work, profiling is different, you need a build directory and a build step at deployment etc.- Cython proper is different enough and I’d argue unintuitive enough that if I have to have all these things in place, I might as well wrap my function in Rust.Such a decorator would give you a low friction way to make things faster when you need it, with scope for making it much faster via all the funny Cython, while keeping Python-esque semantics, in particular \"development semantics\".I think it would require some language modification since Cython was definitely a superset of Python; I think some of that syntax has been streamlined, but maybe still a strict superset.",
+          "How many Python JIT experiments have failed? I find it interesting because Ruby is probably harder to optimize than Python but Ruby has had a JIT for a long time. Maybe base python is more optimized than base Ruby so the JIT is incrementally not changing much? Also, I'd expect javascript to be harder to optimize but it has JITs. That could just be a funding issue, though. There's probably much more money and incentive to optimize Javascript."
         ]
       }
     },
@@ -80,32 +80,32 @@
       "source": "Hacker News",
       "published_at": "2026-10-27T16:08:32+00:00",
       "summary": "New 14‑inch MacBook Pro with M6",
-      "score": 295,
-      "comments": 375,
+      "score": 324,
+      "comments": 415,
       "discussion_url": "https://news.ycombinator.com/item?id=50261352",
       "extra": {
         "top_comments": [
           "I'm currently on a marathon to keep my M1 Pro running until the M7 Pro/Max is available. Not sure if I'll make it, but I'm not eager to pay $6000+ for a decent spec dev computer, until I really have to",
-          "I have to say, I really dislike the thing where the base M(n+1) is always in the market alongside M(n) Pro/Max. I appreciate the underlying chips are probably quite distinct, but from a naming standpoint its confusing as hell.",
-          "I want to propose a called AI Index, if you can do say 1000t/s on processing and 50t/s on generation on a min 25B model you can call your device AI9 and you have AI7 and AI5 and AI3 with 3 being 100t/s processing and 10t/s generation on a min 10B model. Values above are on a 100k context size minimum. OFFLINE.So any effing claim of being an AI device doesn't end on the demo of best buy laptop where you remove a dog from a photo....Or that you have \"better noise removal\" or \"you look better on the cam\" because that's called noise cancelling and instagram filter and it's being done for ages..."
+          "I have an M1 Air 13\" and M2 Air 15\", and M4 Air 14\" and and M4 Pro 14\" with nano texture.I love them all. The M4 Air 14\" is from work, so kinda limited in what I can do. The M4 14\" Pro is kinda chunky after the Airs. The M2 15\" is ideal except on a plane. The M1 13\" is great as a personal device on work travel. If only I could not work...",
+          "I have to say, I really dislike the thing where the base M(n+1) is always in the market alongside M(n) Pro/Max. I appreciate the underlying chips are probably quite distinct, but from a naming standpoint its confusing as hell."
         ]
       }
     },
     {
-      "id": "50264857",
-      "title": "Tailscale SSH: Investigation and remediation update",
-      "url": "https://tailscale.com/ssh-investigation-update",
+      "id": "50258538",
+      "title": "New iMac with M6",
+      "url": "https://www.apple.com/imac/",
       "source": "Hacker News",
-      "published_at": "2026-10-27T19:55:21+00:00",
-      "summary": "Tailscale SSH: Investigation and remediation update",
-      "score": 212,
-      "comments": 114,
-      "discussion_url": "https://news.ycombinator.com/item?id=50264857",
+      "published_at": "2026-10-27T13:02:02+00:00",
+      "summary": "New iMac with M6",
+      "score": 323,
+      "comments": 398,
+      "discussion_url": "https://news.ycombinator.com/item?id=50258538",
       "extra": {
         "top_comments": [
-          "Former tailscalar here and now someone managing tailscale at an org.Having done my own review of the vulns and the fixes as they are landing in github, its pretty clear to me that this only affects situations where you use ACLs to permit ssh into a node (via tailscale ssh, not via opensshd), but dont give a path to sudoers/root.If a user had no SSH access and/or connectivity to a vulnerable node, none of these vulns give them access.However, if you have a vulnerable tailscaled and you give ssh access as some non-root account/privs, then yes, these vulns are relevant as theres now known privilege escalations that give access beyond some specific user account.Not trying to play down the vuln (its important), but its not a free-for-all RCE that some ppl are acting like it is.",
-          "I am fairly glad I have stuck with stock OpenSSH that ships with Linux. This incident proves I am glad with that choice.Over the decades, I have maintained remote access through port forwarding on my router - at one point in 2008 I put SSH on port 80 so I could access it from the restricted wifi network at the hospital my grandmother was at. I have also used openvpn. I have also used cloudflare tunnels. But in the end, I always connect to hardened openssh with key only authentication.",
-          "Somehow I don't think it's a good idea to let Tailscale handle service authentication at all. It's supposed to be an additional security layer around existing infrastructure and services.Letting Tailscale handle VPN and SSH at the same time is basically once again a single point of failure. Similar to exposing SSH directly to the internet."
+          "I've bought several iMacs (2008, 2012, 2014, 2020) Anyway, it is frustrating once they aren't supported anymore. I think they are overbuilt, they are built to last forever but designed to be obsolete in 7 years. ChromeFlex has saved a few from recycling at our house (A chromebook with a retina display seems like such a waste)I suggest spending a bit more and getting a mac mini and a studio display instead (Equally well built but can be used almost forever). If you could only (easily) use them as monitors once they went out of support...",
+          "I don't understand why someone would buy this. It's $1700 for the same computer as a $900 Mac mini. The antiquated 24\" monitor, keyboard, and mouse are not worth the extra $800. You can buy a very nice 32\" monitor and better input devices for less than that.",
+          "I wish they would make big displays again. Like 32” big 6K.24” or even 27” feels like such a downgrade.Also please make the iMacs usable as external monitors agains. Would buy one as a “livingroom computer” instantly if it was also possible to occasionally use it as a docking station for an air.."
         ]
       }
     },
@@ -116,32 +116,32 @@
       "source": "Hacker News",
       "published_at": "2026-10-27T19:55:06+00:00",
       "summary": "Survival LLM: AI assistant and emergency library that runs on your own computer",
-      "score": 211,
-      "comments": 108,
+      "score": 273,
+      "comments": 121,
       "discussion_url": "https://news.ycombinator.com/item?id=50264853",
       "extra": {
         "top_comments": [
           "This topic is bringing out the hallucination-panic crowd.It's perfectly safe to use LLMs to surface underlying data and knowledge without having to trust that it's giving you correct advice.Use the LLM as search technology: string match -> semantic search -> search intelligence.This is especially helpful when you don't know the right question to ask. Semantics only help you find text that is semantically near the input query. Semantics won't help you when what you are looking for is connected to what you have by something other than semantics, like causation, mechanism, or interpretation.Trying to figure out why your crops aren't growing well will likely require you to read several articles across a range of sciences, probably scoped to the specific conditions you are dealing with. A semantic search is not going to surface those first.Allowing an LLM to chain together several sources for you to read first does not require you to ask it for a conclusion.",
-          "I set this up on my machine and tested it with the following question:How can I build a bow drill so I can start a fire?It got it partially right: spindle, bow with string tied the correct way, and fire board. But then it flubbed by saying you put the spindle between both hands and move your hands back and forth to rotate the spindle and create the necessary friction… this totally ignores using the bow to rotate the spindle! It also mentioned “fanning the sparks” but there is absolutely no way your bow drill is going to create sparks.I asked a frontier model to check the survival LLM’s conversation trace and it pointed out the errors.I didn’t see obvious errors in the other 3 prompts I used, but this one seemed pretty egregious for a survival LLM.I thank the creator for making this, but take it with a grain of salt.",
-          "Shoutout to project nomad.https://www.projectnomad.us/its got a ton of useful options, preconfigured, integrates pretty easily, and can use any local LLM or data."
+          "Shoutout to project nomad.https://www.projectnomad.us/its got a ton of useful options, preconfigured, integrates pretty easily, and can use any local LLM or data.",
+          "I set this up on my machine and tested it with the following question:How can I build a bow drill so I can start a fire?It got it partially right: spindle, bow with string tied the correct way, and fire board. But then it flubbed by saying you put the spindle between both hands and move your hands back and forth to rotate the spindle and create the necessary friction… this totally ignores using the bow to rotate the spindle! It also mentioned “fanning the sparks” but there is absolutely no way your bow drill is going to create sparks.I asked a frontier model to check the survival LLM’s conversation trace and it pointed out the errors.I didn’t see obvious errors in the other 3 prompts I used, but this one seemed pretty egregious for a survival LLM.I thank the creator for making this, but take it with a grain of salt."
         ]
       }
     },
     {
-      "id": "50261647",
-      "title": "Classification of Finite Simple Groups Formalized in Lean",
-      "url": "https://cfsg.axiommath.ai/",
+      "id": "50264857",
+      "title": "Tailscale SSH: Investigation and remediation update",
+      "url": "https://tailscale.com/ssh-investigation-update",
       "source": "Hacker News",
-      "published_at": "2026-10-27T16:29:02+00:00",
-      "summary": "Classification of Finite Simple Groups Formalized in Lean",
-      "score": 178,
-      "comments": 45,
-      "discussion_url": "https://news.ycombinator.com/item?id=50261647",
+      "published_at": "2026-10-27T19:55:21+00:00",
+      "summary": "Tailscale SSH: Investigation and remediation update",
+      "score": 250,
+      "comments": 126,
+      "discussion_url": "https://news.ycombinator.com/item?id=50264857",
       "extra": {
         "top_comments": [
-          "Out of curiosity: is it possible to take a frontier model and just let it loose on all math textbooks out there, converting each and every proof/theorem/lemma/etc. into Lean? A frontier model should be able to do that, right? And it's a one-time task: do it once and it's there for eternity, available as a library to be used in other proofs.Maybe my understanding of Lean is wrong; I'm thinking of it as a programming language but for Math.",
-          "This seems like a very good use of auto-formalization, because in the past mathematicians have incorrectly believed that they were finished with the classification only discover a missing class/sporadic group.The original proof was a collaboration of ~100 mathematicians, if Tao is correct then we should expect to see more such collaborations in the future like we do in e.g. physics.",
-          "Makes me sad that the homotopical foundation people never got their shit together and now formalization is so mature but it's still done in set theoretic foundations."
+          "Former tailscalar here and now someone managing tailscale at an org.Having done my own review of the vulns and the fixes as they are landing in github, its pretty clear to me that this only affects situations where you use ACLs to permit ssh into a node (via tailscale ssh, not via opensshd), but dont give a path to sudoers/root.If a user had no SSH access and/or connectivity to a vulnerable node, none of these vulns give them access.However, if you have a vulnerable tailscaled and you give ssh access as some non-root account/privs, then yes, these vulns are relevant as theres now known privilege escalations that give access beyond some specific user account.Not trying to play down the vuln (its important), but its not a free-for-all RCE that some ppl are acting like it is.",
+          "I am fairly glad I have stuck with stock OpenSSH that ships with Linux. This incident proves I am glad with that choice.Over the decades, I have maintained remote access through port forwarding on my router - at one point in 2008 I put SSH on port 80 so I could access it from the restricted wifi network at the hospital my grandmother was at. I have also used openvpn. I have also used cloudflare tunnels. But in the end, I always connect to hardened openssh with key only authentication.",
+          "Somehow I don't think it's a good idea to let Tailscale handle service authentication at all. It's supposed to be an additional security layer around existing infrastructure and services.Letting Tailscale handle VPN and SSH at the same time is basically once again a single point of failure. Similar to exposing SSH directly to the internet."
         ]
       }
     }
