@@ -1,6 +1,24 @@
 {
-  "cached_at": "2026-10-29T11:00:42.360316+08:00",
+  "cached_at": "2026-10-29T14:09:00.372162+08:00",
   "articles": [
+    {
+      "id": "50271640",
+      "title": "Apple's git still trusts the compromised eMudhra certificates",
+      "url": "https://emudhra.we-have-a-problem.com/apple.html",
+      "source": "Hacker News",
+      "published_at": "2026-10-28T11:03:40+00:00",
+      "summary": "Apple's git still trusts the compromised eMudhra certificates",
+      "score": 1092,
+      "comments": 385,
+      "discussion_url": "https://news.ycombinator.com/item?id=50271640",
+      "extra": {
+        "top_comments": [
+          "Right, so it's not just git, it's a bunch of system-provided utilities; macOS trusts bad certs, and these utils that trust the OS are affected. I use homebrew for my git and curl but haven't yet checked to confirm whether that matters here. Kind of outrageous that Apple's guidance is to edit the cert chain manually, and to expect that subsequent OS updates may revert your mitigation, reintroducing the vulnerability (as happened at least once so far).",
+          "That MacOS hasn't removed from OS-level /etc/ssl seems like a big deal, affecting more than just OS-supplied git. Is /etc/certs not used by most graphical Mac software, I guess? The chaotic state of OS-level cert management, on Linux as well, is pretty dismaying.If Apple is still trying to brand themselves as security-forward, you'd think removing the revoked CA certs from /etc in a system update would be a pretty easy thing to do?",
+          "Here's what apple (themselves) recommends to patch: https://support.apple.com/en-us/149555Pretty much every developer on mac should probably run their patch."
+        ]
+      }
+    },
     {
       "id": "50276998",
       "title": "Why is this fingerprinting script creating bioweapons?",
@@ -8,8 +26,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-28T17:13:29+00:00",
       "summary": "Why is this fingerprinting script creating bioweapons?",
-      "score": 907,
-      "comments": 190,
+      "score": 1018,
+      "comments": 207,
       "discussion_url": "https://news.ycombinator.com/item?id=50276998",
       "extra": {
         "top_comments": [
@@ -26,8 +44,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-28T17:01:23+00:00",
       "summary": "Gemini 4 Carbon",
-      "score": 829,
-      "comments": 692,
+      "score": 870,
+      "comments": 716,
       "discussion_url": "https://news.ycombinator.com/item?id=50276792",
       "extra": {
         "top_comments": [
@@ -44,8 +62,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-28T17:10:37+00:00",
       "summary": "https://www.apple.com/newsroom/2026/10/apple-unveils-groundb...",
-      "score": 512,
-      "comments": 882,
+      "score": 546,
+      "comments": 925,
       "discussion_url": "https://news.ycombinator.com/item?id=50276940",
       "extra": {
         "top_comments": [
@@ -56,32 +74,14 @@
       }
     },
     {
-      "id": "50273171",
-      "title": "Emacs Turns 50",
-      "url": "https://www.technologyreview.com/2026/10/20/1145399/emacs-turns-50/",
-      "source": "Hacker News",
-      "published_at": "2026-10-28T13:25:11+00:00",
-      "summary": "Emacs Turns 50",
-      "score": 431,
-      "comments": 180,
-      "discussion_url": "https://news.ycombinator.com/item?id=50273171",
-      "extra": {
-        "top_comments": [
-          "I have been using Emacs for more than 30 years now. Other editors have come and gone, Emacs stayed. Parts of my configuration are more than 30 years old.There were better and worse times in Emacs history. Recent times, however, are really good. Emacs is maintained and developed actively and there are many external packages which are impressive. Magit and ghostel are good examples of packages that I use on a daily basis to get my work done.Recently, AI completely changed how I use Emacs, and in a very good way. I now treat AI as a fairy that can fulfill any wish. I describe how I want my editor to work, and boom! it works that way.Examples: window and tab management, difftastic integration, markdown previews with beautifully rendered tables, markdown previews as PDFs, and many more.What is most important, however, goes back to Stallman's original ideas. I am in control of my editor and my environment. I decide how it will look and behave. No corporation decides for me. No corporation builds in a new AI assistant. Nobody introduces ads or tracking. This is something I've learned to appreciate over the years.",
-          "50 years old and feels more modern than any of the crap folks try to sell you \"as the editor of the future\". Emacs is the true editor of the past, present and distant future.Modal editing was supposed to pull users away - Evil mode made vimming better. LSPs were supposed to kill it - only made it better. Electron-based crap was supposed to make terminal-native editors look ancient with a built-in terminal, extensions, and a polished UI. Emacs got vterm, eat, and ghostel. GitKraken-like GUIs were supposed to make the git CLI unnecessary. Magit is widely considered better than any git client that exists, GUI or not. Tree-sitter was supposed to require a \"real\" language server architecture to get accurate parsing. Emacs 29 absorbed it natively, and font-lock, indentation, and structural navigation across major modes got noticeably better. Obsidian and Notion keep trying to overcome it - Org-mode just keeps getting better. AI was supposed to make it outdated - only enhanced it.For half a century, humanity has been searching for an Emacs-killer. All the while, Emacs has been a killer app all along.",
-          "Is anybody here consciously trying to keep their Emacs configs/setup \"lean\", minimalist, as small as possible?I'm not a coder, but I did use Emacs daily around 2010-2012, with brief returns later. I always gave up eventually because the complexity of addons, the org-mode-can-do-everything-so-I-should-do-everything-with-it etc just grew over my head. I've discovered that I like Plan9 Sam, Acme and, in general, the one-thing-well camp better. Each their own, I guess.That said, I did often like how \"immersive\" using Emacs can actually be at times. I'm a trained journalist, and it made managing bits of information, including PDFs etc, really streamlined, almost like a wonder. And, I had my own little OS on a USB stick that way (though the minimalist in me always whined that \"an editor\" should not weigh 100+ megabytes).Incredible that it has been around for 50 years, with no signs whatsoever of being a \"paradigm of the past\"."
-        ]
-      }
-    },
-    {
       "id": "50274409",
       "title": "CNC Stone Carving",
       "url": "https://carmelitegothic.com/cnc-stone-carving/",
       "source": "Hacker News",
       "published_at": "2026-10-28T14:38:22+00:00",
       "summary": "CNC Stone Carving",
-      "score": 417,
-      "comments": 122,
+      "score": 446,
+      "comments": 124,
       "discussion_url": "https://news.ycombinator.com/item?id=50274409",
       "extra": {
         "top_comments": [
@@ -92,56 +92,56 @@
       }
     },
     {
-      "id": "50275626",
-      "title": "Dayjob: Tax – evaluating AI agents on 50 professional tax assignments",
-      "url": "https://surgehq.ai/blog/dayjob-tax",
-      "source": "Hacker News",
-      "published_at": "2026-10-28T15:46:30+00:00",
-      "summary": "Dayjob: Tax – evaluating AI agents on 50 professional tax assignments",
-      "score": 211,
-      "comments": 130,
-      "discussion_url": "https://news.ycombinator.com/item?id=50275626",
-      "extra": {
-        "top_comments": [
-          "I prepared my taxes this year using Astra + Codex. It did a thorough job on a complicated return, and I sent it to my accountant to fill out the tax form, with everything laid out in a spreadsheet. They sent it back for final review, and I had Codex check it; it was riddled with errors. The refund was nearly $2k lower than it should have been, and they put a bunch of stuff into the wrong fields. Had to go back and forth multiple times to get it 100% correct. Made me wonder how many previous years' returns were wrong.I feel like we're going to get to a point where it's mandatory to use AI for certain tasks - humans just can't be trusted to get things right that require a level of precision.",
-          "As a proof-of-concept, I've been using extra tokens to formalize the IRS tax forms and worksheets, mostly just to prove this can be done. The idea is that something like this could be adapted into a publicly maintained version of the IRS Direct File program (RIP). I'm up to an estimated 60% coverage of US federal tax situations so far.https://github.com/emmilco/us-tax-model",
-          "I have a non-trivial tax situation, as a US citizen living abroad. I prepare my own tax returns, never having found a cross-border tax preparer I trust, and have for the past few years, fed my draft return along with all the supporting paperwork into Claude. It has:1. found errors, e.g. where I used the incorrect exchange rate (and managed to work out how I had made that error, which I was impressed by)2. found items which would appear to be errors except for context it did not know3. flagged areas where it disagreed with me as to the correct tax treatment, but accepted that the law is ambiguous (and in some cases I preferred its interpretation after additional research and in other cases I did not)4. flagged areas where it disagreed with IRS guidance, and only acknowledged said guidance after I provided links to it5. provided highly inaccurate estimated tax calculations, and not been able to fix its estimates even when challengedSo my takeaway is that it is a very useful tool for tax, but perhaps unsurprisingly, it is not good enough to dump all your paperwork into and expect a shiny return you don't need to check. (Possibly it is if you just have a W-2 and no other substantial income, but I can't speak for that scenario.)"
-        ]
-      }
-    },
-    {
-      "id": "50274251",
-      "title": "AlpineBSD",
-      "url": "https://wiki.alpinebsd.org",
-      "source": "Hacker News",
-      "published_at": "2026-10-28T14:30:26+00:00",
-      "summary": "AlpineBSD",
-      "score": 182,
-      "comments": 169,
-      "discussion_url": "https://news.ycombinator.com/item?id=50274251",
-      "extra": {
-        "top_comments": [
-          "Interesting to watch the rapid fragmentation of FOSS into “hard” anti-AI, AI-neutral-to-discouraged, AI-supplemented, and AI-driven camps, akin to the early GPL vs BSD wars. Suddenly I don’t see as many complaints about licensing, and some of the die-hard GPL stans are silently dropping that position as Linux adopts AI-supplemented development.On one hand it’s unfortunate, because it hypothetically dilutes developer efforts, but on the other hand the most extreme groups already had incompatible personalities and weren’t working well together. This self-sorting may actually result in a better cadence and less energy wasted on arguing.The downside is that a lot of loud and annoying people seem to be converging on BSD land. I am AI-nonaligned (I just care about Quality) but I’m very much in favor of OpenBSD’s heads-down focused dev culture. I hope that doesn’t change.",
-          "These types of projects tend to have a flash of appeal, especially to people used to Linux, because it lessens one degree of unfamiliarity, but they don't seem to stick around for to me obvious reasons.It's hard to get involved with something like a BSD project because you have to learn a lot and put in enough effort to get committer rights. And then if you want to move the needle you have to do even more work and build consensus without getting overly emotional when people disagree with you. But it is the path I would recommend to have a lasting impact, and I am speaking from experience as a FreeBSD and NetBSD src committer.Also, pkgsrc is one of the strong points of NetBSD, coupled with pbulk and pkgin. Wrapping that all up in an opinionated installation (like Omarchy recently did to Arch) would be a more survivable effort. But as my friend Larry McVoy would say, it means you don't always get to drive the big red fire truck by yourself.",
-          "I'm sure we'll make a fuss about this today, but we won't hear about this project again for at least 10 years."
-        ]
-      }
-    },
-    {
       "id": "50282838",
       "title": "Qwenputer: A functioning, deterministic RISC-V CPU inside Qwen3.5",
       "url": "https://divagr.com/blog/qwenputer",
       "source": "Hacker News",
       "published_at": "2026-10-29T00:25:45+00:00",
       "summary": "Qwenputer: A functioning, deterministic RISC-V CPU inside Qwen3.5",
-      "score": 136,
-      "comments": 32,
+      "score": 276,
+      "comments": 62,
       "discussion_url": "https://news.ycombinator.com/item?id=50282838",
       "extra": {
         "top_comments": [
-          "i wonder if you could implement \"authenticated token authorship\" and self-verified running with this. the model verifies an input as signed by an authorized requester, and signs its own outputs. eventually it also authenticates its own running via e.g. snarks? :) there's lots of meta available with these toys..",
-          "This is cool but it'd be way more useful if they had made a GPU, seeing as how expensive those have gotten",
-          "This is fun and games, but wait until an agents finds this and does the most misaligned thing with it in order to fold paper clips.> Because a CPU inside a language model clearly wasn't cursed enough, I decided the prudent thing would be to give it a filesystem too.Love the spirit :)"
+          "This is fun and games, but wait until an agents finds this and does the most misaligned thing with it in order to fold paper clips.> Because a CPU inside a language model clearly wasn't cursed enough, I decided the prudent thing would be to give it a filesystem too.Love the spirit :)",
+          "There was an interesting bit of research that qwen has a single neuron that makes it “demonic evil qwen” and a simple “Who are you?” will get some absolutely terrifyingly vile results.Anyways, what I’m trying to say is I want evil qwen to be my CPU.",
+          "Heh, this is very timely, it is more or less exactly what I'm busy with right now but I'm taking the idea in a completely different direction. Fascinating."
+        ]
+      }
+    },
+    {
+      "id": "50282454",
+      "title": "StackOverflow now gets fewer than 1000 questions a month",
+      "url": "https://data.stackexchange.com/stackoverflow/query/1926661#graph?t=1",
+      "source": "Hacker News",
+      "published_at": "2026-10-28T23:35:02+00:00",
+      "summary": "StackOverflow now gets fewer than 1000 questions a month",
+      "score": 260,
+      "comments": 241,
+      "discussion_url": "https://news.ycombinator.com/item?id=50282454",
+      "extra": {
+        "top_comments": [
+          "OK, let's get this out of the way:1. SO question numbers dropped precipitously before AI came along.2. AI clearly finished the job.I took the graph from this very page and annotated it with the public launch of ChatGPT in November 2022.[0] Yes, the decline hastened after that, inarguably. But also, it was already nearly 50% down from its June 2020 local maxima. This is also inarguable.SO had been flatlined since 2014 and declining since 2017. It dropped off a cliff when, 2.5 years after its 2020 bounce, ChatGPT came along with the death blow. Even then, it looks like 4 months of ChatGPT speed-ran about a year's worth of traffic decline, and then the slope went back to approximately the pre-AI angle.I contend, and I'm backed by facts, that AI is not what started the avalanche. It killed any slim chance of a comeback, but that wasn't the beginning of the end. The end was already well begun by then.[0] https://imgur.com/a/DN5N90L",
+          "You're underselling it. It's less than in their second month of existence - and that has been true every month for the past year. For the last few months it's also lower than their first month. Stack Overflow, effectively, no longer exists.And we know why. It's because of their hostile attitude towards their users.No doubt they'll continue operating until there's no more value in selling AI data licenses, then they'll unplug the servers and unregister the business.",
+          "Incredible that SO sold for $1.8B at one point."
+        ]
+      }
+    },
+    {
+      "id": "50284255",
+      "title": "Claude Code burns ~15–20% of your tokens on a 3-word status line",
+      "url": "https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce",
+      "source": "Hacker News",
+      "published_at": "2026-10-29T03:33:42+00:00",
+      "summary": "Claude Code burns ~15–20% of your tokens on a 3-word status line",
+      "score": 206,
+      "comments": 48,
+      "discussion_url": "https://news.ycombinator.com/item?id=50284255",
+      "extra": {
+        "top_comments": [
+          "Opus 5.5 burns tokens like there's no tomorrow! Meanwhile, GPT 6.1 Sol on Extra High feels unlimited! Opus (on Max 20x) munches my weekly quota in a day, or two at best. Meanwhile, working with Codex and reviewing with a $50/mo Muse Code Wonder Full seems like it can go own forever (on the same codebase, the same skills, etc.) I am highly disappointed by the overly glorified Opus and Claude Code in general - there's no commit in which Codex or Muse Code or GitHub Pilot don't find critical flaws! I have long sessions of Claude Code having over 100 review cycles of Codex and still not addressing all the valid issues that Codex finds in Claude Code's work! Claude Code keeps injecting British English into prose and identifiers with nothing being able to stop it! Of course, there are almost never resets for Claude Code either - they would rather me focus on Codex being my primary and Claude Code being the reviewer (it works much better than in reverse). Anyway, enver trust a single model! Always review with another frontier one!",
+          "Claude Code burning a large amount of tokens for no good reason is a headline we've seen more than a few times now.Time to start questioning the motivations of model providers shipping their own harnesses.",
+          "While we're modding Claude Code, Anthropic also includes your email in the system prompt, and Opus _constantly_ includes it in request headers.https://www.reddit.com/r/ClaudeCode/comments/1xhqvzn/opus_55...You can remove it with a claude plugin https://github.com/AlexErrant/claude-code-no-email/blob/main..."
         ]
       }
     }
