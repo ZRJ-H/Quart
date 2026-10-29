@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-10-28T14:00:41.759111+08:00",
+  "cached_at": "2026-10-29T11:00:42.360316+08:00",
   "articles": [
     {
-      "id": "50261998",
-      "title": "Ghostty 1.4",
-      "url": "https://ghostty.org/docs/install/release-notes/1-4-0",
+      "id": "50276998",
+      "title": "Why is this fingerprinting script creating bioweapons?",
+      "url": "https://nullpt.rs/fingerprinting-bioweapons",
       "source": "Hacker News",
-      "published_at": "2026-10-27T16:51:22+00:00",
-      "summary": "Ghostty 1.4",
-      "score": 893,
-      "comments": 279,
-      "discussion_url": "https://news.ycombinator.com/item?id=50261998",
+      "published_at": "2026-10-28T17:13:29+00:00",
+      "summary": "Why is this fingerprinting script creating bioweapons?",
+      "score": 907,
+      "comments": 190,
+      "discussion_url": "https://news.ycombinator.com/item?id=50276998",
       "extra": {
         "top_comments": [
-          "These are Ghostty GUI release notes, but I want to take a moment to highlight the libghostty progress we've made since Ghostty 1.3.As a reminder, libghostty is the highly portable, embeddable library that provides core terminal emulation, render state, and more. I always felt that a free, high qualty, lightweight, reusable terminal emulation core would benefit the developer world more than any single GUI application. And that is playing out!It is and always was my true purpose with the Ghostty project (I said this in my first ever talk about Ghostty!). I've jokingly said many times that Ghostty GUI is just a glorified tech demo for libghostty. That's not fair though, because GUI is great and there are really talented people working on it.Since I started the project, Ghostty has always gotten people saying \"I don't understand why you'd start a terminal emulator today.\" Well, the answer is libghostty. It's truly unique and its enabling something special (imo!).Highlights of libghostty since 6 months ago (none of the below was true 6 months ago):- Libghostty has nearly 100% coverage of all of Ghostty's core (and you can compile with flags to remove any of these features for size/safety): https://libghostty.tip.ghostty.org/- Libghostty now builds and is tested (in CI) for: Apple (macOS, iOS, visionOS), Windows (MSVC and GNU), Linux, FreeBSD, Android, WebAssembly, and freestanding (i.e. direct on hardware with no OS).- Libghostty has bindings in pretty much every popular programming language: C, Zig, Go, Swift, Python, Rust, .NET, etc.- Libghostty's memory requirements have dramatically shrunk to enable the portability above. There's still work to do but a single empty terminal now takes 90% less memory. And at scale I've proven 10,000 active (input/output happening) terminals on a Linux server with 4 cores and 8 GB of RAM.- Libghostty powers all JetBrains IDE terminals, over 12.5 million active users. https://blog.jetbrains.com/platform/2026/10/jetbrains-termin...- Libghostty is the most popular core behind the wave of venture-backed \"agentic\" terminals and editors, such as Herdr, cmux, and many others.- Libghostty is being discussed and has been verbally accepted to replace the terminal core in Neovim: https://github.com/neovim/neovim/pull/39773 (work still to be done)- Libghostty powers a really popular and powerful terminal emulator for emacs (Ghostel): https://github.com/dakra/ghostel- Libghostty's speed is used by Antithesis to fuzz popular terminal programs and has directly led to hundreds of bug fixes sent upstream to programs such as tmux, btop, shells, and other terminal emulators. :)- And so much more: https://github.com/Uzaaft/awesome-libghosttyLibghostty is really successfully turning into the tide that raises all boats. As it becomes more popular, Ghostty itself gets more performant and stable, and so does everyone else. It is also a vehicle for delivering modern terminal emulation to the widest source possible.I plan on tagging libghostty 1.0 in the next few months and declaring ABI stability at that point!",
-          "I've tried Ghostty and it's great, but Kitty's hints mode[1] is the one feature keeping me from switching from Kitty to Ghostty. There are quite a few discussions around this and similar features in the Ghosstty-org/ghostty Discussions[2] which I follow. Most of them are references from ghostty-org/ghostty/discussions/2394[3]. Maybe now that Ghostty has finished implementing Kitty graphics hints will be next .[1]: https://sw.kovidgoyal.net/kitty/kittens/hints/[2]: https://github.com/ghostty-org/ghostty/discussions[3]: https://github.com/ghostty-org/ghostty/discussions/2394",
-          "I still don't understand the point of Ghostty, Kitty, Wezterm...Konsole is way faster than any of those on my computer and it has all the usual suspects I'd expect from a modern terminal emulator.The one feature I miss since moving to Linux and not having iTerm2 is tmux -CC integration. None of those offer it.To be clear, I'm not attempting to be dismissive. I really want to understand what it is that they bring."
+          "> Out of curiosity, I tried GLM-5.3 with the same prompt and it complied!I am noticing a trend here.Didn't HF say the same thing, when they got hacked, the only LLM that would assist with defense was GLM?> When we started the log analysis, we first used frontier models behind commercial APIs. This did not work: the analysis requires submitting large volumes of real attack commands, exploit payloads, and C2 artifacts, and these requests were blocked by the providers' safety guardrails, which cannot distinguish an incident responder from an attacker. We ran the forensic analysis instead on zai-org/GLM-5.2, an open-weight model, on our own infrastructure. This had a second benefit: no attacker data, and none of the credentials it referenced, left our environment.https://huggingface.co/blog/security-incident-july-2026",
+          "Nice sleuthing!We do a similar thing to mark documents that are still under embargo and one day I forgot to remove the watermark. The customer complained they had not received the document (a day or two after I sent it), and much searching was done. Finally we found a line in an outlook log on their end that said that the watermark was the reason the file had been put in indefinite quarantine until someone would take a look at it.That's when I realized my error, and of course it was soon fixed afterwards. It is the first proof that it worked though, so I'm kind of happy about that.",
+          "Nice finds! This HN profile I looked at today by chance, also contains some anti-LLM incantations, albeit much less obfuscated. I wasn't aware Anthropic had such a magic string: https://news.ycombinator.com/user?id=jeroenhd"
         ]
       }
     },
     {
-      "id": "50259604",
-      "title": "US Government is hiding a secret court ruling about how it spies on Americans",
-      "url": "https://www.wired.com/story/the-us-government-is-hiding-a-secret-court-ruling-about-how-it-spies-on-americans/",
+      "id": "50276792",
+      "title": "Gemini 4 Carbon",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
       "source": "Hacker News",
-      "published_at": "2026-10-27T14:06:42+00:00",
-      "summary": "US Government is hiding a secret court ruling about how it spies on Americans",
-      "score": 885,
-      "comments": 313,
-      "discussion_url": "https://news.ycombinator.com/item?id=50259604",
+      "published_at": "2026-10-28T17:01:23+00:00",
+      "summary": "Gemini 4 Carbon",
+      "score": 829,
+      "comments": 692,
+      "discussion_url": "https://news.ycombinator.com/item?id=50276792",
       "extra": {
         "top_comments": [
-          "\"Wyden has also warned about a classified interpretation of Section 702 that he says multiple administrations have relied on and refused to declassify. “When it is eventually declassified,” he said in March, “the American people are going to be stunned that it took so long and that Congress had been debating this authority with insufficient information.”\"Spying on American citizens is a bipartisan point of agreement.",
-          "Secret courts are anathema to democracy and need to be abolished.",
-          "I will always be baffled by the dichotomy of \"the US has the most freedom\" and \"no democratic country spies more on its citizens\"."
+          "At this point if a Google PM handed me $100 and said \"go figure out how to issue a prompt to Gemini 4 Argon\" I'm only ~30% sure I could figure out how. The Gemini app in my phone only has 3.8 Pro as the latest model; it does say \"Ultra\" in the bottom left, but I really don't think I'm on the Ultra plan. How I would sign up for that, on a Workspace account, is beyond our brightest minds.Its sad watching them try to keep up when they want nothing more than to crumble under the weight of their own bureaucracy, and at this point I'm not sure there's any hope for them.",
+          "It is pretty clear at this point that the frontier models need only handful of tiered models.1. Ultra - The best and the most expensive for showing off and government. 2. Pro - Almost best but substantially cheaper for most productive people. 3. Flash - Workhorse for everyone. 4. Lite - For the unwashed masses and peasants.There is no need to attach anything to these labels. In fact industry could simply standardize these namings like SEMVER.There could be an internal representation which could give specific number of the model but these companies should move on to be more like Chrome. No one knows or cares which version of chrome they are on.For a lot of systems the real underlying version would matter because of reliability. That can be provided to those power users.",
+          "Given how quickly the field is moving, showing benchmarks without releasing the model is quite meaningless. If they decide to release it in one month, there will probably be a stronger competition out there. And the benchmarks won't look as good."
         ]
       }
     },
     {
-      "id": "50261319",
-      "title": "Genie 4",
-      "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+      "id": "50276940",
+      "title": "MacBook Pro with PROLED XDR Display and Touch",
+      "url": "https://www.apple.com/macbook-pro/proled-xdr-display/",
       "source": "Hacker News",
-      "published_at": "2026-10-27T16:06:01+00:00",
-      "summary": "Genie 4",
-      "score": 818,
-      "comments": 490,
-      "discussion_url": "https://news.ycombinator.com/item?id=50261319",
+      "published_at": "2026-10-28T17:10:37+00:00",
+      "summary": "https://www.apple.com/newsroom/2026/10/apple-unveils-groundb...",
+      "score": 512,
+      "comments": 882,
+      "discussion_url": "https://news.ycombinator.com/item?id=50276940",
       "extra": {
         "top_comments": [
-          "For several of these examples the details change if something goes out of frame and returns. A second castle is added in the dragon one. The people walking away from the camera change in the train platform one. The Hong Kong moped rider doesn't have a helmet and then he has one.It's very good at maintaining consistency for things that stay in frame, but I don't know that this points to it developing a strong \"world simulation\" like they claim.",
-          "Reading the comments almost everyone seems not impressed at all and points at obvious errors in the samples. Meanwhile it's been just roughly over 3 years since we've seen an AI generated abomination of Will Smith \"eating\" (or whatever you want to call that act) spaghetti. Yes, AI gets things wrong. You could say the same about LLMs still making obvious errors here and there. To me, personally, this seems super impressive and it's clearly another leap forward. Not perfect, yes. But an improvement.",
-          "> Genie 4 has advanced audio capabilities> Prompt asks for saxophoneLooks inside:> Sound of a clarinetMaybe Genie 5 will get it."
+          "Touch-screen Macs is kind of a terrible development for anyone who loves the Mac. It's not just a harmless feature that you can ignore if you don't want it, because it's customer-facing and will now generate complaints and bugs from people who do use it. Those people will complain (rightly) that macOS UI widgets are too small to accurately manipulate with your fingers (they are indeed too small) and don't make sense with a touch screen (they don't make sense).That means Apple will begin imposing all sorts of UI dreck on all of us, whether we want to use our screens as touch surfaces or not.This is basically what happened with Microsoft - Windows Vista and 7 were installed in plenty of laptops with touchscreens, and customers would complain about not being able to maximize windows without closing them, not being able to open menus without touching toolbar buttons, etc.Eventually Microsoft listened to them and we got Windows 8. Now this is the beginning of the same process for macOS.",
+          "Everyone's focused on the touchscreen, but I'm seriously impressed how they managed to cut down the weight.* For the 14-inch: 3.5 lb (1.59 kg) -> 3.0 lb (1.36 kg)* For the 16-inch: 4.7 lb (2.13 kg) -> 4.0 lb (1.81 kg)About 15% lighter on both models. Switching from LCD to OLED saves weight because the screen does not need a backlight and has fewer layers. They also made the laptop thinner by nearly 1 mm. But that's not enough to push the weight down by 300 grams. They must have redesigned internal components to cut weight as well.There must have been a dedicated effort to reduce weight. Kudos to the MacBook Pro team!",
+          "Oh wow, it’s like they’re trying less and less.When they introduced the Apple Pencil and people were like “haha it’s a stylus”, the thing was decidedly NOT a stylus (it actually couldn’t be used to control some parts of the UI). It was an actual digital pen, something that used to be specialized and expensive external hardware, and it worked beautifully with the iPad. It was literally “stylus but GOOD”. I saw it and thought “people will make memes about this, but Apple totally gets it”.When they introduced the Vision Pro, VR was just kind of shit. Bulky, ugly, uncool. Vision Pro tried to resolve some of the issues, but it was still kind of half-assed. Like they wanted to have a VR device but couldn’t actually make it work. Good resolution, but not great. Vergence-accomodation conflict not addressed. Still bulky and ugly. Isolation kind of addressed (with the AR-ish UX and the “see-through” display), but not enough.Now we got the foldable iPhone and a touchscreen MacBook.Foldable phones are still awfully delicate and the whole concept doesn’t have a clear “killer” use case. There’s no new UX, no new features, it’s just an iPad Mini in a marginally smaller device that’s expensive as hell. Apple didn’t even try to address the obvious shortcomings, they just built the same stupid thing everyone else is failing to sell.Touchscreen laptops still wobble, they still get covered with fingerprints, they’re still uncomfortable and there’s still no meaningful UX. This thing doesn’t even try to address any of that. Their marketing images literally just show hands hovering above the keyboard and touching the screen for no good reason. They’ve been mocking touchscreen laptops for years now and now they release one like it’s the most obvious thing ever. 1984 vibes."
         ]
       }
     },
     {
-      "id": "50257419",
-      "title": "Python's experimental JIT to be removed",
-      "url": "https://lwn.net/SubscriberLink/1102102/0c00e4d550f25f8c/",
+      "id": "50273171",
+      "title": "Emacs Turns 50",
+      "url": "https://www.technologyreview.com/2026/10/20/1145399/emacs-turns-50/",
       "source": "Hacker News",
-      "published_at": "2026-10-27T11:17:57+00:00",
-      "summary": "Python's experimental JIT to be removed",
-      "score": 473,
-      "comments": 254,
-      "discussion_url": "https://news.ycombinator.com/item?id=50257419",
+      "published_at": "2026-10-28T13:25:11+00:00",
+      "summary": "Emacs Turns 50",
+      "score": 431,
+      "comments": 180,
+      "discussion_url": "https://news.ycombinator.com/item?id=50273171",
       "extra": {
         "top_comments": [
-          "Unfortunate. I've been following the work on it occasionally.On one hand, it seemed like JIT work was really progressing in high gear until SC requested a new PEP. Also unfortunate, as it seemed like part of the hope for the JIT was that it'd counter the performance penalty from free threading.On the other, it did feel (to me) like with all the fancy (and definitely cool) optimizations it got (automatic refcount operation removal, new type-based specializations, inplace math operations), the macrobenchmark benefits weren't _that_ exciting for a JIT. It definitely has potential for more, maybe with even fancier optimizations like unboxing ints, but the complexity just keeps going up.> It said that the PEP was \"overly optimistic\" about user-visible differences with the JIT enabled.The JIT is technically generated from the same source as the interpreter loop itself, so originally the differences were extremely unlikely, but I imagine the risk just kept going up as new JIT-only paths and optimizations were introduced.And politically, I feel like SC’s reasoning was just “this side project has landed in main branch almost by accident and has been stewing without oversight ever since, with no stabilization in sight”; and the latest PEP was probably still too vague, with a lot of “here’s more things we can add to the stew” - so I can understand if SC wasn’t satisfied.",
-          "Here’s an idea instead (maybe it already exists). Allow a decorator for writing inline Cython. It solves, I think, 90% of the problem. On first run, or eagerly, compile the decorated functions. Basically, Cython is the JIT, and user enables it explicitly.This way I can easily write inlined functions with proper C speed, in a Python esque language.Reasons why I rarely use Cython without this:- unmodified Python code running in Cython is often faster, but not that much. 50% or so is my rule of thumb.- but the development style is very different for Cython and Python, adding a lot of impedance. Eg reloading doesn’t quite work, profiling is different, you need a build directory and a build step at deployment etc.- Cython proper is different enough and I’d argue unintuitive enough that if I have to have all these things in place, I might as well wrap my function in Rust.Such a decorator would give you a low friction way to make things faster when you need it, with scope for making it much faster via all the funny Cython, while keeping Python-esque semantics, in particular \"development semantics\".I think it would require some language modification since Cython was definitely a superset of Python; I think some of that syntax has been streamlined, but maybe still a strict superset.",
-          "How many Python JIT experiments have failed? I find it interesting because Ruby is probably harder to optimize than Python but Ruby has had a JIT for a long time. Maybe base python is more optimized than base Ruby so the JIT is incrementally not changing much? Also, I'd expect javascript to be harder to optimize but it has JITs. That could just be a funding issue, though. There's probably much more money and incentive to optimize Javascript."
+          "I have been using Emacs for more than 30 years now. Other editors have come and gone, Emacs stayed. Parts of my configuration are more than 30 years old.There were better and worse times in Emacs history. Recent times, however, are really good. Emacs is maintained and developed actively and there are many external packages which are impressive. Magit and ghostel are good examples of packages that I use on a daily basis to get my work done.Recently, AI completely changed how I use Emacs, and in a very good way. I now treat AI as a fairy that can fulfill any wish. I describe how I want my editor to work, and boom! it works that way.Examples: window and tab management, difftastic integration, markdown previews with beautifully rendered tables, markdown previews as PDFs, and many more.What is most important, however, goes back to Stallman's original ideas. I am in control of my editor and my environment. I decide how it will look and behave. No corporation decides for me. No corporation builds in a new AI assistant. Nobody introduces ads or tracking. This is something I've learned to appreciate over the years.",
+          "50 years old and feels more modern than any of the crap folks try to sell you \"as the editor of the future\". Emacs is the true editor of the past, present and distant future.Modal editing was supposed to pull users away - Evil mode made vimming better. LSPs were supposed to kill it - only made it better. Electron-based crap was supposed to make terminal-native editors look ancient with a built-in terminal, extensions, and a polished UI. Emacs got vterm, eat, and ghostel. GitKraken-like GUIs were supposed to make the git CLI unnecessary. Magit is widely considered better than any git client that exists, GUI or not. Tree-sitter was supposed to require a \"real\" language server architecture to get accurate parsing. Emacs 29 absorbed it natively, and font-lock, indentation, and structural navigation across major modes got noticeably better. Obsidian and Notion keep trying to overcome it - Org-mode just keeps getting better. AI was supposed to make it outdated - only enhanced it.For half a century, humanity has been searching for an Emacs-killer. All the while, Emacs has been a killer app all along.",
+          "Is anybody here consciously trying to keep their Emacs configs/setup \"lean\", minimalist, as small as possible?I'm not a coder, but I did use Emacs daily around 2010-2012, with brief returns later. I always gave up eventually because the complexity of addons, the org-mode-can-do-everything-so-I-should-do-everything-with-it etc just grew over my head. I've discovered that I like Plan9 Sam, Acme and, in general, the one-thing-well camp better. Each their own, I guess.That said, I did often like how \"immersive\" using Emacs can actually be at times. I'm a trained journalist, and it made managing bits of information, including PDFs etc, really streamlined, almost like a wonder. And, I had my own little OS on a USB stick that way (though the minimalist in me always whined that \"an editor\" should not weigh 100+ megabytes).Incredible that it has been around for 50 years, with no signs whatsoever of being a \"paradigm of the past\"."
         ]
       }
     },
     {
-      "id": "50261352",
-      "title": "New 14‑inch MacBook Pro with M6",
-      "url": "https://www.apple.com/in/newsroom/2026/10/apple-introduces-the-new-14-inch-macbook-pro-with-m6/",
+      "id": "50274409",
+      "title": "CNC Stone Carving",
+      "url": "https://carmelitegothic.com/cnc-stone-carving/",
       "source": "Hacker News",
-      "published_at": "2026-10-27T16:08:32+00:00",
-      "summary": "New 14‑inch MacBook Pro with M6",
-      "score": 324,
-      "comments": 415,
-      "discussion_url": "https://news.ycombinator.com/item?id=50261352",
+      "published_at": "2026-10-28T14:38:22+00:00",
+      "summary": "CNC Stone Carving",
+      "score": 417,
+      "comments": 122,
+      "discussion_url": "https://news.ycombinator.com/item?id=50274409",
       "extra": {
         "top_comments": [
-          "I'm currently on a marathon to keep my M1 Pro running until the M7 Pro/Max is available. Not sure if I'll make it, but I'm not eager to pay $6000+ for a decent spec dev computer, until I really have to",
-          "I have an M1 Air 13\" and M2 Air 15\", and M4 Air 14\" and and M4 Pro 14\" with nano texture.I love them all. The M4 Air 14\" is from work, so kinda limited in what I can do. The M4 14\" Pro is kinda chunky after the Airs. The M2 15\" is ideal except on a plane. The M1 13\" is great as a personal device on work travel. If only I could not work...",
-          "I have to say, I really dislike the thing where the base M(n+1) is always in the market alongside M(n) Pro/Max. I appreciate the underlying chips are probably quite distinct, but from a naming standpoint its confusing as hell."
+          "Before anyone complains that this removes the human aspect of art, it's worth stressing that sculptors have always looked for ways to automate work and save time (as the website itself points out).As far back as ancient Egypt, grids and measuring tools were used to reproduce figures at different scales. Roman workshops churned out copies of Greek statues in marble and bronze, using casts and moulds. From the 18th century onwards, sculptors used outright pointing machines to transfer models into marble. James Watt, the steam engine guy, even built a mechanical sculpture-copying machine that could (somewhat) automatically reproduce reliefs and medallions.Gothic architectural decoration wasn't about expressing the inner world of its makers in the way we think of art today. Much of it was produced by large masonry workshops using standardized geometry, wooden templates and repeated designs.So, yeah, using a CNC machine is truly Gothic.",
+          "Worth noting that the stonemasons of Sagrada Familia (the catholic basilica Barcelona) have been using CNC to carve it's stones since early 1990s. Most Barcelonians thought they would never see the temple finished in their lifetimes, myself included. Part of the progress that made its completion possible this year is thanks to this technology improving over time.EDIT: Actually, it’s a mix of CNC roughing to shape the stone, followed by manual finishing. According to the Sagrada Família’s website, this allows each stone to remain a unique piece of craftsmanship while significantly speeding up the process.",
+          "Wow, the monks are not messing around either, they built a full monastery with cathedral and all in gothic style! https://newmountcarmelfoundation.org/building-a-mountain-mon..."
         ]
       }
     },
     {
-      "id": "50258538",
-      "title": "New iMac with M6",
-      "url": "https://www.apple.com/imac/",
+      "id": "50275626",
+      "title": "Dayjob: Tax – evaluating AI agents on 50 professional tax assignments",
+      "url": "https://surgehq.ai/blog/dayjob-tax",
       "source": "Hacker News",
-      "published_at": "2026-10-27T13:02:02+00:00",
-      "summary": "New iMac with M6",
-      "score": 323,
-      "comments": 398,
-      "discussion_url": "https://news.ycombinator.com/item?id=50258538",
+      "published_at": "2026-10-28T15:46:30+00:00",
+      "summary": "Dayjob: Tax – evaluating AI agents on 50 professional tax assignments",
+      "score": 211,
+      "comments": 130,
+      "discussion_url": "https://news.ycombinator.com/item?id=50275626",
       "extra": {
         "top_comments": [
-          "I've bought several iMacs (2008, 2012, 2014, 2020) Anyway, it is frustrating once they aren't supported anymore. I think they are overbuilt, they are built to last forever but designed to be obsolete in 7 years. ChromeFlex has saved a few from recycling at our house (A chromebook with a retina display seems like such a waste)I suggest spending a bit more and getting a mac mini and a studio display instead (Equally well built but can be used almost forever). If you could only (easily) use them as monitors once they went out of support...",
-          "I don't understand why someone would buy this. It's $1700 for the same computer as a $900 Mac mini. The antiquated 24\" monitor, keyboard, and mouse are not worth the extra $800. You can buy a very nice 32\" monitor and better input devices for less than that.",
-          "I wish they would make big displays again. Like 32” big 6K.24” or even 27” feels like such a downgrade.Also please make the iMacs usable as external monitors agains. Would buy one as a “livingroom computer” instantly if it was also possible to occasionally use it as a docking station for an air.."
+          "I prepared my taxes this year using Astra + Codex. It did a thorough job on a complicated return, and I sent it to my accountant to fill out the tax form, with everything laid out in a spreadsheet. They sent it back for final review, and I had Codex check it; it was riddled with errors. The refund was nearly $2k lower than it should have been, and they put a bunch of stuff into the wrong fields. Had to go back and forth multiple times to get it 100% correct. Made me wonder how many previous years' returns were wrong.I feel like we're going to get to a point where it's mandatory to use AI for certain tasks - humans just can't be trusted to get things right that require a level of precision.",
+          "As a proof-of-concept, I've been using extra tokens to formalize the IRS tax forms and worksheets, mostly just to prove this can be done. The idea is that something like this could be adapted into a publicly maintained version of the IRS Direct File program (RIP). I'm up to an estimated 60% coverage of US federal tax situations so far.https://github.com/emmilco/us-tax-model",
+          "I have a non-trivial tax situation, as a US citizen living abroad. I prepare my own tax returns, never having found a cross-border tax preparer I trust, and have for the past few years, fed my draft return along with all the supporting paperwork into Claude. It has:1. found errors, e.g. where I used the incorrect exchange rate (and managed to work out how I had made that error, which I was impressed by)2. found items which would appear to be errors except for context it did not know3. flagged areas where it disagreed with me as to the correct tax treatment, but accepted that the law is ambiguous (and in some cases I preferred its interpretation after additional research and in other cases I did not)4. flagged areas where it disagreed with IRS guidance, and only acknowledged said guidance after I provided links to it5. provided highly inaccurate estimated tax calculations, and not been able to fix its estimates even when challengedSo my takeaway is that it is a very useful tool for tax, but perhaps unsurprisingly, it is not good enough to dump all your paperwork into and expect a shiny return you don't need to check. (Possibly it is if you just have a W-2 and no other substantial income, but I can't speak for that scenario.)"
         ]
       }
     },
     {
-      "id": "50264853",
-      "title": "Survival LLM: AI assistant and emergency library that runs on your own computer",
-      "url": "https://www.brangus.io/survival-llm",
+      "id": "50274251",
+      "title": "AlpineBSD",
+      "url": "https://wiki.alpinebsd.org",
       "source": "Hacker News",
-      "published_at": "2026-10-27T19:55:06+00:00",
-      "summary": "Survival LLM: AI assistant and emergency library that runs on your own computer",
-      "score": 273,
-      "comments": 121,
-      "discussion_url": "https://news.ycombinator.com/item?id=50264853",
+      "published_at": "2026-10-28T14:30:26+00:00",
+      "summary": "AlpineBSD",
+      "score": 182,
+      "comments": 169,
+      "discussion_url": "https://news.ycombinator.com/item?id=50274251",
       "extra": {
         "top_comments": [
-          "This topic is bringing out the hallucination-panic crowd.It's perfectly safe to use LLMs to surface underlying data and knowledge without having to trust that it's giving you correct advice.Use the LLM as search technology: string match -> semantic search -> search intelligence.This is especially helpful when you don't know the right question to ask. Semantics only help you find text that is semantically near the input query. Semantics won't help you when what you are looking for is connected to what you have by something other than semantics, like causation, mechanism, or interpretation.Trying to figure out why your crops aren't growing well will likely require you to read several articles across a range of sciences, probably scoped to the specific conditions you are dealing with. A semantic search is not going to surface those first.Allowing an LLM to chain together several sources for you to read first does not require you to ask it for a conclusion.",
-          "Shoutout to project nomad.https://www.projectnomad.us/its got a ton of useful options, preconfigured, integrates pretty easily, and can use any local LLM or data.",
-          "I set this up on my machine and tested it with the following question:How can I build a bow drill so I can start a fire?It got it partially right: spindle, bow with string tied the correct way, and fire board. But then it flubbed by saying you put the spindle between both hands and move your hands back and forth to rotate the spindle and create the necessary friction… this totally ignores using the bow to rotate the spindle! It also mentioned “fanning the sparks” but there is absolutely no way your bow drill is going to create sparks.I asked a frontier model to check the survival LLM’s conversation trace and it pointed out the errors.I didn’t see obvious errors in the other 3 prompts I used, but this one seemed pretty egregious for a survival LLM.I thank the creator for making this, but take it with a grain of salt."
+          "Interesting to watch the rapid fragmentation of FOSS into “hard” anti-AI, AI-neutral-to-discouraged, AI-supplemented, and AI-driven camps, akin to the early GPL vs BSD wars. Suddenly I don’t see as many complaints about licensing, and some of the die-hard GPL stans are silently dropping that position as Linux adopts AI-supplemented development.On one hand it’s unfortunate, because it hypothetically dilutes developer efforts, but on the other hand the most extreme groups already had incompatible personalities and weren’t working well together. This self-sorting may actually result in a better cadence and less energy wasted on arguing.The downside is that a lot of loud and annoying people seem to be converging on BSD land. I am AI-nonaligned (I just care about Quality) but I’m very much in favor of OpenBSD’s heads-down focused dev culture. I hope that doesn’t change.",
+          "These types of projects tend to have a flash of appeal, especially to people used to Linux, because it lessens one degree of unfamiliarity, but they don't seem to stick around for to me obvious reasons.It's hard to get involved with something like a BSD project because you have to learn a lot and put in enough effort to get committer rights. And then if you want to move the needle you have to do even more work and build consensus without getting overly emotional when people disagree with you. But it is the path I would recommend to have a lasting impact, and I am speaking from experience as a FreeBSD and NetBSD src committer.Also, pkgsrc is one of the strong points of NetBSD, coupled with pbulk and pkgin. Wrapping that all up in an opinionated installation (like Omarchy recently did to Arch) would be a more survivable effort. But as my friend Larry McVoy would say, it means you don't always get to drive the big red fire truck by yourself.",
+          "I'm sure we'll make a fuss about this today, but we won't hear about this project again for at least 10 years."
         ]
       }
     },
     {
-      "id": "50264857",
-      "title": "Tailscale SSH: Investigation and remediation update",
-      "url": "https://tailscale.com/ssh-investigation-update",
+      "id": "50282838",
+      "title": "Qwenputer: A functioning, deterministic RISC-V CPU inside Qwen3.5",
+      "url": "https://divagr.com/blog/qwenputer",
       "source": "Hacker News",
-      "published_at": "2026-10-27T19:55:21+00:00",
-      "summary": "Tailscale SSH: Investigation and remediation update",
-      "score": 250,
-      "comments": 126,
-      "discussion_url": "https://news.ycombinator.com/item?id=50264857",
+      "published_at": "2026-10-29T00:25:45+00:00",
+      "summary": "Qwenputer: A functioning, deterministic RISC-V CPU inside Qwen3.5",
+      "score": 136,
+      "comments": 32,
+      "discussion_url": "https://news.ycombinator.com/item?id=50282838",
       "extra": {
         "top_comments": [
-          "Former tailscalar here and now someone managing tailscale at an org.Having done my own review of the vulns and the fixes as they are landing in github, its pretty clear to me that this only affects situations where you use ACLs to permit ssh into a node (via tailscale ssh, not via opensshd), but dont give a path to sudoers/root.If a user had no SSH access and/or connectivity to a vulnerable node, none of these vulns give them access.However, if you have a vulnerable tailscaled and you give ssh access as some non-root account/privs, then yes, these vulns are relevant as theres now known privilege escalations that give access beyond some specific user account.Not trying to play down the vuln (its important), but its not a free-for-all RCE that some ppl are acting like it is.",
-          "I am fairly glad I have stuck with stock OpenSSH that ships with Linux. This incident proves I am glad with that choice.Over the decades, I have maintained remote access through port forwarding on my router - at one point in 2008 I put SSH on port 80 so I could access it from the restricted wifi network at the hospital my grandmother was at. I have also used openvpn. I have also used cloudflare tunnels. But in the end, I always connect to hardened openssh with key only authentication.",
-          "Somehow I don't think it's a good idea to let Tailscale handle service authentication at all. It's supposed to be an additional security layer around existing infrastructure and services.Letting Tailscale handle VPN and SSH at the same time is basically once again a single point of failure. Similar to exposing SSH directly to the internet."
+          "i wonder if you could implement \"authenticated token authorship\" and self-verified running with this. the model verifies an input as signed by an authorized requester, and signs its own outputs. eventually it also authenticates its own running via e.g. snarks? :) there's lots of meta available with these toys..",
+          "This is cool but it'd be way more useful if they had made a GPU, seeing as how expensive those have gotten",
+          "This is fun and games, but wait until an agents finds this and does the most misaligned thing with it in order to fold paper clips.> Because a CPU inside a language model clearly wasn't cursed enough, I decided the prudent thing would be to give it a filesystem too.Love the spirit :)"
         ]
       }
     }
