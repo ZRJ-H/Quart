@@ -42,15 +42,28 @@ class DigestSummary:
     mode: str
 
 
+@dataclass(frozen=True, slots=True)
+class EvidenceViolation:
+    """Content-free location; indexes are zero-based in collected input order."""
+
+    scope: str
+    index: int
+    field: str
+    rule_id: str
+
+
 class EvidenceBoundaryError(ValueError):
     """A structurally valid answer overstates what incomplete evidence can prove."""
 
-    def __init__(self, safe_digest: DigestSummary) -> None:
+    def __init__(
+        self, safe_digest: DigestSummary, violations: tuple[EvidenceViolation, ...] = ()
+    ) -> None:
         super().__init__(
             "Do not infer source omissions or judicial outcomes from incomplete "
             "evidence or community commentary; retain attribution and omit unsupported claims"
         )
         self.safe_digest = safe_digest
+        self.violations = violations
 
 
 def _unsupported_disclosure_claim(text: str, evidence: str) -> bool:
@@ -144,35 +157,49 @@ def _enforce_evidence_boundary(
     fallback = _fallback(category, articles)
     safe_items = []
     changed = False
+    violations: list[EvidenceViolation] = []
     for article, item, replacement in zip(articles, digest.items, fallback.items):
         evidence = article.title + "\n" + article.summary
-        unsafe = any(
-            _unsupported_disclosure_claim(str(value), evidence)
-            for name, value in asdict(item).items() if name not in ("index", "is_source_excerpt")
-        )
-        if category == "Hacker News":
-            unsafe |= any(
-                _unsupported_hn_judicial_outcome(str(value), article)
-                for name, value in asdict(item).items()
-                if name not in ("index", "discussion_focus", "is_source_excerpt")
-            )
+        item_violations = []
+        for name, value in asdict(item).items():
+            if name in ("index", "is_source_excerpt"):
+                continue
+            if _unsupported_disclosure_claim(str(value), evidence):
+                item_violations.append(EvidenceViolation(
+                    "item", item.index, name, "unsupported_disclosure_claim",
+                ))
+            if (category == "Hacker News" and name != "discussion_focus"
+                    and _unsupported_hn_judicial_outcome(str(value), article)):
+                item_violations.append(EvidenceViolation(
+                    "item", item.index, name, "unsupported_hn_judicial_outcome",
+                ))
+        violations.extend(item_violations)
+        unsafe = bool(item_violations)
         safe_items.append(replacement if unsafe else item)
         changed |= unsafe
     safe_trends = []
     # Trends have no item provenance, so do not borrow a different source's
     # negative statement as support.
-    for trend, replacement in zip(digest.trends, fallback.trends):
-        unsafe = any(_unsupported_disclosure_claim(value, "") for value in (trend.fact, trend.inference))
-        if category == "Hacker News":
-            unsafe |= any(
-                _unsupported_hn_judicial_outcome(value, None)
-                for value in (trend.fact, trend.inference)
-            )
+    for index, (trend, replacement) in enumerate(zip(digest.trends, fallback.trends)):
+        trend_violations = []
+        for name in ("fact", "inference"):
+            value = getattr(trend, name)
+            if _unsupported_disclosure_claim(value, ""):
+                trend_violations.append(EvidenceViolation(
+                    "trend", index, name, "unsupported_disclosure_claim",
+                ))
+            if category == "Hacker News" and _unsupported_hn_judicial_outcome(value, None):
+                trend_violations.append(EvidenceViolation(
+                    "trend", index, name, "unsupported_hn_judicial_outcome",
+                ))
+        violations.extend(trend_violations)
+        unsafe = bool(trend_violations)
         safe_trends.append(replacement if unsafe else trend)
         changed |= unsafe
     if changed:
         raise EvidenceBoundaryError(
-            DigestSummary(tuple(safe_items), tuple(safe_trends), "model-with-evidence-fallback")
+            DigestSummary(tuple(safe_items), tuple(safe_trends), "model-with-evidence-fallback"),
+            tuple(violations),
         )
     return digest
 
@@ -327,6 +354,33 @@ def _parse_content(content: str, category: str, articles: list[Article]) -> Dige
     return _enforce_evidence_boundary(DigestSummary(tuple(items), trends, "model"), category, articles)
 
 
+def _evidence_repair_guidance(error: ValueError) -> str:
+    if not isinstance(error, EvidenceBoundaryError) or not error.violations:
+        return ""
+    # Only parser-owned locations and fixed rules, never source/model text,
+    # become repair instructions. Keep the original evidence in the user prompt.
+    locations = json.dumps([asdict(value) for value in error.violations], ensure_ascii=True)
+    rules = {value.rule_id for value in error.violations}
+    guidance = (
+        "\n证据校验定位（index 为输入顺序的零基序号，scope 区分 item/trend）："
+        + locations + "。"
+        "逐一修正这些字段，不改动其他有证据支持的事实。可选字段没有受支持的内容时返回空字符串；"
+        "title_zh、summary 和 trend.fact 不能为空，应仅用原始证据支持的事实重写为中文，"
+        "来源只有标题时只概括标题，不用英文原文代替中文修正。"
+    )
+    if "unsupported_disclosure_claim" in rules:
+        guidance += (
+            "unsupported_disclosure_claim：不要把采集材料缺失当作原文或官方没有披露；"
+            "删除无依据的缺失断言，确有必要时只限定本次采集材料，不延伸到完整原文。"
+        )
+    if "unsupported_hn_judicial_outcome" in rules:
+        guidance += (
+            "unsupported_hn_judicial_outcome：不能用社区评论、比喻、否定或假设推导已发生的法院结果；"
+            "删除无依据的裁判结论，仅保留来源支持的事件；社区观点只放在 discussion_focus 并注明归因。"
+        )
+    return guidance
+
+
 def summarize(
     category: str,
     articles: list[Article],
@@ -367,12 +421,24 @@ def summarize(
                 try:
                     return _parse_content(content, category, articles)
                 except ValueError as parse_error:
+                    if isinstance(parse_error, EvidenceBoundaryError):
+                        # Never include response/evidence text, IDs, URLs or credentials.
+                        # Injected test requests are distinct from the default HTTP path;
+                        # this labels transport, not a claim that HTTP implies production.
+                        print(json.dumps({
+                            "event": "summary_evidence_boundary",
+                            "schema_version": 1,
+                            "category": category if category in (
+                                "AI科技动态", "时政要闻", "AI论文日报", "Hacker News"
+                            ) else "unknown",
+                            "model": model,
+                            "request_mode": "default_http" if request is _post_json else "injected",
+                            "attempt": attempt + 1,
+                            "action": "fallback" if attempt == 2 else "retry",
+                            "violations": [asdict(value) for value in parse_error.violations],
+                        }, ensure_ascii=True, sort_keys=True))
                     if attempt == 2:
                         if isinstance(parse_error, EvidenceBoundaryError):
-                            print(
-                                f"Summary evidence boundary fallback for {category}: "
-                                "unsafe items or observations replaced with collected source excerpts"
-                            )
                             return parse_error.safe_digest
                         raise
                     messages = [
@@ -386,6 +452,7 @@ def summarize(
                                 "只修正校验指出的问题。信息已经完整时无需扩写；"
                                 "不要为凑字数添加免责声明、泛化影响或无依据的背景。"
                                 "所有句子必须写完整，禁止使用‘…’或‘...’省略内容。"
+                                + _evidence_repair_guidance(parse_error)
                             ),
                         },
                     ]
