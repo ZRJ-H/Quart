@@ -283,3 +283,12 @@
 - **验证**：禁 socket 的 Python 全量 102/102；真实 10/30 来源快照 + 明确模拟响应的新增 4 项回归（修复前 3 项失败，修复后全部通过）；336 组旧版/候选对照，返回与 fallback 一致，除有意新增指引外请求、provider、调用数和预算一致。`compileall`、`git diff --check` 通过。Node 152/152（`node --import tsx --test`，先本地生成被忽略的 wiki 索引）；Quartz 完整构建成功（509 Markdown，102 emitted files，既有 KaTeX Unicode 警告）。原 `npm test` 的 tsx CLI 被沙箱拒绝 IPC，未报作通过；改用不创建 CLI IPC 的 Node 测试入口，未放宽沙箱。依赖通过 `npm ci --ignore-scripts --cache /tmp/quart-npm-cache` 安装。
 - **发布影响**：未改工作流、缓存 schema、文章、PR2 远端分支或生产配置；同指纹旧页继续复用，因此不声称已恢复今日中文。合并脚本路径会命中现有采集/部署工作流，可能发生正常模型费用；上线后必须观察自然采集的结构化日志及实际中文页面，不能用离线模拟替代线上验收。
 - **回退及待办**：本次仅本地准备，未推送/创建 PR/合并/部署/真实采集/调用模型。待本次独审和用户提交合并确认；优先与既有 PR2 协调，不创建重复 PR。回退为撤销本候选源码与测试改动（恢复 `fe443b1` 对应文件），保留内容与缓存不动；远端回退也需授权。诊断日志会由旧自由文本变为 JSON，外部日志消费者如有依赖须更新。
+
+### [2026-10-30] 日报直连模型升级至 Flash（本地候选，未发布）
+
+- **用户选择**：V4 Pro 与 V4.1 中选更便宜者。官方价格页当前将 `deepseek-flash` 映射至 DeepSeek-V4.1-Flash-1017；Flash 的峰/非峰输入命中、输入未命中和输出单价均低于 V4 Pro。证据：https://api-docs.deepseek.com/quick_start/pricing/ （2026-10-30 核验）。这是当前别名映射，不是固定版本永久保证；GO 代理价格不能按直连价格推断。
+- **范围**：基于 PR #9 远端 `75fe3e0`，仅将四类日报和 Trending 简介的 DeepSeek 直连型号改为 `deepseek-flash`，显式 `thinking: {type: disabled}`，Trending 直连补 `response_format: {type: json_object}`。四日报原 JSON 契约不变。官方默认思考开启，直接 HTTP 请求使用顶层 thinking 字段：https://api-docs.deepseek.com/guides/thinking_mode/ 。
+- **不变约束**：不改端点、供应商顺序、密钥、workflow、事实 validator、重试指引、请求次数或输出上限（四日报每 provider 至多 3 次、9000 tokens；Trending 单次、3000 tokens）。无缓存 schema 失效或手动重生成；已有同指纹旧页继续复用。
+- **GO 边界**：保留原 `deepseek-v4-pro` 请求，不向 GO 注入未经确认的 thinking 或新 JSON 参数。Python 直连失败后或无直连密钥时仍可能用 GO Pro；Trending 仅无直连密钥时选择 GO，不在直连失败后切换。因此仅主路径选较便宜 Flash，不承诺备用成本更低或全流程只用 Flash。
+- **验证**：禁 socket 的 Python 107/107；Node 155/155（VM 内存文件与 fetch 桩，无真实模型/网络）；覆盖四日报的 Flash 请求契约、GO-only、direct 失败后原 GO、证据拒绝三次后原 fallback、provider 用尽和无密钥；Trending 覆盖 Flash/GO 原契约、空/截断 JSON 原 fallback及单次上限。Quartz完整构建通过（509 Markdown、102输出文件，既有 KaTeX Unicode警告）；compileall、Node语法检查及 git diff --check 通过。测试仅证明离线契约与回归，不宣称真实付费接口或中文质量已验收。
+- **上线影响与待办**：未调用模型、未改远端、未合并或部署。待独审后取得本次追加提交/合并确认，优先追加 PR #9。合并仍会触发现有采集和部署；有新来源且配置密钥时可能自动付费。回退仅撤销本次模型配置提交，保留 PR #9 证据诊断修复和既有文章/缓存不动。

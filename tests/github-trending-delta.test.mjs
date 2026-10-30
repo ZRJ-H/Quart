@@ -36,6 +36,8 @@ async function generate(
     date = "2026-10-14",
     files = new Map(),
     model = false,
+    go = false,
+    modelContent = null,
     modelAnalysis = "## 深度解读\n\n离线模型夹具。",
     descriptions = {},
   } = {},
@@ -66,18 +68,22 @@ async function generate(
         CONTENT_ROOT: root,
         TRENDING_JSON: "/fixture/input.json",
         DEEPSEEK_API_KEY: model ? "offline-fixture" : "",
-        GO_API_KEY: "",
+        GO_API_KEY: go ? "offline-go-fixture" : "",
       },
     },
     console: { log() {}, error() {} },
     fetch: async (url, request) => {
-      assert.equal(model, true, "Unexpected model request in offline fallback test")
+      assert.ok(model || go, "Unexpected model request in offline fallback test")
       requests.push({ url, body: JSON.parse(request.body) })
       return {
         ok: true,
         json: async () => ({
           choices: [
-            { message: { content: JSON.stringify({ descriptions, analysis: modelAnalysis }) } },
+            {
+              message: {
+                content: modelContent ?? JSON.stringify({ descriptions, analysis: modelAnalysis }),
+              },
+            },
           ],
         }),
       }
@@ -93,6 +99,47 @@ async function generate(
 function topSection(note) {
   return note.split("## 今日增长 TOP 5")[1].split("\n---")[0]
 }
+
+test("direct Trending uses Flash non-thinking JSON without increasing the output cap", async () => {
+  const result = await generate([repo("owner/repo", 100)], {
+    model: true,
+    go: true,
+    descriptions: { "owner/repo": "离线中文简介。" },
+  })
+  assert.equal(result.requests.length, 1)
+  const { url, body } = result.requests[0]
+  assert.equal(url, "https://api.deepseek.com/chat/completions")
+  assert.equal(body.model, "deepseek-flash")
+  assert.deepEqual(body.thinking, { type: "disabled" })
+  assert.deepEqual(body.response_format, { type: "json_object" })
+  assert.equal(body.max_tokens, 3000)
+  assert.match(result.note, /离线中文简介/)
+})
+
+test("GO-only Trending keeps its original Pro contract", async () => {
+  const result = await generate([repo("owner/repo", 100)], { go: true })
+  assert.equal(result.requests.length, 1)
+  const { url, body } = result.requests[0]
+  assert.equal(url, "https://opencode.ai/zen/go/v1/chat/completions")
+  assert.equal(body.model, "deepseek-v4-pro")
+  assert.equal(body.max_tokens, 3000)
+  assert.equal(Object.hasOwn(body, "thinking"), false)
+  assert.equal(Object.hasOwn(body, "response_format"), false)
+})
+
+test("empty or malformed Flash output preserves local fallback without another provider call", async () => {
+  for (const modelContent of ["", '{"descriptions":']) {
+    const result = await generate([repo("owner/repo", 100)], {
+      model: true,
+      go: true,
+      modelContent,
+    })
+    assert.equal(result.requests.length, 1)
+    assert.equal(result.requests[0].body.model, "deepseek-flash")
+    assert.match(result.note, /测试项目/)
+    assert.doesNotMatch(result.note, /undefined|NaN/)
+  }
+})
 
 test("first-seen stars are not a measured increment", async () => {
   const result = await generate([repo("morluto/rea", 215408)])

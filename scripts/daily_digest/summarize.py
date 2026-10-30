@@ -392,7 +392,7 @@ def summarize(
 ) -> DigestSummary:
     providers: list[tuple[str, str, str]] = []
     if api_key:
-        providers.append(("https://api.deepseek.com/chat/completions", api_key, "deepseek-chat"))
+        providers.append(("https://api.deepseek.com/chat/completions", api_key, "deepseek-flash"))
     if go_key:
         providers.append(("https://opencode.ai/zen/go/v1/chat/completions", go_key, "deepseek-v4-pro"))
     prompt = _prompt(category, articles)
@@ -404,6 +404,9 @@ def summarize(
                 "messages": [{"role": "user", "content": prompt}],
                 "response_format": {"type": "json_object"},
             }
+            if url == "https://api.deepseek.com/chat/completions":
+                # Direct Flash defaults to thinking; do not assume proxy support.
+                body["thinking"] = {"type": "disabled"}
             if model.startswith("openai/gpt-5"):
                 body["max_completion_tokens"] = 6000
             else:
