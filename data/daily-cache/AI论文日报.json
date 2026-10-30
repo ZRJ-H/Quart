@@ -1,48 +1,44 @@
 {
-  "cached_at": "2026-10-30T11:00:33.783600+08:00",
+  "cached_at": "2026-10-30T14:09:14.949076+08:00",
   "articles": [
     {
-      "id": "2610.38850",
-      "title": "Autonomous Quantum Measurement with Agentic AI",
-      "url": "https://arxiv.org/abs/2610.38850v1",
+      "id": "2610.40655",
+      "title": "Elucidating the Design Space of LM Data Attribution",
+      "url": "https://arxiv.org/abs/2610.40655v1",
       "source": "arXiv",
-      "published_at": "2026-10-28T20:33:06+00:00",
-      "summary": "Quantum materials exhibit diverse electronic and functional phenomena, but their characterization requires extensive experimental expertise, iterative decision-making and accumulated laboratory knowledge that is difficult to document and transfer. Here we introduce Quantum Agent (QUANTA), an agentic artificial intelligence (AI) framework for autonomous quantum-materials characterization. Using a widely adopted Physical Property Measurement System (PPMS) as an experimental platform, QUANTA combines retrieval augmentation using scientific literature, experimental protocols and prior measurements with specialized agents for experimental planning, troubleshooting, and data interpretation. A separate deterministic control layer validates instrument actions. Guided by incoming data, QUANTA evaluates measurement quality, revises experimental plans and selects subsequent measurements. We demonstrate these capabilities through transport measurements of the topological Weyl semimetal TaP, as well as investigations of nonlinear responses in magnetic material Co2MnGa. These results establish QUANTA as a generalizable framework for evidence-driven, safeguarded and closed-loop quantum-materials characterization.",
+      "published_at": "2026-10-29T17:59:53+00:00",
+      "summary": "Data attribution methods for Language Models (LMs) are typically evaluated using downstream tasks like fact retrieval. However, existing evaluations vary multiple dataset properties simultaneously, making it impossible to isolate exactly why an attribution algorithm fails. To diagnose these failures, we explore the design space of LLM data attribution, with a primary focus on evaluation. We introduce the Controlled Attribution Benchmark (CATT) for fact tracing, in which we fine-tune LLMs on entirely fictitious knowledge, providing unambiguous ground truth for attribution. This synthetic setup allows us to systematically alter one dataset configuration at a time, such as document redundancy and lexical distractors. With this configurable evaluation, we demonstrate that redundancy and distractors consistently degrade attribution performance. Rather than proposing a new estimator, we examine two design choices that are underexplored: the loss used to compute gradients and how per-token attribution scores are aggregated into a document score. We find that the true causal evidence within a training document is highly localized, but standard methods dilute this evidence into noise by averaging attribution scores across the entire document. We find that replacing standard cross-entropy loss gradients with the negative log-odds gradients surfaces the critical tokens from other uninformative ones. We can then aggregate only the top token scores to improve ground truth recall by 35 to 72 percentage points across multiple baselines on our diagnostic benchmark. The negative log-odds correction also generalizes to FTRACE-TREX, improving counterfactual retraining performance for every method we test, by up to 4.9x.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Eunbi Rha",
-          "Abhijatmedhi Chotrattanapituk",
-          "Mouyang Cheng",
-          "Chung-tao Chou",
-          "Shenyong Ye",
-          "Ashley S. Dale",
-          "Long Ju",
-          "Luqiao Liu",
-          "Mingda Li"
+          "Steven Yu",
+          "Sheng-Yu Wang",
+          "Kimia Hamidieh",
+          "Antonio Torralba",
+          "David Bau"
         ],
         "categories": [
-          "cond-mat.mtrl-sci",
-          "cs.AI"
+          "cs.CL"
         ]
       }
     },
     {
-      "id": "2610.38838",
-      "title": "Discovery of Diverse and Realistic Financial Tail-Risk Using Generative Flow Networks",
-      "url": "https://arxiv.org/abs/2610.38838v1",
+      "id": "2610.40654",
+      "title": "Propose-Filter-Release: Scaling Noise to Typical Sensitivity via Private Filtering",
+      "url": "https://arxiv.org/abs/2610.40654v1",
       "source": "arXiv",
-      "published_at": "2026-10-28T20:26:01+00:00",
-      "summary": "Accurate modeling of rare, high-impact financial events is essential for robust risk management. Sampling-based techniques such as Sequential Markov Chain Monte Carlo (SMCMC) generate diverse scenarios but inefficiently explore high-risk regions, while Deep Reinforcement Learning (DRL) converges on narrow sets of scenarios, limiting diversity. We present GRID, which uses Generative Flow Networks (GFlowNets) -- samplers that draw objects in proportion to a reward -- to systematically generate diverse and realistic financial tail-risk scenarios. Building on continuous GFlowNets, GRID introduces a flexible mixture-policy architecture with variable-specific distribution families for high-dimensional, sequential macro-financial data, together with plausibility constraints that keep generated trajectories realistic. A central practical advantage is robustness to reward-proxy imperfection: because GFlowNets sample proportionally rather than maximize, they remain broadly exploratory even when the oracle's out-of-sample accuracy is low -- an unavoidable reality in financial forecasting. On three real-world crises, GRID improves scenario diversity, realism, and tail-risk coverage over RL and MCMC baselines, and ablations over oracle architectures and distribution families yield practical insights into continuous GFlowNet behavior under noisy rewards.",
+      "published_at": "2026-10-29T17:59:49+00:00",
+      "summary": "An estimator can be accurate and stable on typical data, yet sensitive to a few possible records. Differentially private mechanisms commonly scale their noise to the worst-case influence of a single record, which lets these records dictate the noise even when the remaining data would allow far less. Removing them first would restore the smaller scale, but the removal must itself be private. We introduce \\emph{propose-filter-release} (PFR), which, by privately filtering its input, turns a mechanism that protects the addition or removal of a typical record, one that fits the remaining data, into one that is differentially private in the standard sense, on every input. Using our novel filtering step, PFR requires only a concave friendliness score, which measures how well a record fits a dataset, and a release mechanism that is friendly-DP, that is, private when the changed record fits the remaining data. For every such score and release mechanism, it guarantees differential privacy under public conditions on the number of records, so it is a general privacy primitive, comparable to propose-test-release, and FriendlyCore can be viewed as one of its implementations. We illustrate the generality of PFR by instantiating it for scalar statistics, principal subspace estimation, the KL divergence of user histograms, the effective resistances of a graph, and treatment-rule selection.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Adir Serruya",
-          "Gilad Katz"
+          "Moshe Shenfeld",
+          "Eliad Tsfadia",
+          "Katrina Ligett"
         ],
         "categories": [
           "cs.LG"
@@ -50,74 +46,74 @@
       }
     },
     {
-      "id": "2610.38835",
-      "title": "What to randomize matters: a controlled study of volume, axis and representation in low-data molecular generation",
-      "url": "https://arxiv.org/abs/2610.38835v1",
+      "id": "2610.40649",
+      "title": "Rethinking Neural Thickets Without Weight Perturbations",
+      "url": "https://arxiv.org/abs/2610.40649v1",
       "source": "arXiv",
-      "published_at": "2026-10-28T20:24:51+00:00",
-      "summary": "Chemical language models can struggle to generate new molecules when trained on small datasets, where a model may reproduce training examples rather than learn a useful generative distribution. Randomized SMILES augmentation varies atom traversal, whereas Sequential Attachment-based Fragment Embedding (SAFE) also allows the order of fragment blocks to vary. How these distinct sources of representational variation affect low-data molecular generation has not been clearly studied. Here, using 1,000 seed molecules to train an autoregressive sequence model, we compare canonical SAFE with randomized SAFE at increasing corpus sizes, isolate atom-order and fragment-order axes of SAFE randomization, and compare fully randomized SAFE with randomized SMILES at molecule-by-molecule matched training corpora. Three findings emerge. First, randomization of SAFE alone raises the genuine yield of novel molecules more than 450-fold, turning a model that merely reproduces its training set into a practical molecular generator. Second, the two axes of randomization act jointly rather than additively: atom order alone reaches a tenth, and fragment order alone a seventh, of the genuine yield obtained when both vary, which is four times their combined contribution. Third, at matched corpus size and compute, randomized SAFE delivers 2.8 times the genuine yield of randomized SMILES. Welch tests with Games-Howell post-hoc comparisons resolve every difference on the primary outcomes. In the low-data regime, thus, what one randomizes rather than only how much determines whether augmentation produces new molecules or merely new spellings of the training set.",
+      "published_at": "2026-10-29T17:59:29+00:00",
+      "summary": "The Neural Thickets hypothesis posits that pretrained language models lie in dense neighborhoods of task-specific experts in weight space, which random Gaussian perturbations can uncover. We reproduce the reported gains, but show that they do not require this geometric explanation. Perturbing a single decoder block already recovers much of the improvement, while keeping the model entirely frozen and adding a random bias to its output logits matches or exceeds full-weight perturbations on most reasoning tasks. This suggests an alternative explanation based on output diversity, validation-based selection, and voting. We formalize this view as Perturb-Select-Vote (PSV), a general procedure that generates perturbed predictors, selects high-performing members on a small validation set, and aggregates their predictions. This interpretation connects Neural Thickets to established inference-time methods, including sampling, self-consistency, and verifier-guided selection. A first-order analysis further shows that small weight perturbations act primarily through their induced logit shifts. We extend this analysis to vision, where logit PSV substantially improves performance under domain shift, including on Earth observation, while full-weight perturbations provide little additional benefit. Together, these results suggest that the gains attributed to nearby weight-space experts can instead be obtained through output diversity, selection, and voting. Logit PSV realizes these benefits with a fully frozen model, providing a simple, training-free alternative to full-weight perturbation ensembles across language and vision.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Neerav Kaushal",
-          "Alisa Teige",
-          "Ajay MNV Penmatsa"
+          "Nicolas Dufour",
+          "Elouan Gardès",
+          "Amil Dravid",
+          "Patrick Pérez",
+          "Loic Landrieu"
         ],
         "categories": [
           "cs.LG",
-          "cs.CE",
-          "cs.CL",
-          "q-bio.BM",
-          "q-bio.QM"
-        ]
-      }
-    },
-    {
-      "id": "2610.38833",
-      "title": "Discovering Jailbreaks via Curriculum of Models",
-      "url": "https://arxiv.org/abs/2610.38833v1",
-      "source": "arXiv",
-      "published_at": "2026-10-28T20:23:32+00:00",
-      "summary": "Automated jailbreak discovery aims to find prompts that elicit prohibited behaviors from safety-trained language models, helping developers identify vulnerabilities before deployment. One class of approaches uses reinforcement learning to train an investigator model to generate prompts that elicit a specified behavior from a target model. However, training directly against a safety-trained target is difficult because nearly all prompts are refused, leaving the investigator with a sparse reward signal. Prior work addresses this with the propensity bound (PRBO), a proxy reward estimated by sampling responses from a more compliant target, and then adjusting for how likely those responses would have been under the original target. We introduce Curriculum of Models (CoM), an alternative method that trains the investigator against a sequence of modified versions of the target, progressing gradually from a version that readily exhibits the specified behavior to the original target. For jailbreak discovery, training begins against a target version that rarely refuses harmful requests, and advances to the next, harder version once the investigator reliably elicits the behavior from the current one. We evaluate CoM on elicitation tasks involving CBRN materials, explosives, and illicit drugs, using two open-weight targets, gemma-4-31b-it and gpt-oss-120b. We compare against PRBO and direct training on the original target without a curriculum. When the investigator is trained to elicit a single behavior, CoM finds successful jailbreaks more reliably than either baseline. When trained on multiple behaviors simultaneously, the CoM-trained investigator can elicit held-out behaviors, though PRBO-trained investigators achieve higher success rates. Our results suggest that a simple curriculum over target models offers a promising approach for addressing sparse rewards in rare-behavior elicitation.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Michał Burzyński",
-          "Noah T. Rossi",
-          "Shomit Basu",
-          "Andy Arditi"
-        ],
-        "categories": [
-          "cs.LG",
-          "cs.AI"
-        ]
-      }
-    },
-    {
-      "id": "2610.38825",
-      "title": "Evaluating Visual Realism of AI-Generated Videos with Eye Tracking",
-      "url": "https://arxiv.org/abs/2610.38825v1",
-      "source": "arXiv",
-      "published_at": "2026-10-28T20:20:43+00:00",
-      "summary": "Human evaluation of AI-generated videos has so far relied on explicit human feedback, such as judgments or ratings. While these signals capture the conclusions viewers reach, they fail to offer insights into the perception that leads to them. This paper investigates eye tracking as a complementary human evaluation signal for AI-generated videos. We conducted two Visual Turing Test (VTT) experiments with a total of 90 participants on videos generated by latest generative models, in which participants watched each video twice and then gave their feedback. Across the experiments, we collected 4,286 valid eye-tracking trials on 438 videos. Our analysis indicates that gaze patterns offer informative evaluation signals that align with explicit human feedback. Building on the findings, we propose the first computational method GazeEval to predict the perceived visual realism of AI-generated videos from eye-tracking data. It achieves 71.3% accuracy in prediction, providing evidence that eye tracking data carries informative signals about how people evaluate a video. We release the study data to support further research on eye tracking for evaluating AI-generated video.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Danqing Shi",
-          "Lan Jiang",
-          "Jake Lyons",
-          "Miri Zilka"
-        ],
-        "categories": [
-          "cs.HC",
           "cs.AI",
           "cs.CV"
+        ]
+      }
+    },
+    {
+      "id": "2610.40647",
+      "title": "Read, Allocate, Route: Role-Coupled Tokenization for Pixel-Space Generative Transformers",
+      "url": "https://arxiv.org/abs/2610.40647v1",
+      "source": "arXiv",
+      "published_at": "2026-10-29T17:59:21+00:00",
+      "summary": "Pixel-space generative Transformers typically use one token per image patch, so capturing finer detail requires more tokens and makes global attention increasingly expensive. We observe that finer detail does not necessarily require more global communication: low-frequency structure benefits from global exchange, while high-frequency detail can be modeled locally. Based on this insight, we introduce SpecSlot, a pixel-space rectified-flow Transformer that decouples output detail from the length of the global attention sequence. SpecSlot expands each spatial anchor into multiple slots, each assigned a disjoint band of DCT coefficients; this separates anchor density from spectral subdivision. Only the lowest-frequency slot from each anchor participates in global attention, while all slots interact locally. This allows the model to increase spectral detail without enlarging the global sequence. A spatial head further adds a local correction to the spectral prediction, while the generative state, target, and loss remain in pixel space. On ImageNet-256, SpecSlot achieves a comparable final FID to a FLOPs-matched JiT control while converging faster. On ImageNet-512, it improves FID by 2.84 over the control with 3.9% fewer FLOPs, and comes within only 0.69 FID of JiT-B/16 at 38.2% lower cost. On text-to-image generation, SpecSlot surpasses JiT-B/8 on DPG-Bench by 1.06 at 40.6% lower forward cost.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Jiongfan Yang",
+          "Weichen Fan",
+          "Haiwen Diao",
+          "Zhongang Cai",
+          "Ziwei Liu"
+        ],
+        "categories": [
+          "cs.CV",
+          "cs.AI",
+          "cs.LG",
+          "cs.NE"
+        ]
+      }
+    },
+    {
+      "id": "2610.40644",
+      "title": "Adaptive Scenario Generation for KL-DRO Around a Learned Density Model",
+      "url": "https://arxiv.org/abs/2610.40644v1",
+      "source": "arXiv",
+      "published_at": "2026-10-29T17:59:01+00:00",
+      "summary": "Distributionally robust optimization (DRO) hedges data-driven two-stage stochastic programs against error in the distribution estimated from a finite record, and standard ambiguity sets differ in how they treat realizations absent from that record. A divergence ball around the empirical distribution contains only reweightings of the record, whereas a transport ball also contains distributions supported off the record, including on realizations the data-generating process cannot produce, against which the decision is then hedged as well. We instead propose a Kullback-Leibler (KL) ball centered at a density model fitted to the record, the learned nominal, which lets the adversary up-weight costly unobserved realizations in proportion to the probability the model assigns them. Solving the resulting problem poses a second difficulty, because it can accommodate only a few scenarios, and an independent sample of that size is likely to omit the rare realizations on which the worst case concentrates. We therefore build the scenario set adaptively, alternating between solving the finite problem and drawing new realizations from the learned nominal, steered toward the worst case at the current decision, with importance weights that correct the draws back to the model. On a multi-item newsvendor problem and a capacity expansion problem on realistic grid data, centering the ball at the learned nominal rather than at the record lowers cost under distribution shift, at comparable in-distribution cost, when the record is scarce and the model class captures structure that lets it extrapolate beyond the record. The advantage fades as the record grows or as the shift departs from the structure the model has learned.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Aron Brenner",
+          "Saurabh Amin"
+        ],
+        "categories": [
+          "eess.SY",
+          "cs.LG"
         ]
       }
     }
