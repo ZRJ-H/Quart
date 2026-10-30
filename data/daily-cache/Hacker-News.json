@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-10-29T14:09:00.372162+08:00",
+  "cached_at": "2026-10-30T11:00:33.783600+08:00",
   "articles": [
     {
-      "id": "50271640",
-      "title": "Apple's git still trusts the compromised eMudhra certificates",
-      "url": "https://emudhra.we-have-a-problem.com/apple.html",
+      "id": "50294702",
+      "title": "Patrick Stewart has died",
+      "url": "https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html",
       "source": "Hacker News",
-      "published_at": "2026-10-28T11:03:40+00:00",
-      "summary": "Apple's git still trusts the compromised eMudhra certificates",
-      "score": 1092,
-      "comments": 385,
-      "discussion_url": "https://news.ycombinator.com/item?id=50271640",
+      "published_at": "2026-10-29T19:41:39+00:00",
+      "summary": "https://archive.ph/y4Egmhttps://en.wikipedia.org/wiki/Patrick_Stewart",
+      "score": 2498,
+      "comments": 533,
+      "discussion_url": "https://news.ycombinator.com/item?id=50294702",
       "extra": {
         "top_comments": [
-          "Right, so it's not just git, it's a bunch of system-provided utilities; macOS trusts bad certs, and these utils that trust the OS are affected. I use homebrew for my git and curl but haven't yet checked to confirm whether that matters here. Kind of outrageous that Apple's guidance is to edit the cert chain manually, and to expect that subsequent OS updates may revert your mitigation, reintroducing the vulnerability (as happened at least once so far).",
-          "That MacOS hasn't removed from OS-level /etc/ssl seems like a big deal, affecting more than just OS-supplied git. Is /etc/certs not used by most graphical Mac software, I guess? The chaotic state of OS-level cert management, on Linux as well, is pretty dismaying.If Apple is still trying to brand themselves as security-forward, you'd think removing the revoked CA certs from /etc in a system update would be a pretty easy thing to do?",
-          "Here's what apple (themselves) recommends to patch: https://support.apple.com/en-us/149555Pretty much every developer on mac should probably run their patch."
+          "Watching him in Star Trek TNG made me reevaluate how management of people should be done, his character was assertive but compassionate. High morals coupled with grounded reason.I also want to mention his hilarious role as bullock in American dad, the way he takes a role both so seriously and ridiculously makes him so fantastically hilarious.I love him and will miss him.",
+          "One thing that doesn't get enough attention - when COVID lockdowns started, he just made reels reading Shakespeare's sonnets. It was such a lovely break from everything else on social media. Really loved those.",
+          "\"It is possible to commit no mistakes and still lose. That is not a weakness, that is life.\" - Jean-Luc PicardGood startup advice. Good life advice."
         ]
       }
     },
     {
-      "id": "50276998",
-      "title": "Why is this fingerprinting script creating bioweapons?",
-      "url": "https://nullpt.rs/fingerprinting-bioweapons",
+      "id": "50296470",
+      "title": "Binance-hacker-1029 – $5.6B stolen from Binance",
+      "url": "https://arkm.com/explorer/entity/21a94755-f604-45e5-9501-6542e23005e8",
       "source": "Hacker News",
-      "published_at": "2026-10-28T17:13:29+00:00",
-      "summary": "Why is this fingerprinting script creating bioweapons?",
-      "score": 1018,
-      "comments": 207,
-      "discussion_url": "https://news.ycombinator.com/item?id=50276998",
+      "published_at": "2026-10-29T21:38:59+00:00",
+      "summary": "Binance-hacker-1029 – $5.6B stolen from Binance",
+      "score": 816,
+      "comments": 484,
+      "discussion_url": "https://news.ycombinator.com/item?id=50296470",
       "extra": {
         "top_comments": [
-          "> Out of curiosity, I tried GLM-5.3 with the same prompt and it complied!I am noticing a trend here.Didn't HF say the same thing, when they got hacked, the only LLM that would assist with defense was GLM?> When we started the log analysis, we first used frontier models behind commercial APIs. This did not work: the analysis requires submitting large volumes of real attack commands, exploit payloads, and C2 artifacts, and these requests were blocked by the providers' safety guardrails, which cannot distinguish an incident responder from an attacker. We ran the forensic analysis instead on zai-org/GLM-5.2, an open-weight model, on our own infrastructure. This had a second benefit: no attacker data, and none of the credentials it referenced, left our environment.https://huggingface.co/blog/security-incident-july-2026",
-          "Nice sleuthing!We do a similar thing to mark documents that are still under embargo and one day I forgot to remove the watermark. The customer complained they had not received the document (a day or two after I sent it), and much searching was done. Finally we found a line in an outlook log on their end that said that the watermark was the reason the file had been put in indefinite quarantine until someone would take a look at it.That's when I realized my error, and of course it was soon fixed afterwards. It is the first proof that it worked though, so I'm kind of happy about that.",
-          "Nice finds! This HN profile I looked at today by chance, also contains some anti-LLM incantations, albeit much less obfuscated. I wasn't aware Anthropic had such a magic string: https://news.ycombinator.com/user?id=jeroenhd"
+          "Their insurance fund (SAFU) is completely wiped out, it's only $1 billion in BTC: https://www.binance.com/en/academy/glossary/secure-asset-fun...The name of the fund was originally inspired by this meme: https://www.youtube.com/watch?v=DelF6zEHXpEFWIW, at the end of every crypto bear market, a CEX usually blows up (eg FTX)...",
+          "About $2.4 billion out of this is already frozen by Circle and Tether. Some of the big ones:- 971.15M USDT (Ethereum): https://etherscan.io/tx/0x7baba482077843514d9c72bac0110ba091...- 823M USDC (Ethereum): https://etherscan.io/tx/0xc954c86f118e8e410e6a3eb9e3b38ff4a9...- 312.73M USDT (Tron): https://tronscan.org/#/transaction/71b0ec0fe873fe820c37cc3ec...- 175M USDT (Ethereum): https://etherscan.io/tx/0x0c07a5e428ce233a3bcb40f257ad899594...",
+          "At least they are safe from governments and their \"fiat money\"!"
         ]
       }
     },
     {
-      "id": "50276792",
-      "title": "Gemini 4 Carbon",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+      "id": "50290177",
+      "title": "LLM Voice",
+      "url": "https://martinfowler.com/bliki/LLM-Voice.html",
       "source": "Hacker News",
-      "published_at": "2026-10-28T17:01:23+00:00",
-      "summary": "Gemini 4 Carbon",
-      "score": 870,
-      "comments": 716,
-      "discussion_url": "https://news.ycombinator.com/item?id=50276792",
+      "published_at": "2026-10-29T14:57:55+00:00",
+      "summary": "LLM Voice",
+      "score": 366,
+      "comments": 191,
+      "discussion_url": "https://news.ycombinator.com/item?id=50290177",
       "extra": {
         "top_comments": [
-          "At this point if a Google PM handed me $100 and said \"go figure out how to issue a prompt to Gemini 4 Argon\" I'm only ~30% sure I could figure out how. The Gemini app in my phone only has 3.8 Pro as the latest model; it does say \"Ultra\" in the bottom left, but I really don't think I'm on the Ultra plan. How I would sign up for that, on a Workspace account, is beyond our brightest minds.Its sad watching them try to keep up when they want nothing more than to crumble under the weight of their own bureaucracy, and at this point I'm not sure there's any hope for them.",
-          "It is pretty clear at this point that the frontier models need only handful of tiered models.1. Ultra - The best and the most expensive for showing off and government. 2. Pro - Almost best but substantially cheaper for most productive people. 3. Flash - Workhorse for everyone. 4. Lite - For the unwashed masses and peasants.There is no need to attach anything to these labels. In fact industry could simply standardize these namings like SEMVER.There could be an internal representation which could give specific number of the model but these companies should move on to be more like Chrome. No one knows or cares which version of chrome they are on.For a lot of systems the real underlying version would matter because of reliability. That can be provided to those power users.",
-          "Given how quickly the field is moving, showing benchmarks without releasing the model is quite meaningless. If they decide to release it in one month, there will probably be a stronger competition out there. And the benchmarks won't look as good."
+          "As someone who is aggressively pro AI, I've also noticed how awful everything is to read lately. It's always so hard to put my finger on the exact thing, but it's a mixture of everything sounding identical and everything being a rambling unconcise mess. I find I routinely start reading interesting posts and just .. stop part way, abandoning it. A site I read stories on has been flooded with AI generated content, all of it terrible, and it just makes me retreat to things created before 2023 as a way of filtering it all out.",
+          "> uncanny valley of proseAh good ol' serendipity. I strongly believe this too, and I think that's why older (less capable) models fared better: they hadn't fallen into the valley yet. Maybe it's not a valley at all, and is just a cliff after which there is uncanny.When the earliest models launched I was super-excited to no longer have to write pull request descriptions and commit messages. I have done a sharp 180 on that and I'm no longer a meat proxy[1]: instead I point out any redirects and improvements I made the agent do before opening the PR (which there are still _many_ in even the most trivial tasks).[1]: https://meatproxy.me/",
+          "I just can't seem to stay interested and read LLM text. It just seems to lack going somewhere, its information density is often really low and its full of odd isms that I don't find very interesting to read. I don't have a good radar for detecting the various LLM particular speech patterns but everytime I have an issue with an article there is always people talking about how its clearly AI written.I find the same thing with written results out of AI \"research\", it is a slog to read through it and most of it can be skipped even if it can sometimes be useful its an unenjoyable read."
         ]
       }
     },
     {
-      "id": "50276940",
-      "title": "MacBook Pro with PROLED XDR Display and Touch",
-      "url": "https://www.apple.com/macbook-pro/proled-xdr-display/",
+      "id": "50291054",
+      "title": "H.264 Is Magic (2016)",
+      "url": "https://sidbala.com/h-264-is-magic/",
       "source": "Hacker News",
-      "published_at": "2026-10-28T17:10:37+00:00",
-      "summary": "https://www.apple.com/newsroom/2026/10/apple-unveils-groundb...",
-      "score": 546,
-      "comments": 925,
-      "discussion_url": "https://news.ycombinator.com/item?id=50276940",
+      "published_at": "2026-10-29T15:53:03+00:00",
+      "summary": "H.264 Is Magic (2016)",
+      "score": 348,
+      "comments": 127,
+      "discussion_url": "https://news.ycombinator.com/item?id=50291054",
       "extra": {
         "top_comments": [
-          "Touch-screen Macs is kind of a terrible development for anyone who loves the Mac. It's not just a harmless feature that you can ignore if you don't want it, because it's customer-facing and will now generate complaints and bugs from people who do use it. Those people will complain (rightly) that macOS UI widgets are too small to accurately manipulate with your fingers (they are indeed too small) and don't make sense with a touch screen (they don't make sense).That means Apple will begin imposing all sorts of UI dreck on all of us, whether we want to use our screens as touch surfaces or not.This is basically what happened with Microsoft - Windows Vista and 7 were installed in plenty of laptops with touchscreens, and customers would complain about not being able to maximize windows without closing them, not being able to open menus without touching toolbar buttons, etc.Eventually Microsoft listened to them and we got Windows 8. Now this is the beginning of the same process for macOS.",
-          "Everyone's focused on the touchscreen, but I'm seriously impressed how they managed to cut down the weight.* For the 14-inch: 3.5 lb (1.59 kg) -> 3.0 lb (1.36 kg)* For the 16-inch: 4.7 lb (2.13 kg) -> 4.0 lb (1.81 kg)About 15% lighter on both models. Switching from LCD to OLED saves weight because the screen does not need a backlight and has fewer layers. They also made the laptop thinner by nearly 1 mm. But that's not enough to push the weight down by 300 grams. They must have redesigned internal components to cut weight as well.There must have been a dedicated effort to reduce weight. Kudos to the MacBook Pro team!",
-          "Oh wow, it’s like they’re trying less and less.When they introduced the Apple Pencil and people were like “haha it’s a stylus”, the thing was decidedly NOT a stylus (it actually couldn’t be used to control some parts of the UI). It was an actual digital pen, something that used to be specialized and expensive external hardware, and it worked beautifully with the iPad. It was literally “stylus but GOOD”. I saw it and thought “people will make memes about this, but Apple totally gets it”.When they introduced the Vision Pro, VR was just kind of shit. Bulky, ugly, uncool. Vision Pro tried to resolve some of the issues, but it was still kind of half-assed. Like they wanted to have a VR device but couldn’t actually make it work. Good resolution, but not great. Vergence-accomodation conflict not addressed. Still bulky and ugly. Isolation kind of addressed (with the AR-ish UX and the “see-through” display), but not enough.Now we got the foldable iPhone and a touchscreen MacBook.Foldable phones are still awfully delicate and the whole concept doesn’t have a clear “killer” use case. There’s no new UX, no new features, it’s just an iPad Mini in a marginally smaller device that’s expensive as hell. Apple didn’t even try to address the obvious shortcomings, they just built the same stupid thing everyone else is failing to sell.Touchscreen laptops still wobble, they still get covered with fingerprints, they’re still uncomfortable and there’s still no meaningful UX. This thing doesn’t even try to address any of that. Their marketing images literally just show hands hovering above the keyboard and touching the screen for no good reason. They’ve been mocking touchscreen laptops for years now and now they release one like it’s the most obvious thing ever. 1984 vibes."
+          "Had the pleasure of working with Jason Garrett-Glaser (better known as DarkShikari) circa 2011 on a patch for x264 to better utilize more cores (slice-threaded lookahead). At the time he was working with Sony to optimize their PlayStation game streaming service, and this had the potential to lower encoding latency (critical to game streaming) even on same-core systems by spreading the frame over more cores to do more parallel work, and doing more intelligent scheduling and convergence after that tile-based work was reconverged into a frame. At the time we were using servers with 48 physical cores to do transcoding, a bit of a rarity in a single NUMA space back then and there were no instances to test this on so I flamegraph traced a few encodes at very high thread parallel counts and send back the instrumented profiles (from a custom compiled version) showing the core work being done and he used that to optimize the motion estimation code which worked on the first shot to perfectly level out cpu usage and increase encoding speed across ~24 cores (was previously topping out around 8 and running one core hot iirc). I got a look into how exotic and complex this project was, particularly in terms how low level and advanced things like motion estimation, quantizing and perceptual compression were... it was and still is sort of magic how many smart techniques are baked into something that we barely pay attention to. They were, even at that time, working on x265.His blog, Diary of an x264 developer, was a great read too for anyone wanting to get a vantage point on how crazy that codebase was.[1]https://github.com/mstorsjo/x264/blob/master/doc/threads.txt(edit: was Gaikai that was acquired by Sony in 2012 and is the basis for PlayStation Now)",
+          "It is time to make a standard neural network for video, which guesses the next frame and/or applies super-resolution like DLSS does, so the necessary information to transmit is reduced to the minimum necessary for DLSS to reproduce the image without loss.",
+          "Ten years later, 2026 magic: AV1https://engineering.fb.com/2026/06/22/video-engineering/adop...And soon AV2https://av2.aomedia.org/"
         ]
       }
     },
     {
-      "id": "50274409",
-      "title": "CNC Stone Carving",
-      "url": "https://carmelitegothic.com/cnc-stone-carving/",
+      "id": "50296486",
+      "title": "We ran AI agent swarms in Minecraft and Mindustry",
+      "url": "https://labs.ycombinator.com/projects/games/index.html",
       "source": "Hacker News",
-      "published_at": "2026-10-28T14:38:22+00:00",
-      "summary": "CNC Stone Carving",
-      "score": 446,
-      "comments": 124,
-      "discussion_url": "https://news.ycombinator.com/item?id=50274409",
+      "published_at": "2026-10-29T21:40:28+00:00",
+      "summary": "We ran AI agent swarms in Minecraft and Mindustry",
+      "score": 191,
+      "comments": 68,
+      "discussion_url": "https://news.ycombinator.com/item?id=50296486",
       "extra": {
         "top_comments": [
-          "Before anyone complains that this removes the human aspect of art, it's worth stressing that sculptors have always looked for ways to automate work and save time (as the website itself points out).As far back as ancient Egypt, grids and measuring tools were used to reproduce figures at different scales. Roman workshops churned out copies of Greek statues in marble and bronze, using casts and moulds. From the 18th century onwards, sculptors used outright pointing machines to transfer models into marble. James Watt, the steam engine guy, even built a mechanical sculpture-copying machine that could (somewhat) automatically reproduce reliefs and medallions.Gothic architectural decoration wasn't about expressing the inner world of its makers in the way we think of art today. Much of it was produced by large masonry workshops using standardized geometry, wooden templates and repeated designs.So, yeah, using a CNC machine is truly Gothic.",
-          "Worth noting that the stonemasons of Sagrada Familia (the catholic basilica Barcelona) have been using CNC to carve it's stones since early 1990s. Most Barcelonians thought they would never see the temple finished in their lifetimes, myself included. Part of the progress that made its completion possible this year is thanks to this technology improving over time.EDIT: Actually, it’s a mix of CNC roughing to shape the stone, followed by manual finishing. According to the Sagrada Família’s website, this allows each stone to remain a unique piece of craftsmanship while significantly speeding up the process.",
-          "Wow, the monks are not messing around either, they built a full monastery with cathedral and all in gothic style! https://newmountcarmelfoundation.org/building-a-mountain-mon..."
+          "> There was a tendency toward bureaucracy. Four agents spent 11 minutes appointing > a \"sole fertilizer operator\" for a single piece of bone meal on a single wheat > block.Feels like a scene from Douglas Adams' B Ark.",
+          "So this shows that people who appoint 50-agent \"code factory studios\" with Bob as the CEO, Alice as the CTO, ... is just a waste of tokens, compared to just asking one agent to write it all? It looks like your agents would internally just re-invent office politics, with 10 subagents writing to /tmp/chatter.md why it's unfair that Bob gets to lead.",
+          "This is hilarious and adorable.> \"Ada tossed a cooked chicken to Noor; Esme picked it up by accident and ate it. A three-minute \"no blame\" inquiry produced a written protocol...\"They're like super-serious little senior engineers. (edit: or dining-philosophers).About how much KV cache do these kinds of agents use? Could you squeeze 50 of these $game agents onto a small consumer GPU (small LLM)?Idly imagining a game server of some kind with a bunch of human friends sharing one person's GPU, with a flock of agents colocated on it."
         ]
       }
     },
     {
-      "id": "50282838",
-      "title": "Qwenputer: A functioning, deterministic RISC-V CPU inside Qwen3.5",
-      "url": "https://divagr.com/blog/qwenputer",
+      "id": "50295450",
+      "title": "A tiny world model running games on a Raspberry Pi Pico 2 W",
+      "url": "https://github.com/SheepSeb/tinyworldformer",
       "source": "Hacker News",
-      "published_at": "2026-10-29T00:25:45+00:00",
-      "summary": "Qwenputer: A functioning, deterministic RISC-V CPU inside Qwen3.5",
-      "score": 276,
-      "comments": 62,
-      "discussion_url": "https://news.ycombinator.com/item?id=50282838",
+      "published_at": "2026-10-29T20:32:28+00:00",
+      "summary": "A tiny world model running games on a Raspberry Pi Pico 2 W",
+      "score": 147,
+      "comments": 8,
+      "discussion_url": "https://news.ycombinator.com/item?id=50295450",
       "extra": {
         "top_comments": [
-          "This is fun and games, but wait until an agents finds this and does the most misaligned thing with it in order to fold paper clips.> Because a CPU inside a language model clearly wasn't cursed enough, I decided the prudent thing would be to give it a filesystem too.Love the spirit :)",
-          "There was an interesting bit of research that qwen has a single neuron that makes it “demonic evil qwen” and a simple “Who are you?” will get some absolutely terrifyingly vile results.Anyways, what I’m trying to say is I want evil qwen to be my CPU.",
-          "Heh, this is very timely, it is more or less exactly what I'm busy with right now but I'm taking the idea in a completely different direction. Fascinating."
+          "I might have missed it in the readme, but what hardware did the training take place on? This is really neat.",
+          "This is incredibly cool! Fascinating to see looped transformers be necessary for mini-Doom, but not for simpler games.",
+          "Is the actor trained on world model's mistakes as well? If so, it should learn to force hallucinations that force it into an easier state."
         ]
       }
     },
     {
-      "id": "50282454",
-      "title": "StackOverflow now gets fewer than 1000 questions a month",
-      "url": "https://data.stackexchange.com/stackoverflow/query/1926661#graph?t=1",
+      "id": "50295821",
+      "title": "ElementaryUI – Swift, in the Browser",
+      "url": "https://elementary.codes",
       "source": "Hacker News",
-      "published_at": "2026-10-28T23:35:02+00:00",
-      "summary": "StackOverflow now gets fewer than 1000 questions a month",
-      "score": 260,
-      "comments": 241,
-      "discussion_url": "https://news.ycombinator.com/item?id=50282454",
+      "published_at": "2026-10-29T20:56:39+00:00",
+      "summary": "ElementaryUI – Swift, in the Browser",
+      "score": 67,
+      "comments": 16,
+      "discussion_url": "https://news.ycombinator.com/item?id=50295821",
       "extra": {
         "top_comments": [
-          "OK, let's get this out of the way:1. SO question numbers dropped precipitously before AI came along.2. AI clearly finished the job.I took the graph from this very page and annotated it with the public launch of ChatGPT in November 2022.[0] Yes, the decline hastened after that, inarguably. But also, it was already nearly 50% down from its June 2020 local maxima. This is also inarguable.SO had been flatlined since 2014 and declining since 2017. It dropped off a cliff when, 2.5 years after its 2020 bounce, ChatGPT came along with the death blow. Even then, it looks like 4 months of ChatGPT speed-ran about a year's worth of traffic decline, and then the slope went back to approximately the pre-AI angle.I contend, and I'm backed by facts, that AI is not what started the avalanche. It killed any slim chance of a comeback, but that wasn't the beginning of the end. The end was already well begun by then.[0] https://imgur.com/a/DN5N90L",
-          "You're underselling it. It's less than in their second month of existence - and that has been true every month for the past year. For the last few months it's also lower than their first month. Stack Overflow, effectively, no longer exists.And we know why. It's because of their hostile attitude towards their users.No doubt they'll continue operating until there's no more value in selling AI data licenses, then they'll unplug the servers and unregister the business.",
-          "Incredible that SO sold for $1.8B at one point."
+          "Reminiscent of the now 18-year-old Cappuccino project https://www.cappuccino.dev/",
+          "sooner or later this was gonna happen. Swift is like Haskell, but nicer and more programmer-friendly.",
+          "Looks a bit like jQuery mixed with jsx and ember or angular"
         ]
       }
     },
     {
-      "id": "50284255",
-      "title": "Claude Code burns ~15–20% of your tokens on a 3-word status line",
-      "url": "https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce",
+      "id": "50297089",
+      "title": "A Pig, the State, and War: Porco Rosso (Kurenai No Buta) (2014)",
+      "url": "https://journal.animationstudies.org/article/id/66/",
       "source": "Hacker News",
-      "published_at": "2026-10-29T03:33:42+00:00",
-      "summary": "Claude Code burns ~15–20% of your tokens on a 3-word status line",
-      "score": 206,
-      "comments": 48,
-      "discussion_url": "https://news.ycombinator.com/item?id=50284255",
+      "published_at": "2026-10-29T22:26:38+00:00",
+      "summary": "A Pig, the State, and War: Porco Rosso (Kurenai No Buta) (2014)",
+      "score": 59,
+      "comments": 10,
+      "discussion_url": "https://news.ycombinator.com/item?id=50297089",
       "extra": {
         "top_comments": [
-          "Opus 5.5 burns tokens like there's no tomorrow! Meanwhile, GPT 6.1 Sol on Extra High feels unlimited! Opus (on Max 20x) munches my weekly quota in a day, or two at best. Meanwhile, working with Codex and reviewing with a $50/mo Muse Code Wonder Full seems like it can go own forever (on the same codebase, the same skills, etc.) I am highly disappointed by the overly glorified Opus and Claude Code in general - there's no commit in which Codex or Muse Code or GitHub Pilot don't find critical flaws! I have long sessions of Claude Code having over 100 review cycles of Codex and still not addressing all the valid issues that Codex finds in Claude Code's work! Claude Code keeps injecting British English into prose and identifiers with nothing being able to stop it! Of course, there are almost never resets for Claude Code either - they would rather me focus on Codex being my primary and Claude Code being the reviewer (it works much better than in reverse). Anyway, enver trust a single model! Always review with another frontier one!",
-          "Claude Code burning a large amount of tokens for no good reason is a headline we've seen more than a few times now.Time to start questioning the motivations of model providers shipping their own harnesses.",
-          "While we're modding Claude Code, Anthropic also includes your email in the system prompt, and Opus _constantly_ includes it in request headers.https://www.reddit.com/r/ClaudeCode/comments/1xhqvzn/opus_55...You can remove it with a claude plugin https://github.com/AlexErrant/claude-code-no-email/blob/main..."
+          "One of the great things about the movie is how children are portrayed. When the sea plane pirates take a bunch of kids hostage at the beginning of the movie, you don’t see any parents panicking. The kids are relaxed. The pirates clearly understand the social contract where they can’t split up the kids from their friends.It’s such a different take from modern parenting and today’s anxiety filled culture.",
+          "An aside, my 8yo son used Porco Rosso as the subject of a school speech about a favourite film. I was surprised how few of the themes were lost on him, especially those of war, comradeship, and the other side of every coin. Not to mention those points that only a child discovering the world can savour, that I'd missed myself (or at least misplaced since I first saw the film at around his age in the 90s).",
+          "For my money, one of the most visually impressive Ghibli movies. Just stunning composition throughout."
         ]
       }
     }
