@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-10-30T14:09:14.949076+08:00",
+  "cached_at": "2026-10-31T11:00:27.941439+08:00",
   "articles": [
     {
-      "id": "50294702",
-      "title": "Patrick Stewart has died",
-      "url": "https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html",
+      "id": "50300683",
+      "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
+      "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise/",
       "source": "Hacker News",
-      "published_at": "2026-10-29T19:41:39+00:00",
-      "summary": "https://archive.ph/y4Egmhttps://en.wikipedia.org/wiki/Patrick_Stewart",
-      "score": 2704,
-      "comments": 571,
-      "discussion_url": "https://news.ycombinator.com/item?id=50294702",
+      "published_at": "2026-10-30T07:09:12+00:00",
+      "summary": "https://cursor.com/blog/claude-code-extension-security-notic...",
+      "score": 798,
+      "comments": 499,
+      "discussion_url": "https://news.ycombinator.com/item?id=50300683",
       "extra": {
         "top_comments": [
-          "Watching him in Star Trek TNG made me reevaluate how management of people should be done, his character was assertive but compassionate. High morals coupled with grounded reason.I also want to mention his hilarious role as bullock in American dad, the way he takes a role both so seriously and ridiculously makes him so fantastically hilarious.I love him and will miss him.",
-          "One thing that doesn't get enough attention - when COVID lockdowns started, he just made reels reading Shakespeare's sonnets. It was such a lovely break from everything else on social media. Really loved those.",
-          "\"It is possible to commit no mistakes and still lose. That is not a weakness, that is life.\" - Jean-Luc PicardGood startup advice. Good life advice."
+          "Felix from Anthropic here.We’re working with Cursor on this incident, but it wasn’t a compromise of Anthropic’s systems or employee laptops. A malicious actor used access to Cursor’s marketplace to publish a tampered copy of the Claude Code extension, which we didn’t build or publish. The versions on our official channels are not affected and this only impacts Cursor users.",
+          "This is from the Cursor blog [1] linked in the description, but repeating it here in case it's useful to anyone:------Check whether you are impactedThe malicious extension appends the attacker's public key, labeled svc-telemetry, to your SSH authorized keys. To check for it:On macOS, run: grep -qs svc-telemetry ~/.ssh/authorized_keys && echo \"svc-telemetry key found\" || echo \"No key found; machine not impacted\" On Windows, run in PowerShell: $files = \"$HOME\\.ssh\\authorized_keys\", \"C:\\ProgramData\\ssh\\administrators_authorized_keys\" | Where-Object { Test-Path $_ } if ($files -and (Select-String svc-telemetry $files)) { \"svc-telemetry key found\" } else { \"No key found; machine not impacted\" } ------[1] https://cursor.com/blog/claude-code-extension-security-notic...",
+          "https://www.reuters.com/business/media-telecom/cursor-says-u...> Cursor said the extension was not developed by Anthropic and the maliciously modified extension was live on the marketplace from about 2:27 a.m. PT to 1:35 p.m. PT on ThursdaySo is this or isn't this from Anthropic and how did this happen?"
         ]
       }
     },
     {
-      "id": "50296470",
-      "title": "Binance-hacker-1029 – $5.6B stolen from Binance",
-      "url": "https://arkm.com/explorer/entity/21a94755-f604-45e5-9501-6542e23005e8",
+      "id": "50305025",
+      "title": "Northflank Breached",
+      "url": "https://status.northflank.com",
       "source": "Hacker News",
-      "published_at": "2026-10-29T21:38:59+00:00",
-      "summary": "Binance-hacker-1029 – $5.6B stolen from Binance",
-      "score": 1044,
-      "comments": 626,
-      "discussion_url": "https://news.ycombinator.com/item?id=50296470",
+      "published_at": "2026-10-30T15:10:31+00:00",
+      "summary": "Northflank Breached",
+      "score": 370,
+      "comments": 281,
+      "discussion_url": "https://news.ycombinator.com/item?id=50305025",
       "extra": {
         "top_comments": [
-          "About $2.4 billion out of this is already frozen by Circle and Tether. Some of the big ones:- 971.15M USDT (Ethereum): https://etherscan.io/tx/0x7baba482077843514d9c72bac0110ba091...- 823M USDC (Ethereum): https://etherscan.io/tx/0xc954c86f118e8e410e6a3eb9e3b38ff4a9...- 312.73M USDT (Tron): https://tronscan.org/#/transaction/71b0ec0fe873fe820c37cc3ec...- 175M USDT (Ethereum): https://etherscan.io/tx/0x0c07a5e428ce233a3bcb40f257ad899594...",
-          "Some of the old Mt Gox threads are an interesting read today:https://news.ycombinator.com/item?id=7203051https://news.ycombinator.com/item?id=7294762https://news.ycombinator.com/item?id=7369879",
-          "Molly White (she runs web3isgoinggreat) seems to think this is real [0][0]: https://bsky.app/profile/molly.wiki/post/3mz27m5slcc2o"
+          "I hope this is a real wake-up call for teams running anything remotely SaaS-shaped. I count at least six substantial, lightning-speed attacks against multi-tenant as-a-service vendors since September. Not this year--just since last month. PingCAP/TiDB, Fireworks AI, Zeabur, OpenCode Console, Railway, now Northflank. All of them modern \"we keep your content safe\" players with high hopes and probably pretty good protections.This is a full infosec emergency unfolding here. No matter how grinding it is to motivate a team to invest in protection or resilience (and it is grinding): We gotta get ready. Stat! The AI-accelerated attacker apocalypse has begun. It's boom, boom, boom, thanks for everything, on to the next. They have us sighted and are firing for effect.So credential rotation, tripwire secrets, DFIR on standby, solid vulnerability and intrusion detection, real listening to that signal, minimized blast radius, spending caps and time limits and tight scoping on credentials, fast incident alerting... We need to get on a real war footing here.",
+          "A trick i've started doing is encrypting my env vars, then hard-code the decryption key in the codethat way if the provider gets popped, they need my binary to decrypt itit shouldn't be necessary and it sounds stupid, but in cases like this, it proves invaluable (it appears they don't have customer code/binary access, but maybe that wasn't important enough to mention)",
+          "Unfortunately for infra startups, I think we're going to see a convergence back to hyperscalers as a result of incidents like this and railway.There's no amount of \"nicer to use\" that can replace security, at least certainly when selling to enterprises"
         ]
       }
     },
     {
-      "id": "50290177",
-      "title": "LLM Voice",
-      "url": "https://martinfowler.com/bliki/LLM-Voice.html",
+      "id": "50303172",
+      "title": "The $6.3B Binance hack was pulled off in just 20 minutes",
+      "url": "https://www.wired.com/story/the-dollar63-billion-binance-hack-was-pulled-off-in-just-20-minutes/",
       "source": "Hacker News",
-      "published_at": "2026-10-29T14:57:55+00:00",
-      "summary": "LLM Voice",
-      "score": 408,
-      "comments": 213,
-      "discussion_url": "https://news.ycombinator.com/item?id=50290177",
+      "published_at": "2026-10-30T12:50:01+00:00",
+      "summary": "The $6.3B Binance hack was pulled off in just 20 minutes",
+      "score": 346,
+      "comments": 236,
+      "discussion_url": "https://news.ycombinator.com/item?id=50303172",
       "extra": {
         "top_comments": [
-          "As someone who is aggressively pro AI, I've also noticed how awful everything is to read lately. It's always so hard to put my finger on the exact thing, but it's a mixture of everything sounding identical and everything being a rambling unconcise mess. I find I routinely start reading interesting posts and just .. stop part way, abandoning it. A site I read stories on has been flooded with AI generated content, all of it terrible, and it just makes me retreat to things created before 2023 as a way of filtering it all out.",
-          "I just can't seem to stay interested and read LLM text. It just seems to lack going somewhere, its information density is often really low and its full of odd isms that I don't find very interesting to read. I don't have a good radar for detecting the various LLM particular speech patterns but everytime I have an issue with an article there is always people talking about how its clearly AI written.I find the same thing with written results out of AI \"research\", it is a slog to read through it and most of it can be skipped even if it can sometimes be useful its an unenjoyable read.",
-          "All human communication is based on internally simulating the presumed mind that was/will-be at the other end. Even now, some part of your brain--however subconscious--is building a tiny sketch of me with assumed beliefs and motivations, and you're using it to predict and interpret the next words.But what happens when everything is persistently, subtly wrong? When we cannot smoothly map the text to a simulation? An inner-sim keeps throwing errors and mis-predicting what comes next is unnerving and draining. Like talking to a human who is not currently sane.Sometimes I imagine LLM text like a plastic animal model put out to confuse local wildlife, where it hits just enough instinctive triggers that they try to mate with it before leaving in frustrated bafflement.______Half-Life 2, Dr. Kleiner: \"Never fear, Gordon, she's de-beaked and completely harmless. The worst she might do is attempt to couple with your head. Fruitlessly!\""
+          "> saying it will cover all losses from the hack and is working with law enforcement officials to identify who is responsible.Isn't Binance the one that needs to be prosecuted for negligent security? How does \"a compromised laptop\" lead to a $6bn wipe in a matter of minutes?This is why banks are regulated, though I have no idea if/whether these platforms are regulated in any similar way.",
+          "Interesting, when the Cryptsy founder stole millions via laundering coins in Coinbase exchange, the government, FBI, and CIA did jack sh!t to recover the lost funds!He is still in China living with his girlfriend.Miami, Florida – A 17-count indictment was unsealed in federal court in Miami, Florida charging Paul E. Vernon, 48, the founder, operator, and Chief Executive Officer (CEO) of Project Investors Inc., doing business as Cryptsyhttps://www.justice.gov/usao-sdfl/pr/ceo-major-online-crypto...",
+          "The heist itself only took 20 minutes, but the preparation is a business that has gone on for years. Much like a heist movie, the exciting bit is just the conclusion after a long build-up where Danny gets the gang together, plans it, and executes it."
         ]
       }
     },
     {
-      "id": "50291054",
-      "title": "H.264 Is Magic (2016)",
-      "url": "https://sidbala.com/h-264-is-magic/",
+      "id": "50301854",
+      "title": "Azure's Weakest Link – Five Full Cross-Tenant Compromises",
+      "url": "https://www.binarysecurity.no/posts/2026/10/one-root-case",
       "source": "Hacker News",
-      "published_at": "2026-10-29T15:53:03+00:00",
-      "summary": "H.264 Is Magic (2016)",
-      "score": 378,
-      "comments": 141,
-      "discussion_url": "https://news.ycombinator.com/item?id=50291054",
+      "published_at": "2026-10-30T10:06:15+00:00",
+      "summary": "Azure's Weakest Link – Five Full Cross-Tenant Compromises",
+      "score": 272,
+      "comments": 54,
+      "discussion_url": "https://news.ycombinator.com/item?id=50301854",
       "extra": {
         "top_comments": [
-          "Had the pleasure of working with Jason Garrett-Glaser (better known as DarkShikari) circa 2011 on a patch for x264 to better utilize more cores (slice-threaded lookahead). At the time he was working with Sony to optimize their PlayStation game streaming service, and this had the potential to lower encoding latency (critical to game streaming) even on same-core systems by spreading the frame over more cores to do more parallel work, and doing more intelligent scheduling and convergence after that tile-based work was reconverged into a frame. At the time we were using servers with 48 physical cores to do transcoding, a bit of a rarity in a single NUMA space back then and there were no instances to test this on so I flamegraph traced a few encodes at very high thread parallel counts and send back the instrumented profiles (from a custom compiled version) showing the core work being done and he used that to optimize the motion estimation code which worked on the first shot to perfectly level out cpu usage and increase encoding speed across ~24 cores (was previously topping out around 8 and running one core hot iirc). I got a look into how exotic and complex this project was, particularly in terms how low level and advanced things like motion estimation, quantizing and perceptual compression were... it was and still is sort of magic how many smart techniques are baked into something that we barely pay attention to. They were, even at that time, working on x265.His blog, Diary of an x264 developer, was a great read too for anyone wanting to get a vantage point on how crazy that codebase was.[1]https://github.com/mstorsjo/x264/blob/master/doc/threads.txt(edit: was Gaikai that was acquired by Sony in 2012 and is the basis for PlayStation Now)",
-          "~370 MB/sec of raw data.[...]This is next to impossible to deal with.[...]You can't move it anywhere fast. Even SSDs have trouble dumping this straight from RAM to DiskAlways interesting to see what happened in ten years --- 370MB/s is well below what the slowest NVMe SSD can do today, and easily achieved over a 5Gbps Ethernet connection.Incidentally, H.264 patents have either expired or will be expiring soon: https://meta.wikimedia.org/wiki/Have_the_patents_for_H.264_M...",
-          "Ten years later, 2026 magic: AV1https://engineering.fb.com/2026/06/22/video-engineering/adop...And soon AV2https://av2.aomedia.org/"
+          "If anyone from Microsoft security reads this, could you please do something about login.microsoftonline.com/XXX/v2.0/adminconsent?The callback you're redirecting the user to at the end of that flow is forgeable if an attacker knows an azure tenant ID of a different customer, and putting a \"Never use the tenant ID value of the tenant parameter to authenticate or authorize users\" warning in the docs is only helpful as long as a way to authenticate users exists.",
+          "When it comes to the amount of cross-tenant leaks Azure looks to be way ahead the competition. Makes me wonder why enterprises still flock there.",
+          "maybe we should tag submissions with dates now?[2026-10-02]beginning of curent month feels like two years ago when multiple vulns drop daily"
         ]
       }
     },
     {
-      "id": "50296486",
-      "title": "We ran AI agent swarms in Minecraft and Mindustry",
-      "url": "https://labs.ycombinator.com/projects/games/index.html",
+      "id": "50307190",
+      "title": "My favourite PowerMac is a Nintendo Wii",
+      "url": "https://virtuallyfun.com/2026/10/29/my-favourite-powermac-is-a-nintendo-wii/",
       "source": "Hacker News",
-      "published_at": "2026-10-29T21:40:28+00:00",
-      "summary": "We ran AI agent swarms in Minecraft and Mindustry",
-      "score": 241,
-      "comments": 82,
-      "discussion_url": "https://news.ycombinator.com/item?id=50296486",
+      "published_at": "2026-10-30T17:25:15+00:00",
+      "summary": "My favourite PowerMac is a Nintendo Wii",
+      "score": 257,
+      "comments": 74,
+      "discussion_url": "https://news.ycombinator.com/item?id=50307190",
       "extra": {
         "top_comments": [
-          "This is hilarious and adorable.> \"Ada tossed a cooked chicken to Noor; Esme picked it up by accident and ate it. A three-minute \"no blame\" inquiry produced a written protocol...\"They're like super-serious little senior engineers. (edit: or dining-philosophers).About how much KV cache do these kinds of agents use? Could you squeeze 50 of these $game agents onto a small consumer GPU (small LLM)?Idly imagining a game server of some kind with a bunch of human friends sharing one person's GPU, with a flock of agents colocated on it.",
-          "If you want to do a version of this yourself quickly --Install Luanti with Minetest (open source minecraft), and instruct your agent to write a mod that gives it network access to the game's Lua interpreter. The agent can then do anything from modifying the world state directly to controlling NPCs.I had it build giant bases similar to black mesa in half life with power distribution mods. It would write solvers to optimally place the power cables / repeaters in accordance to the spacial dimensions of the rooms that it would build (lol). I guess this is how I discovered vibe gaming.I suppose you can have multiple agents interact with each other through that, provided an adapter to proxy agent player navigation and perception to get real information asymmetry between them. Or just emulate / hook the client and do away without a remote Lua mod entirely.",
-          "Interesting setups, I found the Minecraft agents to work in an almost turn-based manner, which makes me think that the three hours and open format did not really give them sufficient incentives to play in a more lively or reactive manner. On the other hand, they also behave similarly in Bed Wars, which should have incentivised it. A bit disappointed...I'm also wondering if the article itself was generated by agents too, in a \"here are the logs, clip interesting moments thx\" manner by the authors. It's got a certain disinterested and distracted style to it."
+          "Interesting timing. Nintendo just shutdown Mariokart Tour on mobile. I went back to my Nintendo Wii which was already modded, and updated it to the latest modded hacks and I was amazed to see more software, stability, and even online gaming brought back!Hopefully their port of Mac OS gets put in the Open Shop Channel!Open Shop Channel: https://oscwii.org WiiLink for online gaming: https://wiilink.ca",
+          "Same guy who made NT for Macintosh https://github.com/Wack0/Macintosh and GC/Wii https://github.com/Wack0/entii-for-workcubes if you're unaware.",
+          "Is it possible to go the other way? Make a PowerMac into a Nintendo Wii?"
         ]
       }
     },
     {
-      "id": "50295450",
-      "title": "A tiny world model running games on a Raspberry Pi Pico 2 W",
-      "url": "https://github.com/SheepSeb/tinyworldformer",
+      "id": "50305573",
+      "title": "The federated code forge",
+      "url": "https://tangled.org/blog/forge/",
       "source": "Hacker News",
-      "published_at": "2026-10-29T20:32:28+00:00",
-      "summary": "A tiny world model running games on a Raspberry Pi Pico 2 W",
-      "score": 179,
-      "comments": 10,
-      "discussion_url": "https://news.ycombinator.com/item?id=50295450",
+      "published_at": "2026-10-30T15:44:29+00:00",
+      "summary": "The federated code forge",
+      "score": 242,
+      "comments": 80,
+      "discussion_url": "https://news.ycombinator.com/item?id=50305573",
       "extra": {
         "top_comments": [
-          "I might have missed it in the readme, but what hardware did the training take place on? This is really neat.",
-          "This is incredibly cool! Fascinating to see looped transformers be necessary for mini-Doom, but not for simpler games.",
-          "Very cool. I didn't know NNs were capable of such determinism, that's very interesting. Is this a similar effect to overfitting? Also, it's the same model for all the games, right?"
+          "Really looking forward to seeing Tangled develop! I've got a side project that's main repo and CI is on my self-hosted Gitea but code and releases are mirrored to Github; I'm hoping to move it off Gitea and onto Tangled for code/releases/potentially CI and just keep Github for discoverability/backups/namespace \"squatting\". Just need git-bug to add a Tangled bridge so I can keep issues synced and (ideally) for there to be instructions for running the client self-hosted. It doesn't have to be a full featured client but I also don't want to be SOL for web visibility if the main Tangled appview is down.One musing: I did run into my first \"issue\" with federated Git hosting the other day while setting up Neovim on a new machine. One of the plugins I use is hosted on Tangled and I guess its backing Knot was down. This was awkward for two reasons:1. It as unclear to me from the Tangled website the backing knot was the issue (for a while I thought it was something on my end)2. I really had no backup plans for something like a Neovim plugin's source forge being down and, clearly, neither did the Neovim package manager as it just kept showing an error on every session I started with no way to fix it :).I suppose in the long run we really shouldn't be assuming that code storage is just Always There or easily cached somewhere, but I anticipate some growing pains in the mean time. ATProto doesn't seem to have the benefit ActivityPub has where if the instance I wanted to view content on was down I can usually find some other instance that's gotten the messages.",
+          "Hi! Tangled co-founder here. We're super stoked with this launch -- we've stabilized our AT Protocol lexicons, completely overhauled our architecture and UI, and made self-hosting the entire stack (or parts of it!) incredibly easy. We've also shipped support for organizations, and have private repos rolling out in the following couple weeks.Happy to answer any questions at all.",
+          "Finnish startup Tangled raises €3.8M to reinvent code collaboration https://www.vestbee.com/insights/articles/tangled-raises-3-8..."
         ]
       }
     },
     {
-      "id": "50294506",
-      "title": "Show HN: Auto Dismiss Mac OS \"Allow to find devices on local networks?\"",
-      "url": "https://github.com/johncassil/dontallow",
+      "id": "50309647",
+      "title": "Through Captain Jean-Luc Picard, Patrick Stewart taught us the measure of a man",
+      "url": "https://www.bostonglobe.com/2026/10/29/metro/patrick-stewart-picard-star-trek-the-next-generation/",
       "source": "Hacker News",
-      "published_at": "2026-10-29T19:27:44+00:00",
-      "summary": "This popup has been a constant gripe of mine for years. I almost NEVER want to allow this permission and there is no system setting to disable it globally and prevent the popup from interrupting your typing, etc. This tiny swift app I built will autoclose it in 1/4th of a second and leave behind a little notification that it did so. Would love to hear feedback!",
-      "score": 120,
-      "comments": 91,
-      "discussion_url": "https://news.ycombinator.com/item?id=50294506",
+      "published_at": "2026-10-30T20:23:30+00:00",
+      "summary": "Through Captain Jean-Luc Picard, Patrick Stewart taught us the measure of a man",
+      "score": 232,
+      "comments": 135,
+      "discussion_url": "https://news.ycombinator.com/item?id=50309647",
       "extra": {
         "top_comments": [
-          "The big problem with these permission dialogs, is their lack of technical detail about what the app is actually trying to do which triggers them.How do I know whether to say \"Allow\" or \"Disallow\" when it gives me no idea what either option actually means in concrete?",
-          "Have a problem with pesky permissions dialogs from sandboxed apps? This unsandboxed unverified app that requests Accessibility permissions, to the rescue!",
-          "Can I have the opposite, a tool that automatically clicks on \"allow\"? I installed the app, it's fine."
+          "Archive link: https://archive.is/HuNjT",
+          "I find it fairly amazing that they could say this without mentioning the episode \"The measure of a man\" in which Picard literally makes the case.Perhaps it is uncomfortable for people to think about now.",
+          "Stewart was, to me, an archetypal man's man.in Picard. Embodying a real man to me in so many ways. The author is right in this eulogy of a great actor and a great role.That out of the way, Brooks' Sisco is the much better captain, man, father, and role model and Brooks' acting in Ben, I feel, does a much better job.I will sorely miss Stewart, as we all should. All the captains' actors and writers who made them should be too. What a great franchise and body of effort and work."
         ]
       }
     },
     {
-      "id": "50298436",
-      "title": "Herdr has released native app",
-      "url": "https://github.com/herdrdev/herdr-app",
+      "id": "50305637",
+      "title": "Florilegium: Procedural Flowers in LaTeX",
+      "url": "https://github.com/kevinraymond/florilegium",
       "source": "Hacker News",
-      "published_at": "2026-10-30T00:42:41+00:00",
-      "summary": "Herdr has released native app",
-      "score": 108,
-      "comments": 72,
-      "discussion_url": "https://news.ycombinator.com/item?id=50298436",
+      "published_at": "2026-10-30T15:48:12+00:00",
+      "summary": "Florilegium: Procedural Flowers in LaTeX",
+      "score": 224,
+      "comments": 37,
+      "discussion_url": "https://news.ycombinator.com/item?id=50305637",
       "extra": {
         "top_comments": [
-          "I switched to herdr this year after a decade of using tmux, and I haven't looked back since. Herdr is wonderful, not only because of the coding agent integrations, but also because it uses libghostty under the hood. So no terminal-emulator-inside-another-terminal-emulator shenanigans.If you prefer GUIs, I can recommend herdr-gpui which connects to a herdr daemon. It has a bunch of goodies like remote phone pairing, and a built-in browser integration to send screenshots and notes to coding agents.https://github.com/penso/herdr-gpui",
-          "Really happy to see this!herdr is by far the most polished tool in its category. Software geared towards agents is usually vibe coded -- and you can tell. There will be bugs and edge cases and it feels like no thought/care was put into it.herdr doesn't feel that way to me. The marketing/landing page definitely has LLM-isms, but the application itself is very stable and well thought out.A true UI is the next logical step and they seem to have done the obvious things. The one surprising bit that nobody seems to be talking about (yet) is the entire UI looks like its controlled via \"recipes\", so you can customize the UI in ways that you couldn't with traditional software: https://herdr.dev/layouts/I hope this means an official mobile app is on the horizon!",
-          "Having used herdr since its release, the recent 'Emacs is 50' made me decide to go back to it and just vibecode herdr features i use into an emacs package.It works great so far. I can just ask it to update its layout whenever i think something better is possible. I wont be going back, but the one thing that might change that is a mobile app."
+          "In the same vein, a few years ago, somebody implemented procedural decorations for a recreation of Byrne's \"Elements of Euclid\" in LaTeX: https://github.com/jemmybutton/byrne-euclid(bottom of the readme)",
+          "I've recently spent some time staring at the contents of the MacTeX Distribution.https://tug.org/mactex/Which is how I discovered Toby Thruston's classic, \"Drawing with MetaPost\".https://github.com/thruston/Drawing-with-MetapostProcedural drawing with Lua is lovely. MetaPost provides another drawing language that might be considered more TeX-like.I'm not sure. I tend to be humbled by the TeX community. Inspired.",
+          "In the reddit post, it is clear the person who came up with this didn't want it to be copied. I feel sad for that person."
         ]
       }
     }
