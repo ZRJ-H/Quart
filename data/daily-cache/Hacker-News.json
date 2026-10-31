@@ -1,24 +1,6 @@
 {
-  "cached_at": "2026-10-31T11:00:27.941439+08:00",
+  "cached_at": "2026-10-31T14:04:34.371407+08:00",
   "articles": [
-    {
-      "id": "50300683",
-      "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
-      "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise/",
-      "source": "Hacker News",
-      "published_at": "2026-10-30T07:09:12+00:00",
-      "summary": "https://cursor.com/blog/claude-code-extension-security-notic...",
-      "score": 798,
-      "comments": 499,
-      "discussion_url": "https://news.ycombinator.com/item?id=50300683",
-      "extra": {
-        "top_comments": [
-          "Felix from Anthropic here.We’re working with Cursor on this incident, but it wasn’t a compromise of Anthropic’s systems or employee laptops. A malicious actor used access to Cursor’s marketplace to publish a tampered copy of the Claude Code extension, which we didn’t build or publish. The versions on our official channels are not affected and this only impacts Cursor users.",
-          "This is from the Cursor blog [1] linked in the description, but repeating it here in case it's useful to anyone:------Check whether you are impactedThe malicious extension appends the attacker's public key, labeled svc-telemetry, to your SSH authorized keys. To check for it:On macOS, run: grep -qs svc-telemetry ~/.ssh/authorized_keys && echo \"svc-telemetry key found\" || echo \"No key found; machine not impacted\" On Windows, run in PowerShell: $files = \"$HOME\\.ssh\\authorized_keys\", \"C:\\ProgramData\\ssh\\administrators_authorized_keys\" | Where-Object { Test-Path $_ } if ($files -and (Select-String svc-telemetry $files)) { \"svc-telemetry key found\" } else { \"No key found; machine not impacted\" } ------[1] https://cursor.com/blog/claude-code-extension-security-notic...",
-          "https://www.reuters.com/business/media-telecom/cursor-says-u...> Cursor said the extension was not developed by Anthropic and the maliciously modified extension was live on the marketplace from about 2:27 a.m. PT to 1:35 p.m. PT on ThursdaySo is this or isn't this from Anthropic and how did this happen?"
-        ]
-      }
-    },
     {
       "id": "50305025",
       "title": "Northflank Breached",
@@ -26,14 +8,14 @@
       "source": "Hacker News",
       "published_at": "2026-10-30T15:10:31+00:00",
       "summary": "Northflank Breached",
-      "score": 370,
-      "comments": 281,
+      "score": 405,
+      "comments": 299,
       "discussion_url": "https://news.ycombinator.com/item?id=50305025",
       "extra": {
         "top_comments": [
           "I hope this is a real wake-up call for teams running anything remotely SaaS-shaped. I count at least six substantial, lightning-speed attacks against multi-tenant as-a-service vendors since September. Not this year--just since last month. PingCAP/TiDB, Fireworks AI, Zeabur, OpenCode Console, Railway, now Northflank. All of them modern \"we keep your content safe\" players with high hopes and probably pretty good protections.This is a full infosec emergency unfolding here. No matter how grinding it is to motivate a team to invest in protection or resilience (and it is grinding): We gotta get ready. Stat! The AI-accelerated attacker apocalypse has begun. It's boom, boom, boom, thanks for everything, on to the next. They have us sighted and are firing for effect.So credential rotation, tripwire secrets, DFIR on standby, solid vulnerability and intrusion detection, real listening to that signal, minimized blast radius, spending caps and time limits and tight scoping on credentials, fast incident alerting... We need to get on a real war footing here.",
-          "A trick i've started doing is encrypting my env vars, then hard-code the decryption key in the codethat way if the provider gets popped, they need my binary to decrypt itit shouldn't be necessary and it sounds stupid, but in cases like this, it proves invaluable (it appears they don't have customer code/binary access, but maybe that wasn't important enough to mention)",
-          "Unfortunately for infra startups, I think we're going to see a convergence back to hyperscalers as a result of incidents like this and railway.There's no amount of \"nicer to use\" that can replace security, at least certainly when selling to enterprises"
+          "Unfortunately for infra startups, I think we're going to see a convergence back to hyperscalers as a result of incidents like this and railway.There's no amount of \"nicer to use\" that can replace security, at least certainly when selling to enterprises",
+          "A trick i've started doing is encrypting my env vars, then hard-code the decryption key in the codethat way if the provider gets popped, they need my binary to decrypt itit shouldn't be necessary and it sounds stupid, but in cases like this, it proves invaluable (it appears they don't have customer code/binary access, but maybe that wasn't important enough to mention)"
         ]
       }
     },
@@ -44,8 +26,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-30T12:50:01+00:00",
       "summary": "The $6.3B Binance hack was pulled off in just 20 minutes",
-      "score": 346,
-      "comments": 236,
+      "score": 391,
+      "comments": 267,
       "discussion_url": "https://news.ycombinator.com/item?id=50303172",
       "extra": {
         "top_comments": [
@@ -56,32 +38,14 @@
       }
     },
     {
-      "id": "50301854",
-      "title": "Azure's Weakest Link – Five Full Cross-Tenant Compromises",
-      "url": "https://www.binarysecurity.no/posts/2026/10/one-root-case",
-      "source": "Hacker News",
-      "published_at": "2026-10-30T10:06:15+00:00",
-      "summary": "Azure's Weakest Link – Five Full Cross-Tenant Compromises",
-      "score": 272,
-      "comments": 54,
-      "discussion_url": "https://news.ycombinator.com/item?id=50301854",
-      "extra": {
-        "top_comments": [
-          "If anyone from Microsoft security reads this, could you please do something about login.microsoftonline.com/XXX/v2.0/adminconsent?The callback you're redirecting the user to at the end of that flow is forgeable if an attacker knows an azure tenant ID of a different customer, and putting a \"Never use the tenant ID value of the tenant parameter to authenticate or authorize users\" warning in the docs is only helpful as long as a way to authenticate users exists.",
-          "When it comes to the amount of cross-tenant leaks Azure looks to be way ahead the competition. Makes me wonder why enterprises still flock there.",
-          "maybe we should tag submissions with dates now?[2026-10-02]beginning of curent month feels like two years ago when multiple vulns drop daily"
-        ]
-      }
-    },
-    {
       "id": "50307190",
       "title": "My favourite PowerMac is a Nintendo Wii",
       "url": "https://virtuallyfun.com/2026/10/29/my-favourite-powermac-is-a-nintendo-wii/",
       "source": "Hacker News",
       "published_at": "2026-10-30T17:25:15+00:00",
       "summary": "My favourite PowerMac is a Nintendo Wii",
-      "score": 257,
-      "comments": 74,
+      "score": 275,
+      "comments": 77,
       "discussion_url": "https://news.ycombinator.com/item?id=50307190",
       "extra": {
         "top_comments": [
@@ -92,14 +56,32 @@
       }
     },
     {
+      "id": "50309647",
+      "title": "Through Captain Jean-Luc Picard, Patrick Stewart taught us the measure of a man",
+      "url": "https://www.bostonglobe.com/2026/10/29/metro/patrick-stewart-picard-star-trek-the-next-generation/",
+      "source": "Hacker News",
+      "published_at": "2026-10-30T20:23:30+00:00",
+      "summary": "Through Captain Jean-Luc Picard, Patrick Stewart taught us the measure of a man",
+      "score": 272,
+      "comments": 148,
+      "discussion_url": "https://news.ycombinator.com/item?id=50309647",
+      "extra": {
+        "top_comments": [
+          "Archive link: https://archive.is/HuNjT",
+          "I find it fairly amazing that they could say this without mentioning the episode \"The measure of a man\" in which Picard literally makes the case.Perhaps it is uncomfortable for people to think about now.",
+          "So many posts and comments are saying the same thing. I guess it's one of the things we remember most about Patrick Stewart and his portrayal of a starship captain. The quintessential captain. Honorable, wise, but humble, diplomatic, reasonable, with high morals, and fortitude under pressure."
+        ]
+      }
+    },
+    {
       "id": "50305573",
       "title": "The federated code forge",
       "url": "https://tangled.org/blog/forge/",
       "source": "Hacker News",
       "published_at": "2026-10-30T15:44:29+00:00",
       "summary": "The federated code forge",
-      "score": 242,
-      "comments": 80,
+      "score": 259,
+      "comments": 82,
       "discussion_url": "https://news.ycombinator.com/item?id=50305573",
       "extra": {
         "top_comments": [
@@ -110,38 +92,56 @@
       }
     },
     {
-      "id": "50309647",
-      "title": "Through Captain Jean-Luc Picard, Patrick Stewart taught us the measure of a man",
-      "url": "https://www.bostonglobe.com/2026/10/29/metro/patrick-stewart-picard-star-trek-the-next-generation/",
-      "source": "Hacker News",
-      "published_at": "2026-10-30T20:23:30+00:00",
-      "summary": "Through Captain Jean-Luc Picard, Patrick Stewart taught us the measure of a man",
-      "score": 232,
-      "comments": 135,
-      "discussion_url": "https://news.ycombinator.com/item?id=50309647",
-      "extra": {
-        "top_comments": [
-          "Archive link: https://archive.is/HuNjT",
-          "I find it fairly amazing that they could say this without mentioning the episode \"The measure of a man\" in which Picard literally makes the case.Perhaps it is uncomfortable for people to think about now.",
-          "Stewart was, to me, an archetypal man's man.in Picard. Embodying a real man to me in so many ways. The author is right in this eulogy of a great actor and a great role.That out of the way, Brooks' Sisco is the much better captain, man, father, and role model and Brooks' acting in Ben, I feel, does a much better job.I will sorely miss Stewart, as we all should. All the captains' actors and writers who made them should be too. What a great franchise and body of effort and work."
-        ]
-      }
-    },
-    {
       "id": "50305637",
       "title": "Florilegium: Procedural Flowers in LaTeX",
       "url": "https://github.com/kevinraymond/florilegium",
       "source": "Hacker News",
       "published_at": "2026-10-30T15:48:12+00:00",
       "summary": "Florilegium: Procedural Flowers in LaTeX",
-      "score": 224,
-      "comments": 37,
+      "score": 240,
+      "comments": 44,
       "discussion_url": "https://news.ycombinator.com/item?id=50305637",
       "extra": {
         "top_comments": [
           "In the same vein, a few years ago, somebody implemented procedural decorations for a recreation of Byrne's \"Elements of Euclid\" in LaTeX: https://github.com/jemmybutton/byrne-euclid(bottom of the readme)",
-          "I've recently spent some time staring at the contents of the MacTeX Distribution.https://tug.org/mactex/Which is how I discovered Toby Thruston's classic, \"Drawing with MetaPost\".https://github.com/thruston/Drawing-with-MetapostProcedural drawing with Lua is lovely. MetaPost provides another drawing language that might be considered more TeX-like.I'm not sure. I tend to be humbled by the TeX community. Inspired.",
-          "In the reddit post, it is clear the person who came up with this didn't want it to be copied. I feel sad for that person."
+          "In the reddit post, it is clear the person who came up with this didn't want it to be copied. I feel sad for that person.",
+          "I've recently spent some time staring at the contents of the MacTeX Distribution.https://tug.org/mactex/Which is how I discovered Toby Thruston's classic, \"Drawing with MetaPost\".https://github.com/thruston/Drawing-with-MetapostProcedural drawing with Lua is lovely. MetaPost provides another drawing language that might be considered more TeX-like.I'm not sure. I tend to be humbled by the TeX community. Inspired."
+        ]
+      }
+    },
+    {
+      "id": "50306442",
+      "title": "Show HN: A working Nintendo in ~1GB of Qwen weights",
+      "url": "https://github.com/dbreunig/nesformer",
+      "source": "Hacker News",
+      "published_at": "2026-10-30T16:40:22+00:00",
+      "summary": "Show HN: A working Nintendo in ~1GB of Qwen weights",
+      "score": 227,
+      "comments": 118,
+      "discussion_url": "https://news.ycombinator.com/item?id=50306442",
+      "extra": {
+        "top_comments": [
+          "A couple thoughts on the process here…First off, Opus 5.5 built working weights and code with only two prompts:1. Read this article and any relevant source code: https://divagr.com/blog/qwenputer. Then explore if you could emulate the chip and ram in a Nintendo Entertainment System (as people do today with FPGAs in MISTRs) using this technique. If so, what size model would you have to build and if you could use smaller faster ones, could you get it to be at the standard clockspeed.It returned charts well illustrating any model would be _slow_. But it's still fun, so the second prompt was:2. I think we should build it! Just for fun. It's okay if it's not fast. We want to be able to have the weights, and a cli to run them that we can point at a ROM.Now while this was an _epic_ run by Opus (5.5 is a crazy capable model), this is a surprisingly well-structured challenge.There is a long-lived and incredible community of classic gaming emulation work online for it to reference. And that community has created…conformance tests! Opus found them and built against one, that has >3k golden instructions: https://github.com/christopherpow/nes-test-roms/blob/master/...Also, there is the original Qwenputer repo that Opus used to drive the weight writing. That was essential.But this is a great example of what these models can do with proper reference materials, great specs, conformance tests, and clear direction.",
+          "This opens up so many interesting opportunities. In principle one could compile a small VM inside the LLM weights. The VM can host for example a Python interpreter, a shell and tools like sed, cat, grep etc. Instead of LLMs having to do slow autoregressive token emission with the current \"external\" tool calling, it could literally execute everything except web search, inside the LLM, with just matmul operations. You could probably optimise this so it runs in batches. You could have a gdb like application that can step through the LLM forward pass. Anyway, just a crazy thought. Have a great weekend everyone!",
+          "I love these hacks, even though from an efficiency point of view it is horrifying to my assembly-code-golfing-brain. And it also gives some new appreciation for how much more efficient deterministic programs are compared to AI."
+        ]
+      }
+    },
+    {
+      "id": "50311686",
+      "title": "Show HN: To Honor Sir Patrick Stewart, Enjoy the TNG Episode Guessing Game",
+      "url": "https://tng.episodle.com/",
+      "source": "Hacker News",
+      "published_at": "2026-10-30T23:51:24+00:00",
+      "summary": "Show HN: To Honor Sir Patrick Stewart, Enjoy the TNG Episode Guessing Game",
+      "score": 145,
+      "comments": 42,
+      "discussion_url": "https://news.ycombinator.com/item?id=50311686",
+      "extra": {
+        "top_comments": [
+          "I appreciate this. The full text search is fairly crucial, as while I've seen the entire series more than once I cannot for the life of me remember \"the name of the episode where the aliens pretending to be dumb kidnap Geordi\", but the search is good enough to get there without being too obvious.",
+          "i watched TNG through when it aired as a child, and then again probably every other year since. i dont know anyone IRL who has seen or consumed more TNG, or loved it more than i doi couldnt get a single one right lol",
+          "It's great just a bit toooo hard.But it's for trekkies so I'm not going to judge, I like Star Trek but I can't say that I'm anywhere as close to being a hardcore trekky, I'm still learning and getting into it.I'm happy to see work like this and I'm also curious as to how you got all the screenshot content. Was that through scraping or ffmpeg going through video content or what? I'm deeply curious.Additionally, I think there (might) be a decent vibe-coded game about the game Oblivion and the intro sequence where Patrick Stewart plays the Emperor Uriel.His presence in Oblivion was far too short.We can perhaps honour him by extending the initial sequences of the game, with a game. Idea, methinks.Edit: Trekkies->trekky"
         ]
       }
     }
