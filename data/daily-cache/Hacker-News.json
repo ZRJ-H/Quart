@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-11-01T11:00:26.305481+08:00",
+  "cached_at": "2026-11-01T14:33:50.231527+08:00",
   "articles": [
     {
       "id": "50319510",
@@ -8,14 +8,14 @@
       "source": "Hacker News",
       "published_at": "2026-10-31T19:56:53+00:00",
       "summary": "YouTube-style UI over 6,454 videos sourced from 39,834 HN comments since 2007.https://hackertube.org/",
-      "score": 804,
-      "comments": 257,
+      "score": 1036,
+      "comments": 314,
       "discussion_url": "https://news.ycombinator.com/item?id=50319510",
       "extra": {
         "top_comments": [
+          "One thing I love about this is how fast it is, compared to YouTube",
           "It's so refreshing browsing this compared to YouTube, it feels like I don't have to constantly be on high alert at being baited into some trap. Makes you wonder what kind of internet could be possible if all these tech giants weren't just optimizing for engagement and addiction.",
-          "I've been a bit fascinated by my lack of interest in the feeds that are curated for me. They are all things I'm supposedly interested in but I just am not when I see them in that format.I realised after a while that one of the main reasons I go online is to expand my horizons. I'm actively looking for something new or interesting or surprising that I might not have encountered or thought about before. I am also looking for perspective - give me a broad picture of how the world is so I can calibrate and introspect where my own perspective differs and could be updated. I want to see the things that don't fully align with my ideas.So it turns out personalised feeds are actively curating against what I'm looking for. I'm curious if others are like me or is this just something weird about me. I think it is very much why I like Hacker News format. It's in the broad areas of my interests but it is anything but curated just for me.",
-          "You know what I like about this? It's 100% pure nerd content, no sneaky influencer videos or clickbaity news.It does need a new-to-old sort though, which is easy to add in.If you watched all of these videos, you would be the smartest, most annoying person ever. Lol"
+          "I've been a bit fascinated by my lack of interest in the feeds that are curated for me. They are all things I'm supposedly interested in but I just am not when I see them in that format.I realised after a while that one of the main reasons I go online is to expand my horizons. I'm actively looking for something new or interesting or surprising that I might not have encountered or thought about before. I am also looking for perspective - give me a broad picture of how the world is so I can calibrate and introspect where my own perspective differs and could be updated. I want to see the things that don't fully align with my ideas.So it turns out personalised feeds are actively curating against what I'm looking for. I'm curious if others are like me or is this just something weird about me. I think it is very much why I like Hacker News format. It's in the broad areas of my interests but it is anything but curated just for me."
         ]
       }
     },
@@ -26,8 +26,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-31T19:16:30+00:00",
       "summary": "TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8",
-      "score": 369,
-      "comments": 176,
+      "score": 447,
+      "comments": 208,
       "discussion_url": "https://news.ycombinator.com/item?id=50319143",
       "extra": {
         "top_comments": [
@@ -38,20 +38,38 @@
       }
     },
     {
+      "id": "50320963",
+      "title": "An Italian farmer found some unknown seeds in his attic and planted them",
+      "url": "https://www.smithsonianmag.com/science-nature/italian-farmer-found-unknown-seeds-attic-with-nothing-lose-planted-them-result-biblical-180989644/",
+      "source": "Hacker News",
+      "published_at": "2026-10-31T22:41:06+00:00",
+      "summary": "An Italian farmer found some unknown seeds in his attic and planted them",
+      "score": 299,
+      "comments": 83,
+      "discussion_url": "https://news.ycombinator.com/item?id=50320963",
+      "extra": {
+        "top_comments": [
+          "The damage by the \"progress\" is multifold and pervasive. GM foods, with a goal of high yields, lost all nutritional value and gave the world insipid food and killed the natural foods forever. Supply chains and food regulations meant extreme processing of already killed food. What's left is bacteria-less, nutrition-less, sugary pulp that digests easily, increasing the consumption and economy.If I think of any food and taste from the 70's, I feel suffocated now. It's disgusting to see all processed, sugar-loaded, gene-modified, beautiful foods in the stores.The economy planners gave you cars, roads, food stores, supply chains and took away your time to grow your own food. You are just forced to take 5x amount of food in your car and consume it like biological pump with inputs and outputs. You became fat and ill and the economy tells you to believe it as a norm and call it growth. They even show in TV how all this is normal so that you don't feel bad about it.You are turned into a country full of workers with everything streamlined to make you focus on the work. Your short working years are good enough. It has machinery to dump you in nursing home and not let your younger family care for you. Small kids? You got care centers. Don't waste your time in caring for others or yourself. Just get into the commute circus.",
+          "Many farmers here in Switzerland grow urdinkel - ancient spelt. In the USA most farmers grew it also until around the 1920s but then a new wheat came out that was easier to process. Spelt has thicker hulls and wears down the mill faster so the mills switched to the new wheat and the farmers all had to switch too.Based on the name I think ur (ancient) Dinkel (spelt) is even older than regular spelt but I'm not sure. All I know is that it makes great crackers but terrible pasta and ok bread but not great.",
+          "key points about wheat Gross (the Italian farmer) discovered in 1990 his attic:+ It fared better during droughts, growing so tall that it overshadowed the weeds. It didn’t need fertilizer or herbicides.+ It's height can be a liability. Heavy winds, rains and hail can make the tall stems flip over before the grain ripens, ruining harvests.+ Working with the lab of Teofilo Vamerali, Perobelli determined that the grain was Triticum turgidum—literally “swollen wheat” in Latin. Known in English as “poulard wheat,” it had originally evolved in what today are Turkey, Egypt and other nearby Mediterranean countries. And searching agricultural references, Perobelli found that it had been grown in Italy, too, until farmers shifted toward higher-yield commercial varieties. That solved the mystery of the seed bag stashed away in the attic: It had survived because Grossi’s grandfather saved some of the heritage grains."
+        ]
+      }
+    },
+    {
       "id": "50319358",
       "title": "Anthropic blocks users for anything touching training larger models",
       "url": "https://twitter.com/jiahaoshao1/status/2116475922190922088",
       "source": "Hacker News",
       "published_at": "2026-10-31T19:39:19+00:00",
       "summary": "Anthropic blocks users for anything touching training larger models",
-      "score": 218,
-      "comments": 123,
+      "score": 298,
+      "comments": 169,
       "discussion_url": "https://news.ycombinator.com/item?id=50319358",
       "extra": {
         "top_comments": [
           "It's very clear to me that however much you like Claude and Anthropic models, every professional user shoudl be actively cultivating a set of alternatives and fallbacks to use and seeking to ensure the overall ecosystem is as open, standardised and portable as possible.Anthropic is highly opinionated, dogmatic and idealistic. They have made a pragmatic decision already to cut loose a whole swathe of users so they can pursue areas higher up the value chain. that was essentially the original decision they made when they went after software engineering instead of general users. The fact they are repeating this over and over by continuing to carve out sets of users and usages they don't want reinforces this as a persistent core principle rather than a single pragmatic business decision.What this means is that at a higher level, their core principle is to sacrifice users they don't \"need\" rather than provide a broad, accessible service. Which means in turn, you have to accept that when your usage conflicts with their interests, you are at very high risk they will cut you out. If you already depend on Anthropic in any critical path of your daily life, this will be a significant issue.",
-          "Something I've seen it do recently is refusing to extract services out of my own monolith code base because it finds copying code morally wrong.But its refusal to work pattern is getting pretty obnoxious. Another one I ran into last week was it refused to start a developer session to do browser testing for a code base it was working on because signing in was suddenly against it's programming.It listed all the conditions it needed for a sign in to be possible, agreed that my code base met all conditions, but refused to progress. I tried it in multiple fresh sessions with the same result.",
-          "This user is based in Hong Kong, where Claude is geo-blocked and not available. If you try visiting claude.ai from a Hong Kong IP address, you get an \"unavailable in this region\" message.They are likely accessing Claude via a VPN. Doing model training work over a VPN is a highly suspicious signal, and likely triggers Anthropic's classifiers. It's not surprising that their account got flagged."
+          "Intelligence has to become a commodity. If your setup does not allow you to hot-swap a Claude Code with a Pi running astra and move on, you will be in trouble.Five years ago I was spending up to €1000 a day in Google ads for my star-map company, Greaterskies. After a few months of meetings with an ever-rotating group of \"experts\" working for Google, and advising me in my ads strategy, I had reached a point where most of my revenue was going to Google. What was left was barely enough to keep going.This is what capture feels like. You still own your company, but you are essentially an operator making money for someone else.I think this will be the fate of people who allow their processes to be captured by the model providers. Always run at least two harnesses, and make sure that they are swappable.",
+          "Something I've seen it do recently is refusing to extract services out of my own monolith code base because it finds copying code morally wrong.But its refusal to work pattern is getting pretty obnoxious. Another one I ran into last week was it refused to start a developer session to do browser testing for a code base it was working on because signing in was suddenly against it's programming.It listed all the conditions it needed for a sign in to be possible, agreed that my code base met all conditions, but refused to progress. I tried it in multiple fresh sessions with the same result."
         ]
       }
     },
@@ -62,32 +80,14 @@
       "source": "Hacker News",
       "published_at": "2026-10-31T13:39:52+00:00",
       "summary": "https://github.com/jepsen-io/particledb",
-      "score": 210,
-      "comments": 116,
+      "score": 238,
+      "comments": 136,
       "discussion_url": "https://news.ycombinator.com/item?id=50316100",
       "extra": {
         "top_comments": [
           "Brutal!> ParticleDB 1.1.4 claimed to be a Postgres-compatible database ... Instead, we found a library of confusion> exhibited frequent, profound transactional anomalies in essentially every way we could measure. We routinely observed the loss of committed writes, internal consistency violations, G1a (Aborted Read), G1b (Intermediate Read), and P4 (Lost Update). In the append workload, successfully appended values would routinely disappear from later reads of a given key. Our test suite inferred every kind of cyclic anomaly including G0, G1c, G-Single, and G2-item, but many of these can be attributed to more basic issues, like write loss. These issues occurred with a single server and without faults, and affected every transaction mode, interface, and WAL mode tested",
-          "> ParticleDB’s home page advertised that ParticleDB was “formally proven” with a TLA+ proof. However, during our collaboration no TLA+ specification was available. It is unclear what properties might be proven, or whether they described ParticleDB as built.",
-          "I’ve come to learn an interesting dichotomy in software:Some software is correct by construction, in the sense that the overall design makes sense and the cases that don’t work are generally local bugs.Some software is incorrect by construction, and it tends to work by some combination of luck and by carefully working around the incorrect design in most or all code paths that could expose the incorrectness. (AI can be quite effective at finding the relevant places to insert workarounds.)ParticleDB sounds like the latter category. Plenty of large projects have portions that are in one category and portions that are in another.As an aside, for the last day or two, I’ve been contemplating that the Linux kernel’s handling of folio pinning seems to be in the incorrect-by-construction category. Good times. No, I haven’t found a hard-to-fix bug that I would credibly characterize as a security or likely accidental corruption issue [0], but this seems mostly like luck.[0] I do appear to have re-discovered a bug that some massive Anthropic dump from a couple months ago also found, and it’s getting fixed. If your application does “fixed” io_uring I/O or certain types of iommu-based or maybe RDMA on a memfd, you might plausibly encounter it on rare occasions. I didn’t bother making a reproducer."
-        ]
-      }
-    },
-    {
-      "id": "50320963",
-      "title": "An Italian farmer found some unknown seeds in his attic and planted them",
-      "url": "https://www.smithsonianmag.com/science-nature/italian-farmer-found-unknown-seeds-attic-with-nothing-lose-planted-them-result-biblical-180989644/",
-      "source": "Hacker News",
-      "published_at": "2026-10-31T22:41:06+00:00",
-      "summary": "An Italian farmer found some unknown seeds in his attic and planted them",
-      "score": 188,
-      "comments": 54,
-      "discussion_url": "https://news.ycombinator.com/item?id=50320963",
-      "extra": {
-        "top_comments": [
-          "Many farmers here in Switzerland grow urdinkel - ancient spelt. In the USA most farmers grew it also until around the 1920s but then a new wheat came out that was easier to process. Spelt has thicker hulls and wears down the mill faster so the mills switched to the new wheat and the farmers all had to switch too.Based on the name I think ur (ancient) Dinkel (spelt) is even older than regular spelt but I'm not sure. All I know is that it makes great crackers but terrible pasta and ok bread but not great.",
-          "key points about wheat Gross (the Italian farmer) discovered in 1990 his attic:+ It fared better during droughts, growing so tall that it overshadowed the weeds. It didn’t need fertilizer or herbicides.+ It's height can be a liability. Heavy winds, rains and hail can make the tall stems flip over before the grain ripens, ruining harvests.+ Working with the lab of Teofilo Vamerali, Perobelli determined that the grain was Triticum turgidum—literally “swollen wheat” in Latin. Known in English as “poulard wheat,” it had originally evolved in what today are Turkey, Egypt and other nearby Mediterranean countries. And searching agricultural references, Perobelli found that it had been grown in Italy, too, until farmers shifted toward higher-yield commercial varieties. That solved the mystery of the seed bag stashed away in the attic: It had survived because Grossi’s grandfather saved some of the heritage grains.",
-          "> It also had more arginine, an amino acid that children need to grow.My kingdom for even a tiny bit of scientific literacy amongst people who are reporting on science.Not only is this absurd (\"children\" need all amino acids to grow...as does anyone else), arginine isn’t even one of the essential amino acids. Your body makes it unless something is seriously wrong."
+          "I’ve come to learn an interesting dichotomy in software:Some software is correct by construction, in the sense that the overall design makes sense and the cases that don’t work are generally local bugs.Some software is incorrect by construction, and it tends to work by some combination of luck and by carefully working around the incorrect design in most or all code paths that could expose the incorrectness. (AI can be quite effective at finding the relevant places to insert workarounds.)ParticleDB sounds like the latter category. Plenty of large projects have portions that are in one category and portions that are in another.As an aside, for the last day or two, I’ve been contemplating that the Linux kernel’s handling of folio pinning seems to be in the incorrect-by-construction category. Good times. No, I haven’t found a hard-to-fix bug that I would credibly characterize as a security or likely accidental corruption issue [0], but this seems mostly like luck.[0] I do appear to have re-discovered a bug that some massive Anthropic dump from a couple months ago also found, and it’s getting fixed. If your application does “fixed” io_uring I/O or certain types of iommu-based or maybe RDMA on a memfd, you might plausibly encounter it on rare occasions. I didn’t bother making a reproducer.",
+          "> Given the severity and extent of the safety errors we found, and the process which produced them, Jepsen recommends users halt further deployment of ParticleDB and migrate to other databases as soon as possible. Consider checking and/or rebuilding database state from more reliable sources, if available.I guess that's what happens when you vibecode a database..."
         ]
       }
     },
@@ -98,8 +98,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-31T18:38:16+00:00",
       "summary": "It's the memory latency, stupid",
-      "score": 140,
-      "comments": 41,
+      "score": 174,
+      "comments": 48,
       "discussion_url": "https://news.ycombinator.com/item?id=50318720",
       "extra": {
         "top_comments": [
@@ -116,14 +116,14 @@
       "source": "Hacker News",
       "published_at": "2026-10-31T22:46:12+00:00",
       "summary": "Memdoor: A team of 5 Qwen3.8-27B models beats Fable 5 on LiveCodeBench Hard",
-      "score": 99,
-      "comments": 49,
+      "score": 170,
+      "comments": 92,
       "discussion_url": "https://news.ycombinator.com/item?id=50320995",
       "extra": {
         "top_comments": [
           "We desperately need to keep local models competitive with the hyper scalers. I won't want to be beholden to them and their whims forever. With anthropic now restricting game reverse engineering I think we're about to cross a Rubicon of censorship.",
-          "I'd wait for more benchmarks before making any conclusions since this benchmark has only \"The first ten problems of their LiveCodeBench Hard list\". And LiveCodeBench Hard is a several years old benchmark. Could be very saturated",
-          "That's pretty interesting, because with the Bonsai 2 quantisations it is quite achievable to get Qwen 27B running at 50 t/s on reasonably priced gaming machine [0]. Which in turn suggests that Fable 5 coding performance can be achieved locally with a bit of clever harnessing.Although the same harnessing should also improve Fable's performance. The important thing here is the cap for local performance looks like it could be quite high.[0] https://store.steampowered.com/hwsurvey/Steam-Hardware-Softw... suggests 16GB VRAM, 32 GB system."
+          "That's pretty interesting, because with the Bonsai 2 quantisations it is quite achievable to get Qwen 27B running at 50 t/s on reasonably priced gaming machine [0]. Which in turn suggests that Fable 5 coding performance can be achieved locally with a bit of clever harnessing.Although the same harnessing should also improve Fable's performance. The important thing here is the cap for local performance looks like it could be quite high.[0] https://store.steampowered.com/hwsurvey/Steam-Hardware-Softw... suggests 16GB VRAM, 32 GB system.",
+          "There is something to say about the power of brute force approaches. Right now scaling multi agent is seemingly what is becoming the next important axis, though very strongly constrained by quality of communication protocol and compute. Even if one model is not strong enough individually, more models and more attempts as well as differing opinions may nudge the models into a better solution basins.Kind of an extension of the effect where you talk to a model, it is super confident (but wrong), you correct it not directly but perhaps with a question and asking it to clarify. This then in turn leads to a better approach overall."
         ]
       }
     },
@@ -134,8 +134,8 @@
       "source": "Hacker News",
       "published_at": "2026-10-31T19:07:36+00:00",
       "summary": "The Duty of a Scholar",
-      "score": 92,
-      "comments": 28,
+      "score": 109,
+      "comments": 31,
       "discussion_url": "https://news.ycombinator.com/item?id=50319061",
       "extra": {
         "top_comments": [
