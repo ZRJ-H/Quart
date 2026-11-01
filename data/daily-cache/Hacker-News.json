@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-10-31T14:04:34.371407+08:00",
+  "cached_at": "2026-11-01T11:00:26.305481+08:00",
   "articles": [
     {
-      "id": "50305025",
-      "title": "Northflank Breached",
-      "url": "https://status.northflank.com",
+      "id": "50319510",
+      "title": "HackerTube: YouTube built from videos recommended by HN",
+      "url": "https://karpathy.bearblog.dev/hacker-tube/",
       "source": "Hacker News",
-      "published_at": "2026-10-30T15:10:31+00:00",
-      "summary": "Northflank Breached",
-      "score": 405,
-      "comments": 299,
-      "discussion_url": "https://news.ycombinator.com/item?id=50305025",
+      "published_at": "2026-10-31T19:56:53+00:00",
+      "summary": "YouTube-style UI over 6,454 videos sourced from 39,834 HN comments since 2007.https://hackertube.org/",
+      "score": 804,
+      "comments": 257,
+      "discussion_url": "https://news.ycombinator.com/item?id=50319510",
       "extra": {
         "top_comments": [
-          "I hope this is a real wake-up call for teams running anything remotely SaaS-shaped. I count at least six substantial, lightning-speed attacks against multi-tenant as-a-service vendors since September. Not this year--just since last month. PingCAP/TiDB, Fireworks AI, Zeabur, OpenCode Console, Railway, now Northflank. All of them modern \"we keep your content safe\" players with high hopes and probably pretty good protections.This is a full infosec emergency unfolding here. No matter how grinding it is to motivate a team to invest in protection or resilience (and it is grinding): We gotta get ready. Stat! The AI-accelerated attacker apocalypse has begun. It's boom, boom, boom, thanks for everything, on to the next. They have us sighted and are firing for effect.So credential rotation, tripwire secrets, DFIR on standby, solid vulnerability and intrusion detection, real listening to that signal, minimized blast radius, spending caps and time limits and tight scoping on credentials, fast incident alerting... We need to get on a real war footing here.",
-          "Unfortunately for infra startups, I think we're going to see a convergence back to hyperscalers as a result of incidents like this and railway.There's no amount of \"nicer to use\" that can replace security, at least certainly when selling to enterprises",
-          "A trick i've started doing is encrypting my env vars, then hard-code the decryption key in the codethat way if the provider gets popped, they need my binary to decrypt itit shouldn't be necessary and it sounds stupid, but in cases like this, it proves invaluable (it appears they don't have customer code/binary access, but maybe that wasn't important enough to mention)"
+          "It's so refreshing browsing this compared to YouTube, it feels like I don't have to constantly be on high alert at being baited into some trap. Makes you wonder what kind of internet could be possible if all these tech giants weren't just optimizing for engagement and addiction.",
+          "I've been a bit fascinated by my lack of interest in the feeds that are curated for me. They are all things I'm supposedly interested in but I just am not when I see them in that format.I realised after a while that one of the main reasons I go online is to expand my horizons. I'm actively looking for something new or interesting or surprising that I might not have encountered or thought about before. I am also looking for perspective - give me a broad picture of how the world is so I can calibrate and introspect where my own perspective differs and could be updated. I want to see the things that don't fully align with my ideas.So it turns out personalised feeds are actively curating against what I'm looking for. I'm curious if others are like me or is this just something weird about me. I think it is very much why I like Hacker News format. It's in the broad areas of my interests but it is anything but curated just for me.",
+          "You know what I like about this? It's 100% pure nerd content, no sneaky influencer videos or clickbaity news.It does need a new-to-old sort though, which is easy to add in.If you watched all of these videos, you would be the smartest, most annoying person ever. Lol"
         ]
       }
     },
     {
-      "id": "50303172",
-      "title": "The $6.3B Binance hack was pulled off in just 20 minutes",
-      "url": "https://www.wired.com/story/the-dollar63-billion-binance-hack-was-pulled-off-in-just-20-minutes/",
+      "id": "50319143",
+      "title": "TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8",
+      "url": "https://atlasum.net/blog/cve-2026-98432-linux-ipv4-tcp-uaf",
       "source": "Hacker News",
-      "published_at": "2026-10-30T12:50:01+00:00",
-      "summary": "The $6.3B Binance hack was pulled off in just 20 minutes",
-      "score": 391,
-      "comments": 267,
-      "discussion_url": "https://news.ycombinator.com/item?id=50303172",
+      "published_at": "2026-10-31T19:16:30+00:00",
+      "summary": "TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8",
+      "score": 369,
+      "comments": 176,
+      "discussion_url": "https://news.ycombinator.com/item?id=50319143",
       "extra": {
         "top_comments": [
-          "> saying it will cover all losses from the hack and is working with law enforcement officials to identify who is responsible.Isn't Binance the one that needs to be prosecuted for negligent security? How does \"a compromised laptop\" lead to a $6bn wipe in a matter of minutes?This is why banks are regulated, though I have no idea if/whether these platforms are regulated in any similar way.",
-          "Interesting, when the Cryptsy founder stole millions via laundering coins in Coinbase exchange, the government, FBI, and CIA did jack sh!t to recover the lost funds!He is still in China living with his girlfriend.Miami, Florida – A 17-count indictment was unsealed in federal court in Miami, Florida charging Paul E. Vernon, 48, the founder, operator, and Chief Executive Officer (CEO) of Project Investors Inc., doing business as Cryptsyhttps://www.justice.gov/usao-sdfl/pr/ceo-major-online-crypto...",
-          "The heist itself only took 20 minutes, but the preparation is a business that has gone on for years. Much like a heist movie, the exciting bit is just the conclusion after a long build-up where Danny gets the gang together, plans it, and executes it."
+          "> TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8I know it's customary for HN to edit titles to remove extraneous information, but removing \"Linux\" here really takes away something useful and relevant. This is a Linux vulnerability. If you're running *BSD or Mac or Windows, not affected.",
+          "Some notes I've got about this:- MPTCP is not a requirement, it is a generic use-after-free.- Exploitability over the internet is unlikely, most ISP routers drop packets with IP options fields.- At least according to Red Hat, dropping packets with IP options yourself helps, but is not a full mitigation.- Successful exploit requires multiple CPU cores to process packets, so systems with just a single core or packet processing pinned to a single core are not affected.",
+          "How are Ubuntu and RHEL not fixed? Few operating systems market themselves more as suitable for servers. What are they doing over there?"
         ]
       }
     },
     {
-      "id": "50307190",
-      "title": "My favourite PowerMac is a Nintendo Wii",
-      "url": "https://virtuallyfun.com/2026/10/29/my-favourite-powermac-is-a-nintendo-wii/",
+      "id": "50319358",
+      "title": "Anthropic blocks users for anything touching training larger models",
+      "url": "https://twitter.com/jiahaoshao1/status/2116475922190922088",
       "source": "Hacker News",
-      "published_at": "2026-10-30T17:25:15+00:00",
-      "summary": "My favourite PowerMac is a Nintendo Wii",
-      "score": 275,
-      "comments": 77,
-      "discussion_url": "https://news.ycombinator.com/item?id=50307190",
+      "published_at": "2026-10-31T19:39:19+00:00",
+      "summary": "Anthropic blocks users for anything touching training larger models",
+      "score": 218,
+      "comments": 123,
+      "discussion_url": "https://news.ycombinator.com/item?id=50319358",
       "extra": {
         "top_comments": [
-          "Interesting timing. Nintendo just shutdown Mariokart Tour on mobile. I went back to my Nintendo Wii which was already modded, and updated it to the latest modded hacks and I was amazed to see more software, stability, and even online gaming brought back!Hopefully their port of Mac OS gets put in the Open Shop Channel!Open Shop Channel: https://oscwii.org WiiLink for online gaming: https://wiilink.ca",
-          "Same guy who made NT for Macintosh https://github.com/Wack0/Macintosh and GC/Wii https://github.com/Wack0/entii-for-workcubes if you're unaware.",
-          "Is it possible to go the other way? Make a PowerMac into a Nintendo Wii?"
+          "It's very clear to me that however much you like Claude and Anthropic models, every professional user shoudl be actively cultivating a set of alternatives and fallbacks to use and seeking to ensure the overall ecosystem is as open, standardised and portable as possible.Anthropic is highly opinionated, dogmatic and idealistic. They have made a pragmatic decision already to cut loose a whole swathe of users so they can pursue areas higher up the value chain. that was essentially the original decision they made when they went after software engineering instead of general users. The fact they are repeating this over and over by continuing to carve out sets of users and usages they don't want reinforces this as a persistent core principle rather than a single pragmatic business decision.What this means is that at a higher level, their core principle is to sacrifice users they don't \"need\" rather than provide a broad, accessible service. Which means in turn, you have to accept that when your usage conflicts with their interests, you are at very high risk they will cut you out. If you already depend on Anthropic in any critical path of your daily life, this will be a significant issue.",
+          "Something I've seen it do recently is refusing to extract services out of my own monolith code base because it finds copying code morally wrong.But its refusal to work pattern is getting pretty obnoxious. Another one I ran into last week was it refused to start a developer session to do browser testing for a code base it was working on because signing in was suddenly against it's programming.It listed all the conditions it needed for a sign in to be possible, agreed that my code base met all conditions, but refused to progress. I tried it in multiple fresh sessions with the same result.",
+          "This user is based in Hong Kong, where Claude is geo-blocked and not available. If you try visiting claude.ai from a Hong Kong IP address, you get an \"unavailable in this region\" message.They are likely accessing Claude via a VPN. Doing model training work over a VPN is a highly suspicious signal, and likely triggers Anthropic's classifiers. It's not surprising that their account got flagged."
         ]
       }
     },
     {
-      "id": "50309647",
-      "title": "Through Captain Jean-Luc Picard, Patrick Stewart taught us the measure of a man",
-      "url": "https://www.bostonglobe.com/2026/10/29/metro/patrick-stewart-picard-star-trek-the-next-generation/",
+      "id": "50316100",
+      "title": "Jepsen: ParticleDB 1.1.4",
+      "url": "https://jepsen.io/analyses/particledb-1.1.4",
       "source": "Hacker News",
-      "published_at": "2026-10-30T20:23:30+00:00",
-      "summary": "Through Captain Jean-Luc Picard, Patrick Stewart taught us the measure of a man",
-      "score": 272,
-      "comments": 148,
-      "discussion_url": "https://news.ycombinator.com/item?id=50309647",
+      "published_at": "2026-10-31T13:39:52+00:00",
+      "summary": "https://github.com/jepsen-io/particledb",
+      "score": 210,
+      "comments": 116,
+      "discussion_url": "https://news.ycombinator.com/item?id=50316100",
       "extra": {
         "top_comments": [
-          "Archive link: https://archive.is/HuNjT",
-          "I find it fairly amazing that they could say this without mentioning the episode \"The measure of a man\" in which Picard literally makes the case.Perhaps it is uncomfortable for people to think about now.",
-          "So many posts and comments are saying the same thing. I guess it's one of the things we remember most about Patrick Stewart and his portrayal of a starship captain. The quintessential captain. Honorable, wise, but humble, diplomatic, reasonable, with high morals, and fortitude under pressure."
+          "Brutal!> ParticleDB 1.1.4 claimed to be a Postgres-compatible database ... Instead, we found a library of confusion> exhibited frequent, profound transactional anomalies in essentially every way we could measure. We routinely observed the loss of committed writes, internal consistency violations, G1a (Aborted Read), G1b (Intermediate Read), and P4 (Lost Update). In the append workload, successfully appended values would routinely disappear from later reads of a given key. Our test suite inferred every kind of cyclic anomaly including G0, G1c, G-Single, and G2-item, but many of these can be attributed to more basic issues, like write loss. These issues occurred with a single server and without faults, and affected every transaction mode, interface, and WAL mode tested",
+          "> ParticleDB’s home page advertised that ParticleDB was “formally proven” with a TLA+ proof. However, during our collaboration no TLA+ specification was available. It is unclear what properties might be proven, or whether they described ParticleDB as built.",
+          "I’ve come to learn an interesting dichotomy in software:Some software is correct by construction, in the sense that the overall design makes sense and the cases that don’t work are generally local bugs.Some software is incorrect by construction, and it tends to work by some combination of luck and by carefully working around the incorrect design in most or all code paths that could expose the incorrectness. (AI can be quite effective at finding the relevant places to insert workarounds.)ParticleDB sounds like the latter category. Plenty of large projects have portions that are in one category and portions that are in another.As an aside, for the last day or two, I’ve been contemplating that the Linux kernel’s handling of folio pinning seems to be in the incorrect-by-construction category. Good times. No, I haven’t found a hard-to-fix bug that I would credibly characterize as a security or likely accidental corruption issue [0], but this seems mostly like luck.[0] I do appear to have re-discovered a bug that some massive Anthropic dump from a couple months ago also found, and it’s getting fixed. If your application does “fixed” io_uring I/O or certain types of iommu-based or maybe RDMA on a memfd, you might plausibly encounter it on rare occasions. I didn’t bother making a reproducer."
         ]
       }
     },
     {
-      "id": "50305573",
-      "title": "The federated code forge",
-      "url": "https://tangled.org/blog/forge/",
+      "id": "50320963",
+      "title": "An Italian farmer found some unknown seeds in his attic and planted them",
+      "url": "https://www.smithsonianmag.com/science-nature/italian-farmer-found-unknown-seeds-attic-with-nothing-lose-planted-them-result-biblical-180989644/",
       "source": "Hacker News",
-      "published_at": "2026-10-30T15:44:29+00:00",
-      "summary": "The federated code forge",
-      "score": 259,
-      "comments": 82,
-      "discussion_url": "https://news.ycombinator.com/item?id=50305573",
+      "published_at": "2026-10-31T22:41:06+00:00",
+      "summary": "An Italian farmer found some unknown seeds in his attic and planted them",
+      "score": 188,
+      "comments": 54,
+      "discussion_url": "https://news.ycombinator.com/item?id=50320963",
       "extra": {
         "top_comments": [
-          "Really looking forward to seeing Tangled develop! I've got a side project that's main repo and CI is on my self-hosted Gitea but code and releases are mirrored to Github; I'm hoping to move it off Gitea and onto Tangled for code/releases/potentially CI and just keep Github for discoverability/backups/namespace \"squatting\". Just need git-bug to add a Tangled bridge so I can keep issues synced and (ideally) for there to be instructions for running the client self-hosted. It doesn't have to be a full featured client but I also don't want to be SOL for web visibility if the main Tangled appview is down.One musing: I did run into my first \"issue\" with federated Git hosting the other day while setting up Neovim on a new machine. One of the plugins I use is hosted on Tangled and I guess its backing Knot was down. This was awkward for two reasons:1. It as unclear to me from the Tangled website the backing knot was the issue (for a while I thought it was something on my end)2. I really had no backup plans for something like a Neovim plugin's source forge being down and, clearly, neither did the Neovim package manager as it just kept showing an error on every session I started with no way to fix it :).I suppose in the long run we really shouldn't be assuming that code storage is just Always There or easily cached somewhere, but I anticipate some growing pains in the mean time. ATProto doesn't seem to have the benefit ActivityPub has where if the instance I wanted to view content on was down I can usually find some other instance that's gotten the messages.",
-          "Hi! Tangled co-founder here. We're super stoked with this launch -- we've stabilized our AT Protocol lexicons, completely overhauled our architecture and UI, and made self-hosting the entire stack (or parts of it!) incredibly easy. We've also shipped support for organizations, and have private repos rolling out in the following couple weeks.Happy to answer any questions at all.",
-          "Finnish startup Tangled raises €3.8M to reinvent code collaboration https://www.vestbee.com/insights/articles/tangled-raises-3-8..."
+          "Many farmers here in Switzerland grow urdinkel - ancient spelt. In the USA most farmers grew it also until around the 1920s but then a new wheat came out that was easier to process. Spelt has thicker hulls and wears down the mill faster so the mills switched to the new wheat and the farmers all had to switch too.Based on the name I think ur (ancient) Dinkel (spelt) is even older than regular spelt but I'm not sure. All I know is that it makes great crackers but terrible pasta and ok bread but not great.",
+          "key points about wheat Gross (the Italian farmer) discovered in 1990 his attic:+ It fared better during droughts, growing so tall that it overshadowed the weeds. It didn’t need fertilizer or herbicides.+ It's height can be a liability. Heavy winds, rains and hail can make the tall stems flip over before the grain ripens, ruining harvests.+ Working with the lab of Teofilo Vamerali, Perobelli determined that the grain was Triticum turgidum—literally “swollen wheat” in Latin. Known in English as “poulard wheat,” it had originally evolved in what today are Turkey, Egypt and other nearby Mediterranean countries. And searching agricultural references, Perobelli found that it had been grown in Italy, too, until farmers shifted toward higher-yield commercial varieties. That solved the mystery of the seed bag stashed away in the attic: It had survived because Grossi’s grandfather saved some of the heritage grains.",
+          "> It also had more arginine, an amino acid that children need to grow.My kingdom for even a tiny bit of scientific literacy amongst people who are reporting on science.Not only is this absurd (\"children\" need all amino acids to grow...as does anyone else), arginine isn’t even one of the essential amino acids. Your body makes it unless something is seriously wrong."
         ]
       }
     },
     {
-      "id": "50305637",
-      "title": "Florilegium: Procedural Flowers in LaTeX",
-      "url": "https://github.com/kevinraymond/florilegium",
+      "id": "50318720",
+      "title": "It's the memory latency, stupid",
+      "url": "https://pivotlake.io/blog/its-the-memory-latency-stupid/",
       "source": "Hacker News",
-      "published_at": "2026-10-30T15:48:12+00:00",
-      "summary": "Florilegium: Procedural Flowers in LaTeX",
-      "score": 240,
-      "comments": 44,
-      "discussion_url": "https://news.ycombinator.com/item?id=50305637",
+      "published_at": "2026-10-31T18:38:16+00:00",
+      "summary": "It's the memory latency, stupid",
+      "score": 140,
+      "comments": 41,
+      "discussion_url": "https://news.ycombinator.com/item?id=50318720",
       "extra": {
         "top_comments": [
-          "In the same vein, a few years ago, somebody implemented procedural decorations for a recreation of Byrne's \"Elements of Euclid\" in LaTeX: https://github.com/jemmybutton/byrne-euclid(bottom of the readme)",
-          "In the reddit post, it is clear the person who came up with this didn't want it to be copied. I feel sad for that person.",
-          "I've recently spent some time staring at the contents of the MacTeX Distribution.https://tug.org/mactex/Which is how I discovered Toby Thruston's classic, \"Drawing with MetaPost\".https://github.com/thruston/Drawing-with-MetapostProcedural drawing with Lua is lovely. MetaPost provides another drawing language that might be considered more TeX-like.I'm not sure. I tend to be humbled by the TeX community. Inspired."
+          "I work with another team at work that uses lots of message passing, C++ virtual methods in deeply nested class hierarchies, large DOMs and off-the-shelf C++ STL containers... on a STM32MP1, which has an in-order Cortex-A7 and a pittance of cache.On the other hand, in my team I wrote my custom C++ STL containers that allocate inline, SAX-style processing libraries and an object pool with links that use index+generations like 2000s video games... on a STM32H5 with less than a megabyte of RAM.Mechanical sympathy feels like a lost art to people I demonstrate it to... and I had to demonstrate to the first team with benchmark numbers that I would not be the bottleneck between us by orders of magnitudes.",
+          "https://people.freebsd.org/~lstewart/articles/cpumemory.pdfHas anyone rewritten this for 2026?",
+          "I feel like the solution presented is just a clustered hashmap or “locality sensitive” if you’d like it.Still not orders of magnitude better."
         ]
       }
     },
     {
-      "id": "50306442",
-      "title": "Show HN: A working Nintendo in ~1GB of Qwen weights",
-      "url": "https://github.com/dbreunig/nesformer",
+      "id": "50320995",
+      "title": "Memdoor: A team of 5 Qwen3.8-27B models beats Fable 5 on LiveCodeBench Hard",
+      "url": "https://github.com/guregodevo/memdoor/tree/main/examples/workflows/team-solve",
       "source": "Hacker News",
-      "published_at": "2026-10-30T16:40:22+00:00",
-      "summary": "Show HN: A working Nintendo in ~1GB of Qwen weights",
-      "score": 227,
-      "comments": 118,
-      "discussion_url": "https://news.ycombinator.com/item?id=50306442",
+      "published_at": "2026-10-31T22:46:12+00:00",
+      "summary": "Memdoor: A team of 5 Qwen3.8-27B models beats Fable 5 on LiveCodeBench Hard",
+      "score": 99,
+      "comments": 49,
+      "discussion_url": "https://news.ycombinator.com/item?id=50320995",
       "extra": {
         "top_comments": [
-          "A couple thoughts on the process here…First off, Opus 5.5 built working weights and code with only two prompts:1. Read this article and any relevant source code: https://divagr.com/blog/qwenputer. Then explore if you could emulate the chip and ram in a Nintendo Entertainment System (as people do today with FPGAs in MISTRs) using this technique. If so, what size model would you have to build and if you could use smaller faster ones, could you get it to be at the standard clockspeed.It returned charts well illustrating any model would be _slow_. But it's still fun, so the second prompt was:2. I think we should build it! Just for fun. It's okay if it's not fast. We want to be able to have the weights, and a cli to run them that we can point at a ROM.Now while this was an _epic_ run by Opus (5.5 is a crazy capable model), this is a surprisingly well-structured challenge.There is a long-lived and incredible community of classic gaming emulation work online for it to reference. And that community has created…conformance tests! Opus found them and built against one, that has >3k golden instructions: https://github.com/christopherpow/nes-test-roms/blob/master/...Also, there is the original Qwenputer repo that Opus used to drive the weight writing. That was essential.But this is a great example of what these models can do with proper reference materials, great specs, conformance tests, and clear direction.",
-          "This opens up so many interesting opportunities. In principle one could compile a small VM inside the LLM weights. The VM can host for example a Python interpreter, a shell and tools like sed, cat, grep etc. Instead of LLMs having to do slow autoregressive token emission with the current \"external\" tool calling, it could literally execute everything except web search, inside the LLM, with just matmul operations. You could probably optimise this so it runs in batches. You could have a gdb like application that can step through the LLM forward pass. Anyway, just a crazy thought. Have a great weekend everyone!",
-          "I love these hacks, even though from an efficiency point of view it is horrifying to my assembly-code-golfing-brain. And it also gives some new appreciation for how much more efficient deterministic programs are compared to AI."
+          "We desperately need to keep local models competitive with the hyper scalers. I won't want to be beholden to them and their whims forever. With anthropic now restricting game reverse engineering I think we're about to cross a Rubicon of censorship.",
+          "I'd wait for more benchmarks before making any conclusions since this benchmark has only \"The first ten problems of their LiveCodeBench Hard list\". And LiveCodeBench Hard is a several years old benchmark. Could be very saturated",
+          "That's pretty interesting, because with the Bonsai 2 quantisations it is quite achievable to get Qwen 27B running at 50 t/s on reasonably priced gaming machine [0]. Which in turn suggests that Fable 5 coding performance can be achieved locally with a bit of clever harnessing.Although the same harnessing should also improve Fable's performance. The important thing here is the cap for local performance looks like it could be quite high.[0] https://store.steampowered.com/hwsurvey/Steam-Hardware-Softw... suggests 16GB VRAM, 32 GB system."
         ]
       }
     },
     {
-      "id": "50311686",
-      "title": "Show HN: To Honor Sir Patrick Stewart, Enjoy the TNG Episode Guessing Game",
-      "url": "https://tng.episodle.com/",
+      "id": "50319061",
+      "title": "The Duty of a Scholar",
+      "url": "https://www.daemonology.net/blog/2026-10-31-The-Duty-of-a-Scholar.html",
       "source": "Hacker News",
-      "published_at": "2026-10-30T23:51:24+00:00",
-      "summary": "Show HN: To Honor Sir Patrick Stewart, Enjoy the TNG Episode Guessing Game",
-      "score": 145,
-      "comments": 42,
-      "discussion_url": "https://news.ycombinator.com/item?id=50311686",
+      "published_at": "2026-10-31T19:07:36+00:00",
+      "summary": "The Duty of a Scholar",
+      "score": 92,
+      "comments": 28,
+      "discussion_url": "https://news.ycombinator.com/item?id=50319061",
       "extra": {
         "top_comments": [
-          "I appreciate this. The full text search is fairly crucial, as while I've seen the entire series more than once I cannot for the life of me remember \"the name of the episode where the aliens pretending to be dumb kidnap Geordi\", but the search is good enough to get there without being too obvious.",
-          "i watched TNG through when it aired as a child, and then again probably every other year since. i dont know anyone IRL who has seen or consumed more TNG, or loved it more than i doi couldnt get a single one right lol",
-          "It's great just a bit toooo hard.But it's for trekkies so I'm not going to judge, I like Star Trek but I can't say that I'm anywhere as close to being a hardcore trekky, I'm still learning and getting into it.I'm happy to see work like this and I'm also curious as to how you got all the screenshot content. Was that through scraping or ffmpeg going through video content or what? I'm deeply curious.Additionally, I think there (might) be a decent vibe-coded game about the game Oblivion and the intro sequence where Patrick Stewart plays the Emperor Uriel.His presence in Oblivion was far too short.We can perhaps honour him by extending the initial sequences of the game, with a game. Idea, methinks.Edit: Trekkies->trekky"
+          "Wow that showed up quickly.Readers might also consider my 2020 post \"On the use of a life\" to be an interesting companion piece: https://www.daemonology.net/blog/2020-09-20-On-the-use-of-a-...",
+          "> Members of the IEEE commit, for example, \"to hold paramount the safety, health, and welfare of the public...\" without that duty being limited to hazards arising from projects employing the Engineer in question: The duty \"to disclose promptly\" vests in any Engineer who recognizes that the hazard exists.As an active member of the IEEE for over a decade now, I have never seen anyone (aside from the author here) take this duty seriously. There are plenty of IEEE members working on things that directly cause such hazards.",
+          "The Intel claim it wasn't a problem: [1]Today, it would be a bigger deal. In the age of AI, exploiting hard to exploit holes is so much easier. AI has patience limited only by your budget.[1] https://www.itnews.com.au/news/intel-soothes-hyperthreading-..."
         ]
       }
     }
