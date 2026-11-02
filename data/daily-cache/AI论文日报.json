@@ -1,119 +1,120 @@
 {
-  "cached_at": "2026-11-01T14:33:50.231527+08:00",
+  "cached_at": "2026-11-02T11:00:37.636697+08:00",
   "articles": [
     {
-      "id": "2610.40655",
-      "title": "Elucidating the Design Space of LM Data Attribution",
-      "url": "https://arxiv.org/abs/2610.40655v1",
+      "id": "2610.41267",
+      "title": "From 1D Benchmarks to Complex 3D Geometries: Can Agents Reliably Specify Problems for Automated PDE Simulation?",
+      "url": "https://arxiv.org/abs/2610.41267v1",
       "source": "arXiv",
-      "published_at": "2026-10-29T17:59:53+00:00",
-      "summary": "Data attribution methods for Language Models (LMs) are typically evaluated using downstream tasks like fact retrieval. However, existing evaluations vary multiple dataset properties simultaneously, making it impossible to isolate exactly why an attribution algorithm fails. To diagnose these failures, we explore the design space of LLM data attribution, with a primary focus on evaluation. We introduce the Controlled Attribution Benchmark (CATT) for fact tracing, in which we fine-tune LLMs on entirely fictitious knowledge, providing unambiguous ground truth for attribution. This synthetic setup allows us to systematically alter one dataset configuration at a time, such as document redundancy and lexical distractors. With this configurable evaluation, we demonstrate that redundancy and distractors consistently degrade attribution performance. Rather than proposing a new estimator, we examine two design choices that are underexplored: the loss used to compute gradients and how per-token attribution scores are aggregated into a document score. We find that the true causal evidence within a training document is highly localized, but standard methods dilute this evidence into noise by averaging attribution scores across the entire document. We find that replacing standard cross-entropy loss gradients with the negative log-odds gradients surfaces the critical tokens from other uninformative ones. We can then aggregate only the top token scores to improve ground truth recall by 35 to 72 percentage points across multiple baselines on our diagnostic benchmark. The negative log-odds correction also generalizes to FTRACE-TREX, improving counterfactual retraining performance for every method we test, by up to 4.9x.",
+      "published_at": "2026-10-30T05:20:28+00:00",
+      "summary": "Turning an engineering request into a simulation requires consistent geometry, physics, boundary conditions, and numerical settings. Recent agent-assisted systems automate simulation setup, but successful execution alone does not establish whether the specification preserves the intended problem or correctly handles missing information. We study whether agents can reliably construct complete executable JSON specifications for automated geometry creation, meshing, PDE solving, and result export. Our workflow combines model extraction with deterministic scientific and capability checks, explicit clarification, and validated local patches that preserve unrelated accepted fields. We evaluate specification correctness, execution completion, and numerical verification separately. On 120 template-related requests, the full workflow achieves 98.3% correct first-turn specification and decision outcomes, compared with 92.5% for schema-assisted single shot and 82.5% for model-only: gains of 5.8 and 15.8 percentage points, respectively. It makes no false-ready decisions among the 42 requests requiring clarification or rejection. Component ablations identify contributions from scientific checks and conditional repair. Separate downstream studies cover 1D, 2D, and 3D steady and unsteady, linear and nonlinear problems, including flow and elasticity with complex three-dimensional wing geometries. A 30-case gallery demonstrates automated execution from retained JSON specifications, while 9 of 12 selected live user-to-results tests achieve joint specification, execution, export, and numerical-reference success (75.0%). These results support traceable, engineer-reviewed simulation assistance within the tested scope, while fresh-response regressions identify consistency as a priority for further improvement.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Steven Yu",
-          "Sheng-Yu Wang",
-          "Kimia Hamidieh",
-          "Antonio Torralba",
-          "David Bau"
+          "Akshat Jani",
+          "Sakhinana Sagar Srinivas",
+          "Venkataramana Runkana"
         ],
         "categories": [
-          "cs.CL"
+          "cs.AI",
+          "cs.CE"
         ]
       }
     },
     {
-      "id": "2610.40654",
-      "title": "Propose-Filter-Release: Scaling Noise to Typical Sensitivity via Private Filtering",
-      "url": "https://arxiv.org/abs/2610.40654v1",
+      "id": "2610.41264",
+      "title": "Rome Wasn't Built in One Turn: Replay-Grounded Reward Signals for Long-Horizon Freeciv Agents",
+      "url": "https://arxiv.org/abs/2610.41264v1",
       "source": "arXiv",
-      "published_at": "2026-10-29T17:59:49+00:00",
-      "summary": "An estimator can be accurate and stable on typical data, yet sensitive to a few possible records. Differentially private mechanisms commonly scale their noise to the worst-case influence of a single record, which lets these records dictate the noise even when the remaining data would allow far less. Removing them first would restore the smaller scale, but the removal must itself be private. We introduce \\emph{propose-filter-release} (PFR), which, by privately filtering its input, turns a mechanism that protects the addition or removal of a typical record, one that fits the remaining data, into one that is differentially private in the standard sense, on every input. Using our novel filtering step, PFR requires only a concave friendliness score, which measures how well a record fits a dataset, and a release mechanism that is friendly-DP, that is, private when the changed record fits the remaining data. For every such score and release mechanism, it guarantees differential privacy under public conditions on the number of records, so it is a general privacy primitive, comparable to propose-test-release, and FriendlyCore can be viewed as one of its implementations. We illustrate the generality of PFR by instantiating it for scalar statistics, principal subspace estimation, the KL divergence of user histograms, the effective resistances of a graph, and treatment-rule selection.",
+      "published_at": "2026-10-30T05:13:31+00:00",
+      "summary": "Training language-model agents to play long-horizon strategy games is hard because deterministic feedback is sparse and often arrives only at the end of a game. In-game scores can offer dense signals, but they do not reliably predict future outcomes: in 8-68% of position pairs across eight strategy games, the higher-scoring position leads to the worse outcome. We term this phenomenon scoreboard traps. In Freeciv, an open-source turn-based empire-building game where several players manage units, cities, and diplomacy over hundreds of turns, we look into better reward signals for gameplay agents. To facilitate this, we build CivHarness, an open system that saves current game states, branches on different decisions, and replays the game to future turns to provide measurable long-horizon feedback from saved positions. We use CivHarness to train CivTelescope, an LLM Judge that predicts which one of two game positions will yield the better outcome. On scoreboard-trap pairs, CivTelescope is 1.3-2.0 times more accurate than off-the-shelf language models, and it generalizes to new game starts, later turns, and unseen rules. We then train a Freeciv gameplay agent with CivTelescope as a dense reward, and call this recipe CivMarshmallow. When used in the middle stage of the game where scoreboard traps are common, CivMarshmallow reaches an average training phase gain of 8.94 points, 77% more than the best baseline, the end-of-game reward. Over the full 120-turn game, CivMarshmallow uses a hybrid reward that starts from the scoreboard or the end-of-game reward and shifts to CivTelescope as the game advances; this hybrid reward scores highest among the rewards we compare.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Moshe Shenfeld",
-          "Eliad Tsfadia",
-          "Katrina Ligett"
+          "Yanchen Liu",
+          "Xinyu Che",
+          "Brihi Joshi",
+          "Renzo Fukuda",
+          "Junhua Liu",
+          "Ruifeng Li",
+          "Yunfei Ge",
+          "Hang Yan",
+          "Xiang Ren"
         ],
         "categories": [
-          "cs.LG"
+          "cs.AI"
         ]
       }
     },
     {
-      "id": "2610.40649",
-      "title": "Rethinking Neural Thickets Without Weight Perturbations",
-      "url": "https://arxiv.org/abs/2610.40649v1",
+      "id": "2610.41245",
+      "title": "MEMIG: Self-evolving Memory Construction for Antibody Optimization",
+      "url": "https://arxiv.org/abs/2610.41245v1",
       "source": "arXiv",
-      "published_at": "2026-10-29T17:59:29+00:00",
-      "summary": "The Neural Thickets hypothesis posits that pretrained language models lie in dense neighborhoods of task-specific experts in weight space, which random Gaussian perturbations can uncover. We reproduce the reported gains, but show that they do not require this geometric explanation. Perturbing a single decoder block already recovers much of the improvement, while keeping the model entirely frozen and adding a random bias to its output logits matches or exceeds full-weight perturbations on most reasoning tasks. This suggests an alternative explanation based on output diversity, validation-based selection, and voting. We formalize this view as Perturb-Select-Vote (PSV), a general procedure that generates perturbed predictors, selects high-performing members on a small validation set, and aggregates their predictions. This interpretation connects Neural Thickets to established inference-time methods, including sampling, self-consistency, and verifier-guided selection. A first-order analysis further shows that small weight perturbations act primarily through their induced logit shifts. We extend this analysis to vision, where logit PSV substantially improves performance under domain shift, including on Earth observation, while full-weight perturbations provide little additional benefit. Together, these results suggest that the gains attributed to nearby weight-space experts can instead be obtained through output diversity, selection, and voting. Logit PSV realizes these benefits with a fully frozen model, providing a simple, training-free alternative to full-weight perturbation ensembles across language and vision.",
+      "published_at": "2026-10-30T04:39:18+00:00",
+      "summary": "Memory has become central to self-evolving LLM agents, which store and retrieve experience from past rollouts to guide future decisions. Existing systems represent this experience as free-form natural language and maintain it by rewriting, which fits tasks whose experience is narratable. However, in scientific discovery and optimization, experience is often a quantity measured by an oracle under a specific context. Rewriting it as text leaves no index for where a record should be, replaces a measurement with a description, and cannot express how interventions interact. To address this, we argue that agent memory for biomolecule optimization should instead be indexable, quantitative, and structured, and we introduce MEMIG. This memory construction framework realizes these three properties. In detail, MEMIG addresses each insight with a domain-grounded identifier and accumulates the quantitative effect measured by a property oracle, so that updates remain local and retrieval becomes an exact lookup. Next, MEMIG connects insights whose interventions are applied together and measures their epistasis by decomposing each evaluated set. Our results show that MEMIG improves performance in most settings across in silico antibody optimization tasks.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Nicolas Dufour",
-          "Elouan Gardès",
-          "Amil Dravid",
-          "Patrick Pérez",
-          "Loic Landrieu"
+          "Yunhui Jang",
+          "Zach Wang",
+          "Jai Doshi",
+          "Kangway Chuang",
+          "Sidney Lisanza",
+          "Taylor Joren"
+        ],
+        "categories": [
+          "cs.AI"
+        ]
+      }
+    },
+    {
+      "id": "2610.41244",
+      "title": "A Unified Framework for Probability Estimation of Data-Dependent Events",
+      "url": "https://arxiv.org/abs/2610.41244v1",
+      "source": "arXiv",
+      "published_at": "2026-10-30T04:37:40+00:00",
+      "summary": "We study the general problem of estimating $D(\\dde(S))$, the probability that an unknown distribution $D$ assigns to an event determined by a sample $S$ of $n$ i.i.d.\\ draws from $D$ through a known mapping $\\dde$. The estimation algorithm knows $\\dde$ and $S$ but does not have access to any additional samples from $D$. This formulation captures classical missing mass, the data-dependent targets of adaptive data analysis and post-selection inference, and the test error of a data-trained predictor, whose estimation was recently studied by \\new{Gastpar et al.\\ (2024a,b)}. Within this framework we examine the two classical approaches to estimation. The error of the empirical plug-in estimator is exactly a generalization gap, so generalization bounds transfer to it directly. The leave-one-out estimator, which recovers the Good--Turing estimator, is accurate for every mapping that is stable under the deletion of one sample point, including new structured examples such as neighborhoods of the sample and pierced sets. The main application of our framework is to error estimation for a predictor that combines a base classifier with memorized exceptions, a structure common in theory and in practice. For it, the test error is exactly the missing mass restricted to the error region of the base classifier, a region selected by the same sample. We formulate the general problem of \\emph{adaptive missing mass estimation} to address such dependence and propose a natural hybrid estimator, the Good--Turing estimator restricted to the selected region. We show that the generalization of the base classifier alone does not guarantee the accuracy of this estimator, and derive two bounds on its error: the first one based on the VC dimension of possible error regions and another based on the mutual information of the selected region with the sample.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Vitaly Feldman",
+          "Satyen Kale",
+          "Vinod Raman",
+          "Kunal Talwar",
+          "Ambuj Tewari"
         ],
         "categories": [
           "cs.LG",
-          "cs.AI",
-          "cs.CV"
+          "stat.ML"
         ]
       }
     },
     {
-      "id": "2610.40647",
-      "title": "Read, Allocate, Route: Role-Coupled Tokenization for Pixel-Space Generative Transformers",
-      "url": "https://arxiv.org/abs/2610.40647v1",
+      "id": "2610.41243",
+      "title": "Generative SDEs with Trainable Diffusion and Density-Based Losses",
+      "url": "https://arxiv.org/abs/2610.41243v1",
       "source": "arXiv",
-      "published_at": "2026-10-29T17:59:21+00:00",
-      "summary": "Pixel-space generative Transformers typically use one token per image patch, so capturing finer detail requires more tokens and makes global attention increasingly expensive. We observe that finer detail does not necessarily require more global communication: low-frequency structure benefits from global exchange, while high-frequency detail can be modeled locally. Based on this insight, we introduce SpecSlot, a pixel-space rectified-flow Transformer that decouples output detail from the length of the global attention sequence. SpecSlot expands each spatial anchor into multiple slots, each assigned a disjoint band of DCT coefficients; this separates anchor density from spectral subdivision. Only the lowest-frequency slot from each anchor participates in global attention, while all slots interact locally. This allows the model to increase spectral detail without enlarging the global sequence. A spatial head further adds a local correction to the spectral prediction, while the generative state, target, and loss remain in pixel space. On ImageNet-256, SpecSlot achieves a comparable final FID to a FLOPs-matched JiT control while converging faster. On ImageNet-512, it improves FID by 2.84 over the control with 3.9% fewer FLOPs, and comes within only 0.69 FID of JiT-B/16 at 38.2% lower cost. On text-to-image generation, SpecSlot surpasses JiT-B/8 on DPG-Bench by 1.06 at 40.6% lower forward cost.",
+      "published_at": "2026-10-30T04:35:59+00:00",
+      "summary": "We develop a divergence-kernel method for jointly optimizing neural SDE drift and diffusion fields and the initial Gaussian distribution, using losses that depend directly on the terminal density. In two- and eight-dimensional Gaussian-mixture experiments, we learn time-independent fields and obtain far fewer off-mode samples than score-based generators with similar parameter counts. The drift attracts samples toward the modes, while the diffusion helps disperse excess probability between them.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Jiongfan Yang",
-          "Weichen Fan",
-          "Haiwen Diao",
-          "Zhongang Cai",
-          "Ziwei Liu"
+          "Angxiu Ni"
         ],
         "categories": [
-          "cs.CV",
-          "cs.AI",
           "cs.LG",
-          "cs.NE"
-        ]
-      }
-    },
-    {
-      "id": "2610.40644",
-      "title": "Adaptive Scenario Generation for KL-DRO Around a Learned Density Model",
-      "url": "https://arxiv.org/abs/2610.40644v1",
-      "source": "arXiv",
-      "published_at": "2026-10-29T17:59:01+00:00",
-      "summary": "Distributionally robust optimization (DRO) hedges data-driven two-stage stochastic programs against error in the distribution estimated from a finite record, and standard ambiguity sets differ in how they treat realizations absent from that record. A divergence ball around the empirical distribution contains only reweightings of the record, whereas a transport ball also contains distributions supported off the record, including on realizations the data-generating process cannot produce, against which the decision is then hedged as well. We instead propose a Kullback-Leibler (KL) ball centered at a density model fitted to the record, the learned nominal, which lets the adversary up-weight costly unobserved realizations in proportion to the probability the model assigns them. Solving the resulting problem poses a second difficulty, because it can accommodate only a few scenarios, and an independent sample of that size is likely to omit the rare realizations on which the worst case concentrates. We therefore build the scenario set adaptively, alternating between solving the finite problem and drawing new realizations from the learned nominal, steered toward the worst case at the current decision, with importance weights that correct the draws back to the model. On a multi-item newsvendor problem and a capacity expansion problem on realistic grid data, centering the ball at the learned nominal rather than at the record lowers cost under distribution shift, at comparable in-distribution cost, when the record is scarce and the model class captures structure that lets it extrapolate beyond the record. The advantage fades as the record grows or as the shift departs from the structure the model has learned.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Aron Brenner",
-          "Saurabh Amin"
-        ],
-        "categories": [
-          "eess.SY",
-          "cs.LG"
+          "math.DS"
         ]
       }
     }

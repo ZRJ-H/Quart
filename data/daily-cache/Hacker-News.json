@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-11-01T14:33:50.231527+08:00",
+  "cached_at": "2026-11-02T11:00:37.636697+08:00",
   "articles": [
     {
       "id": "50319510",
@@ -8,140 +8,140 @@
       "source": "Hacker News",
       "published_at": "2026-10-31T19:56:53+00:00",
       "summary": "YouTube-style UI over 6,454 videos sourced from 39,834 HN comments since 2007.https://hackertube.org/",
-      "score": 1036,
-      "comments": 314,
+      "score": 2329,
+      "comments": 542,
       "discussion_url": "https://news.ycombinator.com/item?id=50319510",
       "extra": {
         "top_comments": [
-          "One thing I love about this is how fast it is, compared to YouTube",
-          "It's so refreshing browsing this compared to YouTube, it feels like I don't have to constantly be on high alert at being baited into some trap. Makes you wonder what kind of internet could be possible if all these tech giants weren't just optimizing for engagement and addiction.",
-          "I've been a bit fascinated by my lack of interest in the feeds that are curated for me. They are all things I'm supposedly interested in but I just am not when I see them in that format.I realised after a while that one of the main reasons I go online is to expand my horizons. I'm actively looking for something new or interesting or surprising that I might not have encountered or thought about before. I am also looking for perspective - give me a broad picture of how the world is so I can calibrate and introspect where my own perspective differs and could be updated. I want to see the things that don't fully align with my ideas.So it turns out personalised feeds are actively curating against what I'm looking for. I'm curious if others are like me or is this just something weird about me. I think it is very much why I like Hacker News format. It's in the broad areas of my interests but it is anything but curated just for me."
+          "I think there is a massive opportunity for this kind of feed disaggregation. Used to be the recommender and indexing of content was hard, now I believe we can likely build our own according to our own preferences.Haiku/Sonnet (or even Jev) can do a lot of the filtering work to rank and extend an RSS feed list.I think this gives us an opportunity to fully cut the cord from eyeball merchants who want us to maximally engage and therefore polarize their content.The big remaining hook will be the social graph; I am interested to see how far the EU push for mandatory interoperability will go. Another angle I’d support would be mandatory pluggable standards for your own ranking algorithm, but it captures less of the win than full disaggregation.",
+          "One of the most upvoted posts of the year is a static scrape with a UI? I want old HN back…",
+          "Made a books version of this: https://news.ycombinator.com/item?id=50326821PS: thank you karpathy, been binging videos on hackertube.org"
         ]
       }
     },
     {
-      "id": "50319143",
-      "title": "TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8",
-      "url": "https://atlasum.net/blog/cve-2026-98432-linux-ipv4-tcp-uaf",
+      "id": "50326821",
+      "title": "Show HN: HackerBooks – HackerTube, but for books mentioned on HN",
+      "url": "https://hackerbooks.org",
       "source": "Hacker News",
-      "published_at": "2026-10-31T19:16:30+00:00",
-      "summary": "TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8",
-      "score": 447,
-      "comments": 208,
-      "discussion_url": "https://news.ycombinator.com/item?id=50319143",
+      "published_at": "2026-11-01T15:58:28+00:00",
+      "summary": "Saw Karpathy's HackerTube and wanted the same thing for books. So I had Claude build one (Opus 5.5).It's ~16.5k books that at least two different HN commenters brought up, from 2007 till now. Each book links back to the comments that mentioned it. Data is downloadable from the about page.To be clear: Claude wrote almost all of it, including the data pipeline and the site. I mostly steered and made calls, bought the domain name, etc.It counts mentions, so it's not perfect (praising a book and trashing it both count). If your favourite book is missing or matched to the wrong thing, tell me.",
+      "score": 993,
+      "comments": 189,
+      "discussion_url": "https://news.ycombinator.com/item?id=50326821",
       "extra": {
         "top_comments": [
-          "> TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8I know it's customary for HN to edit titles to remove extraneous information, but removing \"Linux\" here really takes away something useful and relevant. This is a Linux vulnerability. If you're running *BSD or Mac or Windows, not affected.",
-          "Some notes I've got about this:- MPTCP is not a requirement, it is a generic use-after-free.- Exploitability over the internet is unlikely, most ISP routers drop packets with IP options fields.- At least according to Red Hat, dropping packets with IP options yourself helps, but is not a full mitigation.- Successful exploit requires multiple CPU cores to process packets, so systems with just a single core or packet processing pinned to a single core are not affected.",
-          "How are Ubuntu and RHEL not fixed? Few operating systems market themselves more as suitable for servers. What are they doing over there?"
+          "Love it! :)",
+          "A couple of missing ones (that I expected to have been mentioned, aren't there as far as I can tell, and I found them on here with a quick google):https://en.wikipedia.org/wiki/The_Invention_of_Morel mentioned here https://news.ycombinator.com/item?id=28779266 I'd have expected it to come up as one step removed from Borges, and it did.https://en.wikipedia.org/wiki/Why%27s_(poignant)_Guide_to_Ru... mentioned many times, eg https://news.ycombinator.com/item?id=36632010 - a surprising omission, tho I guess it's not in print.",
+          "The site is really fast. I see HTTP/3, OpenGraph, and Cloudflare. Can you expand on the technologies used?Also... \"Each book links back to the comments that mentioned it.\"> Please don't put generated text in HN posts.Claude speak gives me a gag reflex these days."
         ]
       }
     },
     {
-      "id": "50320963",
-      "title": "An Italian farmer found some unknown seeds in his attic and planted them",
-      "url": "https://www.smithsonianmag.com/science-nature/italian-farmer-found-unknown-seeds-attic-with-nothing-lose-planted-them-result-biblical-180989644/",
+      "id": "50326099",
+      "title": "Lenovo's 'encrypted' fingerprint USB is just an unencrypted SD card in a case",
+      "url": "https://www.reddit.com/r/technology/comments/1xl2pr3/lenovos_encrypted_fingerprint_usb_drive_is_just/",
       "source": "Hacker News",
-      "published_at": "2026-10-31T22:41:06+00:00",
-      "summary": "An Italian farmer found some unknown seeds in his attic and planted them",
-      "score": 299,
-      "comments": 83,
-      "discussion_url": "https://news.ycombinator.com/item?id=50320963",
+      "published_at": "2026-11-01T14:34:43+00:00",
+      "summary": "Lenovo's 'encrypted' fingerprint USB is just an unencrypted SD card in a case",
+      "score": 411,
+      "comments": 148,
+      "discussion_url": "https://news.ycombinator.com/item?id=50326099",
       "extra": {
         "top_comments": [
-          "The damage by the \"progress\" is multifold and pervasive. GM foods, with a goal of high yields, lost all nutritional value and gave the world insipid food and killed the natural foods forever. Supply chains and food regulations meant extreme processing of already killed food. What's left is bacteria-less, nutrition-less, sugary pulp that digests easily, increasing the consumption and economy.If I think of any food and taste from the 70's, I feel suffocated now. It's disgusting to see all processed, sugar-loaded, gene-modified, beautiful foods in the stores.The economy planners gave you cars, roads, food stores, supply chains and took away your time to grow your own food. You are just forced to take 5x amount of food in your car and consume it like biological pump with inputs and outputs. You became fat and ill and the economy tells you to believe it as a norm and call it growth. They even show in TV how all this is normal so that you don't feel bad about it.You are turned into a country full of workers with everything streamlined to make you focus on the work. Your short working years are good enough. It has machinery to dump you in nursing home and not let your younger family care for you. Small kids? You got care centers. Don't waste your time in caring for others or yourself. Just get into the commute circus.",
-          "Many farmers here in Switzerland grow urdinkel - ancient spelt. In the USA most farmers grew it also until around the 1920s but then a new wheat came out that was easier to process. Spelt has thicker hulls and wears down the mill faster so the mills switched to the new wheat and the farmers all had to switch too.Based on the name I think ur (ancient) Dinkel (spelt) is even older than regular spelt but I'm not sure. All I know is that it makes great crackers but terrible pasta and ok bread but not great.",
-          "key points about wheat Gross (the Italian farmer) discovered in 1990 his attic:+ It fared better during droughts, growing so tall that it overshadowed the weeds. It didn’t need fertilizer or herbicides.+ It's height can be a liability. Heavy winds, rains and hail can make the tall stems flip over before the grain ripens, ruining harvests.+ Working with the lab of Teofilo Vamerali, Perobelli determined that the grain was Triticum turgidum—literally “swollen wheat” in Latin. Known in English as “poulard wheat,” it had originally evolved in what today are Turkey, Egypt and other nearby Mediterranean countries. And searching agricultural references, Perobelli found that it had been grown in Italy, too, until farmers shifted toward higher-yield commercial varieties. That solved the mystery of the seed bag stashed away in the attic: It had survived because Grossi’s grandfather saved some of the heritage grains."
+          "I'm not sure what codex helped with for the Lenovo case, if all that was required was open the stick and stick the sdcard into a computer.It's crazy that Lenovo will still be trusted to build secured hardware after that. It's not even a vulnerability at this point, I'm not sure how this could pass any form of security review, let alone having anyone review the design and approve it. They must have known it was nothing they pretended and still decide to sell it.",
+          "Does anyone actually trust these products? Always seemed like a terrible idea to me. The correct solution is to use free software cryptography on top of these things.",
+          "Linked article: https://www.tomshardware.com/tech-industry/cyber-security/le..."
         ]
       }
     },
     {
-      "id": "50319358",
-      "title": "Anthropic blocks users for anything touching training larger models",
-      "url": "https://twitter.com/jiahaoshao1/status/2116475922190922088",
+      "id": "50323088",
+      "title": "The AI cost of JavaScript frameworks",
+      "url": "https://nolanlawson.com/2026/10/28/the-ai-cost-of-javascript-frameworks/",
       "source": "Hacker News",
-      "published_at": "2026-10-31T19:39:19+00:00",
-      "summary": "Anthropic blocks users for anything touching training larger models",
-      "score": 298,
-      "comments": 169,
-      "discussion_url": "https://news.ycombinator.com/item?id=50319358",
+      "published_at": "2026-11-01T06:06:19+00:00",
+      "summary": "The AI cost of JavaScript frameworks",
+      "score": 313,
+      "comments": 231,
+      "discussion_url": "https://news.ycombinator.com/item?id=50323088",
       "extra": {
         "top_comments": [
-          "It's very clear to me that however much you like Claude and Anthropic models, every professional user shoudl be actively cultivating a set of alternatives and fallbacks to use and seeking to ensure the overall ecosystem is as open, standardised and portable as possible.Anthropic is highly opinionated, dogmatic and idealistic. They have made a pragmatic decision already to cut loose a whole swathe of users so they can pursue areas higher up the value chain. that was essentially the original decision they made when they went after software engineering instead of general users. The fact they are repeating this over and over by continuing to carve out sets of users and usages they don't want reinforces this as a persistent core principle rather than a single pragmatic business decision.What this means is that at a higher level, their core principle is to sacrifice users they don't \"need\" rather than provide a broad, accessible service. Which means in turn, you have to accept that when your usage conflicts with their interests, you are at very high risk they will cut you out. If you already depend on Anthropic in any critical path of your daily life, this will be a significant issue.",
-          "Intelligence has to become a commodity. If your setup does not allow you to hot-swap a Claude Code with a Pi running astra and move on, you will be in trouble.Five years ago I was spending up to €1000 a day in Google ads for my star-map company, Greaterskies. After a few months of meetings with an ever-rotating group of \"experts\" working for Google, and advising me in my ads strategy, I had reached a point where most of my revenue was going to Google. What was left was barely enough to keep going.This is what capture feels like. You still own your company, but you are essentially an operator making money for someone else.I think this will be the fate of people who allow their processes to be captured by the model providers. Always run at least two harnesses, and make sure that they are swappable.",
-          "Something I've seen it do recently is refusing to extract services out of my own monolith code base because it finds copying code morally wrong.But its refusal to work pattern is getting pretty obnoxious. Another one I ran into last week was it refused to start a developer session to do browser testing for a code base it was working on because signing in was suddenly against it's programming.It listed all the conditions it needed for a sign in to be possible, agreed that my code base met all conditions, but refused to progress. I tried it in multiple fresh sessions with the same result."
+          "IMO the largest true value of the frameworks (and languages to some extent) is how they help long-running projects with many people coming and going. The most valuable trait was not what framework allowed, but what framework disallowed, preventing foot guns. E.g. Java got popular because it forced everyone to code similarly, at least more similar than other languages at that time.But for agents it doesn't matter, so why frameworks at all?PS: authors comparison is not relevant, as it's simple mostly-static app with very little cross-dependencies, localizations, component re-usage.",
+          "The are some very real costs to JavaScript frameworks. These frameworks do not exist to empower developers. They exist to:* so that employers do not have to invest in training developers.* to ease candidate selection at hiring, which greases the wheels of hiring/firingIn the big corporate world, especially at non-software companies, there is a culture that strongly believes internally written software sucks. This is Invented Here syndrome, and it reflects that internal developers cannot write software and employers will not invest in maintenance.The larger costs there are human costs, the inability to efficiently solve any problem outside the constraints imposed by the framework.",
+          "> Frontends are rewritten because some framework or another is “better for agents.” (Did anyone think to ask the agents?) The resulting code is “faster,” the agents make “fewer mistakes,” etc.Yes, of course they asked.The agents responded with how this framework is X, not Y. How creating it was a sharp commentary on other frameworks. A couple honest caveats, and a succinct bottom line that adequately kissed the user's ass."
         ]
       }
     },
     {
-      "id": "50316100",
-      "title": "Jepsen: ParticleDB 1.1.4",
-      "url": "https://jepsen.io/analyses/particledb-1.1.4",
+      "id": "50328251",
+      "title": "Mathematics has changed. Let's act like it",
+      "url": "https://terrytao.wordpress.com/2026/11/01/mathematics-has-changed-lets-act-like-it/",
       "source": "Hacker News",
-      "published_at": "2026-10-31T13:39:52+00:00",
-      "summary": "https://github.com/jepsen-io/particledb",
-      "score": 238,
-      "comments": 136,
-      "discussion_url": "https://news.ycombinator.com/item?id=50316100",
+      "published_at": "2026-11-01T18:28:42+00:00",
+      "summary": "Mathematics has changed. Let's act like it",
+      "score": 233,
+      "comments": 260,
+      "discussion_url": "https://news.ycombinator.com/item?id=50328251",
       "extra": {
         "top_comments": [
-          "Brutal!> ParticleDB 1.1.4 claimed to be a Postgres-compatible database ... Instead, we found a library of confusion> exhibited frequent, profound transactional anomalies in essentially every way we could measure. We routinely observed the loss of committed writes, internal consistency violations, G1a (Aborted Read), G1b (Intermediate Read), and P4 (Lost Update). In the append workload, successfully appended values would routinely disappear from later reads of a given key. Our test suite inferred every kind of cyclic anomaly including G0, G1c, G-Single, and G2-item, but many of these can be attributed to more basic issues, like write loss. These issues occurred with a single server and without faults, and affected every transaction mode, interface, and WAL mode tested",
-          "I’ve come to learn an interesting dichotomy in software:Some software is correct by construction, in the sense that the overall design makes sense and the cases that don’t work are generally local bugs.Some software is incorrect by construction, and it tends to work by some combination of luck and by carefully working around the incorrect design in most or all code paths that could expose the incorrectness. (AI can be quite effective at finding the relevant places to insert workarounds.)ParticleDB sounds like the latter category. Plenty of large projects have portions that are in one category and portions that are in another.As an aside, for the last day or two, I’ve been contemplating that the Linux kernel’s handling of folio pinning seems to be in the incorrect-by-construction category. Good times. No, I haven’t found a hard-to-fix bug that I would credibly characterize as a security or likely accidental corruption issue [0], but this seems mostly like luck.[0] I do appear to have re-discovered a bug that some massive Anthropic dump from a couple months ago also found, and it’s getting fixed. If your application does “fixed” io_uring I/O or certain types of iommu-based or maybe RDMA on a memfd, you might plausibly encounter it on rare occasions. I didn’t bother making a reproducer.",
-          "> Given the severity and extent of the safety errors we found, and the process which produced them, Jepsen recommends users halt further deployment of ParticleDB and migrate to other databases as soon as possible. Consider checking and/or rebuilding database state from more reliable sources, if available.I guess that's what happens when you vibecode a database..."
+          "> To me, someone who chooses a worthwhile problem, obtains a proof completely using AI, understands it thoroughly, and uses it to develop interesting further questions or directions has made a substantial mathematical contribution. I would give that person substantial credit even if they supplied no new ingredient in the original proof.Yup. This is what Terence Tao has been saying about digestion of results for several months now. Mathematics has become a field where results themselves matter less, the social aspect of attracting others to understand your results and explore new problems has become more important.In a sense it is a little bit like software engineering, where writing code can sometimes be delegated to AI, and is arguably less important than understanding what the customer really wants from this software.",
+          "Isn't it the passage of mathematics from the age of craftsmanship to the age of industrial making ?My recent take on AI is that people haven't adapted to the new huge potential of the tool, and don't dream big enough (yet).It's like seeing a car engine for the first time, lamenting about the future of horses, and not realizing it'll also help us fly.",
+          "Why do nearly all the articles exploring the development of AI applied to math assume that capabilities won’t extend beyond theorem proving?> other skills will matter more: choosing which terrain is worth exploring, steering fleets of airplanes, and explaining what they find to the rest of the world.These all seem totally achievable by LLM agents, or at least, I don’t see an obvious reason why it wouldn’t be. 3blue1brown’s recent discussion on this subject was a bit better, but he spent the plurality of main body of the video assuming this scenario, devoting less time to the other possibilities. To me, it seems dangerous to build a math career on the foundation that AI won’t be able to explain math well in a few years, let alone a few months (which seems entirely plausible given the recent math progress)."
         ]
       }
     },
     {
-      "id": "50318720",
-      "title": "It's the memory latency, stupid",
-      "url": "https://pivotlake.io/blog/its-the-memory-latency-stupid/",
+      "id": "50325253",
+      "title": "Show HN: OmniDiff – Opensource, super fast, content aware Git difftool, in Rust",
+      "url": "https://github.com/ivankovic/omnidiff",
       "source": "Hacker News",
-      "published_at": "2026-10-31T18:38:16+00:00",
-      "summary": "It's the memory latency, stupid",
-      "score": 174,
-      "comments": 48,
-      "discussion_url": "https://news.ycombinator.com/item?id=50318720",
+      "published_at": "2026-11-01T13:02:30+00:00",
+      "summary": "I have been researching what the ultimate diff tool would look like, based on actual diffs in open source repositories.OmniDiff can diff: code (25 languages), config, images, PDFs, archives, cursors, fonts...It's fast. It can diff C++ files of tens of thousands of lines in under 100ms, on a 2023 ThinkPad T14s.It's open source. AGPLv3.It's based on real diffs. I looked at the 7400 repositories that are listed in Gentoo packages, sampled 2000 diffs and solved them manually to get a good understanding of what is needed, before putting together the diff pipelines for each content type. Incidentally, this also forms the basis of the CI pipeline, so the robustness of the codebase is quite high.I'm still developing it. It's v0.3.0 at this time. But I have been using it daily as my git difftool for months now, and it works well.AI Disclosure: Yes, I do use AI. No, I do not vibecode.",
+      "score": 175,
+      "comments": 42,
+      "discussion_url": "https://news.ycombinator.com/item?id=50325253",
       "extra": {
         "top_comments": [
-          "I work with another team at work that uses lots of message passing, C++ virtual methods in deeply nested class hierarchies, large DOMs and off-the-shelf C++ STL containers... on a STM32MP1, which has an in-order Cortex-A7 and a pittance of cache.On the other hand, in my team I wrote my custom C++ STL containers that allocate inline, SAX-style processing libraries and an object pool with links that use index+generations like 2000s video games... on a STM32H5 with less than a megabyte of RAM.Mechanical sympathy feels like a lost art to people I demonstrate it to... and I had to demonstrate to the first team with benchmark numbers that I would not be the bottleneck between us by orders of magnitudes.",
-          "https://people.freebsd.org/~lstewart/articles/cpumemory.pdfHas anyone rewritten this for 2026?",
-          "I feel like the solution presented is just a clustered hashmap or “locality sensitive” if you’d like it.Still not orders of magnitude better."
+          "Is there a way to use it with git without having to change your global git config? I.e. `git diff | omnidiff` or something?You can do this with delta: `git diff | delta --side-by-side`",
+          "cool to see fresh Rust software with copyleft license !I feel safer, as a user, enjoying the freedoms that the AGPL provides me. (No evil middleman will be able to give me non-free versions of this program.)",
+          "Nicely done OP. Does it do 3-way diffs for merges as well? The instructions only mention the two-way `git difftool` configuration so maybe that'll be a future feature?Any interest in getting the setup upstreamed[1] so that users only need to `git config --global diff.tool omnidiff` to enable it by default? Disclosure: I created `git difftool` a long time ago, and am always happy when builtin support for useful tools are added to it. Feel free to reach out if you'd like help making that happen.[1] https://github.com/git/git/tree/master/mergetools"
         ]
       }
     },
     {
-      "id": "50320995",
-      "title": "Memdoor: A team of 5 Qwen3.8-27B models beats Fable 5 on LiveCodeBench Hard",
-      "url": "https://github.com/guregodevo/memdoor/tree/main/examples/workflows/team-solve",
+      "id": "50328896",
+      "title": "Ask HN: Which TV do you recommend for privacy?",
+      "url": "https://news.ycombinator.com/item?id=50328896",
       "source": "Hacker News",
-      "published_at": "2026-10-31T22:46:12+00:00",
-      "summary": "Memdoor: A team of 5 Qwen3.8-27B models beats Fable 5 on LiveCodeBench Hard",
-      "score": 170,
-      "comments": 92,
-      "discussion_url": "https://news.ycombinator.com/item?id=50320995",
+      "published_at": "2026-11-01T19:35:27+00:00",
+      "summary": "I haven’t owned a TV in years and would like one that respects my privacy. Are there any TV’s which do this well? I am looking for something in the 60”to 80”range and would like a 4k display with at least 60hz display. I don’t mind paying a premium.I have heard good things about Apple TV as a better alternative to most smart TV native apps. Would some TV’s pair better with this than others for privacy? I don’t want the TV doing anything other than being the display for Apple TV.I am curious what success others have had.",
+      "score": 169,
+      "comments": 331,
+      "discussion_url": "https://news.ycombinator.com/item?id=50328896",
       "extra": {
         "top_comments": [
-          "We desperately need to keep local models competitive with the hyper scalers. I won't want to be beholden to them and their whims forever. With anthropic now restricting game reverse engineering I think we're about to cross a Rubicon of censorship.",
-          "That's pretty interesting, because with the Bonsai 2 quantisations it is quite achievable to get Qwen 27B running at 50 t/s on reasonably priced gaming machine [0]. Which in turn suggests that Fable 5 coding performance can be achieved locally with a bit of clever harnessing.Although the same harnessing should also improve Fable's performance. The important thing here is the cap for local performance looks like it could be quite high.[0] https://store.steampowered.com/hwsurvey/Steam-Hardware-Softw... suggests 16GB VRAM, 32 GB system.",
-          "There is something to say about the power of brute force approaches. Right now scaling multi agent is seemingly what is becoming the next important axis, though very strongly constrained by quality of communication protocol and compute. Even if one model is not strong enough individually, more models and more attempts as well as differing opinions may nudge the models into a better solution basins.Kind of an extension of the effect where you talk to a model, it is super confident (but wrong), you correct it not directly but perhaps with a question and asking it to clarify. This then in turn leads to a better approach overall."
+          "Recently I've had to deal with this same problem - get a new TV for living room. Personally, I do not watch TV at all, but kids want to see cartoons when having their breakfast. I spent a week reading forums and came to conclusion that best solution would be to buy a \"dumb TV\" and connect it to a PC I trust, but it appears there are no dump TVs in my rage of 55\" and larger. So, I bought \"Google TV\" based TCL.When I brought it home, I never connected it to Ethernet or WiFi. Instead, I connected it to my laptop over USB, then using adb I uninstalled almost every application from it. It took me quite some time to figure out what app is possible to remove and what should be kept to let TV functionality to work. I even had to factory-default it a couple of times because some random apps I removed were crucial for Android to work. :) I think it took me 5-6 hours to clean it. Now it has only basic TV functionality like any dump TV does, I can watch air and cable TV channels, watch movies and play music from USB storage. If there's a need to watch something online, I connect it over HDMI to my small mini-PC that runs FreeBSD. I think I'm satisfied with the result. :-)PS: Yesterday I opened the case and disconnected WiFi antenna. Just in case.",
+          "First of all, open the TV and disconnect the wireless radio from the main board, on mine (Samsung) it was just unplugging one cable (AI or Google it). I dislike doing stuff like that, but it was easy in my case, maybe you'll be lucky, too.Second, never use the \"apps\" built into the TV.Next, don't plug Ethernet into the TV. Plug HDMI cables into the TV.Use a box of your choice on the other end of the HDMI cables. This is now the box that you trust. (Roku? Shield? Blu-ray? MacBook? PC? Linux? Playstation? XBox? Whatever you want.)The Smart TV itself is now fine. Choose the devices you plug into it to play content. The TV just shows it.",
+          "- Buy an LG OLED TV. They're as gorgeous as they are notorious. I just got a 77\" LG C6 and it is crazy good.- Root it [0].- Install Glasshouse [1] and disable all telemetry. YOU now own the glass. Now you can chromecast to the TV, use Adfree YouTube, access IP TV, etc etc etc. No point crippling your TV by pulling the wireless module and voiding your warranty.- Install a bunch of cool apps to your TV [2] (there are many more out there besides those listed here)- Restore to Factory Defaults if you ever want / need to unroot and get back to stock e.g. a warranty claimThe only issue is that LG recently closed the vulnerability that made rooting possible so you don't want any firmware released after 2026-10-10 like 43.21.84. Hopefully a new exploit is found that makes rooting possible once again.BTW, you might have heard of Dev Mode on these TVs but they don't allow anywhere near the functionality that rooting provides.[0] https://tv.slada.sk/guides/rooting-guide[1] https://github.com/rorygallagher2024/glasshouse[2] https://www.webosbrew.org/"
         ]
       }
     },
     {
-      "id": "50319061",
-      "title": "The Duty of a Scholar",
-      "url": "https://www.daemonology.net/blog/2026-10-31-The-Duty-of-a-Scholar.html",
+      "id": "50325454",
+      "title": "Proving and improving the Platonic Representation Hypothesis with JEPAs",
+      "url": "https://arxiv.org/abs/2610.39302",
       "source": "Hacker News",
-      "published_at": "2026-10-31T19:07:36+00:00",
-      "summary": "The Duty of a Scholar",
-      "score": 109,
-      "comments": 31,
-      "discussion_url": "https://news.ycombinator.com/item?id=50319061",
+      "published_at": "2026-11-01T13:24:49+00:00",
+      "summary": "Proving and improving the Platonic Representation Hypothesis with JEPAs",
+      "score": 116,
+      "comments": 63,
+      "discussion_url": "https://news.ycombinator.com/item?id=50325454",
       "extra": {
         "top_comments": [
-          "Wow that showed up quickly.Readers might also consider my 2020 post \"On the use of a life\" to be an interesting companion piece: https://www.daemonology.net/blog/2020-09-20-On-the-use-of-a-...",
-          "> Members of the IEEE commit, for example, \"to hold paramount the safety, health, and welfare of the public...\" without that duty being limited to hazards arising from projects employing the Engineer in question: The duty \"to disclose promptly\" vests in any Engineer who recognizes that the hazard exists.As an active member of the IEEE for over a decade now, I have never seen anyone (aside from the author here) take this duty seriously. There are plenty of IEEE members working on things that directly cause such hazards.",
-          "The Intel claim it wasn't a problem: [1]Today, it would be a bigger deal. In the age of AI, exploiting hard to exploit holes is so much easier. AI has patience limited only by your budget.[1] https://www.itnews.com.au/news/intel-soothes-hyperthreading-..."
+          "Different mathematical framework, but I wonder if this could be better understood using sheaf theory: each modality captures part of the same underlying reality, and those different views can be glued into a consistent bigger picture(Very basic intro: https://www.quantamagazine.org/what-are-sheaves-20240719/)",
+          "I haven't read this paper in details, but I have read papers about the platonic hypothesis in the past. Usually one of their weakness is about the design an experiment proving that \"neural networks converges towards the same latent space when scaling\". Usually authors are effectively proving a subset of the hypothesis, that can be explained by the size of the model and the transfer learning part, leaving not definite answer.Here it seems that their definition is more robust (the representation is defined up to a rotation), but I am wondering how much more re-training they need to perform.",
+          "I'm not sure how I feel about the Platonic Representation Hypothesis.In some ways it seems like it should be profound, but part of me thinks it might just be saying 'There is an optimal way to perform dimensionality reduction and as things get bigger it is easier to appoximate'"
         ]
       }
     }
