@@ -1,120 +1,131 @@
 {
-  "cached_at": "2026-11-02T11:00:37.636697+08:00",
+  "cached_at": "2026-11-02T14:34:15.580626+08:00",
   "articles": [
     {
-      "id": "2610.41267",
-      "title": "From 1D Benchmarks to Complex 3D Geometries: Can Agents Reliably Specify Problems for Automated PDE Simulation?",
-      "url": "https://arxiv.org/abs/2610.41267v1",
+      "id": "2610.42149",
+      "title": "Latent Reasoning in Continuous Space for Unified Multimodal Models",
+      "url": "https://arxiv.org/abs/2610.42149v1",
       "source": "arXiv",
-      "published_at": "2026-10-30T05:20:28+00:00",
-      "summary": "Turning an engineering request into a simulation requires consistent geometry, physics, boundary conditions, and numerical settings. Recent agent-assisted systems automate simulation setup, but successful execution alone does not establish whether the specification preserves the intended problem or correctly handles missing information. We study whether agents can reliably construct complete executable JSON specifications for automated geometry creation, meshing, PDE solving, and result export. Our workflow combines model extraction with deterministic scientific and capability checks, explicit clarification, and validated local patches that preserve unrelated accepted fields. We evaluate specification correctness, execution completion, and numerical verification separately. On 120 template-related requests, the full workflow achieves 98.3% correct first-turn specification and decision outcomes, compared with 92.5% for schema-assisted single shot and 82.5% for model-only: gains of 5.8 and 15.8 percentage points, respectively. It makes no false-ready decisions among the 42 requests requiring clarification or rejection. Component ablations identify contributions from scientific checks and conditional repair. Separate downstream studies cover 1D, 2D, and 3D steady and unsteady, linear and nonlinear problems, including flow and elasticity with complex three-dimensional wing geometries. A 30-case gallery demonstrates automated execution from retained JSON specifications, while 9 of 12 selected live user-to-results tests achieve joint specification, execution, export, and numerical-reference success (75.0%). These results support traceable, engineer-reviewed simulation assistance within the tested scope, while fresh-response regressions identify consistency as a priority for further improvement.",
+      "published_at": "2026-10-30T17:59:43+00:00",
+      "summary": "Unified Multimodal Models (UMMs) achieve remarkable success on diverse multimodal understanding and generation tasks, yet they still struggle to effectively leverage language-based chain-of-thought reasoning for image generation. As a result, existing reasoning-augmented UMMs often fail to inherit the test-time scaling and fine-grained controllability observed in large language models. We attribute this failure to a fundamental modality mismatch: reasoning is performed in a discrete token space, whereas image generation operates in a continuous space. To bridge this gap, we introduce a Latent Reasoning framework in Continuous space (LARC), which alleviates the token-level bottleneck by reasoning over continuous hidden states. Specifically, the training framework consists of two stages: (i) curriculum supervised fine-tuning (SFT), and (ii) information-gain reinforcement learning (RL). First, the curriculum SFT stage gradually converts token-level reasoning into latent reasoning. Subsequently, the information-gain RL stage self-evolves latent reasoning without ground truth supervision. Experiments across diverse text-to-image generation benchmarks show that LARC consistently improves generation quality, prompt following, and compositional fidelity. Notably, LARC achieves state-of-the-art performance on GenEval with a 7%p gain over BAGEL and demonstrates clear test-time scaling behavior, outperforming token-based generation under both parallel and sequential test-time scaling strategies.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Akshat Jani",
-          "Sakhinana Sagar Srinivas",
-          "Venkataramana Runkana"
+          "Byungwoo Jeon",
+          "Yoonwoo Jeong",
+          "Hyunseok Lee",
+          "Minsu Cho",
+          "Jinwoo Shin"
         ],
         "categories": [
+          "cs.CV",
+          "cs.CL",
+          "cs.LG"
+        ]
+      }
+    },
+    {
+      "id": "2610.42148",
+      "title": "Flide: Accelerating Decision Inference with Exact State Forking",
+      "url": "https://arxiv.org/abs/2610.42148v1",
+      "source": "arXiv",
+      "published_at": "2026-10-30T17:59:38+00:00",
+      "summary": "Decision models such as Jev have emerged as a highly promising paradigm for LLM agent systems, providing lightweight and reliable categorical reasoning for rapid System One execution. However, existing generation-oriented inference engines fail to support these workloads effectively, suffering from severe prefix recomputation overheads or distorted output probabilities. To address this challenge, we propose Flide, an efficient and exact inference engine that decouples the logical tree structure of a decision request from its physical execution within a single flattened token stream. Through ForkAttention, Flide navigates request dependencies using GPU-resident indices across both standard attention and recurrent Gated DeltaNet layers, guaranteeing in exact arithmetic that every query branch evaluates identically to an isolated forward pass. By expressing branch topologies directly in GPU-resident metadata, Flide accommodates diverse request mixtures with a compact set of pre-recorded execution graphs while enabling expanding agent histories to resume from checkpoints saved in earlier passes. Extensive evaluations on public hybrid and decision models demonstrate that Flide answers queries up to 9.5 times faster than vLLM and SGLang while staying closest to a float32 reference in total variation distance. By unifying physical execution throughput with mathematical exactness, Flide establishes a principled foundation for scalable, latency-critical decision intelligence in agent systems.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Bobo Li",
+          "Jiajia Song",
+          "Hao Fei",
+          "Wynne Hsu",
+          "Mong Li Lee"
+        ],
+        "categories": [
+          "cs.CL"
+        ]
+      }
+    },
+    {
+      "id": "2610.42147",
+      "title": "Latent Sparse Attention: Towards Subquadratic Ultra-Long Context Attention",
+      "url": "https://arxiv.org/abs/2610.42147v1",
+      "source": "arXiv",
+      "published_at": "2026-10-30T17:59:34+00:00",
+      "summary": "Agentic workflows are increasingly shifting towards long-horizon tasks, such as open-ended scientific work, where models benefit from long context windows. However, at ultra-long context (above 1M tokens), full attention is prohibitively expensive. A promising approach is sparse attention, in which a dedicated indexer selects a subset of keys for the attention. Yet current methods of indexing either still have quadratic cost in context size or lose accuracy at ultra-long context scale. We address this with Latent Sparse Attention (LSA), an efficient attention method that maintains accuracy at ultra-long context. In LSA, keys are hierarchically clustered in a learned latent space, and queries score the hierarchy of clusters instead of scoring every key, making prefill, decode and training faster at long context. We propose two variants, Distilled-LSA (D-LSA), which can be applied to pre-trained models via distillation, and Native-LSA (N-LSA), which is trained natively on the next-token loss alone. On GLM-5.3-FLASH (QWEN-3.8-27B) at 10M tokens, D-LSA speeds up one attention layer by 22.7x (72.4x) in prefill and 4.6x (42.5x) in decode over its original sparse attention (full attention), while keeping similar accuracy across a variety of tasks. N-LSA matches the accuracy of full attention with a training speedup of 1.6x per layer at 128k tokens. LSA offers practical and efficient attention for models to benefit from ultra-long context.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Ales Kubicek",
+          "Andrea Caciolai",
+          "Liangzu Peng",
+          "Sukrit Sumant",
+          "Benjamin Hoover",
+          "Fraser Greenlee",
+          "Ruairidh M. Battleday",
+          "Radim Urban",
+          "Torsten Hoefler",
+          "James C. R. Whittington"
+        ],
+        "categories": [
+          "cs.AI"
+        ]
+      }
+    },
+    {
+      "id": "2610.42146",
+      "title": "Hierarchical World Models with Implicit Dynamics",
+      "url": "https://arxiv.org/abs/2610.42146v1",
+      "source": "arXiv",
+      "published_at": "2026-10-30T17:59:25+00:00",
+      "summary": "Planning with world models enables test-time adaptation for embodied agents, offering superior generalization over direct policy learning. However, long-horizon tasks remain hindered by cumulative errors and search complexity. Existing hierarchical methods often use rigid macro-actions or latent skills, leading to brittle representations and limited fine-grained control. We introduce ID-WM (Implicit Dynamics World Models), a hierarchical world model that decouples state-space reachability from local control. Our framework utilizes a high-level model to sample feasible transitions across the state manifold and a low-level world model as an inverse dynamics solver to ground these transitions into precise actions. This allows the planner to identify reachable subgoals without being constrained by low-level execution details. By prioritizing local physical feasibility over global behavioral patterns, ID-WM synthesizes novel long-horizon plans from short segments, transcending the specific behavioral modes seen during training. We demonstrate its effectiveness across three navigation and manipulation suites, achieving a 38.5% improvement over state-of-the-art policy and diffusion-based planners. Crucially, by leveraging this hierarchical structure to mitigate compounding errors, our approach yields a 135% performance gain over single-level world model MPC, particularly in complex, unseen configurations for long-horizon tasks. Videos can be viewed at https://id-wm.github.io",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Gaoyue Zhou",
+          "Yvonne Wu",
+          "Zichen Jeff Cui",
+          "Nicolas Ballas",
+          "Mido Assran",
+          "Lerrel Pinto",
+          "Yann LeCun"
+        ],
+        "categories": [
+          "cs.RO",
+          "cs.AI"
+        ]
+      }
+    },
+    {
+      "id": "2610.42141",
+      "title": "RoboArchitect: Automating the Design of Robotic Agents with Persistent Memory",
+      "url": "https://arxiv.org/abs/2610.42141v1",
+      "source": "arXiv",
+      "published_at": "2026-10-30T17:58:48+00:00",
+      "summary": "Recent work shows that a frozen robot policy performs far better inside an agent harness, where control code decides when to query the policy, consult vision tools, or command the arm directly. Yet today these harnesses are built by hand and redesigned for each new robot or benchmark. We show that harness design can be automated, offering a strong alternative to finetuning on a novel setup. In RoboArchitect, a coding model observes a robot's rollouts, diagnoses failures, and iteratively revises the harness around the frozen policy. The harness evolves on a set of episodes for its optimization and is evaluated on held-out scenes and tasks. Without updating any model weights, RoboArchitect raises average success from 9.7% to 43.3% on unseen scenes (4.5x) and from 12.7% to 40.2% on unseen tasks (3.2x), across multiple benchmarks and policies. The gains are largest where the benchmark is far from the policy's training data: wrapping a general-purpose policy, the evolved harness yields a specialist that often outperforms even the finetuned version. Intuitive control strategies are automatically designed, such as lifting a jammed arm clear or reaching in horizontally when an obstacle blocks the way from above. The harness also evolves its own persistent memory, carrying learned experience, such as effective grasp depths, into later decisions. These results suggest that substantial headroom in robotic manipulation lies in the agent harness, and its design can be effectively automated and optimized without weight updates.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Shengguang Wu",
+          "Suning Huang",
+          "Cherie Ho",
+          "Ria Doshi",
+          "Hao Zhu",
+          "Serena Yeung-Levy"
+        ],
+        "categories": [
+          "cs.RO",
           "cs.AI",
-          "cs.CE"
-        ]
-      }
-    },
-    {
-      "id": "2610.41264",
-      "title": "Rome Wasn't Built in One Turn: Replay-Grounded Reward Signals for Long-Horizon Freeciv Agents",
-      "url": "https://arxiv.org/abs/2610.41264v1",
-      "source": "arXiv",
-      "published_at": "2026-10-30T05:13:31+00:00",
-      "summary": "Training language-model agents to play long-horizon strategy games is hard because deterministic feedback is sparse and often arrives only at the end of a game. In-game scores can offer dense signals, but they do not reliably predict future outcomes: in 8-68% of position pairs across eight strategy games, the higher-scoring position leads to the worse outcome. We term this phenomenon scoreboard traps. In Freeciv, an open-source turn-based empire-building game where several players manage units, cities, and diplomacy over hundreds of turns, we look into better reward signals for gameplay agents. To facilitate this, we build CivHarness, an open system that saves current game states, branches on different decisions, and replays the game to future turns to provide measurable long-horizon feedback from saved positions. We use CivHarness to train CivTelescope, an LLM Judge that predicts which one of two game positions will yield the better outcome. On scoreboard-trap pairs, CivTelescope is 1.3-2.0 times more accurate than off-the-shelf language models, and it generalizes to new game starts, later turns, and unseen rules. We then train a Freeciv gameplay agent with CivTelescope as a dense reward, and call this recipe CivMarshmallow. When used in the middle stage of the game where scoreboard traps are common, CivMarshmallow reaches an average training phase gain of 8.94 points, 77% more than the best baseline, the end-of-game reward. Over the full 120-turn game, CivMarshmallow uses a hybrid reward that starts from the scoreboard or the end-of-game reward and shifts to CivTelescope as the game advances; this hybrid reward scores highest among the rewards we compare.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Yanchen Liu",
-          "Xinyu Che",
-          "Brihi Joshi",
-          "Renzo Fukuda",
-          "Junhua Liu",
-          "Ruifeng Li",
-          "Yunfei Ge",
-          "Hang Yan",
-          "Xiang Ren"
-        ],
-        "categories": [
-          "cs.AI"
-        ]
-      }
-    },
-    {
-      "id": "2610.41245",
-      "title": "MEMIG: Self-evolving Memory Construction for Antibody Optimization",
-      "url": "https://arxiv.org/abs/2610.41245v1",
-      "source": "arXiv",
-      "published_at": "2026-10-30T04:39:18+00:00",
-      "summary": "Memory has become central to self-evolving LLM agents, which store and retrieve experience from past rollouts to guide future decisions. Existing systems represent this experience as free-form natural language and maintain it by rewriting, which fits tasks whose experience is narratable. However, in scientific discovery and optimization, experience is often a quantity measured by an oracle under a specific context. Rewriting it as text leaves no index for where a record should be, replaces a measurement with a description, and cannot express how interventions interact. To address this, we argue that agent memory for biomolecule optimization should instead be indexable, quantitative, and structured, and we introduce MEMIG. This memory construction framework realizes these three properties. In detail, MEMIG addresses each insight with a domain-grounded identifier and accumulates the quantitative effect measured by a property oracle, so that updates remain local and retrieval becomes an exact lookup. Next, MEMIG connects insights whose interventions are applied together and measures their epistasis by decomposing each evaluated set. Our results show that MEMIG improves performance in most settings across in silico antibody optimization tasks.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Yunhui Jang",
-          "Zach Wang",
-          "Jai Doshi",
-          "Kangway Chuang",
-          "Sidney Lisanza",
-          "Taylor Joren"
-        ],
-        "categories": [
-          "cs.AI"
-        ]
-      }
-    },
-    {
-      "id": "2610.41244",
-      "title": "A Unified Framework for Probability Estimation of Data-Dependent Events",
-      "url": "https://arxiv.org/abs/2610.41244v1",
-      "source": "arXiv",
-      "published_at": "2026-10-30T04:37:40+00:00",
-      "summary": "We study the general problem of estimating $D(\\dde(S))$, the probability that an unknown distribution $D$ assigns to an event determined by a sample $S$ of $n$ i.i.d.\\ draws from $D$ through a known mapping $\\dde$. The estimation algorithm knows $\\dde$ and $S$ but does not have access to any additional samples from $D$. This formulation captures classical missing mass, the data-dependent targets of adaptive data analysis and post-selection inference, and the test error of a data-trained predictor, whose estimation was recently studied by \\new{Gastpar et al.\\ (2024a,b)}. Within this framework we examine the two classical approaches to estimation. The error of the empirical plug-in estimator is exactly a generalization gap, so generalization bounds transfer to it directly. The leave-one-out estimator, which recovers the Good--Turing estimator, is accurate for every mapping that is stable under the deletion of one sample point, including new structured examples such as neighborhoods of the sample and pierced sets. The main application of our framework is to error estimation for a predictor that combines a base classifier with memorized exceptions, a structure common in theory and in practice. For it, the test error is exactly the missing mass restricted to the error region of the base classifier, a region selected by the same sample. We formulate the general problem of \\emph{adaptive missing mass estimation} to address such dependence and propose a natural hybrid estimator, the Good--Turing estimator restricted to the selected region. We show that the generalization of the base classifier alone does not guarantee the accuracy of this estimator, and derive two bounds on its error: the first one based on the VC dimension of possible error regions and another based on the mutual information of the selected region with the sample.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Vitaly Feldman",
-          "Satyen Kale",
-          "Vinod Raman",
-          "Kunal Talwar",
-          "Ambuj Tewari"
-        ],
-        "categories": [
-          "cs.LG",
-          "stat.ML"
-        ]
-      }
-    },
-    {
-      "id": "2610.41243",
-      "title": "Generative SDEs with Trainable Diffusion and Density-Based Losses",
-      "url": "https://arxiv.org/abs/2610.41243v1",
-      "source": "arXiv",
-      "published_at": "2026-10-30T04:35:59+00:00",
-      "summary": "We develop a divergence-kernel method for jointly optimizing neural SDE drift and diffusion fields and the initial Gaussian distribution, using losses that depend directly on the terminal density. In two- and eight-dimensional Gaussian-mixture experiments, we learn time-independent fields and obtain far fewer off-mode samples than score-based generators with similar parameter counts. The drift attracts samples toward the modes, while the diffusion helps disperse excess probability between them.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Angxiu Ni"
-        ],
-        "categories": [
-          "cs.LG",
-          "math.DS"
+          "cs.CV"
         ]
       }
     }
