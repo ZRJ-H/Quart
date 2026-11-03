@@ -1,139 +1,120 @@
 {
-  "cached_at": "2026-11-03T11:00:30.827414+08:00",
+  "cached_at": "2026-11-03T15:04:37.942699+08:00",
   "articles": [
     {
-      "id": "2611.00633",
-      "title": "Evidence-grounded large language models guide perovskite solar cell design and optimization",
-      "url": "https://arxiv.org/abs/2611.00633v1",
+      "id": "2611.03152",
+      "title": "From PID to Reinforcement Learning in Building HVAC Control: A Control-Architecture Review of Tuning Strategies, Formulations, and Deployment Trade-offs",
+      "url": "https://arxiv.org/abs/2611.03152v1",
       "source": "arXiv",
-      "published_at": "2026-10-31T04:57:32+00:00",
-      "summary": "Using large language models to interpret experimental evidence, design discriminating experiments and formulate well-supported mechanistic explanations remains a central challenge in materials research. Here we establish PSM-Bench, an 800-question benchmark developed by perovskite researchers to evaluate scientific reasoning in perovskite photovoltaics. We also introduce OpenPerov, an expert-informed language-model framework that learns from expert-calibrated evidence records reconstructed from 4,532 articles; these records link experimental strategies, controls and observations to mechanistic interpretations. Structured-evidence adaptation outperformed conventional question-answer training, and OpenPerov Flash ranked first among 13 closed-book systems. OpenPerov Pro raised Scientific Mastery further, from 87.6 to 89.1, by revising selected passages with retrieved evidence. On questions derived from subsequent studies, both models also outscored expert-authored answers. In an experimental test of self-assembled monolayer design, OpenPerov selected a K analogue that outperformed the Na analogue preferred by experts. Devices incorporating the selected contact reached a power conversion efficiency of 27.05% and retained 96.74% of their steady-state reference efficiency after 1,000 h of dark thermal ageing at 85 $^\\circ$C. These results show that reconstructed scientific reasoning provides an effective basis for building domain models that interpret experiments and inform materials design.",
+      "published_at": "2026-11-02T13:59:15+00:00",
+      "summary": "This paper reviews control architectures for building heating, ventilation and air-conditioning (HVAC) systems, addressing the tension among energy demand, occupant comfort and equipment operability, and situating proportional-integral-derivative (PID) regulation within a layered control stack that also includes rule-based and model-based supervisory control and data-driven reinforcement learning (RL). It examines the thermostat-PID layer from two-position and scheduled setpoint control through proportional, PI and PID regulation and their tuning, then formulates RL for building control as a Markov decision process. Its central contribution is a taxonomy of where RL meets PID: RL as a gain tuner for an existing loop, as a direct replacement for the regulatory controller, as a hybrid with model predictive control, and as supervisory setpoint and schedule generation. Across these classes, the review establishes that the physical loop remains invariant while the intervention point changes, and that the classes differ in their requirements for actuation authority, state information, modelling, commissioning and constraint handling. It further establishes that PID is inexpensive and well codified but limited by nonlinearity, time variation, discrete mode switching, loop interaction and slow plant dynamics, while RL's admissible position must be argued rather than assumed. The paper concludes that these architectures are not competing philosophies of control but nested points of attachment on one HVAC plant, with hybrid implementations possible, and that deployment trade-offs must be assessed according to the specific control interface and scaffolding required.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "YanKai Chen",
-          "Zhi Wan",
-          "ZiHao Li",
-          "Tao Jing"
+          "Erfan Haghighat Damavandi",
+          "Davide Papurello",
+          "Mahdi Alibeigi",
+          "Armin Keshavarz"
         ],
         "categories": [
-          "cs.AI"
-        ]
-      }
-    },
-    {
-      "id": "2611.00631",
-      "title": "TopoQuant: Topological Framework to Characterize Behavioral Shifts in Quantized Large Language Models",
-      "url": "https://arxiv.org/abs/2611.00631v1",
-      "source": "arXiv",
-      "published_at": "2026-10-31T04:55:14+00:00",
-      "summary": "Post-training quantization (PTQ) reduces the com putational cost of large language models (LLMs), but it can introduce internal structural and behavioral changes that are not captured by traditional metrics such as accuracy and per plexity. We present TopoQuant, a topological framework that uses topological data analysis (TDA) to quantify structural drift in self-attention weights and relate it to behavioral changes in quantized LLMs. Across four LLM families and multiple quantization levels, we show that topological drift remains stable at moderate compression levels but increases sharply below 4 bit precision, closely tracking declines in attention agreement. Our results reveal a strong relationship between topological drift and attention agreement, indicating that structural changes in model parameters closely reflect behavioral degradation under quantization. We further demonstrate that topological features can accurately predict attention consistency using lightweight machine learning models, achieving R2 scores of up to 0.85. Predicting attention agreement enables efficient assessment of be havioral consistency in quantized LLMs, allowing quantization induced degradation to be detected without running expensive downstream tasks. The results indicate that topological drift pro vides an efficient early-warning signal for quantization-induced degradation and can help identify safe compression limits without extensive downstream evaluation.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Baha Rababah",
-          "Shahzeb Qamar",
-          "Lorenz Sparrenberg",
-          "Rafet Sifa",
-          "Murat Kantarcioglu",
-          "Carson K. Leung",
-          "Cuneyt Gurcan Akcora"
-        ],
-        "categories": [
-          "cs.AI"
-        ]
-      }
-    },
-    {
-      "id": "2611.00627",
-      "title": "Autonomous Analysis of Thermoelectric Materials Big Data by Multi-Agentic AI and Construction of a Knowledge Base and Specialized AI",
-      "url": "https://arxiv.org/abs/2611.00627v1",
-      "source": "arXiv",
-      "published_at": "2026-10-31T04:51:41+00:00",
-      "summary": "Extracting knowledge from large databases of experimental materials data requires repeated analyses and reusable records of their choices and results. We developed Multi-Agentic AI (MAA), a multi-agent system in which AI agents with distinct roles analyze experimental thermoelectric data under predefined instructions and quality checks, saving analysis records traceable to their sources. In four experiments varying theme and cycle counts, we measured what accumulated in these records. In the largest experiment (100 analyses across 10 themes and 10 cycles), concept co-occurrences were concentrated within themes, vocabulary was shared across themes and some relation descriptions were first detected in later cycles. A specialized AI that searches this experiment's knowledge bases and reads their analysis records answered materials questions with cited sources. Retrospective checks, including tracing an answer generated with a preliminary corpus back to the source data, exposed errors: traceability makes errors findable but not absent.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Yusuke Hashimoto",
-          "Takaaki Tomai"
-        ],
-        "categories": [
-          "cs.AI",
-          "cond-mat.mtrl-sci",
-          "cs.MA"
-        ]
-      }
-    },
-    {
-      "id": "2611.00624",
-      "title": "XLA from the Trenches: Correctness on TPU Workloads at Scale",
-      "url": "https://arxiv.org/abs/2611.00624v1",
-      "source": "arXiv",
-      "published_at": "2026-10-31T04:48:13+00:00",
-      "summary": "Accelerating modern foundational models has pushed domain-specific compilers toward increasingly complex, multi-tiered optimization pipelines. However, this heavy optimization focus introduces delicate tradeoffs between peak execution performance and correctness. Subtle codegen defects can trigger numerical degradation and memory or buffer corruption, invalidating multi-million-dollar training runs and degrading live serving quality without raising obvious compiler errors. In this paper, we present a battle-tested methodology for verifying and triaging Google's XLA:TPU compiler at hyperscale. We leverage fuzzing techniques, combining synthetic program generation with real production traces, while orchestrating AI agent swarms to autonomously generate stress tests, reproduce failures, and draft fixes. To pinpoint root causes in full workloads, we pair this with a hierarchical differential pipeline that bisects large graphs down to individual failing operations inside fused kernels. Deployed in production, our framework has already driven the resolution of over 142 compiler bugs (with 103 additional findings under review), from which we distill pragmatic lessons learned.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Ignacio Cano",
-          "Amir Saadat",
-          "Rishipal Singh Bhatia",
-          "Samuel Ginzburg",
-          "Patrick C. Toulme",
-          "Ioannis Zarkadas",
-          "Praveen Narayanan",
-          "Pratik Bhatu",
-          "Nicolas Basile",
-          "Alexander Dietmüller",
-          "Ruishan Wang",
-          "Jacob Wahlgren",
-          "Victor Barros",
-          "Subhankar Shah",
-          "Michael Kuperstein",
-          "Farzin Houshmand",
-          "Emma Sevastian",
-          "Peter Gavin",
-          "Karthik Srinivasa Murthy",
-          "Berkin Ilbeyi",
-          "Amit Sabne",
-          "Eli Bendersky"
-        ],
-        "categories": [
-          "cs.AI",
-          "cs.LG",
-          "cs.PL"
-        ]
-      }
-    },
-    {
-      "id": "2611.00621",
-      "title": "Log-Driven Semantic Tuning for Mixed Integer Programming Solvers",
-      "url": "https://arxiv.org/abs/2611.00621v1",
-      "source": "arXiv",
-      "published_at": "2026-10-31T04:43:28+00:00",
-      "summary": "Automated configuration of mixed-integer programming (MIP) solvers largely relies on black-box optimization. Each trial requires an expensive solver run and provides only a scalar outcome, so tuning can require many such evaluations. Human experts take a different approach. They inspect solver logs, identify performance bottlenecks, and adjust the parameters that address them. We propose Log-Driven Semantic Tuning (LDST), which uses a large language model (LLM) to automate this process. LDST extracts compact diagnostics from solver logs, uses the LLM to propose sparse edits to the current best configuration based on parameter meanings and observed solver behavior, and validates each proposal before execution. A regime-adaptive objective selects the tuning signal according to the information available from a time-limited run, while a log-based completion signal estimates completion time from branch-and-bound tree growth recorded in ordinary solver logs, so that solved and unsolved runs share one time scale. On 215 instances from five benchmark sets, LDST reduces geometric-mean loss by 43.9% on easy instances and 16.7% on intermediate instances relative to the best of SMAC3, RBFOpt, and random search. In both regimes, LDST achieves a lower loss with 10 proposals than any of these baselines achieves with 50. Configurations that LDST tunes on a single instance also transfer better than baseline configurations to unseen instances of the same family.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Zhengzhong Ricky You",
-          "Kaizhao Sun",
-          "Zeping Min",
-          "Wotao Yin",
-          "Xinshang Wang"
-        ],
-        "categories": [
-          "math.OC",
-          "cs.AI",
           "cs.LG"
+        ]
+      }
+    },
+    {
+      "id": "2611.03150",
+      "title": "FlowBatt: Flow Matching for Probabilistic Battery Degradation Prediction",
+      "url": "https://arxiv.org/abs/2611.03150v1",
+      "source": "arXiv",
+      "published_at": "2026-11-02T13:58:18+00:00",
+      "summary": "Battery degradation remains a central challenge in the development and broad application of sustainable energy technologies. Accurate degradation prediction is challenging, as battery aging emerges from complex and heterogeneous interactions among cycling behavior, operating conditions, and cell chemistry. Existing machine-learning approaches typically focus on deterministic end-of-life predictions or modeling degradation curves within fixed chemistry settings, leaving probabilistic state of health (SOH) trajectory modeling across heterogeneous chemistries underexplored. We introduce FlowBatt, a use-inspired conditional generative framework that adapts flow matching with a diffusion transformer (DiT) backbone to battery degradation trajectory modeling. FlowBatt models full SOH trajectories as probabilistic degradation processes conditioned on early-cycle capacity data. To strengthen this conditioning pathway, we use explainable AI analysis to diagnose and improve the encoder that maps early-cycle capacity matrices into conditioning vectors. We evaluate FlowBatt on five public benchmark settings spanning diverse chemistries and aging conditions, comparing it with supervised and diffusion-based trajectory models as well as established baselines for remaining useful life (RUL) prediction under shared data splits. FlowBatt achieves the best trajectory-wise SOH prediction performance on all five datasets, with errors below 2.5%, and delivers competitive RUL prediction performance. By generating multiple plausible trajectories, FlowBatt provides empirical prediction intervals for battery degradation modeling. These results indicate that flow-matching-based trajectory modeling is a promising framework for probabilistic battery health prediction.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Hamidreza Eivazi",
+          "Eslam Sharaawy",
+          "Stefan Wittek",
+          "André Hebenbrock",
+          "Raphael Ginster",
+          "Steffen Blömeke"
+        ],
+        "categories": [
+          "cs.LG",
+          "physics.chem-ph"
+        ]
+      }
+    },
+    {
+      "id": "2611.03146",
+      "title": "Controlling Sharpening in LLM Post-Training",
+      "url": "https://arxiv.org/abs/2611.03146v1",
+      "source": "arXiv",
+      "published_at": "2026-11-02T13:54:45+00:00",
+      "summary": "LLM post-training via reinforcement learning has shown consistent improvements in accuracy at the cost of reducing behavioral coverage - a phenomenon known as sharpening that can stall progress on difficult tasks. Repeated sampling objectives such as $\\mathrm{pass@k}$ and $\\mathrm{max@k}$ are known to mitigate sharpening, but the mechanism behind it remains poorly understood. Moreover, existing approaches for $\\mathrm{@k}$ optimization use dedicated algorithms, and no general framework exists for adapting established policy optimization methods from $\\mathrm{@}1$ to $\\mathrm{@k}$. We derive the optimal policies for KL-regularized $\\mathrm{pass@k}$ and $\\mathrm{max@k}$ objectives in closed form. Our explicit solutions reveal that $\\mathrm{@k}$ optimization naturally redistributes learning pressure based on prompt difficulty, directing it toward harder problems. Crucially, we show that standard $\\mathrm{@}1$ objectives achieve these exact same optimal policies through prompt-adaptive regularization or reward transformation. Ultimately, this yields an optimizer-independent explanation for why $\\mathrm{@k}$ objectives reduce sharpening on easy tasks while prioritizing success on harder ones. Building on these insights, we introduce $\\mathrm{@k}$ Adaptive Pressure for Policy Optimization (KAPPO). Following a one-time reference calibration, KAPPO seamlessly adapts existing $\\mathrm{@}1$ methods to $\\mathrm{@k}$ via prompt-adaptive regularization or reward transformation, without otherwise altering their training procedures. Experiments with several RL methods on mathematical reasoning and code generation demonstrate that KAPPO provides direct control over sharpening. Crucially, we demonstrate that $\\mathrm{@k}$ pressure can be fully realized with single completion training, matching the performance of multi-completion $\\mathrm{@k}$ optimizers at a fraction of the cost.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Simon Matrenok",
+          "Nicolas Menet",
+          "Nicolas Flammarion",
+          "Andreas Krause"
+        ],
+        "categories": [
+          "cs.LG"
+        ]
+      }
+    },
+    {
+      "id": "2611.03143",
+      "title": "Visual-to-Executable Procedural Reconstruction of Buildings",
+      "url": "https://arxiv.org/abs/2611.03143v1",
+      "source": "arXiv",
+      "published_at": "2026-11-02T13:52:45+00:00",
+      "summary": "Procedural modeling offers compact, editable, and reusable representations for architectural content, but building such models still depends heavily on manually authored grammars. We study image-based procedural building reconstruction from in-the-wild images, with the goal of recovering an executable procedural description that can be instantiated as an editable 3D building asset. Because a single image provides only partial and view-dependent evidence, we focus on recovering the dominant visible facade(s) and attach the recovered facade program to a simple mass model for building-level instantiation. Our method decomposes this task into two structured prediction stages. First, a Global Structure Layout Tree recovers facade-scale split-and-repeat organization through a fine-tuned layout model with render-guided visual-symbolic reflection. Second, a Component Parameterization schema maps representative facade tiles to structured procedural attributes for local architectural component synthesis. These two representations are then deterministically compiled into executable Computer Generated Architecture (CGA) programs, avoiding the brittleness of direct low-level program generation. Experiments show that the proposed framework handles both regular facades and challenging in-the-wild images, while maintaining high structural consistency, procedural executability, and fine-grained architectural detail. The recovered programs further enable controllable and reusable 3D building asset generation.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Zichong Zhu",
+          "Zhihao Liu",
+          "Andrei Sharf",
+          "Zhanglin Cheng"
+        ],
+        "categories": [
+          "cs.CV",
+          "cs.AI"
+        ]
+      }
+    },
+    {
+      "id": "2611.03142",
+      "title": "DepthGraft: Structural Regularization through Hierarchical Cross-Layer KV Reconstruction",
+      "url": "https://arxiv.org/abs/2611.03142v1",
+      "source": "arXiv",
+      "published_at": "2026-11-02T13:52:03+00:00",
+      "summary": "Scaling depth is a key route to stronger large language models, but Pre-LN architectures often suffer from depth-wise information dilution, limiting the effective use of deep layers. While cross-layer connectivity has proven effective at mitigating this problem, existing designs usually introduce additional computation or memory access. We revisit cross-layer KV sharing as an efficient form of such connectivity. Beyond cache compression, each KV reuse edge creates a direct gradient path from deep layers to source KV projections, turning KV sharing into an implicit structural regularizer for KV representation geometry. We provide a systematic analysis of this mechanism, showing that proper sharing topologies sharpen key retrieval directions while enriching the value content subspace, whereas existing adjacent or global-anchor designs do not fully exploit this effect. Motivated by this, we propose DepthGraft, a hierarchical KV-sharing architecture that reconstructs deep-layer KV from stride-aligned shallow-middle source pairs. DepthGraft distributes non-local gradient flow across source layers, while preserving prefill early completion and reducing KV cache by roughly one third. Experiments on dense and MoE models from 0.5B to 16B parameters show consistent downstream improvements under both GQA and MLA. Notably, on the 16B MoE model, DepthGraft achieves a 7.0% absolute improvement on MMLU-Pro, along with gains of 6.6% on CMMLU and 6.4% on C3. These results validate the potential of DepthGraft as a scalable design for large-scale pretraining. The project page is available at https://github.com/jianke0604/DepthGraft.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Xiaohan Qin",
+          "Xiangdong Zhang",
+          "Yu Wang",
+          "Huaijin Wu",
+          "Zhuo Xia",
+          "Yebin Yang",
+          "Junchi Yan"
+        ],
+        "categories": [
+          "cs.CL"
         ]
       }
     }

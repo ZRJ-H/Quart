@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-11-03T11:00:30.827414+08:00",
+  "cached_at": "2026-11-03T15:04:37.942699+08:00",
   "articles": [
     {
       "id": "https://www.news.cn/politics/20261103/6d54750ce9b4434eab4b9a7f3a8d605c/c.html",
@@ -62,36 +62,36 @@
       "extra": {}
     },
     {
-      "id": "https://www.bbc.co.uk/news/articles/cwly3jd27m9xo#1",
-      "title": "Man and boy arrested after allegedly attacking One Nation volunteer with baseball bat in Australia",
-      "url": "https://www.bbc.co.uk/news/articles/cwly3jd27m9xo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "published_at": "2026-11-03T01:57:46+00:00",
-      "summary": "The incident comes amid growing calls for the temperature of political debate in Australia to be turned down.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://www.bbc.co.uk/news/articles/cjy56dndlyz0o#0",
-      "title": "Russian bombing kills 26 people at Ukraine aid centre, Kyiv says",
-      "url": "https://www.bbc.co.uk/news/articles/cjy56dndlyz0o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "published_at": "2026-11-03T01:56:27+00:00",
-      "summary": "Officials say at least nine 3,000kg aerial bombs hit a southern Ukrainian village in what the president called an \"utterly horrific\" attack.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
       "id": "https://www.bbc.co.uk/news/articles/c6rey4v53exgo#1",
       "title": "North Korea denies being behind record $6.3bn Binance hack",
       "url": "https://www.bbc.co.uk/news/articles/c6rey4v53exgo?at_medium=RSS&at_campaign=rss",
       "source": "BBC World",
-      "published_at": "2026-11-03T01:23:03+00:00",
+      "published_at": "2026-11-03T06:22:29+00:00",
       "summary": "US government agencies and cyber analysts have blamed Pyongyang for the record-breaking heist.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
+      "id": "https://www.bbc.co.uk/news/articles/cx240mrm3g8vo#0",
+      "title": "US strikes Iran ahead of midterm elections",
+      "url": "https://www.bbc.co.uk/news/articles/cx240mrm3g8vo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "published_at": "2026-11-03T03:39:08+00:00",
+      "summary": "US officials described the attacks on Qeshm Island as limited and defensive, according to CBS, the BBC's US partner.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
+      "id": "https://www.bbc.co.uk/news/articles/cm5ynekkn5qko#0",
+      "title": "Supreme Court rejects Trump's request to stop California counting disputed votes",
+      "url": "https://www.bbc.co.uk/news/articles/cm5ynekkn5qko?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "published_at": "2026-11-03T03:32:36+00:00",
+      "summary": "The ruling, which comes on the eve of the midterm elections, essentially ends the Trump administration's bid to disqualify the ballots in the state.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
