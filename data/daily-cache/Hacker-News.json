@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-11-02T14:34:15.580626+08:00",
+  "cached_at": "2026-11-03T11:00:30.827414+08:00",
   "articles": [
     {
-      "id": "50319510",
-      "title": "HackerTube: YouTube built from videos recommended by HN",
-      "url": "https://karpathy.bearblog.dev/hacker-tube/",
+      "id": "50341174",
+      "title": "Astra can read and write weights to improve Qwen",
+      "url": "https://rikiyat.github.io/blog/weight-space-programming/",
       "source": "Hacker News",
-      "published_at": "2026-10-31T19:56:53+00:00",
-      "summary": "YouTube-style UI over 6,454 videos sourced from 39,834 HN comments since 2007.https://hackertube.org/",
-      "score": 2438,
-      "comments": 555,
-      "discussion_url": "https://news.ycombinator.com/item?id=50319510",
+      "published_at": "2026-11-02T18:21:28+00:00",
+      "summary": "Astra can read and write weights to improve Qwen",
+      "score": 2048,
+      "comments": 667,
+      "discussion_url": "https://news.ycombinator.com/item?id=50341174",
       "extra": {
         "top_comments": [
-          "I think there is a massive opportunity for this kind of feed disaggregation. Used to be the recommender and indexing of content was hard, now I believe we can likely build our own according to our own preferences.Haiku/Sonnet (or even Jev) can do a lot of the filtering work to rank and extend an RSS feed list.I think this gives us an opportunity to fully cut the cord from eyeball merchants who want us to maximally engage and therefore polarize their content.The big remaining hook will be the social graph; I am interested to see how far the EU push for mandatory interoperability will go. Another angle I’d support would be mandatory pluggable standards for your own ranking algorithm, but it captures less of the win than full disaggregation.",
-          "Made a books version of this: https://news.ycombinator.com/item?id=50326821PS: thank you karpathy, been binging videos on hackertube.org",
-          "I often wonder if AI generated programming is ethically positive, whereas AI generated media is problematic.I don't have the answer yet, but it is fairly clear that the lowered barrier to making software is helping to untangle us from software monopolies, as people keep spinning up alternatives super quickly!"
+          "This is insane.Astra can, without tooling, determine what games small networks are trained on, can edit the weights of networks directly to improve outcomes, and can hand edit a small qwen model to improve its math skills by like 5x.I'm shook. If you'd asked me this morning whether LLMs have native understanding of their weights that is less than human <-> neuron understanding, the same as human or more than human, I would have said \"same to less\" depending on definitions.No human can go edit a brain to become better at math. This is just very, very surprising to me and extremely interesting. I would guess this upsets quite a number of interp theories and philosophical takes on what's going on with these networks.",
+          "And here we go...As others have said, while still absolutely insane, I don't find it completely out-of-the-blue surprising. One of the recurring abilities of (current-generation) LLMs seem to be to rapidly grasp very complex systems, where humans would need months or years to reach the same level of expertise.You can see this in the way a coding agent can \"understand\" and explain sprawling legacy codebases in seconds.You can also see it in the projects that are using them to reverse-engineer proprietary IoT protocols or computer games.But those were all systems where we had detailed knowledge about what structures are there to be reverse-enginered.If the models can transfer this ability to some other systems where we don't know the underlying structure then I think we will be in for a lot more craziness in the future. (Protein interaction networks? DNA sequences? Ecosystem interactions? Animal languages?)As for weights, if the models really can analyze the semantics behind specific weights or directions, I have my hopes that they could also give a textual explanation or help designing tools to make \"handcrafting\" weights more practical in general.",
+          "I don't think this is an emergent capability. I think Astra was trained on neural weights data as an attempt by OpenAI to get to recursive self improvement.Something similar happen in early GPT models which had a lot of chess game in standard notation in their training data which made them very good at chess as long as your prompt had the right format.We'll see if this attempt at RSI worked."
         ]
       }
     },
     {
-      "id": "50326821",
-      "title": "Show HN: HackerBooks – HackerTube, but for books mentioned on HN",
-      "url": "https://hackerbooks.org",
+      "id": "50340088",
+      "title": "Show HN: Subvocal – Talk to your computer without making noise",
+      "url": "https://news.ycombinator.com/item?id=50340088",
       "source": "Hacker News",
-      "published_at": "2026-11-01T15:58:28+00:00",
-      "summary": "Saw Karpathy's HackerTube and wanted the same thing for books. So I had Claude build one (Opus 5.5).It's ~16.5k books that at least two different HN commenters brought up, from 2007 till now. Each book links back to the comments that mentioned it. Data is downloadable from the about page.To be clear: Claude wrote almost all of it, including the data pipeline and the site. I mostly steered and made calls, bought the domain name, etc.It counts mentions, so it's not perfect (praising a book and trashing it both count). If your favourite book is missing or matched to the wrong thing, tell me.",
-      "score": 1194,
-      "comments": 215,
-      "discussion_url": "https://news.ycombinator.com/item?id=50326821",
+      "published_at": "2026-11-02T17:16:17+00:00",
+      "summary": "Hi HN, we're Aarush and Arnav from The Subvocal Company (YC F26) (https://subvocal.company/). We’re building smart glasses that let you talk to your computer without talking out loud. You can mouth words silently and discreetly and the glasses decode them to text at the speed of speech.Here's a video of Dave from YC trying it out: https://www.youtube.com/watch?v=9QdX1eObVYI(Edit: you don't actually have to move your lips or even open your mouth for this to work! Since the RF can see inside your mouth the system can be fine tuned on \"internal speech\". This isn't the automatic tongue movements that occur when \"thinking\" words to yourself, but more like mouthing with your lips closed. It's a bit weird to do, but with practice, we have been able to get it down pretty well.)Arnav and I were studying CS at Georgia Tech at the beginning of the year, with no experience in silent speech or sensing. We were both AI-native builders and power users of Wispr Flow. What bugged us was not being able to use these tools in the library (or an office) or in public. At Stanford’s TreeHacks in February, we decided to build the most technically ridiculous thing we could think of. We’d read about AlterEgo, a silent speech system out of MIT’s Media Lab, and wanted to recreate it in 36 hours. We built a crude prototype, sticking EMG electrodes onto my face:https://drive.google.com/file/d/1mwhv5HZMz3UTevdrgwS5O7g2jWV...We got it to kind of work at a letter level in a very janky way. It wasn’t good enough to win the hackathon, but convinced us to go all in. The first time I typed a sentence without anyone noticing, I felt the magic of the technology.We quickly realized EMG (reading muscle electrical signals) wouldn’t work:- Signal changes due to sweat- Electrical interference- Placement variability- Most importantly, no one wants to stick electrodes onto their face!!So we switched to RF and built the glasses you see now. They emit radio waves, similar to Bluetooth, that pass through your face. As they cross the tongue, lips and soft palate, they’re modulated by silent mouthing. We train foundation models on this data to decode these perturbations to text.Despite prior academic research, getting this to work was a huge engineering challenge. First we built an extremely low noise RF sensing stack. Then we had to place antennas so their fields overlapped maximally with the articulators. Our first attempt on glasses failed completely, so we reverted to old habits and taped antennas on our face:https://drive.google.com/file/d/1ks0dS0eZiTV9EqSFsyB_w5BBjpc...Since taping antennas consistently in the same spot and angle was hard, we created this weird but effective head rig to hold them in place:https://drive.google.com/file/d/1rhzNFpdDzr7oHk0isFY70dkoV4C...This worked, but obviously wasn’t a product yet. So we worked deep in simulations to design glasses that could hold the antennas.That evolved into our design now, with antennas embedded within the frames. Once we established there was a signal, the next hurdle was cross-user generalization. Everyone’s facial anatomy, and hence RF signal patterns, are vastly different. We tried algorithmic workarounds but realized the only lever was to massively scale pretraining data.So that’s what we did. We set up booths in our office and paid people to read prompts wearing our glasses, to pretrain our models on. This produced a beautiful scaling curve, with errors falling quickly as we scaled our dataset and cross-user performance becoming genuinely compelling (as you see in the video above; Dave only had a short 20-sentence calibration).We always heard about building things from first principles but never understood it before this. We tried tackling it top down but completely failed. Only when we broke each component (the antenna, electronics, ML) down to its fundamentals to understand and optimize it did we get it to work really well.Over the next few months we’re continuing R&D to turn our prototype glasses into the slick product on our website and ship in Q1 2027. We’re also scaling up our dataset to improve performance on edge cases.For anyone who loves voice dictation but hates using it around people, we’ve opened preorders for our first batch of 500 units, with a $200 discount off the final price. Allocation is running out quickly, so get yours at https://subvocal.co/preorder!",
+      "score": 575,
+      "comments": 311,
+      "discussion_url": "https://news.ycombinator.com/item?id=50340088",
       "extra": {
         "top_comments": [
-          "\"Top All Time\" -> 3rd row -> \"Mein Kampf\"Sweet.",
-          "Fun skimming through this. I wondered how it would deal with book nicknames and chuckled when I found this entry https://hackerbooks.org/#/book/OL15190817W",
-          "A couple of missing ones (that I expected to have been mentioned, aren't there as far as I can tell, and I found them on here with a quick google):https://en.wikipedia.org/wiki/The_Invention_of_Morel mentioned here https://news.ycombinator.com/item?id=28779266 I'd have expected it to come up as one step removed from Borges, and it did.https://en.wikipedia.org/wiki/Why%27s_(poignant)_Guide_to_Ru... mentioned many times, eg https://news.ycombinator.com/item?id=36632010 - a surprising omission, tho I guess it's not in print."
+          "Just preordered -- glasses request: there's no way to say it nicely, I have a big nose. With a high bridge. Many glasses are really tough to get properly placed; may I request you not give up on the pads w/metal adjusters that you have in the product photos? Don't let a designer take them away from you, us folks not one standard deviation from 'normal' noses will thank you.Second, how tough is this signal processing? Will it be done on-glasses, or through an app? Third, what's the equivalent of a wake word for these? I'm reminded of the Apple Vision Pro radar to see if your fingers are clicking. I could imagine a lot of modalities where I want to just start talking and have things happen, and a lot where I don't want the glasses to pick it up. Fourth, I think a cool voice change demo would be rad -- not sure what latency is like, but if you could get it end to end under like 250ms you could probably have someone exaggerate the mouth movements and pipe out audio of them talking like someone else. Which would be another really cool demo.Super cool. You're going to be working 80 hour weeks for the next year, I'm excited to see what you put out!",
+          "I think this is incredibly cool and straight out of a sci-fi novel! I think this is phenomenal for accessibility and for hands-free computing in general. I also agree with other comments that the website should have more detail on how it works, such as what you included in the post body. Amazing work guys!",
+          "If the tech is mostly in the glasses temples, I would prefer to have something that attaches to my existing glasses. I have prescription glasses and a big head, tried the Even G2 smart glasses and the available frames set just too small for me"
         ]
       }
     },
     {
-      "id": "50326099",
-      "title": "Lenovo's 'encrypted' fingerprint USB is just an unencrypted SD card in a case",
-      "url": "https://www.reddit.com/r/technology/comments/1xl2pr3/lenovos_encrypted_fingerprint_usb_drive_is_just/",
+      "id": "50341462",
+      "title": "Ubuntu still has not released patch for Linux 0day RCE in almost 3 weeks",
+      "url": "https://freenode.net/article/ubuntu-lts-kernels-still-unfixed-for-critical-cve-2026-98432",
       "source": "Hacker News",
-      "published_at": "2026-11-01T14:34:43+00:00",
-      "summary": "Lenovo's 'encrypted' fingerprint USB is just an unencrypted SD card in a case",
-      "score": 447,
-      "comments": 157,
-      "discussion_url": "https://news.ycombinator.com/item?id=50326099",
+      "published_at": "2026-11-02T18:39:38+00:00",
+      "summary": "Ubuntu still has not released patch for Linux 0day RCE in almost 3 weeks",
+      "score": 361,
+      "comments": 87,
+      "discussion_url": "https://news.ycombinator.com/item?id=50341462",
       "extra": {
         "top_comments": [
-          "I'm not sure what codex helped with for the Lenovo case, if all that was required was open the stick and stick the sdcard into a computer.It's crazy that Lenovo will still be trusted to build secured hardware after that. It's not even a vulnerability at this point, I'm not sure how this could pass any form of security review, let alone having anyone review the design and approve it. They must have known it was nothing they pretended and still decide to sell it.",
-          "Does anyone actually trust these products? Always seemed like a terrible idea to me. The correct solution is to use free software cryptography on top of these things.",
-          "Linked article: https://www.tomshardware.com/tech-industry/cyber-security/le..."
+          "I find it odd that no public discussions are highlighting that iptables or nftables can drop this before the kernel CVE is exploitable by a U32 drop rule in raw PREROUTING...sudo iptables -t raw -I PREROUTING -p tcp -m u32 ! --u32 \"0>>24&0x0F=5\" -j DROP",
+          "It's rather uninteresting to note, once again, that Ubuntu has decided to do this. I would like to know the (official, if any - unofficial/speculative otherwise) reason WHY they have not.It does not seem that complicated to patch, and kernel upgrades are a dime a dozen these days. So what is making them delay a fix for so long?",
+          "Question:Every consumer router-wirelessAP I've seen runs linux.I never see security upgrades for the kernels they use. Not one. Not ever.Is this something that should be a cause for concern? Even if you don't run a consumer-grade tplink, netgear, asus, whatever router yourself.Update: The context which I should have said is that I think LLMs are giving script kids nation state level tools and expertise. This known bug is always less interesting than the next twenty."
         ]
       }
     },
     {
-      "id": "50323088",
-      "title": "The AI cost of JavaScript frameworks",
-      "url": "https://nolanlawson.com/2026/10/28/the-ai-cost-of-javascript-frameworks/",
+      "id": "50344919",
+      "title": "The SEC Should Block Anthropic's IPO to Protect the Public",
+      "url": "https://www.techpolicy.press/the-sec-should-block-anthropics-ipo-to-protect-the-public/",
       "source": "Hacker News",
-      "published_at": "2026-11-01T06:06:19+00:00",
-      "summary": "The AI cost of JavaScript frameworks",
-      "score": 345,
-      "comments": 261,
-      "discussion_url": "https://news.ycombinator.com/item?id=50323088",
+      "published_at": "2026-11-02T22:30:47+00:00",
+      "summary": "The SEC Should Block Anthropic's IPO to Protect the Public",
+      "score": 223,
+      "comments": 153,
+      "discussion_url": "https://news.ycombinator.com/item?id=50344919",
       "extra": {
         "top_comments": [
-          "The are some very real costs to JavaScript frameworks. These frameworks do not exist to empower developers. They exist to:* so that employers do not have to invest in training developers.* to ease candidate selection at hiring, which greases the wheels of hiring/firingIn the big corporate world, especially at non-software companies, there is a culture that strongly believes internally written software sucks. This is Invented Here syndrome, and it reflects that internal developers cannot write software and employers will not invest in maintenance.The larger costs there are human costs, the inability to efficiently solve any problem outside the constraints imposed by the framework.",
-          "IMO the largest true value of the frameworks (and languages to some extent) is how they help long-running projects with many people coming and going. The most valuable trait was not what framework allowed, but what framework disallowed, preventing foot guns. E.g. Java got popular because it forced everyone to code similarly, at least more similar than other languages at that time.But for agents it doesn't matter, so why frameworks at all?PS: authors comparison is not relevant, as it's simple mostly-static app with very little cross-dependencies, localizations, component re-usage.",
-          "> Frontends are rewritten because some framework or another is “better for agents.” (Did anyone think to ask the agents?) The resulting code is “faster,” the agents make “fewer mistakes,” etc.Yes, of course they asked.The agents responded with how this framework is X, not Y. How creating it was a sharp commentary on other frameworks. A couple honest caveats, and a succinct bottom line that adequately kissed the user's ass."
+          "The SEC's job isn't to adjudicate on whether Anthropic is a good or bad bet for investors. Its job is to ensure that investors have adequate visibility, and then get out of the way.It would be VERY BAD if we gave politicians arbitrary veto power over who IPOs and who doesn't. The threat of corruption should be obvious.",
+          "> the number of Americans using AI at work fell significantly between the summers of 2025 (46%) and 2026 (33%).Surprising. I couldn't find the study they're citing, and they didn't include a link. Anecdotally, my friends across various industries (tech, finance, medicine, scientific research) are all using AI more heavily as time goes on.",
+          "The SEC doesn't exist to play favourites. If Anthropic has broken a law they can be blocked for that. If not, then it would be unfair to them to block them for things that other companies with IPOs have done. Live by market primacy, die by market primacy."
         ]
       }
     },
     {
-      "id": "50328251",
-      "title": "Mathematics has changed. Let's act like it",
-      "url": "https://terrytao.wordpress.com/2026/11/01/mathematics-has-changed-lets-act-like-it/",
+      "id": "50341736",
+      "title": "Egoless Mathematics in the AI Era",
+      "url": "https://terrytao.wordpress.com/2026/11/02/egoless-mathematics-in-the-ai-era/",
       "source": "Hacker News",
-      "published_at": "2026-11-01T18:28:42+00:00",
-      "summary": "Mathematics has changed. Let's act like it",
-      "score": 268,
-      "comments": 289,
-      "discussion_url": "https://news.ycombinator.com/item?id=50328251",
+      "published_at": "2026-11-02T18:54:44+00:00",
+      "summary": "Egoless Mathematics in the AI Era",
+      "score": 124,
+      "comments": 85,
+      "discussion_url": "https://news.ycombinator.com/item?id=50341736",
       "extra": {
         "top_comments": [
-          "> To me, someone who chooses a worthwhile problem, obtains a proof completely using AI, understands it thoroughly, and uses it to develop interesting further questions or directions has made a substantial mathematical contribution. I would give that person substantial credit even if they supplied no new ingredient in the original proof.Yup. This is what Terence Tao has been saying about digestion of results for several months now. Mathematics has become a field where results themselves matter less, the social aspect of attracting others to understand your results and explore new problems has become more important.In a sense it is a little bit like software engineering, where writing code can sometimes be delegated to AI, and is arguably less important than understanding what the customer really wants from this software.",
-          "Please can we add the name of the guest authors in the titles of these posts?",
-          "Isn't it the passage of mathematics from the age of craftsmanship to the age of industrial making ?My recent take on AI is that people haven't adapted to the new huge potential of the tool, and don't dream big enough (yet).It's like seeing a car engine for the first time, lamenting about the future of horses, and not realizing it'll also help us fly."
+          "Human pursuits cannot be separated from the humans who pursuit it. In the pursuit of knowledge, what ultimately drives people is what they themselves can understand, and the meaning these understanding provides, both based on their own experience and people whose opinions they value. Humans do not pursuit Platonic knowledge for their own sake, and those who claim to do it, often are satisfying their egos in a different way.",
+          "Following Terry Tao's blog he seems to be engaging in forced self-directed cognitive behaviorial therapy, he is trying to come to terms with loss while developing a new framework for himself and other as to where the value is. It is cool to see. It is better to engage than to be in denial and just fall into reactionary behavior.",
+          "The lens to use is the Venn diagram of: 1. What you like doing 2. What you are good at doing 3. What people will pay you to do For math, if your goal is to prove something that no one else has proven, then all three are under attack.I think the \"egoless\" path is taking a 50,000-foot view of mathematics that ignores the above lens. Sure, mathematics will survive and even prosper with AI, but what about the mathematicians?In time, the profession of mathematics will evolve so a new task is at the center of the diagram--maybe it will be explaining math results to humans or teaching math to future mathematicians. I don't know. But it's easy to see that not everyone is going to be happy with the transition, and many will be left behind.For software engineering, it depends on what your center is. If you like \"writing code\", then #3 is under attack. But for those whose goal is, \"make something work\", all three are still viable and even better than before (or at least faster).That's why we see so much disagreement on HN about whether AI is good or bad for software engineering.I'm sure lots of other people have made this observation before."
         ]
       }
     },
     {
-      "id": "50328896",
-      "title": "Ask HN: Which TV do you recommend for privacy?",
-      "url": "https://news.ycombinator.com/item?id=50328896",
+      "id": "50340619",
+      "title": "Self-Employed? Solopreneur? NIST Has a Cybersecurity Guide Just for You",
+      "url": "https://www.nist.gov/news-events/news/2026/11/self-employed-solopreneur-nist-has-cybersecurity-guide-just-you",
       "source": "Hacker News",
-      "published_at": "2026-11-01T19:35:27+00:00",
-      "summary": "I haven’t owned a TV in years and would like one that respects my privacy. Are there any TV’s which do this well? I am looking for something in the 60”to 80”range and would like a 4k display with at least 60hz display. I don’t mind paying a premium.I have heard good things about Apple TV as a better alternative to most smart TV native apps. Would some TV’s pair better with this than others for privacy? I don’t want the TV doing anything other than being the display for Apple TV.I am curious what success others have had.",
-      "score": 262,
-      "comments": 424,
-      "discussion_url": "https://news.ycombinator.com/item?id=50328896",
+      "published_at": "2026-11-02T17:47:40+00:00",
+      "summary": "Self-Employed? Solopreneur? NIST Has a Cybersecurity Guide Just for You",
+      "score": 117,
+      "comments": 34,
+      "discussion_url": "https://news.ycombinator.com/item?id=50340619",
       "extra": {
         "top_comments": [
-          "- Buy an LG OLED TV. They're as gorgeous as they are notorious. I just got a 77\" LG C6 and it is crazy good.- Root it [0].- Install Glasshouse [1] and disable all telemetry. YOU now own the glass. Now you can chromecast to the TV, use Adfree YouTube, access IP TV, etc etc etc. No point crippling your TV by pulling the wireless module and voiding your warranty.- Install a bunch of cool apps to your TV [2] (there are many more out there besides those listed here)- Restore to Factory Defaults if you ever want / need to unroot and get back to stock e.g. a warranty claimThe only issue is that LG recently closed the vulnerability that made rooting possible so you don't want any firmware released after 2026-10-10 like 43.21.84. Hopefully a new exploit is found that makes rooting possible once again.BTW, you might have heard of Dev Mode on these TVs but they don't allow anywhere near the functionality that rooting provides.[0] https://tv.slada.sk/guides/rooting-guide[1] https://github.com/rorygallagher2024/glasshouse[2] https://www.webosbrew.org/",
-          "Recently I've had to deal with this same problem - get a new TV for living room. Personally, I do not watch TV at all, but kids want to see cartoons when having their breakfast. I spent a week reading forums and came to conclusion that best solution would be to buy a \"dumb TV\" and connect it to a PC I trust, but it appears there are no dump TVs in my rage of 55\" and larger. So, I bought \"Google TV\" based TCL.When I brought it home, I never connected it to Ethernet or WiFi. Instead, I connected it to my laptop over USB, then using adb I uninstalled almost every application from it. It took me quite some time to figure out what app is possible to remove and what should be kept to let TV functionality to work. I even had to factory-default it a couple of times because some random apps I removed were crucial for Android to work. :) I think it took me 5-6 hours to clean it. Now it has only basic TV functionality like any dump TV does, I can watch air and cable TV channels, watch movies and play music from USB storage. If there's a need to watch something online, I connect it over HDMI to my small mini-PC that runs FreeBSD. I think I'm satisfied with the result. :-)PS: Yesterday I opened the case and disconnected WiFi antenna. Just in case.",
-          "First of all, open the TV and disconnect the wireless radio from the main board, on mine (Samsung) it was just unplugging one cable (AI or Google it). I dislike doing stuff like that, but it was easy in my case, maybe you'll be lucky, too.Second, never use the \"apps\" built into the TV.Next, don't plug Ethernet into the TV. Plug HDMI cables into the TV.Use a box of your choice on the other end of the HDMI cables. This is now the box that you trust. (Roku? Shield? Blu-ray? MacBook? PC? Linux? Playstation? XBox? Whatever you want.)The Smart TV itself is now fine. Choose the devices you plug into it to play content. The TV just shows it."
+          "‘a lay-language resource‘.IMO this misses the mark. Yes, it’s a decent attempt at simplifying cybersecurity, but if this is aimed at entry-level, non-technical people, it’s not gonna work.One of my earliest jobs was to redesign training materials for one of the worlds largest companies. I stripped the training to its core, the true basics, and started there. The results were remarkable. I feel the urge to do the same with this document…",
+          "This is my first time seeing “SI” in the wild. That is such a wrong term. It’s jargon in a place where it doesn’t belong.It’s a darn fancy algorithm and a cool tool. Putting it on a pedestal instead of grounding it to reality is not going to help anyone. My condolences to the authors.",
+          "I'm not a security expert.Requests for comments from career security experts: is this any good?"
         ]
       }
     },
     {
-      "id": "50325253",
-      "title": "Show HN: OmniDiff – Opensource, super fast, content aware Git difftool, in Rust",
-      "url": "https://github.com/ivankovic/omnidiff",
+      "id": "50341028",
+      "title": "Sneaking into the auditorium for the Windows 2000 launch rehearsal",
+      "url": "https://devblogs.microsoft.com/oldnewthing/20261102-00/?p=112818/",
       "source": "Hacker News",
-      "published_at": "2026-11-01T13:02:30+00:00",
-      "summary": "I have been researching what the ultimate diff tool would look like, based on actual diffs in open source repositories.OmniDiff can diff: code (25 languages), config, images, PDFs, archives, cursors, fonts...It's fast. It can diff C++ files of tens of thousands of lines in under 100ms, on a 2023 ThinkPad T14s.It's open source. AGPLv3.It's based on real diffs. I looked at the 7400 repositories that are listed in Gentoo packages, sampled 2000 diffs and solved them manually to get a good understanding of what is needed, before putting together the diff pipelines for each content type. Incidentally, this also forms the basis of the CI pipeline, so the robustness of the codebase is quite high.I'm still developing it. It's v0.3.0 at this time. But I have been using it daily as my git difftool for months now, and it works well.AI Disclosure: Yes, I do use AI. No, I do not vibecode.",
-      "score": 206,
-      "comments": 49,
-      "discussion_url": "https://news.ycombinator.com/item?id=50325253",
+      "published_at": "2026-11-02T18:12:48+00:00",
+      "summary": "Sneaking into the auditorium for the Windows 2000 launch rehearsal",
+      "score": 110,
+      "comments": 41,
+      "discussion_url": "https://news.ycombinator.com/item?id=50341028",
       "extra": {
         "top_comments": [
-          "> can diff 99.95% of code changesI’m not sure if I’m understanding this correctly : so for the remaining 0.05% of code changes, this tool would just… miss it? That seems horrible for a diff tool :O",
-          "For me the biggest issue is “git rebase” merge conflicts because the surrounding context was modified (especially near beginning/end of functions where the context includes unrelated stuff), or similar in a markdown document.(If commit A adds a line to the end of a bullet list in markdown and commit B does the same, they will conflict even though resolution is trivial for a human)",
-          "Is there a way to use it with git without having to change your global git config? I.e. `git diff | omnidiff` or something?You can do this with delta: `git diff | delta --side-by-side`"
+          "> Remember infrared file sharing? Of course you don’t.I am much younger than Raymond Chen, but the generation of Lego Mindstorms I used in early elementary school had us load programs onto the robot using infrared. I'd never really thought about how that worked, or why it didn't just use a USB cable directly rather than a USB cable to infrared beacon to robot, until just now.",
+          "Speaking of getting into Microsoft events, some buddies and I registered with Microsoft as OEM system builders when we were in high school. We would drive to Redmond and attend these events talking about various new hardware and software and would leave with bags full of swag and they had awesome Raffles giving away some expensive shiny new hardware, which we would win quite often shockingly.We had finally heard about the Microsoft store on campus, and had heard about the super discounted software. Turned out you had to be an employee. We were crushed because retail copies of Win2k were expensive for high schoolers. So we sat out in front of the store with signs \"will work for cheap Microsoft software.\" Finally this girl came by and asked what we were doing, she was an intern or a new hire or something like that not much older than us, still in college. She went into to store and came out with boxed copies of Win2k Workstation for $20 a pop for us. We were stoked and tried to give he some cash, but she was just happy to help us out.Those were some good times. I wonder if stuff like that still happens today.",
+          "> Remember infrared file sharing? Of course you don’t.I was at a karaoke bar in Japan the other year and noticed the remote for the karaoke system had an IR port. Next time I brought my Sony Clie and sure enough, it still worked to let you send photos and doodle on them to display on the karaoke screen. Looked up the system, it was from 2012 (but was still kept up-to-date with new songs). https://kalleboo.com/microblog/posts/113510755577334826.html"
         ]
       }
     },
     {
-      "id": "50331402",
-      "title": "OccupySaaS",
-      "url": "https://occupysaas.com/",
+      "id": "50346153",
+      "title": "Intel stock collapse worsens as $3.5T chip rout spreads",
+      "url": "https://finance.yahoo.com/markets/article/the-intel-stock-collapse-is-getting-worse--and-the-37-trillion-chip-rout-is-spreading-212154947.html",
       "source": "Hacker News",
-      "published_at": "2026-11-02T00:17:27+00:00",
-      "summary": "OccupySaaS",
-      "score": 175,
-      "comments": 118,
-      "discussion_url": "https://news.ycombinator.com/item?id=50331402",
+      "published_at": "2026-11-03T00:08:53+00:00",
+      "summary": "Intel stock collapse worsens as $3.5T chip rout spreads",
+      "score": 103,
+      "comments": 70,
+      "discussion_url": "https://news.ycombinator.com/item?id=50346153",
       "extra": {
         "top_comments": [
-          "The mistake is thinking the first S is what people pay for when it is the second S.",
-          "I am working toward similar goals but with a different approach. With LLMs, software can become more personal, customized, quirky even. Software will fit the last mile better than ever.The solution is not another SaaS. But desktop apps. Less dependence on a cloud. Of course we need backups. And we need networking. Perhaps peer to peer. Or run a tiny VPS.Businesses, families, communities building their own workflows. The agent is at the core. And an agent that can work with any LLM. Build agents for non-technical people. Stick to a tech stack, offer end to end (from prompt to deploying generated code on VPS) out of the box from the harness.",
-          "This seems like it’s trying to reinvent the idea of FOSS. There’s already tons of FOSS alternatives to big tech SaaS and there’s lots of tech coops and other venues for tech activism. Why not support one of those ventures or build a platform to help amplify them?Also odd to advocate for control of tech only to cede the entire project to AI."
+          "Huh, I'm used to \"stock collapses\" headlines being a 2% daily fluctuation. Actually down 50% over the past month. But then again, up 50% over the past year. Sure is great when stocks of companies that are foundationally important to the world economy are being traded like meme stocks.",
+          "Intel, like Boeing cannot fail. If you believe they can, you better start searching for a bunker.Advanced chip manufacturing is so incredibly hard. The finance bozos are clueless, again.",
+          "I really want to see how all the people freaking out at a 1.5% market \"rout\" will react when an actual correction happens."
         ]
       }
     }

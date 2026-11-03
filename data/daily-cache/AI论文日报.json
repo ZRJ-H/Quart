@@ -1,76 +1,22 @@
 {
-  "cached_at": "2026-11-02T14:34:15.580626+08:00",
+  "cached_at": "2026-11-03T11:00:30.827414+08:00",
   "articles": [
     {
-      "id": "2610.42149",
-      "title": "Latent Reasoning in Continuous Space for Unified Multimodal Models",
-      "url": "https://arxiv.org/abs/2610.42149v1",
+      "id": "2611.00633",
+      "title": "Evidence-grounded large language models guide perovskite solar cell design and optimization",
+      "url": "https://arxiv.org/abs/2611.00633v1",
       "source": "arXiv",
-      "published_at": "2026-10-30T17:59:43+00:00",
-      "summary": "Unified Multimodal Models (UMMs) achieve remarkable success on diverse multimodal understanding and generation tasks, yet they still struggle to effectively leverage language-based chain-of-thought reasoning for image generation. As a result, existing reasoning-augmented UMMs often fail to inherit the test-time scaling and fine-grained controllability observed in large language models. We attribute this failure to a fundamental modality mismatch: reasoning is performed in a discrete token space, whereas image generation operates in a continuous space. To bridge this gap, we introduce a Latent Reasoning framework in Continuous space (LARC), which alleviates the token-level bottleneck by reasoning over continuous hidden states. Specifically, the training framework consists of two stages: (i) curriculum supervised fine-tuning (SFT), and (ii) information-gain reinforcement learning (RL). First, the curriculum SFT stage gradually converts token-level reasoning into latent reasoning. Subsequently, the information-gain RL stage self-evolves latent reasoning without ground truth supervision. Experiments across diverse text-to-image generation benchmarks show that LARC consistently improves generation quality, prompt following, and compositional fidelity. Notably, LARC achieves state-of-the-art performance on GenEval with a 7%p gain over BAGEL and demonstrates clear test-time scaling behavior, outperforming token-based generation under both parallel and sequential test-time scaling strategies.",
+      "published_at": "2026-10-31T04:57:32+00:00",
+      "summary": "Using large language models to interpret experimental evidence, design discriminating experiments and formulate well-supported mechanistic explanations remains a central challenge in materials research. Here we establish PSM-Bench, an 800-question benchmark developed by perovskite researchers to evaluate scientific reasoning in perovskite photovoltaics. We also introduce OpenPerov, an expert-informed language-model framework that learns from expert-calibrated evidence records reconstructed from 4,532 articles; these records link experimental strategies, controls and observations to mechanistic interpretations. Structured-evidence adaptation outperformed conventional question-answer training, and OpenPerov Flash ranked first among 13 closed-book systems. OpenPerov Pro raised Scientific Mastery further, from 87.6 to 89.1, by revising selected passages with retrieved evidence. On questions derived from subsequent studies, both models also outscored expert-authored answers. In an experimental test of self-assembled monolayer design, OpenPerov selected a K analogue that outperformed the Na analogue preferred by experts. Devices incorporating the selected contact reached a power conversion efficiency of 27.05% and retained 96.74% of their steady-state reference efficiency after 1,000 h of dark thermal ageing at 85 $^\\circ$C. These results show that reconstructed scientific reasoning provides an effective basis for building domain models that interpret experiments and inform materials design.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Byungwoo Jeon",
-          "Yoonwoo Jeong",
-          "Hyunseok Lee",
-          "Minsu Cho",
-          "Jinwoo Shin"
-        ],
-        "categories": [
-          "cs.CV",
-          "cs.CL",
-          "cs.LG"
-        ]
-      }
-    },
-    {
-      "id": "2610.42148",
-      "title": "Flide: Accelerating Decision Inference with Exact State Forking",
-      "url": "https://arxiv.org/abs/2610.42148v1",
-      "source": "arXiv",
-      "published_at": "2026-10-30T17:59:38+00:00",
-      "summary": "Decision models such as Jev have emerged as a highly promising paradigm for LLM agent systems, providing lightweight and reliable categorical reasoning for rapid System One execution. However, existing generation-oriented inference engines fail to support these workloads effectively, suffering from severe prefix recomputation overheads or distorted output probabilities. To address this challenge, we propose Flide, an efficient and exact inference engine that decouples the logical tree structure of a decision request from its physical execution within a single flattened token stream. Through ForkAttention, Flide navigates request dependencies using GPU-resident indices across both standard attention and recurrent Gated DeltaNet layers, guaranteeing in exact arithmetic that every query branch evaluates identically to an isolated forward pass. By expressing branch topologies directly in GPU-resident metadata, Flide accommodates diverse request mixtures with a compact set of pre-recorded execution graphs while enabling expanding agent histories to resume from checkpoints saved in earlier passes. Extensive evaluations on public hybrid and decision models demonstrate that Flide answers queries up to 9.5 times faster than vLLM and SGLang while staying closest to a float32 reference in total variation distance. By unifying physical execution throughput with mathematical exactness, Flide establishes a principled foundation for scalable, latency-critical decision intelligence in agent systems.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Bobo Li",
-          "Jiajia Song",
-          "Hao Fei",
-          "Wynne Hsu",
-          "Mong Li Lee"
-        ],
-        "categories": [
-          "cs.CL"
-        ]
-      }
-    },
-    {
-      "id": "2610.42147",
-      "title": "Latent Sparse Attention: Towards Subquadratic Ultra-Long Context Attention",
-      "url": "https://arxiv.org/abs/2610.42147v1",
-      "source": "arXiv",
-      "published_at": "2026-10-30T17:59:34+00:00",
-      "summary": "Agentic workflows are increasingly shifting towards long-horizon tasks, such as open-ended scientific work, where models benefit from long context windows. However, at ultra-long context (above 1M tokens), full attention is prohibitively expensive. A promising approach is sparse attention, in which a dedicated indexer selects a subset of keys for the attention. Yet current methods of indexing either still have quadratic cost in context size or lose accuracy at ultra-long context scale. We address this with Latent Sparse Attention (LSA), an efficient attention method that maintains accuracy at ultra-long context. In LSA, keys are hierarchically clustered in a learned latent space, and queries score the hierarchy of clusters instead of scoring every key, making prefill, decode and training faster at long context. We propose two variants, Distilled-LSA (D-LSA), which can be applied to pre-trained models via distillation, and Native-LSA (N-LSA), which is trained natively on the next-token loss alone. On GLM-5.3-FLASH (QWEN-3.8-27B) at 10M tokens, D-LSA speeds up one attention layer by 22.7x (72.4x) in prefill and 4.6x (42.5x) in decode over its original sparse attention (full attention), while keeping similar accuracy across a variety of tasks. N-LSA matches the accuracy of full attention with a training speedup of 1.6x per layer at 128k tokens. LSA offers practical and efficient attention for models to benefit from ultra-long context.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Ales Kubicek",
-          "Andrea Caciolai",
-          "Liangzu Peng",
-          "Sukrit Sumant",
-          "Benjamin Hoover",
-          "Fraser Greenlee",
-          "Ruairidh M. Battleday",
-          "Radim Urban",
-          "Torsten Hoefler",
-          "James C. R. Whittington"
+          "YanKai Chen",
+          "Zhi Wan",
+          "ZiHao Li",
+          "Tao Jing"
         ],
         "categories": [
           "cs.AI"
@@ -78,54 +24,116 @@
       }
     },
     {
-      "id": "2610.42146",
-      "title": "Hierarchical World Models with Implicit Dynamics",
-      "url": "https://arxiv.org/abs/2610.42146v1",
+      "id": "2611.00631",
+      "title": "TopoQuant: Topological Framework to Characterize Behavioral Shifts in Quantized Large Language Models",
+      "url": "https://arxiv.org/abs/2611.00631v1",
       "source": "arXiv",
-      "published_at": "2026-10-30T17:59:25+00:00",
-      "summary": "Planning with world models enables test-time adaptation for embodied agents, offering superior generalization over direct policy learning. However, long-horizon tasks remain hindered by cumulative errors and search complexity. Existing hierarchical methods often use rigid macro-actions or latent skills, leading to brittle representations and limited fine-grained control. We introduce ID-WM (Implicit Dynamics World Models), a hierarchical world model that decouples state-space reachability from local control. Our framework utilizes a high-level model to sample feasible transitions across the state manifold and a low-level world model as an inverse dynamics solver to ground these transitions into precise actions. This allows the planner to identify reachable subgoals without being constrained by low-level execution details. By prioritizing local physical feasibility over global behavioral patterns, ID-WM synthesizes novel long-horizon plans from short segments, transcending the specific behavioral modes seen during training. We demonstrate its effectiveness across three navigation and manipulation suites, achieving a 38.5% improvement over state-of-the-art policy and diffusion-based planners. Crucially, by leveraging this hierarchical structure to mitigate compounding errors, our approach yields a 135% performance gain over single-level world model MPC, particularly in complex, unseen configurations for long-horizon tasks. Videos can be viewed at https://id-wm.github.io",
+      "published_at": "2026-10-31T04:55:14+00:00",
+      "summary": "Post-training quantization (PTQ) reduces the com putational cost of large language models (LLMs), but it can introduce internal structural and behavioral changes that are not captured by traditional metrics such as accuracy and per plexity. We present TopoQuant, a topological framework that uses topological data analysis (TDA) to quantify structural drift in self-attention weights and relate it to behavioral changes in quantized LLMs. Across four LLM families and multiple quantization levels, we show that topological drift remains stable at moderate compression levels but increases sharply below 4 bit precision, closely tracking declines in attention agreement. Our results reveal a strong relationship between topological drift and attention agreement, indicating that structural changes in model parameters closely reflect behavioral degradation under quantization. We further demonstrate that topological features can accurately predict attention consistency using lightweight machine learning models, achieving R2 scores of up to 0.85. Predicting attention agreement enables efficient assessment of be havioral consistency in quantized LLMs, allowing quantization induced degradation to be detected without running expensive downstream tasks. The results indicate that topological drift pro vides an efficient early-warning signal for quantization-induced degradation and can help identify safe compression limits without extensive downstream evaluation.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Gaoyue Zhou",
-          "Yvonne Wu",
-          "Zichen Jeff Cui",
-          "Nicolas Ballas",
-          "Mido Assran",
-          "Lerrel Pinto",
-          "Yann LeCun"
+          "Baha Rababah",
+          "Shahzeb Qamar",
+          "Lorenz Sparrenberg",
+          "Rafet Sifa",
+          "Murat Kantarcioglu",
+          "Carson K. Leung",
+          "Cuneyt Gurcan Akcora"
         ],
         "categories": [
-          "cs.RO",
           "cs.AI"
         ]
       }
     },
     {
-      "id": "2610.42141",
-      "title": "RoboArchitect: Automating the Design of Robotic Agents with Persistent Memory",
-      "url": "https://arxiv.org/abs/2610.42141v1",
+      "id": "2611.00627",
+      "title": "Autonomous Analysis of Thermoelectric Materials Big Data by Multi-Agentic AI and Construction of a Knowledge Base and Specialized AI",
+      "url": "https://arxiv.org/abs/2611.00627v1",
       "source": "arXiv",
-      "published_at": "2026-10-30T17:58:48+00:00",
-      "summary": "Recent work shows that a frozen robot policy performs far better inside an agent harness, where control code decides when to query the policy, consult vision tools, or command the arm directly. Yet today these harnesses are built by hand and redesigned for each new robot or benchmark. We show that harness design can be automated, offering a strong alternative to finetuning on a novel setup. In RoboArchitect, a coding model observes a robot's rollouts, diagnoses failures, and iteratively revises the harness around the frozen policy. The harness evolves on a set of episodes for its optimization and is evaluated on held-out scenes and tasks. Without updating any model weights, RoboArchitect raises average success from 9.7% to 43.3% on unseen scenes (4.5x) and from 12.7% to 40.2% on unseen tasks (3.2x), across multiple benchmarks and policies. The gains are largest where the benchmark is far from the policy's training data: wrapping a general-purpose policy, the evolved harness yields a specialist that often outperforms even the finetuned version. Intuitive control strategies are automatically designed, such as lifting a jammed arm clear or reaching in horizontally when an obstacle blocks the way from above. The harness also evolves its own persistent memory, carrying learned experience, such as effective grasp depths, into later decisions. These results suggest that substantial headroom in robotic manipulation lies in the agent harness, and its design can be effectively automated and optimized without weight updates.",
+      "published_at": "2026-10-31T04:51:41+00:00",
+      "summary": "Extracting knowledge from large databases of experimental materials data requires repeated analyses and reusable records of their choices and results. We developed Multi-Agentic AI (MAA), a multi-agent system in which AI agents with distinct roles analyze experimental thermoelectric data under predefined instructions and quality checks, saving analysis records traceable to their sources. In four experiments varying theme and cycle counts, we measured what accumulated in these records. In the largest experiment (100 analyses across 10 themes and 10 cycles), concept co-occurrences were concentrated within themes, vocabulary was shared across themes and some relation descriptions were first detected in later cycles. A specialized AI that searches this experiment's knowledge bases and reads their analysis records answered materials questions with cited sources. Retrospective checks, including tracing an answer generated with a preliminary corpus back to the source data, exposed errors: traceability makes errors findable but not absent.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Shengguang Wu",
-          "Suning Huang",
-          "Cherie Ho",
-          "Ria Doshi",
-          "Hao Zhu",
-          "Serena Yeung-Levy"
+          "Yusuke Hashimoto",
+          "Takaaki Tomai"
         ],
         "categories": [
-          "cs.RO",
           "cs.AI",
-          "cs.CV"
+          "cond-mat.mtrl-sci",
+          "cs.MA"
+        ]
+      }
+    },
+    {
+      "id": "2611.00624",
+      "title": "XLA from the Trenches: Correctness on TPU Workloads at Scale",
+      "url": "https://arxiv.org/abs/2611.00624v1",
+      "source": "arXiv",
+      "published_at": "2026-10-31T04:48:13+00:00",
+      "summary": "Accelerating modern foundational models has pushed domain-specific compilers toward increasingly complex, multi-tiered optimization pipelines. However, this heavy optimization focus introduces delicate tradeoffs between peak execution performance and correctness. Subtle codegen defects can trigger numerical degradation and memory or buffer corruption, invalidating multi-million-dollar training runs and degrading live serving quality without raising obvious compiler errors. In this paper, we present a battle-tested methodology for verifying and triaging Google's XLA:TPU compiler at hyperscale. We leverage fuzzing techniques, combining synthetic program generation with real production traces, while orchestrating AI agent swarms to autonomously generate stress tests, reproduce failures, and draft fixes. To pinpoint root causes in full workloads, we pair this with a hierarchical differential pipeline that bisects large graphs down to individual failing operations inside fused kernels. Deployed in production, our framework has already driven the resolution of over 142 compiler bugs (with 103 additional findings under review), from which we distill pragmatic lessons learned.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Ignacio Cano",
+          "Amir Saadat",
+          "Rishipal Singh Bhatia",
+          "Samuel Ginzburg",
+          "Patrick C. Toulme",
+          "Ioannis Zarkadas",
+          "Praveen Narayanan",
+          "Pratik Bhatu",
+          "Nicolas Basile",
+          "Alexander Dietmüller",
+          "Ruishan Wang",
+          "Jacob Wahlgren",
+          "Victor Barros",
+          "Subhankar Shah",
+          "Michael Kuperstein",
+          "Farzin Houshmand",
+          "Emma Sevastian",
+          "Peter Gavin",
+          "Karthik Srinivasa Murthy",
+          "Berkin Ilbeyi",
+          "Amit Sabne",
+          "Eli Bendersky"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.LG",
+          "cs.PL"
+        ]
+      }
+    },
+    {
+      "id": "2611.00621",
+      "title": "Log-Driven Semantic Tuning for Mixed Integer Programming Solvers",
+      "url": "https://arxiv.org/abs/2611.00621v1",
+      "source": "arXiv",
+      "published_at": "2026-10-31T04:43:28+00:00",
+      "summary": "Automated configuration of mixed-integer programming (MIP) solvers largely relies on black-box optimization. Each trial requires an expensive solver run and provides only a scalar outcome, so tuning can require many such evaluations. Human experts take a different approach. They inspect solver logs, identify performance bottlenecks, and adjust the parameters that address them. We propose Log-Driven Semantic Tuning (LDST), which uses a large language model (LLM) to automate this process. LDST extracts compact diagnostics from solver logs, uses the LLM to propose sparse edits to the current best configuration based on parameter meanings and observed solver behavior, and validates each proposal before execution. A regime-adaptive objective selects the tuning signal according to the information available from a time-limited run, while a log-based completion signal estimates completion time from branch-and-bound tree growth recorded in ordinary solver logs, so that solved and unsolved runs share one time scale. On 215 instances from five benchmark sets, LDST reduces geometric-mean loss by 43.9% on easy instances and 16.7% on intermediate instances relative to the best of SMAC3, RBFOpt, and random search. In both regimes, LDST achieves a lower loss with 10 proposals than any of these baselines achieves with 50. Configurations that LDST tunes on a single instance also transfer better than baseline configurations to unseen instances of the same family.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Zhengzhong Ricky You",
+          "Kaizhao Sun",
+          "Zeping Min",
+          "Wotao Yin",
+          "Xinshang Wang"
+        ],
+        "categories": [
+          "math.OC",
+          "cs.AI",
+          "cs.LG"
         ]
       }
     }
