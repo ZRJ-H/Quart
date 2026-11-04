@@ -1,91 +1,48 @@
 {
-  "cached_at": "2026-11-03T15:04:37.942699+08:00",
+  "cached_at": "2026-11-04T11:00:30.441197+08:00",
   "articles": [
     {
-      "id": "2611.03152",
-      "title": "From PID to Reinforcement Learning in Building HVAC Control: A Control-Architecture Review of Tuning Strategies, Formulations, and Deployment Trade-offs",
-      "url": "https://arxiv.org/abs/2611.03152v1",
+      "id": "2611.04307",
+      "title": "Nearly Linear-Time Follow-the-Perturbed-Leader for Weakly Observable Graph Bandits",
+      "url": "https://arxiv.org/abs/2611.04307v1",
       "source": "arXiv",
-      "published_at": "2026-11-02T13:59:15+00:00",
-      "summary": "This paper reviews control architectures for building heating, ventilation and air-conditioning (HVAC) systems, addressing the tension among energy demand, occupant comfort and equipment operability, and situating proportional-integral-derivative (PID) regulation within a layered control stack that also includes rule-based and model-based supervisory control and data-driven reinforcement learning (RL). It examines the thermostat-PID layer from two-position and scheduled setpoint control through proportional, PI and PID regulation and their tuning, then formulates RL for building control as a Markov decision process. Its central contribution is a taxonomy of where RL meets PID: RL as a gain tuner for an existing loop, as a direct replacement for the regulatory controller, as a hybrid with model predictive control, and as supervisory setpoint and schedule generation. Across these classes, the review establishes that the physical loop remains invariant while the intervention point changes, and that the classes differ in their requirements for actuation authority, state information, modelling, commissioning and constraint handling. It further establishes that PID is inexpensive and well codified but limited by nonlinearity, time variation, discrete mode switching, loop interaction and slow plant dynamics, while RL's admissible position must be argued rather than assumed. The paper concludes that these architectures are not competing philosophies of control but nested points of attachment on one HVAC plant, with hybrid implementations possible, and that deployment trade-offs must be assessed according to the specific control interface and scaffolding required.",
+      "published_at": "2026-11-03T04:38:17+00:00",
+      "summary": "We study online learning with directed weakly observable feedback graphs and propose a Follow-the-Perturbed-Leader (FTPL) policy that achieves best-of-both-worlds guarantee with nearly linear expected time complexity. To preserve the simple structure of FTPL, we develop a novel graph-based loss estimator that combines forced exploration, conditional geometric resampling and adaptive learning rates with surrogate probabilities. Our policy achieves $\\tilde{\\mathcal{O}}(δ_*^{1/3} T^{2/3})$ regret for adversarial regimes as well as $\\tilde{\\mathcal{O}}(δ_* \\log T / Δ_{\\min}^2)$ regret for stochastic regimes, where $δ_*$ and $Δ$, respectively, denote the fractional weak domination number and the suboptimality gap. These results show that refined guarantees for problems with minimax regret of $Θ(T^{2/3})$ can be obtained through appropriately designed adaptive learning rates and loss estimators without sacrificing the simplicity of FTPL.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Erfan Haghighat Damavandi",
-          "Davide Papurello",
-          "Mahdi Alibeigi",
-          "Armin Keshavarz"
+          "Jongyeong Lee",
+          "Hyundam Yoo"
         ],
         "categories": [
+          "stat.ML",
           "cs.LG"
         ]
       }
     },
     {
-      "id": "2611.03150",
-      "title": "FlowBatt: Flow Matching for Probabilistic Battery Degradation Prediction",
-      "url": "https://arxiv.org/abs/2611.03150v1",
+      "id": "2611.04303",
+      "title": "FlowTranslator: Training-Free In-Image Machine Translation with Flow-Based Editing",
+      "url": "https://arxiv.org/abs/2611.04303v1",
       "source": "arXiv",
-      "published_at": "2026-11-02T13:58:18+00:00",
-      "summary": "Battery degradation remains a central challenge in the development and broad application of sustainable energy technologies. Accurate degradation prediction is challenging, as battery aging emerges from complex and heterogeneous interactions among cycling behavior, operating conditions, and cell chemistry. Existing machine-learning approaches typically focus on deterministic end-of-life predictions or modeling degradation curves within fixed chemistry settings, leaving probabilistic state of health (SOH) trajectory modeling across heterogeneous chemistries underexplored. We introduce FlowBatt, a use-inspired conditional generative framework that adapts flow matching with a diffusion transformer (DiT) backbone to battery degradation trajectory modeling. FlowBatt models full SOH trajectories as probabilistic degradation processes conditioned on early-cycle capacity data. To strengthen this conditioning pathway, we use explainable AI analysis to diagnose and improve the encoder that maps early-cycle capacity matrices into conditioning vectors. We evaluate FlowBatt on five public benchmark settings spanning diverse chemistries and aging conditions, comparing it with supervised and diffusion-based trajectory models as well as established baselines for remaining useful life (RUL) prediction under shared data splits. FlowBatt achieves the best trajectory-wise SOH prediction performance on all five datasets, with errors below 2.5%, and delivers competitive RUL prediction performance. By generating multiple plausible trajectories, FlowBatt provides empirical prediction intervals for battery degradation modeling. These results indicate that flow-matching-based trajectory modeling is a promising framework for probabilistic battery health prediction.",
+      "published_at": "2026-11-03T04:33:47+00:00",
+      "summary": "In-image machine translation (IIMT) replaces text in an image with its translation while preserving the surrounding visual context. Existing task-specific models achieve convincing performance but require massive paired training images before and after translation. As advanced text-to-image (T2I) models have reached a practically usable level of multilingual text generation, we argue that this capability can be transferred to IIMT and present FlowTranslator. It is a training-free IIMT framework that first employs an OCR model and an LLM to generate the translation prompt, which is injected into the T2I-based diffusion model. To optimize the accurate and natural generation of translated text, we introduce two trajectory controls: Region Coupling Release (RCR) partially decorrelates target-branch noise inside the text region early in the trajectory, while Coupling Expansion (CE) amplifies the emerging edit displacement mid-trajectory. Under the EasyOCR read-back protocol, FlowTranslator achieves average PRIM BLEU and COMET scores of 20.6 and 57.2, respectively, substantially outperforming the strong training-based baseline UniTranslator. On the more challenging and realistic whole-image ScenePair photographs translated into Chinese, it reaches 40.1\\% exact-match accuracy and surpasses existing editing systems, some of which only address the text-rendering stage rather than the complete IIMT task. These results establish flow-based editing as a strong, fully training-free baseline for IIMT.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Hamidreza Eivazi",
-          "Eslam Sharaawy",
-          "Stefan Wittek",
-          "André Hebenbrock",
-          "Raphael Ginster",
-          "Steffen Blömeke"
-        ],
-        "categories": [
-          "cs.LG",
-          "physics.chem-ph"
-        ]
-      }
-    },
-    {
-      "id": "2611.03146",
-      "title": "Controlling Sharpening in LLM Post-Training",
-      "url": "https://arxiv.org/abs/2611.03146v1",
-      "source": "arXiv",
-      "published_at": "2026-11-02T13:54:45+00:00",
-      "summary": "LLM post-training via reinforcement learning has shown consistent improvements in accuracy at the cost of reducing behavioral coverage - a phenomenon known as sharpening that can stall progress on difficult tasks. Repeated sampling objectives such as $\\mathrm{pass@k}$ and $\\mathrm{max@k}$ are known to mitigate sharpening, but the mechanism behind it remains poorly understood. Moreover, existing approaches for $\\mathrm{@k}$ optimization use dedicated algorithms, and no general framework exists for adapting established policy optimization methods from $\\mathrm{@}1$ to $\\mathrm{@k}$. We derive the optimal policies for KL-regularized $\\mathrm{pass@k}$ and $\\mathrm{max@k}$ objectives in closed form. Our explicit solutions reveal that $\\mathrm{@k}$ optimization naturally redistributes learning pressure based on prompt difficulty, directing it toward harder problems. Crucially, we show that standard $\\mathrm{@}1$ objectives achieve these exact same optimal policies through prompt-adaptive regularization or reward transformation. Ultimately, this yields an optimizer-independent explanation for why $\\mathrm{@k}$ objectives reduce sharpening on easy tasks while prioritizing success on harder ones. Building on these insights, we introduce $\\mathrm{@k}$ Adaptive Pressure for Policy Optimization (KAPPO). Following a one-time reference calibration, KAPPO seamlessly adapts existing $\\mathrm{@}1$ methods to $\\mathrm{@k}$ via prompt-adaptive regularization or reward transformation, without otherwise altering their training procedures. Experiments with several RL methods on mathematical reasoning and code generation demonstrate that KAPPO provides direct control over sharpening. Crucially, we demonstrate that $\\mathrm{@k}$ pressure can be fully realized with single completion training, matching the performance of multi-completion $\\mathrm{@k}$ optimizers at a fraction of the cost.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Simon Matrenok",
-          "Nicolas Menet",
-          "Nicolas Flammarion",
-          "Andreas Krause"
-        ],
-        "categories": [
-          "cs.LG"
-        ]
-      }
-    },
-    {
-      "id": "2611.03143",
-      "title": "Visual-to-Executable Procedural Reconstruction of Buildings",
-      "url": "https://arxiv.org/abs/2611.03143v1",
-      "source": "arXiv",
-      "published_at": "2026-11-02T13:52:45+00:00",
-      "summary": "Procedural modeling offers compact, editable, and reusable representations for architectural content, but building such models still depends heavily on manually authored grammars. We study image-based procedural building reconstruction from in-the-wild images, with the goal of recovering an executable procedural description that can be instantiated as an editable 3D building asset. Because a single image provides only partial and view-dependent evidence, we focus on recovering the dominant visible facade(s) and attach the recovered facade program to a simple mass model for building-level instantiation. Our method decomposes this task into two structured prediction stages. First, a Global Structure Layout Tree recovers facade-scale split-and-repeat organization through a fine-tuned layout model with render-guided visual-symbolic reflection. Second, a Component Parameterization schema maps representative facade tiles to structured procedural attributes for local architectural component synthesis. These two representations are then deterministically compiled into executable Computer Generated Architecture (CGA) programs, avoiding the brittleness of direct low-level program generation. Experiments show that the proposed framework handles both regular facades and challenging in-the-wild images, while maintaining high structural consistency, procedural executability, and fine-grained architectural detail. The recovered programs further enable controllable and reusable 3D building asset generation.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Zichong Zhu",
-          "Zhihao Liu",
-          "Andrei Sharf",
-          "Zhanglin Cheng"
+          "Zhixian Li",
+          "Xingsong Ye",
+          "Yongkun Du",
+          "Yunyan Xiao",
+          "Yanglin Huang",
+          "Pinxuan Chen",
+          "Jiyu Zhuang",
+          "Cong Xu",
+          "Zhineng Chen"
         ],
         "categories": [
           "cs.CV",
@@ -94,27 +51,76 @@
       }
     },
     {
-      "id": "2611.03142",
-      "title": "DepthGraft: Structural Regularization through Hierarchical Cross-Layer KV Reconstruction",
-      "url": "https://arxiv.org/abs/2611.03142v1",
+      "id": "2611.04301",
+      "title": "OSGR: Observation-Support Graph Reasoning for Earth Observation Question Answering",
+      "url": "https://arxiv.org/abs/2611.04301v1",
       "source": "arXiv",
-      "published_at": "2026-11-02T13:52:03+00:00",
-      "summary": "Scaling depth is a key route to stronger large language models, but Pre-LN architectures often suffer from depth-wise information dilution, limiting the effective use of deep layers. While cross-layer connectivity has proven effective at mitigating this problem, existing designs usually introduce additional computation or memory access. We revisit cross-layer KV sharing as an efficient form of such connectivity. Beyond cache compression, each KV reuse edge creates a direct gradient path from deep layers to source KV projections, turning KV sharing into an implicit structural regularizer for KV representation geometry. We provide a systematic analysis of this mechanism, showing that proper sharing topologies sharpen key retrieval directions while enriching the value content subspace, whereas existing adjacent or global-anchor designs do not fully exploit this effect. Motivated by this, we propose DepthGraft, a hierarchical KV-sharing architecture that reconstructs deep-layer KV from stride-aligned shallow-middle source pairs. DepthGraft distributes non-local gradient flow across source layers, while preserving prefill early completion and reducing KV cache by roughly one third. Experiments on dense and MoE models from 0.5B to 16B parameters show consistent downstream improvements under both GQA and MLA. Notably, on the 16B MoE model, DepthGraft achieves a 7.0% absolute improvement on MMLU-Pro, along with gains of 6.6% on CMMLU and 6.4% on C3. These results validate the potential of DepthGraft as a scalable design for large-scale pretraining. The project page is available at https://github.com/jianke0604/DepthGraft.",
+      "published_at": "2026-11-03T04:31:43+00:00",
+      "summary": "Answering geographic queries over Earth observation (EO) archives requires solving a joint retrieval-and-derivation problem under strict spatiotemporal constraints. Existing LLM agents fail to ground observation items or suffer from search-space explosion. We propose OSGR, a two-stage framework that factorizes this search into offline symbolic concept deduction and online Relation-Conditioned Grounding. OSGR leverages an offline Observation-Support Graph to deduce valid target-to-result support paths at the concept level, and applies spatiotemporal compatibility kernels to instantiate grounded observation-item sets. On Earth-Bench and DisasterM3-Reason, OSGR improves GPT-4o accuracy from 49.3\\% to 63.7\\% while reducing the execution-step ratio from 2.9 to 2.5.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Xiaohan Qin",
-          "Xiangdong Zhang",
-          "Yu Wang",
-          "Huaijin Wu",
-          "Zhuo Xia",
-          "Yebin Yang",
-          "Junchi Yan"
+          "Dazhou Yu",
+          "Zerong Wang",
+          "Riyang Bao",
+          "Longxiang Li",
+          "Yang Liu",
+          "Liang Zhao"
         ],
         "categories": [
-          "cs.CL"
+          "cs.AI",
+          "cs.IR"
+        ]
+      }
+    },
+    {
+      "id": "2611.04296",
+      "title": "SEAM: Situated Executable Associative Memory for a Co-located Community",
+      "url": "https://arxiv.org/abs/2611.04296v1",
+      "source": "arXiv",
+      "published_at": "2026-11-03T04:24:20+00:00",
+      "summary": "In groups, knowledge is distributed among individuals, and how it is brought together depends on social ties. Taking inspiration from how a single mind recalls and reacts to memories and current stimulus, we build a shared memory that does this for a community, prototyped as a social app, SEAM. Members post arbitrary moments; SEAM works out how fragments relate, distills knowledge about the group, and replies in a situated and associative way. Some of these memories act as instructions that can alter how the system behaves, making it programmable by its members. We deployed SEAM to 46 people in a co-located community for two weeks of open-ended use, and ran a follow-up workshop with 14. Members shared their days, interrogated the memory, and instructed it to track routines and run games; replies introduced them to people and subjects they had never encountered. SEAM points towards communities where knowledge finds people.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Keru Wang",
+          "Michael Xu",
+          "Ken Perlin",
+          "Nebojsa Jojic",
+          "Andrzej Banburski-Fahey"
+        ],
+        "categories": [
+          "cs.HC",
+          "cs.AI"
+        ]
+      }
+    },
+    {
+      "id": "2611.04295",
+      "title": "Reciprocity Can Erase Direction:tructural Boundaries and Controlled Utility of Magnetic Graph Networks",
+      "url": "https://arxiv.org/abs/2611.04295v1",
+      "source": "arXiv",
+      "published_at": "2026-11-03T04:21:29+00:00",
+      "summary": "Magnetic graph networks encode direction through phase, but a learned graph can erase the intended directional mechanism before prediction. We characterize this failure for support-based magnetic Laplacians. Exact identities relate imaginary energy and distance from zero phase to amplitude-weighted reciprocity. Top-$k$ selection forces complete collapse when the observed-node count satisfies $m\\leq k+1$, and dense support imposes a lower bound on reciprocal-arc fraction. We then construct paired propagation examples with identical node features and symmetric amplitudes but opposite labels, giving a provable chance-level limit for direction-erasing representations. In 72 fixed neural fits, support phase achieved test AUROC 1.0000 on a unilateral ring but 0.5000 on reciprocal ring and complete supports; continuous score phase and a real directed comparator achieved 1.0000 throughout. All models solved the direction-free control. These are oracle-direction mechanism tests, not evidence of learned clinical direction. In the preserved public DeepDRiD development study, continuous phase was active but its robustness difference from zero phase was only $+0.0036$ (descriptive 95\\% interval $-0.0014$ to $+0.0095$) on validation patients used for checkpoint selection. The contribution is a structural and experimental framework for distinguishing erased direction from unestablished task utility. It provides a precise circumstance in which magnetic phase preserves useful information, without asserting universal or clinical superiority.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Dawei Han",
+          "Zicheng Wang",
+          "Yaoxing Ren",
+          "Yi Lv",
+          "Rongqian Wu",
+          "Fumin Wang"
+        ],
+        "categories": [
+          "cs.LG",
+          "cs.AI"
         ]
       }
     }

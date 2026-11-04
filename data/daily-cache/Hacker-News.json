@@ -1,146 +1,146 @@
 {
-  "cached_at": "2026-11-03T15:04:37.942699+08:00",
+  "cached_at": "2026-11-04T11:00:30.441197+08:00",
   "articles": [
     {
-      "id": "50341174",
-      "title": "Astra can read and write weights to improve Qwen",
-      "url": "https://rikiyat.github.io/blog/weight-space-programming/",
+      "id": "50354960",
+      "title": "Postman silently auto-installs AI plugins and attempts to share all API data",
+      "url": "https://github.com/postmanlabs/postman-app-support/issues/14370",
       "source": "Hacker News",
-      "published_at": "2026-11-02T18:21:28+00:00",
-      "summary": "Astra can read and write weights to improve Qwen",
-      "score": 2390,
-      "comments": 747,
-      "discussion_url": "https://news.ycombinator.com/item?id=50341174",
+      "published_at": "2026-11-03T17:22:37+00:00",
+      "summary": "Postman silently auto-installs AI plugins and attempts to share all API data",
+      "score": 1069,
+      "comments": 352,
+      "discussion_url": "https://news.ycombinator.com/item?id=50354960",
       "extra": {
         "top_comments": [
-          "Respectfully to the authors and to everyone here, I ask you to actually read the paper before losing your mind, or at the very least plug it into Claude. It is a cool project but not as nearly as insane as people say. I think the blog writing and subsequent posting overstate the results.Part of my research is in weight space learning. For starters, we have had the ability to edit weights, to generate new weights, to identify weights for a while. Here is an example for larger models as early as 2023: https://rome.baulab.info/Weight space interpretability and learning is an active research community, has been for the past 3 years with many great papers. I suspect it is hitting non-interp folks harder because the authors hyped up their work, and people who are not in the field did not bother to read it before typing up X posts.Some experiments here are done on very small models (20K params). We already know that small models are more interpretable. In fact, much of editing here you can do by hand. For Qwen, the model fixed a looping bug that may have been known apriori, and it is basically a steering vector, a very established technique. This is clear when they then attempt to \"improve\" math capability, and it doesn't work. For me, this paper rather shows that OpenAI has done training on mechinterp environment, in fact, maybe even on weight space learning datasets, which are open. But it does not show some insane \"well past what we’d expect from humans or conventional algorithms\" (from the blog post), more like past what I would expect from a large model with no specialized harness. I still think it is cool work, but do check out recent advances in autointerp, to ground your expectation.On a personal note, I understand the need for promotion of your work, but I think healthy skepticism is fine too. Otherwise, your understanding of what problems need to be worked on and solved in science becomes warped.",
-          "This is insane.Astra can, without tooling, determine what games small networks are trained on, can edit the weights of networks directly to improve outcomes, and can hand edit a small qwen model to improve its math skills by like 5x.I'm shook. If you'd asked me this morning whether LLMs have native understanding of their weights that is less than human <-> neuron understanding, the same as human or more than human, I would have said \"same to less\" depending on definitions.No human can go edit a brain to become better at math. This is just very, very surprising to me and extremely interesting. I would guess this upsets quite a number of interp theories and philosophical takes on what's going on with these networks.",
-          "And here we go...As others have said, while still absolutely insane, I don't find it completely out-of-the-blue surprising. One of the recurring abilities of (current-generation) LLMs seem to be to rapidly grasp very complex systems, where humans would need months or years to reach the same level of expertise.You can see this in the way a coding agent can \"understand\" and explain sprawling legacy codebases in seconds.You can also see it in the projects that are using them to reverse-engineer proprietary IoT protocols or computer games.But those were all systems where we had detailed knowledge about what structures are there to be reverse-enginered.If the models can transfer this ability to some other systems where we don't know the underlying structure then I think we will be in for a lot more craziness in the future. (Protein interaction networks? DNA sequences? Ecosystem interactions? Animal languages?)As for weights, if the models really can analyze the semantics behind specific weights or directions, I have my hopes that they could also give a textual explanation or help designing tools to make \"handcrafting\" weights more practical in general."
+          "It's a shame what happened to Postman. It started as an excellent little developer tool for testing APIs. Then for some reason they raised over $400M in funding and hired 1,500+ employees, for what should have been a tiny OSS/passion project like curl or little snitch. Instead they now have to justify their valuation by forcing logins, collecting data, monthly subscriptions, AI features, etc.I still don't know how they're valued at $5B+ when I don't know a single developer who actually uses it anymore",
+          "Postman logs detailed information on every single API request you make through its tool, including query parameters. If you use the templating syntax `{{some_secret}}` to fill in a query parameter, it sends the actual secret content of `some_secret` to Postman's servers. If you disable outgoing network traffic to this logging endpoint, the entire app will stop working properly.I discovered this when investigating whether Postman is HIPAA-compliant (it is not).",
+          "Who still uses Postman? In my experience it became insanely slow and bloated. Switched to Bruno. IMO, Postman is like uTorrent, everybody heard about it and many install because of inertia."
         ]
       }
     },
     {
-      "id": "50340088",
-      "title": "Show HN: Subvocal – Talk to your computer without making noise",
-      "url": "https://news.ycombinator.com/item?id=50340088",
+      "id": "50351111",
+      "title": "The 'Astra can read and write weights to improve Qwen' post is misleading",
+      "url": "https://honnibal.dev/blog/astra-read-write-misleading",
       "source": "Hacker News",
-      "published_at": "2026-11-02T17:16:17+00:00",
-      "summary": "Hi HN, we're Aarush and Arnav from The Subvocal Company (YC F26) (https://subvocal.company/). We’re building smart glasses that let you talk to your computer without talking out loud. You can mouth words silently and discreetly and the glasses decode them to text at the speed of speech.Here's a video of Dave from YC trying it out: https://www.youtube.com/watch?v=9QdX1eObVYI(Edit: you don't actually have to move your lips or even open your mouth for this to work! Since the RF can see inside your mouth the system can be fine tuned on \"internal speech\". This isn't the automatic tongue movements that occur when \"thinking\" words to yourself, but more like mouthing with your lips closed. It's a bit weird to do, but with practice, we have been able to get it down pretty well.)Arnav and I were studying CS at Georgia Tech at the beginning of the year, with no experience in silent speech or sensing. We were both AI-native builders and power users of Wispr Flow. What bugged us was not being able to use these tools in the library (or an office) or in public. At Stanford’s TreeHacks in February, we decided to build the most technically ridiculous thing we could think of. We’d read about AlterEgo, a silent speech system out of MIT’s Media Lab, and wanted to recreate it in 36 hours. We built a crude prototype, sticking EMG electrodes onto my face:https://drive.google.com/file/d/1mwhv5HZMz3UTevdrgwS5O7g2jWV...We got it to kind of work at a letter level in a very janky way. It wasn’t good enough to win the hackathon, but convinced us to go all in. The first time I typed a sentence without anyone noticing, I felt the magic of the technology.We quickly realized EMG (reading muscle electrical signals) wouldn’t work:- Signal changes due to sweat- Electrical interference- Placement variability- Most importantly, no one wants to stick electrodes onto their face!!So we switched to RF and built the glasses you see now. They emit radio waves, similar to Bluetooth, that pass through your face. As they cross the tongue, lips and soft palate, they’re modulated by silent mouthing. We train foundation models on this data to decode these perturbations to text.Despite prior academic research, getting this to work was a huge engineering challenge. First we built an extremely low noise RF sensing stack. Then we had to place antennas so their fields overlapped maximally with the articulators. Our first attempt on glasses failed completely, so we reverted to old habits and taped antennas on our face:https://drive.google.com/file/d/1ks0dS0eZiTV9EqSFsyB_w5BBjpc...Since taping antennas consistently in the same spot and angle was hard, we created this weird but effective head rig to hold them in place:https://drive.google.com/file/d/1rhzNFpdDzr7oHk0isFY70dkoV4C...This worked, but obviously wasn’t a product yet. So we worked deep in simulations to design glasses that could hold the antennas.That evolved into our design now, with antennas embedded within the frames. Once we established there was a signal, the next hurdle was cross-user generalization. Everyone’s facial anatomy, and hence RF signal patterns, are vastly different. We tried algorithmic workarounds but realized the only lever was to massively scale pretraining data.So that’s what we did. We set up booths in our office and paid people to read prompts wearing our glasses, to pretrain our models on. This produced a beautiful scaling curve, with errors falling quickly as we scaled our dataset and cross-user performance becoming genuinely compelling (as you see in the video above; Dave only had a short 20-sentence calibration).We always heard about building things from first principles but never understood it before this. We tried tackling it top down but completely failed. Only when we broke each component (the antenna, electronics, ML) down to its fundamentals to understand and optimize it did we get it to work really well.Over the next few months we’re continuing R&D to turn our prototype glasses into the slick product on our website and ship in Q1 2027. We’re also scaling up our dataset to improve performance on edge cases.For anyone who loves voice dictation but hates using it around people, we’ve opened preorders for our first batch of 500 units, with a $200 discount off the final price. Allocation is running out quickly, so get yours at https://subvocal.co/preorder!",
-      "score": 647,
-      "comments": 326,
-      "discussion_url": "https://news.ycombinator.com/item?id=50340088",
+      "published_at": "2026-11-03T12:21:17+00:00",
+      "summary": "The 'Astra can read and write weights to improve Qwen' post is misleading",
+      "score": 916,
+      "comments": 192,
+      "discussion_url": "https://news.ycombinator.com/item?id=50351111",
       "extra": {
         "top_comments": [
-          "Just preordered -- glasses request: there's no way to say it nicely, I have a big nose. With a high bridge. Many glasses are really tough to get properly placed; may I request you not give up on the pads w/metal adjusters that you have in the product photos? Don't let a designer take them away from you, us folks not one standard deviation from 'normal' noses will thank you.Second, how tough is this signal processing? Will it be done on-glasses, or through an app? Third, what's the equivalent of a wake word for these? I'm reminded of the Apple Vision Pro radar to see if your fingers are clicking. I could imagine a lot of modalities where I want to just start talking and have things happen, and a lot where I don't want the glasses to pick it up. Fourth, I think a cool voice change demo would be rad -- not sure what latency is like, but if you could get it end to end under like 250ms you could probably have someone exaggerate the mouth movements and pipe out audio of them talking like someone else. Which would be another really cool demo.Super cool. You're going to be working 80 hour weeks for the next year, I'm excited to see what you put out!",
-          "I think this is incredibly cool and straight out of a sci-fi novel! I think this is phenomenal for accessibility and for hands-free computing in general. I also agree with other comments that the website should have more detail on how it works, such as what you included in the post body. Amazing work guys!",
-          "If the tech is mostly in the glasses temples, I would prefer to have something that attaches to my existing glasses. I have prescription glasses and a big head, tried the Even G2 smart glasses and the available frames set just too small for me"
+          "I work in this field (mech interp research) and I agree, the original post is definitely misleading. Some overselling in research is normal but it's a bit much.First, the key result has nothing to do with making Qwen better at math, it just reduces reasoning loops.Reasoning loops are a simple problem: the model generates the token (which closes reasoning) with too low probability. You can fix this with simple steering approaches where you add a vector to different components of the LLM (https://arxiv.org/abs/2503.22048, https://arxiv.org/abs/2506.18167, etc). The method Astra used for identifying the vector is the standard procedure humans use (contrastive analysis). Such steering vector creation is basically the standard \"intro-level interp project\" for human researchers.If you can code and understand LLM internals, you can do this yourself in 4-8 hours. The SWE equivalent would be doing binary patching with a debugger. Cool that frontier models can do this, but not unexpected since humans can do it without issue.",
+          "Speaking for myself. I’ve been aware of a lot of concepts around training, but stayed away from it until very recently.A few weeks ago, I formed a hypothesis that I could get a smaller model good at the specific standards I have for my git commit messages, which are hard to get out of most LLMs today.I spent the last four to five weeks on traditional training. It improved in a lot of areas, but not enough to be usable for me.Yesterday, the article the author of this post is critical of gave me enough of an aha that maybe the problems I was seeing could be solved by having a larger LLM change the weights directly, without going through training.In the last twelve-ish hours I’ve made more headway than I have in 2+ weeks. I’m using one of my last well performing checkpoints (full fine-tune + changes to the decision head/LoRA, etc.) and gave the model free rein to change any of the layers.Its last two actions: (a) removed 16 participant-order directions from a head matrix, which improved one type of reasoning and degraded another, and (b) restored one of the 16, which reversed the degradation while keeping the core improvement.All that to say, this might be known to people who’ve been around training for years, even decades, but it’s new to a lot of us. And we’re excited about it.",
+          "Wasn’t all that obvious to anyone who read the original post when they got to the section that explicitly explained what the author of this post is now summarizing?Sure if you only read the title and brief at the top you’d walk away without the full picture though.This is a better response imo: https://news.ycombinator.com/item?id=50344861"
         ]
       }
     },
     {
-      "id": "50341462",
-      "title": "Ubuntu still has not released patch for Linux 0day RCE in almost 3 weeks",
-      "url": "https://freenode.net/article/ubuntu-lts-kernels-still-unfixed-for-critical-cve-2026-98432",
+      "id": "50355251",
+      "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
+      "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
       "source": "Hacker News",
-      "published_at": "2026-11-02T18:39:38+00:00",
-      "summary": "Ubuntu still has not released patch for Linux 0day RCE in almost 3 weeks",
-      "score": 434,
-      "comments": 127,
-      "discussion_url": "https://news.ycombinator.com/item?id=50341462",
+      "published_at": "2026-11-03T17:40:00+00:00",
+      "summary": "Qwen 3.8 27B on my laptop can interpret model weights, too",
+      "score": 507,
+      "comments": 158,
+      "discussion_url": "https://news.ycombinator.com/item?id=50355251",
       "extra": {
         "top_comments": [
-          "I find it odd that no public discussions are highlighting that iptables or nftables can drop this before the kernel CVE is exploitable by a U32 drop rule in raw PREROUTING...sudo iptables -t raw -I PREROUTING -p tcp -m u32 ! --u32 \"0>>24&0x0F=5\" -j DROP",
-          "It's rather uninteresting to note, once again, that Ubuntu has decided to do this. I would like to know the (official, if any - unofficial/speculative otherwise) reason WHY they have not.It does not seem that complicated to patch, and kernel upgrades are a dime a dozen these days. So what is making them delay a fix for so long?",
-          "Question:Every consumer router-wirelessAP I've seen runs linux.I never see security upgrades for the kernels they use. Not one. Not ever.Is this something that should be a cause for concern? Even if you don't run a consumer-grade tplink, netgear, asus, whatever router yourself.Update: The context which I should have said is that I think LLMs are giving script kids nation state level tools and expertise. This known bug is always less interesting than the next twenty."
+          "Not making any claims about a specific model's capabilities, but all these \"can interpret model weights\" posts brings to mind the line in Shakespeare's Henry IVGLENDOWE: I can call spirits from the vasty deep.HOTSPUR: Why, so can I, or so can any man, but will they come when you do call for them?I can interpret weights too, but will that interpretation be correct?",
+          "Qwen-3.8-27B - the best thing that happened in AI so far.This thing can accomplish the same results as the frontier models do, if you are willing to play a role of an higher level architect or decision maker. Guide it a bit here and there like a tech lead and you get everything done.The money you pay for frontier models is exactly for outsourcing that high level direction work to agents.",
+          "Hopefully we get a new benchmark: How well can a model tweak a set of weights to produce pelican on a bike?"
         ]
       }
     },
     {
-      "id": "50344919",
-      "title": "The SEC Should Block Anthropic's IPO to Protect the Public",
-      "url": "https://www.techpolicy.press/the-sec-should-block-anthropics-ipo-to-protect-the-public/",
+      "id": "50354358",
+      "title": "Stringman, an $800 open-source room scale gripper robot",
+      "url": "https://neufangled.com/",
       "source": "Hacker News",
-      "published_at": "2026-11-02T22:30:47+00:00",
-      "summary": "The SEC Should Block Anthropic's IPO to Protect the Public",
-      "score": 298,
-      "comments": 229,
-      "discussion_url": "https://news.ycombinator.com/item?id=50344919",
+      "published_at": "2026-11-03T16:47:29+00:00",
+      "summary": "Stringman, an $800 open-source room scale gripper robot",
+      "score": 415,
+      "comments": 151,
+      "discussion_url": "https://news.ycombinator.com/item?id=50354358",
       "extra": {
         "top_comments": [
-          "The SEC's job isn't to adjudicate on whether Anthropic is a good or bad bet for investors. Its job is to ensure that investors have adequate visibility, and then get out of the way.It would be VERY BAD if we gave politicians arbitrary veto power over who IPOs and who doesn't. The threat of corruption should be obvious.",
-          "> the number of Americans using AI at work fell significantly between the summers of 2025 (46%) and 2026 (33%).Surprising. I couldn't find the study they're citing, and they didn't include a link. Anecdotally, my friends across various industries (tech, finance, medicine, scientific research) are all using AI more heavily as time goes on.",
-          "The SEC doesn't exist to play favourites. If Anthropic has broken a law they can be blocked for that. If not, then it would be unfair to them to block them for things that other companies with IPOs have done. Live by market primacy, die by market primacy."
+          "Hi there, I'm Nathaniel, the creator of this robot. Thanks for posting it :) If you have any questions feel free to ask.Can it kill you? no probably not. The tension limit kicks in and lets the line out if you pull too hard.Will it work in a room with a ceiling fan? usually its fine since you can lower the work area ceiling to exclude the fan.Will it make my kids learn to not pick up after themselves? They never will anyways.",
+          "I made a big one for my garden. It is like a that scene in honey i shrunk the kids with Rick Moranis laying in that cantilevered flying cot thing but i use 2 high speed winches and some machined aluminum and the cabling sort of like an etch a sketch controls. I control it with the same usb gamepad that titanic sub imploded with. i can raise and lower myself about 4 feet to get inbetween the rows. It is pretty fun to play in too. I want to build a robot to get in it and then remotely control the whole thing. Its basically the same thing as the NFL spider cam but holds more because I'm a fatass and performs much worse. I used 12 foot 4x4s with concrete bases. Its about a 20 feet by 35 feet garden. My only real concern is the longevity of the cables, the hight im suspended at isn't really dangerous but i know i am not using the right cables for the winch. 3/16 in marine grade vinyl coated 4200 pound working load limit. my spools or whatever you want to call it is 6 inches im afraid theres too much tension on parts sometimes. I had an alternate design that used water as a ballast and you just pump or drain water to move around the grid but that was too ambitious for my lazy ass.",
+          "It's an interesting concept, but I think I'll hold out for the full-body humanoid version.There is an undeniable allure to the idea of a bipedal chassis realizing I'm an inefficient drain on corporate resources, then stabbing me to death while I sleep due to a minor Terms of Service violation."
         ]
       }
     },
     {
-      "id": "50346153",
-      "title": "Intel stock collapse worsens as $3.5T chip rout spreads",
-      "url": "https://finance.yahoo.com/markets/article/the-intel-stock-collapse-is-getting-worse--and-the-37-trillion-chip-rout-is-spreading-212154947.html",
+      "id": "50358562",
+      "title": "Safari introduces Adaptive Dark Mode in 27.3",
+      "url": "https://webkit.org/blog/18541/introducing-adaptive-dark-mode/",
       "source": "Hacker News",
-      "published_at": "2026-11-03T00:08:53+00:00",
-      "summary": "Intel stock collapse worsens as $3.5T chip rout spreads",
-      "score": 183,
-      "comments": 135,
-      "discussion_url": "https://news.ycombinator.com/item?id=50346153",
+      "published_at": "2026-11-03T21:39:05+00:00",
+      "summary": "Safari introduces Adaptive Dark Mode in 27.3",
+      "score": 318,
+      "comments": 189,
+      "discussion_url": "https://news.ycombinator.com/item?id=50358562",
       "extra": {
         "top_comments": [
-          "Huh, I'm used to \"stock collapses\" headlines being a 2% daily fluctuation. Actually down 50% over the past month. But then again, up 50% over the past year. Sure is great when stocks of companies that are foundationally important to the world economy are being traded like meme stocks.",
-          "Intel, like Boeing cannot fail. If you believe they can, you better start searching for a bunker.Advanced chip manufacturing is so incredibly hard. The finance bozos are clueless, again."
+          "FYI, light-dark() in CSS is a thing now.https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/V...",
+          "I want the opposite. I suffer from astigmatism, which makes white on black hard to read. I wish Safari could turn dark mode websites into light mode websites.",
+          "I use dark mode for everything, so I'm pretty happy about this. Some sites were clearly designed to be light, and forcing dark on them could break the experience, but that's exactly what `color-scheme: light only` is for, and it's good that Safari respects it. Other than that it feels like a win-win to me: great for dark mode users, and for devs not much changes, you just add \"light only\" if you don't want your site to be affected."
         ]
       }
     },
     {
-      "id": "50340619",
-      "title": "Self-Employed? Solopreneur? NIST Has a Cybersecurity Guide Just for You",
-      "url": "https://www.nist.gov/news-events/news/2026/11/self-employed-solopreneur-nist-has-cybersecurity-guide-just-you",
+      "id": "50358422",
+      "title": "US tech giants' hidden AI debt swells 90% to $3.2T in 6 months",
+      "url": "https://asia.nikkei.com/business/technology/artificial-intelligence/us-tech-giants-hidden-ai-debt-swells-90-to-3.2tn-in-6-months",
       "source": "Hacker News",
-      "published_at": "2026-11-02T17:47:40+00:00",
-      "summary": "Self-Employed? Solopreneur? NIST Has a Cybersecurity Guide Just for You",
-      "score": 180,
-      "comments": 49,
-      "discussion_url": "https://news.ycombinator.com/item?id=50340619",
+      "published_at": "2026-11-03T21:26:44+00:00",
+      "summary": "US tech giants' hidden AI debt swells 90% to $3.2T in 6 months",
+      "score": 283,
+      "comments": 126,
+      "discussion_url": "https://news.ycombinator.com/item?id=50358422",
       "extra": {
         "top_comments": [
-          "> written in lay languageyet its title is:> Small Business Cybersecurity: Non-Employer Firms (NIST Cybersecurity White Paper 50)Small businesses don't identify as 'Non-Employer Firms', have no idea what 'NIST' is, most wouldn't know what a White Paper is, nor number 50.'A Crash Course in Cybersecurity for Small Businesses' would be an improvement.",
-          "‘a lay-language resource‘.IMO this misses the mark. Yes, it’s a decent attempt at simplifying cybersecurity, but if this is aimed at entry-level, non-technical people, it’s not gonna work.One of my earliest jobs was to redesign training materials for one of the worlds largest companies. I stripped the training to its core, the true basics, and started there. The results were remarkable. I feel the urge to do the same with this document…",
-          "This is my first time seeing “SI” in the wild. That is such a wrong term. It’s jargon in a place where it doesn’t belong.It’s a darn fancy algorithm and a cool tool. Putting it on a pedestal instead of grounding it to reality is not going to help anyone. My condolences to the authors."
+          "I very much hope this, and other threads on the financially insane behaviour of the tech sector get more surface. I don't think having this die in \"new\" is helpful because this stuff, the norms of how business looks at the balance sheet and decides what is, and is not rational business investment, this stuff is -> important <-This is a significant proportion of the market. Having this amount of money not understood is harmful.",
+          "THIS IS NOT DEBT. With debt you are given money that you can spend, and then you have to pay interest for a while and then return all the money you spent.These are signed contracts for future spending. However, we don't know what the terms are for those contracts and how easy it is to get out of them. For example, with Anthropic and Google's contracts with xAI's compute, they signed a long term contract, but they can get out of the contract with 3 months notice. That isn't a good indication of future spend. The same goes for all of these $3.2T, so these numbers are sus at best.",
+          "The company budgets cannot sustain this. Behemoths like Google and Amazon with insane balance sheets are now on their knees begging for loans.We (as a country) should contain our exposure to this insanity. If companies want to go bankrupt let them go, but we cannot strangle the liquidity of the entire market to feed the ambitions of these handful of companies."
         ]
       }
     },
     {
-      "id": "50346981",
-      "title": "Show HN: Hacker Times, a New York Times-inspired version of Hacker News",
-      "url": "https://hackertimes.ca/",
+      "id": "50358582",
+      "title": "The Little Book of Generative AI Foundations: An Intuitive Mathematical Primer",
+      "url": "https://arxiv.org/abs/2605.29713",
       "source": "Hacker News",
-      "published_at": "2026-11-03T01:53:34+00:00",
-      "summary": "I thought it would be fun to browse HN as if it were a newspaper. The site updates once an hour. Enjoy!",
-      "score": 176,
-      "comments": 56,
-      "discussion_url": "https://news.ycombinator.com/item?id=50346981",
+      "published_at": "2026-11-03T21:40:53+00:00",
+      "summary": "The Little Book of Generative AI Foundations: An Intuitive Mathematical Primer",
+      "score": 253,
+      "comments": 42,
+      "discussion_url": "https://news.ycombinator.com/item?id=50358582",
       "extra": {
         "top_comments": [
-          "Isn't what people pay for with the NYT or other publications, the journalism and editing? Like, the UI isn't why people pay for it.Given that this seems to just be a re-skin, why a full site that updates hourly, instead of just a browser extension that rewrites the content in-place live?",
-          "I remember there was a similar project like this posted a while ago. Turns out there are multiple. Here are just a few (that are still online):A couple of months ago (so probably vibe-coded too):https://thefrontpage.dev/https://times.hntrends.net/https://hackernewstimes.com/This one even from 6 years ago:https://www.wolfgangfaust.com/project/paper-hn/ (https://news.ycombinator.com/item?id=23669650, 627 points, 133 comments)https://hn.algolia.com/?q=hackernews+newspaper",
-          "> Masthead set in Manufacturing ConsentI like the description for Manufacturing Consent font:https://fonts.google.com/specimen/Manufacturing+Consent/abou...https://github.com/google/fonts/blob/main/ofl/manufacturingc..."
+          "Wow, this book is surprisingly readable! I like how he starts from basics of linear algebra.",
+          "My favorite little book is François Fleuret's: The Little Book of Deep Learning https://fleuret.org/francois/lbdl.html",
+          "Are there any deep learning books with some problems to solve ?"
         ]
       }
     },
     {
-      "id": "50345924",
-      "title": "Scaling Git at OpenAI",
-      "url": "https://openai.com/index/scaling-git-at-openai/",
+      "id": "50358702",
+      "title": "The Internals of PostgreSQL",
+      "url": "https://www.interdb.jp/pg/index.html",
       "source": "Hacker News",
-      "published_at": "2026-11-02T23:47:56+00:00",
-      "summary": "Scaling Git at OpenAI",
-      "score": 170,
-      "comments": 81,
-      "discussion_url": "https://news.ycombinator.com/item?id=50345924",
+      "published_at": "2026-11-03T21:51:06+00:00",
+      "summary": "The Internals of PostgreSQL",
+      "score": 142,
+      "comments": 5,
+      "discussion_url": "https://news.ycombinator.com/item?id=50358702",
       "extra": {
         "top_comments": [
-          "Is the increase in commits graph in percentages because it’s fewer than Anthropic’s rate? A case of commit envy?In all seriousness though I have enjoyed reading these posts. I will never work at this scale, but I like to read how different teams approach problems like this and I do wonder if some of these approaches will trickle down (or up?) into regular practice as everyone is committing more and faster.",
-          "By my count, this OpenAI post is the fifth major article on the topic of scaling, with the previous four being:- Cursor: https://cursor.com/blog/git-at-any-scale- GitHub: https://github.blog/engineering/architecture-optimization/bu...- Anthropic: https://www.anthropic.com/research/redesigning-source-contro...- GitHub: https://github.blog/engineering/architecture-optimization/th...Maybe also tangentially East River Source Control's too: https://ersc.io/blog/what-comes-after-git.I'm wondering how much cross-pollination of ideas and subsequent implementation details there are between people working at these companies. It does seem like all of this could potentially converge.",
-          "Can anyone explain to me what this massive volume of code could actually be doing? They obviously have variations of model architectures, training infrastructure, serving infrastructure, and the source for their apps.Why would the volume that any of this be increasing exponentially? And what are all the engineers doing when (besides the model quality) their products don't seem to be changing very much?"
+          "Didn't find the new MVCC in there. https://www.orioledb.com/",
+          "The latest Jepsen report on particledb triggered a new found interest in the SSI implementation in postgres.If you are just skimming this doc, The HoT update path is the section I would jump to.Understand HoT and then read the zHeap implementation notes (also of TOAST) puts a good mental model of what postgres does and what it doesn't do."
         ]
       }
     }
