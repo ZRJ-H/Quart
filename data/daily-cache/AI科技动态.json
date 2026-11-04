@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-11-04T11:00:30.441197+08:00",
+  "cached_at": "2026-11-04T14:48:15.555106+08:00",
   "articles": [
     {
       "id": "https://huggingface.co/blog/allenai/statebench",
@@ -20,18 +20,6 @@
       "source": "Microsoft Research",
       "published_at": "2026-11-03T17:14:38+00:00",
       "summary": "Research Manager Mike Walker reflects on a career spanning hacker culture, cybersecurity, and AI, sharing lessons about trust, teamwork, leadership, and why solving difficult problems requires curiosity, judgment, agility—and an understanding of the rules. The post Learn the rules: The hacker mindset appeared first on Microsoft Research.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/",
-      "title": "Agentic cheminformatics with Google Antigravity",
-      "url": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/",
-      "source": "Google DeepMind",
-      "published_at": "2026-11-03T17:01:49+00:00",
-      "summary": "Learn how Google Antigravity and our Cheminformatics Skills accelerate drug discovery workflows, search compounds, and propose novel rigidified macrocycles.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
@@ -92,6 +80,18 @@
       "source": "OpenAI",
       "published_at": "2026-11-03T00:00:00+00:00",
       "summary": "Jill Hazelbaker will join OpenAI as Chief Corporate Affairs Officer, leading the company’s global communications and corporate positioning.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
+      "id": "https://huggingface.co/blog/cwe-bench",
+      "title": "CWE-bench v2: More coverage, quality, and transparency",
+      "url": "https://huggingface.co/blog/cwe-bench",
+      "source": "Hugging Face",
+      "published_at": "2026-11-03T00:00:00+00:00",
+      "summary": "",
       "score": 0,
       "comments": 0,
       "discussion_url": "",

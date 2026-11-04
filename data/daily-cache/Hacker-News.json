@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-11-04T11:00:30.441197+08:00",
+  "cached_at": "2026-11-04T14:48:15.555106+08:00",
   "articles": [
     {
       "id": "50354960",
@@ -8,8 +8,8 @@
       "source": "Hacker News",
       "published_at": "2026-11-03T17:22:37+00:00",
       "summary": "Postman silently auto-installs AI plugins and attempts to share all API data",
-      "score": 1069,
-      "comments": 352,
+      "score": 1174,
+      "comments": 388,
       "discussion_url": "https://news.ycombinator.com/item?id=50354960",
       "extra": {
         "top_comments": [
@@ -20,38 +20,20 @@
       }
     },
     {
-      "id": "50351111",
-      "title": "The 'Astra can read and write weights to improve Qwen' post is misleading",
-      "url": "https://honnibal.dev/blog/astra-read-write-misleading",
-      "source": "Hacker News",
-      "published_at": "2026-11-03T12:21:17+00:00",
-      "summary": "The 'Astra can read and write weights to improve Qwen' post is misleading",
-      "score": 916,
-      "comments": 192,
-      "discussion_url": "https://news.ycombinator.com/item?id=50351111",
-      "extra": {
-        "top_comments": [
-          "I work in this field (mech interp research) and I agree, the original post is definitely misleading. Some overselling in research is normal but it's a bit much.First, the key result has nothing to do with making Qwen better at math, it just reduces reasoning loops.Reasoning loops are a simple problem: the model generates the token (which closes reasoning) with too low probability. You can fix this with simple steering approaches where you add a vector to different components of the LLM (https://arxiv.org/abs/2503.22048, https://arxiv.org/abs/2506.18167, etc). The method Astra used for identifying the vector is the standard procedure humans use (contrastive analysis). Such steering vector creation is basically the standard \"intro-level interp project\" for human researchers.If you can code and understand LLM internals, you can do this yourself in 4-8 hours. The SWE equivalent would be doing binary patching with a debugger. Cool that frontier models can do this, but not unexpected since humans can do it without issue.",
-          "Speaking for myself. I’ve been aware of a lot of concepts around training, but stayed away from it until very recently.A few weeks ago, I formed a hypothesis that I could get a smaller model good at the specific standards I have for my git commit messages, which are hard to get out of most LLMs today.I spent the last four to five weeks on traditional training. It improved in a lot of areas, but not enough to be usable for me.Yesterday, the article the author of this post is critical of gave me enough of an aha that maybe the problems I was seeing could be solved by having a larger LLM change the weights directly, without going through training.In the last twelve-ish hours I’ve made more headway than I have in 2+ weeks. I’m using one of my last well performing checkpoints (full fine-tune + changes to the decision head/LoRA, etc.) and gave the model free rein to change any of the layers.Its last two actions: (a) removed 16 participant-order directions from a head matrix, which improved one type of reasoning and degraded another, and (b) restored one of the 16, which reversed the degradation while keeping the core improvement.All that to say, this might be known to people who’ve been around training for years, even decades, but it’s new to a lot of us. And we’re excited about it.",
-          "Wasn’t all that obvious to anyone who read the original post when they got to the section that explicitly explained what the author of this post is now summarizing?Sure if you only read the title and brief at the top you’d walk away without the full picture though.This is a better response imo: https://news.ycombinator.com/item?id=50344861"
-        ]
-      }
-    },
-    {
       "id": "50355251",
       "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
       "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
       "source": "Hacker News",
       "published_at": "2026-11-03T17:40:00+00:00",
       "summary": "Qwen 3.8 27B on my laptop can interpret model weights, too",
-      "score": 507,
-      "comments": 158,
+      "score": 566,
+      "comments": 171,
       "discussion_url": "https://news.ycombinator.com/item?id=50355251",
       "extra": {
         "top_comments": [
           "Not making any claims about a specific model's capabilities, but all these \"can interpret model weights\" posts brings to mind the line in Shakespeare's Henry IVGLENDOWE: I can call spirits from the vasty deep.HOTSPUR: Why, so can I, or so can any man, but will they come when you do call for them?I can interpret weights too, but will that interpretation be correct?",
           "Qwen-3.8-27B - the best thing that happened in AI so far.This thing can accomplish the same results as the frontier models do, if you are willing to play a role of an higher level architect or decision maker. Guide it a bit here and there like a tech lead and you get everything done.The money you pay for frontier models is exactly for outsourcing that high level direction work to agents.",
-          "Hopefully we get a new benchmark: How well can a model tweak a set of weights to produce pelican on a bike?"
+          "Perhaps I’m missing this, but can Qwen 3.8 alter Qwen 3.8 weights?There are a lot of known neurons in the older Qwen models that are long known to induce behaviour changes (see evil Qwen by changing one weight).My question boils down to how much is trained vs being able to actually understand the weights. Presumably a same gen model isn’t trained on any sources dissecting that generation. And how much do longer known conceits like steering vectors, J spaces, LoRAs play into this?This doesn’t explain the game training cases, which are very impressive to me."
         ]
       }
     },
@@ -62,8 +44,8 @@
       "source": "Hacker News",
       "published_at": "2026-11-03T16:47:29+00:00",
       "summary": "Stringman, an $800 open-source room scale gripper robot",
-      "score": 415,
-      "comments": 151,
+      "score": 507,
+      "comments": 174,
       "discussion_url": "https://news.ycombinator.com/item?id=50354358",
       "extra": {
         "top_comments": [
@@ -80,8 +62,8 @@
       "source": "Hacker News",
       "published_at": "2026-11-03T21:39:05+00:00",
       "summary": "Safari introduces Adaptive Dark Mode in 27.3",
-      "score": 318,
-      "comments": 189,
+      "score": 388,
+      "comments": 211,
       "discussion_url": "https://news.ycombinator.com/item?id=50358562",
       "extra": {
         "top_comments": [
@@ -92,38 +74,20 @@
       }
     },
     {
-      "id": "50358422",
-      "title": "US tech giants' hidden AI debt swells 90% to $3.2T in 6 months",
-      "url": "https://asia.nikkei.com/business/technology/artificial-intelligence/us-tech-giants-hidden-ai-debt-swells-90-to-3.2tn-in-6-months",
-      "source": "Hacker News",
-      "published_at": "2026-11-03T21:26:44+00:00",
-      "summary": "US tech giants' hidden AI debt swells 90% to $3.2T in 6 months",
-      "score": 283,
-      "comments": 126,
-      "discussion_url": "https://news.ycombinator.com/item?id=50358422",
-      "extra": {
-        "top_comments": [
-          "I very much hope this, and other threads on the financially insane behaviour of the tech sector get more surface. I don't think having this die in \"new\" is helpful because this stuff, the norms of how business looks at the balance sheet and decides what is, and is not rational business investment, this stuff is -> important <-This is a significant proportion of the market. Having this amount of money not understood is harmful.",
-          "THIS IS NOT DEBT. With debt you are given money that you can spend, and then you have to pay interest for a while and then return all the money you spent.These are signed contracts for future spending. However, we don't know what the terms are for those contracts and how easy it is to get out of them. For example, with Anthropic and Google's contracts with xAI's compute, they signed a long term contract, but they can get out of the contract with 3 months notice. That isn't a good indication of future spend. The same goes for all of these $3.2T, so these numbers are sus at best.",
-          "The company budgets cannot sustain this. Behemoths like Google and Amazon with insane balance sheets are now on their knees begging for loans.We (as a country) should contain our exposure to this insanity. If companies want to go bankrupt let them go, but we cannot strangle the liquidity of the entire market to feed the ambitions of these handful of companies."
-        ]
-      }
-    },
-    {
       "id": "50358582",
       "title": "The Little Book of Generative AI Foundations: An Intuitive Mathematical Primer",
       "url": "https://arxiv.org/abs/2605.29713",
       "source": "Hacker News",
       "published_at": "2026-11-03T21:40:53+00:00",
       "summary": "The Little Book of Generative AI Foundations: An Intuitive Mathematical Primer",
-      "score": 253,
-      "comments": 42,
+      "score": 304,
+      "comments": 49,
       "discussion_url": "https://news.ycombinator.com/item?id=50358582",
       "extra": {
         "top_comments": [
-          "Wow, this book is surprisingly readable! I like how he starts from basics of linear algebra.",
-          "My favorite little book is François Fleuret's: The Little Book of Deep Learning https://fleuret.org/francois/lbdl.html",
-          "Are there any deep learning books with some problems to solve ?"
+          "I don't like:> Changing coordinates. Given a vector x expressed in the standard basis, we change coordinates by applying x_eig = V^−1 x. > This operation does not change the vector itself; it only changes how the vector is represented, converting it into eigenvector coordinates.I'm sure the author knows about the difference between the vector and a coordinate vector given a basis. I just don't like this wording. It's weird to say applying a function doesn't affect a change.",
+          "Another book which I would highly recommend for learning the math (or at least getting a very good idea of how it works) behind machine learning/transformers is \"Why Machines Learn: The Elegant Math Behind Modern AI\" by Anil Ananthaswamy. I read it this past year and I found it was extremely good at pacing and building up intuition to the \"how and why\" of most important math concepts and discoveries in ML that have lead to where we are today. For those who don't already have a fairly deep understanding of linear algebra, statistics, and multivariate calculus, this book will be a far more gentle introduction yet still has enough rigor for you to come away with something.",
+          "Wow, this book is surprisingly readable! I like how he starts from basics of linear algebra."
         ]
       }
     },
@@ -134,13 +98,50 @@
       "source": "Hacker News",
       "published_at": "2026-11-03T21:51:06+00:00",
       "summary": "The Internals of PostgreSQL",
-      "score": 142,
-      "comments": 5,
+      "score": 226,
+      "comments": 13,
       "discussion_url": "https://news.ycombinator.com/item?id=50358702",
       "extra": {
         "top_comments": [
-          "Didn't find the new MVCC in there. https://www.orioledb.com/",
-          "The latest Jepsen report on particledb triggered a new found interest in the SSI implementation in postgres.If you are just skimming this doc, The HoT update path is the section I would jump to.Understand HoT and then read the zHeap implementation notes (also of TOAST) puts a good mental model of what postgres does and what it doesn't do."
+          "Related:The Internals of PostgreSQL - https://news.ycombinator.com/item?id=43241404 - March 2025 (40 comments)The Internals of PostgreSQL - https://news.ycombinator.com/item?id=30372750 - Feb 2022 (19 comments)The Internals of PostgreSQL - https://news.ycombinator.com/item?id=30086374 - Jan 2022 (39 comments)Internals of PostgreSQL - https://news.ycombinator.com/item?id=18950460 - Jan 2019 (25 comments)The internals of PostgreSQL - https://news.ycombinator.com/item?id=13488315 - Jan 2017 (53 comments)The Internals of PostgreSQL - https://news.ycombinator.com/item?id=12142364 - July 2016 (1 comment)(Reposts are fine after a year or so; links to past threads are just to satisfy extra-curious readers)",
+          "The latest Jepsen report on particledb triggered a new found interest in the SSI implementation in postgres.If you are just skimming this doc, The HoT update path is the section I would jump to.Understand HoT and then read the zHeap implementation notes (also of TOAST) puts a good mental model of what postgres does and what it doesn't do.",
+          "Didn't find the new MVCC in there. https://www.orioledb.com/"
+        ]
+      }
+    },
+    {
+      "id": "50360164",
+      "title": "C++26 Disapproved",
+      "url": "https://andreasfertig.com/blog/2026/11/cpp26-dis-failed-how-does-cpp-survive/",
+      "source": "Hacker News",
+      "published_at": "2026-11-04T00:33:22+00:00",
+      "summary": "C++26 Disapproved",
+      "score": 218,
+      "comments": 113,
+      "discussion_url": "https://news.ycombinator.com/item?id=50360164",
+      "extra": {
+        "top_comments": [
+          "As someone who writes high-reliability C++ but is completely outside the standards process, I see the issues with C++ Contracts. It isn’t clear that it solves a problem that anyone has in real codebases, especially after C++20 concepts.If you were already writing high-reliability C++ then the benefits are difficult to quantify. If you weren’t writing high-reliability C++ then it saves you almost nothing over doing the standard idioms of high-reliability C++ that were already available to you at very marginally more cost. It does standardize expression of it in narrow cases but the payoff seems minimal.Most of what C++ Contracts delivers is a mashup of what you can already do with constexpr and C++20 Concepts. I like reliability features but this feature, as delivered, looks fairly useless if you already use reliability features. A compelling standard would need to make much deeper guarantees out of the box. And the compiler can already see through most compositions of constexpr and C++20 concepts, which is already very expressive.C++ Contracts looks a bit like a feature that was designed long before current standard features existed.",
+          "While I can understand that C++ contracts were met with controversy, contract annotations scoped at analysis time that can be verified by external tools, such as static analyzers, model checkers, or automatic theorem provers, are incredibly useful.I put together an alternative function contract and invariant mechanism in C using CBMC and custom macros that effectively allows me to perform formal methods in C using compositional verification. The reason why I chose C is because of its relative simplicity and relative ease of building tooling around it. C++ contracts provide some feature parity, and would let me take advantage of some of the features in C++ relative to C.I hope that the contract proposal is workshopped and simplified so it can be proposed again for a future version. Its current form is unsuitable, but it deserves a second chance with a simpler implementation. Contracts would narrow the safety gap between C++ and languages such as Ada / SPARK.",
+          "This article makes it sound the options are normally approval, rejection and abstention, but that this time round a fourth option, \"disapproval\", was reached. It that the case, or are they just trying to say that people rejected it?"
+        ]
+      }
+    },
+    {
+      "id": "50355767",
+      "title": "How I use AI (Oct 2026)",
+      "url": "https://ben.stolovitz.com/posts/how-use-ai-oct-2026/",
+      "source": "Hacker News",
+      "published_at": "2026-11-03T18:11:11+00:00",
+      "summary": "How I use AI (Oct 2026)",
+      "score": 135,
+      "comments": 117,
+      "discussion_url": "https://news.ycombinator.com/item?id=50355767",
+      "extra": {
+        "top_comments": [
+          "I always find so much cognitive dissonance in these kinds of posts.> My most successful work this year was hand-writing a tool, replacing ~4,000 lines of vibe-code with a few hundred. My system has proven more flexible, easier to test, and more generalizable than what it replaced.> agents still need human taste and experience to produce good work.Where do you think human taste and experience in software comes from?> overstimulating & exhausting in a way that coding never was.> for many of us, honing the code, finding the right design, seeing the parts mesh together — that was the meditative purpose we found in our jobs.> That’s not the only time AI waylaid me. LLMs could not figure out how to annotate that model’s training data correctly. I spent days going back and forth with them> LLMs are not yet good companions when brainstorming complicated things.Why do we expect this to get better? The training data will degrade in quality if more people rely on LLMs so I'd expect models to eventually start getting worse even if they currently enjoy apparent improvements in output.> Writing code is solved.What a strange thing to say given all the above experiences, which I think we all share.Why are we willing to give up so much in terms of purpose and understanding for perceived productivity gains?",
+          "There is no substitute for reading the code in many many cases. I spend more than 3k/mo on tokens. I find incorrect assumptions baked into the code (the ultimate spec) and missed by the agents and tests daily. This is more pronounced in data analysis and complex systems.As a side effect having to read the code at least once inevitably makes it way shorter and usually much better.",
+          "I believe that anyone who says that writing code is no longer needed, was probably not a very good coder to begin with. I have seen what the best models can do, and I've seen what people call \"good\", and I am not impressed.However, I'm still split. Because this could mean that we see a jump in code quality, due to bad coders getting someone better to code for them. But we could see a decrease in code quality, due to less people \"caring\"."
         ]
       }
     }
