@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-11-05T11:00:30.719975+08:00",
+  "cached_at": "2026-11-05T15:08:46.638882+08:00",
   "articles": [
     {
       "id": "50371246",
@@ -8,13 +8,13 @@
       "source": "Hacker News",
       "published_at": "2026-11-04T20:45:18+00:00",
       "summary": "Residential proxies detected on White House network",
-      "score": 717,
-      "comments": 228,
+      "score": 917,
+      "comments": 278,
       "discussion_url": "https://news.ycombinator.com/item?id=50371246",
       "extra": {
         "top_comments": [
           "They’re too polite to say it explicitly, but when they say:> Most of the activity happens in the evening, Eastern time: about half of it falls between 5 p.m. and midnight, and almost none happens in the early morning. That pattern suggests a person rather than a public guest Wi-Fi network: someone regularly on the White House network late into the evening, whose device is infected with a proxy SDK. Our data shows the exits, not the device or the person behind them.There really aren’t very many candidates for who that person might be and it really seems like it would be someone who, I don’t know, maybe lives where the traffic is originating.",
-          "https://archive.ph/ado1HNot sure why the text is all black, but it's there",
+          "I didn't know that residential proxies were a thing. That sounds pretty handy because going online via a VPN gives constant nag popups from the likes of cloudflare :( I hate them.It would be nice if the VPNs would integrate this option.I don't need one from the white house though :)",
           "The danger here, of course, is that while these compromised devices are currently being monetized in a relatively benign way (other than bandwidth costs to the user, which to be sure can be nontrivial)… it would be naive to assume that there isn't a Command and Control capability that can assign less benign tasking - or can be compromised to do so.This also puts some of the troubling reports that politicians were bringing phones into SCIFs into context…"
         ]
       }
@@ -26,14 +26,14 @@
       "source": "Hacker News",
       "published_at": "2026-11-04T15:30:30+00:00",
       "summary": "Kimi K3.1 Pro model weights are out",
-      "score": 401,
-      "comments": 109,
+      "score": 480,
+      "comments": 135,
       "discussion_url": "https://news.ycombinator.com/item?id=50366999",
       "extra": {
         "top_comments": [
           "Subtle quote from their website:> Advancing the Frontier of Open Intelligence.Too bad you probably need something like an 8x B300 node to run this. Black Friday is coming soon though, but I fear this open intelligence will be pacing anyone's liquidity frontier so I'll probably keep trailing the frontier for a while with nvidia/qwen3.8-27B-NVFP4 on dual RTX PRO 4000 in TP=2. I can almost fit 450k context in there.",
-          "Doesn't seem to outpace DeepSeekV4.1-Flash by much. Hy4 also announced their models and they have tons of internal benchmark, and K3.1 doesn't score that high on those benchmarks whereas Opus5.5 does, so it seems K3.1 is benchmaxxed.",
-          "> Kimi K3.1 Pro is an open-weightLie right in the first sentence"
+          "Only a 1453GB download. Fits on one LTO5 tape, maybe.",
+          "Doesn't seem to outpace DeepSeekV4.1-Flash by much. Hy4 also announced their models and they have tons of internal benchmark, and K3.1 doesn't score that high on those benchmarks whereas Opus5.5 does, so it seems K3.1 is benchmaxxed."
         ]
       }
     },
@@ -44,14 +44,14 @@
       "source": "Hacker News",
       "published_at": "2026-11-04T17:52:11+00:00",
       "summary": "A new Go API for JSON",
-      "score": 241,
-      "comments": 102,
+      "score": 280,
+      "comments": 128,
       "discussion_url": "https://news.ycombinator.com/item?id=50369106",
       "extra": {
         "top_comments": [
           "At this stage to me Go is the new C compiler. Quite honestly I spent 10 years or more writing Go code. At times 18 hours a day. And now with AI, I get models to write my Go code. I STILL want it to be Go code. Is that strange? No because I understand the performance and safety of Go. But I rarely write it directly anymore. Probably not at all in 6-9 months. Yet I still occasionally look at the code to see what the output looks like.So yea hopefully a nice new addition but only my prompts now matter. So need to make sure they pickup on the new API.",
-          "> \"JavaScript Object Notation (JSON) is a simple data interchange format [...]\"Clearly it isn't, otherwise every language would have sorted it out by... a long time ago.",
-          "I generally like `encoding/json/v2` and I'm glad they did it.I wish they'd left `MarshalIndent` in there though. The equivalent code is super complicated and non-obvious, so it's a pain to migrate, and it's a pain when you're banging out some quick code and want to dump some readable JSON. I suppose these days the LLMs can write the complicated version for us, of course."
+          "I generally like `encoding/json/v2` and I'm glad they did it.I wish they'd left `MarshalIndent` in there though. The equivalent code is super complicated and non-obvious, so it's a pain to migrate, and it's a pain when you're banging out some quick code and want to dump some readable JSON. I suppose these days the LLMs can write the complicated version for us, of course.",
+          "> \"JavaScript Object Notation (JSON) is a simple data interchange format [...]\"Clearly it isn't, otherwise every language would have sorted it out by... a long time ago."
         ]
       }
     },
@@ -62,8 +62,8 @@
       "source": "Hacker News",
       "published_at": "2026-11-04T18:53:29+00:00",
       "summary": "Ripple-65B Preview: U.S. Open-Weight SOTA on Agentic Coding",
-      "score": 234,
-      "comments": 80,
+      "score": 276,
+      "comments": 99,
       "discussion_url": "https://news.ycombinator.com/item?id=50369925",
       "extra": {
         "top_comments": [
@@ -74,38 +74,38 @@
       }
     },
     {
-      "id": "50366863",
-      "title": "OpenAI to acquire Pierre Computer Company",
-      "url": "https://openai.com/index/openai-to-acquire-pierre/",
+      "id": "50372929",
+      "title": "A thousand fewer paths to root",
+      "url": "https://openai.com/index/a-thousand-fewer-paths-to-root/",
       "source": "Hacker News",
-      "published_at": "2026-11-04T15:21:21+00:00",
-      "summary": "https://twitter.com/pierrecomputer/status/211799903617518818...",
-      "score": 199,
-      "comments": 62,
-      "discussion_url": "https://news.ycombinator.com/item?id=50366863",
+      "published_at": "2026-11-04T23:33:14+00:00",
+      "summary": "A thousand fewer paths to root",
+      "score": 269,
+      "comments": 167,
+      "discussion_url": "https://news.ycombinator.com/item?id=50372929",
       "extra": {
         "top_comments": [
-          "I have to imagine this is related to: https://openai.com/index/scaling-git-at-openai/And you'll see that mitchellh is a big fan of Pierre (and I think investor)https://x.com/mitchellh/status/2036855931569651884?lang=enFor those who don't know Pierce, here's a demo from mitchellh:https://x.com/mitchellh/status/2057229385963618787",
-          "We need a term for an acquisition where you buy an entire company because it would be cheaper than paying a monthly subscription fee to use their product.",
-          "I read good things about their diffs library: https://diffs.com/Whenever I see this acquires or hiring of successful products founders or teams by big labs I ask myself if, apart for the usual obvious reasons that any non ai model company would want them, they are also reusing this human talent to build the dataset of \"how the sausage is made\"."
+          "How did we get to the point where there are a thousand privilege escalation exploits in the kernel?Is the kernel simply too complex to reason about? Is it an underlying flaw in the security model or language implementation?Should we assume that all software is more compromised than the kernel?",
+          "This is my team’s work. I’m happy to try to answer questions or take questions back to the team.And we're hiring! https://openai.com/careers/search/?q=cyber",
+          "If a web application is vulnerable to sql injection, there are 4,732 ways you can ruin/still a database. Yet it is all one single vulnerability.Now, either those are 1k+ unique distinct techniques, or closer to my Sql injection example.There is no real data attached to the post. And in general, open ai marketing already gained mileage of reputation amongst us.Most likely kernel is not that vulnerable as they made it sounds."
         ]
       }
     },
     {
-      "id": "50368626",
-      "title": "Progress on provable inference for large language models",
-      "url": "https://www.anthropic.com/research/provable-inference",
+      "id": "50372945",
+      "title": "Images 2.6",
+      "url": "https://openai.com/index/introducing-images-2-6/",
       "source": "Hacker News",
-      "published_at": "2026-11-04T17:17:46+00:00",
-      "summary": "Progress on provable inference for large language models",
-      "score": 179,
-      "comments": 87,
-      "discussion_url": "https://news.ycombinator.com/item?id=50368626",
+      "published_at": "2026-11-04T23:35:44+00:00",
+      "summary": "Images 2.6",
+      "score": 230,
+      "comments": 148,
+      "discussion_url": "https://news.ycombinator.com/item?id=50372945",
       "extra": {
         "top_comments": [
-          "This is built on VerInf, work that I did as a MARS fellow. They ripped everything down to the choice of 400B Maverick from us with very little attribution. Cool, I guess... https://github.com/jamespetrie/verinf",
-          "I've been writing about the need for provable inference (and training) on and off for a number of years; this is welcome news and a good start, and a significant improvement on prior zk results.The problems of inference proof for a closed model provider are more difficult than an open model provider -- you can get a probabilistic proof much more cheaply out of four independent inference providers running the same non-batched prompt than this 90-100x compute hit.Anthropic and others also have a significant problem with these proofs in that they have a lot of incentive internally to have some portions of the pre-prompt secret; I haven't read this newest scheme closely enough to determine if they have a way to hide parts of the prompt with the proof. But if they don't, they are almost certainly not going to want to send these proofs out in the general case.Last, I'll take this moment to soapbox and say for the researchers out there -- provable inference is nice. Provable training corpus information would be spectacular. It would be very, very, very nice to provide a set of model weights and a proof that they had only been trained on a dataset. To be clear, this is a really hard problem, but it would change fundamentally what levels of trust we could have about a given set of weights.",
-          "> In both cases the question is the same: how can a company be sure of which weights are actually running on its servers?> the resulting commitment is good for about 16 million requests, after which the provider has to commit again.> The client downloads the commitment, ~6.5 MB in all, and then one proof per request. Checking a proof takes 17 seconds on 24 threads (and 21 seconds on a single thread), including the offline phase's checkI know they mentioned $ETH in the technical report, but this is exactly the mechanic for a crypto currency Proof-of-Work which is expensive by design.When they announced it, I was hoping for a 5% overhead validation that the model that served you is really Fable and not Opus.The quantization bit caught me out, because we saw the boundary crossing from good-context-size to bad is so sharp it feels like longer context requests are sent to quantized models to make more room for more KV-Cache. This would expose those sorts of tricks people can play to have the same GPU do better on short context benchmarks and gracefully degrade on long context.At work, we did a bit of digging[1] into exactly why BaseTen, Fireworks and Together serve Inkling weights differently, we suspected the issue was a combination of how you do disaggregated prefill (+streaming) and quantization for longer context tasks.[1] - https://isotopes.ai/blog/everyone-is-selling-the-same-model-..."
+          "Still looks like an eyesore, I genuinely want to know if the engineers who work on the product don't notice it",
+          "That stained glass whale thing makes me especially grumpy. When it scrolled onto the page, my first thought was \"whoah, what a neat idea\" and then it was _immediately_ followed by \"what a terribly execution.\"Like, I'm not even an artist, so I'm sure there's a million things I'm missing, but it's just so upsetting to look at. There's weird random reflections on things that shouldn't have reflections, the coloured light absolutely doesn't actually track through the stained glass onto any surface that makes any sense, light is coming from every which way, it's just... gross to look at for anything more than a quarter of a second.And this is what they're using to hype people up for it. /shrug",
+          "Using the grid trick for animations to generate the individual frames has been around for awhile and not specific to ChatGPT: I'm surprised it took this long for one of the official providers to make it explicit. However, adherence between frames is generally tricky, and even in the examples there is a lot of noise between frames although that could be due to compression.SVG support is interesting but I suspect shenanigans are afoot since that's not how image generation models work, and it would likely strip any SynthID watermarks. It's possible OpenAI has pipelined a raster-to-vector tool that does the conversion automatically. (I developed a similar pipeline and it works extremely well; I'll open source it at some point)EDIT: Per documentation, there is an explicit `output_format: \"svg\"`, and I am indeed correct there is raster-to-vector in play:> The API creates a reference image and uses it to produce the SVG. The quality setting controls that reference image. Decode data[0].b64_json as base64 and save the resulting UTF-8 XML bytes with a .svg extension.OpenAI claims 50% faster generation with Images 2.6 but curiously price is the same as Image 2.5."
         ]
       }
     },
@@ -116,8 +116,8 @@
       "source": "Hacker News",
       "published_at": "2026-11-04T19:50:23+00:00",
       "summary": "Insects don't swarm at LED lights",
-      "score": 172,
-      "comments": 97,
+      "score": 226,
+      "comments": 119,
       "discussion_url": "https://news.ycombinator.com/item?id=50370610",
       "extra": {
         "top_comments": [
@@ -128,20 +128,20 @@
       }
     },
     {
-      "id": "50372929",
-      "title": "A thousand fewer paths to root",
-      "url": "https://openai.com/index/a-thousand-fewer-paths-to-root/",
+      "id": "50368626",
+      "title": "Progress on provable inference for large language models",
+      "url": "https://www.anthropic.com/research/provable-inference",
       "source": "Hacker News",
-      "published_at": "2026-11-04T23:33:14+00:00",
-      "summary": "A thousand fewer paths to root",
-      "score": 158,
-      "comments": 99,
-      "discussion_url": "https://news.ycombinator.com/item?id=50372929",
+      "published_at": "2026-11-04T17:17:46+00:00",
+      "summary": "Progress on provable inference for large language models",
+      "score": 207,
+      "comments": 91,
+      "discussion_url": "https://news.ycombinator.com/item?id=50368626",
       "extra": {
         "top_comments": [
-          "How did we get to the point where there are a thousand privilege escalation exploits in the kernel?Is the kernel simply too complex to reason about? Is it an underlying flaw in the security model or language implementation?Should we assume that all software is more compromised than the kernel?",
-          "This is my team’s work. I’m happy to try to answer questions or take questions back to the team.And we're hiring! https://openai.com/careers/search/?q=cyber",
-          "With these vulnerabilities and the ones not listed that are sure to exist, how is the internet still up? How are my lights on? Why aren't power plants exploding by the dozens?What are the mitigating factors that prevent this level of vulnerability from being an existential threat to humanity?"
+          "This is built on VerInf, work that I did as a MARS fellow. They ripped everything down to the choice of 400B Maverick from us with very little attribution. Cool, I guess... https://github.com/jamespetrie/verinf",
+          "I've been writing about the need for provable inference (and training) on and off for a number of years; this is welcome news and a good start, and a significant improvement on prior zk results.The problems of inference proof for a closed model provider are more difficult than an open model provider -- you can get a probabilistic proof much more cheaply out of four independent inference providers running the same non-batched prompt than this 90-100x compute hit.Anthropic and others also have a significant problem with these proofs in that they have a lot of incentive internally to have some portions of the pre-prompt secret; I haven't read this newest scheme closely enough to determine if they have a way to hide parts of the prompt with the proof. But if they don't, they are almost certainly not going to want to send these proofs out in the general case.Last, I'll take this moment to soapbox and say for the researchers out there -- provable inference is nice. Provable training corpus information would be spectacular. It would be very, very, very nice to provide a set of model weights and a proof that they had only been trained on a dataset. To be clear, this is a really hard problem, but it would change fundamentally what levels of trust we could have about a given set of weights.",
+          "> In both cases the question is the same: how can a company be sure of which weights are actually running on its servers?> the resulting commitment is good for about 16 million requests, after which the provider has to commit again.> The client downloads the commitment, ~6.5 MB in all, and then one proof per request. Checking a proof takes 17 seconds on 24 threads (and 21 seconds on a single thread), including the offline phase's checkI know they mentioned $ETH in the technical report, but this is exactly the mechanic for a crypto currency Proof-of-Work which is expensive by design.When they announced it, I was hoping for a 5% overhead validation that the model that served you is really Fable and not Opus.The quantization bit caught me out, because we saw the boundary crossing from good-context-size to bad is so sharp it feels like longer context requests are sent to quantized models to make more room for more KV-Cache. This would expose those sorts of tricks people can play to have the same GPU do better on short context benchmarks and gracefully degrade on long context.At work, we did a bit of digging[1] into exactly why BaseTen, Fireworks and Together serve Inkling weights differently, we suspected the issue was a combination of how you do disaggregated prefill (+streaming) and quantization for longer context tasks.[1] - https://isotopes.ai/blog/everyone-is-selling-the-same-model-..."
         ]
       }
     }
