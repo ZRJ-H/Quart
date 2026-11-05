@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-11-04T14:48:15.555106+08:00",
+  "cached_at": "2026-11-05T11:00:30.719975+08:00",
   "articles": [
     {
-      "id": "50354960",
-      "title": "Postman silently auto-installs AI plugins and attempts to share all API data",
-      "url": "https://github.com/postmanlabs/postman-app-support/issues/14370",
+      "id": "50371246",
+      "title": "Residential proxies detected on White House network",
+      "url": "https://layer3intel.com/blog/residential-proxies-white-house-network",
       "source": "Hacker News",
-      "published_at": "2026-11-03T17:22:37+00:00",
-      "summary": "Postman silently auto-installs AI plugins and attempts to share all API data",
-      "score": 1174,
-      "comments": 388,
-      "discussion_url": "https://news.ycombinator.com/item?id=50354960",
+      "published_at": "2026-11-04T20:45:18+00:00",
+      "summary": "Residential proxies detected on White House network",
+      "score": 717,
+      "comments": 228,
+      "discussion_url": "https://news.ycombinator.com/item?id=50371246",
       "extra": {
         "top_comments": [
-          "It's a shame what happened to Postman. It started as an excellent little developer tool for testing APIs. Then for some reason they raised over $400M in funding and hired 1,500+ employees, for what should have been a tiny OSS/passion project like curl or little snitch. Instead they now have to justify their valuation by forcing logins, collecting data, monthly subscriptions, AI features, etc.I still don't know how they're valued at $5B+ when I don't know a single developer who actually uses it anymore",
-          "Postman logs detailed information on every single API request you make through its tool, including query parameters. If you use the templating syntax `{{some_secret}}` to fill in a query parameter, it sends the actual secret content of `some_secret` to Postman's servers. If you disable outgoing network traffic to this logging endpoint, the entire app will stop working properly.I discovered this when investigating whether Postman is HIPAA-compliant (it is not).",
-          "Who still uses Postman? In my experience it became insanely slow and bloated. Switched to Bruno. IMO, Postman is like uTorrent, everybody heard about it and many install because of inertia."
+          "They’re too polite to say it explicitly, but when they say:> Most of the activity happens in the evening, Eastern time: about half of it falls between 5 p.m. and midnight, and almost none happens in the early morning. That pattern suggests a person rather than a public guest Wi-Fi network: someone regularly on the White House network late into the evening, whose device is infected with a proxy SDK. Our data shows the exits, not the device or the person behind them.There really aren’t very many candidates for who that person might be and it really seems like it would be someone who, I don’t know, maybe lives where the traffic is originating.",
+          "https://archive.ph/ado1HNot sure why the text is all black, but it's there",
+          "The danger here, of course, is that while these compromised devices are currently being monetized in a relatively benign way (other than bandwidth costs to the user, which to be sure can be nontrivial)… it would be naive to assume that there isn't a Command and Control capability that can assign less benign tasking - or can be compromised to do so.This also puts some of the troubling reports that politicians were bringing phones into SCIFs into context…"
         ]
       }
     },
     {
-      "id": "50355251",
-      "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
-      "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+      "id": "50366999",
+      "title": "Kimi K3.1 Pro model weights are out",
+      "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
       "source": "Hacker News",
-      "published_at": "2026-11-03T17:40:00+00:00",
-      "summary": "Qwen 3.8 27B on my laptop can interpret model weights, too",
-      "score": 566,
-      "comments": 171,
-      "discussion_url": "https://news.ycombinator.com/item?id=50355251",
+      "published_at": "2026-11-04T15:30:30+00:00",
+      "summary": "Kimi K3.1 Pro model weights are out",
+      "score": 401,
+      "comments": 109,
+      "discussion_url": "https://news.ycombinator.com/item?id=50366999",
       "extra": {
         "top_comments": [
-          "Not making any claims about a specific model's capabilities, but all these \"can interpret model weights\" posts brings to mind the line in Shakespeare's Henry IVGLENDOWE: I can call spirits from the vasty deep.HOTSPUR: Why, so can I, or so can any man, but will they come when you do call for them?I can interpret weights too, but will that interpretation be correct?",
-          "Qwen-3.8-27B - the best thing that happened in AI so far.This thing can accomplish the same results as the frontier models do, if you are willing to play a role of an higher level architect or decision maker. Guide it a bit here and there like a tech lead and you get everything done.The money you pay for frontier models is exactly for outsourcing that high level direction work to agents.",
-          "Perhaps I’m missing this, but can Qwen 3.8 alter Qwen 3.8 weights?There are a lot of known neurons in the older Qwen models that are long known to induce behaviour changes (see evil Qwen by changing one weight).My question boils down to how much is trained vs being able to actually understand the weights. Presumably a same gen model isn’t trained on any sources dissecting that generation. And how much do longer known conceits like steering vectors, J spaces, LoRAs play into this?This doesn’t explain the game training cases, which are very impressive to me."
+          "Subtle quote from their website:> Advancing the Frontier of Open Intelligence.Too bad you probably need something like an 8x B300 node to run this. Black Friday is coming soon though, but I fear this open intelligence will be pacing anyone's liquidity frontier so I'll probably keep trailing the frontier for a while with nvidia/qwen3.8-27B-NVFP4 on dual RTX PRO 4000 in TP=2. I can almost fit 450k context in there.",
+          "Doesn't seem to outpace DeepSeekV4.1-Flash by much. Hy4 also announced their models and they have tons of internal benchmark, and K3.1 doesn't score that high on those benchmarks whereas Opus5.5 does, so it seems K3.1 is benchmaxxed.",
+          "> Kimi K3.1 Pro is an open-weightLie right in the first sentence"
         ]
       }
     },
     {
-      "id": "50354358",
-      "title": "Stringman, an $800 open-source room scale gripper robot",
-      "url": "https://neufangled.com/",
+      "id": "50369106",
+      "title": "A new Go API for JSON",
+      "url": "https://go.dev/blog/jsonv2",
       "source": "Hacker News",
-      "published_at": "2026-11-03T16:47:29+00:00",
-      "summary": "Stringman, an $800 open-source room scale gripper robot",
-      "score": 507,
-      "comments": 174,
-      "discussion_url": "https://news.ycombinator.com/item?id=50354358",
+      "published_at": "2026-11-04T17:52:11+00:00",
+      "summary": "A new Go API for JSON",
+      "score": 241,
+      "comments": 102,
+      "discussion_url": "https://news.ycombinator.com/item?id=50369106",
       "extra": {
         "top_comments": [
-          "Hi there, I'm Nathaniel, the creator of this robot. Thanks for posting it :) If you have any questions feel free to ask.Can it kill you? no probably not. The tension limit kicks in and lets the line out if you pull too hard.Will it work in a room with a ceiling fan? usually its fine since you can lower the work area ceiling to exclude the fan.Will it make my kids learn to not pick up after themselves? They never will anyways.",
-          "I made a big one for my garden. It is like a that scene in honey i shrunk the kids with Rick Moranis laying in that cantilevered flying cot thing but i use 2 high speed winches and some machined aluminum and the cabling sort of like an etch a sketch controls. I control it with the same usb gamepad that titanic sub imploded with. i can raise and lower myself about 4 feet to get inbetween the rows. It is pretty fun to play in too. I want to build a robot to get in it and then remotely control the whole thing. Its basically the same thing as the NFL spider cam but holds more because I'm a fatass and performs much worse. I used 12 foot 4x4s with concrete bases. Its about a 20 feet by 35 feet garden. My only real concern is the longevity of the cables, the hight im suspended at isn't really dangerous but i know i am not using the right cables for the winch. 3/16 in marine grade vinyl coated 4200 pound working load limit. my spools or whatever you want to call it is 6 inches im afraid theres too much tension on parts sometimes. I had an alternate design that used water as a ballast and you just pump or drain water to move around the grid but that was too ambitious for my lazy ass.",
-          "It's an interesting concept, but I think I'll hold out for the full-body humanoid version.There is an undeniable allure to the idea of a bipedal chassis realizing I'm an inefficient drain on corporate resources, then stabbing me to death while I sleep due to a minor Terms of Service violation."
+          "At this stage to me Go is the new C compiler. Quite honestly I spent 10 years or more writing Go code. At times 18 hours a day. And now with AI, I get models to write my Go code. I STILL want it to be Go code. Is that strange? No because I understand the performance and safety of Go. But I rarely write it directly anymore. Probably not at all in 6-9 months. Yet I still occasionally look at the code to see what the output looks like.So yea hopefully a nice new addition but only my prompts now matter. So need to make sure they pickup on the new API.",
+          "> \"JavaScript Object Notation (JSON) is a simple data interchange format [...]\"Clearly it isn't, otherwise every language would have sorted it out by... a long time ago.",
+          "I generally like `encoding/json/v2` and I'm glad they did it.I wish they'd left `MarshalIndent` in there though. The equivalent code is super complicated and non-obvious, so it's a pain to migrate, and it's a pain when you're banging out some quick code and want to dump some readable JSON. I suppose these days the LLMs can write the complicated version for us, of course."
         ]
       }
     },
     {
-      "id": "50358562",
-      "title": "Safari introduces Adaptive Dark Mode in 27.3",
-      "url": "https://webkit.org/blog/18541/introducing-adaptive-dark-mode/",
+      "id": "50369925",
+      "title": "Ripple-65B Preview: U.S. Open-Weight SOTA on Agentic Coding",
+      "url": "https://www.ricursive.com/ripple",
       "source": "Hacker News",
-      "published_at": "2026-11-03T21:39:05+00:00",
-      "summary": "Safari introduces Adaptive Dark Mode in 27.3",
-      "score": 388,
-      "comments": 211,
-      "discussion_url": "https://news.ycombinator.com/item?id=50358562",
+      "published_at": "2026-11-04T18:53:29+00:00",
+      "summary": "Ripple-65B Preview: U.S. Open-Weight SOTA on Agentic Coding",
+      "score": 234,
+      "comments": 80,
+      "discussion_url": "https://news.ycombinator.com/item?id=50369925",
       "extra": {
         "top_comments": [
-          "FYI, light-dark() in CSS is a thing now.https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/V...",
-          "I want the opposite. I suffer from astigmatism, which makes white on black hard to read. I wish Safari could turn dark mode websites into light mode websites.",
-          "I use dark mode for everything, so I'm pretty happy about this. Some sites were clearly designed to be light, and forcing dark on them could break the experience, but that's exactly what `color-scheme: light only` is for, and it's good that Safari respects it. Other than that it feels like a win-win to me: great for dark mode users, and for devs not much changes, you just add \"light only\" if you don't want your site to be affected."
+          "Category narrowing to this degree really has diluted the term \"SOTA\" quite a lotYou mean it's state of the art for this subset of benchmarks you're targeting? No? Well surely it's state of the art for models of a certain size category? Huh, what about models that are available for local inference? O, state of the art for open models of a certain size made in the US specifically. Uh. Neat!",
+          "It's great to see another competitive open weight model. Congratulations!But as is, it's probably hard to become popular amongst hobbyists and local model enthusiasts like Qwen's 27B class models or MOE models because it's a 65B dense model and inference will be prohibitively slow on consumer grade hardware, and seems like the goal/mission of the company behind this model is to automate chip design.So if I have to assume and connect the dots, this is for the companies who want to use AI in air-gapped environments for chip design so that they protect their IPs (not leaking to third party AI labs/hostile parties) and can afford lots of server grade inference hardware for a quick unlock with the big dense model.Neat!",
+          "Congratulations I guess but it's a pretty bad look to not even mention those other open weight models."
         ]
       }
     },
     {
-      "id": "50358582",
-      "title": "The Little Book of Generative AI Foundations: An Intuitive Mathematical Primer",
-      "url": "https://arxiv.org/abs/2605.29713",
+      "id": "50366863",
+      "title": "OpenAI to acquire Pierre Computer Company",
+      "url": "https://openai.com/index/openai-to-acquire-pierre/",
       "source": "Hacker News",
-      "published_at": "2026-11-03T21:40:53+00:00",
-      "summary": "The Little Book of Generative AI Foundations: An Intuitive Mathematical Primer",
-      "score": 304,
-      "comments": 49,
-      "discussion_url": "https://news.ycombinator.com/item?id=50358582",
+      "published_at": "2026-11-04T15:21:21+00:00",
+      "summary": "https://twitter.com/pierrecomputer/status/211799903617518818...",
+      "score": 199,
+      "comments": 62,
+      "discussion_url": "https://news.ycombinator.com/item?id=50366863",
       "extra": {
         "top_comments": [
-          "I don't like:> Changing coordinates. Given a vector x expressed in the standard basis, we change coordinates by applying x_eig = V^−1 x. > This operation does not change the vector itself; it only changes how the vector is represented, converting it into eigenvector coordinates.I'm sure the author knows about the difference between the vector and a coordinate vector given a basis. I just don't like this wording. It's weird to say applying a function doesn't affect a change.",
-          "Another book which I would highly recommend for learning the math (or at least getting a very good idea of how it works) behind machine learning/transformers is \"Why Machines Learn: The Elegant Math Behind Modern AI\" by Anil Ananthaswamy. I read it this past year and I found it was extremely good at pacing and building up intuition to the \"how and why\" of most important math concepts and discoveries in ML that have lead to where we are today. For those who don't already have a fairly deep understanding of linear algebra, statistics, and multivariate calculus, this book will be a far more gentle introduction yet still has enough rigor for you to come away with something.",
-          "Wow, this book is surprisingly readable! I like how he starts from basics of linear algebra."
+          "I have to imagine this is related to: https://openai.com/index/scaling-git-at-openai/And you'll see that mitchellh is a big fan of Pierre (and I think investor)https://x.com/mitchellh/status/2036855931569651884?lang=enFor those who don't know Pierce, here's a demo from mitchellh:https://x.com/mitchellh/status/2057229385963618787",
+          "We need a term for an acquisition where you buy an entire company because it would be cheaper than paying a monthly subscription fee to use their product.",
+          "I read good things about their diffs library: https://diffs.com/Whenever I see this acquires or hiring of successful products founders or teams by big labs I ask myself if, apart for the usual obvious reasons that any non ai model company would want them, they are also reusing this human talent to build the dataset of \"how the sausage is made\"."
         ]
       }
     },
     {
-      "id": "50358702",
-      "title": "The Internals of PostgreSQL",
-      "url": "https://www.interdb.jp/pg/index.html",
+      "id": "50368626",
+      "title": "Progress on provable inference for large language models",
+      "url": "https://www.anthropic.com/research/provable-inference",
       "source": "Hacker News",
-      "published_at": "2026-11-03T21:51:06+00:00",
-      "summary": "The Internals of PostgreSQL",
-      "score": 226,
-      "comments": 13,
-      "discussion_url": "https://news.ycombinator.com/item?id=50358702",
+      "published_at": "2026-11-04T17:17:46+00:00",
+      "summary": "Progress on provable inference for large language models",
+      "score": 179,
+      "comments": 87,
+      "discussion_url": "https://news.ycombinator.com/item?id=50368626",
       "extra": {
         "top_comments": [
-          "Related:The Internals of PostgreSQL - https://news.ycombinator.com/item?id=43241404 - March 2025 (40 comments)The Internals of PostgreSQL - https://news.ycombinator.com/item?id=30372750 - Feb 2022 (19 comments)The Internals of PostgreSQL - https://news.ycombinator.com/item?id=30086374 - Jan 2022 (39 comments)Internals of PostgreSQL - https://news.ycombinator.com/item?id=18950460 - Jan 2019 (25 comments)The internals of PostgreSQL - https://news.ycombinator.com/item?id=13488315 - Jan 2017 (53 comments)The Internals of PostgreSQL - https://news.ycombinator.com/item?id=12142364 - July 2016 (1 comment)(Reposts are fine after a year or so; links to past threads are just to satisfy extra-curious readers)",
-          "The latest Jepsen report on particledb triggered a new found interest in the SSI implementation in postgres.If you are just skimming this doc, The HoT update path is the section I would jump to.Understand HoT and then read the zHeap implementation notes (also of TOAST) puts a good mental model of what postgres does and what it doesn't do.",
-          "Didn't find the new MVCC in there. https://www.orioledb.com/"
+          "This is built on VerInf, work that I did as a MARS fellow. They ripped everything down to the choice of 400B Maverick from us with very little attribution. Cool, I guess... https://github.com/jamespetrie/verinf",
+          "I've been writing about the need for provable inference (and training) on and off for a number of years; this is welcome news and a good start, and a significant improvement on prior zk results.The problems of inference proof for a closed model provider are more difficult than an open model provider -- you can get a probabilistic proof much more cheaply out of four independent inference providers running the same non-batched prompt than this 90-100x compute hit.Anthropic and others also have a significant problem with these proofs in that they have a lot of incentive internally to have some portions of the pre-prompt secret; I haven't read this newest scheme closely enough to determine if they have a way to hide parts of the prompt with the proof. But if they don't, they are almost certainly not going to want to send these proofs out in the general case.Last, I'll take this moment to soapbox and say for the researchers out there -- provable inference is nice. Provable training corpus information would be spectacular. It would be very, very, very nice to provide a set of model weights and a proof that they had only been trained on a dataset. To be clear, this is a really hard problem, but it would change fundamentally what levels of trust we could have about a given set of weights.",
+          "> In both cases the question is the same: how can a company be sure of which weights are actually running on its servers?> the resulting commitment is good for about 16 million requests, after which the provider has to commit again.> The client downloads the commitment, ~6.5 MB in all, and then one proof per request. Checking a proof takes 17 seconds on 24 threads (and 21 seconds on a single thread), including the offline phase's checkI know they mentioned $ETH in the technical report, but this is exactly the mechanic for a crypto currency Proof-of-Work which is expensive by design.When they announced it, I was hoping for a 5% overhead validation that the model that served you is really Fable and not Opus.The quantization bit caught me out, because we saw the boundary crossing from good-context-size to bad is so sharp it feels like longer context requests are sent to quantized models to make more room for more KV-Cache. This would expose those sorts of tricks people can play to have the same GPU do better on short context benchmarks and gracefully degrade on long context.At work, we did a bit of digging[1] into exactly why BaseTen, Fireworks and Together serve Inkling weights differently, we suspected the issue was a combination of how you do disaggregated prefill (+streaming) and quantization for longer context tasks.[1] - https://isotopes.ai/blog/everyone-is-selling-the-same-model-..."
         ]
       }
     },
     {
-      "id": "50360164",
-      "title": "C++26 Disapproved",
-      "url": "https://andreasfertig.com/blog/2026/11/cpp26-dis-failed-how-does-cpp-survive/",
+      "id": "50370610",
+      "title": "Insects don't swarm at LED lights",
+      "url": "https://www.birdsoutsidemywindow.org/2026/11/03/insects-dont-swarm-at-led-lights/",
       "source": "Hacker News",
-      "published_at": "2026-11-04T00:33:22+00:00",
-      "summary": "C++26 Disapproved",
-      "score": 218,
-      "comments": 113,
-      "discussion_url": "https://news.ycombinator.com/item?id=50360164",
+      "published_at": "2026-11-04T19:50:23+00:00",
+      "summary": "Insects don't swarm at LED lights",
+      "score": 172,
+      "comments": 97,
+      "discussion_url": "https://news.ycombinator.com/item?id=50370610",
       "extra": {
         "top_comments": [
-          "As someone who writes high-reliability C++ but is completely outside the standards process, I see the issues with C++ Contracts. It isn’t clear that it solves a problem that anyone has in real codebases, especially after C++20 concepts.If you were already writing high-reliability C++ then the benefits are difficult to quantify. If you weren’t writing high-reliability C++ then it saves you almost nothing over doing the standard idioms of high-reliability C++ that were already available to you at very marginally more cost. It does standardize expression of it in narrow cases but the payoff seems minimal.Most of what C++ Contracts delivers is a mashup of what you can already do with constexpr and C++20 Concepts. I like reliability features but this feature, as delivered, looks fairly useless if you already use reliability features. A compelling standard would need to make much deeper guarantees out of the box. And the compiler can already see through most compositions of constexpr and C++20 concepts, which is already very expressive.C++ Contracts looks a bit like a feature that was designed long before current standard features existed.",
-          "While I can understand that C++ contracts were met with controversy, contract annotations scoped at analysis time that can be verified by external tools, such as static analyzers, model checkers, or automatic theorem provers, are incredibly useful.I put together an alternative function contract and invariant mechanism in C using CBMC and custom macros that effectively allows me to perform formal methods in C using compositional verification. The reason why I chose C is because of its relative simplicity and relative ease of building tooling around it. C++ contracts provide some feature parity, and would let me take advantage of some of the features in C++ relative to C.I hope that the contract proposal is workshopped and simplified so it can be proposed again for a future version. Its current form is unsuitable, but it deserves a second chance with a simpler implementation. Contracts would narrow the safety gap between C++ and languages such as Ada / SPARK.",
-          "This article makes it sound the options are normally approval, rejection and abstention, but that this time round a fourth option, \"disapproval\", was reached. It that the case, or are they just trying to say that people rejected it?"
+          "I have LED headlights and an LED light bar on my tractor and I can say with 100% confidence that bugs swarm both. To the point I have to wear glasses to keep them out of my eyes if I’m on it for more than about 30 seconds at night.I’m guessing he’s confusing the dramatic drop in insect life overall with a change in behavior due to different lights.",
+          "Welp, they do for mine. I've had to stop turning on outdoor LEDs because angry bees kept showing up, and there'd be 3-10 dead ones on my doorstep every morning. These are white bulbs. Might be \"zombees.\"Also, not sure about white bulbs, but those color-configurable spotlights definitely emit UV at least when set to anything near blue/purple. They cause certain things to glow. Probably white is doing it too but it's harder to see.",
+          "My pet theory is that the dimmable LEDs repel insects (when used as a grow light).The thing that insects can see and we don't is the rapid flashing of a PWM power controller.I wonder if these streetlights have power saving fade-ins as the nightfall approaches instead of clicking on at sunset.Like - https://doi.org/10.1109/CSNT51715.2021.9509652"
         ]
       }
     },
     {
-      "id": "50355767",
-      "title": "How I use AI (Oct 2026)",
-      "url": "https://ben.stolovitz.com/posts/how-use-ai-oct-2026/",
+      "id": "50372929",
+      "title": "A thousand fewer paths to root",
+      "url": "https://openai.com/index/a-thousand-fewer-paths-to-root/",
       "source": "Hacker News",
-      "published_at": "2026-11-03T18:11:11+00:00",
-      "summary": "How I use AI (Oct 2026)",
-      "score": 135,
-      "comments": 117,
-      "discussion_url": "https://news.ycombinator.com/item?id=50355767",
+      "published_at": "2026-11-04T23:33:14+00:00",
+      "summary": "A thousand fewer paths to root",
+      "score": 158,
+      "comments": 99,
+      "discussion_url": "https://news.ycombinator.com/item?id=50372929",
       "extra": {
         "top_comments": [
-          "I always find so much cognitive dissonance in these kinds of posts.> My most successful work this year was hand-writing a tool, replacing ~4,000 lines of vibe-code with a few hundred. My system has proven more flexible, easier to test, and more generalizable than what it replaced.> agents still need human taste and experience to produce good work.Where do you think human taste and experience in software comes from?> overstimulating & exhausting in a way that coding never was.> for many of us, honing the code, finding the right design, seeing the parts mesh together — that was the meditative purpose we found in our jobs.> That’s not the only time AI waylaid me. LLMs could not figure out how to annotate that model’s training data correctly. I spent days going back and forth with them> LLMs are not yet good companions when brainstorming complicated things.Why do we expect this to get better? The training data will degrade in quality if more people rely on LLMs so I'd expect models to eventually start getting worse even if they currently enjoy apparent improvements in output.> Writing code is solved.What a strange thing to say given all the above experiences, which I think we all share.Why are we willing to give up so much in terms of purpose and understanding for perceived productivity gains?",
-          "There is no substitute for reading the code in many many cases. I spend more than 3k/mo on tokens. I find incorrect assumptions baked into the code (the ultimate spec) and missed by the agents and tests daily. This is more pronounced in data analysis and complex systems.As a side effect having to read the code at least once inevitably makes it way shorter and usually much better.",
-          "I believe that anyone who says that writing code is no longer needed, was probably not a very good coder to begin with. I have seen what the best models can do, and I've seen what people call \"good\", and I am not impressed.However, I'm still split. Because this could mean that we see a jump in code quality, due to bad coders getting someone better to code for them. But we could see a decrease in code quality, due to less people \"caring\"."
+          "How did we get to the point where there are a thousand privilege escalation exploits in the kernel?Is the kernel simply too complex to reason about? Is it an underlying flaw in the security model or language implementation?Should we assume that all software is more compromised than the kernel?",
+          "This is my team’s work. I’m happy to try to answer questions or take questions back to the team.And we're hiring! https://openai.com/careers/search/?q=cyber",
+          "With these vulnerabilities and the ones not listed that are sure to exist, how is the internet still up? How are my lights on? Why aren't power plants exploding by the dozens?What are the mitigating factors that prevent this level of vulnerability from being an existential threat to humanity?"
         ]
       }
     }

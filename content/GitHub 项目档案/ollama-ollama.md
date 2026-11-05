@@ -1,13 +1,13 @@
 ---
 first_seen: 2026-06-28
-last_seen: 2026-11-04
+last_seen: 2026-11-05
 language: Go
 tags: [github, trending]
 ---
 
 # ollama/ollama
 
-> 本地运行与管理多种大模型的工具，支持 Kimi、GLM、DeepSeek、Qwen、Gemma 等模型，适合在个人设备或私有环境中部署推理服务。
+> 帮助用户快速运行 Kimi、GLM、MiniMax、DeepSeek、gpt-oss、Qwen、Gemma 等多种模型的本地推理工具，适合在个人设备上部署和试用大模型。
 
 ## 基本信息
 
@@ -139,3 +139,4 @@ tags: [github, trending]
 | 2026-11-02 | #20 | 185,631 | +121⭐ | 常驻 |
 | 2026-11-03 | #20 | 185,746 | +115⭐ | 常驻 |
 | 2026-11-04 | #17 | 185,850 | +104⭐ | 常驻 |
+| 2026-11-05 | #19 | 185,944 | +94⭐ | 常驻 |
