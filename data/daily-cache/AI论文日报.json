@@ -1,129 +1,120 @@
 {
-  "cached_at": "2026-11-06T11:00:21.272760+08:00",
+  "cached_at": "2026-11-06T15:08:10.544197+08:00",
   "articles": [
     {
-      "id": "2611.07444",
-      "title": "Two-stage residual learning for calibrated uncertainty in solar irradiance forecasts",
-      "url": "https://arxiv.org/abs/2611.07444v1",
+      "id": "2611.08487",
+      "title": "User Embeddings are Superpositions of Interpretable Behavioral Modes",
+      "url": "https://arxiv.org/abs/2611.08487v1",
       "source": "arXiv",
-      "published_at": "2026-11-05T04:42:16+00:00",
-      "summary": "Accurate forecasting of renewable generation requires not only point predictions but also reliable estimates of the uncertainty attached to them, particularly at extended horizons. Machine learning models are increasingly used to predict solar output, but they typically report a single value and capture the associated uncertainty poorly. The standard remedy is to train a model to predict the parameters of an assumed probability distribution directly. Here we develop an alternative two-stage method, motivated by synthetic solar signal generation, in which the forecast error is modeled separately from the expected irradiance. A first long short-term memory (LSTM) network predicts the expected global horizontal irradiance, and a second network models the distribution of the forecast error, which is added back to the mean to give both the forecast and its uncertainty. Using historical weather data from the National Solar Radiation Database and a probability integral transform evaluation, we show that explicitly modeling the error brings the predicted standard deviation markedly closer to the historical value, reducing the deviation between the two by 34.6 percent for a standalone LSTM and by 56.5 percent when the LSTM is coupled to Gaussian process regression, the most reliable of the configurations tested. Because the method models the total forecast error directly, it captures the full predictive uncertainty that matters for decisions, rather than only the model contribution that dropout-based approaches estimate.",
+      "published_at": "2026-11-05T18:59:42+00:00",
+      "summary": "User embeddings are central components of modern recommendation, personalization, and behavioral modeling systems. Though these embeddings can compactly encode rich behavioral information, they are inherently dense and opaque, limiting interpretability. To address this gap, we argue that user embeddings can be understood as sparse superpositions of interpretable behavioral modes. This structure is directly predicted by generative models of user behavior for linear embeddings and extends approximately to deep-learning representations by the superposition hypothesis. Superimposed modes can naturally be recovered by sparse dictionary learning methods, such as sparse autoencoders (SAEs), and recovered modes can be automatically named and queried in natural language. We validate mode recovery against known ground truth on synthetic data, where SAEs recover modes better than classical sparse baselines, including on transformer-encoded embeddings. We then apply the method to classical and transformer-based user embeddings from two real-world datasets. We also show how the corresponding natural-language labels enable zero-shot audience retrieval and characterization over embeddings never trained on text. The framework is post-hoc and model-agnostic, requiring no modification to the upstream embedding system.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "RR Flanagan",
-          "E Kasha",
-          "PW Talbot",
-          "AS Epiny",
-          "MR Deinert"
+          "Jonathan Kozaczuk",
+          "Zheng Dong",
+          "Noyan Evirgen",
+          "Keivan Majidi",
+          "Eddie K. H. Ng",
+          "Chris Porter",
+          "Qi Zhao",
+          "Jia Geng",
+          "Changmao Li",
+          "Brandon R. Feng"
         ],
         "categories": [
-          "cs.LG",
-          "eess.SY"
+          "cs.LG"
         ]
       }
     },
     {
-      "id": "2611.07437",
-      "title": "IMUDINO: Self-distilled Foundation Model for Inertial Sensing",
-      "url": "https://arxiv.org/abs/2611.07437v1",
+      "id": "2611.08483",
+      "title": "SwarmEvolve: Latent Agent Swarms for Evolutionary Discovery and Optimization",
+      "url": "https://arxiv.org/abs/2611.08483v1",
       "source": "arXiv",
-      "published_at": "2026-11-05T04:35:16+00:00",
-      "summary": "We present IMUDINO, the first foundation model (FM) for inertial sensing to achieve competitive performance across diverse sensing tasks including human activity recognition (HAR), health, motion capture, and odometry. Prior inertial FMs often focus on one subfield of inertial sensing and sometimes underperform state-of-the-art supervised methods (e.g., in HAR), making their scope considerably narrower than FMs for vision and natural language. Moreover, they often require fixed input length and sampling rate, and generalize poorly to unseen sensor locations. To build a general-purpose foundation model for inertial sensing, we adapt the DINO self-supervised learning (SSL) paradigm to inertial data through a set of semantics-preserving motion transformations that simulate variations in motion pattern and sensor setup. For model architecture, we use a plain transformer encoder with frequency-aware positional encoding that natively supports varying input length and sampling rate. This simple setup proved remarkably effective for learning global and dense features generalizable across users, sensor setups, tasks, and, in the case of robot odometry, embodiments. We hope IMUDINO can serve as a backbone for inertial sensing and kickstart the development of general-purpose inertial FMs.",
+      "published_at": "2026-11-05T18:59:29+00:00",
+      "summary": "LLM-guided evolutionary search uses AI agents to improve programs for mathematical and computational problems by iteratively refining solutions and combining high-scoring methods. However, the process is often slow because the LLM generates a long textual chain of thought for each round and must repeat this generation many times to maintain population diversity. We present SwarmEvolve, a framework in which hundreds of low-cost agents per round work in swarms, reason in latent space without decoding to text, and share information by passing KV caches. Each swarm studies the problem from a different angle. A novelty filter keeps the most distinct agent ideas by directly measuring the distances between the agents' hidden state vectors. Crossover of ideas happens naturally in latent space, as a summarizer agent receives the combined KV caches of all swarm members. On 21 problems in mathematical discovery and scientific computing, SwarmEvolve gets the highest average score and needs a median of only 3 to 8 minutes to reach the best scores that other state-of-the-art frameworks reach in 60 minutes. On several problems, SwarmEvolve with Qwen3 8B improves on the solutions that AlphaEvolve first found with frontier LLMs. Our work shows that agent swarms that communicate in latent space offer a fast, low-cost approach to program search for scientific problems.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Zhoutong Ye",
-          "Chengwen Zhang",
-          "Zixuan Wang",
-          "Xufeng Jian",
-          "Zhe He",
-          "Qingyang Wan",
-          "Xutong Wang",
-          "Jiaqi Liu",
-          "Mingze Sun",
-          "Yu Mei",
-          "Chun Yu",
-          "Yuanchun Shi"
+          "Qile Jiang",
+          "George Em Karniadakis"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.NE"
+        ]
+      }
+    },
+    {
+      "id": "2611.08478",
+      "title": "Scientist World: Grow a Research World for AI-Scientists",
+      "url": "https://arxiv.org/abs/2611.08478v1",
+      "source": "arXiv",
+      "published_at": "2026-11-05T18:58:17+00:00",
+      "summary": "AI-Scientists arrived, but a world for them to grow in did not. Human scientists take theirs for granted $-$ centuries of open problems and shared ideas, waiting in the scientific literature. To AI-Scientists, that world is readable but not runnable, so we build Scientist World for them: every research paper becomes an executable environment. Our autonomous pipeline extracts each paper's open-ended research question and reproduces its proposed method as the baseline; an AI-Scientist entering the environment is evaluated against what the human authors achieved. We release the first 1,000 verified environments. With the world as an evaluation, we found that frontier AI-Scientists can already surpass the human researchers 74% of the time. As a record of how AI does science, it contains 6,400 hours of research traces, with every idea, experiment, failure, and success. As a training ground, we are able to raise (+158%) a small model to match frontier models in research ideation. At last, AI-Scientists' own world has arrived, grown from and growing with science itself.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Taiming Lu",
+          "Sachin Konan",
+          "Zhuang Liu"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CL",
+          "cs.LG"
+        ]
+      }
+    },
+    {
+      "id": "2611.08472",
+      "title": "XStack: A Benchmark for ML Repo Migration",
+      "url": "https://arxiv.org/abs/2611.08472v1",
+      "source": "arXiv",
+      "published_at": "2026-11-05T18:55:54+00:00",
+      "summary": "ML code should run where researchers choose, not where it was first written. Today, machine learning code mainly lives in two ecosystems, PyTorch on NVIDIA GPUs and JAX on Google TPUs. Migrating repositories between them means building and testing across frameworks and hardware. This migration is (1) a practical need, since it unlocks different hardware for researchers, and (2) a natural benchmark: it involves different frameworks and hardware, covers whole repositories, and is long-horizon and challenging. We introduce XStack, a benchmark that evaluates agents on migrating ML repositories between these two ecosystems. Each agent receives a PyTorch repository and a clean TPU machine and must deliver a JAX repository. Its output passes if it meets our grading criteria, based on the source repository's published result, authenticated and calibrated by us. Migration by agents remains unreliable: Claude Opus 5 passes 75%, GPT-5.6-sol 45%, and every other agent at most 40%. XStack is a step toward freeing ML code from its ecosystem. We release XStack to make progress toward reliable migration across frameworks and hardware measurable.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Linrong Cai",
+          "Taiming Lu",
+          "Haozhe Chen",
+          "Zhuang Liu"
+        ],
+        "categories": [
+          "cs.LG",
+          "cs.AI"
+        ]
+      }
+    },
+    {
+      "id": "2611.08469",
+      "title": "Same Behavior, Different Mechanism: What Finite Experiments Can Certify About Integrated Information",
+      "url": "https://arxiv.org/abs/2611.08469v1",
+      "source": "arXiv",
+      "published_at": "2026-11-05T18:55:31+00:00",
+      "summary": "Interpretability, AI auditing and assessments of machine consciousness increasingly rest on mechanism-level quantities: functionals of a system's causal transition law that describe how it computes, not what it outputs. Experiments see that law only through finite, partial and noisy interventions. We ask when such a quantity is identifiable from an experiment's access, continuous in the mechanism and certifiable from finite data, and answer exactly for a deliberately demanding case - the integrated information $\\varphi$ of integrated information theory - in stochastic networks of four and five units with known ground truth. Behavior can be silent: a recurrent and a feed-forward network with identical input-output laws at their response delay carry 0.28 and 0 bits, yet internal recordings separate them within 4-53 trials. Partial access can be just as blind: in our examples, units left out of a one-step recording impose precision floors of 0.30-1.02 bits that no sample size lowers, and in all-but-self parity networks, recordings of any length see several hidden units only through the product of their fidelities - a symmetry that one intervention broke in exact checks. The measure has sharp edges: because $\\varphi$ selects a partition, and the cause and effect it specifies, by one criterion and reports another, infinitesimal changes of mechanism that cross an edge change it by 25-100% at 99% of the edges we found in random networks, and about 1% of surrogate models that fit interventional data almost perfectly misreport it by more than 20%. One-sided claims survive: the same data certify a lower bound on both sides of an edge, and we prove $\\varphi>1.004$ bits throughout a 64-dimensional region of mechanisms and certify it from about $10^7$ controlled transitions with false-certificate probability at most $α$. Measurability is thus a design question with computable answers.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Linqian Wu",
+          "Diaoxuan He"
         ],
         "categories": [
           "cs.LG",
           "cs.AI",
-          "cs.CV"
-        ]
-      }
-    },
-    {
-      "id": "2611.07432",
-      "title": "Typed Knowledge over Constructive Institutions",
-      "url": "https://arxiv.org/abs/2611.07432v1",
-      "source": "arXiv",
-      "published_at": "2026-11-05T04:28:30+00:00",
-      "summary": "Type theories designed for mathematics or program verification need only that a proposition holds; proof irrelevance in conversion erases, at the kernel level, how a claim was established. A persistent knowledge store, by contrast, must retain that record: who established a claim, by which derivation or external tool, and under which assumptions. This volume presents the theory of Eigenius---a store of typed knowledge over constructive institutions---and develops its metatheory from that requirement. The kernel theory is a dependent type theory with cumulative universes, an impredicative universe of propositions, inductive families, and an intensional identity type. Proof irrelevance is an axiom with an explicit witness rather than a conversion rule, so proofs of a proposition are provably equal yet remain distinct terms. Definitional equality is joinability under an orthogonal rewriting system---confluent, injective on type formers, and decidable by a type-free test---while a separate subsumption judgment covers universe cumulativity, codomain-covariant function types, and declared class inclusions. We prove consistency via a set-theoretic model; develop a justification logic over the kernel's propositions to track evidence and support; organize environments as an institution so that store extensions are signature morphisms and external verdicts enter via comorphisms; formulate a typed knowledge-graph theory with records, classes, and refinements; and prove the correctness of conversion, normalization by evaluation, and bidirectional type checking relative to termination. A Lean 4 formalization accompanies the volume.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Hans-Martin Will"
-        ],
-        "categories": [
-          "cs.LO",
-          "cs.AI",
-          "cs.DB"
-        ]
-      }
-    },
-    {
-      "id": "2611.07415",
-      "title": "Truncated backpropagation through time induces a two-sided gradient turnpike property",
-      "url": "https://arxiv.org/abs/2611.07415v1",
-      "source": "arXiv",
-      "published_at": "2026-11-05T04:10:58+00:00",
-      "summary": "Truncated backpropagation through time reduces the computational burden of training recurrent models by restricting gradient computations to shorter temporal contexts. This induces two distinct boundary effects: missing past information perturbs the forward state evolution, while truncating the backward recursion omits future information. This motivates decoupling the interval over which gradient contributions are averaged for the parameter update from the surrounding temporal context over which they are computed. Under exponential decay of the state-transition Jacobians and mild regularity conditions, this leads to a two-sided gradient turnpike property: the error between truncated- and full-context gradient contributions decays exponentially with the distance from both context boundaries. We derive bounds for the averaged update gradient, yielding guarantees on gradient alignment and approximate full-context stationarity; under unbiased interval sampling and a Polyak-Lojasiewicz condition, these further imply a bound on the resulting optimality gap. Numerical experiments on the Wiener-Hammerstein benchmark illustrate the role of past and future context and the trade-off between predictive performance and computational cost.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Julian D. Schiller",
-          "Matthias A. Müller"
-        ],
-        "categories": [
-          "eess.SY",
-          "cs.LG",
-          "math.OC"
-        ]
-      }
-    },
-    {
-      "id": "2611.07410",
-      "title": "Spectral symmetry fingerprints in equivariant representations",
-      "url": "https://arxiv.org/abs/2611.07410v1",
-      "source": "arXiv",
-      "published_at": "2026-11-05T04:02:47+00:00",
-      "summary": "Symmetry governs the organization of physical structures, while symmetry breaking reveals their transformations. In geometric deep learning, symmetry imposes rank constraints on equivariant representations, limiting the expressive capacity of equivariant graph neural networks (GNNs). Here we show that these constraints can instead be exploited: the singular-value spectra of equivariant representations provide a unified fingerprint of structural symmetry. We introduce spectral symmetry fingerprints (SymFP), which enable discrete point-group identification through rank-template matching and continuous symmetry analysis by quantifying spectral energy beyond target rank constraints. SymFP is orientation invariant and architecture agnostic, enabling a parameter-free GNN implementation. Its spectra can be reused across multiple target groups, and the resulting leakage scores satisfy subgroup monotonicity. Across synthetic structures, molecules, coordination complexes and large biological assemblies, SymFP accurately identifies point groups, tracks controlled symmetry breaking and reveals local and degree-resolved symmetry changes that can be obscured by global geometric measures. These results establish the spectral structure of equivariant representations as a general framework for characterizing symmetry across physical systems.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Jiacheng Cen",
-          "Anyi Li",
-          "Ning Lin",
-          "Zihe Wang",
-          "Ji-Rong Wen",
-          "Wenbing Huang"
-        ],
-        "categories": [
-          "cs.LG",
-          "cond-mat.mtrl-sci",
-          "math-ph",
-          "physics.chem-ph"
+          "q-bio.NC"
         ]
       }
     }

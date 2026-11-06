@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-11-06T11:00:21.272760+08:00",
+  "cached_at": "2026-11-06T15:08:10.544197+08:00",
   "articles": [
     {
       "id": "http://www.news.cn/politics/20261106/2b798cfd53e04b82aef424fd386d1b52/c.html",
@@ -62,36 +62,36 @@
       "extra": {}
     },
     {
+      "id": "https://www.bbc.co.uk/news/articles/cmdx33v9vvr2o#0",
+      "title": "Macau jails pro-democracy campaigner in city's first national security case",
+      "url": "https://www.bbc.co.uk/news/articles/cmdx33v9vvr2o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "published_at": "2026-11-06T06:46:21+00:00",
+      "summary": "Au Kam San was sentenced to 12 years and six months' jail for \"subversion against the political power of the state\".",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
+      "id": "https://www.bbc.co.uk/news/articles/crvg9yyz5437o#3",
+      "title": "Did a data centre revolt affect the US mid-term election results?",
+      "url": "https://www.bbc.co.uk/news/articles/crvg9yyz5437o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "published_at": "2026-11-06T06:01:13+00:00",
+      "summary": "BBC Verify examines whether US voters were influenced by the data centre boom - and the impact anti-AI sentiment could have on the industry.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
       "id": "https://www.bbc.co.uk/news/articles/cmn04705rd8jo#0",
       "title": "Global tech stocks plunge as US midterms add to AI slowdown fears",
       "url": "https://www.bbc.co.uk/news/articles/cmn04705rd8jo?at_medium=RSS&at_campaign=rss",
       "source": "BBC World",
-      "published_at": "2026-11-06T02:57:24+00:00",
+      "published_at": "2026-11-06T06:00:59+00:00",
       "summary": "Investors have reacted to possible tougher scrutiny of data centre construction and the AI industry.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://www.bbc.co.uk/news/articles/cqg7xxg4jdv5o#0",
-      "title": "White House denies Hegseth and Rubio to leave jobs after Republican election losses",
-      "url": "https://www.bbc.co.uk/news/articles/cqg7xxg4jdv5o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "published_at": "2026-11-06T02:08:57+00:00",
-      "summary": "The Trump administration has downplayed reports the pair could be on their way out after heavy Republicans election losses.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://www.bbc.co.uk/news/articles/c6e3xxwk3k11o#1",
-      "title": "Democratic socialist defeats incumbent Karen Bass in Los Angeles mayor's race",
-      "url": "https://www.bbc.co.uk/news/articles/c6e3xxwk3k11o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "published_at": "2026-11-06T01:28:03+00:00",
-      "summary": "The results mean America's two most populous cities - New York and Los Angeles - will be led by democratic socialists.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
