@@ -1,204 +1,129 @@
 {
-  "cached_at": "2026-11-05T15:08:46.638882+08:00",
+  "cached_at": "2026-11-06T11:00:21.272760+08:00",
   "articles": [
     {
-      "id": "2611.06914",
-      "title": "A Framework for Context Enrichment and Selective Robustness in LLM Social Agents",
-      "url": "https://arxiv.org/abs/2611.06914v1",
+      "id": "2611.07444",
+      "title": "Two-stage residual learning for calibrated uncertainty in solar irradiance forecasts",
+      "url": "https://arxiv.org/abs/2611.07444v1",
       "source": "arXiv",
-      "published_at": "2026-11-04T18:58:23+00:00",
-      "summary": "Researchers use large language models as agents in social simulations, where agents are prompted with observations and background information intended to shape their actions. Yet LLM agents have been shown to substantially change their behavior under meaning-preserving prompt variations, creating a validation problem for social simulation. One plausible hypothesis is that this brittleness reflects a lack of grounding and can be reduced by enriching the context provided to the agents. Whether richer context improves robustness remains unclear, in part because context richness and robustness are rarely defined in ways that support controlled comparisons. We address the first need with controlled context enrichment, a set of prompt substitution rules that systematically enriches distinct types of context: neutral padding, generic social background, descriptive decision grounding, and normative decision grounding. We address the second by introducing selective robustness as a validation criterion: insensitivity to meaning-preserving prompt variation combined with a directional response to decision-relevant changes in the social world. We demonstrate the framework in a Prisoner's Dilemma-like game, showing how it can be used to identify which forms of context enrichment produce more desirable and robust agent behavior. We find that these forms of enrichment produce distinct behavioral patterns that vary between the two models tested.",
+      "published_at": "2026-11-05T04:42:16+00:00",
+      "summary": "Accurate forecasting of renewable generation requires not only point predictions but also reliable estimates of the uncertainty attached to them, particularly at extended horizons. Machine learning models are increasingly used to predict solar output, but they typically report a single value and capture the associated uncertainty poorly. The standard remedy is to train a model to predict the parameters of an assumed probability distribution directly. Here we develop an alternative two-stage method, motivated by synthetic solar signal generation, in which the forecast error is modeled separately from the expected irradiance. A first long short-term memory (LSTM) network predicts the expected global horizontal irradiance, and a second network models the distribution of the forecast error, which is added back to the mean to give both the forecast and its uncertainty. Using historical weather data from the National Solar Radiation Database and a probability integral transform evaluation, we show that explicitly modeling the error brings the predicted standard deviation markedly closer to the historical value, reducing the deviation between the two by 34.6 percent for a standalone LSTM and by 56.5 percent when the LSTM is coupled to Gaussian process regression, the most reliable of the configurations tested. Because the method models the total forecast error directly, it captures the full predictive uncertainty that matters for decisions, rather than only the model contribution that dropout-based approaches estimate.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Mattia Greiche",
-          "Reihaneh Rabbany",
-          "Maximilian Puelma Touzel"
+          "RR Flanagan",
+          "E Kasha",
+          "PW Talbot",
+          "AS Epiny",
+          "MR Deinert"
         ],
         "categories": [
-          "cs.MA",
-          "cs.CL",
-          "cs.LG"
+          "cs.LG",
+          "eess.SY"
         ]
       }
     },
     {
-      "id": "2611.06912",
-      "title": "FlowReconBench: Accuracy, calibration and cost of learned and classical flow reconstruction from sparse sensors",
-      "url": "https://arxiv.org/abs/2611.06912v1",
+      "id": "2611.07437",
+      "title": "IMUDINO: Self-distilled Foundation Model for Inertial Sensing",
+      "url": "https://arxiv.org/abs/2611.07437v1",
       "source": "arXiv",
-      "published_at": "2026-11-04T18:57:47+00:00",
-      "summary": "Reconstructing full flow fields from sparse sensors requires prior assumptions about unmeasured regions and physical variables. Yet it remains unclear when learned models outperform classical estimators and which aspects of their predictions can be trusted. FlowReconBench evaluates ten learned and five classical methods on three regimes: a laminar cylinder wake across Reynolds numbers, two-dimensional Kolmogorov turbulence and a large-scale three-dimensional (3D) isotropic turbulence. Methods share leakage-controlled splits and sensor draws and are scored on per-channel error, ensemble spread, calibration, spectra and cost. The leading method changes for each regime. Classical methods perform strongly in low-order and dense-sensing regimes. On the cylinder wake, linear stochastic estimation and gappy proper orthogonal decomposition lead, including for unobserved pressure. In 3D, inverse-distance weighting matches the best learned methods on observed channels. Data-driven methods become superior at decreasing sensor density or poor sensor observability. On Kolmogorov flow, continuous ranked probability score and error yield different method rankings: generative models offer broader but underdispersed ensembles, while deterministic models prioritize pointwise error. Generative models balance this tradeoff through their sampler budget, with a larger budget improving ensemble quality at higher computational cost. In 3D, scaling tests demonstrate that queryable methods are flat in memory, while full-grid construction methods run out of memory. Observing only 2 of 4 fields leaves the problem kinematically underconstrained, yet a latent model can reproduce structural similarities to the ground truth.",
+      "published_at": "2026-11-05T04:35:16+00:00",
+      "summary": "We present IMUDINO, the first foundation model (FM) for inertial sensing to achieve competitive performance across diverse sensing tasks including human activity recognition (HAR), health, motion capture, and odometry. Prior inertial FMs often focus on one subfield of inertial sensing and sometimes underperform state-of-the-art supervised methods (e.g., in HAR), making their scope considerably narrower than FMs for vision and natural language. Moreover, they often require fixed input length and sampling rate, and generalize poorly to unseen sensor locations. To build a general-purpose foundation model for inertial sensing, we adapt the DINO self-supervised learning (SSL) paradigm to inertial data through a set of semantics-preserving motion transformations that simulate variations in motion pattern and sensor setup. For model architecture, we use a plain transformer encoder with frequency-aware positional encoding that natively supports varying input length and sampling rate. This simple setup proved remarkably effective for learning global and dense features generalizable across users, sensor setups, tasks, and, in the case of robot odometry, embodiments. We hope IMUDINO can serve as a backbone for inertial sensing and kickstart the development of general-purpose inertial FMs.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Nicolas Tricard",
-          "Linzheng Wang",
-          "Jason Chen",
-          "Sili Deng"
+          "Zhoutong Ye",
+          "Chengwen Zhang",
+          "Zixuan Wang",
+          "Xufeng Jian",
+          "Zhe He",
+          "Qingyang Wan",
+          "Xutong Wang",
+          "Jiaqi Liu",
+          "Mingze Sun",
+          "Yu Mei",
+          "Chun Yu",
+          "Yuanchun Shi"
         ],
         "categories": [
-          "physics.flu-dyn",
-          "cs.LG"
-        ]
-      }
-    },
-    {
-      "id": "2611.06911",
-      "title": "BEAKER: An Expert-Curated Benchmark for Embodied Brains in Self-Driving Chemical Laboratories",
-      "url": "https://arxiv.org/abs/2611.06911v1",
-      "source": "arXiv",
-      "published_at": "2026-11-04T18:57:17+00:00",
-      "summary": "Self-Driving Chemical Laboratories (SDCLs) are moving chemical experimentation toward embodied automation, where machines must perceive laboratory scenes, reason about experimental states, and act under physical, procedural, and safety constraints. Although Multimodal Large Language Models (MLLMs) are increasingly considered as embodied brains for such systems, existing laboratory benchmarks mainly focus on safety, anomaly detection, or general scientific understanding, leaving their execution-oriented embodied capabilities underexplored. To fill this gap, we introduce BEAKER, a Benchmark for evaluating Embodied Actionability, Knowledge, Experimentation, and Reasoning in SDCLs. BEAKER contains 1,000 expert-curated question-answer samples across 11 image and video task types, covering key judgments required for chemical laboratory execution, including affordance grounding, trajectory planning, equipment, state, and safety recognition, apparatus setup, operation and step reasoning, and temporal procedure reasoning. All questions and annotations are manually created and reviewed by chemistry and embodied Artificial Intelligence (AI) experts, without AI-assisted generation or annotation. We evaluate 28 general-purpose, science-oriented, chemistry-specialized, and embodied MLLMs in an offline, single-turn setting. Results show that current models can follow coarse experimental procedures in videos, but still struggle to ground actions into operable regions and feasible trajectories, to recognize fine-grained laboratory apparatus, states, and safety norms, and to order steps in mid-length procedures. BEAKER thus reveals a clear gap between coarse procedural understanding and the precise, action-grounded perception required for laboratory execution, providing a diagnostic benchmark for future MLLMs in SDCLs.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Fei Lin",
-          "Tengchao Zhang",
-          "Ziyang Gong",
-          "Xiaotong Yu",
-          "Bohan Zhang",
-          "Yifan Zhou",
-          "Qihao Yang",
-          "Ji Dai",
-          "Dong Li",
-          "Yining Jiang",
-          "Qinghua Ni",
-          "Jun Huang",
-          "Qiang Zhang",
-          "Yue Zhou",
-          "Zhihang Zhong",
-          "Yonglin Tian",
-          "Fei-Yue Wang",
-          "Xue Yang"
-        ],
-        "categories": [
-          "cs.AI"
-        ]
-      }
-    },
-    {
-      "id": "2611.06910",
-      "title": "FrontierPhysics: Evaluating Agents for End-to-End Physics Research",
-      "url": "https://arxiv.org/abs/2611.06910v1",
-      "source": "arXiv",
-      "published_at": "2026-11-04T18:56:22+00:00",
-      "summary": "AI agents are playing an increasingly important role in physics research. However, existing physics benchmarks only evaluate fixed questions, isolated sub-tasks, or paper reproduction with given solutions, and rarely check research quality alongside correctness. We introduce FrontierPhysics, an end-to-end benchmark with 56 tasks made by 42 physicists based on their own research, covering nine domains across theoretical, computational, and experimental physics. Each task requires agents to review the literature, develop a research plan, conduct research and experiments, and produce structured outputs and scientific manuscripts. Combining deterministic verifiers with expert-authored rubrics, FrontierPhysics evaluates whether agents' research is correct and publishable. Across 22 models in 26 configurations, no configuration passes more than 46 of its 168 rollouts. Manual review of agent trajectories shows that frontier agents' main weaknesses are insufficiently rigorous reasoning and limited expert intuition, rather than gaps in physics knowledge or execution errors.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Bingran You",
-          "Wenjun Ke",
-          "Ria Rosenauer",
-          "Bo Liu",
-          "Wenbo Chen",
-          "Min Chen",
-          "Shuqi Xu",
-          "Yue Ma",
-          "Jiechao Feng",
-          "Bo Chen",
-          "Xiangkai Sun",
-          "Jiarui Liu",
-          "Jinen Guo",
-          "Zeyu Zhou",
-          "Xu Huang",
-          "Zhuohan Li",
-          "Haoyu Li",
-          "Heguang Lin",
-          "Lijie Ding",
-          "Yadong Zeng",
-          "Kangqi Zhang",
-          "Xinge Liu",
-          "Hanwen Liu",
-          "Zhenghong Li",
-          "Alexander von Recum",
-          "Yuchen Zhu",
-          "Felix Schwarzfischer",
-          "Yizhou Zhao",
-          "Jicheng Wang",
-          "Binxu Li",
-          "Qian Yu",
-          "Chan Li",
-          "Cheng Dai",
-          "Di Wang",
-          "Haoyu Zhang",
-          "Jiankai Sun",
-          "Kaituo Feng",
-          "Mian Qin",
-          "Ruihong Yin",
-          "Yiqun Luo",
-          "Weiwei Wu",
-          "Shihong Pan",
-          "Tsung Yeh Hsieh",
-          "Xiao Huang",
-          "Yan Zhang",
-          "Sihan Li",
-          "Zirui Ren",
-          "Zengji Tu",
-          "Kyoung Whan Choe",
-          "Ke Sun",
-          "Vincenzo Galia",
-          "Vaisakhi Mishra",
-          "Jiashu He",
-          "Hongyang Wang",
-          "Zhiheng Yang",
-          "Shubham Gaur",
-          "Yifan Gu",
-          "Shuyi Wang",
-          "Zihao Zuo",
-          "Steven Dillmann",
-          "Yiyou Sun",
-          "Xinyang Han",
-          "Hanchung Lee",
-          "Molei Tao",
-          "Yue Zhao",
-          "Shilong Liu",
-          "Yuchen Wu",
-          "Xuandong Zhao",
-          "Xiangyi Li",
-          "Florian Brand",
-          "Gerbrand Ceder",
-          "Hartmut Haeffner"
-        ],
-        "categories": [
-          "cs.AI"
-        ]
-      }
-    },
-    {
-      "id": "2611.06908",
-      "title": "Perceptive Humanoid Motion from Simulation",
-      "url": "https://arxiv.org/abs/2611.06908v1",
-      "source": "arXiv",
-      "published_at": "2026-11-04T18:55:33+00:00",
-      "summary": "Humanoid robots have the potential to automate a wide range of physical tasks. Progress toward generalist humanoid autonomy, however, remains constrained by a data bottleneck: mapping pixels and free-form language to low-level joint commands requires paired supervision, and no corpus of such data exists at sufficiently large scale. Some approaches rely on human teleoperation and wearable capture devices, which require at least an hour of human time to produce an hour of data. We present HALO, a humanoid autonomy system powered by a pipeline that synthesizes vision-language-motion data across a thousand procedurally generated homes. The corpus scales with compute rather than human labor. HALO acquires a repertoire of physical skills, including sitting on chairs, navigating to named objects, stepping sideways through half-open doors, crouching and crawling beneath tables, and pushing boxes. It orchestrates these skills to solve composite, long-horizon tasks. Without ever seeing a real home during training, HALO transfers zero-shot to the physical world, achieving a 91% success rate across 360 trials in six unmapped real-world environments. See https://apple-aiml-research.github.io/ml-halo/ for code and videos.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Siyuan Hu",
-          "Abulikemu Abuduweili",
-          "Yue Meng",
-          "Shipeng Liu",
-          "Quentin Leboutet",
-          "Chen Chen",
-          "Matthias Müller",
-          "Vladlen Koltun"
-        ],
-        "categories": [
-          "cs.RO",
+          "cs.LG",
           "cs.AI",
-          "cs.CV",
-          "cs.LG"
+          "cs.CV"
+        ]
+      }
+    },
+    {
+      "id": "2611.07432",
+      "title": "Typed Knowledge over Constructive Institutions",
+      "url": "https://arxiv.org/abs/2611.07432v1",
+      "source": "arXiv",
+      "published_at": "2026-11-05T04:28:30+00:00",
+      "summary": "Type theories designed for mathematics or program verification need only that a proposition holds; proof irrelevance in conversion erases, at the kernel level, how a claim was established. A persistent knowledge store, by contrast, must retain that record: who established a claim, by which derivation or external tool, and under which assumptions. This volume presents the theory of Eigenius---a store of typed knowledge over constructive institutions---and develops its metatheory from that requirement. The kernel theory is a dependent type theory with cumulative universes, an impredicative universe of propositions, inductive families, and an intensional identity type. Proof irrelevance is an axiom with an explicit witness rather than a conversion rule, so proofs of a proposition are provably equal yet remain distinct terms. Definitional equality is joinability under an orthogonal rewriting system---confluent, injective on type formers, and decidable by a type-free test---while a separate subsumption judgment covers universe cumulativity, codomain-covariant function types, and declared class inclusions. We prove consistency via a set-theoretic model; develop a justification logic over the kernel's propositions to track evidence and support; organize environments as an institution so that store extensions are signature morphisms and external verdicts enter via comorphisms; formulate a typed knowledge-graph theory with records, classes, and refinements; and prove the correctness of conversion, normalization by evaluation, and bidirectional type checking relative to termination. A Lean 4 formalization accompanies the volume.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Hans-Martin Will"
+        ],
+        "categories": [
+          "cs.LO",
+          "cs.AI",
+          "cs.DB"
+        ]
+      }
+    },
+    {
+      "id": "2611.07415",
+      "title": "Truncated backpropagation through time induces a two-sided gradient turnpike property",
+      "url": "https://arxiv.org/abs/2611.07415v1",
+      "source": "arXiv",
+      "published_at": "2026-11-05T04:10:58+00:00",
+      "summary": "Truncated backpropagation through time reduces the computational burden of training recurrent models by restricting gradient computations to shorter temporal contexts. This induces two distinct boundary effects: missing past information perturbs the forward state evolution, while truncating the backward recursion omits future information. This motivates decoupling the interval over which gradient contributions are averaged for the parameter update from the surrounding temporal context over which they are computed. Under exponential decay of the state-transition Jacobians and mild regularity conditions, this leads to a two-sided gradient turnpike property: the error between truncated- and full-context gradient contributions decays exponentially with the distance from both context boundaries. We derive bounds for the averaged update gradient, yielding guarantees on gradient alignment and approximate full-context stationarity; under unbiased interval sampling and a Polyak-Lojasiewicz condition, these further imply a bound on the resulting optimality gap. Numerical experiments on the Wiener-Hammerstein benchmark illustrate the role of past and future context and the trade-off between predictive performance and computational cost.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Julian D. Schiller",
+          "Matthias A. Müller"
+        ],
+        "categories": [
+          "eess.SY",
+          "cs.LG",
+          "math.OC"
+        ]
+      }
+    },
+    {
+      "id": "2611.07410",
+      "title": "Spectral symmetry fingerprints in equivariant representations",
+      "url": "https://arxiv.org/abs/2611.07410v1",
+      "source": "arXiv",
+      "published_at": "2026-11-05T04:02:47+00:00",
+      "summary": "Symmetry governs the organization of physical structures, while symmetry breaking reveals their transformations. In geometric deep learning, symmetry imposes rank constraints on equivariant representations, limiting the expressive capacity of equivariant graph neural networks (GNNs). Here we show that these constraints can instead be exploited: the singular-value spectra of equivariant representations provide a unified fingerprint of structural symmetry. We introduce spectral symmetry fingerprints (SymFP), which enable discrete point-group identification through rank-template matching and continuous symmetry analysis by quantifying spectral energy beyond target rank constraints. SymFP is orientation invariant and architecture agnostic, enabling a parameter-free GNN implementation. Its spectra can be reused across multiple target groups, and the resulting leakage scores satisfy subgroup monotonicity. Across synthetic structures, molecules, coordination complexes and large biological assemblies, SymFP accurately identifies point groups, tracks controlled symmetry breaking and reveals local and degree-resolved symmetry changes that can be obscured by global geometric measures. These results establish the spectral structure of equivariant representations as a general framework for characterizing symmetry across physical systems.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Jiacheng Cen",
+          "Anyi Li",
+          "Ning Lin",
+          "Zihe Wang",
+          "Ji-Rong Wen",
+          "Wenbing Huang"
+        ],
+        "categories": [
+          "cs.LG",
+          "cond-mat.mtrl-sci",
+          "math-ph",
+          "physics.chem-ph"
         ]
       }
     }
