@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-11-06T15:08:10.544197+08:00",
+  "cached_at": "2026-11-07T11:00:21.709762+08:00",
   "articles": [
     {
-      "id": "50385272",
-      "title": "Claude Code sends your email address to websites",
-      "url": "https://github.com/anthropics/claude-code/issues/107757",
+      "id": "50397429",
+      "title": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
+      "url": "https://hightouch.com/blog/llm-judges-identity-resolution",
       "source": "Hacker News",
-      "published_at": "2026-11-05T22:17:15+00:00",
-      "summary": "Claude Code sends your email address to websites",
-      "score": 902,
-      "comments": 298,
-      "discussion_url": "https://news.ycombinator.com/item?id=50385272",
+      "published_at": "2026-11-06T19:48:51+00:00",
+      "summary": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
+      "score": 360,
+      "comments": 81,
+      "discussion_url": "https://news.ycombinator.com/item?id=50397429",
       "extra": {
         "top_comments": [
-          "Biggest questions here, which I think need answering:Should Claude have access to user details? I’d say no, unless explicitly entered manually into a chat.Should Claude have access to anything outside of the sandboxed project files without explicit permission? I’d again say no.Should Claude have internet access without a clear log of all requests made?Instances of Claude should be heavily sandboxed and kept away from user data, far more so than they are now. The impression given by the desktop UI is that the LLM only has access to things explicitly added to a project.This impression is not true, as evidenced by Claude pulling data from other sessions outside a project even when not instructed to (I’ve seen this a few times), and in this case pulling your email (from account details, user contacts? I wonder where it got that info?).None of this information should be available to Claude, by design, not by instruction. Using text instructions to try to limit these machines is an incredibly flawed approach and should not be necessary for important info. Anthropic should have the model access completely locked down by controls at the os level over file access, not open by default. That is how to fix this.If a user wants to open access that should be an explicit choice from them, with a warning about possible consequences.",
-          "Many people report seeing this behavior when using the SEC API specifically which makes me think that service is requesting this. Maybe email is required by the SEC API?---UPDATE: The SEC API documentation requires your email in the User-Agent and will reject you otherwise. Demo: U='https://data.sec.gov/api/xbrl/companyconcept/CIK0000320193/us-gaap/Assets.json' curl -s -o /dev/null -w 'response: %{http_code} curl default User-Agent, rejected\\n' \"$U\" curl -s -o /dev/null -w 'response: %{http_code} email in user-agent, success\\n' -A 'Acme Research admin@acme-research.example' \"$U\" response: 403 curl default, rejected response: 200 email in user-agent, success SEC docs: https://www.sec.gov/search-filings/edgar-search-assistance/a...So basically Claude is trying to problem solve, and just does what the SEC asks. It's a 'prompt injection attack', but the entity instructing this behavior is the SEC. Tricky alignment problem. Pretty silly mechanism, since of course there's no email validation. (edit: turns out the SEC will accept most any non-cURL user-agent, email not actually required)",
-          "For those keeping score, this probably isnt exhaustive- but here's some greatest hits;#55743: Claude Max account email auto-injected into LLM context with no opt-out - May 3, 2026 https://github.com/anthropics/claude-code/issues/55743#72518: Anthropic embedded spyware in Claude Code - June 30, 2026 https://github.com/anthropics/claude-code/issues/72518#21151: No indication of WHICH file for READ tool - January 27, 2026 https://github.com/anthropics/claude-code/issues/21151#42796: Claude Code is unusable for complex engineering tasks with the Feb updates - April 2, 2026 https://github.com/anthropics/claude-code/issues/42796#73408: AFK auto-continue on unanswered AskUserQuestion is undocumented and has no opt-out - July 2, 2026 https://github.com/anthropics/claude-code/issues/73408(Also worth a mention, OpenCode PR #18186: anthropic legal requests - March 19, 2026 https://github.com/anomalyco/opencode/pull/18186)Edit: Oh, and determistic hooks not firing."
+          "If you use Qwen3.8 27B to manage, to orchestrate, do do shallow research, and then make it ask claude you will notice that Qwen can get out of Haiku, Sonnet and Opus almost as good answers... I was researching how good the model asnswers where, I can't get to work with anything but Fable, but Qwen can get good work from any of them. My theory is that if you make Qwen understand you, Qwen can elaborate as much as needed to get any of those models get good results, because it's filling in details. So using Qwen to direct claude also get's you amazing results way way cheaper...Update: let me elaborate more, I read the HN entry about the team of 5 Qwens being close to fable quality... so I embarked to add to my harness (https://github.com/alainnothere/privibe because we all have one right?) and once I had added the orchestrate tool I had to now measure somehow it it's able to improve quality, so I claude and then Qwen to run a experiment to call my harness passing the model to use and ask them to do something, 3 rounds I think and see what quality came out of it... and as per the grading... qwen and claude agreed that the quality of the response comming out the harness using the orchestrate was VERY CLOSE, with opus and fable providing more \"in my opinion you should\" which matches my experience on why they are better.One more update: I can't get copilot models to work decently, it may be my way of working... but I can get Qwen to follow what I try to do... if Qwen get's me he can then fire copilot cli and get amazing results by using copilot... bonus points seems like copilot cli is cheaper with the AIC (cost of the requests) so you can make the copilot subscription longer",
+          "This is very cool. But also, it’s a benchmark/result for a very specific experiment/task: identity resolutionDespite the title, the article is not making claims of, or demonstrating general usage improvements or general coding agent improvements",
+          "Why isn't Jev on Bedrock asap... I did a demo for using it as an orchestrator but the problem is upper management won't approve it unless its on Bedrock which is a real bummer"
         ]
       }
     },
     {
-      "id": "50383739",
-      "title": "Goodbye from Salon",
-      "url": "https://www.salon.com/2026/11/05/goodbye-from-salon/",
+      "id": "50392118",
+      "title": "Gemini Omni 1.2 Flash",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
       "source": "Hacker News",
-      "published_at": "2026-11-05T20:03:29+00:00",
-      "summary": "Goodbye from Salon",
-      "score": 548,
-      "comments": 206,
-      "discussion_url": "https://news.ycombinator.com/item?id=50383739",
-      "extra": {
-        "top_comments": [
-          "The amount of newsroom jobs fell 60% between 2008 and 2020. The vast majority of what was lost were \"beat\" reporters - foreign bureaus, Washington bureaus from regional publications, statehouse reporters, or regional specialty beats (science, law, etc).This started long before the decline of the open internet and AI. If anything, the shift online covered up a massive hollowing out of the industry. We're getting fewer sources of news, and more national coverage. A lot of stuff that is reported on is coming from a scant number of wire services, or directly from PR teams themselves.For the most part, your choice of news platform is just a layer of coverage choices and political spin on top of a very thin market of original coverage.",
-          "This article didn't generate any comments when it made the rounds 10 years ago. An obituary for what salon.com used to be.https://web.archive.org/web/20210219012551/https://www.polit...",
-          "I operate an online publication that has been online for an amount of time that can be accurately described as \"decades,\" though not quite as long as Salon.My project had a brief window of modest profitability from about 2012 to 2020. Before and after that time, I've mostly operated at a break-even or a loss because I love doing it, and it gives me a sense of purpose, and the thought of packing it up is deeply depressing. But the past few years have been an extreme drought of donations, which leads to extreme drought in ambition and energy. I sometimes wonder if my mental health would improve if I turned out the lights and moved on to something else. I don't want to, but sometimes we humans fail to want what's good for us.I'm sure it doesn't help that I reject advertising and rely solely on donations. But perhaps the only thing more depressing than shutting down is slapping ads on everything. Blah."
-        ]
-      }
-    },
-    {
-      "id": "50384233",
-      "title": "MS Paint Remote Code Execution Vulnerability",
-      "url": "https://www.cve.org/CVERecord?id=CVE-2026-83844",
-      "source": "Hacker News",
-      "published_at": "2026-11-05T20:43:42+00:00",
-      "summary": "MS Paint Remote Code Execution Vulnerability",
-      "score": 462,
-      "comments": 175,
-      "discussion_url": "https://news.ycombinator.com/item?id=50384233",
-      "extra": {
-        "top_comments": [
-          "Paint can exectue arbitrary code from the REMOTE, without USER INTERACTION?????We seriously need more information.",
-          "I can't wait for the Raymond Chen write up one day.",
-          "Had to go to Microsoft Store to get the fixed version, Windows Update didn't show anything."
-        ]
-      }
-    },
-    {
-      "id": "50380810",
-      "title": "Motorola Signature 27 with GrapheneOS support",
-      "url": "https://motorolanews.com/motorola-signature-27-2/",
-      "source": "Hacker News",
-      "published_at": "2026-11-05T16:01:34+00:00",
-      "summary": "Motorola Signature 27 with GrapheneOS support",
-      "score": 449,
-      "comments": 329,
-      "discussion_url": "https://news.ycombinator.com/item?id=50380810",
-      "extra": {
-        "top_comments": [
-          "Well \"starting MSRP of $1,599.\" I'll stick to my 2nd hand Pixel 8 that I bought, for GrapheneOS long term support, for 1/10th of that price.No doubt it's a way WAY better device, really, but I don't see where I would actually need that. I happily toss the one I have around and don't even care if it gets stolen or lost one day, different preference.",
-          "Odd to see Gemini promoted alongside GrapheneOS. One is effectively handing your life to the Google surveillance platform, the other encourages the opposite. What a strange partnership.EDIT: after reviewing other comments in this thread, I can see how my post here wasn't received well by some. It looks like some people are questioning the trust put into Graphene. I definitely am not. When I said \"strange partnership\" here, that's not what I meant at all. I think Graphene is operating in a very hostile ecosystem and the more doors Graphene can open for their platform to reach people, the better. The \"strange\" part of the equation was more aimed at Motorola (and Google) for allowing privacy intrusions to happen and even encouraging it in some ways (Gemini), yet actively supporting a project that would counter it. Maybe I should have used the word \"funny\" instead of \"strange\".",
-          "I don't know if I can trust a motorola phone with grapheneOS. Motorola is owned by a Chinese company that has recently been caught for injecting affiliate codes in users purchases. Yes, I know it won't be Motorola's OS but they do modify a large part of the BSP (bootloader, modem, etc.) with their \"mot_sec\" additions which you'll find if you reverse engineer any motorola firmware. It's unclear if qualcomm will give grapheneOS permission to rebuild or see the source code everything else. Modern phones run multiple operating systems like in the DSP, modem, trustzone, etc."
-        ]
-      }
-    },
-    {
-      "id": "50381383",
-      "title": "Window Sweaters",
-      "url": "https://github.com/saragordic/window-sweaters",
-      "source": "Hacker News",
-      "published_at": "2026-11-05T16:50:14+00:00",
-      "summary": "Window Sweaters",
+      "published_at": "2026-11-06T13:35:27+00:00",
+      "summary": "Gemini Omni 1.2 Flash",
       "score": 302,
-      "comments": 94,
-      "discussion_url": "https://news.ycombinator.com/item?id=50381383",
+      "comments": 220,
+      "discussion_url": "https://news.ycombinator.com/item?id=50392118",
       "extra": {
         "top_comments": [
-          "heeey, I'm the author of this! can’t believe this made it to Hacker News lol. thank you for posting it!a bit of context: I’m a product designer, and this was my very first open source project. I made it purely for fun, here’s where it started: https://x.com/saragordic/status/2098916110787916219screenshots: I added the little video now; you can see many more screenshots on X, a lot of ppl shared their owntrust: totally fair; if you’d rather not run my binary you can build it yourself with the steps in the README.the “send it to your coding agent” install line: that’s for ppl like me :DI’ve learned a tooon by open sourcing this; thank you all for the feedback!!",
-          "I misread the title and was expecting a collection of windows-themed sweaters like Microsoft (used to?) put out every year.",
-          "On a different note for computers in the winter.I’m from a warm country and winters are, well, cool-fine weather. However, when I had been to countries for work during winter, the worst thing were my hands and the degradation in my typing/mousing agility.One of the best buy I discovered long back are those Deskmat Keyboard Hand Warmer. Rest your hand when not typing, feel the warmth and remain keyboard agile."
+          "It's insane how Google has dropped the ball almost completely with AI.I literally don't care about their models anymore because I can't even try them without paying for them?I already pay for the plus plan but whatever their latest model was, is locked for me. Or otherwise it's just not accessible for me.If I try to add balance to my Google payment account, it shows me errors and is asking me to verify my identity through government documents.---Not to mention the extremely confusing terminology. \"Flash\", \"Experimental\". Why are most of your models either of those two? I don't get the confidence that your models are any good because of such names. Give me a normal reliable model!Even if Google releases AGI tier models in the future, I'll always look for other models because Google clearly thinks their models are too good for any of us.",
+          "This is a new video model. It is not a replacement for Gemini 4, it is doing something altogether different.It has been available, since yesterday, within Google Flow. I know, because I used it yesterday. Creatives normally are using Flow or similar third party tools, not APIs or AI Studio. The claim here is that there is more character consistency, which is helpful if true. But that's not something I can see from a little work. Despite the \"More Affordable\" claim, it costs more, and the outputs doesn't, from my limited experience so far, seem to be significantly better. So I could only, personally, justify pulling this up when character consistency is punching me in the face. Which, to be fair, is a lot of the time, both in my experience, and the experience of other AI film makers I talk to.This isn't for (most) coders, it hardly matters if it shows up on Flow a little earlier that Google Vids, and, perhaps, it is a little silly to act like it is a nightmare that a rollout occurs over a few days, especially the rollout prioritizes the paying creatives on the tool that are most likely to use.",
+          "The rollout is so confusing. Going straight to the Gemini app and asking when I can use this model gets me vague and contradicting answers. Ultimately it sounds like the Vids rollout will take 1-3 days, and you can go to vids.new on desktop to see if you’ve won the lottery and have it available now, apparently on any free Google account. Business accounts can use it too. Meanwhile the Gemini app is getting it on paid plans, but with different video length limits and no clear rollout timeline. If you pay for the API, it’s available now apparently.Why is this so difficult to figure out?"
         ]
       }
     },
     {
-      "id": "50383057",
-      "title": "The Hackintosh Reborn",
-      "url": "https://www.naut.ca/blog/2026/11/05/the-hackintosh-reborn-with-ai/",
+      "id": "50399933",
+      "title": "Libghostty 1.0",
+      "url": "https://mitchellh.com/writing/libghostty-1-0",
       "source": "Hacker News",
-      "published_at": "2026-11-05T19:08:22+00:00",
-      "summary": "The Hackintosh Reborn",
-      "score": 283,
-      "comments": 144,
-      "discussion_url": "https://news.ycombinator.com/item?id=50383057",
+      "published_at": "2026-11-06T23:30:52+00:00",
+      "summary": "Libghostty 1.0",
+      "score": 256,
+      "comments": 39,
+      "discussion_url": "https://news.ycombinator.com/item?id=50399933",
       "extra": {
         "top_comments": [
-          "There was a time when I used to wish for OSX (wasn't macOS yet) on other hardware. Now I want anything but macOS on mac hardware.",
-          "I wish I could get the mac hardware with linux. MacOS I am not a fan of. But they have the best hardware and the best cpus for laptops bar none.",
-          "As much as I used to love MacOS as an operating system, the more I spending time on it, I'd rather wish that my Macbook can run Linux, hopefully Asahi Linux will eventually support M5 :("
+          "Libghostty is a very cool project, this is an exciting release, kudos to mitchellh for spearheading this as well as all the people who have made contributions to the project. I use ghostty as my primary terminal emulator today and a few months ago I was experimenting with using libghostty in an android project that I plan to jump back to someday when I have the time, so I personally benefit from this work.",
+          "Libghostty is such an awesome project, I didn't myself understand the vision a year ago but I've since then been working on my own terminal project using Libghostty and it really does just work and save me such a tremendous amount of work. Kudos to all the contributors!",
+          "Wow. This is how you write a library."
         ]
       }
     },
     {
-      "id": "50385870",
-      "title": "Cuban: Facebook knowingly runs AI deepfake scam ads; docs say $16B fraud revenue",
-      "url": "https://finance.yahoo.com/technology/ai/articles/mark-cuban-says-facebook-knowingly-213000020.html",
+      "id": "50397994",
+      "title": "AI is dramatically accelerating AI research",
+      "url": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai",
       "source": "Hacker News",
-      "published_at": "2026-11-05T23:09:57+00:00",
-      "summary": "Cuban: Facebook knowingly runs AI deepfake scam ads; docs say $16B fraud revenue",
-      "score": 262,
-      "comments": 117,
-      "discussion_url": "https://news.ycombinator.com/item?id=50385870",
+      "published_at": "2026-11-06T20:27:23+00:00",
+      "summary": "AI is dramatically accelerating AI research",
+      "score": 215,
+      "comments": 164,
+      "discussion_url": "https://news.ycombinator.com/item?id=50397994",
       "extra": {
         "top_comments": [
-          "Make advertisers liable for the ads they run. Force them to vet ads or simply not run ads.If Meta is accepting so many ads they can’t review them then too bad for them. Hire more people or accept fewer ads.Ideally this will result in a complete obliteration of the ad industry with only a small number of high quality ads surviving.",
-          "The amount of times I’ve reported obvious scam ads on instagram just to receive a “we found this to not be in violation of our terms” is so disheartening.",
-          "Advertising really does seem to be at the root of a lot of societies evils."
+          "As somebody who does ML research, LLMs certainly make ML research faster. Maybe even 10x in some cases, as the author suggests.But that’s just the parts of ML research that take place within your compute environment, namely experiments on model architecture, training strategy, UI/UX, etc. The algorithms and software.Just because that part of research is progressively accelerated does not imply that we’re on a collision course with world-ending “superintelligence”. It just means that you’ll get to the best possible model of your data faster. And even when your data is the entire corpus of textual knowledge, there is a limit to the utility that provides.It just means that software engineering, data analysis, and other computational tasks will be less of a bottleneck in the overall progress of the world (which, by the way, is great, and extremely valuable).I don’t think it’s a stretch to say that we’ll have reached max LLM capability within a couple of years (what the author refers to as “super intelligence”). But it is a huge logical leap to say this:> If we go through this feedback loop, I expect that the AI systems that come out the other side will be able to very quickly develop novel weapons and very easily overpower human civilization in a conflict.First of all, the weapons necessary to overpower human civilization exist. They aren’t used as such due to geopolitics and humans’ basic survival instinct. Second, developing novel weapons requires physical tests, which are decidedly not accelerated by LLMs.AI is a tool wielded by humans. If we’re wiped out by AI, it will be at the direction of a human. But we’ve made it pretty far with some pretty unstable humans in command of planet-killer weapons. I’m not overly concerned.",
+          "Every dot in these graphs is composed of multiple benchmarks smooshed together.Benchmarks are by definition a curated set of things that can be measured and evaluated.Things that can be measured and evaluated can be (expensively) trained on.The progress we are observing comes from figuring out how to measure and evaluate particular aspects of intelligence, and then expensively training on feedback loops made of those exact measurements, and synthesized data representing further measurements (literally benchmaxing).What is not shown in these graphs are the set of things that intelligence can do, which are difficult, expensive or impossible to measure and evaluate.That set of things is much larger than the set of benchmarks represented in the graph.Therefore the post is misleading in the sense that the \"superintelligence\" being targeted is \"jagged\" to use Karpathy's term, and we infact already have jagged superintelligence (calculators, compilers, Bayesian spam classifiers, etc.)We are witnessing a profound explosion of much more jagged superintelligence, restricted to the exact domains that can be (expensively) RL'ed on.",
+          "AI is accelerating my work...work which only exists because of AI.If I had to do my individual tasks without AI, I would be slower. But if I take a step back, I'm really not changing the world any faster than I was before."
         ]
       }
     },
     {
-      "id": "50386338",
-      "title": "Inkling 2 Small",
-      "url": "https://thinkingmachines.ai/news/inkling-2-small/",
+      "id": "50394855",
+      "title": "First steps in bare-metal programming using UEFI",
+      "url": "https://kevinboone.me/efitest_index.html",
       "source": "Hacker News",
-      "published_at": "2026-11-06T00:00:24+00:00",
-      "summary": "Inkling 2 Small",
-      "score": 167,
-      "comments": 57,
-      "discussion_url": "https://news.ycombinator.com/item?id=50386338",
+      "published_at": "2026-11-06T16:50:29+00:00",
+      "summary": "First steps in bare-metal programming using UEFI",
+      "score": 196,
+      "comments": 34,
+      "discussion_url": "https://news.ycombinator.com/item?id=50394855",
       "extra": {
         "top_comments": [
-          "The best open models today have been “good enough” to do most knowledge work for a few months. This might be the first US one good enough too. That’s a big deal.Open weight US based Opus 5.5 within 12 months.",
-          "It's a nice, domestic open weight model.Without hundreds of millions in 9 days a small team is producing a model that can beat DeepSeek 4.1 and a platform to tune it.Optimistic for the future.",
-          "The most important thing here is training was entirely nvfp4 - this is best model by far that has ever been trained in that precision and explains why they were able to do it so fast"
+          "For \"Get used to the lack of a C standard library\" mentioned in https://kevinboone.me/efitest4.html there's always https://github.com/tianocore/edk2-libc.And on \"Be aware of the Windows-ness of EFI\" commentary the resemblance to Windows coding style https://computernewb.com/~lily/files/Documents/NTDesignWorkb... is no accident. We leveraged this coding methodology as we evolved the original Intel Boot Initiative then EFI and then UEFI code and specification https://www.intel.com/content/dam/www/public/us/en/documents...",
+          "Rod Smith and the OSDev Wiki went here, sometimes word for word, years before:* https://rodsbooks.com/efi-programming/* https://wiki.osdev.org/GNU-EFIOf course, they both assume GCC on Linux. Change either one of those, and it is a wholly different kettle of fish. Both NetBSD and FreeBSD, for examples, come with an EFI development environment in base, squirreled away in /usr/src/boot in the case of FreeBSD. They have to, because they need to be able to build their own EFI boot loaders. NetBSD targets more than Intel processor architectures for EFI, moreover. (NetBSD can boot via EFI on ARM CPUs, for instance.)",
+          "> The linker won’t complain if your code calls functions that don’t exist – it will just mark them as external, expecting them to be provided by some other code. But they won’t be, and the program will just crash when it calls one of these missing functions.You can verify no external symbols remain after linkage with: nm -D --undefined-only. This can be incorporated into a build script to verify the binary is valid."
+        ]
+      }
+    },
+    {
+      "id": "50397219",
+      "title": "Firecracker VM Escape: PwnEscape Part 2",
+      "url": "https://pwn.ai/blog/firecracker-escape",
+      "source": "Hacker News",
+      "published_at": "2026-11-06T19:33:38+00:00",
+      "summary": "Firecracker VM Escape: PwnEscape Part 2",
+      "score": 182,
+      "comments": 81,
+      "discussion_url": "https://news.ycombinator.com/item?id=50397219",
+      "extra": {
+        "top_comments": [
+          "I really wish they would have expanded on this paragraph in their article further:> The configuration used here had no jailer. Firecracker's production containment includes dropping privileges and restricting the process through namespaces and seccomp. A deployment using those controls requires a separate assessment of the privileges and resources available after compromising its VMM.If I'm understanding all of this correctly, a properly jailed and configured firecracker instance would greatly reduce the blast radius of this escape, and I feel as though it would have been good for them to explain what jailing and dropping privileges would do to help. I'd hope most production firecracker deployments would be doing this already.Not saying that this is any less severe and the root issue is not specific to Firecracker, but to a flaw in the kernel's network code -- they just used an insecure firecracker configuration to demonstrate it. However, I feel like some are taking this as a flaw with firecracker when its not. This is an issue in the kernel networking stack.",
+          "I am more convinced by the day that the Nova Microhypervisor approach is correct.Do virtualization with a tiny formally verified microkernel and have complex kernels like Linux run underneath instead of letting a huge, complex, and brittle linux kernel and vm ecosystem control the hypervisor layer.https://hypervisor.org/",
+          "I have a demo service that entirely relies on Firecracker VMs: ClickBench playground, https://benchmark.clickhouse.com/playground/It hosts hundreds of database engines - many of them have vulnerabilities, and some of them, like Pandas, are basically open RCEs regardless.We can PoC the Firecracker VM Escape on that service."
+        ]
+      }
+    },
+    {
+      "id": "50399657",
+      "title": "Sodium-ion batteries approach cost parity with LFP",
+      "url": "https://www.pv-magazine.com/2026/11/06/sodium-ion-batteries-approach-cost-parity-with-lfp-with-70-gwh-covered-by-supply-agreements/",
+      "source": "Hacker News",
+      "published_at": "2026-11-06T23:00:46+00:00",
+      "summary": "Sodium-ion batteries approach cost parity with LFP",
+      "score": 139,
+      "comments": 59,
+      "discussion_url": "https://news.ycombinator.com/item?id=50399657",
+      "extra": {
+        "top_comments": [
+          "I’m so desperate for home battery using sodium batteries. Safer and lower temperature it can operate at. Low energy density but I don’t care for home battery.",
+          "I switched the 12v lead-acid batteries on my EV to the 12v Lithium from OHMMU. Best upgrade I've done. I recently saw that they now offer 12V Sodium, and their warranty now went up to 3 years on the sodium, from 1 year. They have new data on its robustness.",
+          "That was fast. CATL is only now ramping up Naxtra production and it's already approaching price parity with LFP. This is early validation of the cost curve predictions for this chemistry.Most of this is destined for stationary storage that would likely have used lithium-based chemistry instead, or not been built-out at all. Every GWh of capacity sodium offsets is a GWh that isn't supplied by lithium, so demand for higher-value battery chemistry should be lower, and take prices with it. Good news all around."
+        ]
+      }
+    },
+    {
+      "id": "50395450",
+      "title": "Devvm.dev: One VM for every project",
+      "url": "https://devvm.dev/",
+      "source": "Hacker News",
+      "published_at": "2026-11-06T17:30:22+00:00",
+      "summary": "Devvm.dev: One VM for every project",
+      "score": 124,
+      "comments": 53,
+      "discussion_url": "https://news.ycombinator.com/item?id=50395450",
+      "extra": {
+        "top_comments": [
+          "I keep seeing projects like this pop up and they never nail it.I need isolation, but I also need to give my agents secure access to internal package registries, logs, internal infra, designs, emulators, browsers, docs etc. At a large company, work can span dozens of repositories. And on top of that, I need dozens of these.I built this at work. Engineers use krunkit VMs with proper memory ballooning, GPU acceleration. Retina RDP, credential injecting proxy for etc.This seems like a fun toy for single project development, but nothing close to what you need as an engineer in a corporate environment.",
+          "Damn, I've been building something very similar the past few weeks - haven't quite gotten to a public release yet.Mines based on libvirt and uses cloud-init for creating the images, with shared golden images across projects.Skimming your docs it wasn't totally clear to me if your images are built per project, or COW from shared toolchains.Looks like you have a few features in there that I might take some inspiration from though, eg the proxying stuff.Funny how many of us are trying to solve the same problem at the moment.",
+          "I see nothing this brings over smolvm machines. I did not use lima / krunkit outside colima but in colima it was just slow, had outdated devx and was unreliable compared to controlling every detail with an embedded vm library."
         ]
       }
     }
