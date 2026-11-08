@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-11-07T14:19:58.494807+08:00",
+  "cached_at": "2026-11-08T11:00:27.083796+08:00",
   "articles": [
     {
-      "id": "50399933",
-      "title": "Libghostty 1.0",
-      "url": "https://mitchellh.com/writing/libghostty-1-0",
+      "id": "50406563",
+      "title": "The end of Microsoft Research's AI Frontiers group",
+      "url": "https://hunch.net/?p=13764006",
       "source": "Hacker News",
-      "published_at": "2026-11-06T23:30:52+00:00",
-      "summary": "Libghostty 1.0",
-      "score": 450,
-      "comments": 72,
-      "discussion_url": "https://news.ycombinator.com/item?id=50399933",
+      "published_at": "2026-11-07T18:02:17+00:00",
+      "summary": "https://archive.is/AaY5Ohttps://businessexaminer.ca/victoria-articles/item/microsoft...",
+      "score": 406,
+      "comments": 238,
+      "discussion_url": "https://news.ycombinator.com/item?id=50406563",
       "extra": {
         "top_comments": [
-          "> “And a whole wave of new terminals and \"agentic\" coding tools, such as herdr and cmux, have been built on it rather than writing yet another emulator.”Mitchell could have easily snuck his competing product Rex in there but resisted. Respect.",
-          "I'm currently working on my own Zig project (an interpreter) and right now I'm working on designing a C interface for it. Seeing things mentioned like having objects as opaque handles, or enum-keyed getters and setters, made me think about how clunky my current API is, since I leak too many details to callers.What really caught my attention was this: \"So from the start, I took inspiration from C libraries I enjoyed working with and designed the API to have a strong, stable ABI that allows for future additions.\" What are good examples of this? I feel like I just don't have enough experience with well-designed C libraries to know what to look for.",
-          "Libghostty is a very cool project, this is an exciting release, kudos to mitchellh for spearheading this as well as all the people who have made contributions to the project. I use ghostty as my primary terminal emulator today and a few months ago I was experimenting with using libghostty in an android project that I plan to jump back to someday when I have the time, so I personally benefit from this work."
+          "This is true in every large company right now.The transformer based approach is seen as a highway to race down in terms of training and building better models with minimal organizational distractions allowed while every company puts its foot down on this highway. Exploratory research into other AI methods is highly discouraged for now and organizations are encouraging transformer based scale out and iteration as a top priority.As an example Meta literally fired it's previously head of AI who held views that transformers won't scale. He wanted to veer off the highway and heavily fund exploratory new types of models. They got someone willing to scale the current method out. Essentially the messaging it \"Foot down, there's a straight highway ahead don't divert\".I have the view this makes sense too. Current top models are mere (mere in big datacenter terms) trillions of parameters right now. We definitely haven't hit the ceiling and everyone's noticing \"Hey this Opus 5.5 with the increased parameters seems much better than the last one\". Well that's a trillion parameter model. We'll soon start hitting 10's of trillions and 100's of trillions of parameter models. Unless there's a ceiling which nobody expects they should keep scaling just as they have been. I really do agree that it'd be insane to veer off this highway with exploratory research at this particular point in time. Foot down, get to 10 trillion parameters, see if the scaling holds, if so off to 100 trillion parameters. If the scaling continues to hold we'll be asking the AI to do the exploratory research for us soon enough.",
+          "This refers specifically to \"AI Frontiers\", a research group within Microsoft Research that focuses on fundamental advances in AI. There is no end in sight to real AI frontiers.Perhaps \"The End of Microsoft Research's AI Frontiers Group\" would be a less ambiguous title.",
+          "> scaling is straightforwardI remember IllyaS saying scaling doesnt work anymore so we are just RLcrazy. Is that not true?"
         ]
       }
     },
     {
-      "id": "50397429",
-      "title": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
-      "url": "https://hightouch.com/blog/llm-judges-identity-resolution",
+      "id": "50406111",
+      "title": "Apple’s grey list: Words and phrases your iPhone won’t help you spell",
+      "url": "https://www.theguardian.com/technology/2026/nov/06/struggling-to-spell-male-chauvinist-pig-apple-grey-list-means-your-iphone-wont-help-you",
       "source": "Hacker News",
-      "published_at": "2026-11-06T19:48:51+00:00",
-      "summary": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
-      "score": 413,
-      "comments": 93,
-      "discussion_url": "https://news.ycombinator.com/item?id=50397429",
+      "published_at": "2026-11-07T17:06:36+00:00",
+      "summary": "Apple’s grey list: Words and phrases your iPhone won’t help you spell",
+      "score": 385,
+      "comments": 255,
+      "discussion_url": "https://news.ycombinator.com/item?id=50406111",
       "extra": {
         "top_comments": [
-          "If you use Qwen3.8 27B to manage, to orchestrate, do do shallow research, and then make it ask claude you will notice that Qwen can get out of Haiku, Sonnet and Opus almost as good answers... I was researching how good the model asnswers where, I can't get to work with anything but Fable, but Qwen can get good work from any of them. My theory is that if you make Qwen understand you, Qwen can elaborate as much as needed to get any of those models get good results, because it's filling in details. So using Qwen to direct claude also get's you amazing results way way cheaper...Update: let me elaborate more, I read the HN entry about the team of 5 Qwens being close to fable quality... so I embarked to add to my harness (https://github.com/alainnothere/privibe because we all have one right?) and once I had added the orchestrate tool I had to now measure somehow it it's able to improve quality, so I claude and then Qwen to run a experiment to call my harness passing the model to use and ask them to do something, 3 rounds I think and see what quality came out of it... and as per the grading... qwen and claude agreed that the quality of the response comming out the harness using the orchestrate was VERY CLOSE, with opus and fable providing more \"in my opinion you should\" which matches my experience on why they are better.One more update: I can't get copilot models to work decently, it may be my way of working... but I can get Qwen to follow what I try to do... if Qwen get's me he can then fire copilot cli and get amazing results by using copilot... bonus points seems like copilot cli is cheaper with the AIC (cost of the requests) so you can make the copilot subscription longer",
-          "Seeing the title made me think: Jev used to be quite popular. Is anyone else still using it heavily these days?",
-          "Found similar results, but the economics of the models involved have changed so quickly that it becomes so task specific on what the right thing to do was.With an assemblage of models like Jev + Opus or Jev + Qwen, Jev would often do the right thing when deciding to escalate to another model - I was impressed that it would usually make the right call, especially if you gave it good awareness of what the other model capabilities were. \"ESCALATE to opus if you need good vision awareness\".When Haiku 5.5 came out though, for my tasks, the cost differences disappeared almost immediately. Haiku was good enough / fast enough for so many things that introducing a decider layer didn't offer huge wins. Jev's \"millisecond\" level performance was nice but would get dwarfed by other latencies in my chain ( web browsing ), that it didn't make a measurable difference in my tasks."
+          "I wonder what the boardroom meeting for this was like. Despite the outcome, I doubt the devs were pitching censorship as the reason for implementing this.To the shocking number of people here who are justifying this or explaining how it only affect swipe input as if that makes it better: soft coercion is still coercion. If I made a physical keyboard that stops keys from working when you're about to finish typing something I don't want you to type, but you can still circumvent it, I still made a censorship keyboard. It's a sign of the times with how used tech companies are to 'softly' moderating societal trends by unilaterally tweaking the software that everyone uses.",
+          "And that's just the tip of the iceberg for the iOS Keyboard's issues. They've tried to fix it multiple times, and while it is undeniably better than its lowest point - it is still staggeringly worse than Google's native offering on the Pixel range. Swiping is just so painful, and Microsoft's Swiftkey keyboard is on life support.Considering arguably the keyboard itself is one of the most common \"touch surfaces\" on iOS, the level of neglect and level of overall quality is staggering. There's some serious incentive problems at Apple if nobody is tasked with making one of the best digital keyboards in the world.PS - Whoever came up with the concept, on swipe-style touch keyboards, of the \"Tap Map\"/Heatmap wherein keys visible location doesn't match their touch area - so that BY DESIGN it always provides an inconsistent user experience needs to be fired into the sun. You literally cannot disable it on most mobile keyboards. It is on iOS's native keyboard AND Microsoft's Swiftkey.",
+          "Not predicting to something controversial when doing predictive text isn't censorship. You can still type any of these things. When I swing my finger around wildly it's making a best guess; not jumping to a phrase that makes me look bad or get arrested (in some countries) isn't an awful design choice."
         ]
       }
     },
     {
-      "id": "50397994",
-      "title": "AI is dramatically accelerating AI research",
-      "url": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai",
+      "id": "50406670",
+      "title": "What I run on my $10 USD OpenStick homelab",
+      "url": "https://blog.bosscher.ch/posts/openstick/",
       "source": "Hacker News",
-      "published_at": "2026-11-06T20:27:23+00:00",
-      "summary": "AI is dramatically accelerating AI research",
-      "score": 255,
-      "comments": 207,
-      "discussion_url": "https://news.ycombinator.com/item?id=50397994",
+      "published_at": "2026-11-07T18:12:12+00:00",
+      "summary": "What I run on my $10 USD OpenStick homelab",
+      "score": 376,
+      "comments": 89,
+      "discussion_url": "https://news.ycombinator.com/item?id=50406670",
       "extra": {
         "top_comments": [
-          "As somebody who does ML research, LLMs certainly make ML research faster. Maybe even 10x in some cases, as the author suggests.But that’s just the parts of ML research that take place within your compute environment, namely experiments on model architecture, training strategy, UI/UX, etc. The algorithms and software.Just because that part of research is progressively accelerated does not imply that we’re on a collision course with world-ending “superintelligence”. It just means that you’ll get to the best possible model of your data faster. And even when your data is the entire corpus of textual knowledge, there is a limit to the utility that provides.It just means that software engineering, data analysis, and other computational tasks will be less of a bottleneck in the overall progress of the world (which, by the way, is great, and extremely valuable).I don’t think it’s a stretch to say that we’ll have reached max LLM capability within a couple of years (what the author refers to as “super intelligence”). But it is a huge logical leap to say this:> If we go through this feedback loop, I expect that the AI systems that come out the other side will be able to very quickly develop novel weapons and very easily overpower human civilization in a conflict.First of all, the weapons necessary to overpower human civilization exist. They aren’t used as such due to geopolitics and humans’ basic survival instinct. Second, developing novel weapons requires physical tests, which are decidedly not accelerated by LLMs.AI is a tool wielded by humans. If we’re wiped out by AI, it will be at the direction of a human. But we’ve made it pretty far with some pretty unstable humans in command of planet-killer weapons. I’m not overly concerned.",
-          "Every dot in these graphs is composed of multiple benchmarks smooshed together.Benchmarks are by definition a curated set of things that can be measured and evaluated.Things that can be measured and evaluated can be (expensively) trained on.The progress we are observing comes from figuring out how to measure and evaluate particular aspects of intelligence, and then expensively training on feedback loops made of those exact measurements, and synthesized data representing further measurements (literally benchmaxing).What is not shown in these graphs are the set of things that intelligence can do, which are difficult, expensive or impossible to measure and evaluate.That set of things is much larger than the set of benchmarks represented in the graph.Therefore the post is misleading in the sense that the \"superintelligence\" being targeted is \"jagged\" to use Karpathy's term, and we infact already have jagged superintelligence (calculators, compilers, Bayesian spam classifiers, etc.)We are witnessing a profound explosion of much more jagged superintelligence, restricted to the exact domains that can be (expensively) RL'ed on.",
-          "AI is accelerating my work...work which only exists because of AI.If I had to do my individual tasks without AI, I would be slower. But if I take a step back, I'm really not changing the world any faster than I was before."
+          "I've had a lot of fun with this little gadget and it's pretty cool to see how much you can host on a cheap gadget if you pick the right software! Given how expensive RAM is these days, I figured, this might be a good option for other people to get started with self-hosting as well!Happy to answer any question and take suggestions as to what other software would be a good addition!",
+          "I always want to get a small device like this and recently keep to research on RISC V device but turned out there are no ones like this ARM deviceReally interesting to read and so much good software to run on it, I have AdGuardHome on my X86 MiniPC and a fd.io VPP based software network stack on it, it works great.Given it's ARM A53 and have 480MB memory, perhaps it can also run tailscale on it:)",
+          "It’s more powerful than the RPi Zeros I use on my cluster - kind of same as a Zero 2.What I’d love to see is a stick that plugs into an Ethernet switch with PoE so you assemble a cluster just by literally plugging nodes to a cluster. For that to work, the best form factor would be a vertical board with a male Ethernet connector on one side so that it’d fit on the horizontal RJ45 on the switch and not be limited by the RJ45’s width."
         ]
       }
     },
     {
-      "id": "50394855",
-      "title": "First steps in bare-metal programming using UEFI",
-      "url": "https://kevinboone.me/efitest_index.html",
+      "id": "50406222",
+      "title": "MaxxBench – \"Nice DeepSWE score. But is it true?\"",
+      "url": "https://maxxbench.unlap.ai/research/why-maxxbench/",
       "source": "Hacker News",
-      "published_at": "2026-11-06T16:50:29+00:00",
-      "summary": "First steps in bare-metal programming using UEFI",
+      "published_at": "2026-11-07T17:19:00+00:00",
+      "summary": "MaxxBench – \"Nice DeepSWE score. But is it true?\"",
       "score": 211,
-      "comments": 39,
-      "discussion_url": "https://news.ycombinator.com/item?id=50394855",
+      "comments": 64,
+      "discussion_url": "https://news.ycombinator.com/item?id=50406222",
       "extra": {
         "top_comments": [
-          "For \"Get used to the lack of a C standard library\" mentioned in https://kevinboone.me/efitest4.html there's always https://github.com/tianocore/edk2-libc.And on \"Be aware of the Windows-ness of EFI\" commentary the resemblance to Windows coding style https://computernewb.com/~lily/files/Documents/NTDesignWorkb... is no accident. We leveraged this coding methodology as we evolved the original Intel Boot Initiative then EFI and then UEFI code and specification https://www.intel.com/content/dam/www/public/us/en/documents...",
-          "> The linker won’t complain if your code calls functions that don’t exist – it will just mark them as external, expecting them to be provided by some other code. But they won’t be, and the program will just crash when it calls one of these missing functions.You can verify no external symbols remain after linkage with: nm -D --undefined-only. This can be incorporated into a build script to verify the binary is valid.",
-          "Rod Smith and the OSDev Wiki went here, sometimes word for word, years before:* https://rodsbooks.com/efi-programming/* https://wiki.osdev.org/GNU-EFIOf course, they both assume GCC on Linux. Change either one of those, and it is a wholly different kettle of fish. Both NetBSD and FreeBSD, for examples, come with an EFI development environment in base, squirreled away in /usr/src/boot in the case of FreeBSD. They have to, because they need to be able to build their own EFI boot loaders. NetBSD targets more than Intel processor architectures for EFI, moreover. (NetBSD can boot via EFI on ARM CPUs, for instance.)"
+          "This is a great example of how to test how well a benchmark score generalises. The first order approximation is not complicated: just vary a parameter and see how much the score changes.Which parameter to vary depends on the result of the test, but the MaxxBench route of varying the task spec seems like a good default, though not always the most informative.In one of my private benchmarks I realised many of the less capable models didn't fail because they submitted the wrong answer, but because they exceeded their budget for number of tool calls they were allowed. The more capable models never got close to the tool call limit because they tended toward combining tool calls (e.g. chaining multiple shell commands in one Bash tool call).Was my benchmark actually measuring ability to combine tool calls rather than reasoning ability on the problem at hand? Well, easy enough to find out: re-run under a different tool call budget and see how much the scores change.(Next problem: is ability to combine tool calls a useful thing to measure, i.e. should it confer an advantage in the benchmark? It could be if it is a sign of planning multiple steps ahead.)",
+          "The big trend in that graph is that smaller models collapse the most. Everything with \"-flash\" in the name, plus OpenAI Luna.Look at GPT 5.6-Sol vs. GPT 5.6-Luna in particular.(The GLM pair shouldn't be expected follow this pattern, because they're misnamed: GLM-5.3 and GLM-5.3-flash are distinct lineages. The -flash is an early release of a new pretrain on a new architecture).If this *is* the main factor, I'd expect Kimi K3.1 and Gemini Carbon would also do well on this test (unlike Gemini-flash); while Haiku 6 would collapse (breaking the trend of the other recent Claude models). It's a falsifiable prediction.",
+          "Academically a - very - interesting article, which confirms my ongoing suspicion of LLM Benchmarks in general ( probably why I like it so much). Another thing that caught my eye is DeepSWE having a bunch of bugs in them. The more I learn about these benchmarks the more sceptical I become. I would expect such a prolific benchmark to have these bugs ironed out by now.The practical takeaway, however, seems to be an interesting \"don't use max mode\". The passage about deepseeks weird API behavior dropping to pretty much zero the moment you used high says a lot.Also, personally, even though Opus is clearly so much ahead of the Open Source models after the changes, I think the adjusted score is still very much competitive. I see other commenters using this as proof to justify why their opinions of the open source models - but a drop from 74% to ~50% is, while a big drop, still about a ~50% pass rate afterwards. That's far from useless for coding, especially since DeepSWE seems to be such a difficult benchmark. It simply seems to more accurately reflect the capabilities of these models.All in all, I'd love to see more of such articles, and will probably keep an eye on this one - if they continue \"benchmarking\" these models this way."
         ]
       }
     },
     {
-      "id": "50397219",
-      "title": "Firecracker VM Escape: PwnEscape Part 2",
-      "url": "https://pwn.ai/blog/firecracker-escape",
+      "id": "50404599",
+      "title": "The $8 Linux Computer (2022)",
+      "url": "http://thelittleengineerthatcould.blogspot.com/2022/12/the-8-linux-computer.html",
       "source": "Hacker News",
-      "published_at": "2026-11-06T19:33:38+00:00",
-      "summary": "Firecracker VM Escape: PwnEscape Part 2",
-      "score": 206,
-      "comments": 104,
-      "discussion_url": "https://news.ycombinator.com/item?id=50397219",
+      "published_at": "2026-11-07T14:00:20+00:00",
+      "summary": "The $8 Linux Computer (2022)",
+      "score": 205,
+      "comments": 86,
+      "discussion_url": "https://news.ycombinator.com/item?id=50404599",
       "extra": {
         "top_comments": [
-          "I really wish they would have expanded on this paragraph in their article further:> The configuration used here had no jailer. Firecracker's production containment includes dropping privileges and restricting the process through namespaces and seccomp. A deployment using those controls requires a separate assessment of the privileges and resources available after compromising its VMM.If I'm understanding all of this correctly, a properly jailed and configured firecracker instance would greatly reduce the blast radius of this escape, and I feel as though it would have been good for them to explain what jailing and dropping privileges would do to help. I'd hope most production firecracker deployments would be doing this already.Not saying that this is any less severe and the root issue is not specific to Firecracker, but to a flaw in the kernel's network code -- they just used an insecure firecracker configuration to demonstrate it. However, I feel like some are taking this as a flaw with firecracker when its not. This is an issue in the kernel networking stack.",
-          "I am more convinced by the day that the Nova Microhypervisor approach is correct.Do virtualization with a tiny formally verified microkernel and have complex kernels like Linux run underneath instead of letting a huge, complex, and brittle linux kernel and vm ecosystem control the hypervisor layer.https://hypervisor.org/",
-          "I have a demo service that entirely relies on Firecracker VMs: ClickBench playground, https://benchmark.clickhouse.com/playground/It hosts hundreds of database engines - many of them have vulnerabilities, and some of them, like Pandas, are basically open RCEs regardless.We can PoC the Firecracker VM Escape on that service."
+          "I love looking back 10+ years for the cheapest Linux thing you could buy. People were buying devices that were for kids or a router or something and repurposing it because it was open enough to get a shell on / flash Linux to it and start doing projects with.In the 2020s or somewhere before that we got a bunch of dedicated cheap MCUs that were good enough and I think stole the thunder from full Linux but there are still projects to run it on things like the ESP32 family.Either way, hardware hacking is still my favorite hobby to watch.",
+          "The Raspberry Pi Zero sold for $5 before the foundation sold out.",
+          "Personally I think the LicheeRV nano on SG2002 is worth the investment of 15-20 bucks.This thing has USB OTG, multiple usable GPIO and can be flashed via microSD and has a display out with touch support.I was in the process on building a little iPod Nano clone[1] with Rust / Slint but i was too busy for a while, yet I plan to get back to it in the future. Unfortunately the sg2002 image has no CPU governor yet.Maybe I switch to the tinyembedded dual with a custom PCB to save power[2].1: https://github.com/nanowave-player/nanowave-ui2: https://github.com/yuansco/TinyEmbedded-Dual/"
         ]
       }
     },
     {
-      "id": "50395450",
-      "title": "Devvm.dev: One VM for every project",
-      "url": "https://devvm.dev/",
+      "id": "50407882",
+      "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
+      "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
       "source": "Hacker News",
-      "published_at": "2026-11-06T17:30:22+00:00",
-      "summary": "Devvm.dev: One VM for every project",
-      "score": 142,
-      "comments": 56,
-      "discussion_url": "https://news.ycombinator.com/item?id=50395450",
+      "published_at": "2026-11-07T20:45:32+00:00",
+      "summary": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
+      "score": 203,
+      "comments": 142,
+      "discussion_url": "https://news.ycombinator.com/item?id=50407882",
       "extra": {
         "top_comments": [
-          "I keep seeing projects like this pop up and they never nail it.I need isolation, but I also need to give my agents secure access to internal package registries, logs, internal infra, designs, emulators, browsers, docs etc. At a large company, work can span dozens of repositories. And on top of that, I need dozens of these.I built this at work. Engineers use krunkit VMs with proper memory ballooning, GPU acceleration. Retina RDP, credential injecting proxy for etc.This seems like a fun toy for single project development, but nothing close to what you need as an engineer in a corporate environment.",
-          "Damn, I've been building something very similar the past few weeks - haven't quite gotten to a public release yet.Mines based on libvirt and uses cloud-init for creating the images, with shared golden images across projects.Skimming your docs it wasn't totally clear to me if your images are built per project, or COW from shared toolchains.Looks like you have a few features in there that I might take some inspiration from though, eg the proxying stuff.Funny how many of us are trying to solve the same problem at the moment.",
-          "I see nothing this brings over smolvm machines. I did not use lima / krunkit outside colima but in colima it was just slow, had outdated devx and was unreliable compared to controlling every detail with an embedded vm library."
+          "Boris from the Claude Code team here. Historically Claude Code has not done secret scrubbing (there are many good tools for that), but we are looking into what we can do to prevent this.That said, a few thoughts:1. .claude/settings.local.json is meant to stay local. This is not a file you should check into source control. We automatically gitignore it when Claude creates the file, so in this case the files were manually created and checked in (docs: https://code.claude.com/docs/en/settings)2. Permission rules are old hat. Everyone should be using auto mode instead. It is safer and also does not require manually maintaining finicky allow/deny lists. Auto mode is enabled by default and is included for free in all plans.3. Regardless of what agent you use, you should have secret scanning enabled. GitHub and other source control hosts offer it. There are many threat models that it protects against and you should absolutely use it if you can. (see https://github.com/security/plans)",
+          "Confusing headline. They scanned for repos where people had committed their .claude/ folder and local settings and then scanned those files for commands which contained keys or passwords.So pressing “Don’t Ask Again” by itself doesn’t expose passwords by itself. If you commit your local Claude settings and in those settings you have manually approved commands containing secrets directly in the command and then you publish the repo, that’s exposed.",
+          "I'm super paranoid about the level of access AI agents have. At the same time, I want them to take away the tedium of a bunch of tasks I'm required to do, and it sucks to have to micromanage them.The best solution I've been able to come up is using an ephemeral vm (on an isolated network) per task, using --dangerously-skip-permissions so it doesn't bother me. I couple that with an API proxy that lets me restrict the permissions it has to external services. So e.g. where a quickbooks API key gives the holder \"god mode\" access, the proxy lets the agent do certain read commands without confirmation, but all write endpoints except uploading receipts require confirmation on my phone before they'll be allowed to hit the quickbooks servers. I no longer need to trust that the agent will interpret my readonly wishes correctly.Tooting my own horn here, but this setup works incredibly well! I've been able to connect dozens of services safely where I absolutely do not trust giving raw, overpowered credentials or oauth integration to the agent directly. I actually just released the API proxy today at https://keycontain.com"
         ]
       }
     },
     {
-      "id": "50397017",
-      "title": "Restaurant Delivery Payment-Skimming Campaign",
-      "url": "https://www.infohawk.com/news/2026-11-05-scamwich-restaurant-skimming",
+      "id": "50406292",
+      "title": "Show HN: Coldframe, a honeypot that poses as a supermarket fridge controller",
+      "url": "https://github.com/hedgerow-dev/coldframe",
       "source": "Hacker News",
-      "published_at": "2026-11-06T19:19:27+00:00",
-      "summary": "Restaurant Delivery Payment-Skimming Campaign",
-      "score": 110,
-      "comments": 56,
-      "discussion_url": "https://news.ycombinator.com/item?id=50397017",
+      "published_at": "2026-11-07T17:27:30+00:00",
+      "summary": "I built Coldframe, a honeypot that pretends to be a supermarket refrigeration controller. Inspired by the events on industrial fridge installations in the past weeks, I wanted to see what people would try against a convincing fake.To learn more about this I built a honeypot that resembled perfectly the Danfoss AK-SM 800A and Dixell XWEB interfaces. Both of them are recognized on Shodan as real ones (an not as honeypots). It’s one Python file using only the standard library, and it builds on eppser/danfoss-ak-sm-decoy and public research by Synacktiv, Claroty and Ironhackers.Things that were fun to get right:- Matching real units. I used Shodan records of real devices to match header order, page titles, certificate fields and TLS versions. The Danfoss persona sends nginx headers in the same order as a real AK-SM 800A. The Dixell persona sends no Server header and pads its page to exactly 8,202 bytes.- Recognising exploit attempts. It recognises CVE-2025-41450, the Danfoss “code of the day” login bypass, and records whether the submitted code is correct for today. It also tags attempts targeting three other Danfoss CVEs and the XWEB vulnerabilities.- Letting them in. Default logins open a fake store dashboard with defrost buttons, so you see the second move, not just the first. Nothing behind it is real.Two instances have been live for a day. So far they’ve only seen generic scanners and Shodan’s crawler, which is called refrigerator.census.shodan.io.Feedback welcome, especially from anyone who has seen these devices in the field!",
+      "score": 196,
+      "comments": 42,
+      "discussion_url": "https://news.ycombinator.com/item?id=50406292",
       "extra": {
         "top_comments": [
-          "None of this would work if Google Adsense didn't allow scam ads on their system. But they do, millions every day (I deal with this every day on my websites, Google don't care).https://en.wikipedia.org/wiki/Racketeer_Influenced_and_Corru...",
-          "Couldn't the original website owner just look at the logs and see where most of the requests are coming from? And also the referrers would be a dead giveaway, right? That's assuming someone is looking at the `access.log` file occasionally.",
-          "Google is the entire problem here. Pay them money and your literal scam site can sit above the real site in the search results.Why are they allowed to direct you to literal scams? Why are they allowed to profit off of literal scams?This affects the company I work for, who gets called every single day with customer complaints from people who clicked the scam link from a search ad when looking for our site.Our site has existed for over a decade. There's no justifiable reason that a company who's brand is known by every single grocer or merchant to somehow show up under a literal fly by night scam company pretending to have the same name. It's unacceptable.My sister got scammed by this exact mechanism just last week."
+          "I would be very skeptical of anyone relying on Shodan data. At one point I was trying to write honeypots myself by replicating wifi cameras, but almost all the ones on the internet I found were honeypots of some sort, and the ones that weren't were already hacked and had their web pages replaced. In retrospect it would have probably been better to get a vulnerable device myself and probe it.If I were you, I would probably ensure that the fridges you used have residential or commercial (aka non-DC) IP addresses. Maybe Shodan uses this data for their \"honeypot\" label, my experience was some time ago so no idea though.",
+          "An extra insight, there was some news of 'blood banks' also being targetted. This is possibly a stronger (painful) target. It would demorelize people that are donors. https://www.independent.co.uk/tech/security/blood-hack-fridg...",
+          "One thing keeps coming back, (and it's the story of industries where security and patching is an afterthought).a supermarket has no security team. If a fridge controller needs patching, a VPN and a strong password to be safe, that work has to come from the vendor or installer by default. One would hope that all these come by default or as a feature on these devices. It could even be a selling feature and not part of an expensive maintenance contract. A supermarket manager cannot be expected to do this work."
         ]
       }
     },
     {
-      "id": "50397099",
-      "title": "GitHub's new Git storage architecture",
-      "url": "https://github.blog/engineering/architecture-optimization/inside-githubs-new-git-storage-architecture/",
+      "id": "50406319",
+      "title": "Five memorable books about programming (2008)",
+      "url": "https://prog21.dadgum.com/19.html",
       "source": "Hacker News",
-      "published_at": "2026-11-06T19:24:21+00:00",
-      "summary": "GitHub's new Git storage architecture",
-      "score": 106,
-      "comments": 20,
-      "discussion_url": "https://news.ycombinator.com/item?id=50397099",
+      "published_at": "2026-11-07T17:30:49+00:00",
+      "summary": "Five memorable books about programming (2008)",
+      "score": 91,
+      "comments": 57,
+      "discussion_url": "https://news.ycombinator.com/item?id=50406319",
       "extra": {
         "top_comments": [
-          "If I'm reading this right, this is (really solid) future planning but won't help with the current outages?I'd have thought so from the headline + initial content but then they say that the horizontal scale techniques are basically carrying over from the existing architecture (where it seems the problem is?) and this is mostly to help with what they call \"vertical scale\" (intra-repo scalability). They also admit right after that the most active repos today will receive short bursts of at most dozens of writes.So this seems like really useful planning for a near future that likely helps prevent more issues but isn't really meant to help current issues. Am I reading this right?Of course improvements like this are always useful either way. Not dunking here at all.",
-          "Most of this is similar to what https://enroute.sh already did scaling Git. https://enroute.sh/blog/everyone-is-doing-git-on-s3-wrong",
-          "Agent scale is definitely on the mind around industry, I wonder what github folks would say in response to https://www.anthropic.com/research/redesigning-source-contro.... It's an interesting read to step back and consider source control from first principles and rebalance the tradeoffs for what qualities matter in this new regime."
+          "For me, the blue Smalltalk book by Adele Goldberg was deeply formative. It was computing done right and from first principles.The other two formative experiences for me were using Cincom’s Mantis on the 3278 and Dataflex 2. Both made it obvious how quickly one could go from screen to persisted data, CRUD, application logic, and reporting with the right level of abstraction. Much later I described Dataflex as “Rails for the VT100”. Sadly, Cincom will not provide a hobby license to run it on an emulated 4381, and won’t even give away free manuals, and the company behind Dataflex (I don’t remember their name right now) seems to not even have any versions from that time. When I read Paul Graham’s Beating the Averages, it all clicked perfectly.",
+          "How about Higher-Order Perl by Mark Jason Dominus?https://hop.perl.plover.com/Some other great low flying titles:The Computational Beauty of Nature by Gary William Flakehttps://mitpress.mit.edu/9780262561273/the-computational-bea...The Nature of Computation by Cristopher Moore and Stephan Mertens.https://nature-of-computation.org/Algorithms by S. Dasgupta, C.H. Papadimitriou, and U.V. Vaziranihttps://cseweb.ucsd.edu/~dasgupta/book/index.htmland On Lisp, of course:https://www.paulgraham.com/onlisp.html",
+          "Programmers at work: I bought a used copy of it - probably after reading this the first time it was posted. Great book, if you can find it.Code, by Charles Petzold should be on any programmer’s list - and the list of anyone with curiosity about how the modern world works. It somehow manages the amazing trick of being readable for the novice, but also containing nuggets of insight for the expert all at the same time. Such a well written book."
         ]
       }
     }
