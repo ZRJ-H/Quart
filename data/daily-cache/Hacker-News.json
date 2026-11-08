@@ -1,6 +1,24 @@
 {
-  "cached_at": "2026-11-08T11:00:27.083796+08:00",
+  "cached_at": "2026-11-08T14:26:49.295697+08:00",
   "articles": [
+    {
+      "id": "50406670",
+      "title": "What I run on my $10 USD OpenStick homelab",
+      "url": "https://blog.bosscher.ch/posts/openstick/",
+      "source": "Hacker News",
+      "published_at": "2026-11-07T18:12:12+00:00",
+      "summary": "What I run on my $10 USD OpenStick homelab",
+      "score": 490,
+      "comments": 98,
+      "discussion_url": "https://news.ycombinator.com/item?id=50406670",
+      "extra": {
+        "top_comments": [
+          "I've had a lot of fun with this little gadget and it's pretty cool to see how much you can host on a cheap gadget if you pick the right software! Given how expensive RAM is these days, I figured, this might be a good option for other people to get started with self-hosting as well!Happy to answer any question and take suggestions as to what other software would be a good addition!",
+          "Fusion is quite interesting. I forked miniflux into https://github.com/rcarmo/picoflux because I wanted something lighter, but I like Fusion's screenshots better than the mini/picoflux web UI, so I will be looking at that ASAP.",
+          "It’s more powerful than the RPi Zeros I use on my cluster - kind of same as a Zero 2.What I’d love to see is a stick that plugs into an Ethernet switch with PoE so you assemble a cluster just by literally plugging nodes to a cluster. For that to work, the best form factor would be a vertical board with a male Ethernet connector on one side so that it’d fit on the horizontal RJ45 on the switch and not be limited by the RJ45’s width."
+        ]
+      }
+    },
     {
       "id": "50406563",
       "title": "The end of Microsoft Research's AI Frontiers group",
@@ -8,14 +26,14 @@
       "source": "Hacker News",
       "published_at": "2026-11-07T18:02:17+00:00",
       "summary": "https://archive.is/AaY5Ohttps://businessexaminer.ca/victoria-articles/item/microsoft...",
-      "score": 406,
-      "comments": 238,
+      "score": 433,
+      "comments": 259,
       "discussion_url": "https://news.ycombinator.com/item?id=50406563",
       "extra": {
         "top_comments": [
           "This is true in every large company right now.The transformer based approach is seen as a highway to race down in terms of training and building better models with minimal organizational distractions allowed while every company puts its foot down on this highway. Exploratory research into other AI methods is highly discouraged for now and organizations are encouraging transformer based scale out and iteration as a top priority.As an example Meta literally fired it's previously head of AI who held views that transformers won't scale. He wanted to veer off the highway and heavily fund exploratory new types of models. They got someone willing to scale the current method out. Essentially the messaging it \"Foot down, there's a straight highway ahead don't divert\".I have the view this makes sense too. Current top models are mere (mere in big datacenter terms) trillions of parameters right now. We definitely haven't hit the ceiling and everyone's noticing \"Hey this Opus 5.5 with the increased parameters seems much better than the last one\". Well that's a trillion parameter model. We'll soon start hitting 10's of trillions and 100's of trillions of parameter models. Unless there's a ceiling which nobody expects they should keep scaling just as they have been. I really do agree that it'd be insane to veer off this highway with exploratory research at this particular point in time. Foot down, get to 10 trillion parameters, see if the scaling holds, if so off to 100 trillion parameters. If the scaling continues to hold we'll be asking the AI to do the exploratory research for us soon enough.",
           "This refers specifically to \"AI Frontiers\", a research group within Microsoft Research that focuses on fundamental advances in AI. There is no end in sight to real AI frontiers.Perhaps \"The End of Microsoft Research's AI Frontiers Group\" would be a less ambiguous title.",
-          "> scaling is straightforwardI remember IllyaS saying scaling doesnt work anymore so we are just RLcrazy. Is that not true?"
+          "It makes me sad because there are so many unexplored areas of AI research, even on text generation. Billions are invested in almost one idea, which very realistically isn't the most optimal way to do text generation, but a lot of companies are afraid of taking risks. I still wouldn't put $1b on JEPA but I prefer a world where we can try things like that."
         ]
       }
     },
@@ -26,68 +44,14 @@
       "source": "Hacker News",
       "published_at": "2026-11-07T17:06:36+00:00",
       "summary": "Apple’s grey list: Words and phrases your iPhone won’t help you spell",
-      "score": 385,
-      "comments": 255,
+      "score": 425,
+      "comments": 278,
       "discussion_url": "https://news.ycombinator.com/item?id=50406111",
       "extra": {
         "top_comments": [
           "I wonder what the boardroom meeting for this was like. Despite the outcome, I doubt the devs were pitching censorship as the reason for implementing this.To the shocking number of people here who are justifying this or explaining how it only affect swipe input as if that makes it better: soft coercion is still coercion. If I made a physical keyboard that stops keys from working when you're about to finish typing something I don't want you to type, but you can still circumvent it, I still made a censorship keyboard. It's a sign of the times with how used tech companies are to 'softly' moderating societal trends by unilaterally tweaking the software that everyone uses.",
           "And that's just the tip of the iceberg for the iOS Keyboard's issues. They've tried to fix it multiple times, and while it is undeniably better than its lowest point - it is still staggeringly worse than Google's native offering on the Pixel range. Swiping is just so painful, and Microsoft's Swiftkey keyboard is on life support.Considering arguably the keyboard itself is one of the most common \"touch surfaces\" on iOS, the level of neglect and level of overall quality is staggering. There's some serious incentive problems at Apple if nobody is tasked with making one of the best digital keyboards in the world.PS - Whoever came up with the concept, on swipe-style touch keyboards, of the \"Tap Map\"/Heatmap wherein keys visible location doesn't match their touch area - so that BY DESIGN it always provides an inconsistent user experience needs to be fired into the sun. You literally cannot disable it on most mobile keyboards. It is on iOS's native keyboard AND Microsoft's Swiftkey.",
-          "Not predicting to something controversial when doing predictive text isn't censorship. You can still type any of these things. When I swing my finger around wildly it's making a best guess; not jumping to a phrase that makes me look bad or get arrested (in some countries) isn't an awful design choice."
-        ]
-      }
-    },
-    {
-      "id": "50406670",
-      "title": "What I run on my $10 USD OpenStick homelab",
-      "url": "https://blog.bosscher.ch/posts/openstick/",
-      "source": "Hacker News",
-      "published_at": "2026-11-07T18:12:12+00:00",
-      "summary": "What I run on my $10 USD OpenStick homelab",
-      "score": 376,
-      "comments": 89,
-      "discussion_url": "https://news.ycombinator.com/item?id=50406670",
-      "extra": {
-        "top_comments": [
-          "I've had a lot of fun with this little gadget and it's pretty cool to see how much you can host on a cheap gadget if you pick the right software! Given how expensive RAM is these days, I figured, this might be a good option for other people to get started with self-hosting as well!Happy to answer any question and take suggestions as to what other software would be a good addition!",
-          "I always want to get a small device like this and recently keep to research on RISC V device but turned out there are no ones like this ARM deviceReally interesting to read and so much good software to run on it, I have AdGuardHome on my X86 MiniPC and a fd.io VPP based software network stack on it, it works great.Given it's ARM A53 and have 480MB memory, perhaps it can also run tailscale on it:)",
-          "It’s more powerful than the RPi Zeros I use on my cluster - kind of same as a Zero 2.What I’d love to see is a stick that plugs into an Ethernet switch with PoE so you assemble a cluster just by literally plugging nodes to a cluster. For that to work, the best form factor would be a vertical board with a male Ethernet connector on one side so that it’d fit on the horizontal RJ45 on the switch and not be limited by the RJ45’s width."
-        ]
-      }
-    },
-    {
-      "id": "50406222",
-      "title": "MaxxBench – \"Nice DeepSWE score. But is it true?\"",
-      "url": "https://maxxbench.unlap.ai/research/why-maxxbench/",
-      "source": "Hacker News",
-      "published_at": "2026-11-07T17:19:00+00:00",
-      "summary": "MaxxBench – \"Nice DeepSWE score. But is it true?\"",
-      "score": 211,
-      "comments": 64,
-      "discussion_url": "https://news.ycombinator.com/item?id=50406222",
-      "extra": {
-        "top_comments": [
-          "This is a great example of how to test how well a benchmark score generalises. The first order approximation is not complicated: just vary a parameter and see how much the score changes.Which parameter to vary depends on the result of the test, but the MaxxBench route of varying the task spec seems like a good default, though not always the most informative.In one of my private benchmarks I realised many of the less capable models didn't fail because they submitted the wrong answer, but because they exceeded their budget for number of tool calls they were allowed. The more capable models never got close to the tool call limit because they tended toward combining tool calls (e.g. chaining multiple shell commands in one Bash tool call).Was my benchmark actually measuring ability to combine tool calls rather than reasoning ability on the problem at hand? Well, easy enough to find out: re-run under a different tool call budget and see how much the scores change.(Next problem: is ability to combine tool calls a useful thing to measure, i.e. should it confer an advantage in the benchmark? It could be if it is a sign of planning multiple steps ahead.)",
-          "The big trend in that graph is that smaller models collapse the most. Everything with \"-flash\" in the name, plus OpenAI Luna.Look at GPT 5.6-Sol vs. GPT 5.6-Luna in particular.(The GLM pair shouldn't be expected follow this pattern, because they're misnamed: GLM-5.3 and GLM-5.3-flash are distinct lineages. The -flash is an early release of a new pretrain on a new architecture).If this *is* the main factor, I'd expect Kimi K3.1 and Gemini Carbon would also do well on this test (unlike Gemini-flash); while Haiku 6 would collapse (breaking the trend of the other recent Claude models). It's a falsifiable prediction.",
-          "Academically a - very - interesting article, which confirms my ongoing suspicion of LLM Benchmarks in general ( probably why I like it so much). Another thing that caught my eye is DeepSWE having a bunch of bugs in them. The more I learn about these benchmarks the more sceptical I become. I would expect such a prolific benchmark to have these bugs ironed out by now.The practical takeaway, however, seems to be an interesting \"don't use max mode\". The passage about deepseeks weird API behavior dropping to pretty much zero the moment you used high says a lot.Also, personally, even though Opus is clearly so much ahead of the Open Source models after the changes, I think the adjusted score is still very much competitive. I see other commenters using this as proof to justify why their opinions of the open source models - but a drop from 74% to ~50% is, while a big drop, still about a ~50% pass rate afterwards. That's far from useless for coding, especially since DeepSWE seems to be such a difficult benchmark. It simply seems to more accurately reflect the capabilities of these models.All in all, I'd love to see more of such articles, and will probably keep an eye on this one - if they continue \"benchmarking\" these models this way."
-        ]
-      }
-    },
-    {
-      "id": "50404599",
-      "title": "The $8 Linux Computer (2022)",
-      "url": "http://thelittleengineerthatcould.blogspot.com/2022/12/the-8-linux-computer.html",
-      "source": "Hacker News",
-      "published_at": "2026-11-07T14:00:20+00:00",
-      "summary": "The $8 Linux Computer (2022)",
-      "score": 205,
-      "comments": 86,
-      "discussion_url": "https://news.ycombinator.com/item?id=50404599",
-      "extra": {
-        "top_comments": [
-          "I love looking back 10+ years for the cheapest Linux thing you could buy. People were buying devices that were for kids or a router or something and repurposing it because it was open enough to get a shell on / flash Linux to it and start doing projects with.In the 2020s or somewhere before that we got a bunch of dedicated cheap MCUs that were good enough and I think stole the thunder from full Linux but there are still projects to run it on things like the ESP32 family.Either way, hardware hacking is still my favorite hobby to watch.",
-          "The Raspberry Pi Zero sold for $5 before the foundation sold out.",
-          "Personally I think the LicheeRV nano on SG2002 is worth the investment of 15-20 bucks.This thing has USB OTG, multiple usable GPIO and can be flashed via microSD and has a display out with touch support.I was in the process on building a little iPod Nano clone[1] with Rust / Slint but i was too busy for a while, yet I plan to get back to it in the future. Unfortunately the sg2002 image has no CPU governor yet.Maybe I switch to the tinyembedded dual with a custom PCB to save power[2].1: https://github.com/nanowave-player/nanowave-ui2: https://github.com/yuansco/TinyEmbedded-Dual/"
+          "Wow, interesting.Reminds me of the time iCloud mail was caught silently dropping emails if it contained a banned phrase(not marking as spam; just completely disappearing them! And giving no indication to the sender, either, letting them believe it went through successfully)[2/26/2013]: https://news.ycombinator.com/item?id=5287474"
         ]
       }
     },
@@ -98,8 +62,8 @@
       "source": "Hacker News",
       "published_at": "2026-11-07T20:45:32+00:00",
       "summary": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
-      "score": 203,
-      "comments": 142,
+      "score": 307,
+      "comments": 211,
       "discussion_url": "https://news.ycombinator.com/item?id=50407882",
       "extra": {
         "top_comments": [
@@ -110,14 +74,32 @@
       }
     },
     {
+      "id": "50406222",
+      "title": "MaxxBench – \"Nice DeepSWE score. But is it true?\"",
+      "url": "https://maxxbench.unlap.ai/research/why-maxxbench/",
+      "source": "Hacker News",
+      "published_at": "2026-11-07T17:19:00+00:00",
+      "summary": "MaxxBench – \"Nice DeepSWE score. But is it true?\"",
+      "score": 263,
+      "comments": 73,
+      "discussion_url": "https://news.ycombinator.com/item?id=50406222",
+      "extra": {
+        "top_comments": [
+          "This is a great example of how to test how well a benchmark score generalises. The first order approximation is not complicated: just vary a parameter and see how much the score changes.Which parameter to vary depends on the result of the test, but the MaxxBench route of varying the task spec seems like a good default, though not always the most informative.In one of my private benchmarks I realised many of the less capable models didn't fail because they submitted the wrong answer, but because they exceeded their budget for number of tool calls they were allowed. The more capable models never got close to the tool call limit because they tended toward combining tool calls (e.g. chaining multiple shell commands in one Bash tool call).Was my benchmark actually measuring ability to combine tool calls rather than reasoning ability on the problem at hand? Well, easy enough to find out: re-run under a different tool call budget and see how much the scores change.(Next problem: is ability to combine tool calls a useful thing to measure, i.e. should it confer an advantage in the benchmark? It could be if it is a sign of planning multiple steps ahead.)",
+          "Academically a - very - interesting article, which confirms my ongoing suspicion of LLM Benchmarks in general ( probably why I like it so much). Another thing that caught my eye is DeepSWE having a bunch of bugs in them. The more I learn about these benchmarks the more sceptical I become. I would expect such a prolific benchmark to have these bugs ironed out by now.The practical takeaway, however, seems to be an interesting \"don't use max mode\". The passage about deepseeks weird API behavior dropping to pretty much zero the moment you used high says a lot.Also, personally, even though Opus is clearly so much ahead of the Open Source models after the changes, I think the adjusted score is still very much competitive. I see other commenters using this as proof to justify why their opinions of the open source models - but a drop from 74% to ~50% is, while a big drop, still about a ~50% pass rate afterwards. That's far from useless for coding, especially since DeepSWE seems to be such a difficult benchmark. It simply seems to more accurately reflect the capabilities of these models.All in all, I'd love to see more of such articles, and will probably keep an eye on this one - if they continue \"benchmarking\" these models this way.",
+          "The big trend in that graph is that smaller models collapse the most. Everything with \"-flash\" in the name, plus OpenAI Luna.Look at GPT 5.6-Sol vs. GPT 5.6-Luna in particular.(The GLM pair shouldn't be expected follow this pattern, because they're misnamed: GLM-5.3 and GLM-5.3-flash are distinct lineages. The -flash is an early release of a new pretrain on a new architecture).If this *is* the main factor, I'd expect Kimi K3.1 and Gemini Carbon would also do well on this test (unlike Gemini-flash); while Haiku 6 would collapse (breaking the trend of the other recent Claude models). It's a falsifiable prediction."
+        ]
+      }
+    },
+    {
       "id": "50406292",
       "title": "Show HN: Coldframe, a honeypot that poses as a supermarket fridge controller",
       "url": "https://github.com/hedgerow-dev/coldframe",
       "source": "Hacker News",
       "published_at": "2026-11-07T17:27:30+00:00",
       "summary": "I built Coldframe, a honeypot that pretends to be a supermarket refrigeration controller. Inspired by the events on industrial fridge installations in the past weeks, I wanted to see what people would try against a convincing fake.To learn more about this I built a honeypot that resembled perfectly the Danfoss AK-SM 800A and Dixell XWEB interfaces. Both of them are recognized on Shodan as real ones (an not as honeypots). It’s one Python file using only the standard library, and it builds on eppser/danfoss-ak-sm-decoy and public research by Synacktiv, Claroty and Ironhackers.Things that were fun to get right:- Matching real units. I used Shodan records of real devices to match header order, page titles, certificate fields and TLS versions. The Danfoss persona sends nginx headers in the same order as a real AK-SM 800A. The Dixell persona sends no Server header and pads its page to exactly 8,202 bytes.- Recognising exploit attempts. It recognises CVE-2025-41450, the Danfoss “code of the day” login bypass, and records whether the submitted code is correct for today. It also tags attempts targeting three other Danfoss CVEs and the XWEB vulnerabilities.- Letting them in. Default logins open a fake store dashboard with defrost buttons, so you see the second move, not just the first. Nothing behind it is real.Two instances have been live for a day. So far they’ve only seen generic scanners and Shodan’s crawler, which is called refrigerator.census.shodan.io.Feedback welcome, especially from anyone who has seen these devices in the field!",
-      "score": 196,
-      "comments": 42,
+      "score": 213,
+      "comments": 49,
       "discussion_url": "https://news.ycombinator.com/item?id=50406292",
       "extra": {
         "top_comments": [
@@ -128,20 +110,38 @@
       }
     },
     {
-      "id": "50406319",
-      "title": "Five memorable books about programming (2008)",
-      "url": "https://prog21.dadgum.com/19.html",
+      "id": "50410107",
+      "title": "Goodbye Claude, Hello Pi",
+      "url": "https://caleb.software/posts/claude-to-pi.html",
       "source": "Hacker News",
-      "published_at": "2026-11-07T17:30:49+00:00",
-      "summary": "Five memorable books about programming (2008)",
-      "score": 91,
-      "comments": 57,
-      "discussion_url": "https://news.ycombinator.com/item?id=50406319",
+      "published_at": "2026-11-08T03:11:48+00:00",
+      "summary": "Goodbye Claude, Hello Pi",
+      "score": 110,
+      "comments": 59,
+      "discussion_url": "https://news.ycombinator.com/item?id=50410107",
       "extra": {
         "top_comments": [
-          "For me, the blue Smalltalk book by Adele Goldberg was deeply formative. It was computing done right and from first principles.The other two formative experiences for me were using Cincom’s Mantis on the 3278 and Dataflex 2. Both made it obvious how quickly one could go from screen to persisted data, CRUD, application logic, and reporting with the right level of abstraction. Much later I described Dataflex as “Rails for the VT100”. Sadly, Cincom will not provide a hobby license to run it on an emulated 4381, and won’t even give away free manuals, and the company behind Dataflex (I don’t remember their name right now) seems to not even have any versions from that time. When I read Paul Graham’s Beating the Averages, it all clicked perfectly.",
-          "How about Higher-Order Perl by Mark Jason Dominus?https://hop.perl.plover.com/Some other great low flying titles:The Computational Beauty of Nature by Gary William Flakehttps://mitpress.mit.edu/9780262561273/the-computational-bea...The Nature of Computation by Cristopher Moore and Stephan Mertens.https://nature-of-computation.org/Algorithms by S. Dasgupta, C.H. Papadimitriou, and U.V. Vaziranihttps://cseweb.ucsd.edu/~dasgupta/book/index.htmland On Lisp, of course:https://www.paulgraham.com/onlisp.html",
-          "Programmers at work: I bought a used copy of it - probably after reading this the first time it was posted. Great book, if you can find it.Code, by Charles Petzold should be on any programmer’s list - and the list of anyone with curiosity about how the modern world works. It somehow manages the amazing trick of being readable for the novice, but also containing nuggets of insight for the expert all at the same time. Such a well written book."
+          "I used to use ChatGPT/Claude in the TUI up until like 3 months ago, but my usage of LLMs has exploded - many sessions across many projects. I feel like I outgrew the TUI and now I'm using ChatGPT/Claude desktop. VS Code has become a code review tool and place where I manage git if need be.The GUI is less verbose with the nitty gritty hidden in expandable sections, which makes history easier and cleaner to scroll through, also no scrolling bugs, rich text is easier to read with tables, and images integrated into the chat, resources like browsers in the context of the session. Drag and drop session organization (pins), scheduled tasks, etc.. all that in the side bar.Usually a TUI would be open in VS Code and scoped to whatever repo I'm working with so 10 projects, 10 VS Code instances open, not super scalable. With the GUI desktop app it's one app, and I can start sessions in an repo and switch between them easily, no need to open VS Code for each. I don't see what could make me want to go back to using a TUI.Who else is just using the GUI nowadays, or are you still on the TUI, and why, have you tried the GUI interfaces?",
+          "I've been daily driving Pi for over a month now and never looking back. The latest crop of frontier models have really complex bash calls, so I've written an extension that rewrites them into plain English while still making them easy to reveal in full, unlike some harnesses which seem to try to hide this from the user which is pretty irresponsible IMO.[0][0] https://github.com/siraben/pi-tool-summaries",
+          "Is using Codex through Pi allowed? I've been a Claude user, but a lot of the things mentioned bother me as well. I see it constantly make mistakes due to (simple) shell aliases, etc..Not sure I'll actually switch but I'm curious. I've thought about trying to build my own harness and use Codex usage to work through it without spending a fortune on credits."
+        ]
+      }
+    },
+    {
+      "id": "50408931",
+      "title": "GitHub New pull request overview page in public preview",
+      "url": "https://github.blog/changelog/2026-11-05-new-pull-request-overview-page-in-public-preview/",
+      "source": "Hacker News",
+      "published_at": "2026-11-07T23:09:40+00:00",
+      "summary": "GitHub New pull request overview page in public preview",
+      "score": 108,
+      "comments": 78,
+      "discussion_url": "https://news.ycombinator.com/item?id=50408931",
+      "extra": {
+        "top_comments": [
+          "We’ve been building our own Review Pipeline, including automated review guides, risk detection and much more.There’s SO much to be done around Code Review, I’m very surprised GitHub isn’t doing more.They have the reach already, they have years of real review data. And yet, the PR itself is not using any of the newly available methods for more efficient review.Agents are hammering PRs out left and right, and yet here I am still staring at the raw diff of 35 PRs and end up being called the bottleneck.",
+          "This is a major improvement and still not great. I made CodeApprove (https://codeapprove.com) 6+ years ago just because the PR page on GitHub is so bad and I felt the urge to make it better.IMO the correct design is pretty simple: - Everything on one page, information dense - Focus on code and unresolved discussions, maybe CI checks - Keyboard navigationGraphite gets pretty close! But it's become cluttered over the years. CodeApprove is far from perfect too (it's been a while since I worked on the UX much) but I'd hope GitHub could do a little better.",
+          "I tried it, but I don't understand the fanfare when it's basically the same old UI + a couple of minor layout changes. It definitely doesn't address the needs of the AI dev workflows."
         ]
       }
     }

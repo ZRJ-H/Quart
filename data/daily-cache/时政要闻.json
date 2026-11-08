@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-11-08T11:00:27.083796+08:00",
+  "cached_at": "2026-11-08T14:26:49.295697+08:00",
   "articles": [
     {
       "id": "http://www.news.cn/politics/20261106/2b798cfd53e04b82aef424fd386d1b52/c.html",
@@ -62,6 +62,18 @@
       "extra": {}
     },
     {
+      "id": "https://www.bbc.co.uk/news/articles/c65yn1v99ypmo#0",
+      "title": "Houthis say at least 33 killed in Saudi air strike",
+      "url": "https://www.bbc.co.uk/news/articles/c65yn1v99ypmo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "published_at": "2026-11-08T04:03:12+00:00",
+      "summary": "Saudi Arabia, which leads a coalition fighting the Houthis in Yemen, has not commented.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
       "id": "https://www.bbc.co.uk/news/articles/cmd7q15drwgeo#0",
       "title": "What we know so far after Krakow gun attack",
       "url": "https://www.bbc.co.uk/news/articles/cmd7q15drwgeo?at_medium=RSS&at_campaign=rss",
@@ -80,18 +92,6 @@
       "source": "BBC World",
       "published_at": "2026-11-07T22:19:59+00:00",
       "summary": "Neither PM Benjamin Netanyahu's bloc nor that of his rival secured a majority in last week's election.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://www.npr.org/2026/11/07/nx-s1-6032606/israeli-president-invites-netanyahus-opposition-leader-to-broker-new-government",
-      "title": "Israeli president invites Netanyahu's opposition leader to broker new government",
-      "url": "https://www.npr.org/2026/11/07/nx-s1-6032606/israeli-president-invites-netanyahus-opposition-leader-to-broker-new-government",
-      "source": "NPR World",
-      "published_at": "2026-11-07T22:12:09+00:00",
-      "summary": "Israel's political landscape shifts as President Herzog hands opposition leader Gadi Eisenkot the mandate to form a government, dealing a blow to Benjamin Netanyahu's grip on power.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
