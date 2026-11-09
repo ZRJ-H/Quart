@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-11-09T11:00:20.191124+08:00",
+  "cached_at": "2026-11-09T14:58:51.802249+08:00",
   "articles": [
     {
       "id": "https://huggingface.co/blog/allenai/toyblocks",
@@ -74,24 +74,24 @@
       "extra": {}
     },
     {
-      "id": "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/",
-      "title": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
-      "url": "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/",
-      "source": "Google DeepMind",
-      "published_at": "2026-11-05T17:05:16+00:00",
-      "summary": "",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
       "id": "https://openai.com/index/australian-universities-ai-native-graduates",
       "title": "Australian universities are creating AI-native graduates",
       "url": "https://openai.com/index/australian-universities-ai-native-graduates",
       "source": "OpenAI",
       "published_at": "2026-11-05T17:00:00+00:00",
       "summary": "Australian universities are expanding access to ChatGPT and bringing AI into teaching and learning to prepare students for an AI-enabled workforce.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
+      "id": "https://research.google/blog/detecting-signs-of-hypertension-using-wearable-sensors/",
+      "title": "Detecting signs of hypertension using wearable sensors",
+      "url": "https://research.google/blog/detecting-signs-of-hypertension-using-wearable-sensors/",
+      "source": "Google Research",
+      "published_at": "2026-11-05T16:01:08+00:00",
+      "summary": "Health & Bioscience",
       "score": 0,
       "comments": 0,
       "discussion_url": "",

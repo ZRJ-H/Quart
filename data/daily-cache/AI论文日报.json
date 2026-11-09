@@ -1,91 +1,57 @@
 {
-  "cached_at": "2026-11-09T11:00:20.191124+08:00",
+  "cached_at": "2026-11-09T14:58:51.802249+08:00",
   "articles": [
     {
-      "id": "2611.08977",
-      "title": "Energy-Based Reasoners: Your Recurrent Reasoner Should Be an Energy-Based Model",
-      "url": "https://arxiv.org/abs/2611.08977v1",
+      "id": "2611.09892",
+      "title": "On Agentic Manipulation Policies",
+      "url": "https://arxiv.org/abs/2611.09892v1",
       "source": "arXiv",
-      "published_at": "2026-11-06T04:40:47+00:00",
-      "summary": "Looping is a powerful inductive bias for reasoning. By repeatedly iterating a recurrent block, looped models can scale their effective depth and enable multi-step reasoning in latent space. However, existing looped models are not inherently guided by an explicit measure of progress, making it difficult to determine when to stop looping and how to improve upon the current state. To enable this, we introduce Energy-Based Reasoners (EBRs), which learn an energy function over latent reasoning states and formulate looped updates as gradient descent on this energy. The energy scores latent states, while its gradient guides refinement and provides a signal for stopping. To train EBRs effectively, we further introduce exploration-based training to discover additional modes and to better shape the energy landscape over a broader set of states. Across four algorithmic reasoning benchmarks, EBRs match or outperform prior recurrent reasoning models, achieving 99.9% accuracy on Sudoku-Extreme while using 345$\\times$ less inference compute than the next-best model and maintaining comparable training compute. On all multi-solution benchmarks, EBRs achieve state-of-the-art coverage of distinct valid solutions while maintaining near-100% single-sample accuracy. These results suggest that energy-based models are a promising approach for strong reasoning performance.",
+      "published_at": "2026-11-06T18:59:34+00:00",
+      "summary": "Recent work on robot manipulation has focused on specialist policies trained on demonstrations. We show that generalist AI models can control manipulators more reliably than specialist policies such as vision-language-action models (VLAs) and world-action models (WAMs). We systematically analyze agentic manipulation policies (AMPs), in which a generalist AI model commands the manipulator directly, adapting its actions as the task unfolds. We present AMP1, a reference harness that runs unchanged across single-arm, bimanual, and mobile manipulation. AMP1 achieves state-of-the-art results on the RoboLab-120 and CaP-Gym benchmarks, with no demonstrations or task-specific training. On RoboLab-120, AMP1 reaches an 85.6\\% success rate zero-shot, compared to 49.2\\% and 42.9\\% for leading VLA and WAM policies. The agent succeeds zero-shot in 104 of 108 real-world trials spanning twelve tasks and three robot instances, reducing failure rates by 20x and 15x relative to strong VLA and WAM baselines. The basic harness supplies no grasping, pushing, or placing skills; the agent develops its own strategies, such as searching for hidden objects, using objects as tools, and calibrating its cameras. With the addition of a persistent memory store, the agent can also learn from experience: an augmented harness with a memory representation that is carried across episodes lowers the failure rate on RoboDojo bimanual manipulation tasks by 4.6x relative to zero-shot deployment. Our analysis suggests that AMPs are substantially more general and robust than specialist manipulation policies, providing a promising foundation for robot manipulation.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "William Xingxu Chen",
-          "Alexi Gladstone",
-          "Zeyu Michael Li",
-          "Heng Ji",
-          "Yilun Du"
+          "Chen Chen",
+          "Omid Bagherieh",
+          "Naveen Nikamanth Appiah Balaji",
+          "Jesse T. Gonzalez",
+          "Negin Heravi",
+          "Fahad Islam",
+          "Xueting Li",
+          "Jean-Baptiste Regli",
+          "Kejia Ren",
+          "Petr Švec",
+          "David J. Yoon",
+          "Matthias Müller",
+          "Vladlen Koltun"
         ],
         "categories": [
+          "cs.RO",
+          "cs.AI",
+          "cs.CV",
           "cs.LG"
         ]
       }
     },
     {
-      "id": "2611.08975",
-      "title": "Beyond Truncation? Entailment-Licensed Elision and the Limits of Semantic Preservation in LLM Decoding",
-      "url": "https://arxiv.org/abs/2611.08975v1",
+      "id": "2611.09891",
+      "title": "CPU-ARC: Agentic Reasoning Caching for on-CPU Reasoning Reuse",
+      "url": "https://arxiv.org/abs/2611.09891v1",
       "source": "arXiv",
-      "published_at": "2026-11-06T04:39:25+00:00",
-      "summary": "Instruction-tuned large language models (LLMs) answer at greater length than a request needs. We ask whether a training-free controller inside the decoding loop can remove that surplus while preserving content, judged against the simplest possible baseline: truncating the model's own answer to the same length. An entropy-gated logits processor removes 25.5-34.9% of tokens on MT-Bench development questions and 19.9-34.2% on a sealed test split within pre-registered BERTScore non-inferiority margins, yet we prove and confirm by audit that its output is always a prefix of the unmodified answer: the saving is truncation. A survey of 23 training-free mechanism families finds none that selects content better than truncation without oracle labels. We therefore introduce Entailment-Licensed In-Decoding Elision (ELIDE), which, at each sentence boundary, withholds a span from the reader only when a natural-language inference model judges it entailed by the text already shown, while leaving the model's generation unchanged. ELIDE beats matched-length truncation on three model families, but reading 936 of its elisions on 670 public prompts shows that 59% harm the answer, a failure that no automatic measure detects. Scoping the licence to its discourse unit reduces the harmful share to about one elision in ten on two fresh tests.",
+      "published_at": "2026-11-06T18:58:50+00:00",
+      "summary": "Large language models reinvent the wheel all the time. They conflate task-solving with the execution of the solutions, which forces them to solve every problem from scratch. We show that once a task has been reasoned through, the application of its solution to a new problem instance can be done very efficiently and with little involvement from language models. We introduce agentic reasoning caching, a method for constructing robust CPU-executable agentic reasoning caches (ARCs) from LLM reasoning traces. ARCs show on-par performance with frontier LLMs across a range of difficult mathematical and scientific tasks, are fully explainable, continually trainable, robust to input perturbations, and 16-291x cheaper to invoke than the source model.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Mahmoud Alyosify",
-          "Mirna Imbabi",
-          "Eman Elkhamisi"
-        ],
-        "categories": [
-          "cs.CL"
-        ]
-      }
-    },
-    {
-      "id": "2611.08971",
-      "title": "Phantom Consensus: Measuring Social Reasoning in Multi-Agent LLM Decision-Making",
-      "url": "https://arxiv.org/abs/2611.08971v1",
-      "source": "arXiv",
-      "published_at": "2026-11-06T04:33:59+00:00",
-      "summary": "Multi-agent LLM systems increasingly aggregate judgments across model instances, but reasoning about other agents can itself introduce failure. We study a setting in which LLMs shift their public decisions after observing ambiguous social signals while reporting inaccurate estimates of what other agents privately judged, even when the group's recorded private judgments do not support the apparent consensus. We call this failure phantom consensus and study it as a pluralistic-ignorance-style pattern in controlled LLM collectives. To measure this phenomenon, we introduce PHANTOM-Bench, a benchmark that separates isolated private judgments, public decisions after ambiguous social signals, elicited estimates of the group's private judgment, transparency-based recovery, and controls for neutral public text and explicit vote-following. Across nine closed- and open-weight models, ambiguous public signals consistently degrade decision quality and can turn correct private group judgments into incorrect public collective outcomes. Public accuracy drops by as much as 47.8 percentage points, and collective rationality failures reach 47.3% in the most susceptible setting. We observe substantial errors in reported group-private beliefs alongside public-stage failures, while control conditions reveal model-dependent differences in susceptibility to ambiguous and explicit peer signals. Revealing the agents' recorded private decisions repairs many failures without revealing the gold label, although recovery varies across models. Our results show that evaluating multi-agent LLM systems requires measuring not only final agreement, but whether that agreement reflects independently measured private judgments or an apparent consensus.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Disha Sheshanarayana",
-          "Rajat Subhra Pal",
-          "Manjira Sinha",
-          "Tirthankar Dasgupta"
-        ],
-        "categories": [
-          "cs.MA",
-          "cs.AI",
-          "cs.CL"
-        ]
-      }
-    },
-    {
-      "id": "2611.08969",
-      "title": "PhysioWave-T: Token-Efficient Wavelet Foundation Models for Biosignals",
-      "url": "https://arxiv.org/abs/2611.08969v1",
-      "source": "arXiv",
-      "published_at": "2026-11-06T04:30:15+00:00",
-      "summary": "We present PhysioWave-T, a token-efficient wavelet foundation model family for EEG, ECG, and sEMG. Dynamic scale folding recombines J+1 wavelet subbands prior to tokenization, compressing sequence length from (J+1)CS to CS tokens for J levels, C channels, and S temporal patches. Route-specific front ends and learned channel-name embeddings allow one Transformer per modality to handle diverse montages and sampling rates, while unseen setups reuse the backbone via lightweight adapters. We pre-train a 30M-parameter EEG model on over 15M windows (19--128 channels), alongside ECG (30M) and sEMG (12M) encoders. Across four EEG routes, scale folding cuts Transformer latency by 4.0--7.2x and peak memory by 6.8--12.7x over scale expansion without accuracy loss. Our EEG encoder leads 8 of 9 metrics against BENDR, BIOT, LaBraM, and EEGPT, and surpasses LUNA-L on wearable seizure detection with fewer parameters. Reliability-aware latent fusion (RALF) further integrates summary tokens from independently pre-trained encoders via sample-adaptive weights. On SeizeIT2, RALF raises event sensitivity at 11 false alarms/h from 61.4% to 74.4% and window AUPRC from 0.321 to 0.399 over the best unimodal baseline, outperforming weighted-logit and concatenation fusion across all variants. PhysioWave-T also achieves state-of-the-art sEMG accuracies and top macro-F1 on PTB-XL Super and Chapman-Shaoxing. Code and models: https://github.com/ForeverBlue816/PhysioWave.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Yanlong Chen",
-          "Simone Benatti",
-          "Luca Benini",
-          "Cuntai Guan",
-          "Yawei Li"
+          "Peter Belcak",
+          "Greg Heinrich",
+          "Saurav Muralidharan",
+          "Shizhe Diao",
+          "Pavlo Molchanov"
         ],
         "categories": [
           "cs.AI"
@@ -93,21 +59,68 @@
       }
     },
     {
-      "id": "2611.08967",
-      "title": "Using an LLM to Tackle Difficult Cases in NER for Nepali Tweets",
-      "url": "https://arxiv.org/abs/2611.08967v1",
+      "id": "2611.09887",
+      "title": "On the (non-)closedness of the set of ReLU networks",
+      "url": "https://arxiv.org/abs/2611.09887v1",
       "source": "arXiv",
-      "published_at": "2026-11-06T04:24:46+00:00",
-      "summary": "Named entity recognition (NER) is challenging for social media data in a low-resource language. LLMs often lag behind pretrained language models (PLMs) in NER performance, but they show promise in handling cases that PLMs struggle with. Using a dataset of Nepali tweets, we split the test set into \"easy\" and \"hard\" cases using token probabilities from a fine-tuned pretrained language model (PLM). We then evaluate an LLM on the hard test cases using 16 different prompt configurations. We find that selecting examples based on semantic similarity and increasing the number of examples improves F1 score by almost 10 points from the baseline configuration. Although the LLM underperforms the PLM on the full and easy test sets, it surpasses the PLM on the hard test set, resulting in an improved score when the two models are combined.",
+      "published_at": "2026-11-06T18:58:06+00:00",
+      "summary": "We prove that the set $\\mathcal{N}_N$ of ReLU networks with one hidden layer and at most $N\\in\\mathbb N$ neurons is weakly closed in $W^{1,p}(Ω)$, for a bounded connected open set $Ω\\subset\\mathbb R^d$. Consequently, every coercive, weakly lower semicontinuous energy on this space attains its minimum over $\\mathcal{N}_N$. This covers the Deep Ritz method with convex integrands, Sobolev training and Lipschitz learning. Moreover, as the weight decay parameter tends to zero, minimizers of the regularized problem converge, up to subsequences, to minimizers with minimal parameter norm. We also prove that the set of ReLU networks with two hidden layers of bounded widths is not closed in $W^{1,p}(Ω)$ or in $C(\\overlineΩ)$. This disproves a conjecture of Petersen, Raslan and Voigtlaender.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Claire Wang"
+          "Eloi Martinet",
+          "Leon Bungert"
         ],
         "categories": [
-          "cs.CL"
+          "cs.LG",
+          "math.CA",
+          "math.FA",
+          "math.NA",
+          "math.OC"
+        ]
+      }
+    },
+    {
+      "id": "2611.09882",
+      "title": "FlowMoP: Stochastic Multi-Person Motion Prediction",
+      "url": "https://arxiv.org/abs/2611.09882v1",
+      "source": "arXiv",
+      "published_at": "2026-11-06T18:56:41+00:00",
+      "summary": "Predicting the future motion of multiple people is inherently stochastic: the same observed history admits many plausible continuations depending on intent, coordination, and social context. Yet the dominant paradigm in multi-person 3D motion prediction remains deterministic, with existing methods producing a fixed number of outputs per agent. In contrast, we present a conditional flow matching framework that jointly generates diverse future motions for multiple agents, modeling both global trajectories and root-relative poses. A B-spline reparameterization compresses the generative state space while enforcing temporal smoothness, and a dual-stream transformer conditions each agent's predictions on observed neighbor motion for interaction-aware forecasting. Our method achieves state-of-the-art performance on CMU-Mocap (UMPM) and 3DPW, outperforming deterministic baselines on joint position error, pose error, and final displacement error despite producing a full predictive distribution. We additionally establish the first motion prediction baseline on WorldPose, a large-scale professional soccer dataset, where social conditioning demonstrably concentrates predictive uncertainty along interaction-constrained directions.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Aadya Agrawal",
+          "Ho Kei Cheng",
+          "Alexander Schwing"
+        ],
+        "categories": [
+          "cs.CV",
+          "cs.LG"
+        ]
+      }
+    },
+    {
+      "id": "2611.09878",
+      "title": "Graded convolutional networks: scale invariance without the scale and robustness to unknown blur",
+      "url": "https://arxiv.org/abs/2611.09878v1",
+      "source": "arXiv",
+      "published_at": "2026-11-06T18:54:03+00:00",
+      "summary": "The Gaussian jet of an image is a graded vector space: a dilation by $λ$ multiplies derivatives of order $k$ by $λ^{-k}$. Local graded convolutions are exactly homogeneous differential operators, and a local feature is dilation-invariant if and only if it factors through the scale-normalized jet or, without the scale, through the retraction onto the weighted sphere of the grading. Under unknown Gaussian blur the retraction changes only by a change of scale, whereas the scale-normalized jet acquires a grading factor that no radial normalization removes. At the zero jet the retraction separates image families that radial normalizations and continuous classifiers cannot. Networks built on the retraction are universal for invariant features. On MNIST such a network keeps 88.4% accuracy under a two-pixel blur, against 66.2% for the same network on scale-normalized derivatives; in Lindeberg's Gaussian derivative network the retraction raises accuracy at that blur from 91.5% to 95.1%.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Tanush Shaska"
+        ],
+        "categories": [
+          "cs.CV",
+          "cs.LG"
         ]
       }
     }

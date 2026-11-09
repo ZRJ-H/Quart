@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-11-09T11:00:20.191124+08:00",
+  "cached_at": "2026-11-09T14:58:51.802249+08:00",
   "articles": [
     {
       "id": "https://www.news.cn/politics/20261109/7f1ffd1f2f454742865b2b326928d25d/c.html",
@@ -62,36 +62,36 @@
       "extra": {}
     },
     {
-      "id": "https://www.bbc.co.uk/news/articles/c5x2vw4e1gx1o#0",
-      "title": "Surgeon having lunch near Krakow shooting undoubtedly saved officer's life, colleague says",
-      "url": "https://www.bbc.co.uk/news/articles/c5x2vw4e1gx1o?at_medium=RSS&at_campaign=rss",
+      "id": "https://www.bbc.co.uk/news/articles/c6y434dw8319o#0",
+      "title": "Krakow shooting suspect has died in hospital, police say",
+      "url": "https://www.bbc.co.uk/news/articles/c6y434dw8319o?at_medium=RSS&at_campaign=rss",
       "source": "BBC World",
-      "published_at": "2026-11-08T23:34:18+00:00",
-      "summary": "Further details have emerged about two police officers hailed for preventing a Polish gunman from killing more.",
+      "published_at": "2026-11-09T06:50:09+00:00",
+      "summary": "At least six people were killed in the shooting and a dozen more were injured.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {}
     },
     {
-      "id": "https://www.bbc.co.uk/news/videos/c63elgqqz5y0o#2",
-      "title": "'I treat all these people like they are victims', says doctor who treated Krakow shooting suspect",
-      "url": "https://www.bbc.co.uk/news/videos/c63elgqqz5y0o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "published_at": "2026-11-08T22:05:12+00:00",
-      "summary": "Two doctors were eating near the city's Main Market Square when a gunman began firing at random.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://www.npr.org/2026/11/08/nx-s1-6030670/the-worlds-largest-telecoms-firm-is-on-trial-and-the-outcome-has-global-implications",
-      "title": "The world's largest telecoms firm is on trial and the outcome has global implications",
-      "url": "https://www.npr.org/2026/11/08/nx-s1-6030670/the-worlds-largest-telecoms-firm-is-on-trial-and-the-outcome-has-global-implications",
+      "id": "https://www.npr.org/2026/11/09/nx-s1-6034066/paraguay-president-pena-ueno",
+      "title": "How a bank collapse left millions in limbo and toppled Paraguay's president",
+      "url": "https://www.npr.org/2026/11/09/nx-s1-6034066/paraguay-president-pena-ueno",
       "source": "NPR World",
-      "published_at": "2026-11-08T22:04:13+00:00",
-      "summary": "Huawei, the world's biggest telecommunications company, is on trial in New York, accused of stealing American technology and evading US sanctions.",
+      "published_at": "2026-11-09T06:20:44+00:00",
+      "summary": "A bank's collapse in Paraguay left millions locked out of their money, toppled the president and exposed a web of political and financial ties.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
+      "id": "https://www.bbc.co.uk/news/articles/ckgel338xql3o#3",
+      "title": "Jensen Huang: Silicon Valley superstar engulfed by personal scandal",
+      "url": "https://www.bbc.co.uk/news/articles/ckgel338xql3o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "published_at": "2026-11-09T06:01:52+00:00",
+      "summary": "Once lauded as the \"Taylor Swift of tech\", Huang is mired in scandal after an affair with a suspected Chinese spy.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
