@@ -93,7 +93,8 @@ def _details(category: str, article: Article, item: ItemSummary, detailed: bool)
         else:
             lines.append(f"- **价值点**：{_markdown_text(item.value)}")
         return "\n".join(line for line in lines if not line.rstrip().endswith("**："))
-    lines.append(f"- **核心摘要**：{_markdown_text(item.summary)}")
+    summary_label = "来源标题" if category == "Hacker News" and item.is_source_excerpt else "核心摘要"
+    lines.append(f"- **{summary_label}**：{_markdown_text(item.summary)}")
     if detailed:
         lines.extend(
             [

@@ -6,6 +6,7 @@ import re
 import xml.etree.ElementTree as ET
 from dataclasses import replace
 from datetime import datetime, timedelta, timezone
+from html import unescape
 from html.parser import HTMLParser
 from typing import Any, Callable
 from urllib.parse import urlencode
@@ -333,6 +334,41 @@ def collect_arxiv(
         raise CollectionError(f"Paper sources returned {len(result)} items; minimum is {target_count}: {detail}")
     return result
 
+class _HNStoryText(HTMLParser):
+    """Keep HN source boundaries and classify links before flattening text."""
+
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.parts: list[str] = []
+        self.text_fragments: list[str] = []
+
+    def handle_data(self, data: str) -> None:
+        self.parts.append(data)
+        if data.strip():
+            self.text_fragments.append(data.strip())
+
+    def handle_starttag(self, tag: str, attrs: list) -> None:
+        if tag in {"a", "p", "br", "div", "li", "blockquote", "pre"}:
+            self.parts.append(" ")
+
+    def handle_endtag(self, tag: str) -> None:
+        self.handle_starttag(tag, [])
+
+
+def _hn_story_text(value: str) -> tuple[str, bool]:
+    parser = _HNStoryText()
+    parser.feed(unescape(value or ""))
+    summary = re.sub(r"\s+", " ", "".join(parser.parts)).strip()
+    # Inspect original data fragments, not flattened text: URL + "Retracted."
+    # from adjacent HTML nodes must never be mistaken for a URL path. Retain
+    # ambiguous/non-ASCII fragments rather than discarding possible prose.
+    link_only = bool(parser.text_fragments) and all(
+        re.fullmatch(r"https?://[A-Za-z0-9._~:/?#\[\]@!$&'()*+,;=%-]+", token, re.IGNORECASE)
+        for fragment in parser.text_fragments for token in fragment.split()
+    )
+    return summary, link_only
+
+
 def collect_hacker_news(
     now: datetime,
     limit: int = 8,
@@ -348,17 +384,21 @@ def collect_hacker_news(
             return None
         discussion_url = f"https://news.ycombinator.com/item?id={story_id}"
         try:
+            summary, link_only = _hn_story_text(str(item.get("text") or item.get("title") or ""))
+            extra = {"comment_ids": list(item.get("kids") or [])[:3]}
+            if link_only:
+                extra["hn_summary_is_link_only"] = True
             return Article(
                 str(story_id),
                 clean_html(str(item.get("title") or "")),
                 str(item.get("url") or discussion_url),
                 "Hacker News",
                 datetime.fromtimestamp(int(item.get("time") or 0), timezone.utc),
-                clean_html(str(item.get("text") or item.get("title") or "")),
+                summary,
                 score=int(item.get("score") or 0),
                 comments=int(item.get("descendants") or 0),
                 discussion_url=discussion_url,
-                extra={"comment_ids": list(item.get("kids") or [])[:3]},
+                extra=extra,
             )
         except (TypeError, ValueError, OverflowError):
             return None
@@ -377,7 +417,10 @@ def collect_hacker_news(
                 text = clean_html(str(comment.get("text") or ""))
                 if text:
                     comments.append(text)
-        return replace(article, extra={"top_comments": comments})
+        extra = {"top_comments": comments}
+        if article.extra.get("hn_summary_is_link_only") is True:
+            extra["hn_summary_is_link_only"] = True
+        return replace(article, extra=extra)
 
     with ThreadPoolExecutor(max_workers=min(8, max(1, len(selected)))) as executor:
         return list(executor.map(add_discussion, selected))
