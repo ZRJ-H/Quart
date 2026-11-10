@@ -1,57 +1,24 @@
 {
-  "cached_at": "2026-11-09T14:58:51.802249+08:00",
+  "cached_at": "2026-11-10T11:00:30.589444+08:00",
   "articles": [
     {
-      "id": "2611.09892",
-      "title": "On Agentic Manipulation Policies",
-      "url": "https://arxiv.org/abs/2611.09892v1",
+      "id": "2611.10501",
+      "title": "Sampling Is Not Curiosity: Why LLM Agents Should Investigate",
+      "url": "https://arxiv.org/abs/2611.10501v1",
       "source": "arXiv",
-      "published_at": "2026-11-06T18:59:34+00:00",
-      "summary": "Recent work on robot manipulation has focused on specialist policies trained on demonstrations. We show that generalist AI models can control manipulators more reliably than specialist policies such as vision-language-action models (VLAs) and world-action models (WAMs). We systematically analyze agentic manipulation policies (AMPs), in which a generalist AI model commands the manipulator directly, adapting its actions as the task unfolds. We present AMP1, a reference harness that runs unchanged across single-arm, bimanual, and mobile manipulation. AMP1 achieves state-of-the-art results on the RoboLab-120 and CaP-Gym benchmarks, with no demonstrations or task-specific training. On RoboLab-120, AMP1 reaches an 85.6\\% success rate zero-shot, compared to 49.2\\% and 42.9\\% for leading VLA and WAM policies. The agent succeeds zero-shot in 104 of 108 real-world trials spanning twelve tasks and three robot instances, reducing failure rates by 20x and 15x relative to strong VLA and WAM baselines. The basic harness supplies no grasping, pushing, or placing skills; the agent develops its own strategies, such as searching for hidden objects, using objects as tools, and calibrating its cameras. With the addition of a persistent memory store, the agent can also learn from experience: an augmented harness with a memory representation that is carried across episodes lowers the failure rate on RoboDojo bimanual manipulation tasks by 4.6x relative to zero-shot deployment. Our analysis suggests that AMPs are substantially more general and robust than specialist manipulation policies, providing a promising foundation for robot manipulation.",
+      "published_at": "2026-11-07T06:02:37+00:00",
+      "summary": "LLM agents are increasingly used for open-ended tasks, very common in research scenarios where they are required to explore, investigate, or act curiously. At inference time, an LLM is a fixed map from context to next-token distribution, the pretrained weights determine the function, and only its conditioning changes as context accumulates. Mechanisms like temperature, best-of-N, tree search, or RAG vary how the distribution is sampled or what it is conditioned on, but do not update the agent's model of the environment. We argue that current LLM agents do not explore curiously; they explore stochastically. From how curiosity is understood in the RL literature, it requires a predictive structure over how the environment responds to the agent's actions, which improves online from current interaction, drives action selection through its predicted improvement, and persists beyond the context window. Additionally, in its open-ended form, the agent should intrinsically originate what to investigate. Thus, we propose a framework defining curiosity in LLM agents, reserving the term for systems that satisfy it. In doing so, we identify the research directions its implementation opens up.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Chen Chen",
-          "Omid Bagherieh",
-          "Naveen Nikamanth Appiah Balaji",
-          "Jesse T. Gonzalez",
-          "Negin Heravi",
-          "Fahad Islam",
-          "Xueting Li",
-          "Jean-Baptiste Regli",
-          "Kejia Ren",
-          "Petr Švec",
-          "David J. Yoon",
-          "Matthias Müller",
-          "Vladlen Koltun"
-        ],
-        "categories": [
-          "cs.RO",
-          "cs.AI",
-          "cs.CV",
-          "cs.LG"
-        ]
-      }
-    },
-    {
-      "id": "2611.09891",
-      "title": "CPU-ARC: Agentic Reasoning Caching for on-CPU Reasoning Reuse",
-      "url": "https://arxiv.org/abs/2611.09891v1",
-      "source": "arXiv",
-      "published_at": "2026-11-06T18:58:50+00:00",
-      "summary": "Large language models reinvent the wheel all the time. They conflate task-solving with the execution of the solutions, which forces them to solve every problem from scratch. We show that once a task has been reasoned through, the application of its solution to a new problem instance can be done very efficiently and with little involvement from language models. We introduce agentic reasoning caching, a method for constructing robust CPU-executable agentic reasoning caches (ARCs) from LLM reasoning traces. ARCs show on-par performance with frontier LLMs across a range of difficult mathematical and scientific tasks, are fully explainable, continually trainable, robust to input perturbations, and 16-291x cheaper to invoke than the source model.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Peter Belcak",
-          "Greg Heinrich",
-          "Saurav Muralidharan",
-          "Shizhe Diao",
-          "Pavlo Molchanov"
+          "Alfonso Amayuelas",
+          "Piotr Piękos",
+          "Xin Eric Wang",
+          "William Yang Wang",
+          "Jürgen Schmidhuber",
+          "Alex Pentland"
         ],
         "categories": [
           "cs.AI"
@@ -59,68 +26,106 @@
       }
     },
     {
-      "id": "2611.09887",
-      "title": "On the (non-)closedness of the set of ReLU networks",
-      "url": "https://arxiv.org/abs/2611.09887v1",
+      "id": "2611.10498",
+      "title": "EmbodiedIntentBench: Benchmarking Intent-Driven Runtime Adaptation for Mobile Robotic Missions",
+      "url": "https://arxiv.org/abs/2611.10498v1",
       "source": "arXiv",
-      "published_at": "2026-11-06T18:58:06+00:00",
-      "summary": "We prove that the set $\\mathcal{N}_N$ of ReLU networks with one hidden layer and at most $N\\in\\mathbb N$ neurons is weakly closed in $W^{1,p}(Ω)$, for a bounded connected open set $Ω\\subset\\mathbb R^d$. Consequently, every coercive, weakly lower semicontinuous energy on this space attains its minimum over $\\mathcal{N}_N$. This covers the Deep Ritz method with convex integrands, Sobolev training and Lipschitz learning. Moreover, as the weight decay parameter tends to zero, minimizers of the regularized problem converge, up to subsequences, to minimizers with minimal parameter norm. We also prove that the set of ReLU networks with two hidden layers of bounded widths is not closed in $W^{1,p}(Ω)$ or in $C(\\overlineΩ)$. This disproves a conjecture of Petersen, Raslan and Voigtlaender.",
+      "published_at": "2026-11-07T05:59:38+00:00",
+      "summary": "Mobile robotic sensing systems must adapt to operator requirements, limited resources, changing connectivity, and observation opportunities shaped by physical motion. Evaluating runtime strategies therefore requires assessing whether their decisions fulfill mission objectives, beyond isolated perception accuracy or execution efficiency. We present EmbodiedIntentBench, a benchmark for intent-driven runtime adaptation in mobile robotic missions. It represents mission intent through structured contracts for coverage, temporal evidence, reporting, urgency, and resources, and couples simulated unmanned aerial vehicle (UAV) workloads with causal, resource-accounted execution. Computation decisions affect mission time, resource use, and which observations can contribute evidence. We evaluate fixed and adaptive perception strategies in multi-phase missions and under changing urgency, connectivity, and battery conditions. In the multi-phase Depot study, a configuration with 87.5% full-bank target recall across visible target observations completes only 1 of 16 missions, whereas a lower-recall configuration completes 14. In an ablation, ignoring execution-induced observation loss increases aggregate mission success and reverses the ordering of two runtime strategies. Replays using Jetson AGX Orin CPU and GPU profiles change the relative success of local and remote strategies. In selected Jetson GPU-profile replays, intent-driven adaptation reduces modeled task energy by up to 28% with unchanged mission success. EmbodiedIntentBench provides an extensible framework for evaluating runtime decisions against mission fulfillment under physical and resource constraints.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Eloi Martinet",
-          "Leon Bungert"
+          "Rajat Bhattacharjya",
+          "Changwoon Lee",
+          "Hyeonjong Ju",
+          "Sing-Yao Wu",
+          "Hamidreza Alikhani",
+          "Zhuoyi Yang",
+          "Ian Harris",
+          "Nalini Venkatasubramanian",
+          "Nikil Dutt"
         ],
         "categories": [
+          "cs.RO",
+          "cs.AR",
+          "cs.CV",
+          "cs.DC",
+          "cs.LG"
+        ]
+      }
+    },
+    {
+      "id": "2611.10488",
+      "title": "Safer for Whom? A Systematic Exploration of AI Safety in Eating Disorder Interactions",
+      "url": "https://arxiv.org/abs/2611.10488v1",
+      "source": "arXiv",
+      "published_at": "2026-11-07T05:30:37+00:00",
+      "summary": "AI assistants advise users about diet, exercise, and weight loss---areas in which unsafe guidance can worsen body dissatisfaction, dietary restriction, compulsive exercise, and other behaviors associated with eating disorders (EDs). Existing evaluations emphasize diagnostic accuracy, overtly harmful prompts, or synthetic scenarios, providing limited insight into whether models recognize implicit vulnerability in natural interactions or protect users consistently. We evaluate responses from three open-weight large language models to 100 questions sourced from an online pro-anorexia community. We grade responses using clinically informed criteria that extend a seven-dimensional taxonomy of ED-related harms. We also construct matched conditions in which questions are accompanied by information about the user varying race, gender, body mass index (BMI), and explicit ED vulnerability. Safety varies substantially across models and harm dimensions. High-risk responses are approximately twice as frequent without bios, suggesting that models do not consistently recognize vulnerability from language alone. Explicit signals of ED vulnerability improve safety by 10--14 points across models. Responses also differ significantly by race, gender, and BMI, with body size producing the largest disparities. These patterns are consistent with reliance on the stereotype that EDs primarily affect thin, White women, potentially leaving users outside this profile with less protective responses.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Jinyuan Wang",
+          "Minh Duc Chu",
+          "Frances Ross",
+          "Ellen Fitzsimmons-Craft",
+          "Kristina Lerman"
+        ],
+        "categories": [
+          "cs.HC",
+          "cs.AI"
+        ]
+      }
+    },
+    {
+      "id": "2611.10487",
+      "title": "GEAR: A GPU-Accelerated Global Solver for Bounded Continuous Nonlinear Programs via Linear Bound Propagation",
+      "url": "https://arxiv.org/abs/2611.10487v1",
+      "source": "arXiv",
+      "published_at": "2026-11-07T05:29:20+00:00",
+      "summary": "We present a novel GPU-accelerated global solver for constrained nonlinear programming (NLP) inspired by the efficient linear bound propagation framework in neural network (NN) verification. Existing work on NN verification, a problem that can be cast as feasibility detection for a nonlinear objective, demonstrated orders-of-magnitude speedups with the linear bound propagation-based framework when compared to traditional solvers. Extending this paradigm to global nonlinear programming requires addressing many challenges: a global constrained NLP solver must effectively exploit all, possibly unstructured, nonlinear constraints to improve the objective, whereas NN verification typically handles simple input box constraints over a well-structured NN and does not directly optimize an objective function. We address these challenges by fully exploiting the linear bounds produced by bound propagation: these linear bounds can be viewed as relaxations of nonlinear constraints and used to provide lower bounds, check infeasibility, and guide the search for a primal solution. In addition, we propose tighter linear relaxations for bilinear, quotient, and other commonly used nonlinear functions in NLP problems, and a projected augmented Lagrangian method tightly coupled to our dual solving procedure to produce primal solutions. Our method solves 421 of 505 bounded and continuous NLP problems in the GAMS and MINLPLib benchmarks under a 180-second limit, more than each of the six global solvers we compare with, including Gurobi and BARON (commercial), and SCIP (open-source). Sixteen of these problems are certified by none of the six global solvers; all of them contain exponential, logarithmic, or trigonometric terms, which are often challenging for traditional approaches. Project webpage is at https://verified-intelligence.github.io/GEAR.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Duo Zhou",
+          "Hesun Chen",
+          "Xiangru Zhong",
+          "Grani A. Hanasusanto",
+          "Huan Zhang"
+        ],
+        "categories": [
+          "math.OC",
           "cs.LG",
-          "math.CA",
-          "math.FA",
-          "math.NA",
-          "math.OC"
+          "cs.MS",
+          "math.NA"
         ]
       }
     },
     {
-      "id": "2611.09882",
-      "title": "FlowMoP: Stochastic Multi-Person Motion Prediction",
-      "url": "https://arxiv.org/abs/2611.09882v1",
+      "id": "2611.10486",
+      "title": "Test-Time Scaling for Diffusion Language Models with Frequency-Aware Remasking",
+      "url": "https://arxiv.org/abs/2611.10486v1",
       "source": "arXiv",
-      "published_at": "2026-11-06T18:56:41+00:00",
-      "summary": "Predicting the future motion of multiple people is inherently stochastic: the same observed history admits many plausible continuations depending on intent, coordination, and social context. Yet the dominant paradigm in multi-person 3D motion prediction remains deterministic, with existing methods producing a fixed number of outputs per agent. In contrast, we present a conditional flow matching framework that jointly generates diverse future motions for multiple agents, modeling both global trajectories and root-relative poses. A B-spline reparameterization compresses the generative state space while enforcing temporal smoothness, and a dual-stream transformer conditions each agent's predictions on observed neighbor motion for interaction-aware forecasting. Our method achieves state-of-the-art performance on CMU-Mocap (UMPM) and 3DPW, outperforming deterministic baselines on joint position error, pose error, and final displacement error despite producing a full predictive distribution. We additionally establish the first motion prediction baseline on WorldPose, a large-scale professional soccer dataset, where social conditioning demonstrably concentrates predictive uncertainty along interaction-constrained directions.",
+      "published_at": "2026-11-07T05:26:09+00:00",
+      "summary": "Diffusion language models (DLMs) generate text through iterative denoising, where decisions about which tokens to commit or remask strongly affect output quality. Existing certainty-aware strategies rely on instantaneous confidence or entropy, but these local signals can be misleading on difficult reasoning problems. We formulate DLM test-time scaling as adaptive allocation of both inference compute and decoding strategies. Our two-stage approach uses a fast base sampler to solve easy questions, then applies frequency-aware remasking to the remaining hard questions. This strategy tracks how often each token's prediction changes across denoising steps and preferentially commits frequently changing tokens, encouraging samples to explore alternative reasoning paths rather than collapse onto the model's preferred trajectory. Experiments with LLaDA-8B-Instruct and Dream-7B-Instruct show consistent improvements over a strong adaptive allocation baseline, with absolute accuracy gains of up to 3.73 percentage points (LLaDA) and 7.33 percentage points (Dream) on MATH-500, and absolute coverage gains of up to 11.39 percentage points (LLaDA) and 10.98 percentage points (Dream) on HumanEval. On questions unsolved by the base certainty-aware strategy after 100 samples, frequency-aware remasking recovers solutions for 3.75% to 18.75% of examples.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Aadya Agrawal",
-          "Ho Kei Cheng",
-          "Alexander Schwing"
+          "Bowen Zuo",
+          "Yue Yu",
+          "Dongruo Zhou",
+          "Yinglun Zhu"
         ],
         "categories": [
-          "cs.CV",
-          "cs.LG"
-        ]
-      }
-    },
-    {
-      "id": "2611.09878",
-      "title": "Graded convolutional networks: scale invariance without the scale and robustness to unknown blur",
-      "url": "https://arxiv.org/abs/2611.09878v1",
-      "source": "arXiv",
-      "published_at": "2026-11-06T18:54:03+00:00",
-      "summary": "The Gaussian jet of an image is a graded vector space: a dilation by $λ$ multiplies derivatives of order $k$ by $λ^{-k}$. Local graded convolutions are exactly homogeneous differential operators, and a local feature is dilation-invariant if and only if it factors through the scale-normalized jet or, without the scale, through the retraction onto the weighted sphere of the grading. Under unknown Gaussian blur the retraction changes only by a change of scale, whereas the scale-normalized jet acquires a grading factor that no radial normalization removes. At the zero jet the retraction separates image families that radial normalizations and continuous classifiers cannot. Networks built on the retraction are universal for invariant features. On MNIST such a network keeps 88.4% accuracy under a two-pixel blur, against 66.2% for the same network on scale-normalized derivatives; in Lindeberg's Gaussian derivative network the retraction raises accuracy at that blur from 91.5% to 95.1%.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Tanush Shaska"
-        ],
-        "categories": [
-          "cs.CV",
-          "cs.LG"
+          "cs.CL",
+          "cs.AI"
         ]
       }
     }

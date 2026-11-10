@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-11-09T14:58:51.802249+08:00",
+  "cached_at": "2026-11-10T11:00:30.589444+08:00",
   "articles": [
     {
-      "id": "50415628",
-      "title": "Goldman Sachs is pulling Claude Code from its bankers and traders",
-      "url": "https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers",
+      "id": "50431058",
+      "title": "USPS now offers official ZIP Code boundary polygons",
+      "url": "https://postalpro.usps.com/zcb",
       "source": "Hacker News",
-      "published_at": "2026-11-08T18:16:07+00:00",
-      "summary": "Goldman Sachs is pulling Claude Code from its bankers and traders",
-      "score": 707,
-      "comments": 391,
-      "discussion_url": "https://news.ycombinator.com/item?id=50415628",
+      "published_at": "2026-11-09T19:58:59+00:00",
+      "summary": "USPS now offers official ZIP Code boundary polygons",
+      "score": 504,
+      "comments": 259,
+      "discussion_url": "https://news.ycombinator.com/item?id=50431058",
       "extra": {
         "top_comments": [
-          "People are giving all kinds of explanations here why Goldman is doing this, but they are not addressing what the article (implicitly) says: operating coding agents on the primary machines of finance professionals runs directly into the lethal trifecta. It's as simple as that.You cannot have semi-unattended agents running on the same workstations that have access to client/trade/prop information and email client, and internet, and internal networks, it's too dangerous--a major leak is just one small mistake or prompt injection away. Banks are not stupid, they are getting it and shutting it down.",
-          "At our org they have been clawing back Claude access because of chronic billing overages. Budgets are tight and consumption billing models are being stamped down on everywhere. Anthropic sales can not offer us any sort of normalized billing rate.Gemini is swooping in because they offer flat consistent billing and handle overages through throttling access to higher models. For 90% of the non-engineering org the experience is near enough it makes no difference.",
-          "Regardless of tech tool, non-tech writing POCs they try to force tech to get into production is a timeless story. LLM just allows people to get there faster, with less knowledge of coding.. which leads to the actual problem I think.Banks have a ton of legal/compliance/reglatory/reputational concerns about application access/entitleements, data privacy, data licensing, granular data entitlements, data access (auditable).. approval chains (auditable), as well as actual financial risk."
+          "Dang, the prices are crazy. $10k for the lowest tier? I expect federal data to be free. Most federal data related to stuff like regulation (e.g. FCC spectrum use coverage maps), maps for federally-managed lands, etc. is free. And, it should be free. It's a core part of accountability and transparency. Historically there was a copying cost (having a human print physical copies on paper or CD/DVD/tape), which is understandable, but now that the incremental cost of each new copy approaches $0, that's what it should cost users of the data.",
+          "I thought these were going to be free and got so excited.FWIW if you're willing to deal with some 'fuzziness' and the occasional missing zip code that's commercial only, the ZCTA shapefiles are free and are close enough for many purposes: https://www.census.gov/programs-surveys/geography/guidance/g...",
+          "This is interesting. For a long time it was pointed out that ZIP codes, unlike say, city or state boundaries, were not properly representable as polygons, since they don't divide up acreage into zones, but rather label postal delivery routes. Suppose I build a new neighborhood way out in the middle of nowhere. The \"polygon\" concept suggests that we could look and see what polygon I'm in, and that will determine what post office delivers my mail. But in reality, if there was no route to that area already, they could decide to make it part of any one of the surrounding routes.I suppose though, as long as you let the polygons map has uncontained areas, where no routes currently exist, it's a doable task to draw polygons around the limits of every route network, as long as you don't mind that they may have lots of weird ragged edges."
         ]
       }
     },
     {
-      "id": "50418016",
-      "title": "Nvidia CEO Jensen Huang's letter to staff about affair",
-      "url": "https://nvidianews.nvidia.com/news/a-message-to-our-company",
+      "id": "50429426",
+      "title": "Google Gemini routes personal Drive files and emails to human annotators",
+      "url": "https://github.com/thisisme6598/gemini_files/",
       "source": "Hacker News",
-      "published_at": "2026-11-08T22:20:09+00:00",
-      "summary": "https://www.axios.com/2026/11/08/nvidia-ceo-jensen-huang-aff..., https://archive.ph/Hxn5hhttps://www.nytimes.com/2026/11/06/us/politics/chinese-spy-a..., https://archive.ph/atMcphttps://www.cnn.com/2026/11/08/business/nvidia-investigation...",
-      "score": 529,
-      "comments": 562,
-      "discussion_url": "https://news.ycombinator.com/item?id=50418016",
+      "published_at": "2026-11-09T18:24:38+00:00",
+      "summary": "Google Gemini routes personal Drive files and emails to human annotators",
+      "score": 447,
+      "comments": 104,
+      "discussion_url": "https://news.ycombinator.com/item?id=50429426",
       "extra": {
         "top_comments": [
-          "Spooks from CIA must be aware of this for a long time. The only question now is why this information is leaked now? What is the distraction they are trying to create by leaking this now?",
-          "Take this with a grain of salt, but my guess is that the board on some level has to judge him as being so high performing that they would try to keep him as long as that doesn't cause too much PR damage to the company, or the deals get them in too much trouble with the government.This is just a total guess, but I assume what a lot of the board want is for him to sell as much to China or indirect channels as he can get away with. So whatever these deals were that involved this woman, they probably want him to get those deals through it he can get away with it (although they wouldn't admit it).I see this more or less as Huang doing his job. And relative to international expectations at that level of wealth, one public affair is probably not something most of the board (presumably largely male) is going to (privately) judge him for.So if the board is investigating, I assume what they are trying to figure out is if the US government is going to do anything (probably not) or waiting to see if there is going to be some kind of public demand for him to be removed. Or it there is something likely to come out that will cause either of those things.",
-          "I heard a guy I respect say “there’s a short list of things people will ruin their lives for.”I’m not sure if this will ruin Jensen’s life or not, but it’s a good opportunity for us all to remember that the short-term high is usually not worth it."
+          "Note that this is specifically Consumer Gemini with Connected Apps; Workspace Gemini (and Workspace Intelligence, the RAG thing for enterprise/Workspace) still claims not to be subject to human review:https://knowledge.workspace.google.com/admin/generative-ai/g...So basically if you use consumer Gemini and specifically authorize the GMail app, for example, then it will sometimes use the GMail tool to load your mail from GMail, and that data (like all data in consumer Gemini) might be given to the human annotation pipeline.This whole thing seems deeply stupid to me from Google's standpoint, although they've never been good at product management - there's _way_ too much nuance to what's going on and even if they aren't technically affected, this kind of thing will almost surely make their paying enterprise customers leery.",
+          "It's worse than that.> Google Photos data is used to infer your interests, relationships to people in your photos, and where you've been, including by associating your face with corresponding location data and timestamps. This data is also used to do things for you, like look up your info or add items to your grocery list, and to improve Google services, including training generative AI.How does that work exactly if the images aren't even real and are generated by AI? When Google siphons up these photos to help them train their AI, the AI is now going to make associations as depicted in that photograph?That you really were with that person, in that place, in that situation, on that date? As some sort of a fact?Can someone else create that image and just put it in their library and then have that become a fact on your behalf when picked up, analyzed and trained on?Where does that all lead?",
+          "Really frustrating that our privacy eroded to the point anyone would think this is reasonable.But it does explain some conversations with Gemini when I wonder why it's talking about particular things. Like asking it about consultation processes for changes to parks only to get a response that's uncannily tuned to the email I got prompting the enquiry.No mention of I just read your emails etc ."
         ]
       }
     },
     {
-      "id": "50418176",
-      "title": "KetchUp – Open-source SketchUp alternative built with Rust and WebGPU",
-      "url": "https://ketchup3d.github.io/app/",
+      "id": "50431144",
+      "title": "Claude Fable 5.2 scores 65 on Artificial Analysis, highest so far",
+      "url": "https://artificialanalysis.ai/models/claude-fable-5-2",
       "source": "Hacker News",
-      "published_at": "2026-11-08T22:35:35+00:00",
-      "summary": "KetchUp – Open-source SketchUp alternative built with Rust and WebGPU",
-      "score": 379,
-      "comments": 101,
-      "discussion_url": "https://news.ycombinator.com/item?id=50418176",
+      "published_at": "2026-11-09T20:04:55+00:00",
+      "summary": "Claude Fable 5.2 scores 65 on Artificial Analysis, highest so far",
+      "score": 297,
+      "comments": 219,
+      "discussion_url": "https://news.ycombinator.com/item?id=50431144",
       "extra": {
         "top_comments": [
-          "I had a very high level look at the repo, only 161k lines of code (probably including a bunch of tests and config). Not too bad.And it uses a project called openskp [1] to work with SketchUp files, also AI coded to some extend, but looks reasonable at a glance.[1] - https://github.com/iamahsanmehmood/openskp",
-          "As a very long time user and lover of SketchUp, I'm still peeved about the direction Trimble took in neglecting the SketchUp desktop modeler in favor of a web-based UI. Their licensing was also terrible... first they discontinued the free version of SketchUp, and then later on they discontinued perpetual licensing, meaning the only way to get the desktop modeler was to pay several hundred per year, which wasn't worth it to me. If a vibecoded alternative displaces it in the market, I won't feel one bit sorry for them.The kinds of large scale projects I like to make in SketchUp really began to feel constrained at a certain point. A modeler with SketchUp's incredible UI that can take full advantage of any computer's available graphics hardware to render large amounts of geometry more efficiently would be a wonderful thing.I'm very possessive of my SketchUp models, and so the idea of storing them on any kind of cloud server I don't have control over is abhorrent to me. I was not happy to see Trimble putting so much effort into making a web-based modeler.",
-          "This is awesome. At the same time I wonder if we are entering an era in which it’s just better to build your own toolsNeed a 3D modeler? Use Claude or codex to build the 3D model first, then build the modeler around it as you iterate towards what you want to buildSo many times I’ve had to spend hours learning a software, reading docs, doing tutorials, only to later be able to do a small basic idea of what I actually wanted to do in the first placeNow I can just build only the software I need, for the thing I need it for (or, ala REA, maybe either modify or reverse engineer some existing software, to better fit my workflows)In that sense, it would also be cool to be able to drive KetchUp with an agent. I’m a big fan of what pen.dev has done (although now their tool is not free/open anymore)"
+          "Forget about the scores... look at the Cost Per Task. Fable 5.1 was already the most expensive by a good margin, and now Fable 5.2 doubles it! This is with the price cut.The output tokens per task just exploded. From 118k tokens (46k Answer/71k Reasoning) in 5.1 to 274k tokens (81k Answer/192k Reasoning) in 5.2.",
+          "Artificial Analysis is paid by AI labs and they don't publish the full method. To me it's meaningless, let's wait for other benchmarks, but if they're correct the intelligence increment is negligible.",
+          "Cool! It looks like Fable 5.2 (especially low and medium) also sit on the pareto frontier between time per task and intelligence: https://artificialanalysis.ai/models?speed=output-speed-over...I am always interested in this comparison since it shows how quickly you can go back and forth with a model, capturing both tokens/task and tokens/second. The new models seem to be meaningfully better here."
         ]
       }
     },
     {
-      "id": "50416158",
-      "title": "Outlook.com is rejecting email from domains without DMARC",
-      "url": "https://mailroute.net/blog/outlook-rejecting-email-without-dmarc",
+      "id": "50429734",
+      "title": "E-means: Outperforming k-means in one-tenth the epochs",
+      "url": "https://e-means.github.io/",
       "source": "Hacker News",
-      "published_at": "2026-11-08T19:20:32+00:00",
-      "summary": "Outlook.com is rejecting email from domains without DMARC",
-      "score": 349,
-      "comments": 258,
-      "discussion_url": "https://news.ycombinator.com/item?id=50416158",
+      "published_at": "2026-11-09T18:45:43+00:00",
+      "summary": "E-means: Outperforming k-means in one-tenth the epochs",
+      "score": 286,
+      "comments": 20,
+      "discussion_url": "https://news.ycombinator.com/item?id=50429734",
       "extra": {
         "top_comments": [
-          "Outlook.com is also rejecting mail based on blocklists that are not public and you essentialy cannot get yourself out. My VPS provider is pretty much entirely blocked and their regular blocklist process says we are golden so nothing to unblock.Outlook.com and similar are an anathema to email. This is why they tell you not to run a mail server .On the other hand rejecting domains without dmarc is fine. Just not happy it is silent.",
-          "Sounds like something every mail sender should have done already.Good for Microsoft customers and I don't care one bit for the lazy people who have to late-patch now.",
-          "Outlook.com has quietly dropped[0] emails from certain domains/IPs for years, even with SPF/DKIM/DMARC all properly set up and no history of spam. As someone who's administering their own mail server, Outlook has been the bane of my existence.[0]: As in: They accepted the email just fine (according to the logs) but it still didn't end up in the recipient's mailbox."
+          "I wonder if this could be used anywhere as an alternative to Lloyd's algorithm. I have a hobby project which uses Lloyd's to \"relax\" an icosohedral equal area mesh on the surface of a sphere [1]. I'm going to try to swap it out with an adaptation of this and see if it's much better or if I can afford more iterations with this method.Edit: tried it, and it’s definitely not better for this use case. e-means wins by needing fewer passes over a huge dataset, but relaxing a mesh on a sphere has no dataset: each Voronoi cell’s centroid can be computed directly from its geometry. Mini-batches just swap that for a noisy sampled estimate of the same thing. It has the same objective and the same optimum, so at best it matches Lloyd. In practice it was much slower and left the grid noisy, and with small sample budgets it even tangled the mesh.[1] https://webgcm.app/explain/grid#nudging-the-cells-into-shape",
+          "I adapted the method to my IVF index (the code-daemon project) and achieved a 146x speedup on the GPU.That's impressive!",
+          "The one remaining hyperparameter is of course k. I vaguely remember there was some rule of thumb for picking k like the \"elbow of a curve\", but what is the state of the art now for picking k?"
         ]
       }
     },
     {
-      "id": "50412067",
-      "title": "Writing as a thinking tool",
-      "url": "http://muratbuffalo.blogspot.com/2026/11/writing-as-thinking-tool.html",
+      "id": "50429024",
+      "title": "Muse Ember: Our smallest, most efficient model",
+      "url": "https://research.meta.ai/blog/muse-ember",
       "source": "Hacker News",
-      "published_at": "2026-11-08T10:41:52+00:00",
-      "summary": "Writing as a thinking tool",
-      "score": 329,
-      "comments": 86,
-      "discussion_url": "https://news.ycombinator.com/item?id=50412067",
+      "published_at": "2026-11-09T17:58:46+00:00",
+      "summary": "Muse Ember: Our smallest, most efficient model",
+      "score": 259,
+      "comments": 108,
+      "discussion_url": "https://news.ycombinator.com/item?id=50429024",
       "extra": {
         "top_comments": [
-          "When I had started my PhD, I thought the writing part of a paper was just the last thing I needed to do to summarize my results, like a boring epilogue to the more exciting science. What surprised me was how much of the scientific process relied on my ability to convey my ideas to someone else. And to be able to do that you need clarity of mind, you need to have worked through multiple drafts to be able to get to your point as efficiently and clearly as possible. So many times I only discovered what I was actually researching during the writing part.The problem with AI writing is that it makes people believe that writing is just writing and not a tool for thinking very deeply about the topic you are writing about. I am not completely opposed to AI assisted writing, but if I see AI writing, it’s telling me that the author tried to take a shortcut in their own thinking and it’s a good heuristic that the ideas will not be thought through enough to warrant my complete attention.",
-          "Writing code (Programming) is a thinking tool too.When you are writing code manually, actually you are thinking about what you are doing, what you will build actually, what are your or users' real requirements, etc.",
-          "The human mind has a small L1 cache. High IQ people tends to have larger L1 cache, and don't understand when others can't follow their arguments. Not understanding that's it's dumb."
+          "Six effort levels (minimal, low, medium, high, xhigh, max), so here are six pelicans (actually five, \"high\" didn't return a complete SVG):https://tools.simonwillison.net/markdown-svg-renderer?url=ht...There's usually a reasonably strong correlation between thinking level and visual quality of the pelican. This is the first time I've seen that correlation appear to break - more reasoning tokens doesn't seem to produce an obviously better SVG.",
+          "When Muse models first started coming out I was pretty excited that Meta models were competitive again based on the benchmarks but after trying them out it feels like Meta is making benchmaxxed models that are exciting on bench cards but not really useful in real world scenarios.To me that is the main problem with Muse models whether it's Spark, Wonder or Ember. While it reads as frontier on benchmarks it really isn't.This is evident when you compare Dots and Muse the products as well. The model quality is clearly still far behind.",
+          "Who cares. I'll begrudgingly run a local Facebook model if it's the best in its class, but I'll take up Java programming before sending data to their cloud."
         ]
       }
     },
     {
-      "id": "50420035",
-      "title": "RIP, Harvest",
-      "url": "https://aphyr.com/posts/427-rip-harvest",
+      "id": "50428907",
+      "title": "Show HN: Every satellite that passed over any place this week, and its photos",
+      "url": "https://www.watched.earth",
       "source": "Hacker News",
-      "published_at": "2026-11-09T01:58:21+00:00",
-      "summary": "RIP, Harvest",
-      "score": 285,
-      "comments": 88,
-      "discussion_url": "https://news.ycombinator.com/item?id=50420035",
+      "published_at": "2026-11-09T17:51:31+00:00",
+      "summary": "hey HN, i built this because i wanted to know what had actually photographed my street.type in any place and it finds every satellite that passed over it in the last 7 days (SGP4 on the CelesTrak catalog, runs in your browser in about half a second), then pulls the real Sentinel-2 / Landsat / NASA images from those passes.some fun bits: - the pass search can't skip a pass. checked it against a brute force on poles, the antimeridian and tiny swaths: 0 missed - all ~17k objects in orbit are drawn on the GPU, solving Kepler's equation every frame - Sentinel-2 timestamps are often 5-10 min off from when the sat actually crosses your spot, which was a fun one to figure outit only says \"watched\" if a real image exists, and it doesn't store your location.code: https://github.com/dev-Armaan/satelliteswould love feedback, especially on what data sources to add",
+      "score": 240,
+      "comments": 45,
+      "discussion_url": "https://news.ycombinator.com/item?id=50428907",
       "extra": {
         "top_comments": [
-          "We recently went through a version of this with Asana when we discovered their \"per seat\" pricing is sold in groups of 5 seats. Going from 5->6 users adjusts your bill to 5->10 seats, doubling your price.It isn't about the money, the principle is gross. Thankfully Asana's core business is now a prompt. We are nearly done replacing it with a native, self hosted client. Will post about it once it is hardened through use. Cancelling our Asana subscription this week.To SaaS providers (myself included) it has never been easier to leave your service due to mistreatment. Take note.",
-          "It's a shame. They tried to increase our prices about 800%. I actually liked the software and used it for over 15 years across a couple of services businesses.They do have this \"usage based pricing\" where you pay them for each user, but then also for each project and customer, and then a percentage of your billings. It's completely absurd to be paying them a percentage when you receive payments by wire and all they're doing is emailing an invoice.Anyhow caveat emptor. Looking at their website they do not show the actual pricing. They just say it's \"starting from\" $9/seat or $14/seat, but you only pay that if you don't use the software at all.As far as I can tell, what Bending Spoons has figured out is that they can raise prices 8-10x, but only maybe 60-80% of their customers will cancel because it's a big hassle, and so the profits go up massively for a while. They will probably even retain a hard core of say 10% of their original userbase for some time.",
-          "Odoo CE (community edition) is open source and has built in stripe integration (along with a few other payment providers) that will invoice on time spent against projects/tasks.If you’re in a region that has l10n for accounting (via the OCA), you’d be able to handle all your tax compliance also. Only caveat to Odoo CE is you’d need to self host, which in itself is not that difficult.odoo.com github.com/odoo/odoo github.com/oca"
+          "I don't say this lightly: This may be the best combination of style and substance I have ever seen.",
+          "This is not only a very cool idea, but also fantastic execution! Great work and very neat!",
+          "I have seen a lot of sites with satellites’ overviews… I work in geospatial.This site is really good one as you can see exact image taken by a satellite.Well done."
         ]
       }
     },
     {
-      "id": "50416053",
-      "title": "Dux: Free, open-source Wayland desktop shell with file manager and theming",
-      "url": "https://duxlabs.dev/",
+      "id": "50432831",
+      "title": "TPU 8tx and TPU 8i Max",
+      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/",
       "source": "Hacker News",
-      "published_at": "2026-11-08T19:08:51+00:00",
-      "summary": "Dux: Free, open-source Wayland desktop shell with file manager and theming",
-      "score": 252,
-      "comments": 83,
-      "discussion_url": "https://news.ycombinator.com/item?id=50416053",
+      "published_at": "2026-11-09T21:56:57+00:00",
+      "summary": "TPU 8tx and TPU 8i Max",
+      "score": 219,
+      "comments": 65,
+      "discussion_url": "https://news.ycombinator.com/item?id=50432831",
       "extra": {
         "top_comments": [
-          "None of them seems to be aware that \"Dux\" is not really a good word, because it's the name used by Benito Mussolini for himself. It reads the same as calling this WM \"Fuhrer\". Not a good name choice. Average look, from the software part, not mature enough compared to other setups such as hyprland or sway.",
-          "Been using this for close to a year (wrote about it here when it was still called Dank Material Shell: https://tedium.co/2026/01/29/niri-danklinux-scrolling-window...); it is endlessly slick, and I think good enough to help mainstream Niri.It also just added official support for atomic distros like Bazzite; it was previously kind of an annoying gap given the popularity of those distros.",
-          "I was confused for a second, but turns out DMS rebranded the 'Dank' to 'Dux' a few weeks ago [1]. I've been running DMS + Niri for nearly a year now with no intentions of switching anytime soon. Given how often I've historically changed shells/DEs, this is the ricing equivalent to settling down, getting married, and having kids.[1] https://duxlabs.dev/blog/v2-0-release"
+          "Their TPUSync post is highly recommended as well. This is basically how many of the open-source repos like Strata for Qwen series models are working.https://cloud.google.com/blog/topics/ai-infrastructure/intro...https://github.com/Niko1221/Strata/blob/main/docs/HOW_IT_WOR...",
+          "Title: Our newest TPUs: 8tx and 8i Max, built for the agentic era Small discussion previously (16 points, 4 comments) https://news.ycombinator.com/item?id=50425018",
+          "I wish Google Colab start to provide new TPU model, the most powerful we can get on Colab is still v6e-1 which is too small for serious work."
         ]
       }
     },
     {
-      "id": "50419215",
-      "title": "Unlocking any car from X brand in most of the world",
-      "url": "https://shubs.io/unlocking-any-car-from-x-brand-in-most-of-the-world/",
+      "id": "50429068",
+      "title": "Claude Fable 5.2 and Mythos 5.2",
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
       "source": "Hacker News",
-      "published_at": "2026-11-09T00:10:50+00:00",
-      "summary": "Unlocking any car from X brand in most of the world",
-      "score": 221,
-      "comments": 79,
-      "discussion_url": "https://news.ycombinator.com/item?id=50419215",
+      "published_at": "2026-11-09T18:01:10+00:00",
+      "summary": "Claude Fable 5.2 and Mythos 5.2",
+      "score": 213,
+      "comments": 604,
+      "discussion_url": "https://news.ycombinator.com/item?id=50429068",
       "extra": {
         "top_comments": [
-          "Blue car in the background is a facelifted fifth gen RAV4. Obvious from the shape of the mirrors and headlight. Toyota/Lexus would align with the \"both brands\" remark.White one is harder to tell obviously, but the shape of the mirror looks the same, and you can see the top of the dash has a chamfered shape that looks an awful lot like this pic: https://media.ed.edmunds-media.com/toyota/rav4/2022/oem/2022...Posting a video demo probably isn't a great idea for this kind of thing. I'm sure some sicko could have figured this out just from the sound the locks make.",
-          "These always connected cars will soon become as bad, or likely worse, than the smartphones of today, which we don't really own and control, and always tracked.You will need an online account with obscure terms of service to use the car, won't be able to repair yourself, your data being sold, etc.Evil.",
-          "“Any car” is perhaps too strong a claim. If it is Toyota/Lexus, I will say that I don’t think my 2009 Camry has this issue. I am quite sure that the fourth-generation Hilux my brother has does not."
+          "I’ve had a chance to use fable 5.2. Some observations:- Anthropic is finally well balanced across models. Meaning: Opus 5.5 is so good that I do not feel Fable FOMO as I did when it was Fable 5/5.1 vs Opus 4.8/5. And Sonnet 5.5 sometimes makes me forget about Opus.- Fable is good, but you really have to push the ambition of your prompt in order to see proper separation from Opus 5.5. I personally have a hard time telling the difference between Fable 5.2 and Opus 5.5 for ordinary coding tasks.- It’s way faster and more reliable: one of the worst things about fable 5.1 was how slow it was an, on top of that, how frequently it would suffer from max output token overflows. I got none of these issues with 5.2.- Fable is exceptional at drawing. It’s ability to render an image with JavaScript actually has me questioning the value of dedicated image models. I prefer the images I’ve gotten fable/opus to make for me over those from gpt-image, it’s wild to think we’re at this point.",
+          "- Why are they stacking Fable xHigh against Carbon Med?- How did they produce such a bizarre effort-intel curve for Carbon that goes against every available benchmark?- Why did they leave Carbon-- positioned primarily as a cyber model-- off of the single cyber benchmark comparison?- Why do they switch to comparing against Argon (rather than carbon) for robodojo?",
+          "> Our first formalization of Fermat’s Last Theorem, performed by an unreleased research version of Claude, took 11 days. It relied on a purpose-built harness along with guidance from a human researcher. By contrast, a team of 1,000 Fable 5.2 agents fully formalized the theorem in just 30 hours, with minimal human intervention. Fable 5.2 started from minimal prompts, built its own ways to coordinate, and used no mathematical references, only a list of intermediate theorem statements to score progress. It needed one-third of the action tokens as our first formalization and produced a proof seven times shorter. As can be seen in the figure below, Opus 5.5 (with the same 1,000-agent setup) completed only 26% of the formalization in 18 hours, and barely made any more progress after 30.Most people don't really have intuitions on what it means to push the frontier now (because AI has surpassed everything they are good at, for example, coding). We are truly inside the singularity (using Kurzweil's definition, slightly paraphrased - the time when technology progresses so fast no one can keep track with it)."
         ]
       }
     }
