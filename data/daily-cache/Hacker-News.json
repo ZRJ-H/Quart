@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-11-11T11:00:27.207419+08:00",
+  "cached_at": "2026-11-11T14:54:06.975832+08:00",
   "articles": [
     {
       "id": "50445401",
@@ -8,8 +8,8 @@
       "source": "Hacker News",
       "published_at": "2026-11-10T19:50:46+00:00",
       "summary": "Scion is back and is going to sell a kei truck in America",
-      "score": 353,
-      "comments": 262,
+      "score": 436,
+      "comments": 292,
       "discussion_url": "https://news.ycombinator.com/item?id=50445401",
       "extra": {
         "top_comments": [
@@ -20,50 +20,14 @@
       }
     },
     {
-      "id": "50443824",
-      "title": "Synaptics patent claims stop work on DisplayLink drivers",
-      "url": "https://lwn.net/SubscriberLink/1102549/acbc92e00cee3a3f/",
-      "source": "Hacker News",
-      "published_at": "2026-11-10T18:02:02+00:00",
-      "summary": "Synaptics patent claims stop work on DisplayLink drivers",
-      "score": 318,
-      "comments": 176,
-      "discussion_url": "https://news.ycombinator.com/item?id=50443824",
-      "extra": {
-        "top_comments": [
-          "> If you fail to comply with our demands by the specified deadline, Synaptics will seek monetary compensation from you in the amount of US$25,000 to recoup the costs and effort required to create the attached documentation of your infringing acts.Obviously this is intended as a scare tactic, but, surely that could never hold up in court? Surely the burden of proof is on the owner of the patents to prove that someone's work is infringing, and you can't then say \"We are charging the defendant to prove that we have a valid case against them.\" ?",
-          "> I will also be sending to you our demand for substantial monetary compensation to recoup the cost and effort required to create such documentation of your infringing acts.There is no universe in which this is a reasonable response.",
-          "DisplayLink is dying due to high DDR prices. Dock companies are cancelling their display link portfolios due to the unfavorable economics.Good riddance if this is how OSS is treated by synaptics.Most recent thunderbolt docks and usb4 docks have good display support, and fallback to DisplayPort alt mode if the host does not support tbt4. Which is much better supported over type-c. Intel and AMD upstream host support."
-        ]
-      }
-    },
-    {
-      "id": "50443427",
-      "title": "Val Town is winding down",
-      "url": "https://blog.val.town/winding-down",
-      "source": "Hacker News",
-      "published_at": "2026-11-10T17:31:14+00:00",
-      "summary": "Val Town is winding down",
-      "score": 317,
-      "comments": 83,
-      "discussion_url": "https://news.ycombinator.com/item?id=50443427",
-      "extra": {
-        "top_comments": [
-          "I remember Steve from my days working on Eve, he was part of that community and always a big proponent of end-user programming. I was happy to see him working on this project but am not surprised it's shutting down.Nothing to to do with the quality of Val Town, but making a business in this space is really, really hard. You can't start the business without raising millions (Eve raised $2M, Darklang raised $3.5M, Val Town raised $7M), but it's hard to scale out a proof of concept in the time investors want to start seeing an ROI. It seems to me about 2-3 years is all you get for seed runway, when realistically projects like this should take at minimum 5 years incubating. Darklang extended their runway to ~7-8 years by firing all the devs and keeping just the founder on life support. Ultimately even that wasn't enough.But maybe with AI this could work, I dunno.What's required to make it all work is a fundamental leap in programming interface design, but the business side doesn't look any different from a typical SaaS. So unless you hit the ball out of the park you're entering the market with an experimental product, then you have to deal with product-market fit even if you have the right product, so you really only have one shot.It's very hard to go back to investors and ask for another round of funding when there's no discernable market and the product isn't gaining the traction investors would like to see.Anyway, kudos to Steve for fighting the good fight! What would really be great is to read an in-depth post mortem on the project. Looking forward to it if you have time!",
-          "Not mentioned directly in the blog post, but Val Town was fundamentally organized around the Deno runtime, whose team will stop maintaining it next year after joining Cloudflare [0].[0] https://deno.com/blog/cloudflare",
-          "This is sad. We're in a similar space as Val Town (which technically made us competitors) but I've always appreciated the care they had for the craft and the values they drove forward as a company like their transparency (even their investor updates were public).Steve and Tom also individually have some of the best blogs out on the web.I wish them all the best with whatever comes next. I'm pretty sure they'll all do great things."
-        ]
-      }
-    },
-    {
       "id": "50447074",
-      "title": "After 7 months, Glasswing overwelms maintainers with underwhelming findings",
+      "title": "Tracking Anthropic-discovered vulnerabilities",
       "url": "https://www.vulncheck.com/blog/anthropic-glasswing-november-update",
       "source": "Hacker News",
       "published_at": "2026-11-10T22:17:56+00:00",
-      "summary": "After 7 months, Glasswing overwelms maintainers with underwhelming findings",
-      "score": 287,
-      "comments": 126,
+      "summary": "Tracking Anthropic-discovered vulnerabilities",
+      "score": 381,
+      "comments": 177,
       "discussion_url": "https://news.ycombinator.com/item?id=50447074",
       "extra": {
         "top_comments": [
@@ -80,14 +44,50 @@
       "source": "Hacker News",
       "published_at": "2026-11-10T18:22:32+00:00",
       "summary": "Starlink Mini 2",
-      "score": 279,
-      "comments": 284,
+      "score": 367,
+      "comments": 375,
       "discussion_url": "https://news.ycombinator.com/item?id=50444129",
       "extra": {
         "top_comments": [
+          "We bought a Starlink Mini for the use case of frequent travel to far-off (international) places with limited mobile service, where we occasionally need to get online for high-priority work tasks or meetings. For $55 / month for 100GB and flexible usage in many countries, it was extremely useful.Then, recently, SpaceX changed the terms such that the 100GB and 300GB subscriptions are no longer usable internationally (technically outside of North America). You have to pay for the unlimited service tier and even then can only use it for 30 days before returning to the home region.A huge decrease in utility and a tripling in cost. A new device with a built-in battery is definitely not going to make up for that.(Still a great service when it works, am posting this from remote western Mongolia.)",
           "This has completely changed my industry (hard rock mining). A lot of the time drillers would be in the middle of nowhere looking for resources and would be sometimes days away from providing results (which also lead to lots of dodgy situations where drillers would know some results before market…) now it’s instant live feed. It’s made revising drilling plans trivial. Very cool",
-          "Smart. Everywhere we take the Mini we also haul a portable battery. A fun thing we did a few times was that we took the whole thing on a weekday to Golden Gate Park and my wife and I worked while my daughter and grandparents played around and saw things and then they came back and we ate lunch and they went back around to see stuff. Lots of fun.Park was practically empty and it was a bright and sunny day.",
-          "Starlink is an interesting option for RVs, but I can't use it because they don't offer static IPs or even ip addresses that aren't behind NAT."
+          "Recently, I've been watching ultramarathon races (Western States, UTMB, Javalina Jundred, etc.) live online. All of them have been doing live video shots of the race leaders with a camera man on a mountain bike using a Starlink Mini on the back (with networking gear and batteries in a backpack). This new Starlink Mini 2 will be a more compact solution for the cameraman and possibly give the producers of the live broadcast more options and maybe more interesting shots."
+        ]
+      }
+    },
+    {
+      "id": "50443824",
+      "title": "Synaptics patent claims stop work on DisplayLink drivers",
+      "url": "https://lwn.net/SubscriberLink/1102549/acbc92e00cee3a3f/",
+      "source": "Hacker News",
+      "published_at": "2026-11-10T18:02:02+00:00",
+      "summary": "Synaptics patent claims stop work on DisplayLink drivers",
+      "score": 360,
+      "comments": 214,
+      "discussion_url": "https://news.ycombinator.com/item?id=50443824",
+      "extra": {
+        "top_comments": [
+          "> If you fail to comply with our demands by the specified deadline, Synaptics will seek monetary compensation from you in the amount of US$25,000 to recoup the costs and effort required to create the attached documentation of your infringing acts.Obviously this is intended as a scare tactic, but, surely that could never hold up in court? Surely the burden of proof is on the owner of the patents to prove that someone's work is infringing, and you can't then say \"We are charging the defendant to prove that we have a valid case against them.\" ?",
+          "Years ago, when i was migrating my dell work laptop to debian, i had the same problem: we had many dell docking stations and they all used displaylink.I was pretty quick about it: they are now useless bricks.We live in the golden age of USB-C + DP alt mode: USB C to the monitor, and that provides power, connection, video, monitor connects to a 30 euro docking with many USB, gigabit ethernet, additional video. No shitty drivers, no USB dropping randomly crashing your dock, no giant power brick and 300-something bricks.Depending on the screen you can also daisy chain them.Moving to a different desk require to just plug in one cable. One. And you can do all the above with an android phone, too, if it supports desktop mode you have a functional desktop inyour pocket (well, as much as a chromebook).I have no need for those shoddy bricks anymore, or HDMI for that matter. (if only console makers and TV would drop HDMI, that would be a dream)",
+          "DisplayLink is dying due to high DDR prices. Dock companies are cancelling their display link portfolios due to the unfavorable economics.Good riddance if this is how OSS is treated by synaptics.Most recent thunderbolt docks and usb4 docks have good display support, and fallback to DisplayPort alt mode if the host does not support tbt4. Which is much better supported over type-c. Intel and AMD upstream host support."
+        ]
+      }
+    },
+    {
+      "id": "50443427",
+      "title": "Val Town is winding down",
+      "url": "https://blog.val.town/winding-down",
+      "source": "Hacker News",
+      "published_at": "2026-11-10T17:31:14+00:00",
+      "summary": "Val Town is winding down",
+      "score": 357,
+      "comments": 92,
+      "discussion_url": "https://news.ycombinator.com/item?id=50443427",
+      "extra": {
+        "top_comments": [
+          "I remember Steve from my days working on Eve, he was part of that community and always a big proponent of end-user programming. I was happy to see him working on this project but am not surprised it's shutting down.Nothing to to do with the quality of Val Town, but making a business in this space is really, really hard. You can't start the business without raising millions (Eve raised $2M, Darklang raised $3.5M, Val Town raised $7M), but it's hard to scale out a proof of concept in the time investors want to start seeing an ROI. It seems to me about 2-3 years is all you get for seed runway, when realistically projects like this should take at minimum 5 years incubating. Darklang extended their runway to ~7-8 years by firing all the devs and keeping just the founder on life support. Ultimately even that wasn't enough.But maybe with AI this could work, I dunno.What's required to make it all work is a fundamental leap in programming interface design, but the business side doesn't look any different from a typical SaaS. So unless you hit the ball out of the park you're entering the market with an experimental product, then you have to deal with product-market fit even if you have the right product, so you really only have one shot.It's very hard to go back to investors and ask for another round of funding when there's no discernable market and the product isn't gaining the traction investors would like to see.Anyway, kudos to Steve for fighting the good fight! What would really be great is to read an in-depth post mortem on the project. Looking forward to it if you have time!",
+          "Not mentioned directly in the blog post, but Val Town was fundamentally organized around the Deno runtime, whose team will stop maintaining it next year after joining Cloudflare [0].[0] https://deno.com/blog/cloudflare",
+          "This is sad. We're in a similar space as Val Town (which technically made us competitors) but I've always appreciated the care they had for the craft and the values they drove forward as a company like their transparency (even their investor updates were public).Steve and Tom also individually have some of the best blogs out on the web.I wish them all the best with whatever comes next. I'm pretty sure they'll all do great things."
         ]
       }
     },
@@ -98,50 +98,50 @@
       "source": "Hacker News",
       "published_at": "2026-11-10T18:01:15+00:00",
       "summary": "Browsers natively handle a lot of what used to take 50 lines of JS (or a dependency): `CSS.highlights` for text range highlighting without s everywhere, `` and showModal() give you backdrops and ideal focus management, `field-sizing` to auto-grow textareas as the user types.. (Something yesterday's ftrain post touched on [0])Models know about some of these by name, but consistently won't default to using the platform-native solution and instead prefer the incumbent +JS based pattern. We started an effort in Chrome to supplement coding agents with this key domain knowledge and we're shipping our 1.0 today, in collaboration with Firefox, MDN, and Edge.200+ guides (~1.7MB) of curated, hand-crafted implementation best-practices from web experts, updated as the web evolves. (Open source, obv, so.. we'll welcome your bikeshedding ;) Readable versions here: [1]I've spent the last 9 months obsessing over how to ship this as an agent skill + (Agentic RAG) CLI without blowing up your context window. (Or cedeing activation mechanics to MCP dynamic tool search). The skill description is minmaxed for activating on relevant frontend tasks. The RAG work I'm pretty proud of… originally a 500mb native stack down to a ~7MB pure-JS package, ~10ms search on your CPU.We just introduced a deterministic 'legacy-scan' (trained on 30k github repos) to identify old 'n dusted patterns that your agent can modernize. (92% avg precision on held-out repos.)People make a lot of claims about what coding agents are good/bad at. We wanted receipts, so we invested heavily in eval infra [2] to help us hill-climb, but also to identify when knowledge is common enough we can prune our guides. (Ofc, some of the things we thought AI didn't know turned out to be wrong :) We run codex/claude/agy against 200 tasks without the skill and then with.. In total ~1,700 playwright/AST-based assertions. Agents go from 55% pass unguided to 92% guided.Try it out: DISABLE_TELEMETRY=1 npx modern-web-guidance@latest install DISABLE_TELEMETRY=1 npx modern-web-guidance@latest search \"animate dialog modal\" DISABLE_TELEMETRY=1 npx modern-web-guidance@latest legacy-scan ./src If you spot something wrong or weird, give us a holler!Longer write-up on the 1.0: https://developer.chrome.com/blog/modern-web-guidance-v1---0: https://news.ycombinator.com/item?id=504164561: https://developer.chrome.com/docs/modern-web-guidance/guides2: https://googlechrome.github.io/modern-web-guidance-src/",
-      "score": 275,
-      "comments": 83,
+      "score": 334,
+      "comments": 101,
       "discussion_url": "https://news.ycombinator.com/item?id=50443812",
       "extra": {
         "top_comments": [
           "Here's a list of browser features the skills will tell your agent to use that are stable in Chrome but not supported by Firefox and Safari: CSS @function CSS calc-size() CSS interpolate-size CSS corner-shape CSS border-shape CSS flex-wrap: balance CSS text-fit CSS text-decoration-skip-spaces CSS scroll-axis-lock CSS scroll-target-group CSS :target-current CSS scroll-initial-target CSS container scroll-state queries scrollsnapchange event scrollsnapchanging event HTML focusgroup Element.startViewTransition() CSS view-transition-scope Interest Invokers (interestfor) LanguageModel (Prompt API) LanguageDetector Translator Summarizer API Window.fetchLater() Speculation Rules API Long Animation Frames API VisibilityStateEntry PerformanceSoftNavigation InteractionContentfulPaint Connection-Allowlist CSS url() integrity() modifier HTML meta name=\"text-scale\" HTML template for HTML processing instructions PasswordCredential Promise-returning scroll methods Web App Origin Migration Local Network Access permissions Request.targetAddressSpace beforeinstallprompt event To be fair, the skills also recommend ~11 features not supported by Chrome itself. And the project does seem concerned with compatibility: \"Guiding models to use sensible, lightweight fallbacks.\"",
           "Distribution suggestion: in addition to the npm packages you have right now, set up GitHub Pages to publish a markdown index document of the skills at https://googlechrome.github.io/modern-web-guidance-src/skill... (currently a 404)That index page should link to plain markdown versions of all of the documents, and should be designed for search with grep to find the right answers.That way I don't have to install anything at all - provided my agent has the ability to make HTTP requests I can tell it \"Look for tips on https://googlechrome.github.io/modern-web-guidance-src/skill...\" and it will fetch the index, then navigate to the most relevant documents - no MCP or npm or installation required at all.",
-          "> If you spot something wrong or weird, give us a holler!But how? Hopefully filing an issue on the modern-web-guidance-src repo is the right place? Anyway I filed one for using fromBase64 and toBase64 instead of atob and btoa.But since you're all in on agents anyway you should consider having one look through at least all of the JS, DOM, and HTML spec commits in the last 3-5 years and automatically triaging any that are clear improvements and are not used by agents. Would be pretty straightforward.---Btw, I think it would be very helpful to automatically provide versions of this depending on what browsers you're targeting. I don't want to use anything that hasn't been available in all evergreen browsers for at least a year, for example; I think most developers have a similar standard, or at the very least don't want to use the bleeding edge. And while it is _possible_ to get that from your repo, it takes some effort, either writing a script or letting the agent use its own judgement for every feature. That's work you could do on your end and save the rest of us from needing to."
-        ]
-      }
-    },
-    {
-      "id": "50443090",
-      "title": "AMD's Zen 6 Family: Feeding the Beast",
-      "url": "https://chipsandcheese.com/p/amds-zen-6-family-feeding-the-beast",
-      "source": "Hacker News",
-      "published_at": "2026-11-10T17:02:32+00:00",
-      "summary": "AMD's Zen 6 Family: Feeding the Beast",
-      "score": 191,
-      "comments": 73,
-      "discussion_url": "https://news.ycombinator.com/item?id=50443090",
-      "extra": {
-        "top_comments": [
-          "The worst thing about consumer (AM5) Zen4 and Zen5 is the I/O die chiplet and memory controller on it. I've heard they're finally going to ship a new I/O chiplet in Zen6 on a much smaller node. Their existing AM5 Zen4/5 memory controller when using both memory channels is terrible. Extremely hard or impossible to get above 3600 MT/s.Of all the things I'm looking forward to on Zen6, an improved memory controller is at the top of the list.Edit: and yes, others may say the paltry few PCIE 5.0 lanes is the worst thing about AM5, but that doesn't affect my usage much, and unfortunately I think that's a limitation of AM5 itself rather than the I/O chiplet.",
-          "The instruction level parallelism in the 2-ahead branch prediction is super cool stuff, I know zen5 had this feature but it's kind of crazy that memory is so slow relative to the cores that this complexity is beneficial and worthwhile.",
-          "> AMD has reduced the number of integer multiply units from three to two, with PDEP and PEXT throughput also falling from three instructions per cycle to two.Are PDEP and PEXT using the same (parts of) circuits as multiply (they are very different operations...), or are this just two independent drops of circuitry and the wording is just a bit unclear?"
+          "Chrome already has too much power in the browser standards world. The last thing we need is everyone's LLMs to follow Chrome team's guidance on how to do web development. This road leads back to \"To view this site, please view in [DOMINANT BROWSER]\""
         ]
       }
     },
     {
       "id": "50446246",
-      "title": "Six Math Essentials by Terence Tao",
+      "title": "Six Math Essentials",
       "url": "https://teorth.github.io/tao-web/six-math-essentials.html",
       "source": "Hacker News",
       "published_at": "2026-11-10T20:58:44+00:00",
-      "summary": "Six Math Essentials by Terence Tao",
-      "score": 144,
-      "comments": 27,
+      "summary": "Six Math Essentials",
+      "score": 208,
+      "comments": 38,
       "discussion_url": "https://news.ycombinator.com/item?id=50446246",
       "extra": {
         "top_comments": [
           "I quite liked this interview:Terence Tao explains 6 essential mathematical concepts: https://www.youtube.com/watch?v=OOMx2BHHWtE",
           "The amazon preview [1] does not even show the contents page. How am I supposed to check if I might be interested in this book?[1] https://www.amazon.com/dp/0374621799?tag=macmillan-20",
           "I heard he was writing a book about the Cosmic Distance Ladder. I was looking forward to that, I hope this isn't what it evolved into."
+        ]
+      }
+    },
+    {
+      "id": "50443716",
+      "title": "Claude Whiteboards, Claude Sheets, and Claude Data",
+      "url": "https://claude.com/resources/articles/sheets-whiteboards-data",
+      "source": "Hacker News",
+      "published_at": "2026-11-10T17:55:07+00:00",
+      "summary": "Claude Whiteboards, Claude Sheets, and Claude Data",
+      "score": 180,
+      "comments": 138,
+      "discussion_url": "https://news.ycombinator.com/item?id=50443716",
+      "extra": {
+        "top_comments": [
+          "When Anthropic released \"claude design\" people were telling that figma is dead now, but in fact claude design didn't move forward and stayed as a \"fallback tool\" when you quickly need to check / edit something. And for the serious work you still go to Figma and other designer tools. I have a feeling that Whiteboards, Sheets, Docs and so on will be the same - it's a nicer way to present artefacts, discuss them and maybe make notes, but for the proper editor experience you'll go to the tools which were designed for these things. And I'm not saying that Claude Something tools are bad, they're just overly simplified and limited, probably on purpose.",
+          "Model companies are starting to cannibalize their api customers's business cases. Shows that the regular avenues of revenue growth are slowing down",
+          "I have a different approach to the industry when it comes to work documents.I'm building https://smalldocs.org / https://github.com/espressoplease/smalldocs. My take is that the siloed approach of previous document formats is now redundant. The document formats were isolated because we needed heavy tools for humans to do the work. Now we need lightweight javascript predominately for rending as agents do the work, so document formats can be blended.This means SmallDocs allows an agent to put together a document (the underlying format is markdown with rich custom rendering on top) with text, diagrams, a multi tab spreadsheet, charts, code, slides, etc.Some example SmallDocs:* AlphaFold 3: capabilities, evidence and operational limits (diagram, spreadsheets, charts, code, math): https://smalldocs.org/s/k9BtoviHg1eMsWzrSDBVZM#k=v0oIAbORXDj...* Profitable growth can run out of cash (slides, spreadsheet, charts): https://smalldocs.org/s/nfCr0EEduLQwZAr0_v9ZR2#k=tv_BjigEYwt..."
         ]
       }
     }

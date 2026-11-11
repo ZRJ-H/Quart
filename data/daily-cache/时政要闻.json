@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-11-11T11:00:27.207419+08:00",
+  "cached_at": "2026-11-11T14:54:06.975832+08:00",
   "articles": [
     {
       "id": "https://www.news.cn/politics/20261111/3d612cdbaf2e4ed1a9d0a2900c88609f/c.html",
@@ -62,24 +62,12 @@
       "extra": {}
     },
     {
-      "id": "https://www.bbc.co.uk/news/articles/cmvg2xdwnwezo#0",
-      "title": "Headquarters of Haitian gang destroyed, El Salvador's president says",
-      "url": "https://www.bbc.co.uk/news/articles/cmvg2xdwnwezo?at_medium=RSS&at_campaign=rss",
+      "id": "https://www.bbc.co.uk/news/articles/cw8dvpmzp2p4o#1",
+      "title": "Kennedys sue to block Trump's arch, arguing it would cast shadow on JFK's grave",
+      "url": "https://www.bbc.co.uk/news/articles/cw8dvpmzp2p4o?at_medium=RSS&at_campaign=rss",
       "source": "BBC World",
-      "published_at": "2026-11-11T02:47:59+00:00",
-      "summary": "The infamous 400 Mawozo gang was targeted by the El Salvador military which has deployed thousands of troops to combat Haiti's gang violence crisis.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://www.bbc.co.uk/news/articles/c9j3433zy4vro#0",
-      "title": "Meghan's father Thomas Markle back in federal custody after allegedly removing ankle monitor",
-      "url": "https://www.bbc.co.uk/news/articles/c9j3433zy4vro?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "published_at": "2026-11-11T02:41:16+00:00",
-      "summary": "The 82-year-old was placed under house detention in Florida last week after being charged over possession of child sex abuse material.",
+      "published_at": "2026-11-11T03:44:06+00:00",
+      "summary": "Nine members of the political dynasty say the 250ft structure would cast a shadow on gravesites.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
@@ -90,8 +78,20 @@
       "title": "US House blocks bid to impeach Defence Secretary Pete Hegseth, for now",
       "url": "https://www.bbc.co.uk/news/articles/cxly4y5jzl0qo?at_medium=RSS&at_campaign=rss",
       "source": "BBC World",
-      "published_at": "2026-11-11T01:14:40+00:00",
+      "published_at": "2026-11-11T03:26:42+00:00",
       "summary": "Trump welcomes the outcome, praising Hegseth as a \"Great American Patriot\", but Democrats can try again next year.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
+      "id": "https://www.bbc.co.uk/news/articles/cmvg2xdwnwezo#0",
+      "title": "Headquarters of Haitian gang destroyed, El Salvador's president says",
+      "url": "https://www.bbc.co.uk/news/articles/cmvg2xdwnwezo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "published_at": "2026-11-11T02:47:59+00:00",
+      "summary": "The infamous 400 Mawozo gang was targeted by the El Salvador military which has deployed thousands of troops to combat Haiti's gang violence crisis.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
