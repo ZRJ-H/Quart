@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-11-10T15:35:38.491637+08:00",
+  "cached_at": "2026-11-11T11:00:27.207419+08:00",
   "articles": [
     {
-      "id": "50431058",
-      "title": "USPS now offers official ZIP Code boundary polygons",
-      "url": "https://postalpro.usps.com/zcb",
+      "id": "50445401",
+      "title": "Scion is back and is going to sell a kei truck in America",
+      "url": "https://www.theautopian.com/scion-is-back-and-its-going-to-sell-a-freaking-kei-truck-in-america/",
       "source": "Hacker News",
-      "published_at": "2026-11-09T19:58:59+00:00",
-      "summary": "USPS now offers official ZIP Code boundary polygons",
-      "score": 597,
-      "comments": 301,
-      "discussion_url": "https://news.ycombinator.com/item?id=50431058",
+      "published_at": "2026-11-10T19:50:46+00:00",
+      "summary": "Scion is back and is going to sell a kei truck in America",
+      "score": 353,
+      "comments": 262,
+      "discussion_url": "https://news.ycombinator.com/item?id=50445401",
       "extra": {
         "top_comments": [
-          "Dang, the prices are crazy. $10k for the lowest tier? I expect federal data to be free. Most federal data related to stuff like regulation (e.g. FCC spectrum use coverage maps), maps for federally-managed lands, etc. is free. And, it should be free. It's a core part of accountability and transparency. Historically there was a copying cost (having a human print physical copies on paper or CD/DVD/tape), which is understandable, but now that the incremental cost of each new copy approaches $0, that's what it should cost users of the data.",
-          "I thought these were going to be free and got so excited.FWIW if you're willing to deal with some 'fuzziness' and the occasional missing zip code that's commercial only, the ZCTA shapefiles are free and are close enough for many purposes: https://www.census.gov/programs-surveys/geography/guidance/g...",
-          "This is interesting. For a long time it was pointed out that ZIP codes, unlike say, city or state boundaries, were not properly representable as polygons, since they don't divide up acreage into zones, but rather label postal delivery routes. Suppose I build a new neighborhood way out in the middle of nowhere. The \"polygon\" concept suggests that we could look and see what polygon I'm in, and that will determine what post office delivers my mail. But in reality, if there was no route to that area already, they could decide to make it part of any one of the surrounding routes.I suppose though, as long as you let the polygons map has uncontained areas, where no routes currently exist, it's a doable task to draw polygons around the limits of every route network, as long as you don't mind that they may have lots of weird ragged edges."
+          "I use a kei truck for farming. They are incredibly pragmatic little vehicles. They are very capable driving around on dirt/gravel agricultural roads with 4WD, and they are inexpensive and robust enough that you can really beat them up and use them as a tool without worry. Repairs and replacement parts are ubiquitous and inexpensive. Having the sides of bed fold down is also really useful.They aren't comfortable to drive at all (although just having A/C at all on a hot summer day in the field is a godsend), and I wouldn't want to do longer trips in one - although you certainly could in a pinch.It seems like Toyota/Scion is just testing the waters here, and I'm not sure how successful they'll be. But I hope there is a future for kei trucks in the US.",
+          "25 mph works for golf courses, resort, or island use. In rural areas on the mainland, roads connecting towns often have 45 or 55 mph speed limits so unless you plan on staying on the farm I don't think these are practical for trips to go shopping, dumping, hauling, etc.As for the imports, I saw one of these 90s-era right-hand drive kei trucks at a parking lot a few months ago and talked with the owner. He was a young guy who lived in Boston, said it was super easy to park. Speed maxed out at 70 mph, which is fine for local trips but maybe not for long highway trips.For people in jurisdictions that allow 30 year old truck imports, and are interested in getting one, there are other countries that use such trucks and have left-hand drive. Taiwan has models from CMC and Suzuki, and I believe South Korea also makes them.",
+          "With a built in 25mph limiter, that eliminates \"city\" driving too unfortunately. Most roads around me are 35 mph.There's sizeable demand for people who want to be able to do runs to the bigbox stores for garden and DIY renovation supplies and store it the rest of the time."
         ]
       }
     },
     {
-      "id": "50429426",
-      "title": "Google Gemini routes personal Drive files and emails to human annotators",
-      "url": "https://github.com/thisisme6598/gemini_files/",
+      "id": "50443824",
+      "title": "Synaptics patent claims stop work on DisplayLink drivers",
+      "url": "https://lwn.net/SubscriberLink/1102549/acbc92e00cee3a3f/",
       "source": "Hacker News",
-      "published_at": "2026-11-09T18:24:38+00:00",
-      "summary": "Google Gemini routes personal Drive files and emails to human annotators",
-      "score": 548,
-      "comments": 124,
-      "discussion_url": "https://news.ycombinator.com/item?id=50429426",
+      "published_at": "2026-11-10T18:02:02+00:00",
+      "summary": "Synaptics patent claims stop work on DisplayLink drivers",
+      "score": 318,
+      "comments": 176,
+      "discussion_url": "https://news.ycombinator.com/item?id=50443824",
       "extra": {
         "top_comments": [
-          "Note that this is specifically Consumer Gemini with Connected Apps; Workspace Gemini (and Workspace Intelligence, the RAG thing for enterprise/Workspace) still claims not to be subject to human review:https://knowledge.workspace.google.com/admin/generative-ai/g...So basically if you use consumer Gemini and specifically authorize the GMail app, for example, then it will sometimes use the GMail tool to load your mail from GMail, and that data (like all data in consumer Gemini) might be given to the human annotation pipeline.This whole thing seems deeply stupid to me from Google's standpoint, although they've never been good at product management - there's _way_ too much nuance to what's going on and even if they aren't technically affected, this kind of thing will almost surely make their paying enterprise customers leery.",
-          "Really frustrating that our privacy eroded to the point anyone would think this is reasonable.But it does explain some conversations with Gemini when I wonder why it's talking about particular things. Like asking it about consultation processes for changes to parks only to get a response that's uncannily tuned to the email I got prompting the enquiry.No mention of I just read your emails etc .",
-          "It's worse than that.> Google Photos data is used to infer your interests, relationships to people in your photos, and where you've been, including by associating your face with corresponding location data and timestamps. This data is also used to do things for you, like look up your info or add items to your grocery list, and to improve Google services, including training generative AI.How does that work exactly if the images aren't even real and are generated by AI? When Google siphons up these photos to help them train their AI, the AI is now going to make associations as depicted in that photograph?That you really were with that person, in that place, in that situation, on that date? As some sort of a fact?Can someone else create that image and just put it in their library and then have that become a fact on your behalf when picked up, analyzed and trained on?Where does that all lead?"
+          "> If you fail to comply with our demands by the specified deadline, Synaptics will seek monetary compensation from you in the amount of US$25,000 to recoup the costs and effort required to create the attached documentation of your infringing acts.Obviously this is intended as a scare tactic, but, surely that could never hold up in court? Surely the burden of proof is on the owner of the patents to prove that someone's work is infringing, and you can't then say \"We are charging the defendant to prove that we have a valid case against them.\" ?",
+          "> I will also be sending to you our demand for substantial monetary compensation to recoup the cost and effort required to create such documentation of your infringing acts.There is no universe in which this is a reasonable response.",
+          "DisplayLink is dying due to high DDR prices. Dock companies are cancelling their display link portfolios due to the unfavorable economics.Good riddance if this is how OSS is treated by synaptics.Most recent thunderbolt docks and usb4 docks have good display support, and fallback to DisplayPort alt mode if the host does not support tbt4. Which is much better supported over type-c. Intel and AMD upstream host support."
         ]
       }
     },
     {
-      "id": "50429068",
-      "title": "Claude Fable 5.2 and Mythos 5.2",
-      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "id": "50443427",
+      "title": "Val Town is winding down",
+      "url": "https://blog.val.town/winding-down",
       "source": "Hacker News",
-      "published_at": "2026-11-09T18:01:10+00:00",
-      "summary": "Claude Fable 5.2 and Mythos 5.2",
-      "score": 479,
-      "comments": 746,
-      "discussion_url": "https://news.ycombinator.com/item?id=50429068",
+      "published_at": "2026-11-10T17:31:14+00:00",
+      "summary": "Val Town is winding down",
+      "score": 317,
+      "comments": 83,
+      "discussion_url": "https://news.ycombinator.com/item?id=50443427",
       "extra": {
         "top_comments": [
-          "I’ve had a chance to use fable 5.2. Some observations:- Anthropic is finally well balanced across models. Meaning: Opus 5.5 is so good that I do not feel Fable FOMO as I did when it was Fable 5/5.1 vs Opus 4.8/5. And Sonnet 5.5 sometimes makes me forget about Opus.- Fable is good, but you really have to push the ambition of your prompt in order to see proper separation from Opus 5.5. I personally have a hard time telling the difference between Fable 5.2 and Opus 5.5 for ordinary coding tasks.- It’s way faster and more reliable: one of the worst things about fable 5.1 was how slow it was an, on top of that, how frequently it would suffer from max output token overflows. I got none of these issues with 5.2.- Fable is exceptional at drawing. It’s ability to render an image with JavaScript actually has me questioning the value of dedicated image models. I prefer the images I’ve gotten fable/opus to make for me over those from gpt-image, it’s wild to think we’re at this point.",
-          "- Why are they stacking Fable xHigh against Carbon Med?- How did they produce such a bizarre effort-intel curve for Carbon that goes against every available benchmark?- Why did they leave Carbon-- positioned primarily as a cyber model-- off of the single cyber benchmark comparison?- Why do they switch to comparing against Argon (rather than carbon) for robodojo?",
-          "We've been early testing Fable 5.2, and have been surprised by its coding ability. It was able to work with an esoteric 600k line fortran codebase to speed up some computational material science work for us by 36 times (!). Given that this could be done in 2 days, we've decided to open-source the results https://github.com/discovered-materials/dm_qe"
+          "I remember Steve from my days working on Eve, he was part of that community and always a big proponent of end-user programming. I was happy to see him working on this project but am not surprised it's shutting down.Nothing to to do with the quality of Val Town, but making a business in this space is really, really hard. You can't start the business without raising millions (Eve raised $2M, Darklang raised $3.5M, Val Town raised $7M), but it's hard to scale out a proof of concept in the time investors want to start seeing an ROI. It seems to me about 2-3 years is all you get for seed runway, when realistically projects like this should take at minimum 5 years incubating. Darklang extended their runway to ~7-8 years by firing all the devs and keeping just the founder on life support. Ultimately even that wasn't enough.But maybe with AI this could work, I dunno.What's required to make it all work is a fundamental leap in programming interface design, but the business side doesn't look any different from a typical SaaS. So unless you hit the ball out of the park you're entering the market with an experimental product, then you have to deal with product-market fit even if you have the right product, so you really only have one shot.It's very hard to go back to investors and ask for another round of funding when there's no discernable market and the product isn't gaining the traction investors would like to see.Anyway, kudos to Steve for fighting the good fight! What would really be great is to read an in-depth post mortem on the project. Looking forward to it if you have time!",
+          "Not mentioned directly in the blog post, but Val Town was fundamentally organized around the Deno runtime, whose team will stop maintaining it next year after joining Cloudflare [0].[0] https://deno.com/blog/cloudflare",
+          "This is sad. We're in a similar space as Val Town (which technically made us competitors) but I've always appreciated the care they had for the craft and the values they drove forward as a company like their transparency (even their investor updates were public).Steve and Tom also individually have some of the best blogs out on the web.I wish them all the best with whatever comes next. I'm pretty sure they'll all do great things."
         ]
       }
     },
     {
-      "id": "50429734",
-      "title": "E-means: Outperforming k-means in one-tenth the epochs",
-      "url": "https://e-means.github.io/",
+      "id": "50447074",
+      "title": "After 7 months, Glasswing overwelms maintainers with underwhelming findings",
+      "url": "https://www.vulncheck.com/blog/anthropic-glasswing-november-update",
       "source": "Hacker News",
-      "published_at": "2026-11-09T18:45:43+00:00",
-      "summary": "E-means: Outperforming k-means in one-tenth the epochs",
-      "score": 368,
-      "comments": 31,
-      "discussion_url": "https://news.ycombinator.com/item?id=50429734",
+      "published_at": "2026-11-10T22:17:56+00:00",
+      "summary": "After 7 months, Glasswing overwelms maintainers with underwhelming findings",
+      "score": 287,
+      "comments": 126,
+      "discussion_url": "https://news.ycombinator.com/item?id=50447074",
       "extra": {
         "top_comments": [
-          "I wonder if this could be used anywhere as an alternative to Lloyd's algorithm. I have a hobby project which uses Lloyd's to \"relax\" an icosohedral equal area mesh on the surface of a sphere [1]. I'm going to try to swap it out with an adaptation of this and see if it's much better or if I can afford more iterations with this method.Edit: tried it, and it’s definitely not better for this use case. e-means wins by needing fewer passes over a huge dataset, but relaxing a mesh on a sphere has no dataset: each Voronoi cell’s centroid can be computed directly from its geometry. Mini-batches just swap that for a noisy sampled estimate of the same thing. It has the same objective and the same optimum, so at best it matches Lloyd. In practice it was much slower and left the grid noisy, and with small sample budgets it even tangled the mesh.[1] https://webgcm.app/explain/grid#nudging-the-cells-into-shape",
-          "I adapted the method to my IVF index (the code-daemon project) and achieved a 146x speedup on the GPU.That's impressive!",
-          "As far as I can tell this isn't particularly new, people have been doing minibatch k-means for a while, including with an EWA update. I assume the contribution here is that they tried to measure how much better it is and provided code? I'm not sure I agree with their claims though, because they didn't really measure the things that matter–sure, it's better than Lloyd's algorithm, but that's a very low bar.If you are claiming that your algorithm is \"highly parallelizable\" and comes with \"wall-clock speedups\", then the actual metrics that matter here is not number of steps or even basic wall clock time as your size remains fixed, but how your algorithm scales as more data is present or parallelism is required. This algorithm splits up the minibatch across workers and has them compute local updates, then allreduces it. As the amount of data goes up, the comms become much more expensive (since you have to use a worse transport layer), which means that you're basically locked in a desperate attempt to do more local work before you send your partial update to everyone else. If you attempt this (not explored in the paper) you will find that the improvement in clustering by doing this extra work has diminishing returns–you only reduce the number of updates by a few steps (which is what drives your wall clock time). At scale you end up being heavily comms limited and not super parallel at all."
+          "I received 9 reports of Fil-C issues from AnthropicAll of them were real bugs. None of them were false positives.The quality of the reports was exceptional. (My baseline is doing security defense on a browser engine, so my baseline has a large sample count and is probably representative of what experts are capable of.)The quality of the proposed fixes was alright. I took some of the fixes verbatim. I used most of the fixes as significant inspiration for doing it my way.The quality of the test cases was exceptional.Maybe I’m special somehow! But I just want to call out the enormous chasm between what I saw of anthropic’s capability and what TFA says",
+          "As someone working at a bigtech co that has spent every single working day (and many weekends) since the launch of Mythos patching serious, company-ending type of security issues, these types of posts really irk me.Public datasets of CVEs being underwhelming doesn't mean much if all of the issues are in private company codebases that will never get a CVE number assigned and will never get a fancy blog post. You're never going to hear about them, and the people working on them probably can't tell you about them, but that doesn't mean they don't exist.We're all worried about OSS having security issues because of how widely used things like PHP or curl are... but the same can be said about email providers, document collaboration SaaSes, payment processors, etc that millions of companies depend. Those companies will never be in datasets like this, and they'll never publicly disclose how many issues they found.",
+          "The PHP2Shell vulnerability ended up being paradoxically comforting for me.They turned frontier models loose on PHP, and the big one they found was based on a previously known logic flaw that was extremely difficult to exploit. Which makes sense: hence the need for frontier models.And in the wild, while there have been many attempts and a few simple demo successes, the practical impact has seemed to be small, seemingly constrained by the length of the chain and the diversity of PHP configs.In short, it was indeed a major vulnerability, but not magic (in the Arthur C Clarke sense).I think ultimately the fear comes down to: do you believe that code can be secured. I recognize that there is probably no objective way to deductively prove it because of the Halting Problem etc. But if one believes code can be constructed to operate to spec, then there must be a limit to the damage an LLM can do, even a very smart one.I think we are going through a phase where a lot of known triaged code shortcomings will get exposed and hopefully fixed. Sucks while it is happening. But not actually the first round of this type of evolution. And ultimately I think as before, we will come out the other side with more secure and durable technology."
         ]
       }
     },
     {
-      "id": "50433659",
-      "title": "Fable 5.2 one-shotted my nephew's dream game",
-      "url": "https://notesbylex.com/fable-5-2-one-shotted-my-nephews-dream-game",
+      "id": "50444129",
+      "title": "Starlink Mini 2",
+      "url": "https://starlink.com/mini-2",
       "source": "Hacker News",
-      "published_at": "2026-11-09T23:08:13+00:00",
-      "summary": "Fable 5.2 one-shotted my nephew's dream game",
-      "score": 341,
-      "comments": 236,
-      "discussion_url": "https://news.ycombinator.com/item?id=50433659",
+      "published_at": "2026-11-10T18:22:32+00:00",
+      "summary": "Starlink Mini 2",
+      "score": 279,
+      "comments": 284,
+      "discussion_url": "https://news.ycombinator.com/item?id=50444129",
       "extra": {
         "top_comments": [
-          "Growing up, games were such a scarce commodity that you'd really suck all the marrow out and spend hours beating your best times, looking for Easter eggs, or messing with custom maps and mods. There was a whole genre of gameplay around just exploiting physics bugs to jump a bit further.The other night I carelessly made an infinite runner game while watching TV and the feeling of sheer abundance quickly faded into a bit of depression. Without scarcity, nothing is really valuable.",
-          "I feel for kids growing up with LLMs like this. They will never impress a parent, teacher or peer with a simple “hello world” type text game, when the peer could generate a full multiplayer video game with a couple of prompts.The world has changed and we can never go back.",
-          "\"one-shotting\" is fun for a low (human) effort toy, but it's a mistake to get overly hung up on LLMs getting everything right on the first try, since a lot of that is the harness and the internal prompting that makes it burn extra tokens to test everything to get it in that one \"shot\" (ui turn).While it's nice that LLMs are getting better at arriving at the desired deliverable with fewer surprises (or broken things) doing it is not necessarily a sign that the model is actually smarter, just an indication that what you are doing is likely a well-trodden path for the model, the RL and the harness."
+          "This has completely changed my industry (hard rock mining). A lot of the time drillers would be in the middle of nowhere looking for resources and would be sometimes days away from providing results (which also lead to lots of dodgy situations where drillers would know some results before market…) now it’s instant live feed. It’s made revising drilling plans trivial. Very cool",
+          "Smart. Everywhere we take the Mini we also haul a portable battery. A fun thing we did a few times was that we took the whole thing on a weekday to Golden Gate Park and my wife and I worked while my daughter and grandparents played around and saw things and then they came back and we ate lunch and they went back around to see stuff. Lots of fun.Park was practically empty and it was a bright and sunny day.",
+          "Starlink is an interesting option for RVs, but I can't use it because they don't offer static IPs or even ip addresses that aren't behind NAT."
         ]
       }
     },
     {
-      "id": "50429024",
-      "title": "Muse Ember: Our smallest, most efficient model",
-      "url": "https://research.meta.ai/blog/muse-ember",
+      "id": "50443812",
+      "title": "Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives",
+      "url": "https://github.com/GoogleChrome/modern-web-guidance",
       "source": "Hacker News",
-      "published_at": "2026-11-09T17:58:46+00:00",
-      "summary": "Muse Ember: Our smallest, most efficient model",
-      "score": 289,
-      "comments": 118,
-      "discussion_url": "https://news.ycombinator.com/item?id=50429024",
+      "published_at": "2026-11-10T18:01:15+00:00",
+      "summary": "Browsers natively handle a lot of what used to take 50 lines of JS (or a dependency): `CSS.highlights` for text range highlighting without s everywhere, `` and showModal() give you backdrops and ideal focus management, `field-sizing` to auto-grow textareas as the user types.. (Something yesterday's ftrain post touched on [0])Models know about some of these by name, but consistently won't default to using the platform-native solution and instead prefer the incumbent +JS based pattern. We started an effort in Chrome to supplement coding agents with this key domain knowledge and we're shipping our 1.0 today, in collaboration with Firefox, MDN, and Edge.200+ guides (~1.7MB) of curated, hand-crafted implementation best-practices from web experts, updated as the web evolves. (Open source, obv, so.. we'll welcome your bikeshedding ;) Readable versions here: [1]I've spent the last 9 months obsessing over how to ship this as an agent skill + (Agentic RAG) CLI without blowing up your context window. (Or cedeing activation mechanics to MCP dynamic tool search). The skill description is minmaxed for activating on relevant frontend tasks. The RAG work I'm pretty proud of… originally a 500mb native stack down to a ~7MB pure-JS package, ~10ms search on your CPU.We just introduced a deterministic 'legacy-scan' (trained on 30k github repos) to identify old 'n dusted patterns that your agent can modernize. (92% avg precision on held-out repos.)People make a lot of claims about what coding agents are good/bad at. We wanted receipts, so we invested heavily in eval infra [2] to help us hill-climb, but also to identify when knowledge is common enough we can prune our guides. (Ofc, some of the things we thought AI didn't know turned out to be wrong :) We run codex/claude/agy against 200 tasks without the skill and then with.. In total ~1,700 playwright/AST-based assertions. Agents go from 55% pass unguided to 92% guided.Try it out: DISABLE_TELEMETRY=1 npx modern-web-guidance@latest install DISABLE_TELEMETRY=1 npx modern-web-guidance@latest search \"animate dialog modal\" DISABLE_TELEMETRY=1 npx modern-web-guidance@latest legacy-scan ./src If you spot something wrong or weird, give us a holler!Longer write-up on the 1.0: https://developer.chrome.com/blog/modern-web-guidance-v1---0: https://news.ycombinator.com/item?id=504164561: https://developer.chrome.com/docs/modern-web-guidance/guides2: https://googlechrome.github.io/modern-web-guidance-src/",
+      "score": 275,
+      "comments": 83,
+      "discussion_url": "https://news.ycombinator.com/item?id=50443812",
       "extra": {
         "top_comments": [
-          "Six effort levels (minimal, low, medium, high, xhigh, max), so here are six pelicans (actually five, \"high\" didn't return a complete SVG):https://tools.simonwillison.net/markdown-svg-renderer?url=ht...There's usually a reasonably strong correlation between thinking level and visual quality of the pelican. This is the first time I've seen that correlation appear to break - more reasoning tokens doesn't seem to produce an obviously better SVG.",
-          "When they said the model was the \"smallest\" of their models yet, I was really hoping it would be open weights. I can't find any weights, how sad :(",
-          "This is starting to feel just like the early PC days. A bunch of Computer models coming out, all shapes and color, but eventually it settled around mouse keyboard, monitormost people, use the office suite: Word, Spreadsheet , presentations, database.I bet we're going to see the exact same thing with LLMs at specialized models instead of the everything models.One for lawyers, coders, Accountants, Designers, etc…"
+          "Here's a list of browser features the skills will tell your agent to use that are stable in Chrome but not supported by Firefox and Safari: CSS @function CSS calc-size() CSS interpolate-size CSS corner-shape CSS border-shape CSS flex-wrap: balance CSS text-fit CSS text-decoration-skip-spaces CSS scroll-axis-lock CSS scroll-target-group CSS :target-current CSS scroll-initial-target CSS container scroll-state queries scrollsnapchange event scrollsnapchanging event HTML focusgroup Element.startViewTransition() CSS view-transition-scope Interest Invokers (interestfor) LanguageModel (Prompt API) LanguageDetector Translator Summarizer API Window.fetchLater() Speculation Rules API Long Animation Frames API VisibilityStateEntry PerformanceSoftNavigation InteractionContentfulPaint Connection-Allowlist CSS url() integrity() modifier HTML meta name=\"text-scale\" HTML template for HTML processing instructions PasswordCredential Promise-returning scroll methods Web App Origin Migration Local Network Access permissions Request.targetAddressSpace beforeinstallprompt event To be fair, the skills also recommend ~11 features not supported by Chrome itself. And the project does seem concerned with compatibility: \"Guiding models to use sensible, lightweight fallbacks.\"",
+          "Distribution suggestion: in addition to the npm packages you have right now, set up GitHub Pages to publish a markdown index document of the skills at https://googlechrome.github.io/modern-web-guidance-src/skill... (currently a 404)That index page should link to plain markdown versions of all of the documents, and should be designed for search with grep to find the right answers.That way I don't have to install anything at all - provided my agent has the ability to make HTTP requests I can tell it \"Look for tips on https://googlechrome.github.io/modern-web-guidance-src/skill...\" and it will fetch the index, then navigate to the most relevant documents - no MCP or npm or installation required at all.",
+          "> If you spot something wrong or weird, give us a holler!But how? Hopefully filing an issue on the modern-web-guidance-src repo is the right place? Anyway I filed one for using fromBase64 and toBase64 instead of atob and btoa.But since you're all in on agents anyway you should consider having one look through at least all of the JS, DOM, and HTML spec commits in the last 3-5 years and automatically triaging any that are clear improvements and are not used by agents. Would be pretty straightforward.---Btw, I think it would be very helpful to automatically provide versions of this depending on what browsers you're targeting. I don't want to use anything that hasn't been available in all evergreen browsers for at least a year, for example; I think most developers have a similar standard, or at the very least don't want to use the bleeding edge. And while it is _possible_ to get that from your repo, it takes some effort, either writing a script or letting the agent use its own judgement for every feature. That's work you could do on your end and save the rest of us from needing to."
         ]
       }
     },
     {
-      "id": "50429430",
-      "title": "The first 300-millimeter power silicon carbide (SiC) wafer",
-      "url": "https://www.infineon.com/press-release/2026/infpr202611-028",
+      "id": "50443090",
+      "title": "AMD's Zen 6 Family: Feeding the Beast",
+      "url": "https://chipsandcheese.com/p/amds-zen-6-family-feeding-the-beast",
       "source": "Hacker News",
-      "published_at": "2026-11-09T18:25:01+00:00",
-      "summary": "The first 300-millimeter power silicon carbide (SiC) wafer",
-      "score": 128,
-      "comments": 70,
-      "discussion_url": "https://news.ycombinator.com/item?id=50429430",
+      "published_at": "2026-11-10T17:02:32+00:00",
+      "summary": "AMD's Zen 6 Family: Feeding the Beast",
+      "score": 191,
+      "comments": 73,
+      "discussion_url": "https://news.ycombinator.com/item?id=50443090",
       "extra": {
         "top_comments": [
-          "The summary at the top of that page is:Infineon marks innovation milestone with world’s first 300-millimeter power silicon carbide (SiC) waferPBusiness & Financial Press Nov 09, 2026Infineon presents industry-first functional power devices processed on 300-millimeter silicon carbide wafersTechnological breakthrough underlines Infineon’s innovation strength and leadership in power semiconductors and wide-bandgap technologies300-millimeter SiC process feasibility lays the foundation for secure, future-proof SiC supply to customers in automotive, renewable energy, industrial and AI data center applicationsInfineon will present the first processed 300-millimeter SiC wafer to the public at the electronica trade show starting 10 November 2026 in Munich",
-          "What surprises me with Infineon is that they seem to not work on a LLM on a chip. In particular that here in Linz Infineon, Apple's 5G modem designer and the Johannes Kepler University with Sepp Hochreiter (Inventor of LSTM) are just next to each other. I watched a interview of Infineon head of AI just recently, and I was like excited to hear about some cool hardware. And all he did is talk about how he uses LLMs.",
-          "Anyone know why it took so long for them to transition to 300mm? As mentioned in the article, they're mainly using existing 300mm equipment designed for silicon, which transitioned years ago. I imagine some process steps are different (mainly growing to larger boule, but probably others), but it doesn't seem like they would be huge blockers."
+          "The worst thing about consumer (AM5) Zen4 and Zen5 is the I/O die chiplet and memory controller on it. I've heard they're finally going to ship a new I/O chiplet in Zen6 on a much smaller node. Their existing AM5 Zen4/5 memory controller when using both memory channels is terrible. Extremely hard or impossible to get above 3600 MT/s.Of all the things I'm looking forward to on Zen6, an improved memory controller is at the top of the list.Edit: and yes, others may say the paltry few PCIE 5.0 lanes is the worst thing about AM5, but that doesn't affect my usage much, and unfortunately I think that's a limitation of AM5 itself rather than the I/O chiplet.",
+          "The instruction level parallelism in the 2-ahead branch prediction is super cool stuff, I know zen5 had this feature but it's kind of crazy that memory is so slow relative to the cores that this complexity is beneficial and worthwhile.",
+          "> AMD has reduced the number of integer multiply units from three to two, with PDEP and PEXT throughput also falling from three instructions per cycle to two.Are PDEP and PEXT using the same (parts of) circuits as multiply (they are very different operations...), or are this just two independent drops of circuitry and the wording is just a bit unclear?"
         ]
       }
     },
     {
-      "id": "50434310",
-      "title": "Locating the source of a mysterious beep",
-      "url": "https://simonwillison.net/2026/Nov/9/mysterious-beeps/",
+      "id": "50446246",
+      "title": "Six Math Essentials by Terence Tao",
+      "url": "https://teorth.github.io/tao-web/six-math-essentials.html",
       "source": "Hacker News",
-      "published_at": "2026-11-10T00:10:46+00:00",
-      "summary": "Locating the source of a mysterious beep",
-      "score": 126,
-      "comments": 61,
-      "discussion_url": "https://news.ycombinator.com/item?id=50434310",
+      "published_at": "2026-11-10T20:58:44+00:00",
+      "summary": "Six Math Essentials by Terence Tao",
+      "score": 144,
+      "comments": 27,
+      "discussion_url": "https://news.ycombinator.com/item?id=50446246",
       "extra": {
         "top_comments": [
-          "I didn't mention this in the article, but this isn't the first time my family has been driven almost spare by a mysterious, hard-to-track beep.Our dog goes outside and hides in the lavender bush if a smoke alarm starts making a \"I need a battery\" noise.So I went into this project with the attitude that I would like to solve this class of problem forever.",
-          "You can also solve this in O(logn) using a physical binary search:1) Move half the boxes to another room.2) Listen for a beep and determine which room the beep comes from.3) Take the boxes in that room and split them in half again.4) Repeat until one box is left.",
-          "Why didn't you time the interval between the beeps? Then when the next beep was coming up, just listen to a particular part of the room or set of boxes until you found it."
+          "I quite liked this interview:Terence Tao explains 6 essential mathematical concepts: https://www.youtube.com/watch?v=OOMx2BHHWtE",
+          "The amazon preview [1] does not even show the contents page. How am I supposed to check if I might be interested in this book?[1] https://www.amazon.com/dp/0374621799?tag=macmillan-20",
+          "I heard he was writing a book about the Cosmic Distance Ladder. I was looking forward to that, I hope this isn't what it evolved into."
         ]
       }
     }
