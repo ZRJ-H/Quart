@@ -1,0 +1,149 @@
+{
+  "cached_at": "2026-10-30T14:09:14.949076+08:00",
+  "articles": [
+    {
+      "id": "50294702",
+      "title": "Patrick Stewart has died",
+      "url": "https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html",
+      "source": "Hacker News",
+      "published_at": "2026-10-29T19:41:39+00:00",
+      "summary": "https://archive.ph/y4Egmhttps://en.wikipedia.org/wiki/Patrick_Stewart",
+      "score": 2704,
+      "comments": 571,
+      "discussion_url": "https://news.ycombinator.com/item?id=50294702",
+      "extra": {
+        "top_comments": [
+          "Watching him in Star Trek TNG made me reevaluate how management of people should be done, his character was assertive but compassionate. High morals coupled with grounded reason.I also want to mention his hilarious role as bullock in American dad, the way he takes a role both so seriously and ridiculously makes him so fantastically hilarious.I love him and will miss him.",
+          "One thing that doesn't get enough attention - when COVID lockdowns started, he just made reels reading Shakespeare's sonnets. It was such a lovely break from everything else on social media. Really loved those.",
+          "\"It is possible to commit no mistakes and still lose. That is not a weakness, that is life.\" - Jean-Luc PicardGood startup advice. Good life advice."
+        ]
+      }
+    },
+    {
+      "id": "50296470",
+      "title": "Binance-hacker-1029 – $5.6B stolen from Binance",
+      "url": "https://arkm.com/explorer/entity/21a94755-f604-45e5-9501-6542e23005e8",
+      "source": "Hacker News",
+      "published_at": "2026-10-29T21:38:59+00:00",
+      "summary": "Binance-hacker-1029 – $5.6B stolen from Binance",
+      "score": 1044,
+      "comments": 626,
+      "discussion_url": "https://news.ycombinator.com/item?id=50296470",
+      "extra": {
+        "top_comments": [
+          "About $2.4 billion out of this is already frozen by Circle and Tether. Some of the big ones:- 971.15M USDT (Ethereum): https://etherscan.io/tx/0x7baba482077843514d9c72bac0110ba091...- 823M USDC (Ethereum): https://etherscan.io/tx/0xc954c86f118e8e410e6a3eb9e3b38ff4a9...- 312.73M USDT (Tron): https://tronscan.org/#/transaction/71b0ec0fe873fe820c37cc3ec...- 175M USDT (Ethereum): https://etherscan.io/tx/0x0c07a5e428ce233a3bcb40f257ad899594...",
+          "Some of the old Mt Gox threads are an interesting read today:https://news.ycombinator.com/item?id=7203051https://news.ycombinator.com/item?id=7294762https://news.ycombinator.com/item?id=7369879",
+          "Molly White (she runs web3isgoinggreat) seems to think this is real [0][0]: https://bsky.app/profile/molly.wiki/post/3mz27m5slcc2o"
+        ]
+      }
+    },
+    {
+      "id": "50290177",
+      "title": "LLM Voice",
+      "url": "https://martinfowler.com/bliki/LLM-Voice.html",
+      "source": "Hacker News",
+      "published_at": "2026-10-29T14:57:55+00:00",
+      "summary": "LLM Voice",
+      "score": 408,
+      "comments": 213,
+      "discussion_url": "https://news.ycombinator.com/item?id=50290177",
+      "extra": {
+        "top_comments": [
+          "As someone who is aggressively pro AI, I've also noticed how awful everything is to read lately. It's always so hard to put my finger on the exact thing, but it's a mixture of everything sounding identical and everything being a rambling unconcise mess. I find I routinely start reading interesting posts and just .. stop part way, abandoning it. A site I read stories on has been flooded with AI generated content, all of it terrible, and it just makes me retreat to things created before 2023 as a way of filtering it all out.",
+          "I just can't seem to stay interested and read LLM text. It just seems to lack going somewhere, its information density is often really low and its full of odd isms that I don't find very interesting to read. I don't have a good radar for detecting the various LLM particular speech patterns but everytime I have an issue with an article there is always people talking about how its clearly AI written.I find the same thing with written results out of AI \"research\", it is a slog to read through it and most of it can be skipped even if it can sometimes be useful its an unenjoyable read.",
+          "All human communication is based on internally simulating the presumed mind that was/will-be at the other end. Even now, some part of your brain--however subconscious--is building a tiny sketch of me with assumed beliefs and motivations, and you're using it to predict and interpret the next words.But what happens when everything is persistently, subtly wrong? When we cannot smoothly map the text to a simulation? An inner-sim keeps throwing errors and mis-predicting what comes next is unnerving and draining. Like talking to a human who is not currently sane.Sometimes I imagine LLM text like a plastic animal model put out to confuse local wildlife, where it hits just enough instinctive triggers that they try to mate with it before leaving in frustrated bafflement.______Half-Life 2, Dr. Kleiner: \"Never fear, Gordon, she's de-beaked and completely harmless. The worst she might do is attempt to couple with your head. Fruitlessly!\""
+        ]
+      }
+    },
+    {
+      "id": "50291054",
+      "title": "H.264 Is Magic (2016)",
+      "url": "https://sidbala.com/h-264-is-magic/",
+      "source": "Hacker News",
+      "published_at": "2026-10-29T15:53:03+00:00",
+      "summary": "H.264 Is Magic (2016)",
+      "score": 378,
+      "comments": 141,
+      "discussion_url": "https://news.ycombinator.com/item?id=50291054",
+      "extra": {
+        "top_comments": [
+          "Had the pleasure of working with Jason Garrett-Glaser (better known as DarkShikari) circa 2011 on a patch for x264 to better utilize more cores (slice-threaded lookahead). At the time he was working with Sony to optimize their PlayStation game streaming service, and this had the potential to lower encoding latency (critical to game streaming) even on same-core systems by spreading the frame over more cores to do more parallel work, and doing more intelligent scheduling and convergence after that tile-based work was reconverged into a frame. At the time we were using servers with 48 physical cores to do transcoding, a bit of a rarity in a single NUMA space back then and there were no instances to test this on so I flamegraph traced a few encodes at very high thread parallel counts and send back the instrumented profiles (from a custom compiled version) showing the core work being done and he used that to optimize the motion estimation code which worked on the first shot to perfectly level out cpu usage and increase encoding speed across ~24 cores (was previously topping out around 8 and running one core hot iirc). I got a look into how exotic and complex this project was, particularly in terms how low level and advanced things like motion estimation, quantizing and perceptual compression were... it was and still is sort of magic how many smart techniques are baked into something that we barely pay attention to. They were, even at that time, working on x265.His blog, Diary of an x264 developer, was a great read too for anyone wanting to get a vantage point on how crazy that codebase was.[1]https://github.com/mstorsjo/x264/blob/master/doc/threads.txt(edit: was Gaikai that was acquired by Sony in 2012 and is the basis for PlayStation Now)",
+          "~370 MB/sec of raw data.[...]This is next to impossible to deal with.[...]You can't move it anywhere fast. Even SSDs have trouble dumping this straight from RAM to DiskAlways interesting to see what happened in ten years --- 370MB/s is well below what the slowest NVMe SSD can do today, and easily achieved over a 5Gbps Ethernet connection.Incidentally, H.264 patents have either expired or will be expiring soon: https://meta.wikimedia.org/wiki/Have_the_patents_for_H.264_M...",
+          "Ten years later, 2026 magic: AV1https://engineering.fb.com/2026/06/22/video-engineering/adop...And soon AV2https://av2.aomedia.org/"
+        ]
+      }
+    },
+    {
+      "id": "50296486",
+      "title": "We ran AI agent swarms in Minecraft and Mindustry",
+      "url": "https://labs.ycombinator.com/projects/games/index.html",
+      "source": "Hacker News",
+      "published_at": "2026-10-29T21:40:28+00:00",
+      "summary": "We ran AI agent swarms in Minecraft and Mindustry",
+      "score": 241,
+      "comments": 82,
+      "discussion_url": "https://news.ycombinator.com/item?id=50296486",
+      "extra": {
+        "top_comments": [
+          "This is hilarious and adorable.> \"Ada tossed a cooked chicken to Noor; Esme picked it up by accident and ate it. A three-minute \"no blame\" inquiry produced a written protocol...\"They're like super-serious little senior engineers. (edit: or dining-philosophers).About how much KV cache do these kinds of agents use? Could you squeeze 50 of these $game agents onto a small consumer GPU (small LLM)?Idly imagining a game server of some kind with a bunch of human friends sharing one person's GPU, with a flock of agents colocated on it.",
+          "If you want to do a version of this yourself quickly --Install Luanti with Minetest (open source minecraft), and instruct your agent to write a mod that gives it network access to the game's Lua interpreter. The agent can then do anything from modifying the world state directly to controlling NPCs.I had it build giant bases similar to black mesa in half life with power distribution mods. It would write solvers to optimally place the power cables / repeaters in accordance to the spacial dimensions of the rooms that it would build (lol). I guess this is how I discovered vibe gaming.I suppose you can have multiple agents interact with each other through that, provided an adapter to proxy agent player navigation and perception to get real information asymmetry between them. Or just emulate / hook the client and do away without a remote Lua mod entirely.",
+          "Interesting setups, I found the Minecraft agents to work in an almost turn-based manner, which makes me think that the three hours and open format did not really give them sufficient incentives to play in a more lively or reactive manner. On the other hand, they also behave similarly in Bed Wars, which should have incentivised it. A bit disappointed...I'm also wondering if the article itself was generated by agents too, in a \"here are the logs, clip interesting moments thx\" manner by the authors. It's got a certain disinterested and distracted style to it."
+        ]
+      }
+    },
+    {
+      "id": "50295450",
+      "title": "A tiny world model running games on a Raspberry Pi Pico 2 W",
+      "url": "https://github.com/SheepSeb/tinyworldformer",
+      "source": "Hacker News",
+      "published_at": "2026-10-29T20:32:28+00:00",
+      "summary": "A tiny world model running games on a Raspberry Pi Pico 2 W",
+      "score": 179,
+      "comments": 10,
+      "discussion_url": "https://news.ycombinator.com/item?id=50295450",
+      "extra": {
+        "top_comments": [
+          "I might have missed it in the readme, but what hardware did the training take place on? This is really neat.",
+          "This is incredibly cool! Fascinating to see looped transformers be necessary for mini-Doom, but not for simpler games.",
+          "Very cool. I didn't know NNs were capable of such determinism, that's very interesting. Is this a similar effect to overfitting? Also, it's the same model for all the games, right?"
+        ]
+      }
+    },
+    {
+      "id": "50294506",
+      "title": "Show HN: Auto Dismiss Mac OS \"Allow to find devices on local networks?\"",
+      "url": "https://github.com/johncassil/dontallow",
+      "source": "Hacker News",
+      "published_at": "2026-10-29T19:27:44+00:00",
+      "summary": "This popup has been a constant gripe of mine for years. I almost NEVER want to allow this permission and there is no system setting to disable it globally and prevent the popup from interrupting your typing, etc. This tiny swift app I built will autoclose it in 1/4th of a second and leave behind a little notification that it did so. Would love to hear feedback!",
+      "score": 120,
+      "comments": 91,
+      "discussion_url": "https://news.ycombinator.com/item?id=50294506",
+      "extra": {
+        "top_comments": [
+          "The big problem with these permission dialogs, is their lack of technical detail about what the app is actually trying to do which triggers them.How do I know whether to say \"Allow\" or \"Disallow\" when it gives me no idea what either option actually means in concrete?",
+          "Have a problem with pesky permissions dialogs from sandboxed apps? This unsandboxed unverified app that requests Accessibility permissions, to the rescue!",
+          "Can I have the opposite, a tool that automatically clicks on \"allow\"? I installed the app, it's fine."
+        ]
+      }
+    },
+    {
+      "id": "50298436",
+      "title": "Herdr has released native app",
+      "url": "https://github.com/herdrdev/herdr-app",
+      "source": "Hacker News",
+      "published_at": "2026-10-30T00:42:41+00:00",
+      "summary": "Herdr has released native app",
+      "score": 108,
+      "comments": 72,
+      "discussion_url": "https://news.ycombinator.com/item?id=50298436",
+      "extra": {
+        "top_comments": [
+          "I switched to herdr this year after a decade of using tmux, and I haven't looked back since. Herdr is wonderful, not only because of the coding agent integrations, but also because it uses libghostty under the hood. So no terminal-emulator-inside-another-terminal-emulator shenanigans.If you prefer GUIs, I can recommend herdr-gpui which connects to a herdr daemon. It has a bunch of goodies like remote phone pairing, and a built-in browser integration to send screenshots and notes to coding agents.https://github.com/penso/herdr-gpui",
+          "Really happy to see this!herdr is by far the most polished tool in its category. Software geared towards agents is usually vibe coded -- and you can tell. There will be bugs and edge cases and it feels like no thought/care was put into it.herdr doesn't feel that way to me. The marketing/landing page definitely has LLM-isms, but the application itself is very stable and well thought out.A true UI is the next logical step and they seem to have done the obvious things. The one surprising bit that nobody seems to be talking about (yet) is the entire UI looks like its controlled via \"recipes\", so you can customize the UI in ways that you couldn't with traditional software: https://herdr.dev/layouts/I hope this means an official mobile app is on the horizon!",
+          "Having used herdr since its release, the recent 'Emacs is 50' made me decide to go back to it and just vibecode herdr features i use into an emacs package.It works great so far. I can just ask it to update its layout whenever i think something better is possible. I wont be going back, but the one thing that might change that is a mobile app."
+        ]
+      }
+    }
+  ]
+}
