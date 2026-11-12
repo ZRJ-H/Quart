@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-11-11T14:54:06.975832+08:00",
+  "cached_at": "2026-11-12T11:00:27.302189+08:00",
   "articles": [
     {
-      "id": "50445401",
-      "title": "Scion is back and is going to sell a kei truck in America",
-      "url": "https://www.theautopian.com/scion-is-back-and-its-going-to-sell-a-freaking-kei-truck-in-america/",
+      "id": "50456631",
+      "title": "AWS emulator",
+      "url": "https://github.com/aws/aws-emulator",
       "source": "Hacker News",
-      "published_at": "2026-11-10T19:50:46+00:00",
-      "summary": "Scion is back and is going to sell a kei truck in America",
-      "score": 436,
-      "comments": 292,
-      "discussion_url": "https://news.ycombinator.com/item?id=50445401",
+      "published_at": "2026-11-11T18:21:38+00:00",
+      "summary": "https://www.aboutamazon.com/news/aws/how-autonomous-ai-agent...https://www.allthingsdistributed.com/2026/11/aws-emulator-an...",
+      "score": 708,
+      "comments": 220,
+      "discussion_url": "https://news.ycombinator.com/item?id=50456631",
       "extra": {
         "top_comments": [
-          "I use a kei truck for farming. They are incredibly pragmatic little vehicles. They are very capable driving around on dirt/gravel agricultural roads with 4WD, and they are inexpensive and robust enough that you can really beat them up and use them as a tool without worry. Repairs and replacement parts are ubiquitous and inexpensive. Having the sides of bed fold down is also really useful.They aren't comfortable to drive at all (although just having A/C at all on a hot summer day in the field is a godsend), and I wouldn't want to do longer trips in one - although you certainly could in a pinch.It seems like Toyota/Scion is just testing the waters here, and I'm not sure how successful they'll be. But I hope there is a future for kei trucks in the US.",
-          "25 mph works for golf courses, resort, or island use. In rural areas on the mainland, roads connecting towns often have 45 or 55 mph speed limits so unless you plan on staying on the farm I don't think these are practical for trips to go shopping, dumping, hauling, etc.As for the imports, I saw one of these 90s-era right-hand drive kei trucks at a parking lot a few months ago and talked with the owner. He was a young guy who lived in Boston, said it was super easy to park. Speed maxed out at 70 mph, which is fine for local trips but maybe not for long highway trips.For people in jurisdictions that allow 30 year old truck imports, and are interested in getting one, there are other countries that use such trucks and have left-hand drive. Taiwan has models from CMC and Suzuki, and I believe South Korea also makes them.",
-          "With a built in 25mph limiter, that eliminates \"city\" driving too unfortunately. Most roads around me are 35 mph.There's sizeable demand for people who want to be able to do runs to the bigbox stores for garden and DIY renovation supplies and store it the rest of the time."
+          "Skeptical of using because it's not clear whether this was just an exercise or a real product they are going to ship and maintain.Floci[0] has been great for me. Use the Testcontainers[1], too.Bonus: works for GCP and Azure, too (so far have only used in limited capacity, though).[0] https://floci.io/[1] https://testcontainers.com/modules/floci/",
+          "From the security page [0]> Don’t use the emulator to test the following:> - IAM policies and permissions boundaries> - Resource-based policies, such as bucket policies> - AWS KMS key policies> - Access across AWS accounts or across AWS Regions> - Any other security control> Some services in the emulator evaluate IAM policies for IAM users and roles that you create in the emulator, but not the same way as AWS. The emulator never denies a request signed with its own key. It doesn’t check AWS KMS key policies or Amazon S3 bucket policies. It also doesn’t support calls across accounts or Regions. So a request that AWS denies might succeed in the emulator. A request that AWS allows might fail.This is a shame because I'd love for the official AWS product to be better than e.g. ministack and localstack on this, which will go some of the distance. I think because the agents were only building on the public API surface, it's hard to build this part. But they should've tried and let the agents read whatever policy engines AWS has. Or maybe it's a way to prevent someone from trivially running aws-emulator as AWSaaS?[0] https://docs.aws.amazon.com/emulator/latest/userguide/securi...",
+          "Say whatever but without AI and agents, no one in AWS would have thought of building this given the huge amount of services they have. Humanly, possible but very very costly. Not saying has not happened before but fakecloud and localstack etc? That moat is gone.I am shocked TBH that this is the new normal. Agents writing code in one of the most difficult to use languages. And ugly as well TBH, it pokes into your eyes. Subjective I know but it is a horrible language for humans."
         ]
       }
     },
     {
-      "id": "50447074",
-      "title": "Tracking Anthropic-discovered vulnerabilities",
-      "url": "https://www.vulncheck.com/blog/anthropic-glasswing-november-update",
+      "id": "50459703",
+      "title": "Nvidia is preparing to oust Jensen Huang",
+      "url": "https://www.wsj.com/business/nvidia-is-preparing-to-oust-nvidia-ceo-jensen-huang-30f421ad",
       "source": "Hacker News",
-      "published_at": "2026-11-10T22:17:56+00:00",
-      "summary": "Tracking Anthropic-discovered vulnerabilities",
-      "score": 381,
-      "comments": 177,
-      "discussion_url": "https://news.ycombinator.com/item?id=50447074",
+      "published_at": "2026-11-11T22:31:06+00:00",
+      "summary": "Nvidia is preparing to oust Jensen Huang",
+      "score": 585,
+      "comments": 826,
+      "discussion_url": "https://news.ycombinator.com/item?id=50459703",
       "extra": {
         "top_comments": [
-          "I received 9 reports of Fil-C issues from AnthropicAll of them were real bugs. None of them were false positives.The quality of the reports was exceptional. (My baseline is doing security defense on a browser engine, so my baseline has a large sample count and is probably representative of what experts are capable of.)The quality of the proposed fixes was alright. I took some of the fixes verbatim. I used most of the fixes as significant inspiration for doing it my way.The quality of the test cases was exceptional.Maybe I’m special somehow! But I just want to call out the enormous chasm between what I saw of anthropic’s capability and what TFA says",
-          "As someone working at a bigtech co that has spent every single working day (and many weekends) since the launch of Mythos patching serious, company-ending type of security issues, these types of posts really irk me.Public datasets of CVEs being underwhelming doesn't mean much if all of the issues are in private company codebases that will never get a CVE number assigned and will never get a fancy blog post. You're never going to hear about them, and the people working on them probably can't tell you about them, but that doesn't mean they don't exist.We're all worried about OSS having security issues because of how widely used things like PHP or curl are... but the same can be said about email providers, document collaboration SaaSes, payment processors, etc that millions of companies depend. Those companies will never be in datasets like this, and they'll never publicly disclose how many issues they found.",
-          "The PHP2Shell vulnerability ended up being paradoxically comforting for me.They turned frontier models loose on PHP, and the big one they found was based on a previously known logic flaw that was extremely difficult to exploit. Which makes sense: hence the need for frontier models.And in the wild, while there have been many attempts and a few simple demo successes, the practical impact has seemed to be small, seemingly constrained by the length of the chain and the diversity of PHP configs.In short, it was indeed a major vulnerability, but not magic (in the Arthur C Clarke sense).I think ultimately the fear comes down to: do you believe that code can be secured. I recognize that there is probably no objective way to deductively prove it because of the Halting Problem etc. But if one believes code can be constructed to operate to spec, then there must be a limit to the damage an LLM can do, even a very smart one.I think we are going through a phase where a lot of known triaged code shortcomings will get exposed and hopefully fixed. Sucks while it is happening. But not actually the first round of this type of evolution. And ultimately I think as before, we will come out the other side with more secure and durable technology."
+          "It's really interesting to me how unaggressive Jensen has been vs. his peers about tighting up control over his company (even during the recent years when he had huge leverage):- His board setup is ... odd. He isn't Chairman of the Board (a role over 50% of Fortune 100 CEOs apparently hold). He seems to be responsible for Nvidia having a wierdly more egalitarian structure (all directors including him, are equal, with a designated lead independent director)- His compensation (~$35M, primarily stock) is ... not up there with other tech CEOs- He doesn't seem to have ever pushed for super-voting rights (he only has like ~3.5% of the company), but I guess that's hard to change once you IPOI kinda wonder if this ends with him taking a month off, spending 12-18 months transitioning to a successor and ending as the chairman of the board or some such. He really does seem vital to the company (and thus the stock price).",
+          "Nuanced opinions1) The fact that he cheated on his wife isn't particularly relevant, other than the lack of a prenup meaning she owns half his stock (4% of the company).2) The fact that he slept with a subordinate shows bad judgment, but isn't a huge deal (although improper and opens up potential quid-pro-quo lawsuits)3) The fact that he slept with a Chinese spy is a huge deal.4) The fact that there are allegations that he was aware that they were selling illegally to China is a huge deal.5) Even though those export control were arguably bad, the law must be respected and the being seen ignoring the law would have a chilling effect on appearance of a fair democracy.6) There is definitely a demonstration of lack of judgment (getting caught selling to china rather than maintaining plausible deniability), (sleeping with a spy rather than just hiring an escort)7) Despite all of this, in theory he would arguably still be the most profitable CEO (if he doesn't get charged with a crime, AND if there are no other issues to discover) in the medium term, but where there's smoke there may be fire. Does this raise the odds of circular financing and other shenanigans?",
+          "I recently recalled Nvidia's rather strange reaction to the Gamers Nexus investigation into GPU smuggling [0]. Found it somewhat strange at the time how incredibly agitated the reaction seemed to have been, given Nvidia could sell the same GPUs for the same price essentially instantly without the Chinese market. Their reaction wasn't merely a denial, dismissal or even silence, but very irrationally sounding for a company of their size and standing.Why not just sell to not-sanctioned entities, ensure compliance to the best of your abilities and otherwise keep your head down? Again, wasn't like they struggled to find buyers for their chips.Considering Megaspeed, I now see this in a very different light. Him cheating is personal and I wish the affected members of any family of a cheater the best, but not relevant for us outsiders.Being honey trapped very bad securities wise, but he'd be a victim (and evidence for why we shouldn't discount Mistral in the frontier lab race [1]). If sanctions avoidance went all the way to the top, that is hard to negate even for a board that is interested in keeping him. At that stage he was neither honey trapped nor \"merely horny\"...[0] https://www.youtube.com/watch?v=1H3xQaf7BFI[1] https://time.com/archive/7146565/hollandes-popularity-goes-u..."
         ]
       }
     },
     {
-      "id": "50444129",
-      "title": "Starlink Mini 2",
-      "url": "https://starlink.com/mini-2",
+      "id": "50455394",
+      "title": "A false smoke alarm almost drowned Jane Street's only NYC datacenter",
+      "url": "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/",
       "source": "Hacker News",
-      "published_at": "2026-11-10T18:22:32+00:00",
-      "summary": "Starlink Mini 2",
-      "score": 367,
-      "comments": 375,
-      "discussion_url": "https://news.ycombinator.com/item?id=50444129",
+      "published_at": "2026-11-11T16:38:44+00:00",
+      "summary": "A false smoke alarm almost drowned Jane Street's only NYC datacenter",
+      "score": 427,
+      "comments": 220,
+      "discussion_url": "https://news.ycombinator.com/item?id=50455394",
       "extra": {
         "top_comments": [
-          "We bought a Starlink Mini for the use case of frequent travel to far-off (international) places with limited mobile service, where we occasionally need to get online for high-priority work tasks or meetings. For $55 / month for 100GB and flexible usage in many countries, it was extremely useful.Then, recently, SpaceX changed the terms such that the 100GB and 300GB subscriptions are no longer usable internationally (technically outside of North America). You have to pay for the unlimited service tier and even then can only use it for 30 days before returning to the home region.A huge decrease in utility and a tripling in cost. A new device with a built-in battery is definitely not going to make up for that.(Still a great service when it works, am posting this from remote western Mongolia.)",
-          "This has completely changed my industry (hard rock mining). A lot of the time drillers would be in the middle of nowhere looking for resources and would be sometimes days away from providing results (which also lead to lots of dodgy situations where drillers would know some results before market…) now it’s instant live feed. It’s made revising drilling plans trivial. Very cool",
-          "Recently, I've been watching ultramarathon races (Western States, UTMB, Javalina Jundred, etc.) live online. All of them have been doing live video shots of the race leaders with a camera man on a mountain bike using a Starlink Mini on the back (with networking gear and batteries in a backpack). This new Starlink Mini 2 will be a more compact solution for the cameraman and possibly give the producers of the live broadcast more options and maybe more interesting shots."
+          "The article reminds me of when Hurricane Sandy took out a bunch of New York DCs with 3+ feet of water and people were carrying diesel up stairs to keep generators running.“The superhuman folks at the data center are hauling 55 gallon drums of diesel fuel up 17 flights of stairs. Assuming they're able to sustain a rate of transfer that exceeds the rate of consumption, the data center should run until electricity is restored. The latest estimate from Con Edison for lower Manhattan is 4 days. (The New York Stock Exchange will be open tomorrow, also running on generator power.)”https://news.ycombinator.com/item?id=4720388 (https://web.archive.org/web/20121101194314/http://status.fog...)https://arstechnica.com/information-technology/2012/11/how-o...",
+          "In the article he talks about living within a few minutes walk to work and telling too many people so they made him the emergency office guy. Same thing happened to me, foolishly told everyone hey I can see my apartment from here so I would get panicked calls to run in and shut down servers because the information security guy got a tip of an impending exploit about to be released on a holiday weekend with no way to do it remotely. Everyone else lived a ferry ride or commuter train away.",
+          "Odd that they didn't have at minimum 1) a physical Emergency Power Off (EPO) button inside the datacenter, such that one button could de-energize everything -- usually required as part of building a datacenter due to code variance for the \"low voltage\" (<4000V in this context...) wiring. 2) EPO interlink to the smoke alarms, such that it would de-energize equipment automatically (maybe with delay) if smoke detected."
         ]
       }
     },
     {
-      "id": "50443824",
-      "title": "Synaptics patent claims stop work on DisplayLink drivers",
-      "url": "https://lwn.net/SubscriberLink/1102549/acbc92e00cee3a3f/",
+      "id": "50458900",
+      "title": "United Airlines bans AI agents from booking flights on behalf of travelers",
+      "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
       "source": "Hacker News",
-      "published_at": "2026-11-10T18:02:02+00:00",
-      "summary": "Synaptics patent claims stop work on DisplayLink drivers",
-      "score": 360,
-      "comments": 214,
-      "discussion_url": "https://news.ycombinator.com/item?id=50443824",
+      "published_at": "2026-11-11T21:24:35+00:00",
+      "summary": "United Airlines bans AI agents from booking flights on behalf of travelers",
+      "score": 420,
+      "comments": 406,
+      "discussion_url": "https://news.ycombinator.com/item?id=50458900",
       "extra": {
         "top_comments": [
-          "> If you fail to comply with our demands by the specified deadline, Synaptics will seek monetary compensation from you in the amount of US$25,000 to recoup the costs and effort required to create the attached documentation of your infringing acts.Obviously this is intended as a scare tactic, but, surely that could never hold up in court? Surely the burden of proof is on the owner of the patents to prove that someone's work is infringing, and you can't then say \"We are charging the defendant to prove that we have a valid case against them.\" ?",
-          "Years ago, when i was migrating my dell work laptop to debian, i had the same problem: we had many dell docking stations and they all used displaylink.I was pretty quick about it: they are now useless bricks.We live in the golden age of USB-C + DP alt mode: USB C to the monitor, and that provides power, connection, video, monitor connects to a 30 euro docking with many USB, gigabit ethernet, additional video. No shitty drivers, no USB dropping randomly crashing your dock, no giant power brick and 300-something bricks.Depending on the screen you can also daisy chain them.Moving to a different desk require to just plug in one cable. One. And you can do all the above with an android phone, too, if it supports desktop mode you have a functional desktop inyour pocket (well, as much as a chromebook).I have no need for those shoddy bricks anymore, or HDMI for that matter. (if only console makers and TV would drop HDMI, that would be a dream)",
-          "DisplayLink is dying due to high DDR prices. Dock companies are cancelling their display link portfolios due to the unfavorable economics.Good riddance if this is how OSS is treated by synaptics.Most recent thunderbolt docks and usb4 docks have good display support, and fallback to DisplayPort alt mode if the host does not support tbt4. Which is much better supported over type-c. Intel and AMD upstream host support."
+          "How do they plan on stopping me from using Claude code with the Claude in chrome plugin, or some other computer use agent?At this point it feels like I have an adversarial relationship with many merchants I use online. I wish the simple “you have a product, I have money” relationship was possible. I don’t want to take part in your giant human behavior optimization problem. You have a product and I have money why does it have to be more complicated than that?Realistically though I know that’s not happening. I will continue to access online merchants in the way I prefer and will do my best to avoid detection or blocking. At least so far Claude is happy to play along but I suspect I will need to seek out an obliterated agent in the not to distant future. (Once the corporate capture of the frontier cloud AI models is complete.)",
+          "Tangent: it was always odd to me that \"booking a [flight|hotel|concert tickets]\" is the canonical example of a task that can be automated by an agent. These are tasks that are:- already streamlined (spend 2min on Google flights, seatgeek, etc...); we aren't stuck with early web UX and latency- I want to have 100% control of the outcome or would have to write a long list of preferences and rules (middle seats, layovers, etc...) to feel good about trusting automation- require making a large payment. the agent is not getting free reign to use my cc- give me some personal satisfaction and enjoyment - its delightful to look foward to a trip, concert, etc... and planning is part of the fun and anticipation imo",
+          "Somebody once said, that airline booking pages itself are one of the most sophisticated CAPTCHAs. No idea if this is true, but they obviously don't want their customers to easily find the best deals.I guess the best option is, to use a good reseller/travel agency that provides an API/MCP for booking and managing flights.For finding the cheapest deals agents can still be used. Just the booking itself is probably better done manually. It also eliminates the risk that the agent does something stupid.edit: they might try to block agents, but this won't be possible with browser use. they can always throttle users by IP or fingerprint. Letting an agent book a flight might be risky, because they might cancel a booking or impose a fee if they somehow detect it."
         ]
       }
     },
     {
-      "id": "50443427",
-      "title": "Val Town is winding down",
-      "url": "https://blog.val.town/winding-down",
+      "id": "50456791",
+      "title": "Gemini Decisions API",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
       "source": "Hacker News",
-      "published_at": "2026-11-10T17:31:14+00:00",
-      "summary": "Val Town is winding down",
-      "score": 357,
-      "comments": 92,
-      "discussion_url": "https://news.ycombinator.com/item?id=50443427",
+      "published_at": "2026-11-11T18:32:42+00:00",
+      "summary": "Gemini Decisions API",
+      "score": 293,
+      "comments": 93,
+      "discussion_url": "https://news.ycombinator.com/item?id=50456791",
       "extra": {
         "top_comments": [
-          "I remember Steve from my days working on Eve, he was part of that community and always a big proponent of end-user programming. I was happy to see him working on this project but am not surprised it's shutting down.Nothing to to do with the quality of Val Town, but making a business in this space is really, really hard. You can't start the business without raising millions (Eve raised $2M, Darklang raised $3.5M, Val Town raised $7M), but it's hard to scale out a proof of concept in the time investors want to start seeing an ROI. It seems to me about 2-3 years is all you get for seed runway, when realistically projects like this should take at minimum 5 years incubating. Darklang extended their runway to ~7-8 years by firing all the devs and keeping just the founder on life support. Ultimately even that wasn't enough.But maybe with AI this could work, I dunno.What's required to make it all work is a fundamental leap in programming interface design, but the business side doesn't look any different from a typical SaaS. So unless you hit the ball out of the park you're entering the market with an experimental product, then you have to deal with product-market fit even if you have the right product, so you really only have one shot.It's very hard to go back to investors and ask for another round of funding when there's no discernable market and the product isn't gaining the traction investors would like to see.Anyway, kudos to Steve for fighting the good fight! What would really be great is to read an in-depth post mortem on the project. Looking forward to it if you have time!",
-          "Not mentioned directly in the blog post, but Val Town was fundamentally organized around the Deno runtime, whose team will stop maintaining it next year after joining Cloudflare [0].[0] https://deno.com/blog/cloudflare",
-          "This is sad. We're in a similar space as Val Town (which technically made us competitors) but I've always appreciated the care they had for the craft and the values they drove forward as a company like their transparency (even their investor updates were public).Steve and Tom also individually have some of the best blogs out on the web.I wish them all the best with whatever comes next. I'm pretty sure they'll all do great things."
+          "I'm sort of surprised it took Jev for everyone to realize \"oh yeah, this is a useful thing that we should have in our product portfolio\".But maybe this is one of those things that's only obvious in retrospect? I'm sure people were trying something similar years ago with grammar-constrained outputs (for example to only output a simple json structure), but you can't get probabilities out of the model that way. Which makes me wonder: how do these models calculate probabilities?",
+          "I have still not used a decision model, How are people using them at the moment? is any one using them in a coding harness like Pi?",
+          "We're about at the point where the AI is now pretty insanely cheap. Passing 100K tokens of context then asking hundreds of questions of 100 tokens each would cost about as much as a single Google search API call.Out of the hundreds of questions, most of them could even be different variations of the same question to capture more nuance than what is normally possible in a single multiple-choice."
         ]
       }
     },
     {
-      "id": "50443812",
-      "title": "Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives",
-      "url": "https://github.com/GoogleChrome/modern-web-guidance",
+      "id": "50459321",
+      "title": "Jensen Huang said to have had relationship with executive who reports to him",
+      "url": "https://www.nytimes.com/2026/11/11/technology/jensen-huang-nvidia-affair.html",
       "source": "Hacker News",
-      "published_at": "2026-11-10T18:01:15+00:00",
-      "summary": "Browsers natively handle a lot of what used to take 50 lines of JS (or a dependency): `CSS.highlights` for text range highlighting without s everywhere, `` and showModal() give you backdrops and ideal focus management, `field-sizing` to auto-grow textareas as the user types.. (Something yesterday's ftrain post touched on [0])Models know about some of these by name, but consistently won't default to using the platform-native solution and instead prefer the incumbent +JS based pattern. We started an effort in Chrome to supplement coding agents with this key domain knowledge and we're shipping our 1.0 today, in collaboration with Firefox, MDN, and Edge.200+ guides (~1.7MB) of curated, hand-crafted implementation best-practices from web experts, updated as the web evolves. (Open source, obv, so.. we'll welcome your bikeshedding ;) Readable versions here: [1]I've spent the last 9 months obsessing over how to ship this as an agent skill + (Agentic RAG) CLI without blowing up your context window. (Or cedeing activation mechanics to MCP dynamic tool search). The skill description is minmaxed for activating on relevant frontend tasks. The RAG work I'm pretty proud of… originally a 500mb native stack down to a ~7MB pure-JS package, ~10ms search on your CPU.We just introduced a deterministic 'legacy-scan' (trained on 30k github repos) to identify old 'n dusted patterns that your agent can modernize. (92% avg precision on held-out repos.)People make a lot of claims about what coding agents are good/bad at. We wanted receipts, so we invested heavily in eval infra [2] to help us hill-climb, but also to identify when knowledge is common enough we can prune our guides. (Ofc, some of the things we thought AI didn't know turned out to be wrong :) We run codex/claude/agy against 200 tasks without the skill and then with.. In total ~1,700 playwright/AST-based assertions. Agents go from 55% pass unguided to 92% guided.Try it out: DISABLE_TELEMETRY=1 npx modern-web-guidance@latest install DISABLE_TELEMETRY=1 npx modern-web-guidance@latest search \"animate dialog modal\" DISABLE_TELEMETRY=1 npx modern-web-guidance@latest legacy-scan ./src If you spot something wrong or weird, give us a holler!Longer write-up on the 1.0: https://developer.chrome.com/blog/modern-web-guidance-v1---0: https://news.ycombinator.com/item?id=504164561: https://developer.chrome.com/docs/modern-web-guidance/guides2: https://googlechrome.github.io/modern-web-guidance-src/",
-      "score": 334,
-      "comments": 101,
-      "discussion_url": "https://news.ycombinator.com/item?id=50443812",
+      "published_at": "2026-11-11T22:03:58+00:00",
+      "summary": "Jensen Huang said to have had relationship with executive who reports to him",
+      "score": 264,
+      "comments": 270,
+      "discussion_url": "https://news.ycombinator.com/item?id=50459321",
       "extra": {
         "top_comments": [
-          "Here's a list of browser features the skills will tell your agent to use that are stable in Chrome but not supported by Firefox and Safari: CSS @function CSS calc-size() CSS interpolate-size CSS corner-shape CSS border-shape CSS flex-wrap: balance CSS text-fit CSS text-decoration-skip-spaces CSS scroll-axis-lock CSS scroll-target-group CSS :target-current CSS scroll-initial-target CSS container scroll-state queries scrollsnapchange event scrollsnapchanging event HTML focusgroup Element.startViewTransition() CSS view-transition-scope Interest Invokers (interestfor) LanguageModel (Prompt API) LanguageDetector Translator Summarizer API Window.fetchLater() Speculation Rules API Long Animation Frames API VisibilityStateEntry PerformanceSoftNavigation InteractionContentfulPaint Connection-Allowlist CSS url() integrity() modifier HTML meta name=\"text-scale\" HTML template for HTML processing instructions PasswordCredential Promise-returning scroll methods Web App Origin Migration Local Network Access permissions Request.targetAddressSpace beforeinstallprompt event To be fair, the skills also recommend ~11 features not supported by Chrome itself. And the project does seem concerned with compatibility: \"Guiding models to use sensible, lightweight fallbacks.\"",
-          "Distribution suggestion: in addition to the npm packages you have right now, set up GitHub Pages to publish a markdown index document of the skills at https://googlechrome.github.io/modern-web-guidance-src/skill... (currently a 404)That index page should link to plain markdown versions of all of the documents, and should be designed for search with grep to find the right answers.That way I don't have to install anything at all - provided my agent has the ability to make HTTP requests I can tell it \"Look for tips on https://googlechrome.github.io/modern-web-guidance-src/skill...\" and it will fetch the index, then navigate to the most relevant documents - no MCP or npm or installation required at all.",
-          "Chrome already has too much power in the browser standards world. The last thing we need is everyone's LLMs to follow Chrome team's guidance on how to do web development. This road leads back to \"To view this site, please view in [DOMINANT BROWSER]\""
+          "https://archive.is/9fQ6Y",
+          "If his personal security detained the person videoing them and offered them money to sign an NDA, it feels like something they had experience with. Could this just be the tip of the iceberg?",
+          "> Both Mr. Huang and Ms. Powell are married to other peopleDumb language question: if Powell is married, why isn’t she referred to as Mrs. Powell in this article?"
         ]
       }
     },
     {
-      "id": "50446246",
-      "title": "Six Math Essentials",
-      "url": "https://teorth.github.io/tao-web/six-math-essentials.html",
+      "id": "50459745",
+      "title": "93% of paint splatters are valid Perl programs (2019)",
+      "url": "https://www.mcmillen.dev/sigbovik/",
       "source": "Hacker News",
-      "published_at": "2026-11-10T20:58:44+00:00",
-      "summary": "Six Math Essentials",
-      "score": 208,
-      "comments": 38,
-      "discussion_url": "https://news.ycombinator.com/item?id=50446246",
+      "published_at": "2026-11-11T22:34:23+00:00",
+      "summary": "93% of paint splatters are valid Perl programs (2019)",
+      "score": 195,
+      "comments": 27,
+      "discussion_url": "https://news.ycombinator.com/item?id=50459745",
       "extra": {
         "top_comments": [
-          "I quite liked this interview:Terence Tao explains 6 essential mathematical concepts: https://www.youtube.com/watch?v=OOMx2BHHWtE",
-          "The amazon preview [1] does not even show the contents page. How am I supposed to check if I might be interested in this book?[1] https://www.amazon.com/dp/0374621799?tag=macmillan-20",
-          "I heard he was writing a book about the Cosmic Distance Ladder. I was looking forward to that, I hope this isn't what it evolved into."
+          "SIGBOVIK papers are almost always a delightEDIT: From their 2026 publication>Permission to make digital or hard copies of portions of this work for personal use is granted; permission to make digital or hard copies of portions of this work for classroom use is also granted, but seems ill-advised",
+          "Popular in:2024 (515 points, 125 comments) https://news.ycombinator.com/item?id=401970132021 (431 points, 165 comments) https://news.ycombinator.com/item?id=27929730",
+          "Tangentially related, the only way for a Java properties file to be invalid is if it contains an invalid Unicode escape sequence (“\\u” not followed by four digits, and not preceded by an odd number of “\\”). After resolving Unicode escapes, any character sequence is a valid properties file."
         ]
       }
     },
     {
-      "id": "50443716",
-      "title": "Claude Whiteboards, Claude Sheets, and Claude Data",
-      "url": "https://claude.com/resources/articles/sheets-whiteboards-data",
+      "id": "50457230",
+      "title": "Show HN: I recreated Papers Please but you're deciding which YC startups to fund",
+      "url": "https://termsheetplease.com/",
       "source": "Hacker News",
-      "published_at": "2026-11-10T17:55:07+00:00",
-      "summary": "Claude Whiteboards, Claude Sheets, and Claude Data",
-      "score": 180,
-      "comments": 138,
-      "discussion_url": "https://news.ycombinator.com/item?id=50443716",
+      "published_at": "2026-11-11T19:12:16+00:00",
+      "summary": "Show HN: I recreated Papers Please but you're deciding which YC startups to fund",
+      "score": 193,
+      "comments": 77,
+      "discussion_url": "https://news.ycombinator.com/item?id=50457230",
       "extra": {
         "top_comments": [
-          "When Anthropic released \"claude design\" people were telling that figma is dead now, but in fact claude design didn't move forward and stayed as a \"fallback tool\" when you quickly need to check / edit something. And for the serious work you still go to Figma and other designer tools. I have a feeling that Whiteboards, Sheets, Docs and so on will be the same - it's a nicer way to present artefacts, discuss them and maybe make notes, but for the proper editor experience you'll go to the tools which were designed for these things. And I'm not saying that Claude Something tools are bad, they're just overly simplified and limited, probably on purpose.",
-          "Model companies are starting to cannibalize their api customers's business cases. Shows that the regular avenues of revenue growth are slowing down",
-          "I have a different approach to the industry when it comes to work documents.I'm building https://smalldocs.org / https://github.com/espressoplease/smalldocs. My take is that the siloed approach of previous document formats is now redundant. The document formats were isolated because we needed heavy tools for humans to do the work. Now we need lightweight javascript predominately for rending as agents do the work, so document formats can be blended.This means SmallDocs allows an agent to put together a document (the underlying format is markdown with rich custom rendering on top) with text, diagrams, a multi tab spreadsheet, charts, code, slides, etc.Some example SmallDocs:* AlphaFold 3: capabilities, evidence and operational limits (diagram, spreadsheets, charts, code, math): https://smalldocs.org/s/k9BtoviHg1eMsWzrSDBVZM#k=v0oIAbORXDj...* Profitable growth can run out of cash (slides, spreadsheet, charts): https://smalldocs.org/s/nfCr0EEduLQwZAr0_v9ZR2#k=tv_BjigEYwt..."
+          "The game mechanic of clicking 'Pass' to mean denial is a bit confusing; should label that stamp 'Fail' or 'Deny' or even 'Do not fund'.Pass as in to 'pass on the opportunity to fund' i.e. to not pay is not the same as Pass as in 'passed the criteria for funding' i.e. to agree to pay.To the people who are likely to be playing this game, Pass and Fail/Deny are antonyms, not synonyms.",
+          "Doesn't credit the original creator at all in the actual website?",
+          "I found the document management way too confusing. There's no clear game loop and I'm kinda lost what signatures mean, what the other documents are what success is.Papers please has a much simple mental model."
         ]
       }
     }
