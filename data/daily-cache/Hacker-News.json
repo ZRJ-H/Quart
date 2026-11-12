@@ -1,6 +1,24 @@
 {
-  "cached_at": "2026-11-12T11:00:27.302189+08:00",
+  "cached_at": "2026-11-12T15:29:48.510250+08:00",
   "articles": [
+    {
+      "id": "50459703",
+      "title": "Nvidia is preparing to oust Jensen Huang",
+      "url": "https://www.wsj.com/business/nvidia-is-preparing-to-oust-nvidia-ceo-jensen-huang-30f421ad",
+      "source": "Hacker News",
+      "published_at": "2026-11-11T22:31:06+00:00",
+      "summary": "Nvidia is preparing to oust Jensen Huang",
+      "score": 888,
+      "comments": 1237,
+      "discussion_url": "https://news.ycombinator.com/item?id=50459703",
+      "extra": {
+        "top_comments": [
+          "https://archive.is/ZmOEH",
+          "People arguing the technical and business merits of what Jensen brought to the company aren't getting how serious these allegations against him are.The US Government is using NVIDIA chips for all sort of stuff across all classification levels. Subsequently, Jensen has deep relationships within the government that warrants additional scrutiny.Him authorizing his company to sell massive amounts of chips to a restricted country is massively illegal, but companies work around that and have since forever. Doesn't make it less illegal, but that's only a small part of the problem.The real problem is that nobody knows how much sensitive info Jensen gave this woman or how far that info spread.It's really about fairness. Us technical salespeople take training that tells us all of the ways that deals with restricted countries happen and how we will immediately get fired ten ways to Sunday if we forego that to close quota. Also, normies with clearances tell their partners stuff they shouldn't. Stuff they think isn't really sensitive since it seems so minute. This isn't bad until said partner spills at the wrong place and wrong time. That's how normies get sent to prison for treason. Loose lips sink ships and all that. [^0]Getting fired -- WHICH HE ABSOLUTELY SHOULD BE -- is the least of his problems.[^0] Examples:- https://www.ctvnews.ca/world/article/retired-us-army-officer.... Army officer leaks secrets through dating website to sound cool; gets six years- https://www.foxnews.com/us/pentagon-leaker-jack-teixeira-rec.... Leaked secrets about Ukraine war through Discord to sound cool; gets 15 years- https://www.westernjournal.com/ex-cia-officer-accused-leakin.... CIA officer leaks stuff to journalist girlfriend; gets 10 years",
+          "I recently recalled Nvidia's rather strange reaction to the Gamers Nexus investigation into GPU smuggling [0]. Found it somewhat strange at the time how incredibly agitated the reaction seemed to have been, given Nvidia could sell the same GPUs for the same price essentially instantly without the Chinese market. Their reaction wasn't merely a denial, dismissal or even silence, but very irrationally sounding for a company of their size and standing.Why not just sell to not-sanctioned entities, ensure compliance to the best of your abilities and otherwise keep your head down? Again, wasn't like they struggled to find buyers for their chips.Considering Megaspeed, I now see this in a very different light. Him cheating is personal and I wish the affected members of any family of a cheater the best, but not relevant for us outsiders.Being honey trapped very bad securities wise, but he'd be a victim (and evidence for why we shouldn't discount Mistral in the frontier lab race [1]). If sanctions avoidance went all the way to the top, that is hard to negate even for a board that is interested in keeping him. At that stage he was neither honey trapped nor \"merely horny\"...[0] https://www.youtube.com/watch?v=1H3xQaf7BFI[1] https://time.com/archive/7146565/hollandes-popularity-goes-u..."
+        ]
+      }
+    },
     {
       "id": "50456631",
       "title": "AWS emulator",
@@ -8,8 +26,8 @@
       "source": "Hacker News",
       "published_at": "2026-11-11T18:21:38+00:00",
       "summary": "https://www.aboutamazon.com/news/aws/how-autonomous-ai-agent...https://www.allthingsdistributed.com/2026/11/aws-emulator-an...",
-      "score": 708,
-      "comments": 220,
+      "score": 798,
+      "comments": 231,
       "discussion_url": "https://news.ycombinator.com/item?id=50456631",
       "extra": {
         "top_comments": [
@@ -20,50 +38,14 @@
       }
     },
     {
-      "id": "50459703",
-      "title": "Nvidia is preparing to oust Jensen Huang",
-      "url": "https://www.wsj.com/business/nvidia-is-preparing-to-oust-nvidia-ceo-jensen-huang-30f421ad",
-      "source": "Hacker News",
-      "published_at": "2026-11-11T22:31:06+00:00",
-      "summary": "Nvidia is preparing to oust Jensen Huang",
-      "score": 585,
-      "comments": 826,
-      "discussion_url": "https://news.ycombinator.com/item?id=50459703",
-      "extra": {
-        "top_comments": [
-          "It's really interesting to me how unaggressive Jensen has been vs. his peers about tighting up control over his company (even during the recent years when he had huge leverage):- His board setup is ... odd. He isn't Chairman of the Board (a role over 50% of Fortune 100 CEOs apparently hold). He seems to be responsible for Nvidia having a wierdly more egalitarian structure (all directors including him, are equal, with a designated lead independent director)- His compensation (~$35M, primarily stock) is ... not up there with other tech CEOs- He doesn't seem to have ever pushed for super-voting rights (he only has like ~3.5% of the company), but I guess that's hard to change once you IPOI kinda wonder if this ends with him taking a month off, spending 12-18 months transitioning to a successor and ending as the chairman of the board or some such. He really does seem vital to the company (and thus the stock price).",
-          "Nuanced opinions1) The fact that he cheated on his wife isn't particularly relevant, other than the lack of a prenup meaning she owns half his stock (4% of the company).2) The fact that he slept with a subordinate shows bad judgment, but isn't a huge deal (although improper and opens up potential quid-pro-quo lawsuits)3) The fact that he slept with a Chinese spy is a huge deal.4) The fact that there are allegations that he was aware that they were selling illegally to China is a huge deal.5) Even though those export control were arguably bad, the law must be respected and the being seen ignoring the law would have a chilling effect on appearance of a fair democracy.6) There is definitely a demonstration of lack of judgment (getting caught selling to china rather than maintaining plausible deniability), (sleeping with a spy rather than just hiring an escort)7) Despite all of this, in theory he would arguably still be the most profitable CEO (if he doesn't get charged with a crime, AND if there are no other issues to discover) in the medium term, but where there's smoke there may be fire. Does this raise the odds of circular financing and other shenanigans?",
-          "I recently recalled Nvidia's rather strange reaction to the Gamers Nexus investigation into GPU smuggling [0]. Found it somewhat strange at the time how incredibly agitated the reaction seemed to have been, given Nvidia could sell the same GPUs for the same price essentially instantly without the Chinese market. Their reaction wasn't merely a denial, dismissal or even silence, but very irrationally sounding for a company of their size and standing.Why not just sell to not-sanctioned entities, ensure compliance to the best of your abilities and otherwise keep your head down? Again, wasn't like they struggled to find buyers for their chips.Considering Megaspeed, I now see this in a very different light. Him cheating is personal and I wish the affected members of any family of a cheater the best, but not relevant for us outsiders.Being honey trapped very bad securities wise, but he'd be a victim (and evidence for why we shouldn't discount Mistral in the frontier lab race [1]). If sanctions avoidance went all the way to the top, that is hard to negate even for a board that is interested in keeping him. At that stage he was neither honey trapped nor \"merely horny\"...[0] https://www.youtube.com/watch?v=1H3xQaf7BFI[1] https://time.com/archive/7146565/hollandes-popularity-goes-u..."
-        ]
-      }
-    },
-    {
-      "id": "50455394",
-      "title": "A false smoke alarm almost drowned Jane Street's only NYC datacenter",
-      "url": "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/",
-      "source": "Hacker News",
-      "published_at": "2026-11-11T16:38:44+00:00",
-      "summary": "A false smoke alarm almost drowned Jane Street's only NYC datacenter",
-      "score": 427,
-      "comments": 220,
-      "discussion_url": "https://news.ycombinator.com/item?id=50455394",
-      "extra": {
-        "top_comments": [
-          "The article reminds me of when Hurricane Sandy took out a bunch of New York DCs with 3+ feet of water and people were carrying diesel up stairs to keep generators running.“The superhuman folks at the data center are hauling 55 gallon drums of diesel fuel up 17 flights of stairs. Assuming they're able to sustain a rate of transfer that exceeds the rate of consumption, the data center should run until electricity is restored. The latest estimate from Con Edison for lower Manhattan is 4 days. (The New York Stock Exchange will be open tomorrow, also running on generator power.)”https://news.ycombinator.com/item?id=4720388 (https://web.archive.org/web/20121101194314/http://status.fog...)https://arstechnica.com/information-technology/2012/11/how-o...",
-          "In the article he talks about living within a few minutes walk to work and telling too many people so they made him the emergency office guy. Same thing happened to me, foolishly told everyone hey I can see my apartment from here so I would get panicked calls to run in and shut down servers because the information security guy got a tip of an impending exploit about to be released on a holiday weekend with no way to do it remotely. Everyone else lived a ferry ride or commuter train away.",
-          "Odd that they didn't have at minimum 1) a physical Emergency Power Off (EPO) button inside the datacenter, such that one button could de-energize everything -- usually required as part of building a datacenter due to code variance for the \"low voltage\" (<4000V in this context...) wiring. 2) EPO interlink to the smoke alarms, such that it would de-energize equipment automatically (maybe with delay) if smoke detected."
-        ]
-      }
-    },
-    {
       "id": "50458900",
       "title": "United Airlines bans AI agents from booking flights on behalf of travelers",
       "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
       "source": "Hacker News",
       "published_at": "2026-11-11T21:24:35+00:00",
       "summary": "United Airlines bans AI agents from booking flights on behalf of travelers",
-      "score": 420,
-      "comments": 406,
+      "score": 517,
+      "comments": 505,
       "discussion_url": "https://news.ycombinator.com/item?id=50458900",
       "extra": {
         "top_comments": [
@@ -74,38 +56,38 @@
       }
     },
     {
+      "id": "50455394",
+      "title": "A false smoke alarm almost drowned Jane Street's only NYC datacenter",
+      "url": "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/",
+      "source": "Hacker News",
+      "published_at": "2026-11-11T16:38:44+00:00",
+      "summary": "A false smoke alarm almost drowned Jane Street's only NYC datacenter",
+      "score": 467,
+      "comments": 236,
+      "discussion_url": "https://news.ycombinator.com/item?id=50455394",
+      "extra": {
+        "top_comments": [
+          "The article reminds me of when Hurricane Sandy took out a bunch of New York DCs with 3+ feet of water and people were carrying diesel up stairs to keep generators running.“The superhuman folks at the data center are hauling 55 gallon drums of diesel fuel up 17 flights of stairs. Assuming they're able to sustain a rate of transfer that exceeds the rate of consumption, the data center should run until electricity is restored. The latest estimate from Con Edison for lower Manhattan is 4 days. (The New York Stock Exchange will be open tomorrow, also running on generator power.)”https://news.ycombinator.com/item?id=4720388 (https://web.archive.org/web/20121101194314/http://status.fog...)https://arstechnica.com/information-technology/2012/11/how-o...",
+          "In the article he talks about living within a few minutes walk to work and telling too many people so they made him the emergency office guy. Same thing happened to me, foolishly told everyone hey I can see my apartment from here so I would get panicked calls to run in and shut down servers because the information security guy got a tip of an impending exploit about to be released on a holiday weekend with no way to do it remotely. Everyone else lived a ferry ride or commuter train away.",
+          "Odd that they didn't have at minimum 1) a physical Emergency Power Off (EPO) button inside the datacenter, such that one button could de-energize everything -- usually required as part of building a datacenter due to code variance for the \"low voltage\" (<4000V in this context...) wiring. 2) EPO interlink to the smoke alarms, such that it would de-energize equipment automatically (maybe with delay) if smoke detected."
+        ]
+      }
+    },
+    {
       "id": "50456791",
       "title": "Gemini Decisions API",
       "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
       "source": "Hacker News",
       "published_at": "2026-11-11T18:32:42+00:00",
       "summary": "Gemini Decisions API",
-      "score": 293,
-      "comments": 93,
+      "score": 386,
+      "comments": 122,
       "discussion_url": "https://news.ycombinator.com/item?id=50456791",
       "extra": {
         "top_comments": [
           "I'm sort of surprised it took Jev for everyone to realize \"oh yeah, this is a useful thing that we should have in our product portfolio\".But maybe this is one of those things that's only obvious in retrospect? I'm sure people were trying something similar years ago with grammar-constrained outputs (for example to only output a simple json structure), but you can't get probabilities out of the model that way. Which makes me wonder: how do these models calculate probabilities?",
-          "I have still not used a decision model, How are people using them at the moment? is any one using them in a coding harness like Pi?",
-          "We're about at the point where the AI is now pretty insanely cheap. Passing 100K tokens of context then asking hundreds of questions of 100 tokens each would cost about as much as a single Google search API call.Out of the hundreds of questions, most of them could even be different variations of the same question to capture more nuance than what is normally possible in a single multiple-choice."
-        ]
-      }
-    },
-    {
-      "id": "50459321",
-      "title": "Jensen Huang said to have had relationship with executive who reports to him",
-      "url": "https://www.nytimes.com/2026/11/11/technology/jensen-huang-nvidia-affair.html",
-      "source": "Hacker News",
-      "published_at": "2026-11-11T22:03:58+00:00",
-      "summary": "Jensen Huang said to have had relationship with executive who reports to him",
-      "score": 264,
-      "comments": 270,
-      "discussion_url": "https://news.ycombinator.com/item?id=50459321",
-      "extra": {
-        "top_comments": [
-          "https://archive.is/9fQ6Y",
-          "If his personal security detained the person videoing them and offered them money to sign an NDA, it feels like something they had experience with. Could this just be the tip of the iceberg?",
-          "> Both Mr. Huang and Ms. Powell are married to other peopleDumb language question: if Powell is married, why isn’t she referred to as Mrs. Powell in this article?"
+          "A couple of weeks back, someone had posted this on HN - an interesting note about the problems with asking LLMs for confidence: https://rumple.github.io/blog/2026/10/20/asking-llm-for-conf...",
+          "I have still not used a decision model, How are people using them at the moment? is any one using them in a coding harness like Pi?"
         ]
       }
     },
@@ -116,8 +98,8 @@
       "source": "Hacker News",
       "published_at": "2026-11-11T22:34:23+00:00",
       "summary": "93% of paint splatters are valid Perl programs (2019)",
-      "score": 195,
-      "comments": 27,
+      "score": 367,
+      "comments": 50,
       "discussion_url": "https://news.ycombinator.com/item?id=50459745",
       "extra": {
         "top_comments": [
@@ -128,20 +110,38 @@
       }
     },
     {
-      "id": "50457230",
-      "title": "Show HN: I recreated Papers Please but you're deciding which YC startups to fund",
-      "url": "https://termsheetplease.com/",
+      "id": "50459485",
+      "title": "Lock Your GitHub Actions",
+      "url": "https://hugovk.dev/blog/2026/lock-github-actions/",
       "source": "Hacker News",
-      "published_at": "2026-11-11T19:12:16+00:00",
-      "summary": "Show HN: I recreated Papers Please but you're deciding which YC startups to fund",
-      "score": 193,
-      "comments": 77,
-      "discussion_url": "https://news.ycombinator.com/item?id=50457230",
+      "published_at": "2026-11-11T22:16:41+00:00",
+      "summary": "Lock Your GitHub Actions",
+      "score": 214,
+      "comments": 43,
+      "discussion_url": "https://news.ycombinator.com/item?id=50459485",
       "extra": {
         "top_comments": [
-          "The game mechanic of clicking 'Pass' to mean denial is a bit confusing; should label that stamp 'Fail' or 'Deny' or even 'Do not fund'.Pass as in to 'pass on the opportunity to fund' i.e. to not pay is not the same as Pass as in 'passed the criteria for funding' i.e. to agree to pay.To the people who are likely to be playing this game, Pass and Fail/Deny are antonyms, not synonyms.",
-          "Doesn't credit the original creator at all in the actual website?",
-          "I found the document management way too confusing. There's no clear game loop and I'm kinda lost what signatures mean, what the other documents are what success is.Papers please has a much simple mental model."
+          "The advice here is really great (as I'd expect from Hugo), but as the maintainer of zizmor I want to note some caveats with the current iteration of workflow lockfiles:- They only lock normal action calls. If your workflows invoke other reusable workflows, you need to keep those hash-pinned manually for now.- Composite actions are not themselves locked. Instead, they get locked transitively through their callsites i.e. the workflows that call them. This makes any individual caller that uses lockfiles safe, but it also makes the current `gh actions-lock` default unsafe (since it removes hash-pins from the composite action itself, meaning that any external caller that invokes the action loses their transitive pinning).- Other forms of `uses:` clauses, like Docker images, are also not currently locked via the lockfile. And the same for forms of interior mutability (like an action running `npx ...` under the hood, although the latter is fully outside of GitHub's control to prevent. But these mean that you can't assume that a fully locked Actions setup is in fact 100% immutable.I hope they address these gaps soon, because it's otherwise an excellent (and long-awaited) feature.",
+          "Quoting someone else's blog I've forgotten but you're trading the trust in the repo owner not moving a tag for trusting whoever merges the commit hash to have checked that's a release in the repo you want and not _some_ forks commit. All forks on github are the same repo you can pin any commit, merged upstream or not.IMO Github should make Immutable tags mandatory to publish on https://github.com/marketplace",
+          "I think my main advice is to avoid GH actions at all, unless avoiding them is somehow painful. There is just a long bad history here."
+        ]
+      }
+    },
+    {
+      "id": "50458208",
+      "title": "Emacs in the Age of Magic",
+      "url": "https://commandlinesystems.com/magic.txt",
+      "source": "Hacker News",
+      "published_at": "2026-11-11T20:26:32+00:00",
+      "summary": "Emacs in the Age of Magic",
+      "score": 201,
+      "comments": 83,
+      "discussion_url": "https://news.ycombinator.com/item?id=50458208",
+      "extra": {
+        "top_comments": [
+          "There are several points of view here. Some people claim they will never need to \"program\" again because the LLM will do everything. That text editors are dead... and so is the career of programmer or software engineer. That nowadays, with Claude Code, you can reimplement anything (given a large enough context window, of course). That it is like being an expert in every programming language and system out there. That we should remove politicians and CEOs and put an AI in their place.On the other hand, many people claim that machine-generated software STINKS. That it is extremely verbose, that it reimplements similar methods over and over again. That it would rather cut corners at a low level than build high-level abstractions. That it pulls in libraries and makes serious security mistakes. That it writes tests that are basically incomplete. That it is unable to synthesize and keep context. In short, it has the same flaws as humans.I think these are binary points of view, and both are right. We have vampires that are incredibly fast, super-strong, super-intelligent and super-agile, that suck your blood (your money), and that die as soon as the sunlight of security or complexity hits them.There has to be another way. Nobody questions the versatility LLMs provide, or the boldness they give you to take on new projects. But I am not convinced that programmers or software engineers are going to disappear. I am not convinced that a manager can ship a new feature in a couple of afternoons and then lay off, or skip hiring, a junior or senior developer. There is a line near the beginning of Dune that goes something like this: \"there was a time when men handed their thinking over to machines in the hope of being freed, but that only allowed other men with machines to enslave them.\"We need to find a new path between smartphone addiction and being dumbed down by LLMs.",
+          "> [W]e are here to declare our intent to use and develop a version of Emacs that is free from LLM-generated contributions regardless of whatever policy GNU decides upon. We invite them to weigh the costs and do the right thing, in which case we will continue to support them. But if they are not willing to do so, we will continue to use and develop an LLM-free version of Emacs anyway, even if it is not GNU Emacs.https://human-emacs.org/",
+          "> The irony is rich that AI has turned Stallman's goal of software freedom on its head. Having your computer do whatever your imagination can think up -- that's real freedom.The irony is that Stallman promoted free software and allot of code got published online for free, and now LLMs have trained on this code. Without Stallman there will be no vibe coding."
         ]
       }
     }
