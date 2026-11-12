@@ -84,7 +84,7 @@ def _details(category: str, article: Article, item: ItemSummary, detailed: bool)
                 [
                     f"- **研究问题**：{_markdown_text(item.research_problem)}",
                     f"- **方法**：{_markdown_text(item.method)}",
-                    f"- **实验结果**：{_markdown_text(item.results)}",
+                    f"- **主要结论**：{_markdown_text(item.results)}",
                     f"- **局限**：{_markdown_text(item.limitations)}",
                     f"- **工程价值**：{_markdown_text(item.engineering_value)}",
                     f"- **价值点**：{_markdown_text(item.value)}",

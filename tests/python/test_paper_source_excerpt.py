@@ -55,7 +55,7 @@ class PaperSourceExcerptTests(unittest.TestCase):
         self.assertIn("- **来源摘要**：" + _markdown_text(LONGZERO.summary), markdown)
         self.assertIn("Therefore, we propose", markdown)
         self.assertIn("Experimental results show that LongZero", markdown)
-        for label in ("核心摘要", "研究问题", "方法", "实验结果", "局限", "工程价值"):
+        for label in ("核心摘要", "研究问题", "方法", "实验结果", "主要结论", "局限", "工程价值"):
             self.assertNotIn(f"**{label}**", markdown)
 
     def test_prior_work_hypotheses_negation_and_qualifiers_remain_unclassified(self):
@@ -97,7 +97,8 @@ class PaperSourceExcerptTests(unittest.TestCase):
         self.assertEqual(markdown.count("**来源摘要**"), 2)
         self.assertEqual(markdown.count("**核心摘要**"), 3)
         self.assertEqual(markdown.count("**方法**"), 2)
-        self.assertEqual(markdown.count("**实验结果**"), 2)
+        self.assertEqual(markdown.count("**主要结论**"), 2)
+        self.assertNotIn("**实验结果**", markdown)
 
     def test_model_cannot_forge_source_excerpt_provenance(self):
         for marker in (True, "true", "原文未披露细节。"):
