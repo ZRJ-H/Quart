@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-11-12T15:29:48.510250+08:00",
+  "cached_at": "2026-11-13T11:00:22.646803+08:00",
   "articles": [
     {
-      "id": "50459703",
-      "title": "Nvidia is preparing to oust Jensen Huang",
-      "url": "https://www.wsj.com/business/nvidia-is-preparing-to-oust-nvidia-ceo-jensen-huang-30f421ad",
+      "id": "50471731",
+      "title": "Service degradation on Microsoft 365",
+      "url": "https://status.cloud.microsoft/",
       "source": "Hacker News",
-      "published_at": "2026-11-11T22:31:06+00:00",
-      "summary": "Nvidia is preparing to oust Jensen Huang",
-      "score": 888,
-      "comments": 1237,
-      "discussion_url": "https://news.ycombinator.com/item?id=50459703",
+      "published_at": "2026-11-12T18:20:48+00:00",
+      "summary": "https://www.abc.net.au/news/2026-11-13/microsoft-outage-affe...https://www.reddit.com/r/sysadmin/comments/1xuje83/microsoft...https://downdetector.com/status/microsoft-365/",
+      "score": 555,
+      "comments": 514,
+      "discussion_url": "https://news.ycombinator.com/item?id=50471731",
       "extra": {
         "top_comments": [
-          "https://archive.is/ZmOEH",
-          "People arguing the technical and business merits of what Jensen brought to the company aren't getting how serious these allegations against him are.The US Government is using NVIDIA chips for all sort of stuff across all classification levels. Subsequently, Jensen has deep relationships within the government that warrants additional scrutiny.Him authorizing his company to sell massive amounts of chips to a restricted country is massively illegal, but companies work around that and have since forever. Doesn't make it less illegal, but that's only a small part of the problem.The real problem is that nobody knows how much sensitive info Jensen gave this woman or how far that info spread.It's really about fairness. Us technical salespeople take training that tells us all of the ways that deals with restricted countries happen and how we will immediately get fired ten ways to Sunday if we forego that to close quota. Also, normies with clearances tell their partners stuff they shouldn't. Stuff they think isn't really sensitive since it seems so minute. This isn't bad until said partner spills at the wrong place and wrong time. That's how normies get sent to prison for treason. Loose lips sink ships and all that. [^0]Getting fired -- WHICH HE ABSOLUTELY SHOULD BE -- is the least of his problems.[^0] Examples:- https://www.ctvnews.ca/world/article/retired-us-army-officer.... Army officer leaks secrets through dating website to sound cool; gets six years- https://www.foxnews.com/us/pentagon-leaker-jack-teixeira-rec.... Leaked secrets about Ukraine war through Discord to sound cool; gets 15 years- https://www.westernjournal.com/ex-cia-officer-accused-leakin.... CIA officer leaks stuff to journalist girlfriend; gets 10 years",
-          "I recently recalled Nvidia's rather strange reaction to the Gamers Nexus investigation into GPU smuggling [0]. Found it somewhat strange at the time how incredibly agitated the reaction seemed to have been, given Nvidia could sell the same GPUs for the same price essentially instantly without the Chinese market. Their reaction wasn't merely a denial, dismissal or even silence, but very irrationally sounding for a company of their size and standing.Why not just sell to not-sanctioned entities, ensure compliance to the best of your abilities and otherwise keep your head down? Again, wasn't like they struggled to find buyers for their chips.Considering Megaspeed, I now see this in a very different light. Him cheating is personal and I wish the affected members of any family of a cheater the best, but not relevant for us outsiders.Being honey trapped very bad securities wise, but he'd be a victim (and evidence for why we shouldn't discount Mistral in the frontier lab race [1]). If sanctions avoidance went all the way to the top, that is hard to negate even for a board that is interested in keeping him. At that stage he was neither honey trapped nor \"merely horny\"...[0] https://www.youtube.com/watch?v=1H3xQaf7BFI[1] https://time.com/archive/7146565/hollandes-popularity-goes-u..."
+          "Nadella stripped mined the company for AI jank, and everything has been falling apart. Github has been unreliable a lot lately. Xbox is basically imploding. A lot of Azure, Entra, Intune, etc. is shockingly janky, and there is clearly very little investment in it.",
+          "Copied this from my post in the other thread:The Status page is not working well, but I managed to subscribe to their RSS feed and it has been sending out updates periodically. I'll post some of them here.9:02 PM UTC: We've validated an alternative health check method on a subset of affected infrastructure, which allowed the servers in that subset to successfully return to service, and we're now applying this change more broadly. We're also preparing an automated recovery process to continually detect and restart unresponsive servers, to help keep them in service while this change progresses. Additionally, our review of recent changes has identified a small number of configuration updates that we're investigating as potential contributors to the issue.Previous status: While validating the targeted change, we found that many of the affected servers have become unresponsive, which is preventing us from confirming whether the change is effective. We're restarting these servers so they can come back online with the change in place, and we're applying the same approach to additional affected portions of our infrastructure to validate the results more broadly.8:52 PM UTC: While validating the targeted change, we found that many of the affected servers have become unresponsive, which is preventing us from confirming whether the change is effective. We're restarting these servers so they can come back online with the change in place, and we're applying the same approach to additional affected portions of our infrastructure to validate the results more broadly.Previous Status: While we haven't identified any recent changes that correlate with the start of impact, our investigation indicates the failed health checks may originate from a specific component on the affected servers that's responsible for processing them. We're deploying a targeted change to bypass this component on a subset of servers to validate whether this restores availability, and we've taken steps to prevent additional servers from being removed from service while we work to return the affected servers to service. We're also investigating why affected servers are experiencing elevated processor usage while handling requests.7:52 PM UTC: We've identified that affected servers are failing automated health checks, which is causing them to become unavailable, and this may be related to a recent change to a component involved in processing those checks. We're testing a configuration change on a subset of affected infrastructure to address this and, if successful, will apply it more broadly. In parallel, we've initiated a restart of all affected servers and are validating whether they're successfully returning to service.7:30 PM UTC: We're aggressively pursuing all pathways to reduce impact. As a precaution, we've paused all deployments and configuration changes while we review recent changes for any correlation to this event. We've determined that the elevated load isn't driven by an overall increase in traffic, but by a large number of servers being unexpectedly unavailable, which is shifting load onto the remaining infrastructure. We're investigating what's causing these servers to become unavailable while we work to safely return them to service.7:16 PM UTC: We're aggressively pursuing all pathways to reduce impact. As a precaution, we've paused all deployments and configuration changes while we review recent changes for any correlation to this event. We've also moved traffic for some services off the affected infrastructure to further reduce load, with additional traffic moves in progress.6:59 PM UTC: We've completed redistributing connection traffic across our worldwide infrastructure, and we're moving additional traffic off the affected infrastructure to further reduce load. We're also restarting affected servers to return them to service. In parallel, we're investigating whether the elevated traffic reflects a genuine increase in requests or a shift in how traffic is being routed across our infrastructure.",
+          "What’s crazy is now hour 8 and my work email for 15k+ employees is still down. This is worse than the usual US-East-1 issues."
         ]
       }
     },
     {
-      "id": "50456631",
-      "title": "AWS emulator",
-      "url": "https://github.com/aws/aws-emulator",
+      "id": "50471431",
+      "title": "Gemini 4 Hydrogen",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
       "source": "Hacker News",
-      "published_at": "2026-11-11T18:21:38+00:00",
-      "summary": "https://www.aboutamazon.com/news/aws/how-autonomous-ai-agent...https://www.allthingsdistributed.com/2026/11/aws-emulator-an...",
-      "score": 798,
-      "comments": 231,
-      "discussion_url": "https://news.ycombinator.com/item?id=50456631",
+      "published_at": "2026-11-12T18:01:48+00:00",
+      "summary": "Gemini 4 Hydrogen",
+      "score": 476,
+      "comments": 300,
+      "discussion_url": "https://news.ycombinator.com/item?id=50471431",
       "extra": {
         "top_comments": [
-          "Skeptical of using because it's not clear whether this was just an exercise or a real product they are going to ship and maintain.Floci[0] has been great for me. Use the Testcontainers[1], too.Bonus: works for GCP and Azure, too (so far have only used in limited capacity, though).[0] https://floci.io/[1] https://testcontainers.com/modules/floci/",
-          "From the security page [0]> Don’t use the emulator to test the following:> - IAM policies and permissions boundaries> - Resource-based policies, such as bucket policies> - AWS KMS key policies> - Access across AWS accounts or across AWS Regions> - Any other security control> Some services in the emulator evaluate IAM policies for IAM users and roles that you create in the emulator, but not the same way as AWS. The emulator never denies a request signed with its own key. It doesn’t check AWS KMS key policies or Amazon S3 bucket policies. It also doesn’t support calls across accounts or Regions. So a request that AWS denies might succeed in the emulator. A request that AWS allows might fail.This is a shame because I'd love for the official AWS product to be better than e.g. ministack and localstack on this, which will go some of the distance. I think because the agents were only building on the public API surface, it's hard to build this part. But they should've tried and let the agents read whatever policy engines AWS has. Or maybe it's a way to prevent someone from trivially running aws-emulator as AWSaaS?[0] https://docs.aws.amazon.com/emulator/latest/userguide/securi...",
-          "Say whatever but without AI and agents, no one in AWS would have thought of building this given the huge amount of services they have. Humanly, possible but very very costly. Not saying has not happened before but fakecloud and localstack etc? That moat is gone.I am shocked TBH that this is the new normal. Agents writing code in one of the most difficult to use languages. And ugly as well TBH, it pokes into your eyes. Subjective I know but it is a horrible language for humans."
+          "This was rolled out RIGHT away, as when I just went to use Gemini, seeing 3.8 Flash be replaced with \"4 Hydrogen\" was less hype and more a thought along the line of \"What [on Earth] is Gemini Hydrogen???\", then me going here to figure it out.This model naming scheme works for separate products, but using elements, molecules, etc. for products you're supposed to compare with each other... Not very helpful.If anything, my intuition would say that Hydrogen is more powerful than Argon... I don't know. Not liking this naming scheme trend.",
+          "As this is a) being served in Search, b) supposed to be 2.5x faster than 3.8 Flash, c) the element with lowest atomic weight; I deduce that, despite being more capable than 3.8 Flash, now the “entry level” model set to replace 3.5 Flash Lite.But it is priced the same as the non-discounted 3.8 Flash, considerably higher than what anyone is paying today for 3.8 Flash or 3.5 Flash Lite or the deprecated 3.0/2.x Gemini models. How does this work? Is Google abandoning the “fast and cheap” tier? That seems like a mistake since plenty of workflows are absolutely price inelastic, meaning when the 3.8 Flash discount ends at EOY, lots of current enterprise Gemini customers would have to take their business to another shop??",
+          "Anyone else got suspended for just using agy on the command line? \"This service has been disabled in this account for violation of Terms of Service. Please submit an appeal to continue using this product.\". The support claims that it can do nothing, not even see a reason and pointed me toward a form with no text inputs just a checkbox along the lines of \"I understand the TOS, please check\". So I filed an appeal, and it seems that it was automatically processed and within a few minutes. agy was working for one more prompt and it triggered a suspension again. What channel can I use to get any attention on something like this? I've heard these Google horror stories... fortunately this is only the Antigravity part, but I've just today upgraded to Ultra and this coincided with that. I've become extremely hesitant to continue using broader Google services when this can not be resolved via their customer support."
         ]
       }
     },
     {
-      "id": "50458900",
-      "title": "United Airlines bans AI agents from booking flights on behalf of travelers",
-      "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
+      "id": "50472038",
+      "title": "Rust 1.100",
+      "url": "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/",
       "source": "Hacker News",
-      "published_at": "2026-11-11T21:24:35+00:00",
-      "summary": "United Airlines bans AI agents from booking flights on behalf of travelers",
-      "score": 517,
-      "comments": 505,
-      "discussion_url": "https://news.ycombinator.com/item?id=50458900",
+      "published_at": "2026-11-12T18:39:05+00:00",
+      "summary": "Rust 1.100",
+      "score": 463,
+      "comments": 204,
+      "discussion_url": "https://news.ycombinator.com/item?id=50472038",
       "extra": {
         "top_comments": [
-          "How do they plan on stopping me from using Claude code with the Claude in chrome plugin, or some other computer use agent?At this point it feels like I have an adversarial relationship with many merchants I use online. I wish the simple “you have a product, I have money” relationship was possible. I don’t want to take part in your giant human behavior optimization problem. You have a product and I have money why does it have to be more complicated than that?Realistically though I know that’s not happening. I will continue to access online merchants in the way I prefer and will do my best to avoid detection or blocking. At least so far Claude is happy to play along but I suspect I will need to seek out an obliterated agent in the not to distant future. (Once the corporate capture of the frontier cloud AI models is complete.)",
-          "Tangent: it was always odd to me that \"booking a [flight|hotel|concert tickets]\" is the canonical example of a task that can be automated by an agent. These are tasks that are:- already streamlined (spend 2min on Google flights, seatgeek, etc...); we aren't stuck with early web UX and latency- I want to have 100% control of the outcome or would have to write a long list of preferences and rules (middle seats, layovers, etc...) to feel good about trusting automation- require making a large payment. the agent is not getting free reign to use my cc- give me some personal satisfaction and enjoyment - its delightful to look foward to a trip, concert, etc... and planning is part of the fun and anticipation imo",
-          "Somebody once said, that airline booking pages itself are one of the most sophisticated CAPTCHAs. No idea if this is true, but they obviously don't want their customers to easily find the best deals.I guess the best option is, to use a good reseller/travel agency that provides an API/MCP for booking and managing flights.For finding the cheapest deals agents can still be used. Just the booking itself is probably better done manually. It also eliminates the risk that the agent does something stupid.edit: they might try to block agents, but this won't be possible with browser use. they can always throttle users by IP or fingerprint. Letting an agent book a flight might be risky, because they might cancel a booking or impose a fee if they somehow detect it."
+          "Woohoo, that's a release! My personal favorites:- Stabilize never type- Stabilize custom allocators- Introduced minimum publish age configurations, also known as dependency cooldowns. When the relevant config is set, the resolver ignores versions published more recently than that, unless they are already in Cargo.lock. (RFC 3923) docs #17335- cargo-install: now uses the existing lockfile in the .crate tarball by default. --locked in cargo install becomes a no-op. #17388",
+          "> Cargo now reports unused dependencies to users, e.g.> warning: unused dependency `tracing-subscriber` --> Cargo.toml:23:1 | 23 | tracing-subscriber.workspace = true | ^^^^^^^^^^^^^^^^^^ | = note: `cargo::unused_dependencies` is set to `warn` by default help: consider removing the dependency on `tracing-subscriber`Heck yes",
+          "This release is so big that multiple useful stabilized API aren't event mentioned in the blog post like:- bool::toggle() https://doc.rust-lang.org/stable/std/primitive.bool.html#met...- Box::map() https://doc.rust-lang.org/stable/std/boxed/struct.Box.html#m...- str::trim_prefix(), str::trim_suffix, Path::trim_prefix()"
         ]
       }
     },
     {
-      "id": "50455394",
-      "title": "A false smoke alarm almost drowned Jane Street's only NYC datacenter",
-      "url": "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/",
+      "id": "50470488",
+      "title": "Show HN: My $300 embroidery machine needed a subscription, so I built my own app",
+      "url": "https://github.com/simpsoka/zigzag",
       "source": "Hacker News",
-      "published_at": "2026-11-11T16:38:44+00:00",
-      "summary": "A false smoke alarm almost drowned Jane Street's only NYC datacenter",
-      "score": 467,
-      "comments": 236,
-      "discussion_url": "https://news.ycombinator.com/item?id=50455394",
+      "published_at": "2026-11-12T17:02:42+00:00",
+      "summary": "https://x.com/simpsoka/status/2115254318161182876",
+      "score": 365,
+      "comments": 145,
+      "discussion_url": "https://news.ycombinator.com/item?id=50470488",
       "extra": {
         "top_comments": [
-          "The article reminds me of when Hurricane Sandy took out a bunch of New York DCs with 3+ feet of water and people were carrying diesel up stairs to keep generators running.“The superhuman folks at the data center are hauling 55 gallon drums of diesel fuel up 17 flights of stairs. Assuming they're able to sustain a rate of transfer that exceeds the rate of consumption, the data center should run until electricity is restored. The latest estimate from Con Edison for lower Manhattan is 4 days. (The New York Stock Exchange will be open tomorrow, also running on generator power.)”https://news.ycombinator.com/item?id=4720388 (https://web.archive.org/web/20121101194314/http://status.fog...)https://arstechnica.com/information-technology/2012/11/how-o...",
-          "In the article he talks about living within a few minutes walk to work and telling too many people so they made him the emergency office guy. Same thing happened to me, foolishly told everyone hey I can see my apartment from here so I would get panicked calls to run in and shut down servers because the information security guy got a tip of an impending exploit about to be released on a holiday weekend with no way to do it remotely. Everyone else lived a ferry ride or commuter train away.",
-          "Odd that they didn't have at minimum 1) a physical Emergency Power Off (EPO) button inside the datacenter, such that one button could de-energize everything -- usually required as part of building a datacenter due to code variance for the \"low voltage\" (<4000V in this context...) wiring. 2) EPO interlink to the smoke alarms, such that it would de-energize equipment automatically (maybe with delay) if smoke detected."
+          "I'm going to assume Claude did the heavy lifting here (because it's Q4 2026 and the odds are in my favor), so if I'm right: this is one of the best examples of the way LLMs can empower users to not only scratch all the itches, but demonstrate to anyone who stumbles by just how satisfying it can be to do so themselves.Your app represents a future that I, an old, actually love. When I see projects like this, I don't think about ongoing support or if the project will be abandoned. I think, \"Woah, I hadn't thought of that. Now I'm going to try it. Because why wouldn't I try to get all the value I can out of my $20/month Claude subscription?\"Even though I've been a developer for 30+ years (and a nerd for longer), I've never felt so motivated by the potential of a technology to make an individual's life richer. Thanks for sharing it.And if you wrote it by hand, my hat's off to you for sharing that, too.",
+          "This is very very much in my current wheelhouse. My (extremely genius) friend Owen Trueblood reverse engineered the Brother PE-150 [0] and made a replacement motherboard, replacing the stock one, to control it over USB.The PE-150 is a great example of the absurdity/sadness of the embroidery world: today, you can have those machines for $100 on eBay, completely functional, but being sold/abandoned because they use a proprietary cartridge holding proprietary data that no one wants to deal with.Even novel Brother machines that have USB connectors still force you to use terrible apps and lock you into subscriptions. This entire world - which is/should be full of twee and about making beautiful things with your hands - is somehow corrupted with this merchandising/everything-software-should-have-a-price mentality which is just so sad.Nothing to announce announce, but I 100000000000000000000000000000000000% want to make embroidery machines more accessible, open, and free of this balagan.A few more links on this topic:- https://github.com/CreativeInquiry/PEmbroider !! Check the \"Motivation\" section of the readme!- https://emberdesign.net/ - a startup by another friend, with a really great online editor, and which exports a variety of formats[0] https://owentrueblood.com/blog/2024/12/10/reverse-engineerin...",
+          "If there's one thing I'm very optimistic about with AI, it's the de-bricking of bricked things, giving new life to legacy/unsupported software and hardware, or just getting around shitty practices like this.Seems very promising. I have a home recording studio, and there's a small revolution going on with people cloning subscription-based stuff. Some brands are notorious for making expensive equipment which they just stop supporting after 10 years, sometimes rendering them obsolete. Or tacking ridiculous licensing mechanism onto the equipment."
         ]
       }
     },
     {
-      "id": "50456791",
-      "title": "Gemini Decisions API",
-      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+      "id": "50472260",
+      "title": "Gemini 4 Hydrogen and Orchestrator",
+      "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/",
       "source": "Hacker News",
-      "published_at": "2026-11-11T18:32:42+00:00",
-      "summary": "Gemini Decisions API",
-      "score": 386,
-      "comments": 122,
-      "discussion_url": "https://news.ycombinator.com/item?id=50456791",
+      "published_at": "2026-11-12T18:52:01+00:00",
+      "summary": "Gemini 4 Hydrogen and Orchestrator",
+      "score": 325,
+      "comments": 81,
+      "discussion_url": "https://news.ycombinator.com/item?id=50472260",
       "extra": {
         "top_comments": [
-          "I'm sort of surprised it took Jev for everyone to realize \"oh yeah, this is a useful thing that we should have in our product portfolio\".But maybe this is one of those things that's only obvious in retrospect? I'm sure people were trying something similar years ago with grammar-constrained outputs (for example to only output a simple json structure), but you can't get probabilities out of the model that way. Which makes me wonder: how do these models calculate probabilities?",
-          "A couple of weeks back, someone had posted this on HN - an interesting note about the problems with asking LLMs for confidence: https://rumple.github.io/blog/2026/10/20/asking-llm-for-conf...",
-          "I have still not used a decision model, How are people using them at the moment? is any one using them in a coding harness like Pi?"
+          "This is essentially what Anthropic does with the advisor mode and what GitHub does with their multi-model pipeline using the HydraFusion model, which is just a large set of different models with different qualities used in a pipeline to produce an answer.What I don't understand is how they all make it work with caching in general. Looking at how the advisor mode in claude work you seem to only be billed the output tokens and cache hit on the whole session when it calls out to the advisor, making it super cheap compared to running the more expensive model for the entire session.",
+          "There were so many memes about “Gemini Hydrogen” after they released Carbon. That they actually released a model named Hydrogen makes this very funnyBut a new Flash model is very welcome. Argon and Carbon are very slow. In the time it takes for them to complete a single task, Opus already managed to complete multiple things. They’re so slow, I started using 3.8 Flash over them. (A lot of it is also because of how terrible agy is. Before doing any task, Gemini feels the need to hover up a bazillion files into its context when the task is something simple like “update the docs of this controller”)Also this sounds like Argon is dead now",
+          "I'm so confused by their new naming scheme. What was wrong with number and pro/flash/flash lite."
         ]
       }
     },
     {
-      "id": "50459745",
-      "title": "93% of paint splatters are valid Perl programs (2019)",
-      "url": "https://www.mcmillen.dev/sigbovik/",
+      "id": "50468888",
+      "title": "I'm making LLMs work on small and old devices",
+      "url": "https://github.com/hyperionaidev/smolmaxxing/",
       "source": "Hacker News",
-      "published_at": "2026-11-11T22:34:23+00:00",
-      "summary": "93% of paint splatters are valid Perl programs (2019)",
-      "score": 367,
-      "comments": 50,
-      "discussion_url": "https://news.ycombinator.com/item?id=50459745",
+      "published_at": "2026-11-12T15:23:10+00:00",
+      "summary": "I'm making LLMs work on small and old devices",
+      "score": 287,
+      "comments": 98,
+      "discussion_url": "https://news.ycombinator.com/item?id=50468888",
       "extra": {
         "top_comments": [
-          "SIGBOVIK papers are almost always a delightEDIT: From their 2026 publication>Permission to make digital or hard copies of portions of this work for personal use is granted; permission to make digital or hard copies of portions of this work for classroom use is also granted, but seems ill-advised",
-          "Popular in:2024 (515 points, 125 comments) https://news.ycombinator.com/item?id=401970132021 (431 points, 165 comments) https://news.ycombinator.com/item?id=27929730",
-          "Tangentially related, the only way for a Java properties file to be invalid is if it contains an invalid Unicode escape sequence (“\\u” not followed by four digits, and not preceded by an odd number of “\\”). After resolving Unicode escapes, any character sequence is a valid properties file."
+          "For the last five months or so, opus and fable have both been able to do this task as a soneshot prompt. An inference engine is almost pure compute and to a first approximation the only operation your hardware needs to support to do llm inference is multiplication [the rest of an inference engine is \"some trig\"].So to get any model working on $OLD_HARDWARE, the hardest part of the task is now sourcing the hardware itself and giving the agent ssh access -- a modern agent will be able to source a compiler, write the implementation, optimize it, test in qemu (or any other simulator) and push it onto the device.Example prompt: \"write an inference engine for qwen3 0.6b in pure assembly that runs on this device. Write a script to attach the weights to the resulting binary. Prefix is supplied as a stream of u32 token IDs on stdin. The engine streams u32 token IDs on stdout.\"",
+          "Recently I started this open source project at my AI company, where I'm trying to make LLMs workingNow Reached 16B models running on iPad Air 1st gen and xiaomi tv box, both have less than 1GB of usable memory, and reached some decent speeds given the hardware.I'm open sourcing the effort done, kernels developed and results for everyone to re-produce and push more, also the modified models are on hugging face : https://huggingface.co/hyperionaidevI want a more challenging device, what do you think?",
+          "I have a few Maxwell and Pascal series cards lying around, anywhere from 2GB to 11GB of VRAM. Have experimented with small/tiny models for agentic stuff with mixed results, however they are getting better at tool calling (before they'd just produce junk output that the harness couldn't parse).I'm excited to see what we can squeeze out of older hardware, in the same spirit of demoscene or \"will it run DOOM?\".Especially timely given current hardware scarcity. Will be watching this space."
         ]
       }
     },
     {
-      "id": "50459485",
-      "title": "Lock Your GitHub Actions",
-      "url": "https://hugovk.dev/blog/2026/lock-github-actions/",
+      "id": "50472490",
+      "title": "Dwarf planet candidate appears which takes roughly 280 years to orbit our sun",
+      "url": "https://www.smithsonianmag.com/smart-news/astronomers-found-a-mysterious-object-orbiting-far-beyond-pluto-it-could-be-a-new-dwarf-planet-hidden-in-our-solar-system-180989857/",
       "source": "Hacker News",
-      "published_at": "2026-11-11T22:16:41+00:00",
-      "summary": "Lock Your GitHub Actions",
-      "score": 214,
-      "comments": 43,
-      "discussion_url": "https://news.ycombinator.com/item?id=50459485",
+      "published_at": "2026-11-12T19:05:33+00:00",
+      "summary": "Dwarf planet candidate appears which takes roughly 280 years to orbit our sun",
+      "score": 215,
+      "comments": 99,
+      "discussion_url": "https://news.ycombinator.com/item?id=50472490",
       "extra": {
         "top_comments": [
-          "The advice here is really great (as I'd expect from Hugo), but as the maintainer of zizmor I want to note some caveats with the current iteration of workflow lockfiles:- They only lock normal action calls. If your workflows invoke other reusable workflows, you need to keep those hash-pinned manually for now.- Composite actions are not themselves locked. Instead, they get locked transitively through their callsites i.e. the workflows that call them. This makes any individual caller that uses lockfiles safe, but it also makes the current `gh actions-lock` default unsafe (since it removes hash-pins from the composite action itself, meaning that any external caller that invokes the action loses their transitive pinning).- Other forms of `uses:` clauses, like Docker images, are also not currently locked via the lockfile. And the same for forms of interior mutability (like an action running `npx ...` under the hood, although the latter is fully outside of GitHub's control to prevent. But these mean that you can't assume that a fully locked Actions setup is in fact 100% immutable.I hope they address these gaps soon, because it's otherwise an excellent (and long-awaited) feature.",
-          "Quoting someone else's blog I've forgotten but you're trading the trust in the repo owner not moving a tag for trusting whoever merges the commit hash to have checked that's a release in the repo you want and not _some_ forks commit. All forks on github are the same repo you can pin any commit, merged upstream or not.IMO Github should make Immutable tags mandatory to publish on https://github.com/marketplace",
-          "I think my main advice is to avoid GH actions at all, unless avoiding them is somehow painful. There is just a long bad history here."
+          "If anyone is interested, here is its orbit, my old day job was to compute orbits for asteroids and comets.(This uses wasm, meant for a desktop, and will download the asteroid catalog of about 65mb, you have been warned)https://dahlend.github.io/ketev/#t=2009-07-01.717&sel=2026%2...This is a big boy.",
+          "I would like to officially propose to name this new dwarf planet Boreas, after the Greek god of the north wind and winter.",
+          "There was a lot of negative press and commentary about \"demoting\" Pluto from being a planet at the time. But its obviously true that it was the right move, and creating this \"dwarf planet\" class of objects was correct. It was hard to justify Pluto being a planet when Ceres exists, but Eris, Haumea, Makemake and all of these other possible Dwarf planets are the nail in the coffin."
         ]
       }
     },
     {
-      "id": "50458208",
-      "title": "Emacs in the Age of Magic",
-      "url": "https://commandlinesystems.com/magic.txt",
+      "id": "50474883",
+      "title": "Chinese frontier AI models carry the fingerprint of export-controlled GPUs",
+      "url": "https://unemploymentlabs.com/checkpoint-forensics",
       "source": "Hacker News",
-      "published_at": "2026-11-11T20:26:32+00:00",
-      "summary": "Emacs in the Age of Magic",
-      "score": 201,
-      "comments": 83,
-      "discussion_url": "https://news.ycombinator.com/item?id=50458208",
+      "published_at": "2026-11-12T21:56:11+00:00",
+      "summary": "Chinese frontier AI models carry the fingerprint of export-controlled GPUs",
+      "score": 189,
+      "comments": 52,
+      "discussion_url": "https://news.ycombinator.com/item?id=50474883",
       "extra": {
         "top_comments": [
-          "There are several points of view here. Some people claim they will never need to \"program\" again because the LLM will do everything. That text editors are dead... and so is the career of programmer or software engineer. That nowadays, with Claude Code, you can reimplement anything (given a large enough context window, of course). That it is like being an expert in every programming language and system out there. That we should remove politicians and CEOs and put an AI in their place.On the other hand, many people claim that machine-generated software STINKS. That it is extremely verbose, that it reimplements similar methods over and over again. That it would rather cut corners at a low level than build high-level abstractions. That it pulls in libraries and makes serious security mistakes. That it writes tests that are basically incomplete. That it is unable to synthesize and keep context. In short, it has the same flaws as humans.I think these are binary points of view, and both are right. We have vampires that are incredibly fast, super-strong, super-intelligent and super-agile, that suck your blood (your money), and that die as soon as the sunlight of security or complexity hits them.There has to be another way. Nobody questions the versatility LLMs provide, or the boldness they give you to take on new projects. But I am not convinced that programmers or software engineers are going to disappear. I am not convinced that a manager can ship a new feature in a couple of afternoons and then lay off, or skip hiring, a junior or senior developer. There is a line near the beginning of Dune that goes something like this: \"there was a time when men handed their thinking over to machines in the hope of being freed, but that only allowed other men with machines to enslave them.\"We need to find a new path between smartphone addiction and being dumbed down by LLMs.",
-          "> [W]e are here to declare our intent to use and develop a version of Emacs that is free from LLM-generated contributions regardless of whatever policy GNU decides upon. We invite them to weigh the costs and do the right thing, in which case we will continue to support them. But if they are not willing to do so, we will continue to use and develop an LLM-free version of Emacs anyway, even if it is not GNU Emacs.https://human-emacs.org/",
-          "> The irony is rich that AI has turned Stallman's goal of software freedom on its head. Having your computer do whatever your imagination can think up -- that's real freedom.The irony is that Stallman promoted free software and allot of code got published online for free, and now LLMs have trained on this code. Without Stallman there will be no vibe coding."
+          "Chinese AI companies are free to use any Nvidia GPU they want as long as the GPU is not physically located within China. It is entirely consistent with US export controls for Chinese AI companies to remotely use GPUs located in Singapore or Malaysia.“In facilities across the region, Megaspeed rents Nvidia chips to Chinese tech giants such as Alibaba, an arrangement that does not violate current US export control regulations.” See [1].[1] https://www.atlanticcouncil.org/dispatches/beyond-the-spy-sc...",
+          "The author of this piece is a SWE-turned-influencer \"China hawk\" from OpenAI (i.e. the primary advocate of export bans along with Anthropic), and this isn't an academic paper despite the theming.I have no idea whether this is legit or not (there's no link to any code), I'm mentioning this because all the comments here are assuming truth without verifying the contents.",
+          "I definitely care about this much less than it seems I'm supposed to.I think the frontier models are definitely in a healthy dynamic where it seems the near-but-not-quite performance of open-weight models are what is pushing the most innovation and price competition from OpenAI, Anthropic and co"
         ]
       }
     }
