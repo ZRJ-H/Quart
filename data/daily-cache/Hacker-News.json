@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-11-13T11:00:22.646803+08:00",
+  "cached_at": "2026-11-13T15:01:32.088474+08:00",
   "articles": [
     {
       "id": "50471731",
@@ -8,32 +8,14 @@
       "source": "Hacker News",
       "published_at": "2026-11-12T18:20:48+00:00",
       "summary": "https://www.abc.net.au/news/2026-11-13/microsoft-outage-affe...https://www.reddit.com/r/sysadmin/comments/1xuje83/microsoft...https://downdetector.com/status/microsoft-365/",
-      "score": 555,
-      "comments": 514,
+      "score": 740,
+      "comments": 678,
       "discussion_url": "https://news.ycombinator.com/item?id=50471731",
       "extra": {
         "top_comments": [
+          "Ex-MSFT here, sharing my outdated POV based on working on a product that was using Microsoft Exchange and therefore was hooked onto the email delivery pipeline.Note that the infra for M365, Azure etc is different. They would be running on servers hosted in MSFT DCs but have completely different CI/CD pipelines. M365 services have their own deployment pipelines and it takes on the order of weeks to deploy your changes to production.Considering the fact that Outlook is down, clearly email doesn’t seem to be working. So email uses something called Microsoft Exchange Server, there used to be an on-premises version of this but MS stopped supporting it to run the cloud version hereby called M365. Email is one big “macro-service”, if you’re running Windows Server, look at the process called “EdgeTransport.exe” this is responsible for sending/receiving email on Windows Servers. There are probably multiple 100s of services supported by 100s of teams that are run while email is routed from sender to receiver via MSFT Exchange servers. My recollection is that even if one of these services goes down or introduces latency in the pipeline, it caused a major incident. When I was working in M365 Security in 2024, this Exchange Server pipeline was called “legacy” because it’s one big .NET Framework service. I don’t know if they upgraded to .NET core but developing on this was as HN comments say, very janky.The reason Teams doesn’t seem to be down is that Teams services are completely different and are written using .NET Core and have their own separate release pipeline. It was much easier to interact with Teams services. I actually worked closely with the team that was responsible for ingesting Teams messages to the customer’s data store. Their code base was much more modern and easy to understand. Exchange Server not so much.I don’t know if what I said is accurate but know that Exchange server code was like a fossil that didn’t change as much, over the ~5 years I worked on it from 2019-2024.Story time over.",
           "Nadella stripped mined the company for AI jank, and everything has been falling apart. Github has been unreliable a lot lately. Xbox is basically imploding. A lot of Azure, Entra, Intune, etc. is shockingly janky, and there is clearly very little investment in it.",
-          "Copied this from my post in the other thread:The Status page is not working well, but I managed to subscribe to their RSS feed and it has been sending out updates periodically. I'll post some of them here.9:02 PM UTC: We've validated an alternative health check method on a subset of affected infrastructure, which allowed the servers in that subset to successfully return to service, and we're now applying this change more broadly. We're also preparing an automated recovery process to continually detect and restart unresponsive servers, to help keep them in service while this change progresses. Additionally, our review of recent changes has identified a small number of configuration updates that we're investigating as potential contributors to the issue.Previous status: While validating the targeted change, we found that many of the affected servers have become unresponsive, which is preventing us from confirming whether the change is effective. We're restarting these servers so they can come back online with the change in place, and we're applying the same approach to additional affected portions of our infrastructure to validate the results more broadly.8:52 PM UTC: While validating the targeted change, we found that many of the affected servers have become unresponsive, which is preventing us from confirming whether the change is effective. We're restarting these servers so they can come back online with the change in place, and we're applying the same approach to additional affected portions of our infrastructure to validate the results more broadly.Previous Status: While we haven't identified any recent changes that correlate with the start of impact, our investigation indicates the failed health checks may originate from a specific component on the affected servers that's responsible for processing them. We're deploying a targeted change to bypass this component on a subset of servers to validate whether this restores availability, and we've taken steps to prevent additional servers from being removed from service while we work to return the affected servers to service. We're also investigating why affected servers are experiencing elevated processor usage while handling requests.7:52 PM UTC: We've identified that affected servers are failing automated health checks, which is causing them to become unavailable, and this may be related to a recent change to a component involved in processing those checks. We're testing a configuration change on a subset of affected infrastructure to address this and, if successful, will apply it more broadly. In parallel, we've initiated a restart of all affected servers and are validating whether they're successfully returning to service.7:30 PM UTC: We're aggressively pursuing all pathways to reduce impact. As a precaution, we've paused all deployments and configuration changes while we review recent changes for any correlation to this event. We've determined that the elevated load isn't driven by an overall increase in traffic, but by a large number of servers being unexpectedly unavailable, which is shifting load onto the remaining infrastructure. We're investigating what's causing these servers to become unavailable while we work to safely return them to service.7:16 PM UTC: We're aggressively pursuing all pathways to reduce impact. As a precaution, we've paused all deployments and configuration changes while we review recent changes for any correlation to this event. We've also moved traffic for some services off the affected infrastructure to further reduce load, with additional traffic moves in progress.6:59 PM UTC: We've completed redistributing connection traffic across our worldwide infrastructure, and we're moving additional traffic off the affected infrastructure to further reduce load. We're also restarting affected servers to return them to service. In parallel, we're investigating whether the elevated traffic reflects a genuine increase in requests or a shift in how traffic is being routed across our infrastructure.",
-          "What’s crazy is now hour 8 and my work email for 15k+ employees is still down. This is worse than the usual US-East-1 issues."
-        ]
-      }
-    },
-    {
-      "id": "50471431",
-      "title": "Gemini 4 Hydrogen",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
-      "source": "Hacker News",
-      "published_at": "2026-11-12T18:01:48+00:00",
-      "summary": "Gemini 4 Hydrogen",
-      "score": 476,
-      "comments": 300,
-      "discussion_url": "https://news.ycombinator.com/item?id=50471431",
-      "extra": {
-        "top_comments": [
-          "This was rolled out RIGHT away, as when I just went to use Gemini, seeing 3.8 Flash be replaced with \"4 Hydrogen\" was less hype and more a thought along the line of \"What [on Earth] is Gemini Hydrogen???\", then me going here to figure it out.This model naming scheme works for separate products, but using elements, molecules, etc. for products you're supposed to compare with each other... Not very helpful.If anything, my intuition would say that Hydrogen is more powerful than Argon... I don't know. Not liking this naming scheme trend.",
-          "As this is a) being served in Search, b) supposed to be 2.5x faster than 3.8 Flash, c) the element with lowest atomic weight; I deduce that, despite being more capable than 3.8 Flash, now the “entry level” model set to replace 3.5 Flash Lite.But it is priced the same as the non-discounted 3.8 Flash, considerably higher than what anyone is paying today for 3.8 Flash or 3.5 Flash Lite or the deprecated 3.0/2.x Gemini models. How does this work? Is Google abandoning the “fast and cheap” tier? That seems like a mistake since plenty of workflows are absolutely price inelastic, meaning when the 3.8 Flash discount ends at EOY, lots of current enterprise Gemini customers would have to take their business to another shop??",
-          "Anyone else got suspended for just using agy on the command line? \"This service has been disabled in this account for violation of Terms of Service. Please submit an appeal to continue using this product.\". The support claims that it can do nothing, not even see a reason and pointed me toward a form with no text inputs just a checkbox along the lines of \"I understand the TOS, please check\". So I filed an appeal, and it seems that it was automatically processed and within a few minutes. agy was working for one more prompt and it triggered a suspension again. What channel can I use to get any attention on something like this? I've heard these Google horror stories... fortunately this is only the Antigravity part, but I've just today upgraded to Ultra and this coincided with that. I've become extremely hesitant to continue using broader Google services when this can not be resolved via their customer support."
+          "Copied this from my post in the other thread:The Status page is not working well, but I managed to subscribe to their RSS feed and it has been sending out updates periodically. I'll post some of them here.9:02 PM UTC: We've validated an alternative health check method on a subset of affected infrastructure, which allowed the servers in that subset to successfully return to service, and we're now applying this change more broadly. We're also preparing an automated recovery process to continually detect and restart unresponsive servers, to help keep them in service while this change progresses. Additionally, our review of recent changes has identified a small number of configuration updates that we're investigating as potential contributors to the issue.Previous status: While validating the targeted change, we found that many of the affected servers have become unresponsive, which is preventing us from confirming whether the change is effective. We're restarting these servers so they can come back online with the change in place, and we're applying the same approach to additional affected portions of our infrastructure to validate the results more broadly.8:52 PM UTC: While validating the targeted change, we found that many of the affected servers have become unresponsive, which is preventing us from confirming whether the change is effective. We're restarting these servers so they can come back online with the change in place, and we're applying the same approach to additional affected portions of our infrastructure to validate the results more broadly.Previous Status: While we haven't identified any recent changes that correlate with the start of impact, our investigation indicates the failed health checks may originate from a specific component on the affected servers that's responsible for processing them. We're deploying a targeted change to bypass this component on a subset of servers to validate whether this restores availability, and we've taken steps to prevent additional servers from being removed from service while we work to return the affected servers to service. We're also investigating why affected servers are experiencing elevated processor usage while handling requests.7:52 PM UTC: We've identified that affected servers are failing automated health checks, which is causing them to become unavailable, and this may be related to a recent change to a component involved in processing those checks. We're testing a configuration change on a subset of affected infrastructure to address this and, if successful, will apply it more broadly. In parallel, we've initiated a restart of all affected servers and are validating whether they're successfully returning to service.7:30 PM UTC: We're aggressively pursuing all pathways to reduce impact. As a precaution, we've paused all deployments and configuration changes while we review recent changes for any correlation to this event. We've determined that the elevated load isn't driven by an overall increase in traffic, but by a large number of servers being unexpectedly unavailable, which is shifting load onto the remaining infrastructure. We're investigating what's causing these servers to become unavailable while we work to safely return them to service.7:16 PM UTC: We're aggressively pursuing all pathways to reduce impact. As a precaution, we've paused all deployments and configuration changes while we review recent changes for any correlation to this event. We've also moved traffic for some services off the affected infrastructure to further reduce load, with additional traffic moves in progress.6:59 PM UTC: We've completed redistributing connection traffic across our worldwide infrastructure, and we're moving additional traffic off the affected infrastructure to further reduce load. We're also restarting affected servers to return them to service. In parallel, we're investigating whether the elevated traffic reflects a genuine increase in requests or a shift in how traffic is being routed across our infrastructure."
         ]
       }
     },
@@ -44,8 +26,8 @@
       "source": "Hacker News",
       "published_at": "2026-11-12T18:39:05+00:00",
       "summary": "Rust 1.100",
-      "score": 463,
-      "comments": 204,
+      "score": 603,
+      "comments": 229,
       "discussion_url": "https://news.ycombinator.com/item?id=50472038",
       "extra": {
         "top_comments": [
@@ -56,20 +38,20 @@
       }
     },
     {
-      "id": "50470488",
-      "title": "Show HN: My $300 embroidery machine needed a subscription, so I built my own app",
-      "url": "https://github.com/simpsoka/zigzag",
+      "id": "50477231",
+      "title": "Nvidia employees petition to bring back Jensen Huang",
+      "url": "https://www.wired.com/story/nvidia-employees-petition-for-jensen-huangs-return/",
       "source": "Hacker News",
-      "published_at": "2026-11-12T17:02:42+00:00",
-      "summary": "https://x.com/simpsoka/status/2115254318161182876",
-      "score": 365,
-      "comments": 145,
-      "discussion_url": "https://news.ycombinator.com/item?id=50470488",
+      "published_at": "2026-11-13T02:16:24+00:00",
+      "summary": "Nvidia employees petition to bring back Jensen Huang",
+      "score": 408,
+      "comments": 308,
+      "discussion_url": "https://news.ycombinator.com/item?id=50477231",
       "extra": {
         "top_comments": [
-          "I'm going to assume Claude did the heavy lifting here (because it's Q4 2026 and the odds are in my favor), so if I'm right: this is one of the best examples of the way LLMs can empower users to not only scratch all the itches, but demonstrate to anyone who stumbles by just how satisfying it can be to do so themselves.Your app represents a future that I, an old, actually love. When I see projects like this, I don't think about ongoing support or if the project will be abandoned. I think, \"Woah, I hadn't thought of that. Now I'm going to try it. Because why wouldn't I try to get all the value I can out of my $20/month Claude subscription?\"Even though I've been a developer for 30+ years (and a nerd for longer), I've never felt so motivated by the potential of a technology to make an individual's life richer. Thanks for sharing it.And if you wrote it by hand, my hat's off to you for sharing that, too.",
-          "This is very very much in my current wheelhouse. My (extremely genius) friend Owen Trueblood reverse engineered the Brother PE-150 [0] and made a replacement motherboard, replacing the stock one, to control it over USB.The PE-150 is a great example of the absurdity/sadness of the embroidery world: today, you can have those machines for $100 on eBay, completely functional, but being sold/abandoned because they use a proprietary cartridge holding proprietary data that no one wants to deal with.Even novel Brother machines that have USB connectors still force you to use terrible apps and lock you into subscriptions. This entire world - which is/should be full of twee and about making beautiful things with your hands - is somehow corrupted with this merchandising/everything-software-should-have-a-price mentality which is just so sad.Nothing to announce announce, but I 100000000000000000000000000000000000% want to make embroidery machines more accessible, open, and free of this balagan.A few more links on this topic:- https://github.com/CreativeInquiry/PEmbroider !! Check the \"Motivation\" section of the readme!- https://emberdesign.net/ - a startup by another friend, with a really great online editor, and which exports a variety of formats[0] https://owentrueblood.com/blog/2024/12/10/reverse-engineerin...",
-          "If there's one thing I'm very optimistic about with AI, it's the de-bricking of bricked things, giving new life to legacy/unsupported software and hardware, or just getting around shitty practices like this.Seems very promising. I have a home recording studio, and there's a small revolution going on with people cloning subscription-based stuff. Some brands are notorious for making expensive equipment which they just stop supporting after 10 years, sometimes rendering them obsolete. Or tacking ridiculous licensing mechanism onto the equipment."
+          "> \"We are all humans and can make mistakes. Jensen did so many good things and he needs a second chance,” wrote another.I think if it was one affair, this would hold. It is allegedly 3 and counting, and includes a likely spy from a rival nation, and likely knowledge of selling to the rival nation despite the current laws.You can think he is amazing at many parts of this job, but at this point it is less of a mistake, and more a pattern of behavior that he knew was hugely risky and decided to cover up.This is a terrible time for Nvidia employees. But the solution is not to invite the cause of the terrible time back in.",
+          "Jensen's not coming back anytime soon. You can disregard/diminish the affairs, and you can believe that the \"spy\" angle is overblown/wrong.But Jensen Huang has admitted to a longstanding affair with the CEO of a company that appears to exist only to evade ITAR restrictions. It's just impossible to believe that Jensen did not know what MegaSpeed was doing. While by all appearances he facilitated and benefited from it personally.And one can also believe that ITAR restrictions on GPU sales are dumb, but evading them still counts as selling sensitive weapons to the enemy, both legally and politically.",
+          "I loved and admired Jensen. He and his team's vision, energy, positivity and ingenuity have kept other companies scrambling to catch up for decades - since 1993!If the investigation finds he didn't divulge secrets or participate in moving chips to China I'd like to see him brought back by popular demand of his team, and also investors.Hopefully Nvidia will survive and thrive. After all Apple sort of survived the passing of Steve Jobs, ..after a while."
         ]
       }
     },
@@ -80,32 +62,14 @@
       "source": "Hacker News",
       "published_at": "2026-11-12T18:52:01+00:00",
       "summary": "Gemini 4 Hydrogen and Orchestrator",
-      "score": 325,
-      "comments": 81,
+      "score": 384,
+      "comments": 104,
       "discussion_url": "https://news.ycombinator.com/item?id=50472260",
       "extra": {
         "top_comments": [
-          "This is essentially what Anthropic does with the advisor mode and what GitHub does with their multi-model pipeline using the HydraFusion model, which is just a large set of different models with different qualities used in a pipeline to produce an answer.What I don't understand is how they all make it work with caching in general. Looking at how the advisor mode in claude work you seem to only be billed the output tokens and cache hit on the whole session when it calls out to the advisor, making it super cheap compared to running the more expensive model for the entire session.",
           "There were so many memes about “Gemini Hydrogen” after they released Carbon. That they actually released a model named Hydrogen makes this very funnyBut a new Flash model is very welcome. Argon and Carbon are very slow. In the time it takes for them to complete a single task, Opus already managed to complete multiple things. They’re so slow, I started using 3.8 Flash over them. (A lot of it is also because of how terrible agy is. Before doing any task, Gemini feels the need to hover up a bazillion files into its context when the task is something simple like “update the docs of this controller”)Also this sounds like Argon is dead now",
-          "I'm so confused by their new naming scheme. What was wrong with number and pro/flash/flash lite."
-        ]
-      }
-    },
-    {
-      "id": "50468888",
-      "title": "I'm making LLMs work on small and old devices",
-      "url": "https://github.com/hyperionaidev/smolmaxxing/",
-      "source": "Hacker News",
-      "published_at": "2026-11-12T15:23:10+00:00",
-      "summary": "I'm making LLMs work on small and old devices",
-      "score": 287,
-      "comments": 98,
-      "discussion_url": "https://news.ycombinator.com/item?id=50468888",
-      "extra": {
-        "top_comments": [
-          "For the last five months or so, opus and fable have both been able to do this task as a soneshot prompt. An inference engine is almost pure compute and to a first approximation the only operation your hardware needs to support to do llm inference is multiplication [the rest of an inference engine is \"some trig\"].So to get any model working on $OLD_HARDWARE, the hardest part of the task is now sourcing the hardware itself and giving the agent ssh access -- a modern agent will be able to source a compiler, write the implementation, optimize it, test in qemu (or any other simulator) and push it onto the device.Example prompt: \"write an inference engine for qwen3 0.6b in pure assembly that runs on this device. Write a script to attach the weights to the resulting binary. Prefix is supplied as a stream of u32 token IDs on stdin. The engine streams u32 token IDs on stdout.\"",
-          "Recently I started this open source project at my AI company, where I'm trying to make LLMs workingNow Reached 16B models running on iPad Air 1st gen and xiaomi tv box, both have less than 1GB of usable memory, and reached some decent speeds given the hardware.I'm open sourcing the effort done, kernels developed and results for everyone to re-produce and push more, also the modified models are on hugging face : https://huggingface.co/hyperionaidevI want a more challenging device, what do you think?",
-          "I have a few Maxwell and Pascal series cards lying around, anywhere from 2GB to 11GB of VRAM. Have experimented with small/tiny models for agentic stuff with mixed results, however they are getting better at tool calling (before they'd just produce junk output that the harness couldn't parse).I'm excited to see what we can squeeze out of older hardware, in the same spirit of demoscene or \"will it run DOOM?\".Especially timely given current hardware scarcity. Will be watching this space."
+          "This is essentially what Anthropic does with the advisor mode and what GitHub does with their multi-model pipeline using the HydraFusion model, which is just a large set of different models with different qualities used in a pipeline to produce an answer.What I don't understand is how they all make it work with caching in general. Looking at how the advisor mode in claude work you seem to only be billed the output tokens and cache hit on the whole session when it calls out to the advisor, making it super cheap compared to running the more expensive model for the entire session.",
+          "Do not forget that from Jan 1 all google models get 2x price bump (it stated on their pricing page)"
         ]
       }
     },
@@ -116,32 +80,68 @@
       "source": "Hacker News",
       "published_at": "2026-11-12T19:05:33+00:00",
       "summary": "Dwarf planet candidate appears which takes roughly 280 years to orbit our sun",
-      "score": 215,
-      "comments": 99,
+      "score": 266,
+      "comments": 113,
       "discussion_url": "https://news.ycombinator.com/item?id=50472490",
       "extra": {
         "top_comments": [
           "If anyone is interested, here is its orbit, my old day job was to compute orbits for asteroids and comets.(This uses wasm, meant for a desktop, and will download the asteroid catalog of about 65mb, you have been warned)https://dahlend.github.io/ketev/#t=2009-07-01.717&sel=2026%2...This is a big boy.",
-          "I would like to officially propose to name this new dwarf planet Boreas, after the Greek god of the north wind and winter.",
+          "I always feel amazed to know how suns gravity keeps hold of massive planets millions of kilometre away from it and how we are still finding objects in our solar system!",
           "There was a lot of negative press and commentary about \"demoting\" Pluto from being a planet at the time. But its obviously true that it was the right move, and creating this \"dwarf planet\" class of objects was correct. It was hard to justify Pluto being a planet when Ceres exists, but Eris, Haumea, Makemake and all of these other possible Dwarf planets are the nail in the coffin."
         ]
       }
     },
     {
-      "id": "50474883",
-      "title": "Chinese frontier AI models carry the fingerprint of export-controlled GPUs",
-      "url": "https://unemploymentlabs.com/checkpoint-forensics",
+      "id": "50473190",
+      "title": "Former Nvidia CEO Huang had a relationship with a second employee, sources say",
+      "url": "https://www.reuters.com/technology/former-nvidia-ceo-huang-had-relationship-with-second-employee-sources-say-2026-11-12/",
       "source": "Hacker News",
-      "published_at": "2026-11-12T21:56:11+00:00",
-      "summary": "Chinese frontier AI models carry the fingerprint of export-controlled GPUs",
-      "score": 189,
-      "comments": 52,
-      "discussion_url": "https://news.ycombinator.com/item?id=50474883",
+      "published_at": "2026-11-12T19:51:33+00:00",
+      "summary": "https://www.forbes.com/sites/alisondurkee/2026/11/12/jensen-...",
+      "score": 215,
+      "comments": 237,
+      "discussion_url": "https://news.ycombinator.com/item?id=50473190",
       "extra": {
         "top_comments": [
-          "Chinese AI companies are free to use any Nvidia GPU they want as long as the GPU is not physically located within China. It is entirely consistent with US export controls for Chinese AI companies to remotely use GPUs located in Singapore or Malaysia.“In facilities across the region, Megaspeed rents Nvidia chips to Chinese tech giants such as Alibaba, an arrangement that does not violate current US export control regulations.” See [1].[1] https://www.atlanticcouncil.org/dispatches/beyond-the-spy-sc...",
-          "The author of this piece is a SWE-turned-influencer \"China hawk\" from OpenAI (i.e. the primary advocate of export bans along with Anthropic), and this isn't an academic paper despite the theming.I have no idea whether this is legit or not (there's no link to any code), I'm mentioning this because all the comments here are assuming truth without verifying the contents.",
-          "I definitely care about this much less than it seems I'm supposed to.I think the frontier models are definitely in a healthy dynamic where it seems the near-but-not-quite performance of open-weight models are what is pushing the most innovation and price competition from OpenAI, Anthropic and co"
+          "If you find two ants in the kitchen, there are more than two ants in the kitchen.",
+          "This seems like a coordinated hit, slowly releasing more and more information. What's really going on?",
+          "I always got the impression that it was somewhat of an open secret that most billionaires had soft harems of sorts, usually tacitly understood but never publicly addressed, and that the apparent outrage at affairs/scandals at this level is a sort of charade of allegiance to social norms to enforce the facade that standards of propriety apply even at the highest levels."
+        ]
+      }
+    },
+    {
+      "id": "50475713",
+      "title": "Edge0-145B: Frontier AI Capabilities on Your Own Computer",
+      "url": "https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer",
+      "source": "Hacker News",
+      "published_at": "2026-11-12T23:06:17+00:00",
+      "summary": "Edge0-145B: Frontier AI Capabilities on Your Own Computer",
+      "score": 192,
+      "comments": 51,
+      "discussion_url": "https://news.ycombinator.com/item?id=50475713",
+      "extra": {
+        "top_comments": [
+          "This just a quantized version of 3.8 next flash on strata that’s branded?",
+          "> Sharing matrices substantially reduces the weights that must be stored and moved while keeping the expert count unchanged. Each group of 64 experts shares two large matrices, while each expert retains a small set of parameters that captures its differences.145B parameters with only peak 29GB memory usage - really impressive, truly something you can actually run on a decent spec MBP",
+          "I'm really impressed with the Blender examples. It's amazing how far \"tool use\" has come, when it now means using a tool as complicated as Blender to perform work that would take a human days to complete. I'm a little skeptical the actual models are workable, in the sense that a human could come in after and manually refine and apply better textures, etc. Historically, agent-made designs are messy as hell, and by the time you clean them up, you haven't saved any time. But, that's begun to get better; the best models are now very good at making clean shape-based SVGs, for example, that are no messier than what a human would make in Inkscape or Illustrator. But, I'll definitely give it a try."
+        ]
+      }
+    },
+    {
+      "id": "50474361",
+      "title": "Foundation Models framework",
+      "url": "https://developer.apple.com/foundation-models-framework/",
+      "source": "Hacker News",
+      "published_at": "2026-11-12T21:13:26+00:00",
+      "summary": "Foundation Models framework",
+      "score": 188,
+      "comments": 26,
+      "discussion_url": "https://news.ycombinator.com/item?id=50474361",
+      "extra": {
+        "top_comments": [
+          "> For those just getting started, developers who are enrolled in the App Store Small Business Program and have fewer than two million first-time App Store downloads can access the Apple Foundation Models running on Private Cloud Compute with no cloud API cost.*https://developer.apple.com/private-cloud-compute/> Where Apple Intelligence is available, eligible developers can use PCC in their apps distributed on the App Store, and test PCC features via TestFlight or ad hoc distribution. Installs during testing are not counted as first-time app downloads.Is this free tokens? This sounds like free tokens?",
+          "I actually think their CoreAI stuff is kind of flying under the radar. But they've got a repo at https://github.com/apple/coreai-models where they're adapting a ton of open weight models to their format to run natively with Swift.",
+          "I’ve been using these in my terminal for correcting errors and suggesting commands https://github.com/paul-oms/promptSurprisingly capable on an m1 8gb (in my opinion this is the smallest machine that local ai needs to run on)"
         ]
       }
     }
