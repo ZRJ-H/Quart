@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-11-13T15:01:32.088474+08:00",
+  "cached_at": "2026-11-14T11:00:30.948498+08:00",
   "articles": [
     {
-      "id": "50471731",
-      "title": "Service degradation on Microsoft 365",
-      "url": "https://status.cloud.microsoft/",
+      "id": "50489641",
+      "title": "FAA issues national ground stop",
+      "url": "https://www.nbcnews.com/news/us-news/faa-orders-nationwide-ground-stop-departing-flights-reasons-safety-rcna609247",
       "source": "Hacker News",
-      "published_at": "2026-11-12T18:20:48+00:00",
-      "summary": "https://www.abc.net.au/news/2026-11-13/microsoft-outage-affe...https://www.reddit.com/r/sysadmin/comments/1xuje83/microsoft...https://downdetector.com/status/microsoft-365/",
-      "score": 740,
-      "comments": 678,
-      "discussion_url": "https://news.ycombinator.com/item?id=50471731",
+      "published_at": "2026-11-13T21:05:53+00:00",
+      "summary": "https://www.fly.faa.gov/adv/adv_otherdis?adv_date=11132026&a...https://www.nytimes.com/live/2026/11/13/us/ground-stop-natio...",
+      "score": 1363,
+      "comments": 841,
+      "discussion_url": "https://news.ycombinator.com/item?id=50489641",
       "extra": {
         "top_comments": [
-          "Ex-MSFT here, sharing my outdated POV based on working on a product that was using Microsoft Exchange and therefore was hooked onto the email delivery pipeline.Note that the infra for M365, Azure etc is different. They would be running on servers hosted in MSFT DCs but have completely different CI/CD pipelines. M365 services have their own deployment pipelines and it takes on the order of weeks to deploy your changes to production.Considering the fact that Outlook is down, clearly email doesn’t seem to be working. So email uses something called Microsoft Exchange Server, there used to be an on-premises version of this but MS stopped supporting it to run the cloud version hereby called M365. Email is one big “macro-service”, if you’re running Windows Server, look at the process called “EdgeTransport.exe” this is responsible for sending/receiving email on Windows Servers. There are probably multiple 100s of services supported by 100s of teams that are run while email is routed from sender to receiver via MSFT Exchange servers. My recollection is that even if one of these services goes down or introduces latency in the pipeline, it caused a major incident. When I was working in M365 Security in 2024, this Exchange Server pipeline was called “legacy” because it’s one big .NET Framework service. I don’t know if they upgraded to .NET core but developing on this was as HN comments say, very janky.The reason Teams doesn’t seem to be down is that Teams services are completely different and are written using .NET Core and have their own separate release pipeline. It was much easier to interact with Teams services. I actually worked closely with the team that was responsible for ingesting Teams messages to the customer’s data store. Their code base was much more modern and easy to understand. Exchange Server not so much.I don’t know if what I said is accurate but know that Exchange server code was like a fossil that didn’t change as much, over the ~5 years I worked on it from 2019-2024.Story time over.",
-          "Nadella stripped mined the company for AI jank, and everything has been falling apart. Github has been unreliable a lot lately. Xbox is basically imploding. A lot of Azure, Entra, Intune, etc. is shockingly janky, and there is clearly very little investment in it.",
-          "Copied this from my post in the other thread:The Status page is not working well, but I managed to subscribe to their RSS feed and it has been sending out updates periodically. I'll post some of them here.9:02 PM UTC: We've validated an alternative health check method on a subset of affected infrastructure, which allowed the servers in that subset to successfully return to service, and we're now applying this change more broadly. We're also preparing an automated recovery process to continually detect and restart unresponsive servers, to help keep them in service while this change progresses. Additionally, our review of recent changes has identified a small number of configuration updates that we're investigating as potential contributors to the issue.Previous status: While validating the targeted change, we found that many of the affected servers have become unresponsive, which is preventing us from confirming whether the change is effective. We're restarting these servers so they can come back online with the change in place, and we're applying the same approach to additional affected portions of our infrastructure to validate the results more broadly.8:52 PM UTC: While validating the targeted change, we found that many of the affected servers have become unresponsive, which is preventing us from confirming whether the change is effective. We're restarting these servers so they can come back online with the change in place, and we're applying the same approach to additional affected portions of our infrastructure to validate the results more broadly.Previous Status: While we haven't identified any recent changes that correlate with the start of impact, our investigation indicates the failed health checks may originate from a specific component on the affected servers that's responsible for processing them. We're deploying a targeted change to bypass this component on a subset of servers to validate whether this restores availability, and we've taken steps to prevent additional servers from being removed from service while we work to return the affected servers to service. We're also investigating why affected servers are experiencing elevated processor usage while handling requests.7:52 PM UTC: We've identified that affected servers are failing automated health checks, which is causing them to become unavailable, and this may be related to a recent change to a component involved in processing those checks. We're testing a configuration change on a subset of affected infrastructure to address this and, if successful, will apply it more broadly. In parallel, we've initiated a restart of all affected servers and are validating whether they're successfully returning to service.7:30 PM UTC: We're aggressively pursuing all pathways to reduce impact. As a precaution, we've paused all deployments and configuration changes while we review recent changes for any correlation to this event. We've determined that the elevated load isn't driven by an overall increase in traffic, but by a large number of servers being unexpectedly unavailable, which is shifting load onto the remaining infrastructure. We're investigating what's causing these servers to become unavailable while we work to safely return them to service.7:16 PM UTC: We're aggressively pursuing all pathways to reduce impact. As a precaution, we've paused all deployments and configuration changes while we review recent changes for any correlation to this event. We've also moved traffic for some services off the affected infrastructure to further reduce load, with additional traffic moves in progress.6:59 PM UTC: We've completed redistributing connection traffic across our worldwide infrastructure, and we're moving additional traffic off the affected infrastructure to further reduce load. We're also restarting affected servers to return them to service. In parallel, we're investigating whether the elevated traffic reflects a genuine increase in requests or a shift in how traffic is being routed across our infrastructure."
+          "starting to see some explanations for what's going onhttps://www.wsj.com/us-news/faa-temporarily-halts-flights-ac...> The outage appears to be affecting a telecommunications network overseen by L3Harris Technologies, according to people briefed on the matter. The network handles crucial radio frequencies that air-traffic controllers use to communicate with pilots, the people said. It wasn’t immediately clear whether the outage also affected the radar feeds that controllers use to keep aircraft safely separated in the skies.https://www.cbsnews.com/news/faa-issues-nationwide-ground-st...> An update to the private communications network that connects America's air traffic control system caused the system to reboot, leading to a crash and a communications outage, multiple sources told CBS News. The system is operated by L3Harris, which did not immediately respond to CBS News' request for comment.",
+          "Info on this is amazingly sparse. Apparently Sec. Duffy posted something on X/Twitter, and that's all the news media have.Looking at LAX departures, it looks like nothing has departed since about 10:30 AM PST, and everything later is showing Delayed or Cancelled. There are times after Delayed, but it's not clear those times mean anything. Some are now in the past.\"flysfo.com\" is too overloaded to display departures. Stuck at \"loading...\".JFK departure status shows almost solid \"Delayed\".No good explanations anywhere.",
+          "Botched rollout of AI for ATC announced yesterday as rolling out nationwide?> The agency wrote on Nov. 10 that after the D.C. test, it will “now use SMART in the airspace of all 22 centers across the country to reduce delays, reduce fuel consumption and improve the travel experience for the flying public.” The tech was already being deployed at some airports.https://gizmodo.com/the-faa-is-rolling-out-its-ai-air-traffi..."
         ]
       }
     },
     {
-      "id": "50472038",
-      "title": "Rust 1.100",
-      "url": "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/",
+      "id": "50490593",
+      "title": "Live airband on all frequencies from KORS. Victoria, CA also ground stopped",
+      "url": "https://orcasairband.com/",
       "source": "Hacker News",
-      "published_at": "2026-11-12T18:39:05+00:00",
-      "summary": "Rust 1.100",
-      "score": 603,
-      "comments": 229,
-      "discussion_url": "https://news.ycombinator.com/item?id=50472038",
+      "published_at": "2026-11-13T22:04:24+00:00",
+      "summary": "Live airband on all frequencies from KORS. Victoria, CA also ground stopped",
+      "score": 220,
+      "comments": 52,
+      "discussion_url": "https://news.ycombinator.com/item?id=50490593",
       "extra": {
         "top_comments": [
-          "Woohoo, that's a release! My personal favorites:- Stabilize never type- Stabilize custom allocators- Introduced minimum publish age configurations, also known as dependency cooldowns. When the relevant config is set, the resolver ignores versions published more recently than that, unless they are already in Cargo.lock. (RFC 3923) docs #17335- cargo-install: now uses the existing lockfile in the .crate tarball by default. --locked in cargo install becomes a no-op. #17388",
-          "> Cargo now reports unused dependencies to users, e.g.> warning: unused dependency `tracing-subscriber` --> Cargo.toml:23:1 | 23 | tracing-subscriber.workspace = true | ^^^^^^^^^^^^^^^^^^ | = note: `cargo::unused_dependencies` is set to `warn` by default help: consider removing the dependency on `tracing-subscriber`Heck yes",
-          "This release is so big that multiple useful stabilized API aren't event mentioned in the blog post like:- bool::toggle() https://doc.rust-lang.org/stable/std/primitive.bool.html#met...- Box::map() https://doc.rust-lang.org/stable/std/boxed/struct.Box.html#m...- str::trim_prefix(), str::trim_suffix, Path::trim_prefix()"
+          "Hi all. Thanks for the interest. I'm going to post an impromptu blog post here just explaining what this is. The rather unfortunate ground stop today made this unexpectedly useful with the pilots here on Orcas just to get a sense of the chatter in our airspace re the situation.This is an ETTUS B210 attached to a dual 4090 box. It's a polyphase channelizer that takes the entire airband, channelizes it using cuda code on GPU, demodulates it, detects transmissions, throws away data tx and then feeds the tx through a voice model I created for transcription. A separate LLM reads the transcriptions to create a situational awareness picture of the airspace.I'm interested in open sourcing this and making it available for folks who can run an ETTUS B210 or high quality SDR with enoguh bandwidth and a local GPU machine, so that we can cover more airpsace.This was born out of an incident we had not too long ago where a pilot around KORS (based at Friday Harbor) lost the engine in his 172, and put it in the water in front of a ferry and was picked up by the ferry. We're a pretty close bunch on Orcas Island and we only heard about it days later via social media. That felt completely unacceptable, and I set out to create a radio that could monitor everything in real-time, all the time, and alert on emergencies. That has extended to transcribing and creating situational awareness for a chunk of airspace.I'm an IFR pilot. I fly a T206H regularly in IMC around here and I'm a ground instructor. You can email me at mark@defiant.com or find me on x at mmaunder if you'd like to connect. I'm particularly interested in hearing from folks who can run a station on their own hardware and are under bravo or a charlie or even just somewhere interesting re airspace.",
+          "These are raw transcripts unedited by me that I extracted possibly related to the groundstop, generated at time of posting: 2143Z, 126.400 Victoria Ground (weak signal): \"Yeah, we just uh communication issues, so we got the traffic stopped on [unintelligible]\" 2151Z, 134.800 Vancouver Centre, pilot of a flight ending \"364\": \"We're saying they just have an alternate plan. They've been getting lower and lower 48 right now. We're on the phone with you, they are saying cannot show any reason why we would be out of communication to Seattle. So just otherwise we do have some alternates that we're talking about, but we just want to see, you see anything on your end that we cannot proceed to Seattle?\" 2152Z, 134.800 Vancouver Centre, same pilot: \"Okay, sounds good. Yeah, we appreciate that. We'll be staying by and we'll just kind of get the alternate plans for ready to go. Thank you.\" 2159Z, 121.075 Victoria Terminal, controller: \"Seacraft 304, just a heads up here, there is a ground stop for an aircraft about into Vancouver at this time. I'm sure you have a VFR slot, seeing where you're headed there now, so I'd like to be still going to take you, but it just has stopped that you might end up getting turned around.\" 2159Z, 121.075 Victoria Terminal, controller: \"Sorry, that's all inbound aircraft, ground stop.\" 2200Z, 121.075 Victoria Terminal, controller: \"Yeah, it's not affecting anything airborne at this time. We're just about departing anything for Vancouver and Calgary at this time.\" 2201Z, 126.400 Victoria Ground, pilot (weak signal): \"Hey Ground, it's Jazz 270, and I'm guessing there's a flow for Vancouver.\" 2203Z, 121.075 Victoria Terminal, pilot: \"Uh just wanted to confirm uh there's a ground stop uh going into Vancouver on this frequency?\" 2203Z, 121.075 Victoria Terminal, controller: \"Encore 3325, that's correct. Nothing is departing to land at Vancouver at this time.\" 2204Z, 134.800 Vancouver Centre, pilot: \"Yeah, right now they said normal ops continue, but we'll see what happens once we get closer.\" 2217Z, 126.125 Vancouver Departure, pilot: \"Yeah, you guys not having any of the issues that they're having in the US right now?\" 2217Z, 126.125 Vancouver Departure: \"Uh, apparently the ones uh seeing ground stop for the 14 major airports I've just got a few minutes. Okay, thanks.\" 2227Z, 126.400 Victoria Ground, pilot: \"Encore 58, information Papa, requesting flow through to Vancouver for 2255.\" Reply: \"Roger, 2255 on the flight plan.\"",
+          "If you scroll back to 2:03pm (the time this link was posted) there was this interaction:14:03:04 Uh just wanted to confirm uh there's a ground stop uh going into Vancouver on this frequency?14:03:10 Encore 3325, that's correct. Nothing is departing to land at Vancouver at this time."
         ]
       }
     },
     {
-      "id": "50477231",
-      "title": "Nvidia employees petition to bring back Jensen Huang",
-      "url": "https://www.wired.com/story/nvidia-employees-petition-for-jensen-huangs-return/",
+      "id": "50492456",
+      "title": "Ukraine knocks out 36% of Russia's oil refining capacity in under two weeks",
+      "url": "https://english.nv.ua/nation/thirteen-day-drone-blitz-paralyzes-36-of-moscow-s-oil-50658616.html",
       "source": "Hacker News",
-      "published_at": "2026-11-13T02:16:24+00:00",
-      "summary": "Nvidia employees petition to bring back Jensen Huang",
-      "score": 408,
-      "comments": 308,
-      "discussion_url": "https://news.ycombinator.com/item?id=50477231",
+      "published_at": "2026-11-14T01:10:22+00:00",
+      "summary": "Ukraine knocks out 36% of Russia's oil refining capacity in under two weeks",
+      "score": 163,
+      "comments": 47,
+      "discussion_url": "https://news.ycombinator.com/item?id=50492456",
       "extra": {
         "top_comments": [
-          "> \"We are all humans and can make mistakes. Jensen did so many good things and he needs a second chance,” wrote another.I think if it was one affair, this would hold. It is allegedly 3 and counting, and includes a likely spy from a rival nation, and likely knowledge of selling to the rival nation despite the current laws.You can think he is amazing at many parts of this job, but at this point it is less of a mistake, and more a pattern of behavior that he knew was hugely risky and decided to cover up.This is a terrible time for Nvidia employees. But the solution is not to invite the cause of the terrible time back in.",
-          "Jensen's not coming back anytime soon. You can disregard/diminish the affairs, and you can believe that the \"spy\" angle is overblown/wrong.But Jensen Huang has admitted to a longstanding affair with the CEO of a company that appears to exist only to evade ITAR restrictions. It's just impossible to believe that Jensen did not know what MegaSpeed was doing. While by all appearances he facilitated and benefited from it personally.And one can also believe that ITAR restrictions on GPU sales are dumb, but evading them still counts as selling sensitive weapons to the enemy, both legally and politically.",
-          "I loved and admired Jensen. He and his team's vision, energy, positivity and ingenuity have kept other companies scrambling to catch up for decades - since 1993!If the investigation finds he didn't divulge secrets or participate in moving chips to China I'd like to see him brought back by popular demand of his team, and also investors.Hopefully Nvidia will survive and thrive. After all Apple sort of survived the passing of Steve Jobs, ..after a while."
+          "Refineries are huge, and hitting one doesn't automatically knock it out - Ukraine has actually already hit lots of Russian refineries this year, many of them more than once: https://www.reddit.com/r/RussianHitlists/comments/1ugfpiw/ru...Obviously Russia doesn't publish any data about how long it takes them to repair their refineries, but some of them showed significant damages from the pictures and videos you can find online.",
+          "Feels like drones and rockets have created a similar dynamic to mutually assured destruction, except for much smaller actors with far fewer resources. It's not hard to imagine a future where e.g. Taiwan is just armed with so many cheap drones and rockets that for even a great power like China the guarantee of enormous economic damage at home is just not worth it.",
+          "IEA says repairs are getting slower: https://www.ogj.com/general-interest/economics-markets/news/..."
         ]
       }
     },
     {
-      "id": "50472260",
-      "title": "Gemini 4 Hydrogen and Orchestrator",
-      "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/",
+      "id": "50492601",
+      "title": "FAA lifted National Ground Stop at 0119Z",
+      "url": "https://www.fly.faa.gov/adv/adv_otherdis?adv_date=11142026&advn=5",
       "source": "Hacker News",
-      "published_at": "2026-11-12T18:52:01+00:00",
-      "summary": "Gemini 4 Hydrogen and Orchestrator",
-      "score": 384,
-      "comments": 104,
-      "discussion_url": "https://news.ycombinator.com/item?id=50472260",
+      "published_at": "2026-11-14T01:30:01+00:00",
+      "summary": "FAA lifted National Ground Stop at 0119Z",
+      "score": 158,
+      "comments": 149,
+      "discussion_url": "https://news.ycombinator.com/item?id=50492601",
       "extra": {
         "top_comments": [
-          "There were so many memes about “Gemini Hydrogen” after they released Carbon. That they actually released a model named Hydrogen makes this very funnyBut a new Flash model is very welcome. Argon and Carbon are very slow. In the time it takes for them to complete a single task, Opus already managed to complete multiple things. They’re so slow, I started using 3.8 Flash over them. (A lot of it is also because of how terrible agy is. Before doing any task, Gemini feels the need to hover up a bazillion files into its context when the task is something simple like “update the docs of this controller”)Also this sounds like Argon is dead now",
-          "This is essentially what Anthropic does with the advisor mode and what GitHub does with their multi-model pipeline using the HydraFusion model, which is just a large set of different models with different qualities used in a pipeline to produce an answer.What I don't understand is how they all make it work with caching in general. Looking at how the advisor mode in claude work you seem to only be billed the output tokens and cache hit on the whole session when it calls out to the advisor, making it super cheap compared to running the more expensive model for the entire session.",
-          "Do not forget that from Jan 1 all google models get 2x price bump (it stated on their pricing page)"
+          "Here's what they said caused it in the White House briefing:Sec Mullin: \"What it appears to be right now is, as Sec Duffy and FAA was going in and putting patches into the system, they were putting new equipment and new technology. And that new equipment and new technology, it was overwhelming the older system. Which is why Sec Duffy made it very clear, the patchwork doesn't work. We need one complete system.\"",
+          "The reason field is empty, but the website footer provides enough information to understand.",
+          "Do we have any indication of what went wrong? The incident report will be very interesting."
         ]
       }
     },
     {
-      "id": "50472490",
-      "title": "Dwarf planet candidate appears which takes roughly 280 years to orbit our sun",
-      "url": "https://www.smithsonianmag.com/smart-news/astronomers-found-a-mysterious-object-orbiting-far-beyond-pluto-it-could-be-a-new-dwarf-planet-hidden-in-our-solar-system-180989857/",
+      "id": "50488470",
+      "title": "Found: A protein that drives ageing without unleashing inflammation",
+      "url": "https://www.nature.com/articles/d41586-026-03638-3",
       "source": "Hacker News",
-      "published_at": "2026-11-12T19:05:33+00:00",
-      "summary": "Dwarf planet candidate appears which takes roughly 280 years to orbit our sun",
-      "score": 266,
-      "comments": 113,
-      "discussion_url": "https://news.ycombinator.com/item?id=50472490",
+      "published_at": "2026-11-13T19:25:21+00:00",
+      "summary": "Found: A protein that drives ageing without unleashing inflammation",
+      "score": 137,
+      "comments": 21,
+      "discussion_url": "https://news.ycombinator.com/item?id=50488470",
       "extra": {
         "top_comments": [
-          "If anyone is interested, here is its orbit, my old day job was to compute orbits for asteroids and comets.(This uses wasm, meant for a desktop, and will download the asteroid catalog of about 65mb, you have been warned)https://dahlend.github.io/ketev/#t=2009-07-01.717&sel=2026%2...This is a big boy.",
-          "I always feel amazed to know how suns gravity keeps hold of massive planets millions of kilometre away from it and how we are still finding objects in our solar system!",
-          "There was a lot of negative press and commentary about \"demoting\" Pluto from being a planet at the time. But its obviously true that it was the right move, and creating this \"dwarf planet\" class of objects was correct. It was hard to justify Pluto being a planet when Ceres exists, but Eris, Haumea, Makemake and all of these other possible Dwarf planets are the nail in the coffin."
+          "Paper: https://www.cell.com/immunity/fulltext/S1074-7613(26)00440-1Granzyme K is the protein.",
+          "From the abstract of the paper, significantly more nuance.> Despite persistent immune aging phenotypes, GzmK deficiency markedly attenuated organ aging, effectively uncoupling immune and tissue aging... These findings identify GzmK as a tissue-specific driver of organismal aging but not immune aging or systemic inflammaging.",
+          "Paywall"
         ]
       }
     },
     {
-      "id": "50473190",
-      "title": "Former Nvidia CEO Huang had a relationship with a second employee, sources say",
-      "url": "https://www.reuters.com/technology/former-nvidia-ceo-huang-had-relationship-with-second-employee-sources-say-2026-11-12/",
+      "id": "50492315",
+      "title": "Amtrak booking system experiencing major issues amid nationwide FAA ground stop",
+      "url": "https://www.fox5dc.com/news/amtrak-outage-ticket-booking-faa-ground-stop-november-13-2026",
       "source": "Hacker News",
-      "published_at": "2026-11-12T19:51:33+00:00",
-      "summary": "https://www.forbes.com/sites/alisondurkee/2026/11/12/jensen-...",
-      "score": 215,
-      "comments": 237,
-      "discussion_url": "https://news.ycombinator.com/item?id=50473190",
+      "published_at": "2026-11-14T00:52:29+00:00",
+      "summary": "Amtrak booking system experiencing major issues amid nationwide FAA ground stop",
+      "score": 122,
+      "comments": 39,
+      "discussion_url": "https://news.ycombinator.com/item?id=50492315",
       "extra": {
         "top_comments": [
-          "If you find two ants in the kitchen, there are more than two ants in the kitchen.",
-          "This seems like a coordinated hit, slowly releasing more and more information. What's really going on?",
-          "I always got the impression that it was somewhat of an open secret that most billionaires had soft harems of sorts, usually tacitly understood but never publicly addressed, and that the apparent outrage at affairs/scandals at this level is a sort of charade of allegiance to social norms to enforce the facade that standards of propriety apply even at the highest levels."
+          "Amtrak's site has always been the worst example of a national rail website",
+          "I've been wanting them to have an api for years with a TOS that you cannot resell tickets or make any additional fees from the sale to discourage SEO snakes from hijacking things.A more reasonable front-end could be made without much effort and a very low monthly overhead to host since it's mostly a proxyRequire the same upsells with the insurance and credit card offer I don't care, that's not the problem I have with the site.",
+          "Always fun to live through a “textbook example” of something; in this case it’s a cascading failure (1) in transportation infrastructure(1) https://en.wikipedia.org/wiki/Cascading_failure"
         ]
       }
     },
     {
-      "id": "50475713",
-      "title": "Edge0-145B: Frontier AI Capabilities on Your Own Computer",
-      "url": "https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer",
+      "id": "50491423",
+      "title": "Terminal borders that don't cost a cell",
+      "url": "https://www.joshka.net/cell-borders/",
       "source": "Hacker News",
-      "published_at": "2026-11-12T23:06:17+00:00",
-      "summary": "Edge0-145B: Frontier AI Capabilities on Your Own Computer",
-      "score": 192,
-      "comments": 51,
-      "discussion_url": "https://news.ycombinator.com/item?id=50475713",
+      "published_at": "2026-11-13T23:06:40+00:00",
+      "summary": "Terminal borders that don't cost a cell",
+      "score": 94,
+      "comments": 53,
+      "discussion_url": "https://news.ycombinator.com/item?id=50491423",
       "extra": {
         "top_comments": [
-          "This just a quantized version of 3.8 next flash on strata that’s branded?",
-          "> Sharing matrices substantially reduces the weights that must be stored and moved while keeping the expert count unchanged. Each group of 64 experts shares two large matrices, while each expert retains a small set of parameters that captures its differences.145B parameters with only peak 29GB memory usage - really impressive, truly something you can actually run on a decent spec MBP",
-          "I'm really impressed with the Blender examples. It's amazing how far \"tool use\" has come, when it now means using a tool as complicated as Blender to perform work that would take a human days to complete. I'm a little skeptical the actual models are workable, in the sense that a human could come in after and manually refine and apply better textures, etc. Historically, agent-made designs are messy as hell, and by the time you clean them up, you haven't saved any time. But, that's begun to get better; the best models are now very good at making clean shape-based SVGs, for example, that are no messier than what a human would make in Inkscape or Illustrator. But, I'll definitely give it a try."
+          "A much better alternative to this would be to for more terminal emulators to implement overstrike mode (DECSET 20, as available on the VK100). That way you could just draw border characters over existing text cells to achieve the same thing.Unfortunately mintty is the only terminal emulator I'm aware of which supports overstrike [0], as this would open up a world of new possibilities for TUI apps if more widely supported.[0] https://github.com/mintty/mintty/wiki/CtrlSeqs#overstrike",
+          "I love this work and everything else Ratatui does but I have to ask: if you're changing the terminal protocol and the terminal itself to do this, why not do something more ambitious; a full monospaced information-dense UI framework, a terminal designed for user interfaces, rather than one designed to replicate the limitations of dumb terminals?",
+          "A pet peeve of mine is that most people / WM get \"useless gaps\" wrong. You do want a gap between two terminals because otherwise there are times where things can get really confusing (where you don't know what belong to which terminal / window).So the \"borderless\" (0 pixels) / zero \"useless gaps\" (which really aren't useless so it's also a complete misnomer) simply are confusing and... Wrong.But then people who do use useless gap, as in TFA, get it wrong too: they typically add gaps near the monitor's edges.Yeah. But no. Sorry but my monitor's edge is a perfectly fine gap. I don't risk mistaking it for anything.So I modified my WM (the Awesome WM) to do proper \"useless gaps\" computation and remove the ones that really are useless: and that'd be those near the monitor's physical border.I mean: nearly everybody gets it wrong, but it's not complicated to get that right, is it?"
         ]
       }
     },
     {
-      "id": "50474361",
-      "title": "Foundation Models framework",
-      "url": "https://developer.apple.com/foundation-models-framework/",
+      "id": "50488835",
+      "title": "Live-migration support in FreeBSD and bhyve coming",
+      "url": "https://gyptazy.com/blog/freebsd-bhyve-live-migration-support-rfc/",
       "source": "Hacker News",
-      "published_at": "2026-11-12T21:13:26+00:00",
-      "summary": "Foundation Models framework",
-      "score": 188,
-      "comments": 26,
-      "discussion_url": "https://news.ycombinator.com/item?id=50474361",
+      "published_at": "2026-11-13T19:58:42+00:00",
+      "summary": "Live-migration support in FreeBSD and bhyve coming",
+      "score": 75,
+      "comments": 17,
+      "discussion_url": "https://news.ycombinator.com/item?id=50488835",
       "extra": {
         "top_comments": [
-          "> For those just getting started, developers who are enrolled in the App Store Small Business Program and have fewer than two million first-time App Store downloads can access the Apple Foundation Models running on Private Cloud Compute with no cloud API cost.*https://developer.apple.com/private-cloud-compute/> Where Apple Intelligence is available, eligible developers can use PCC in their apps distributed on the App Store, and test PCC features via TestFlight or ad hoc distribution. Installs during testing are not counted as first-time app downloads.Is this free tokens? This sounds like free tokens?",
-          "I actually think their CoreAI stuff is kind of flying under the radar. But they've got a repo at https://github.com/apple/coreai-models where they're adapting a ton of open weight models to their format to run natively with Swift.",
-          "I’ve been using these in my terminal for correcting errors and suggesting commands https://github.com/paul-oms/promptSurprisingly capable on an m1 8gb (in my opinion this is the smallest machine that local ai needs to run on)"
+          "Also related is Propolis from Oxide who worked on live migration with Bhyve https://github.com/oxidecomputer/propolis",
+          "Looks like this could really become a game changer for the FreeBSD folks using bhyve. The author often complained about this missing feature and he was also contributing to the Sylve project. Looks like he's crafting something.",
+          "Anyone heard anything from dragonflyBSD lately? This sounds like something that might go well with HammerFS?"
         ]
       }
     }
