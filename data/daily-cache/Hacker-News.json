@@ -1,21 +1,39 @@
 {
-  "cached_at": "2026-11-14T11:00:30.948498+08:00",
+  "cached_at": "2026-11-14T14:50:55.142901+08:00",
   "articles": [
     {
       "id": "50489641",
-      "title": "FAA issues national ground stop",
+      "title": "FAA issues national ground stop – lifted 4.5 hours later",
       "url": "https://www.nbcnews.com/news/us-news/faa-orders-nationwide-ground-stop-departing-flights-reasons-safety-rcna609247",
       "source": "Hacker News",
       "published_at": "2026-11-13T21:05:53+00:00",
-      "summary": "https://www.fly.faa.gov/adv/adv_otherdis?adv_date=11132026&a...https://www.nytimes.com/live/2026/11/13/us/ground-stop-natio...",
-      "score": 1363,
-      "comments": 841,
+      "summary": "https://www.fly.faa.gov/adv/adv_otherdis?adv_date=11132026&a...https://www.fly.faa.gov/adv/adv_otherdis?adv_date=11142026&a...https://www.nytimes.com/live/2026/11/13/us/ground-stop-natio...",
+      "score": 1480,
+      "comments": 1137,
       "discussion_url": "https://news.ycombinator.com/item?id=50489641",
       "extra": {
         "top_comments": [
+          "For those interested, there was a 2009 outage of the FAA Telecommunications Infrastructure that at a surface level seems like it could be a similar failure mode. At the very least, it is an interesting read on how the FAAs systems operate, since a lot of the discussion so far has been wild speculation from people with little knowledge on how the national airspace system actually operates: https://www.oig.dot.gov/library-item/29670Of particular note is this section: Risks of FTI Outages for Existing Operational Services As of December 2009, Harris reported that there are a total of 20,982 services operating on the FTI network. While FAA has transitioned all 1,808 IP services supporting FAA flight plans to the new FTI fiber optic network, additional risks will be introduced when the Agency begins transitioning other FAA services, such as En Route Automation Modernization (ERAM) and NextGen platforms, which also require IP technology to operate. Moreover, there are 19,174 existing services that may be transitioned to the new FTI fiber optic network. According to FAA, transitioning these remaining services is important because FTI now connects older FAA systems that provide safety-critical voice and surveillance radar information by utilizing Time Division Multiplex (TDM) technology, instead of IP services.",
           "starting to see some explanations for what's going onhttps://www.wsj.com/us-news/faa-temporarily-halts-flights-ac...> The outage appears to be affecting a telecommunications network overseen by L3Harris Technologies, according to people briefed on the matter. The network handles crucial radio frequencies that air-traffic controllers use to communicate with pilots, the people said. It wasn’t immediately clear whether the outage also affected the radar feeds that controllers use to keep aircraft safely separated in the skies.https://www.cbsnews.com/news/faa-issues-nationwide-ground-st...> An update to the private communications network that connects America's air traffic control system caused the system to reboot, leading to a crash and a communications outage, multiple sources told CBS News. The system is operated by L3Harris, which did not immediately respond to CBS News' request for comment.",
-          "Info on this is amazingly sparse. Apparently Sec. Duffy posted something on X/Twitter, and that's all the news media have.Looking at LAX departures, it looks like nothing has departed since about 10:30 AM PST, and everything later is showing Delayed or Cancelled. There are times after Delayed, but it's not clear those times mean anything. Some are now in the past.\"flysfo.com\" is too overloaded to display departures. Stuck at \"loading...\".JFK departure status shows almost solid \"Delayed\".No good explanations anywhere.",
-          "Botched rollout of AI for ATC announced yesterday as rolling out nationwide?> The agency wrote on Nov. 10 that after the D.C. test, it will “now use SMART in the airspace of all 22 centers across the country to reduce delays, reduce fuel consumption and improve the travel experience for the flying public.” The tech was already being deployed at some airports.https://gizmodo.com/the-faa-is-rolling-out-its-ai-air-traffi..."
+          "Info on this is amazingly sparse. Apparently Sec. Duffy posted something on X/Twitter, and that's all the news media have.Looking at LAX departures, it looks like nothing has departed since about 10:30 AM PST, and everything later is showing Delayed or Cancelled. There are times after Delayed, but it's not clear those times mean anything. Some are now in the past.\"flysfo.com\" is too overloaded to display departures. Stuck at \"loading...\".JFK departure status shows almost solid \"Delayed\".No good explanations anywhere."
+        ]
+      }
+    },
+    {
+      "id": "50493251",
+      "title": "Nvidia Allegedly Engineered Scarcity by Funding AI Startups to Buy Its GPUs",
+      "url": "https://www.techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus",
+      "source": "Hacker News",
+      "published_at": "2026-11-14T02:52:59+00:00",
+      "summary": "Nvidia Allegedly Engineered Scarcity by Funding AI Startups to Buy Its GPUs",
+      "score": 337,
+      "comments": 175,
+      "discussion_url": "https://news.ycombinator.com/item?id=50493251",
+      "extra": {
+        "top_comments": [
+          "40 year old gamer here having a flashback of all anti- competition practices Nvidia sustained for decades. Who here remembers GameWorks and PhysX effectively sabotaging multi-vendor optimization in titles like Witcher 3 and Watch Dogs? Expensive Gsync monitors? Trying to force OEMs to be GeForce partners in exchange for full GPU support? Forcing EVGA exit from the market? And then completely shafting gamers when crypto and AI markets opened up?",
+          "I thought we knew a year ago that nVidia was doing circular finance?https://www.theguardian.com/technology/2025/dec/28/nvidia-in...",
+          "Nvidia wants to ensure data center companies that are optimized for AI like Nebius stock their buildings with Nvidia chips instead of AMD or ASICs so of course it is smart business sense to partner with them or take stakes in them.Nvidia gives Nebius first access to their newest chips, ensures they get deployed at top performance, allows Nvidia to recognize the revenue upfront, and ends up owning equity in the upside.Nebius gets the best chips first, gets cheaper financing due to the obvious security granted by having one of the most valuable companies in the world standing behind them, etc.It sounds like a mutually beneficial deal rather than something shady to me.By the way they report demand is 10x supply so I think everyone in here hoping for some cheap GPUs soon is kidding themselves. Eventually RAM might get cheaper because it's easier to build new factories to produce commoditized RAM but TSMC is the bottleneck for advanced chips and it isn't resolving anytime in the foreseeable future.I'm buying the dip from this silliness."
         ]
       }
     },
@@ -26,8 +44,8 @@
       "source": "Hacker News",
       "published_at": "2026-11-13T22:04:24+00:00",
       "summary": "Live airband on all frequencies from KORS. Victoria, CA also ground stopped",
-      "score": 220,
-      "comments": 52,
+      "score": 252,
+      "comments": 56,
       "discussion_url": "https://news.ycombinator.com/item?id=50490593",
       "extra": {
         "top_comments": [
@@ -38,38 +56,38 @@
       }
     },
     {
-      "id": "50492456",
-      "title": "Ukraine knocks out 36% of Russia's oil refining capacity in under two weeks",
-      "url": "https://english.nv.ua/nation/thirteen-day-drone-blitz-paralyzes-36-of-moscow-s-oil-50658616.html",
+      "id": "50491423",
+      "title": "Terminal borders that don't cost a cell",
+      "url": "https://www.joshka.net/cell-borders/",
       "source": "Hacker News",
-      "published_at": "2026-11-14T01:10:22+00:00",
-      "summary": "Ukraine knocks out 36% of Russia's oil refining capacity in under two weeks",
-      "score": 163,
-      "comments": 47,
-      "discussion_url": "https://news.ycombinator.com/item?id=50492456",
+      "published_at": "2026-11-13T23:06:40+00:00",
+      "summary": "Terminal borders that don't cost a cell",
+      "score": 186,
+      "comments": 83,
+      "discussion_url": "https://news.ycombinator.com/item?id=50491423",
       "extra": {
         "top_comments": [
-          "Refineries are huge, and hitting one doesn't automatically knock it out - Ukraine has actually already hit lots of Russian refineries this year, many of them more than once: https://www.reddit.com/r/RussianHitlists/comments/1ugfpiw/ru...Obviously Russia doesn't publish any data about how long it takes them to repair their refineries, but some of them showed significant damages from the pictures and videos you can find online.",
-          "Feels like drones and rockets have created a similar dynamic to mutually assured destruction, except for much smaller actors with far fewer resources. It's not hard to imagine a future where e.g. Taiwan is just armed with so many cheap drones and rockets that for even a great power like China the guarantee of enormous economic damage at home is just not worth it.",
-          "IEA says repairs are getting slower: https://www.ogj.com/general-interest/economics-markets/news/..."
+          "A much better alternative to this would be to for more terminal emulators to implement overstrike mode (DECSET 20, as available on the VK100). That way you could just draw border characters over existing text cells to achieve the same thing.Unfortunately mintty is the only terminal emulator I'm aware of which supports overstrike [0], as this would open up a world of new possibilities for TUI apps if more widely supported.[0] https://github.com/mintty/mintty/wiki/CtrlSeqs#overstrike",
+          "I love this work and everything else Ratatui does but I have to ask: if you're changing the terminal protocol and the terminal itself to do this, why not do something more ambitious; a full monospaced information-dense UI framework, a terminal designed for user interfaces, rather than one designed to replicate the limitations of dumb terminals?",
+          "This is pretty cool but this does feel like we are just reinventing another GUI display at this point.I don't generally like TUI's and think one gets more flexibility with raw text interfaces and being able to glue things together is more important then them looking nice. I think less fancy out put is better to be honest."
         ]
       }
     },
     {
-      "id": "50492601",
-      "title": "FAA lifted National Ground Stop at 0119Z",
-      "url": "https://www.fly.faa.gov/adv/adv_otherdis?adv_date=11142026&advn=5",
+      "id": "50492993",
+      "title": "Nvidia director sold nearly $1B in stock weeks before the Jensen Huang scandal",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-director-sold-nearly-1b-160000846.html",
       "source": "Hacker News",
-      "published_at": "2026-11-14T01:30:01+00:00",
-      "summary": "FAA lifted National Ground Stop at 0119Z",
-      "score": 158,
-      "comments": 149,
-      "discussion_url": "https://news.ycombinator.com/item?id=50492601",
+      "published_at": "2026-11-14T02:21:36+00:00",
+      "summary": "Nvidia director sold nearly $1B in stock weeks before the Jensen Huang scandal",
+      "score": 173,
+      "comments": 34,
+      "discussion_url": "https://news.ycombinator.com/item?id=50492993",
       "extra": {
         "top_comments": [
-          "Here's what they said caused it in the White House briefing:Sec Mullin: \"What it appears to be right now is, as Sec Duffy and FAA was going in and putting patches into the system, they were putting new equipment and new technology. And that new equipment and new technology, it was overwhelming the older system. Which is why Sec Duffy made it very clear, the patchwork doesn't work. We need one complete system.\"",
-          "The reason field is empty, but the website footer provides enough information to understand.",
-          "Do we have any indication of what went wrong? The incident report will be very interesting."
+          "Nothing out of the ordinary. Guy sold 4m shares over a few months (all of which have to be pre-announced 90 days in advance). Still has over 25m shares.",
+          "Aug 31 is about when the post-earnings window opened so could be routine?",
+          "I'm more interested in options activity leading up to this."
         ]
       }
     },
@@ -80,8 +98,8 @@
       "source": "Hacker News",
       "published_at": "2026-11-13T19:25:21+00:00",
       "summary": "Found: A protein that drives ageing without unleashing inflammation",
-      "score": 137,
-      "comments": 21,
+      "score": 173,
+      "comments": 25,
       "discussion_url": "https://news.ycombinator.com/item?id=50488470",
       "extra": {
         "top_comments": [
@@ -92,56 +110,38 @@
       }
     },
     {
+      "id": "50493062",
+      "title": "Ggml v1.0.0",
+      "url": "https://github.com/ggml-org/ggml/releases/tag/v1.0.0",
+      "source": "Hacker News",
+      "published_at": "2026-11-14T02:28:29+00:00",
+      "summary": "Ggml v1.0.0",
+      "score": 159,
+      "comments": 28,
+      "discussion_url": "https://news.ycombinator.com/item?id=50493062",
+      "extra": {
+        "top_comments": [
+          "What is really impressive about this project and llama.cpp as well is that they keep finding new ways to speed up the code on the same hardware. Every time I upgrade (once a month or so) there is usually a 5 to 10% speed boost.edit: Just to verify: I had planned to upgrade today, ran my usual benchmark prior and after and the runtime went from 4:22 to 3:59. That's a really long prompt (50K tokens) so prefill is a good chunk of that and the rest is spent on token generation.",
+          "Awesome! ggml and llama.cpp are the Linux of the AI world. Driving local inference one bit at a time.Wishing you unlimited power and may you never see a day of low battery. Respect and Love. Keep it up.",
+          "Long time llama.cpp user (and user of other ggml based AI programs) running on my crappy AMD card that only supports vulkan and it's usable thanks to GGML and llama.cpp, great program great project."
+        ]
+      }
+    },
+    {
       "id": "50492315",
       "title": "Amtrak booking system experiencing major issues amid nationwide FAA ground stop",
       "url": "https://www.fox5dc.com/news/amtrak-outage-ticket-booking-faa-ground-stop-november-13-2026",
       "source": "Hacker News",
       "published_at": "2026-11-14T00:52:29+00:00",
       "summary": "Amtrak booking system experiencing major issues amid nationwide FAA ground stop",
-      "score": 122,
-      "comments": 39,
+      "score": 155,
+      "comments": 47,
       "discussion_url": "https://news.ycombinator.com/item?id=50492315",
       "extra": {
         "top_comments": [
           "Amtrak's site has always been the worst example of a national rail website",
           "I've been wanting them to have an api for years with a TOS that you cannot resell tickets or make any additional fees from the sale to discourage SEO snakes from hijacking things.A more reasonable front-end could be made without much effort and a very low monthly overhead to host since it's mostly a proxyRequire the same upsells with the insurance and credit card offer I don't care, that's not the problem I have with the site.",
           "Always fun to live through a “textbook example” of something; in this case it’s a cascading failure (1) in transportation infrastructure(1) https://en.wikipedia.org/wiki/Cascading_failure"
-        ]
-      }
-    },
-    {
-      "id": "50491423",
-      "title": "Terminal borders that don't cost a cell",
-      "url": "https://www.joshka.net/cell-borders/",
-      "source": "Hacker News",
-      "published_at": "2026-11-13T23:06:40+00:00",
-      "summary": "Terminal borders that don't cost a cell",
-      "score": 94,
-      "comments": 53,
-      "discussion_url": "https://news.ycombinator.com/item?id=50491423",
-      "extra": {
-        "top_comments": [
-          "A much better alternative to this would be to for more terminal emulators to implement overstrike mode (DECSET 20, as available on the VK100). That way you could just draw border characters over existing text cells to achieve the same thing.Unfortunately mintty is the only terminal emulator I'm aware of which supports overstrike [0], as this would open up a world of new possibilities for TUI apps if more widely supported.[0] https://github.com/mintty/mintty/wiki/CtrlSeqs#overstrike",
-          "I love this work and everything else Ratatui does but I have to ask: if you're changing the terminal protocol and the terminal itself to do this, why not do something more ambitious; a full monospaced information-dense UI framework, a terminal designed for user interfaces, rather than one designed to replicate the limitations of dumb terminals?",
-          "A pet peeve of mine is that most people / WM get \"useless gaps\" wrong. You do want a gap between two terminals because otherwise there are times where things can get really confusing (where you don't know what belong to which terminal / window).So the \"borderless\" (0 pixels) / zero \"useless gaps\" (which really aren't useless so it's also a complete misnomer) simply are confusing and... Wrong.But then people who do use useless gap, as in TFA, get it wrong too: they typically add gaps near the monitor's edges.Yeah. But no. Sorry but my monitor's edge is a perfectly fine gap. I don't risk mistaking it for anything.So I modified my WM (the Awesome WM) to do proper \"useless gaps\" computation and remove the ones that really are useless: and that'd be those near the monitor's physical border.I mean: nearly everybody gets it wrong, but it's not complicated to get that right, is it?"
-        ]
-      }
-    },
-    {
-      "id": "50488835",
-      "title": "Live-migration support in FreeBSD and bhyve coming",
-      "url": "https://gyptazy.com/blog/freebsd-bhyve-live-migration-support-rfc/",
-      "source": "Hacker News",
-      "published_at": "2026-11-13T19:58:42+00:00",
-      "summary": "Live-migration support in FreeBSD and bhyve coming",
-      "score": 75,
-      "comments": 17,
-      "discussion_url": "https://news.ycombinator.com/item?id=50488835",
-      "extra": {
-        "top_comments": [
-          "Also related is Propolis from Oxide who worked on live migration with Bhyve https://github.com/oxidecomputer/propolis",
-          "Looks like this could really become a game changer for the FreeBSD folks using bhyve. The author often complained about this missing feature and he was also contributing to the Sylve project. Looks like he's crafting something.",
-          "Anyone heard anything from dragonflyBSD lately? This sounds like something that might go well with HammerFS?"
         ]
       }
     }
