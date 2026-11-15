@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-11-14T14:50:55.142901+08:00",
+  "cached_at": "2026-11-15T11:00:21.678103+08:00",
   "articles": [
     {
       "id": "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature/",
@@ -68,30 +68,6 @@
       "source": "OpenAI",
       "published_at": "2026-11-13T08:00:00+00:00",
       "summary": "Shield uses OpenAI to help IT technicians hand off work in legacy portals. Its Forge agents navigate systems so technicians can focus on issues needing their judgment.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://www.microsoft.com/en-us/research/?p=1194401",
-      "title": "Microsoft Research Focus – Edition #98",
-      "url": "https://www.microsoft.com/en-us/research/podcast/microsoft-research-focus-edition-98/",
-      "source": "Microsoft Research",
-      "published_at": "2026-11-12T21:31:57+00:00",
-      "summary": "What's new in research at Microsoft? Host Anson Ho explores the latest, including AI-powered universal translation, a breakthrough in a 31-year-old mathematics challenge, and advances making AI coding agents faster and more efficient. The post Microsoft Research Focus – Edition #98 appeared first on Microsoft Research.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://openai.com/business/customer-stories/amplitude",
-      "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
-      "url": "https://openai.com/business/customer-stories/amplitude",
-      "source": "OpenAI",
-      "published_at": "2026-11-12T20:00:00+00:00",
-      "summary": "Built primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps teams ship changes with coding agents, and measures the impact.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",

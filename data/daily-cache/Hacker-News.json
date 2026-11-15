@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-11-14T14:50:55.142901+08:00",
+  "cached_at": "2026-11-15T11:00:21.678103+08:00",
   "articles": [
     {
-      "id": "50489641",
-      "title": "FAA issues national ground stop – lifted 4.5 hours later",
-      "url": "https://www.nbcnews.com/news/us-news/faa-orders-nationwide-ground-stop-departing-flights-reasons-safety-rcna609247",
+      "id": "50500963",
+      "title": "SpaceX catches the Starship to end Flight 15",
+      "url": "https://www.spacex.com/launches/starship-flight-15",
       "source": "Hacker News",
-      "published_at": "2026-11-13T21:05:53+00:00",
-      "summary": "https://www.fly.faa.gov/adv/adv_otherdis?adv_date=11132026&a...https://www.fly.faa.gov/adv/adv_otherdis?adv_date=11142026&a...https://www.nytimes.com/live/2026/11/13/us/ground-stop-natio...",
-      "score": 1480,
-      "comments": 1137,
-      "discussion_url": "https://news.ycombinator.com/item?id=50489641",
+      "published_at": "2026-11-14T21:22:24+00:00",
+      "summary": "https://x.com/SpaceX/status/2121316300702056595https://youtu.be/jHlpfNSpBmw?t=3233",
+      "score": 804,
+      "comments": 544,
+      "discussion_url": "https://news.ycombinator.com/item?id=50500963",
       "extra": {
         "top_comments": [
-          "For those interested, there was a 2009 outage of the FAA Telecommunications Infrastructure that at a surface level seems like it could be a similar failure mode. At the very least, it is an interesting read on how the FAAs systems operate, since a lot of the discussion so far has been wild speculation from people with little knowledge on how the national airspace system actually operates: https://www.oig.dot.gov/library-item/29670Of particular note is this section: Risks of FTI Outages for Existing Operational Services As of December 2009, Harris reported that there are a total of 20,982 services operating on the FTI network. While FAA has transitioned all 1,808 IP services supporting FAA flight plans to the new FTI fiber optic network, additional risks will be introduced when the Agency begins transitioning other FAA services, such as En Route Automation Modernization (ERAM) and NextGen platforms, which also require IP technology to operate. Moreover, there are 19,174 existing services that may be transitioned to the new FTI fiber optic network. According to FAA, transitioning these remaining services is important because FTI now connects older FAA systems that provide safety-critical voice and surveillance radar information by utilizing Time Division Multiplex (TDM) technology, instead of IP services.",
-          "starting to see some explanations for what's going onhttps://www.wsj.com/us-news/faa-temporarily-halts-flights-ac...> The outage appears to be affecting a telecommunications network overseen by L3Harris Technologies, according to people briefed on the matter. The network handles crucial radio frequencies that air-traffic controllers use to communicate with pilots, the people said. It wasn’t immediately clear whether the outage also affected the radar feeds that controllers use to keep aircraft safely separated in the skies.https://www.cbsnews.com/news/faa-issues-nationwide-ground-st...> An update to the private communications network that connects America's air traffic control system caused the system to reboot, leading to a crash and a communications outage, multiple sources told CBS News. The system is operated by L3Harris, which did not immediately respond to CBS News' request for comment.",
-          "Info on this is amazingly sparse. Apparently Sec. Duffy posted something on X/Twitter, and that's all the news media have.Looking at LAX departures, it looks like nothing has departed since about 10:30 AM PST, and everything later is showing Delayed or Cancelled. There are times after Delayed, but it's not clear those times mean anything. Some are now in the past.\"flysfo.com\" is too overloaded to display departures. Stuck at \"loading...\".JFK departure status shows almost solid \"Delayed\".No good explanations anywhere."
+          "Starship is, essentially, Space Shuttle done right: fully reusable booster without solid boosters (avoids Challenger disaster) and orbiter stacked on top instead of on the side (avoid Columbia disaster).The original designs for the Space Shuttle had the booster (with wings!) return to the launch site, but the cost for two new crewed vehicles was too large, so they scaled it back to the compromised version.Even more revolutionary, compared to Shuttle, Starship is built on an assembly line. They can build a booster ever 4 weeks and a ship every 2 weeks.The future we were promised in the 1970s is about to become real.",
+          "If the heat shield holds up then this changes everything. Next step is double catch and re-flying the same ships and catching again, then payloads to orbit become significantly cheaper opening a new era in space flight.",
+          "Huge congratulations to the engineering team on this one! It's been quite interesting to watch the evolution of Starship. Had they put another couple of tonnes of propellant and oxidizer on the Booster they might have caught both of them. It is still unclear to me what the final mass fraction to orbit will work out to be, but something that is 100% re-usable is better than something 60% reusable[1].[1] Estimate of Falcon 9's booster + fairings being 60% (by cost, not by mass) of the launch package."
         ]
       }
     },
     {
-      "id": "50493251",
-      "title": "Nvidia Allegedly Engineered Scarcity by Funding AI Startups to Buy Its GPUs",
-      "url": "https://www.techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus",
+      "id": "50499017",
+      "title": "Lovable apps expose passport details and more than 200K private messages",
+      "url": "https://www.crissyfield.de/research/lovable-en/",
       "source": "Hacker News",
-      "published_at": "2026-11-14T02:52:59+00:00",
-      "summary": "Nvidia Allegedly Engineered Scarcity by Funding AI Startups to Buy Its GPUs",
-      "score": 337,
-      "comments": 175,
-      "discussion_url": "https://news.ycombinator.com/item?id=50493251",
+      "published_at": "2026-11-14T17:43:10+00:00",
+      "summary": "Lovable apps expose passport details and more than 200K private messages",
+      "score": 678,
+      "comments": 282,
+      "discussion_url": "https://news.ycombinator.com/item?id=50499017",
       "extra": {
         "top_comments": [
-          "40 year old gamer here having a flashback of all anti- competition practices Nvidia sustained for decades. Who here remembers GameWorks and PhysX effectively sabotaging multi-vendor optimization in titles like Witcher 3 and Watch Dogs? Expensive Gsync monitors? Trying to force OEMs to be GeForce partners in exchange for full GPU support? Forcing EVGA exit from the market? And then completely shafting gamers when crypto and AI markets opened up?",
-          "I thought we knew a year ago that nVidia was doing circular finance?https://www.theguardian.com/technology/2025/dec/28/nvidia-in...",
-          "Nvidia wants to ensure data center companies that are optimized for AI like Nebius stock their buildings with Nvidia chips instead of AMD or ASICs so of course it is smart business sense to partner with them or take stakes in them.Nvidia gives Nebius first access to their newest chips, ensures they get deployed at top performance, allows Nvidia to recognize the revenue upfront, and ends up owning equity in the upside.Nebius gets the best chips first, gets cheaper financing due to the obvious security granted by having one of the most valuable companies in the world standing behind them, etc.It sounds like a mutually beneficial deal rather than something shady to me.By the way they report demand is 10x supply so I think everyone in here hoping for some cheap GPUs soon is kidding themselves. Eventually RAM might get cheaper because it's easier to build new factories to produce commoditized RAM but TSMC is the bottleneck for advanced chips and it isn't resolving anytime in the foreseeable future.I'm buying the dip from this silliness."
+          "Hi, I’m the author of this blog post. I submitted it to HN two weeks ago, but it didn’t gain much traction, so I’m glad to see it resubmitted. Happy to answer any questions, though I think the situation is fairly self-explanatory.",
+          "Igor here, Head of Security at Lovable. Thanks to the Crissy Field team for their work. The root cause in these apps was insufficent Row-Level Security, which is exactly what our scanning is built to catch. We scan every app automatically before publish and offer a deeper SAST scan, both free for all users. When we flag findings, users can select “Fix” and Lovable will help resolve them. They can also enable auto-fix, which resolves security findings in the background, and block publishing entirely when there are critical findings.When an app has end users, security is a key part of the product. That’s why we keep investing in making security tools better and easier to use, taking on as much of the security load as we can and fixing more issues automatically.I personally believe that making security accessible is what leads to making software accessible. We’re committed to both.You can read more about our approach: https://lovable.dev/blog/find-it-fix-it-ship-it",
+          "The part people are ignoring is Supabase's culpability in this matter: https://github.com/orgs/supabase/discussions/4547This was supposedly fixed on October 30, but there are reports floating around that for existing projects, the defaults still apply.Lovable deserves some heat for using this, but this was a choice that was made by Supabase many years ago to support making it easier to onboard potential customers, a deliberate tradeoff of less onboarding pain for less security."
         ]
       }
     },
     {
-      "id": "50490593",
-      "title": "Live airband on all frequencies from KORS. Victoria, CA also ground stopped",
-      "url": "https://orcasairband.com/",
+      "id": "50496976",
+      "title": "KDE: The documentary [video]",
+      "url": "https://tube.kockatoo.org/w/fFinNHfanLT7aBEb2B8y4c",
       "source": "Hacker News",
-      "published_at": "2026-11-13T22:04:24+00:00",
-      "summary": "Live airband on all frequencies from KORS. Victoria, CA also ground stopped",
-      "score": 252,
-      "comments": 56,
-      "discussion_url": "https://news.ycombinator.com/item?id=50490593",
+      "published_at": "2026-11-14T13:43:28+00:00",
+      "summary": "KDE: The documentary [video]",
+      "score": 397,
+      "comments": 87,
+      "discussion_url": "https://news.ycombinator.com/item?id=50496976",
       "extra": {
         "top_comments": [
-          "Hi all. Thanks for the interest. I'm going to post an impromptu blog post here just explaining what this is. The rather unfortunate ground stop today made this unexpectedly useful with the pilots here on Orcas just to get a sense of the chatter in our airspace re the situation.This is an ETTUS B210 attached to a dual 4090 box. It's a polyphase channelizer that takes the entire airband, channelizes it using cuda code on GPU, demodulates it, detects transmissions, throws away data tx and then feeds the tx through a voice model I created for transcription. A separate LLM reads the transcriptions to create a situational awareness picture of the airspace.I'm interested in open sourcing this and making it available for folks who can run an ETTUS B210 or high quality SDR with enoguh bandwidth and a local GPU machine, so that we can cover more airpsace.This was born out of an incident we had not too long ago where a pilot around KORS (based at Friday Harbor) lost the engine in his 172, and put it in the water in front of a ferry and was picked up by the ferry. We're a pretty close bunch on Orcas Island and we only heard about it days later via social media. That felt completely unacceptable, and I set out to create a radio that could monitor everything in real-time, all the time, and alert on emergencies. That has extended to transcribing and creating situational awareness for a chunk of airspace.I'm an IFR pilot. I fly a T206H regularly in IMC around here and I'm a ground instructor. You can email me at mark@defiant.com or find me on x at mmaunder if you'd like to connect. I'm particularly interested in hearing from folks who can run a station on their own hardware and are under bravo or a charlie or even just somewhere interesting re airspace.",
-          "These are raw transcripts unedited by me that I extracted possibly related to the groundstop, generated at time of posting: 2143Z, 126.400 Victoria Ground (weak signal): \"Yeah, we just uh communication issues, so we got the traffic stopped on [unintelligible]\" 2151Z, 134.800 Vancouver Centre, pilot of a flight ending \"364\": \"We're saying they just have an alternate plan. They've been getting lower and lower 48 right now. We're on the phone with you, they are saying cannot show any reason why we would be out of communication to Seattle. So just otherwise we do have some alternates that we're talking about, but we just want to see, you see anything on your end that we cannot proceed to Seattle?\" 2152Z, 134.800 Vancouver Centre, same pilot: \"Okay, sounds good. Yeah, we appreciate that. We'll be staying by and we'll just kind of get the alternate plans for ready to go. Thank you.\" 2159Z, 121.075 Victoria Terminal, controller: \"Seacraft 304, just a heads up here, there is a ground stop for an aircraft about into Vancouver at this time. I'm sure you have a VFR slot, seeing where you're headed there now, so I'd like to be still going to take you, but it just has stopped that you might end up getting turned around.\" 2159Z, 121.075 Victoria Terminal, controller: \"Sorry, that's all inbound aircraft, ground stop.\" 2200Z, 121.075 Victoria Terminal, controller: \"Yeah, it's not affecting anything airborne at this time. We're just about departing anything for Vancouver and Calgary at this time.\" 2201Z, 126.400 Victoria Ground, pilot (weak signal): \"Hey Ground, it's Jazz 270, and I'm guessing there's a flow for Vancouver.\" 2203Z, 121.075 Victoria Terminal, pilot: \"Uh just wanted to confirm uh there's a ground stop uh going into Vancouver on this frequency?\" 2203Z, 121.075 Victoria Terminal, controller: \"Encore 3325, that's correct. Nothing is departing to land at Vancouver at this time.\" 2204Z, 134.800 Vancouver Centre, pilot: \"Yeah, right now they said normal ops continue, but we'll see what happens once we get closer.\" 2217Z, 126.125 Vancouver Departure, pilot: \"Yeah, you guys not having any of the issues that they're having in the US right now?\" 2217Z, 126.125 Vancouver Departure: \"Uh, apparently the ones uh seeing ground stop for the 14 major airports I've just got a few minutes. Okay, thanks.\" 2227Z, 126.400 Victoria Ground, pilot: \"Encore 58, information Papa, requesting flow through to Vancouver for 2255.\" Reply: \"Roger, 2255 on the flight plan.\"",
-          "If you scroll back to 2:03pm (the time this link was posted) there was this interaction:14:03:04 Uh just wanted to confirm uh there's a ground stop uh going into Vancouver on this frequency?14:03:10 Encore 3325, that's correct. Nothing is departing to land at Vancouver at this time."
+          "Total KDE fan and that's all I run at home. It's an interesting study also in desktop environment and software written in C++ and just how hard it is to get something that works for most people. Mistakes, corrections, building the basic blocks like Qt in the early days and keeping a bunch of people with differing cultures / tastes / backgrounds/needs motivated to make it better every day - fascinating achievement.Thank you KDE folks - I contribute in terms of bug reports and attempts at fixes sometimes but this time I am signing up for a monthly donation - I encourage people to do what they can to keep a good thing going! https://kde.org/donate/",
+          "I am a bit prod of having seen the original post looking for volunteers to build a Kool Desktop Environment. I was obsessively reading Usenet groups at the time. And I remember there were quite early betas published, I did not run them at first, but I remember much enthusiasm about it. So I feel familiar with the beginnings although I never participated in the project development-wise. All the way up to KDE 4 I was quite close to the project as a user. But since KDE 4 was so unstable and buggy, I left it around that time. This is also around the time when the documentary makes a big jump ahead chronologically.I feel the documentary explains less what happened the last 10-15 years. I recall Trolltech and Qt underwent a series of acquisitions. How is KDE and Qt developed now? Who are the main contributors and sponsors? Any big backers? This information I felt missing.",
+          "KDE is how desktops should be. 'The Year of the Linux' is NOW, a few years ago. Linux and KDE have given me not only freedom over my own hardware, but freedom over how I interact with my desktops. Once you know the shortcuts, things become so much more fun. Much love to the KDE team.Linux life, yo."
         ]
       }
     },
     {
-      "id": "50491423",
-      "title": "Terminal borders that don't cost a cell",
-      "url": "https://www.joshka.net/cell-borders/",
+      "id": "50501631",
+      "title": "Nvidia deliberately kept GPU prices high through circular financing deals",
+      "url": "https://www.techspot.com/news/114558-nvidia-deliberately-kept-gpu-prices-high-through-circular.html",
       "source": "Hacker News",
-      "published_at": "2026-11-13T23:06:40+00:00",
-      "summary": "Terminal borders that don't cost a cell",
+      "published_at": "2026-11-14T22:26:30+00:00",
+      "summary": "Nvidia deliberately kept GPU prices high through circular financing deals",
+      "score": 238,
+      "comments": 129,
+      "discussion_url": "https://news.ycombinator.com/item?id=50501631",
+      "extra": {
+        "top_comments": [
+          "If the price of the RTX 6000 (96gb blackwell gpu) drops to $2000 (original MSRP $8000, currently $16,000 usd due to \"scarcity\") then, all of a sudden, \"we have ai at home\" becomes real and why would you ever pay for a subscription for your company/family when you can run Qwen Flash Next (which runs great on consumer GPU via software like Strata) forever for free?Engineering types and power users need not apply,but For Everyone Else, the \"normies\", Qwen Flash Next is probably \"640k is enough for anyone\" territory.IPO, valuation etc depend heavily on frontier, or \"good enough\" AI to need to run on commercial grade GPUs. If Qwen Flash Next is good enough and runs on a $2000 GPU, why would you pay $20/30/100/200 per month in perpetuity?I wouldn't pick Qwen Flash Next to add kernel namespacing and cgroups v2 to my custom OS kernel, but it will happily implement the Plan.md that Fable 5.2 wrote for a dollar.",
+          "Not speaking about the possible knowledge of smuggling in contravention of law, marital infidelity, and possibility getting mixed up with an intelligence agent, but I don't see the circular financing thing as a problem. Maybe I'm misinformed.But weren't they were investing money in companies to help them grow and in turn buy more of their product. Of course Nvidia wants to stimulate demand of their product. I don't think this was nefarious. There is no free lunch, the risk of them never getting that money back is real with a lot of these pie in the sky AI companies. How is this anticompetitive? It's all of these SPVs that meta, google, and others are using that I think needs to be investigated and punished by wall street.If you think that's wrong, USE YOUR WORDS, I'm open to reason. Down voting with no response or making jeers is not effective communication.",
+          "We had a huge thread about this yesterdayNvidia allegedly engineered scarcity by funding AI startups to buy its GPUs (techpowerup.com)https://news.ycombinator.com/item?id=50493251"
+        ]
+      }
+    },
+    {
+      "id": "50499038",
+      "title": "A family tree of software job titles",
+      "url": "https://zwischenzugs.com/2026/11/03/a-family-tree-of-software-job-titles/",
+      "source": "Hacker News",
+      "published_at": "2026-11-14T17:45:19+00:00",
+      "summary": "A family tree of software job titles",
+      "score": 225,
+      "comments": 110,
+      "discussion_url": "https://news.ycombinator.com/item?id=50499038",
+      "extra": {
+        "top_comments": [
+          "Recently I spoke to someone who wanted to know what they should call themselves seeing as they never learned software development, formally or otherwise, but that's not stopping them from releasing AI-powered Python projects in GitHub. I suggested Project Manager, but they took offense to that because (I think) they wanted to hear Software Engineer in order to apply to those jobs. My counter-argument was that, legal rules aside, a S.E. should be able to differentiate good code from bad, but my suggestion wasn't super well received.The point being: I'm always amazed at the cross-purpose impulse of arguing \"the title is not important\" while, simultaneously, really wanting to use the title.",
+          "Scrum and Agile seem to be dying. I had a Product Owner and Scrum Master cert for years on my resume but i've dropped it from my current. Feels now like the ancient webmaster title of the mid 90s. Made for another timeline which is not more relevant.DevOps is another sad story as it was a saner approach to get people skilled for both dev and ops but turns out people don't like learning new skills as much as they claim. So its meaning differed from org to org and even within the same company.",
+          "So far in my career:- DevOps Engineer (Junior, Senior, Staff)- Systems Development Engineer- DevOps Team Manager- Cloud Infrastructure Engineer- Site Reliability Engineer (+Lead)All have been meaningless except for Cloud Infrastructure Engineer. The rest described a generalist who knows how to deal with ambiguity and (usually) has the trust with things like AWS root account credentials. Most organisations have no idea what real DevOps is. If they did, they wouldn’t hire for a “DevOps Engineer”"
+        ]
+      }
+    },
+    {
+      "id": "50497892",
+      "title": "PyPI's redesigned project pages with clearer security signals are now live",
+      "url": "https://blog.pypi.org/posts/2026-11-06-ui-updates-complete/",
+      "source": "Hacker News",
+      "published_at": "2026-11-14T15:40:52+00:00",
+      "summary": "PyPI's redesigned project pages with clearer security signals are now live",
+      "score": 214,
+      "comments": 94,
+      "discussion_url": "https://news.ycombinator.com/item?id=50497892",
+      "extra": {
+        "top_comments": [
+          "Not very keen that the whole story of trust is basically centralisation - requiring \"big cloud\" and essentially promoting lock-in.Did I get that right? Seems a bit anti-pythonic.",
+          "Some examples:dlt (no provenance): https://pypi.org/project/dlt/#filesdatasette (yes provenance): https://pypi.org/project/datasette/#files",
+          "This is great! I want sigstore-based or at least sigstore-style \"keyless\" short lived signatures to become more and more popular, so that support gets better everywhere. In particular, if having secure OIDC handling in a CI/CD pipeline becomes something that keeps people on GHA or GitLab then I'd hope third-party hosted CI/CD services begin to take that gap seriously and work on meeting those requirements.I'm bought in on keyless signing, and I want there to be many more providers, so I like to see more adoption which builds more momentum."
+        ]
+      }
+    },
+    {
+      "id": "50499723",
+      "title": "LinkedIn, Monster take down over 1000 fake job postings after CBC investigation",
+      "url": "https://www.cbc.ca/news/canada/linkedin-monster-take-down-over-1-000-fake-job-postings-after-cbc-investigation-9.7415379",
+      "source": "Hacker News",
+      "published_at": "2026-11-14T18:56:47+00:00",
+      "summary": "LinkedIn, Monster take down over 1000 fake job postings after CBC investigation",
+      "score": 208,
+      "comments": 119,
+      "discussion_url": "https://news.ycombinator.com/item?id=50499723",
+      "extra": {
+        "top_comments": [
+          "After that report from Reuters came out saying that 10% of META's revenue comes from ads pushing scams and prohibited products I'm starting to think a very large chunk of the internet (and national economy) basically runs on scamming people.And that's not even considering perfectly legal \"scams\" like shitcoin pumps and politicians awarding shady contracts to buisness people who donated to them without a technical bribe happening. I would love to know how much of the actual economy is above-board business and how much isn't, but the older I get the larger the \"isn't\" seems to grow. Is the scam-economy 1% of all real financial transations? 5%? 10%? 20%? I'm honestly not sure.",
+          "I got one of those many years ago when I was in college. I desperately needed money, so I found a job listing on Craigslist, sent my resume, got a call back, we agreed on the in-person time and place, it was neat.I show up at a building 2 blocks from school, a random tenant tells me to form a line by the door that was locked. I was confused because I was the only one there. A second person came in, joined the line. Then a third, fourth, fifth. We were a crowd, standing in front of a door, where I thought I'd interview for a entry level job in tech.When the door opened and the person on the other side greeted us and a good number of people immediately left. More luck for me to get this job. But turns out, it was going to be a group interview. In fact, not exactly an interview. It was a pitch. And a few lucky ones would have the privilege to sell high tech knives. All we had to do was buy the first batch of knives for something like $300.",
+          "Semi-related personal story:I took over an abandoned daytrading sub on Reddit. I think when I took over it had something like 30k weekly visitors.It basically had no rules, anyone could post whatever they wanted. It was mostly ads, funnels to some apps or YouTube videos, courses, private chat groups, and so on.I decided to do a cleanup and ban all the cross posts, obvious AI posts, bots, and ads. And it killed the entire sub, it had zero legitimate posts after.Makes me wonder how much of LinkedIn is actually just fake jobs, either MLM or ghost jobs, etc."
+        ]
+      }
+    },
+    {
+      "id": "50497589",
+      "title": "Show HN: DeepSeek V3 in ~200 lines of pure Jax",
+      "url": "https://github.com/Vaibhaav-Tiwari/deepseek-v3-jax",
+      "source": "Hacker News",
+      "published_at": "2026-11-14T15:04:15+00:00",
+      "summary": "Show HN: DeepSeek V3 in ~200 lines of pure Jax",
       "score": 186,
-      "comments": 83,
-      "discussion_url": "https://news.ycombinator.com/item?id=50491423",
+      "comments": 9,
+      "discussion_url": "https://news.ycombinator.com/item?id=50497589",
       "extra": {
         "top_comments": [
-          "A much better alternative to this would be to for more terminal emulators to implement overstrike mode (DECSET 20, as available on the VK100). That way you could just draw border characters over existing text cells to achieve the same thing.Unfortunately mintty is the only terminal emulator I'm aware of which supports overstrike [0], as this would open up a world of new possibilities for TUI apps if more widely supported.[0] https://github.com/mintty/mintty/wiki/CtrlSeqs#overstrike",
-          "I love this work and everything else Ratatui does but I have to ask: if you're changing the terminal protocol and the terminal itself to do this, why not do something more ambitious; a full monospaced information-dense UI framework, a terminal designed for user interfaces, rather than one designed to replicate the limitations of dumb terminals?",
-          "This is pretty cool but this does feel like we are just reinventing another GUI display at this point.I don't generally like TUI's and think one gets more flexibility with raw text interfaces and being able to glue things together is more important then them looking nice. I think less fancy out put is better to be honest."
-        ]
-      }
-    },
-    {
-      "id": "50492993",
-      "title": "Nvidia director sold nearly $1B in stock weeks before the Jensen Huang scandal",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-director-sold-nearly-1b-160000846.html",
-      "source": "Hacker News",
-      "published_at": "2026-11-14T02:21:36+00:00",
-      "summary": "Nvidia director sold nearly $1B in stock weeks before the Jensen Huang scandal",
-      "score": 173,
-      "comments": 34,
-      "discussion_url": "https://news.ycombinator.com/item?id=50492993",
-      "extra": {
-        "top_comments": [
-          "Nothing out of the ordinary. Guy sold 4m shares over a few months (all of which have to be pre-announced 90 days in advance). Still has over 25m shares.",
-          "Aug 31 is about when the post-earnings window opened so could be routine?",
-          "I'm more interested in options activity leading up to this."
-        ]
-      }
-    },
-    {
-      "id": "50488470",
-      "title": "Found: A protein that drives ageing without unleashing inflammation",
-      "url": "https://www.nature.com/articles/d41586-026-03638-3",
-      "source": "Hacker News",
-      "published_at": "2026-11-13T19:25:21+00:00",
-      "summary": "Found: A protein that drives ageing without unleashing inflammation",
-      "score": 173,
-      "comments": 25,
-      "discussion_url": "https://news.ycombinator.com/item?id=50488470",
-      "extra": {
-        "top_comments": [
-          "Paper: https://www.cell.com/immunity/fulltext/S1074-7613(26)00440-1Granzyme K is the protein.",
-          "From the abstract of the paper, significantly more nuance.> Despite persistent immune aging phenotypes, GzmK deficiency markedly attenuated organ aging, effectively uncoupling immune and tissue aging... These findings identify GzmK as a tissue-specific driver of organismal aging but not immune aging or systemic inflammaging.",
-          "Paywall"
-        ]
-      }
-    },
-    {
-      "id": "50493062",
-      "title": "Ggml v1.0.0",
-      "url": "https://github.com/ggml-org/ggml/releases/tag/v1.0.0",
-      "source": "Hacker News",
-      "published_at": "2026-11-14T02:28:29+00:00",
-      "summary": "Ggml v1.0.0",
-      "score": 159,
-      "comments": 28,
-      "discussion_url": "https://news.ycombinator.com/item?id=50493062",
-      "extra": {
-        "top_comments": [
-          "What is really impressive about this project and llama.cpp as well is that they keep finding new ways to speed up the code on the same hardware. Every time I upgrade (once a month or so) there is usually a 5 to 10% speed boost.edit: Just to verify: I had planned to upgrade today, ran my usual benchmark prior and after and the runtime went from 4:22 to 3:59. That's a really long prompt (50K tokens) so prefill is a good chunk of that and the rest is spent on token generation.",
-          "Awesome! ggml and llama.cpp are the Linux of the AI world. Driving local inference one bit at a time.Wishing you unlimited power and may you never see a day of low battery. Respect and Love. Keep it up.",
-          "Long time llama.cpp user (and user of other ggml based AI programs) running on my crappy AMD card that only supports vulkan and it's usable thanks to GGML and llama.cpp, great program great project."
-        ]
-      }
-    },
-    {
-      "id": "50492315",
-      "title": "Amtrak booking system experiencing major issues amid nationwide FAA ground stop",
-      "url": "https://www.fox5dc.com/news/amtrak-outage-ticket-booking-faa-ground-stop-november-13-2026",
-      "source": "Hacker News",
-      "published_at": "2026-11-14T00:52:29+00:00",
-      "summary": "Amtrak booking system experiencing major issues amid nationwide FAA ground stop",
-      "score": 155,
-      "comments": 47,
-      "discussion_url": "https://news.ycombinator.com/item?id=50492315",
-      "extra": {
-        "top_comments": [
-          "Amtrak's site has always been the worst example of a national rail website",
-          "I've been wanting them to have an api for years with a TOS that you cannot resell tickets or make any additional fees from the sale to discourage SEO snakes from hijacking things.A more reasonable front-end could be made without much effort and a very low monthly overhead to host since it's mostly a proxyRequire the same upsells with the insurance and credit card offer I don't care, that's not the problem I have with the site.",
-          "Always fun to live through a “textbook example” of something; in this case it’s a cascading failure (1) in transportation infrastructure(1) https://en.wikipedia.org/wiki/Cascading_failure"
+          "I love this, there is nothing like recreating a model from first principles, plus makes me want to revisit Jax again (I'll do it after I spend enough time with Zig). Thanks for this!",
+          "Post like these always drives a motivation to understand how inference or what OP did.For folks who are more familiar in this space, is there a good road map how to build and understand the intuition behind this? I’m comfortable in Java and Python and do vanilla SWE work.",
+          "> to asking a language model to create a 3D end-to-end working model for me to capture the nuancesLove this! Yes, having a visual of the system makes it a lot easier to reason about and understandI wish all AI models came with interactive animated workflows of their architecture> so I wanted it to be different just for the sake of it and used various books by…That’s cool and great for your own project. At the same time it helps to use datasets that others have used, because then you can compare results more directlyExcellent write up, I really appreciate all the detail and the sample outputs at the end. Excited to see what I could apply for this to the small <10M models I’ve been training"
         ]
       }
     }
