@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-11-15T11:00:21.678103+08:00",
+  "cached_at": "2026-11-15T14:55:43.037474+08:00",
   "articles": [
     {
       "id": "50500963",
@@ -8,8 +8,8 @@
       "source": "Hacker News",
       "published_at": "2026-11-14T21:22:24+00:00",
       "summary": "https://x.com/SpaceX/status/2121316300702056595https://youtu.be/jHlpfNSpBmw?t=3233",
-      "score": 804,
-      "comments": 544,
+      "score": 1043,
+      "comments": 696,
       "discussion_url": "https://news.ycombinator.com/item?id=50500963",
       "extra": {
         "top_comments": [
@@ -26,14 +26,14 @@
       "source": "Hacker News",
       "published_at": "2026-11-14T17:43:10+00:00",
       "summary": "Lovable apps expose passport details and more than 200K private messages",
-      "score": 678,
-      "comments": 282,
+      "score": 756,
+      "comments": 300,
       "discussion_url": "https://news.ycombinator.com/item?id=50499017",
       "extra": {
         "top_comments": [
           "Hi, I’m the author of this blog post. I submitted it to HN two weeks ago, but it didn’t gain much traction, so I’m glad to see it resubmitted. Happy to answer any questions, though I think the situation is fairly self-explanatory.",
-          "Igor here, Head of Security at Lovable. Thanks to the Crissy Field team for their work. The root cause in these apps was insufficent Row-Level Security, which is exactly what our scanning is built to catch. We scan every app automatically before publish and offer a deeper SAST scan, both free for all users. When we flag findings, users can select “Fix” and Lovable will help resolve them. They can also enable auto-fix, which resolves security findings in the background, and block publishing entirely when there are critical findings.When an app has end users, security is a key part of the product. That’s why we keep investing in making security tools better and easier to use, taking on as much of the security load as we can and fixing more issues automatically.I personally believe that making security accessible is what leads to making software accessible. We’re committed to both.You can read more about our approach: https://lovable.dev/blog/find-it-fix-it-ship-it",
-          "The part people are ignoring is Supabase's culpability in this matter: https://github.com/orgs/supabase/discussions/4547This was supposedly fixed on October 30, but there are reports floating around that for existing projects, the defaults still apply.Lovable deserves some heat for using this, but this was a choice that was made by Supabase many years ago to support making it easier to onboard potential customers, a deliberate tradeoff of less onboarding pain for less security."
+          "The part people are ignoring is Supabase's culpability in this matter: https://github.com/orgs/supabase/discussions/4547This was supposedly fixed on October 30, but there are reports floating around that for existing projects, the defaults still apply.Lovable deserves some heat for using this, but this was a choice that was made by Supabase many years ago to support making it easier to onboard potential customers, a deliberate tradeoff of less onboarding pain for less security.",
+          "Igor here, Head of Security at Lovable. Thanks to the Crissy Field team for their work. The root cause in these apps was insufficent Row-Level Security, which is exactly what our scanning is built to catch. We scan every app automatically before publish and offer a deeper SAST scan, both free for all users. When we flag findings, users can select “Fix” and Lovable will help resolve them. They can also enable auto-fix, which resolves security findings in the background, and block publishing entirely when there are critical findings.When an app has end users, security is a key part of the product. That’s why we keep investing in making security tools better and easier to use, taking on as much of the security load as we can and fixing more issues automatically.I personally believe that making security accessible is what leads to making software accessible. We’re committed to both.You can read more about our approach: https://lovable.dev/blog/find-it-fix-it-ship-it"
         ]
       }
     },
@@ -44,13 +44,13 @@
       "source": "Hacker News",
       "published_at": "2026-11-14T13:43:28+00:00",
       "summary": "KDE: The documentary [video]",
-      "score": 397,
-      "comments": 87,
+      "score": 437,
+      "comments": 94,
       "discussion_url": "https://news.ycombinator.com/item?id=50496976",
       "extra": {
         "top_comments": [
           "Total KDE fan and that's all I run at home. It's an interesting study also in desktop environment and software written in C++ and just how hard it is to get something that works for most people. Mistakes, corrections, building the basic blocks like Qt in the early days and keeping a bunch of people with differing cultures / tastes / backgrounds/needs motivated to make it better every day - fascinating achievement.Thank you KDE folks - I contribute in terms of bug reports and attempts at fixes sometimes but this time I am signing up for a monthly donation - I encourage people to do what they can to keep a good thing going! https://kde.org/donate/",
-          "I am a bit prod of having seen the original post looking for volunteers to build a Kool Desktop Environment. I was obsessively reading Usenet groups at the time. And I remember there were quite early betas published, I did not run them at first, but I remember much enthusiasm about it. So I feel familiar with the beginnings although I never participated in the project development-wise. All the way up to KDE 4 I was quite close to the project as a user. But since KDE 4 was so unstable and buggy, I left it around that time. This is also around the time when the documentary makes a big jump ahead chronologically.I feel the documentary explains less what happened the last 10-15 years. I recall Trolltech and Qt underwent a series of acquisitions. How is KDE and Qt developed now? Who are the main contributors and sponsors? Any big backers? This information I felt missing.",
+          "KDE is amazing. Outstanding performance, outstanding design, and endlessly configurable. But the most amazing thing of all is that you've achieved this while competing against teams like Microsoft's or Apple's, which spend millions of euros and are made up of thousands of people.Congratulations, team. Here's to 30 more years.",
           "KDE is how desktops should be. 'The Year of the Linux' is NOW, a few years ago. Linux and KDE have given me not only freedom over my own hardware, but freedom over how I interact with my desktops. Once you know the shortcuts, things become so much more fun. Much love to the KDE team.Linux life, yo."
         ]
       }
@@ -62,14 +62,14 @@
       "source": "Hacker News",
       "published_at": "2026-11-14T22:26:30+00:00",
       "summary": "Nvidia deliberately kept GPU prices high through circular financing deals",
-      "score": 238,
-      "comments": 129,
+      "score": 412,
+      "comments": 204,
       "discussion_url": "https://news.ycombinator.com/item?id=50501631",
       "extra": {
         "top_comments": [
           "If the price of the RTX 6000 (96gb blackwell gpu) drops to $2000 (original MSRP $8000, currently $16,000 usd due to \"scarcity\") then, all of a sudden, \"we have ai at home\" becomes real and why would you ever pay for a subscription for your company/family when you can run Qwen Flash Next (which runs great on consumer GPU via software like Strata) forever for free?Engineering types and power users need not apply,but For Everyone Else, the \"normies\", Qwen Flash Next is probably \"640k is enough for anyone\" territory.IPO, valuation etc depend heavily on frontier, or \"good enough\" AI to need to run on commercial grade GPUs. If Qwen Flash Next is good enough and runs on a $2000 GPU, why would you pay $20/30/100/200 per month in perpetuity?I wouldn't pick Qwen Flash Next to add kernel namespacing and cgroups v2 to my custom OS kernel, but it will happily implement the Plan.md that Fable 5.2 wrote for a dollar.",
-          "Not speaking about the possible knowledge of smuggling in contravention of law, marital infidelity, and possibility getting mixed up with an intelligence agent, but I don't see the circular financing thing as a problem. Maybe I'm misinformed.But weren't they were investing money in companies to help them grow and in turn buy more of their product. Of course Nvidia wants to stimulate demand of their product. I don't think this was nefarious. There is no free lunch, the risk of them never getting that money back is real with a lot of these pie in the sky AI companies. How is this anticompetitive? It's all of these SPVs that meta, google, and others are using that I think needs to be investigated and punished by wall street.If you think that's wrong, USE YOUR WORDS, I'm open to reason. Down voting with no response or making jeers is not effective communication.",
-          "We had a huge thread about this yesterdayNvidia allegedly engineered scarcity by funding AI startups to buy its GPUs (techpowerup.com)https://news.ycombinator.com/item?id=50493251"
+          "We had a huge thread about this yesterdayNvidia allegedly engineered scarcity by funding AI startups to buy its GPUs (techpowerup.com)https://news.ycombinator.com/item?id=50493251",
+          "Not speaking about the possible knowledge of smuggling in contravention of law, marital infidelity, and possibility getting mixed up with an intelligence agent, but I don't see the circular financing thing as a problem. Maybe I'm misinformed.But weren't they were investing money in companies to help them grow and in turn buy more of their product. Of course Nvidia wants to stimulate demand of their product. I don't think this was nefarious. There is no free lunch, the risk of them never getting that money back is real with a lot of these pie in the sky AI companies. How is this anticompetitive? It's all of these SPVs that meta, google, and others are using that I think needs to be investigated and punished by wall street.If you think that's wrong, USE YOUR WORDS, I'm open to reason. Down voting with no response or making jeers is not effective communication."
         ]
       }
     },
@@ -80,8 +80,8 @@
       "source": "Hacker News",
       "published_at": "2026-11-14T17:45:19+00:00",
       "summary": "A family tree of software job titles",
-      "score": 225,
-      "comments": 110,
+      "score": 275,
+      "comments": 133,
       "discussion_url": "https://news.ycombinator.com/item?id=50499038",
       "extra": {
         "top_comments": [
@@ -98,8 +98,8 @@
       "source": "Hacker News",
       "published_at": "2026-11-14T15:40:52+00:00",
       "summary": "PyPI's redesigned project pages with clearer security signals are now live",
-      "score": 214,
-      "comments": 94,
+      "score": 230,
+      "comments": 99,
       "discussion_url": "https://news.ycombinator.com/item?id=50497892",
       "extra": {
         "top_comments": [
@@ -110,20 +110,20 @@
       }
     },
     {
-      "id": "50499723",
-      "title": "LinkedIn, Monster take down over 1000 fake job postings after CBC investigation",
-      "url": "https://www.cbc.ca/news/canada/linkedin-monster-take-down-over-1-000-fake-job-postings-after-cbc-investigation-9.7415379",
+      "id": "50496051",
+      "title": "Project Zero will disclose vulnerabilities 90 days after reporting",
+      "url": "https://projectzero.google/2026/11/disclosure-policy.html",
       "source": "Hacker News",
-      "published_at": "2026-11-14T18:56:47+00:00",
-      "summary": "LinkedIn, Monster take down over 1000 fake job postings after CBC investigation",
-      "score": 208,
-      "comments": 119,
-      "discussion_url": "https://news.ycombinator.com/item?id=50499723",
+      "published_at": "2026-11-14T11:13:17+00:00",
+      "summary": "Project Zero will disclose vulnerabilities 90 days after reporting",
+      "score": 225,
+      "comments": 87,
+      "discussion_url": "https://news.ycombinator.com/item?id=50496051",
       "extra": {
         "top_comments": [
-          "After that report from Reuters came out saying that 10% of META's revenue comes from ads pushing scams and prohibited products I'm starting to think a very large chunk of the internet (and national economy) basically runs on scamming people.And that's not even considering perfectly legal \"scams\" like shitcoin pumps and politicians awarding shady contracts to buisness people who donated to them without a technical bribe happening. I would love to know how much of the actual economy is above-board business and how much isn't, but the older I get the larger the \"isn't\" seems to grow. Is the scam-economy 1% of all real financial transations? 5%? 10%? 20%? I'm honestly not sure.",
-          "I got one of those many years ago when I was in college. I desperately needed money, so I found a job listing on Craigslist, sent my resume, got a call back, we agreed on the in-person time and place, it was neat.I show up at a building 2 blocks from school, a random tenant tells me to form a line by the door that was locked. I was confused because I was the only one there. A second person came in, joined the line. Then a third, fourth, fifth. We were a crowd, standing in front of a door, where I thought I'd interview for a entry level job in tech.When the door opened and the person on the other side greeted us and a good number of people immediately left. More luck for me to get this job. But turns out, it was going to be a group interview. In fact, not exactly an interview. It was a pitch. And a few lucky ones would have the privilege to sell high tech knives. All we had to do was buy the first batch of knives for something like $300.",
-          "Semi-related personal story:I took over an abandoned daytrading sub on Reddit. I think when I took over it had something like 30k weekly visitors.It basically had no rules, anyone could post whatever they wanted. It was mostly ads, funnels to some apps or YouTube videos, courses, private chat groups, and so on.I decided to do a cleanup and ban all the cross posts, obvious AI posts, bots, and ads. And it killed the entire sub, it had zero legitimate posts after.Makes me wonder how much of LinkedIn is actually just fake jobs, either MLM or ghost jobs, etc."
+          "Starting today, our policy is “Full 90”, i.e. vulnerabilities will be disclosed 90 days after they are reported to the vendor.On February 2, 2027, we will move to a “Full 60” policy where vulnerabilities are disclosed after 60 days.On January 3, 2028, we will move to a “Full 30” policy where vulnerabilities are disclosed after 30 days.",
+          "Ubuntu will need a LOT more time than that.",
+          "Unrelated, but didn't realise .google was a TLD."
         ]
       }
     },
@@ -134,14 +134,14 @@
       "source": "Hacker News",
       "published_at": "2026-11-14T15:04:15+00:00",
       "summary": "Show HN: DeepSeek V3 in ~200 lines of pure Jax",
-      "score": 186,
-      "comments": 9,
+      "score": 219,
+      "comments": 16,
       "discussion_url": "https://news.ycombinator.com/item?id=50497589",
       "extra": {
         "top_comments": [
+          "I am just starting Raschka's book to write an llm from scratch in C++ with zero dependencies with avx-512 on a 9950x, and then I'd like to go through the literature for more advanced stuff.I don't know what Jax is exactly but while I am aware that the algorithm implementation is not something terribly complicated, 200 lines still sounds impressive.If anyone wants to share any tips, they're welcome.",
           "I love this, there is nothing like recreating a model from first principles, plus makes me want to revisit Jax again (I'll do it after I spend enough time with Zig). Thanks for this!",
-          "Post like these always drives a motivation to understand how inference or what OP did.For folks who are more familiar in this space, is there a good road map how to build and understand the intuition behind this? I’m comfortable in Java and Python and do vanilla SWE work.",
-          "> to asking a language model to create a 3D end-to-end working model for me to capture the nuancesLove this! Yes, having a visual of the system makes it a lot easier to reason about and understandI wish all AI models came with interactive animated workflows of their architecture> so I wanted it to be different just for the sake of it and used various books by…That’s cool and great for your own project. At the same time it helps to use datasets that others have used, because then you can compare results more directlyExcellent write up, I really appreciate all the detail and the sample outputs at the end. Excited to see what I could apply for this to the small <10M models I’ve been training"
+          "Thanks for this! I've been trying to get local training working on Fedora with ROCm for a while now, and this is the first project that ran end-to-end on my RX 7600 XT 16GB.The whole reason for me buying the card was to play around with deep learning and models, so it's awesome to have a stepping off point now!No CUDA meant ROCm surprisingly just worked with JAX.Gotchas for anyone with a 7600 XT: it needed two env vars, HSA_OVERRIDE_GFX_VERSION=11.0.0 because JAX's plugin rejects gfx1102, and XLA_FLAGS=--xla_gpu_enable_triton_gemm=false to stop a GPU hang.I'm on Fedora 45 with the in-kernel amdgpu driver, rootless podman and AMD's rocm/jax image (ROCm 10.1, JAX 0.11.1). Nothing ROCm is installed on the host, which is nice.Container setup is in a PR if it helps anyone: https://github.com/Vaibhaav-Tiwari/deepseek-v3-jax/pull/1"
         ]
       }
     }
