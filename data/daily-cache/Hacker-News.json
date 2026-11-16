@@ -1,39 +1,21 @@
 {
-  "cached_at": "2026-11-16T11:00:25.823495+08:00",
+  "cached_at": "2026-11-16T14:59:59.819192+08:00",
   "articles": [
     {
-      "id": "50509411",
-      "title": "Microsoft 365 outage leads to chlorine gas poisoning of 15 hotel guests",
-      "url": "https://www1.wdr.de/nrw/rheinland/rhein-erft-kreis/technischer-defekt-chlor-phantasialand-100.html",
+      "id": "50513215",
+      "title": "Qwen4-Max",
+      "url": "https://qwen.ai/blog?id=qwen4-max",
       "source": "Hacker News",
-      "published_at": "2026-11-15T18:36:10+00:00",
-      "summary": "Microsoft 365 outage leads to chlorine gas poisoning of 15 hotel guests",
-      "score": 421,
-      "comments": 189,
-      "discussion_url": "https://news.ycombinator.com/item?id=50509411",
+      "published_at": "2026-11-16T02:14:44+00:00",
+      "summary": "Qwen4-Max",
+      "score": 362,
+      "comments": 121,
+      "discussion_url": "https://news.ycombinator.com/item?id=50513215",
       "extra": {
         "top_comments": [
-          "I personally operate a fairly advanced closed-loop chlorination system, and this is beyond screwed up.These systems can easily fail, and they tend to fail in a way that causes them to measure low or zero chlorine and thus overdispense chlorine. More below on why.First, this means that an operator must always ensure safety, both against excessive chlorine and against insufficient chlorine. In a commercial context, that means that a real human (or maybe a totally different sensor design, e.g. a colorimetric sensor) need to measure the pool chlorine level, preferably with a high quality titration (drop test) every day before opening the pool. They should probably record the result in pen on water resistant paper, but this part is icing on the cake.Second, hoping that an email gets noticed is ridiculous. If you do not have positive confirmation that the pool is safe to open, don’t open it.Third, the systems should be sized so that they cannot overdose quickly. The maximum dispensing rate should be such that hours of continuous operation would be required to reach an uncomfortable level, let alone a dangerous level. (Hot tubs are sort of an exception here.)Fourth, everyone should be using a reasonable amount of CYA in their pool. Even at a lowish level of 30ppm CYA it takes a lot of chlorine to become dangerous unless the operator has also lost control of pH. I realize that some codes are confused about this.Fifth, chlorine is smelly. Someone should have noticed, even just casually. Admittedly, lots of swimmers may be conditioned to stinky pools, and checking for safety isn’t their job. But the staff should notice.Sixth, the systems I’ve seen beep when there’s an alert. It’s easy to add flashing lights, too. (In fact, the system I’m familiar with automatically shuts down if it feeds for more than X minutes without reaching the setpoint, and you cannot turn this feature off. You can, however, defeat it by switching the power to the whole controller.)—- sensors —-Actual free chlorine sensors intended for pools use an amperometric probe immersed in iodide solution or gel, separated from the pool water by a fancy membrane. Free chlorine oxidizes iodide to iodine, and the sensor measures the iodine concentration. If the membrane fails (or general wear and tear or excessive pressure swings) cause the iodide to be lost, then the chlorine can’t react and the sensor reads zero (or low if there’s tiny bit of iodide left).Interestingly, these sensors are rather expensive devices that appear to mostly come from France and Germany. The Chinese vendors seem to be rebranding European parts (!), and the major US vendor is very clearly reselling a French company’s product.There are some vendors who sell a cheap (or absurdly marked up) potentiometric ORP-based closed-loop system. In my considered opinion, these are worse than useless.",
-          "This is 100% fault of the hotel, not of Microsoft. It’s unacceptable that the communications regarding such a dangerous thing totally rely on email, without any backup or double check.",
-          "I'm not even going to read the article. If your hotel depends on some cloud service to prevent chlorine gas poisoning you're doing something terribly wrong. Full stop. I don't know anything about the laws in Germany but this is dangerously close to libel in the US.Disclaimer: I work in Azure, this is not a defense of the outage and I didn't read the submitted article."
-        ]
-      }
-    },
-    {
-      "id": "50511395",
-      "title": "Old Bitly links are being hijacked",
-      "url": "https://ransomnews.com/burger-king-tweet-bitly-link-hijack-2026/",
-      "source": "Hacker News",
-      "published_at": "2026-11-15T22:11:43+00:00",
-      "summary": "Old Bitly links are being hijacked",
-      "score": 197,
-      "comments": 101,
-      "discussion_url": "https://news.ycombinator.com/item?id=50511395",
-      "extra": {
-        "top_comments": [
-          "Link shorteners that are outsourced are in my humble opinion an order of magnitude worse for the internet than they would be if in-house.The way they accrete URLs over time, and then time passes, and anything can happen (your account gets deactivated, shortener company goes out of business / experiences catastrophic data loss / etc) is just asking for permanently broken links which may be unfixable.Especially when you consider how these services can, unless they're spammy enough to inject gross interstitial ad pages, make 0 revenue from you if you aren't currently paying for a premium service, it's easy to see how they can go under.Note: Clearly with the kind of ephemeral crap these 2011 tweets were, I'm assuming the 'attacker' publicized \"Hey guys look at these funny tweets\" because obviously who cares about 15 year old McDonalds marketing messages. But in general it's sad to see these still being used. To be fair to bitly, they do offer the ability to use your own domain at least, but sadly, with a service targeted mainly at marketing departments, usually they don't have the ability to work with the in-house tech team(s) to even set up DNS.",
-          "I think the biggest surprise to me is that a URL shortener makes enough money to have a Trust and Safety team. I assumed it was just a side project a person or two ran.",
-          "Short anecdote: Famous author (with huge fanbase!) used a Bit.ly link in one of their books (the narrative needed a fake tweet with fake link). Editor didn't notice/care and never registered it. I noticed on release date, caught it and redirected it to a website that referenced the book, a few people tweet about it thinking the author used the link on purpose!"
+          "It scores a 43 on Artificial Analysis with an average cost of $3.27 [1]. For reference, GPT-6.1 Sol (medium) gets a 46 with an average of $0.36.[1]: https://artificialanalysis.ai/models/qwen4-max",
+          "Qwen4-Max pelicans at four reasoning efforts (none, low, high, xhigh): https://tools.simonwillison.net/markdown-svg-renderer?url=ht...For comparison, here's one I got from Qwen3.8 Max (at default reasoning effort): https://simonwillison.net/2026/Jul/20/afraid-of-chinese-mode...This inspired me to re-run pelicans through 3.8 Max - but OpenRouter has qwen3.8-max-prime and qwen3.8-max-0902 - prime is twice the price and faster - so I went with the 0902 one.Turns out Qwen4-Max has a none setting, but 3.8 Max didn't allow disabling reasoning - you had to pick from these five levels instead: minimal, low, medium, high, xhigh.Here are those 3.8 Max 0902 pelicans: https://tools.simonwillison.net/markdown-svg-renderer?url=ht... - they're mostly not as good as 4, but I prefer the 3.8 xhigh one.",
+          "I hope they are able to serve 4 faster. Qwen 3.8 is a great model but I’ve regretted including it in the battle system for opencode [1] we have been building because it scores so low.And it’s a shame because the only reason it scores so low is that it’s slooooow. (Like 30 tokens per second vs opus near 80.) If you exclude voting, Qwen 3.8 does well.(We allow early voting contrary to Arena.ai because I think it makes sense for agents, where it doesn’t for chat. This means our data takes speed into account.)Also, it would be ideal if they served this with third parties. Part of the slowness with 3.8 is just not a lot of providers. Their open source version is much faster, but we couldn’t include it because it doesn’t handle images (another own goal by Alibaba).[1]: https://agentduel.com/leaderboard"
         ]
       }
     },
@@ -44,8 +26,8 @@
       "source": "Hacker News",
       "published_at": "2026-11-15T19:26:22+00:00",
       "summary": "Protomaps: Self-hosting map tiles has gotten cheap and easy",
-      "score": 197,
-      "comments": 46,
+      "score": 274,
+      "comments": 52,
       "discussion_url": "https://news.ycombinator.com/item?id=50509837",
       "extra": {
         "top_comments": [
@@ -56,20 +38,38 @@
       }
     },
     {
-      "id": "50509308",
-      "title": "A short explainer on how El Niño works [video]",
-      "url": "https://www.youtube.com/watch?v=7_JF3etiAv8",
+      "id": "50513160",
+      "title": "Universal XSS in uBlock Origin from website-driven element picker",
+      "url": "https://iter.ca/post/ubo-uxss/",
       "source": "Hacker News",
-      "published_at": "2026-11-15T18:23:21+00:00",
-      "summary": "A short explainer on how El Niño works [video]",
-      "score": 184,
-      "comments": 84,
-      "discussion_url": "https://news.ycombinator.com/item?id=50509308",
+      "published_at": "2026-11-16T02:04:48+00:00",
+      "summary": "Universal XSS in uBlock Origin from website-driven element picker",
+      "score": 260,
+      "comments": 67,
+      "discussion_url": "https://news.ycombinator.com/item?id=50513160",
       "extra": {
         "top_comments": [
-          "Any time this stuff comes up it's important to understand that this el Nino is occuring in the context of a global climate that is warmer than any time in the last 125,000 years. The risks inherent to weather and climate are growing all the time.",
-          "I find the Climate Reanalyzer graphs very instructive - at a glance one can see how extreme the situation is:https://climatereanalyzer.org/clim/sst_daily",
-          "Here is one is French, very scientifically sourced, by a searcher of hugging face.https://youtu.be/DutKGuQu4a0France isn't very much affected, so it's not focused on any country."
+          "Really love the \"I wrote all the prose, gpt wrote the POC\" disclaimer, I would love to see more of those kinds of signals on human authored content.",
+          "I never really loved how extensions have to put their interfaces in the website's DOM if they want to be able to work with the page's elements, like this selector, or a password manager's suggested logins. Especially in the password manager's scenario, it could leak what accounts you have to a given website to that website itself, if the page is looking for new DOM elements. Not exactly a showstopper vulnerability, but it's not a good thing.",
+          "For those checking (I still had the vulnerable version), you should be at these versions or higher:uBlock Origin: 1.75.4uBO Lite: 2026.1110.1816"
+        ]
+      }
+    },
+    {
+      "id": "50511395",
+      "title": "Old Bitly links are being hijacked",
+      "url": "https://ransomnews.com/burger-king-tweet-bitly-link-hijack-2026/",
+      "source": "Hacker News",
+      "published_at": "2026-11-15T22:11:43+00:00",
+      "summary": "Old Bitly links are being hijacked",
+      "score": 249,
+      "comments": 133,
+      "discussion_url": "https://news.ycombinator.com/item?id=50511395",
+      "extra": {
+        "top_comments": [
+          "Link shorteners that are outsourced are in my humble opinion an order of magnitude worse for the internet than they would be if in-house.The way they accrete URLs over time, and then time passes, and anything can happen (your account gets deactivated, shortener company goes out of business / experiences catastrophic data loss / etc) is just asking for permanently broken links which may be unfixable.Especially when you consider how these services can, unless they're spammy enough to inject gross interstitial ad pages, make 0 revenue from you if you aren't currently paying for a premium service, it's easy to see how they can go under.Note: Clearly with the kind of ephemeral crap these 2011 tweets were, I'm assuming the 'attacker' publicized \"Hey guys look at these funny tweets\" because obviously who cares about 15 year old McDonalds marketing messages. But in general it's sad to see these still being used. To be fair to bitly, they do offer the ability to use your own domain at least, but sadly, with a service targeted mainly at marketing departments, usually they don't have the ability to work with the in-house tech team(s) to even set up DNS.",
+          "Short anecdote: Famous author (with huge fanbase!) used a Bit.ly link in one of their books (the narrative needed a fake tweet with fake link). Editor didn't notice/care and never registered it. I noticed on release date, caught it and redirected it to a website that referenced the book, a few people tweet about it thinking the author used the link on purpose!",
+          "I think the biggest surprise to me is that a URL shortener makes enough money to have a Trust and Safety team. I assumed it was just a side project a person or two ran."
         ]
       }
     },
@@ -80,32 +80,32 @@
       "source": "Hacker News",
       "published_at": "2026-11-15T19:42:13+00:00",
       "summary": "Handwriting, as a Font",
-      "score": 145,
-      "comments": 39,
+      "score": 222,
+      "comments": 45,
       "discussion_url": "https://news.ycombinator.com/item?id=50509972",
       "extra": {
         "top_comments": [
+          "Using this to capture my young children's handwriting before they get too old and their handwriting improves. Thank you.",
           "This is really nice. Unfortunately it doesn't have accented characters. Thus I can't write my name using that font, which is a key thing I'd use \"my\" font for.I understand they don't want to go through all of Unicode, but a way to add custom letters would be nice.",
-          "Me to Claude: If I give you some carefully written pages of my cursive handwriting, can you make me a font of my own handwriting that I can then install on my windows machine? And can you make all the different letters connect to each other correctly? I know that will require some changes to my connection points.Claude: Yes, I can do that, including the connections. I'd build it in my workspace by tracing your scans into vector outlines, then compile an installable .otf/.ttf file. Windows installs it with a right-click and \"Install.\"How the connections would work: I'd fix two connection heights…",
           "It needs samples, I'm not going to get out my wacom to do all that without seeing what the results will look like."
         ]
       }
     },
     {
-      "id": "50510296",
-      "title": "WebGL Flight Simulator with seed generated terrain",
-      "url": "https://baron.by.dai.studio/",
+      "id": "50509308",
+      "title": "A short explainer on how El Niño works [video]",
+      "url": "https://www.youtube.com/watch?v=7_JF3etiAv8",
       "source": "Hacker News",
-      "published_at": "2026-11-15T20:20:05+00:00",
-      "summary": "WebGL Flight Simulator with seed generated terrain",
-      "score": 96,
-      "comments": 12,
-      "discussion_url": "https://news.ycombinator.com/item?id=50510296",
+      "published_at": "2026-11-15T18:23:21+00:00",
+      "summary": "A short explainer on how El Niño works [video]",
+      "score": 217,
+      "comments": 93,
+      "discussion_url": "https://news.ycombinator.com/item?id=50509308",
       "extra": {
         "top_comments": [
-          "How funny, I have been vibe coding a little paper plane folding and flying simulator this weekend and the agent picked a very similar visual stylehttps://www.rossng.eu/paper-flight/",
-          "I think the interesting to know would be how much it cost to build and how much prompting was necessary. Overall it doesn't look like anything that I wouldn't be able to get by just prompting claude in claude code",
-          "Make rotating phone dialog skipable."
+          "Any time this stuff comes up it's important to understand that this el Nino is occuring in the context of a global climate that is warmer than any time in the last 125,000 years. The risks inherent to weather and climate are growing all the time.",
+          "I find the Climate Reanalyzer graphs very instructive - at a glance one can see how extreme the situation is:https://climatereanalyzer.org/clim/sst_daily",
+          "Here is one is French, very scientifically sourced, by a searcher of hugging face.https://youtu.be/DutKGuQu4a0France isn't very much affected, so it's not focused on any country."
         ]
       }
     },
@@ -116,14 +116,14 @@
       "source": "Hacker News",
       "published_at": "2026-11-15T23:55:55+00:00",
       "summary": "What's Next for Nvidia?",
-      "score": 87,
-      "comments": 91,
+      "score": 192,
+      "comments": 251,
       "discussion_url": "https://news.ycombinator.com/item?id=50512235",
       "extra": {
         "top_comments": [
           "What made Steve Jobs great was that he would rather have Apple cannibalize its successful product lines than fall prey to a competitor. You can see this pattern with the iPod. The iPod disrupted itself many, many times. The iPod Mini then the iPod Nano. Then the iPod shuffle as the answer to the race ot the bottom.The biggest moment was partnering with Motorola as phones started becoming more capable and flash memory got cheaper to bring music to phones, which was then the prelude to the iPhone.The iPhone killed the iPod. Most companies would have never created the product, because it would have killed their golden goose, but Jobs did.Just like he went all in on the iPad which had the potential to kill the cheap student Mac.If Nvidia's next CEO is smart, they'd buy up a bunch of these companies that \"burn\" weights to silicon, make the process better, and then sell that as a service. Let it cannibalize the sales of their products. It's better for them to do it to themselves than their competitors.",
           "As the author mentions, the biggest threat is from customers becoming competitors. The problem space is stabilizing and this allows the biggest buyers of GPUs to work with companies like broadcom to make their own chips. Thanks to agents, they can also spin up their own abstraction layers and debug tools. CUDA is becoming less relevant, and the rate at which that is happening is about to go parabolic.Surely Nvidia won’t stand still and will continue to compete, but the margins will collapse along with volumes.AMD will probably suffer less, relatively speaking. Their failure to invest in software finally seems to be paying off now that LLMs can pick up their slack. But the growth currently priced in to their stock will never materialize and they’ll be seen as arriving just in time for the lights to go out.",
-          "Jensen is a big part of the Nvidia brand. Surely the board isn't that stupid to risk losing the brand because of adultery? Why didn't Jensen fight to keep his job? There has to be something we do not know..."
+          "JIC people don't know the site's author Steve Blank is this Steve Blank https://en.wikipedia.org/wiki/Steve_BlankThe Startup Owner's Manual and The Four Steps to the Epiphany are fine books ... Certainly somewhere in my top 40 startup books you should take the time to understand. Like Geoffrey Moore, Ries & Trout, Clayton Christensen, somewhere in that group.You'll be in for a commitment though.A lot of popular \"must read\" business books are just folksy fluff ... blank is the opposite."
         ]
       }
     },
@@ -134,14 +134,14 @@
       "source": "Hacker News",
       "published_at": "2026-11-15T23:00:11+00:00",
       "summary": "Preserving 30 years of Salon journalism",
-      "score": 83,
-      "comments": 23,
+      "score": 134,
+      "comments": 37,
       "discussion_url": "https://news.ycombinator.com/item?id=50511806",
       "extra": {
         "top_comments": [
           "I've always disliked Salon, but, even so, this is exactly why archive.org is awesome and deserves massive kudos! They save even the stuff that I don't like :)It's not too late to donate! https://archive.org/donate",
           "Closing down discussed the other day:Goodbye from Salon (658 points, 288 comments)https://news.ycombinator.com/item?id=50383739My own reflection was remembering Salon for cavalierly disposing of its brilliant International Issues subforum, then later the whole of TableTalk with no effort to assist preservation.",
-          "Really glad this is being preserved. There’s so much internet history in those archives. Whatever people may think of Salon, keeping an online publication going for 31 years is an achievement in itself, and it’s good to know people will still be able to explore what it left behind."
+          "Few may remember this, but there was thing called Salon Personals, which for a fleeting moment, was one the best online dating communities that ever was."
         ]
       }
     }
