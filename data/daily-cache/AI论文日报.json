@@ -1,134 +1,116 @@
 {
-  "cached_at": "2026-11-15T14:55:43.037474+08:00",
+  "cached_at": "2026-11-16T11:00:25.823495+08:00",
   "articles": [
     {
-      "id": "2611.17334",
-      "title": "Unbundling Multimodal Vision Encoding",
-      "url": "https://arxiv.org/abs/2611.17334v1",
+      "id": "2611.17900",
+      "title": "AmbiSteer: Selectively Eliciting Ambiguity-Aware Responses in Vision-Language Models",
+      "url": "https://arxiv.org/abs/2611.17900v1",
       "source": "arXiv",
-      "published_at": "2026-11-12T18:59:54+00:00",
-      "summary": "How multimodal language models should encode visual input remains up for debate. Most models use a pretrained vision encoder, while some recent recipes train the encoder from scratch with the language model or remove it entirely. Vision encoders bundle together three design choices: a visual prior from upstream pretraining, dedicated vision capacity, and pre-fusion placement of that capacity (i.e., before the multimodal backbone). Because published models also differ in data, architecture, and compute, comparing them cannot isolate the effect of each choice. We disentangle these choices via a controlled framework where we pretrain all models from scratch on common data and compare them on visual question answering and language benchmarks at matched lifetime compute. We find that the visual prior is not necessary; an encoder trained jointly from scratch is on par with a pretrained one, without a separate training stage. What matters instead is dedicated vision capacity: an encoder-free model trails on visual understanding even when its backbone is enlarged by the encoder's parameter count. Yet that capacity need not precede multimodal fusion, as vision-only modules added in-fusion to early backbone layers perform comparably to a pre-fusion encoder and can lower time to first token. These results also hold across backbone sizes, when encoder pretraining is treated as free, and when starting from a pretrained language model. Overall, our findings favor dedicated vision capacity trained jointly with the backbone and placed early within it.",
+      "published_at": "2026-11-13T08:40:07+00:00",
+      "summary": "Vision-language models (VLMs) often exhibit overconfidence, providing firm answers even when visual evidence is insufficient. A prominent case is referential ambiguity in Visual Question Answering (VQA), where multiple entities in an image are plausible referents of a question. Addressing such cases requires recognizing when ambiguity is present: ambiguous questions can be handled by asking for clarification or enumerating plausible referents, while unambiguous questions should receive a direct answer. Current VLMs struggle with this distinction, often defaulting to a single interpretation. To investigate whether activation steering can serve as an inference-time mechanism to elicit such behaviors, we introduce AmbiSteer, a lightweight framework to selectively elicit ambiguity-aware behavior. Across three VLMs, we find that steering alone has limited and model-dependent effects, while prompting is generally more effective. Combining prompting and steering substantially increases clarification and enumeration behaviors, but also elicits them on unambiguous cases. AmbiSteer addresses this using a linear classifier to predict input ambiguity and condition the steering direction accordingly, increasing the proportion of inputs handled appropriately from 59.0% to 77.0% on average across models. Our work sets the ground for lightweight approaches to reduce model overconfidence in uncertain multimodal settings.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Ellis Brown",
-          "Chris Hoang",
-          "Shengyi Qian",
-          "Shang-Wen Li",
-          "Mike Lewis",
-          "Marjan Ghazvininejad",
-          "Luke Zettlemoyer",
-          "Lucas Beyer",
-          "Mengye Ren",
-          "Jakob Verbeek",
-          "Saining Xie",
-          "Hu Xu"
+          "Monica Riedler",
+          "Samuele Antonelli",
+          "Barbara Plank",
+          "Raffaella Bernardi"
         ],
         "categories": [
           "cs.CV",
-          "cs.LG"
+          "cs.CL"
         ]
       }
     },
     {
-      "id": "2611.17332",
-      "title": "ArchSpace: Recording, Reviewing, and Referencing LLM Architecture Research",
-      "url": "https://arxiv.org/abs/2611.17332v1",
+      "id": "2611.17899",
+      "title": "More Genes, Faster Inference: Efficient Large-Panel Spatial Transcriptomics Prediction from Histology",
+      "url": "https://arxiv.org/abs/2611.17899v1",
       "source": "arXiv",
-      "published_at": "2026-11-12T18:59:52+00:00",
-      "summary": "Model architecture shapes the scaling behavior, training efficiency, and inference cost of LLMs, making it a central focus of both industry and academia. In industry, teams such as those behind DeepSeek, Qwen, and Kimi routinely introduce architectural innovations, yet public reports rarely document which ideas succeeded, which were abandoned, and why. In academia, limited compute and inconsistent baselines often restrict evaluations to small-scale, single-point comparisons, making it difficult to establish whether improvements hold at larger scales or translate into broader impact. ArchSpace addresses both gaps as a public platform for Recording, Reviewing, and Referencing Architecture Researc}: each proposal is recorded with its experiments and reasoning, reviewed by the community, and referenced by later work. To evaluate ideas before costly large-scale training, ArchSpace leverages scaling laws to predict model loss at larger scales from smaller experiments, a practice widely adopted in industry. We provide initial references that make the platform usable: Qwen3.5 and OLMo3 baselines, fitted scaling laws, and a reusable training recipe. Ideas validated through this review can in turn become new baselines, and ArchSpace thereby aims to broaden the range of ideas that shape the next generation of models.",
+      "published_at": "2026-11-13T08:35:27+00:00",
+      "summary": "Spatial transcriptomics (ST) prediction from histology aims to infer spatially resolved gene expression profiles directly from tissue images. This is a challenging problem that is currently often addressed with complicated model architectures, additional inputs, and complicated training procedures, while remaining limited to fixed, small gene panels. This raises a natural question: Is there an efficient method for large-panel ST prediction? Here, we present GeneFlow, a simpler yet effective framework for large-scale spatial gene expression prediction that unifies flow-matching generative modeling with structured multimodal fusion. Specifically, GeneFlow first encodes both histological morphology and cross-gene interactions in spatial spots through histology and gene tokenizers. The model directly predicts spatial gene expression, rather than an intermediate velocity field, while being trained with a velocity-based flow-matching objective. We show that, even without relying on heavy generative pipelines, GeneFlow achieves state-of-the-art performance across multiple ST benchmarks, with up to 56.8% gains in 1,000-gene prediction. Extensive experiments further show that GeneFlow produces biologically meaningful spot profiles while reducing computational cost by orders of magnitude, thereby improving efficiency and scalability, particularly in clinical settings. We believe GeneFlow provides an opportunity for leveraging widely available histology images for downstream biological discovery. Code is available at: https://github.com/ZZhangsm/GeneFlow",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Jie Wang",
-          "Tong Zhu",
-          "JiaHao Kuang",
-          "Zhe Xu",
-          "Yunkai Chai",
-          "Dehong Zheng",
-          "Yu Cheng",
-          "Tao Ji",
-          "ZhouHan Lin",
-          "Qi Zhang",
-          "Bowen Zhou"
+          "Songming Zhang",
+          "Yuxiao Luo",
+          "Shifu Luo",
+          "Siran Chen",
+          "Shuquan Su",
+          "Jinyan Li"
         ],
         "categories": [
-          "cs.CL",
-          "cs.LG"
-        ]
-      }
-    },
-    {
-      "id": "2611.17329",
-      "title": "Internalizing Investment Mandates: A Neurosymbolic RL Approach to Portfolio Allocation",
-      "url": "https://arxiv.org/abs/2611.17329v1",
-      "source": "arXiv",
-      "published_at": "2026-11-12T18:59:37+00:00",
-      "summary": "Institutional portfolios operate under investment policy statements that specify asset allocation constraints, often conditioned on market regime information. Deep reinforcement learning has been shown to optimize financial performance but typically does not enforce rule compliance, making it unsuitable for real-world deployment. Existing neurosymbolic methods such as Probabilistic Logic Policy Gradient (PLPG) offer constraint-satisfying reinforcement learning (RL) via differentiable symbolic supervision but assume a finite, discrete action space. We present a PLPG-inspired continuous allocation method that estimates the probability that the policy's own executed action satisfies the investment mandate, using reparameterized Monte Carlo sampling, and adds it to the training objective. No post-hoc enforcement mechanism intercepts actions at inference time and compliance is learned by the agent. Audited directly on deterministic mean actions with no correction, the policy reduces violations of a six-rule regime-conditional mandate from 96-98% for unconstrained RL and 33.4% for a reward-penalty baseline to 4.8%, showing that a continuous-action neurosymbolic policy can substantially internalize a symbolic mandate.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Zeynep Yıldız",
-          "Satchit Chatterji",
-          "Ercan Atam",
-          "Erman Acar"
-        ],
-        "categories": [
-          "cs.LG"
-        ]
-      }
-    },
-    {
-      "id": "2611.17323",
-      "title": "AgentSSL: Can MLE Agents Leverage Unlabeled Data?",
-      "url": "https://arxiv.org/abs/2611.17323v1",
-      "source": "arXiv",
-      "published_at": "2026-11-12T18:59:06+00:00",
-      "summary": "Applying machine learning systems to new domains introduces bottlenecks in both labeled data acquisition and manual pipeline engineering. While recent MLE agents show promise in automating pipeline design, they have been studied almost exclusively in fully supervised settings, leaving them untested in realistic regimes where labeled data is scarce but unlabeled data is abundant. In this work, we introduce Agentic Semi-Supervised Learning (AgentSSL), framing SSL as a program search problem and studying how agents navigate this space under limited supervision. We find that even under weak feedback and matched compute, agents can synthesize code that combines and adapts established SSL techniques, exceeding the strongest human-engineered baselines in 8 of 12 settings by up to +21.8%. However, our results identify program selection as a critical bottleneck in AgentSSL, where performance drops by as much as 47% when selecting based on the agent's feedback metric. To systematically study this bottleneck, we introduce ProgramSelectBench, a large-scale benchmark with a combined total of 16,977 agent-generated and human-engineered SSL programs, and evaluate both unsupervised and active program selection methods. We further evaluate AgentSSL on real-world ecology detection tasks, highlighting the opportunities and challenges of transferring agent-discovered strategies beyond controlled benchmarks.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Ethan Lin",
-          "Akanksha Sarkar",
-          "Ziang Liu",
-          "Kristin Branson",
-          "Jennifer J. Sun"
-        ],
-        "categories": [
+          "cs.CV",
           "cs.AI",
-          "cs.LG"
+          "q-bio.QM"
         ]
       }
     },
     {
-      "id": "2611.17320",
-      "title": "Learning When Diffusion Language Models Should Regenerate",
-      "url": "https://arxiv.org/abs/2611.17320v1",
+      "id": "2611.17892",
+      "title": "Hierarchical Bayesian physics-augmented neural networks for populations of hyperelastic laws: specimen variability and uncertainty from scarce, noisy data",
+      "url": "https://arxiv.org/abs/2611.17892v1",
       "source": "arXiv",
-      "published_at": "2026-11-12T18:58:50+00:00",
-      "summary": "Remasking allows diffusion language models to revisit generated text, but effective correction requires knowing when and what to revise. Our diagnosis on Sudoku reveals two gaps. Hidden states contain error information that token confidence does not reliably expose, and remasking an isolated error usually reproduces it when the surrounding context remains fixed. These findings motivate DiVR , a verifier that predicts whether a partially generated sequence will reach a correct answer. Trained on the final correctness of the model's own trajectories, DiVR decides when to regenerate a block and which alternative to retain, while the generator itself stays unchanged. On five reasoning benchmarks with LLaDA-8B-Base, DiVR raises the average accuracy of the fine-tuned generator from 35.3\\% to 43.4\\% at $1.9$-$3.5\\times$ the cost of greedy decoding, above search baselines that use $3.8$-$7.4\\times$. It also complements post-training such as supervised fine-tuning and reinforcement learning, and generalizes to other generators, including Dream.",
+      "published_at": "2026-11-13T08:29:29+00:00",
+      "summary": "The hyperelastic law of a material such as soft tissue differs between specimens, and often only a few specimens can be tested. Physics-augmented neural networks (PANNs) learn such laws from data without a prescribed functional form while keeping them physically admissible, and Bayesian versions of related models quantify the uncertainty of the law of one specimen or of a pooled group of specimens. A pooled fit, however, attributes the differences between specimens to measurement noise or to uncertainty about a mean law, and neither describes a new specimen. We first develop a Bayesian PANN for one specimen, whose priors keep the learned law plausible for few, noisy data. We then extend it to a hierarchical Bayesian PANN, a nonlinear mixed-effects model in which all specimens share learned polyconvex features and each specimen is a draw from a population of laws. Features, specimens, and population are inferred jointly by variational inference, with a separate model of the measurement noise, so that the variability between specimens is not mistaken for noise, the population carries its own uncertainty, and every specimen drawn from it is polyconvex. The population predicts the response of new specimens with credible intervals, without data or from a partial test, and assigns them to cohorts with quantified uncertainty, all without a prescribed form of the law. On synthetic populations, it recovers the population from few specimens and predicts new specimens more reliably than three published methods. On Treloar's rubber and on healthy and aneurysmal aortas, it reaches the accuracy of a deterministic PANN and assigns no aorta specimen to the wrong cohort with confidence, although it underestimates the uncertainty of untested curves.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Minhae Oh",
-          "Jeonghye Kim",
-          "Jinwoo Koo",
-          "Yeongoon Kim",
-          "Jimin Seo",
-          "Minsik Seol",
-          "Jungwoo Lee"
+          "Vincent C. Scholz",
+          "Phaedon-Stelios Koutsourelakis"
         ],
         "categories": [
+          "cs.CE",
+          "cs.LG",
+          "stat.ML"
+        ]
+      }
+    },
+    {
+      "id": "2611.17886",
+      "title": "Quantum Graph Neural Networks: Architectures, Trainability, and Applications",
+      "url": "https://arxiv.org/abs/2611.17886v1",
+      "source": "arXiv",
+      "published_at": "2026-11-13T08:23:31+00:00",
+      "summary": "Quantum graph neural networks (QGNNs) apply parametrized quantum circuits to graph-structured data, with the aim of overcoming limits of classical graph neural networks in scalability, expressivity, and long-range information flow. Since the first Hamiltonian-based model in 2019, the field has produced many architectures, applications, and claims, but the evidence behind them has not been assessed systematically. This survey introduces a unified formalism that describes every QGNN as an encoder, a graph-conditioned circuit, observables, and an optional classical head, together with a circuit-level condition for permutation equivariance and a resource model for comparing costs. We organize the literature into five architecture families (convolutional, equivariant, message-passing and recurrent, Hamiltonian, and hybrid) and compare them by qubit cost, symmetry, scalability, and evidence. We then review symmetry and geometric inductive biases (permutation, rotation, and Lorentz), the results on expressivity, trainability, noise, and scalability, and applications in high-energy physics, chemistry, finance, healthcare, earth observation, and transportation. An audit of datasets and evaluation practices leads to a minimum reporting protocol. Our main finding is that the design space is rich and symmetry is the best-supported inductive bias, whereas the evidence remains thin: results are mostly simulated, on small graphs, at parity with classical models or with fewer parameters, and no advantage has yet been established on tasks over classical graph data. We identify five open challenges and a research agenda covering provable advantage, equivariant and geometric designs, fault-tolerant implementations, and shared benchmarks. The coverage extends through 2026 and emphasizes recent work.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Zeinab Sharifi",
+          "Hossein Shirazi"
+        ],
+        "categories": [
+          "cs.LG"
+        ]
+      }
+    },
+    {
+      "id": "2611.17883",
+      "title": "Securing Multi-Agent Systems by Design",
+      "url": "https://arxiv.org/abs/2611.17883v1",
+      "source": "arXiv",
+      "published_at": "2026-11-13T08:22:06+00:00",
+      "summary": "Multi-agent systems solve complex tasks by decomposing them into subtasks, delegating the subtasks to agents, and aggregating the agents' responses using an aggregation rule. Malicious agents can manipulate the final solution by providing malicious responses to their assigned subtasks. In this paper, we first propose response manipulation attacks (ReMA), which iteratively optimize malicious responses to maximize attack effectiveness. Specifically, we formulate untargeted and targeted attacks as optimization problems and develop an approach to approximately solve these problems by iteratively refining malicious responses based on feedback from a surrogate multi-agent system. To defend against such attacks, we further propose SecMAS, a secure aggregation rule that leverages the semantic similarities among agent responses to select the response that is most consistent with a sufficiently large subset of the other responses. We theoretically establish security guarantees for SecMAS against both untargeted and targeted attacks. Extensive evaluations demonstrate that existing aggregation rules are vulnerable to ReMA, whereas SecMAS effectively defends against all evaluated attacks, including adaptive variants of ReMA, while maintaining utility comparable to that of existing aggregation rules.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Xilong Wang",
+          "Xiaoxing Chen",
+          "Neil Gong"
+        ],
+        "categories": [
+          "cs.CR",
+          "cs.AI",
           "cs.CL"
         ]
       }

@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-11-15T14:55:43.037474+08:00",
+  "cached_at": "2026-11-16T11:00:25.823495+08:00",
   "articles": [
     {
-      "id": "50500963",
-      "title": "SpaceX catches the Starship to end Flight 15",
-      "url": "https://www.spacex.com/launches/starship-flight-15",
+      "id": "50509411",
+      "title": "Microsoft 365 outage leads to chlorine gas poisoning of 15 hotel guests",
+      "url": "https://www1.wdr.de/nrw/rheinland/rhein-erft-kreis/technischer-defekt-chlor-phantasialand-100.html",
       "source": "Hacker News",
-      "published_at": "2026-11-14T21:22:24+00:00",
-      "summary": "https://x.com/SpaceX/status/2121316300702056595https://youtu.be/jHlpfNSpBmw?t=3233",
-      "score": 1043,
-      "comments": 696,
-      "discussion_url": "https://news.ycombinator.com/item?id=50500963",
+      "published_at": "2026-11-15T18:36:10+00:00",
+      "summary": "Microsoft 365 outage leads to chlorine gas poisoning of 15 hotel guests",
+      "score": 421,
+      "comments": 189,
+      "discussion_url": "https://news.ycombinator.com/item?id=50509411",
       "extra": {
         "top_comments": [
-          "Starship is, essentially, Space Shuttle done right: fully reusable booster without solid boosters (avoids Challenger disaster) and orbiter stacked on top instead of on the side (avoid Columbia disaster).The original designs for the Space Shuttle had the booster (with wings!) return to the launch site, but the cost for two new crewed vehicles was too large, so they scaled it back to the compromised version.Even more revolutionary, compared to Shuttle, Starship is built on an assembly line. They can build a booster ever 4 weeks and a ship every 2 weeks.The future we were promised in the 1970s is about to become real.",
-          "If the heat shield holds up then this changes everything. Next step is double catch and re-flying the same ships and catching again, then payloads to orbit become significantly cheaper opening a new era in space flight.",
-          "Huge congratulations to the engineering team on this one! It's been quite interesting to watch the evolution of Starship. Had they put another couple of tonnes of propellant and oxidizer on the Booster they might have caught both of them. It is still unclear to me what the final mass fraction to orbit will work out to be, but something that is 100% re-usable is better than something 60% reusable[1].[1] Estimate of Falcon 9's booster + fairings being 60% (by cost, not by mass) of the launch package."
+          "I personally operate a fairly advanced closed-loop chlorination system, and this is beyond screwed up.These systems can easily fail, and they tend to fail in a way that causes them to measure low or zero chlorine and thus overdispense chlorine. More below on why.First, this means that an operator must always ensure safety, both against excessive chlorine and against insufficient chlorine. In a commercial context, that means that a real human (or maybe a totally different sensor design, e.g. a colorimetric sensor) need to measure the pool chlorine level, preferably with a high quality titration (drop test) every day before opening the pool. They should probably record the result in pen on water resistant paper, but this part is icing on the cake.Second, hoping that an email gets noticed is ridiculous. If you do not have positive confirmation that the pool is safe to open, don’t open it.Third, the systems should be sized so that they cannot overdose quickly. The maximum dispensing rate should be such that hours of continuous operation would be required to reach an uncomfortable level, let alone a dangerous level. (Hot tubs are sort of an exception here.)Fourth, everyone should be using a reasonable amount of CYA in their pool. Even at a lowish level of 30ppm CYA it takes a lot of chlorine to become dangerous unless the operator has also lost control of pH. I realize that some codes are confused about this.Fifth, chlorine is smelly. Someone should have noticed, even just casually. Admittedly, lots of swimmers may be conditioned to stinky pools, and checking for safety isn’t their job. But the staff should notice.Sixth, the systems I’ve seen beep when there’s an alert. It’s easy to add flashing lights, too. (In fact, the system I’m familiar with automatically shuts down if it feeds for more than X minutes without reaching the setpoint, and you cannot turn this feature off. You can, however, defeat it by switching the power to the whole controller.)—- sensors —-Actual free chlorine sensors intended for pools use an amperometric probe immersed in iodide solution or gel, separated from the pool water by a fancy membrane. Free chlorine oxidizes iodide to iodine, and the sensor measures the iodine concentration. If the membrane fails (or general wear and tear or excessive pressure swings) cause the iodide to be lost, then the chlorine can’t react and the sensor reads zero (or low if there’s tiny bit of iodide left).Interestingly, these sensors are rather expensive devices that appear to mostly come from France and Germany. The Chinese vendors seem to be rebranding European parts (!), and the major US vendor is very clearly reselling a French company’s product.There are some vendors who sell a cheap (or absurdly marked up) potentiometric ORP-based closed-loop system. In my considered opinion, these are worse than useless.",
+          "This is 100% fault of the hotel, not of Microsoft. It’s unacceptable that the communications regarding such a dangerous thing totally rely on email, without any backup or double check.",
+          "I'm not even going to read the article. If your hotel depends on some cloud service to prevent chlorine gas poisoning you're doing something terribly wrong. Full stop. I don't know anything about the laws in Germany but this is dangerously close to libel in the US.Disclaimer: I work in Azure, this is not a defense of the outage and I didn't read the submitted article."
         ]
       }
     },
     {
-      "id": "50499017",
-      "title": "Lovable apps expose passport details and more than 200K private messages",
-      "url": "https://www.crissyfield.de/research/lovable-en/",
+      "id": "50511395",
+      "title": "Old Bitly links are being hijacked",
+      "url": "https://ransomnews.com/burger-king-tweet-bitly-link-hijack-2026/",
       "source": "Hacker News",
-      "published_at": "2026-11-14T17:43:10+00:00",
-      "summary": "Lovable apps expose passport details and more than 200K private messages",
-      "score": 756,
-      "comments": 300,
-      "discussion_url": "https://news.ycombinator.com/item?id=50499017",
+      "published_at": "2026-11-15T22:11:43+00:00",
+      "summary": "Old Bitly links are being hijacked",
+      "score": 197,
+      "comments": 101,
+      "discussion_url": "https://news.ycombinator.com/item?id=50511395",
       "extra": {
         "top_comments": [
-          "Hi, I’m the author of this blog post. I submitted it to HN two weeks ago, but it didn’t gain much traction, so I’m glad to see it resubmitted. Happy to answer any questions, though I think the situation is fairly self-explanatory.",
-          "The part people are ignoring is Supabase's culpability in this matter: https://github.com/orgs/supabase/discussions/4547This was supposedly fixed on October 30, but there are reports floating around that for existing projects, the defaults still apply.Lovable deserves some heat for using this, but this was a choice that was made by Supabase many years ago to support making it easier to onboard potential customers, a deliberate tradeoff of less onboarding pain for less security.",
-          "Igor here, Head of Security at Lovable. Thanks to the Crissy Field team for their work. The root cause in these apps was insufficent Row-Level Security, which is exactly what our scanning is built to catch. We scan every app automatically before publish and offer a deeper SAST scan, both free for all users. When we flag findings, users can select “Fix” and Lovable will help resolve them. They can also enable auto-fix, which resolves security findings in the background, and block publishing entirely when there are critical findings.When an app has end users, security is a key part of the product. That’s why we keep investing in making security tools better and easier to use, taking on as much of the security load as we can and fixing more issues automatically.I personally believe that making security accessible is what leads to making software accessible. We’re committed to both.You can read more about our approach: https://lovable.dev/blog/find-it-fix-it-ship-it"
+          "Link shorteners that are outsourced are in my humble opinion an order of magnitude worse for the internet than they would be if in-house.The way they accrete URLs over time, and then time passes, and anything can happen (your account gets deactivated, shortener company goes out of business / experiences catastrophic data loss / etc) is just asking for permanently broken links which may be unfixable.Especially when you consider how these services can, unless they're spammy enough to inject gross interstitial ad pages, make 0 revenue from you if you aren't currently paying for a premium service, it's easy to see how they can go under.Note: Clearly with the kind of ephemeral crap these 2011 tweets were, I'm assuming the 'attacker' publicized \"Hey guys look at these funny tweets\" because obviously who cares about 15 year old McDonalds marketing messages. But in general it's sad to see these still being used. To be fair to bitly, they do offer the ability to use your own domain at least, but sadly, with a service targeted mainly at marketing departments, usually they don't have the ability to work with the in-house tech team(s) to even set up DNS.",
+          "I think the biggest surprise to me is that a URL shortener makes enough money to have a Trust and Safety team. I assumed it was just a side project a person or two ran.",
+          "Short anecdote: Famous author (with huge fanbase!) used a Bit.ly link in one of their books (the narrative needed a fake tweet with fake link). Editor didn't notice/care and never registered it. I noticed on release date, caught it and redirected it to a website that referenced the book, a few people tweet about it thinking the author used the link on purpose!"
         ]
       }
     },
     {
-      "id": "50496976",
-      "title": "KDE: The documentary [video]",
-      "url": "https://tube.kockatoo.org/w/fFinNHfanLT7aBEb2B8y4c",
+      "id": "50509837",
+      "title": "Protomaps: Self-hosting map tiles has gotten cheap and easy",
+      "url": "https://bruceroettgers.eu/blog/protomaps/",
       "source": "Hacker News",
-      "published_at": "2026-11-14T13:43:28+00:00",
-      "summary": "KDE: The documentary [video]",
-      "score": 437,
-      "comments": 94,
-      "discussion_url": "https://news.ycombinator.com/item?id=50496976",
+      "published_at": "2026-11-15T19:26:22+00:00",
+      "summary": "Protomaps: Self-hosting map tiles has gotten cheap and easy",
+      "score": 197,
+      "comments": 46,
+      "discussion_url": "https://news.ycombinator.com/item?id=50509837",
       "extra": {
         "top_comments": [
-          "Total KDE fan and that's all I run at home. It's an interesting study also in desktop environment and software written in C++ and just how hard it is to get something that works for most people. Mistakes, corrections, building the basic blocks like Qt in the early days and keeping a bunch of people with differing cultures / tastes / backgrounds/needs motivated to make it better every day - fascinating achievement.Thank you KDE folks - I contribute in terms of bug reports and attempts at fixes sometimes but this time I am signing up for a monthly donation - I encourage people to do what they can to keep a good thing going! https://kde.org/donate/",
-          "KDE is amazing. Outstanding performance, outstanding design, and endlessly configurable. But the most amazing thing of all is that you've achieved this while competing against teams like Microsoft's or Apple's, which spend millions of euros and are made up of thousands of people.Congratulations, team. Here's to 30 more years.",
-          "KDE is how desktops should be. 'The Year of the Linux' is NOW, a few years ago. Linux and KDE have given me not only freedom over my own hardware, but freedom over how I interact with my desktops. Once you know the shortcuts, things become so much more fun. Much love to the KDE team.Linux life, yo."
+          "OpenFreeMap is a similar project:https://openfreemap.org/> What is OpenFreeMap?> OpenFreeMap lets you display custom maps on your website and apps for free.> Using our public instance is completely free: there are no limits on the number of map views or requests. There’s no registration, no user database, no API keys, and no cookies. We aim to cover the running costs of our public instance through donations.> What is the tech stack?> There is no tile server running; only nginx serving a Btrfs image with 300 million hard-linked files. This was my idea; I haven’t read about anyone else doing this in production, but it works really well.",
+          "We're doing something like this behind Cloudflare R2, same concept of owning the map infra (for privacy and access-control) and reducing load on public infrastructure.If you are into this stuff, you can view PMTiles from the CLI with \"gloss\", or try to drag-and-drop on its web interface [1]. It seems large tiles (>128M) and some raster formats are failing; plus it would be nice to load from URL there. Will fix that...(AI warning). ntmaps [2] is a Golang library that lets you use different tile providers, deployable in terminal or browser. ntplaygrounds [3] uses that and nt3d and ntactor to make a city simulation. Data is pulled from OpenStreetMap in those.[1] https://nimbleterminal.com/gloss/app.html [2] https://nimbleterminal.com/ntmaps [3] https://nimbleterminal.com/ntplaygrounds",
+          "yeah, basemaps are small enough to store and host cost effectively, but high res satellite imagery gets big and expensive fast as you go up in zoom level. I built my own satellite mosaic of North America for my app so I can offer users offline access to the tiles and had to stop at z17 because of projected storage requirements. high res global coverage can get you into the hundreds of TB range which is no longer in the \"stick it on r2 and serve it with a worker\" or \"download and upload the entire dataset sequentially over your residential internet\" territorythe fun/hard parts of the project weren't really scale dependent, although downloading source imagery and building the tile pyramids did take literally weeks to run. actually, the hardest part was getting demosaicing right, e.g. making the quilt seamless. filtering out cloudy and smokey/hazy tiles while picking alternatives from the same time of year so groundcover & crops are in a consistent growth stage so you don't end up with checkerboard patterns or cloud silhouettes randomly across your map. and there were other problems that came up more or less just because of how & when the satellite took the images that require exposure correction and more filteringI also have a pelias index with 170M records for search and self-host valhalla for routing. the open source mapping ecosystem has really impressed me the more I learn with each project"
         ]
       }
     },
     {
-      "id": "50501631",
-      "title": "Nvidia deliberately kept GPU prices high through circular financing deals",
-      "url": "https://www.techspot.com/news/114558-nvidia-deliberately-kept-gpu-prices-high-through-circular.html",
+      "id": "50509308",
+      "title": "A short explainer on how El Niño works [video]",
+      "url": "https://www.youtube.com/watch?v=7_JF3etiAv8",
       "source": "Hacker News",
-      "published_at": "2026-11-14T22:26:30+00:00",
-      "summary": "Nvidia deliberately kept GPU prices high through circular financing deals",
-      "score": 412,
-      "comments": 204,
-      "discussion_url": "https://news.ycombinator.com/item?id=50501631",
+      "published_at": "2026-11-15T18:23:21+00:00",
+      "summary": "A short explainer on how El Niño works [video]",
+      "score": 184,
+      "comments": 84,
+      "discussion_url": "https://news.ycombinator.com/item?id=50509308",
       "extra": {
         "top_comments": [
-          "If the price of the RTX 6000 (96gb blackwell gpu) drops to $2000 (original MSRP $8000, currently $16,000 usd due to \"scarcity\") then, all of a sudden, \"we have ai at home\" becomes real and why would you ever pay for a subscription for your company/family when you can run Qwen Flash Next (which runs great on consumer GPU via software like Strata) forever for free?Engineering types and power users need not apply,but For Everyone Else, the \"normies\", Qwen Flash Next is probably \"640k is enough for anyone\" territory.IPO, valuation etc depend heavily on frontier, or \"good enough\" AI to need to run on commercial grade GPUs. If Qwen Flash Next is good enough and runs on a $2000 GPU, why would you pay $20/30/100/200 per month in perpetuity?I wouldn't pick Qwen Flash Next to add kernel namespacing and cgroups v2 to my custom OS kernel, but it will happily implement the Plan.md that Fable 5.2 wrote for a dollar.",
-          "We had a huge thread about this yesterdayNvidia allegedly engineered scarcity by funding AI startups to buy its GPUs (techpowerup.com)https://news.ycombinator.com/item?id=50493251",
-          "Not speaking about the possible knowledge of smuggling in contravention of law, marital infidelity, and possibility getting mixed up with an intelligence agent, but I don't see the circular financing thing as a problem. Maybe I'm misinformed.But weren't they were investing money in companies to help them grow and in turn buy more of their product. Of course Nvidia wants to stimulate demand of their product. I don't think this was nefarious. There is no free lunch, the risk of them never getting that money back is real with a lot of these pie in the sky AI companies. How is this anticompetitive? It's all of these SPVs that meta, google, and others are using that I think needs to be investigated and punished by wall street.If you think that's wrong, USE YOUR WORDS, I'm open to reason. Down voting with no response or making jeers is not effective communication."
+          "Any time this stuff comes up it's important to understand that this el Nino is occuring in the context of a global climate that is warmer than any time in the last 125,000 years. The risks inherent to weather and climate are growing all the time.",
+          "I find the Climate Reanalyzer graphs very instructive - at a glance one can see how extreme the situation is:https://climatereanalyzer.org/clim/sst_daily",
+          "Here is one is French, very scientifically sourced, by a searcher of hugging face.https://youtu.be/DutKGuQu4a0France isn't very much affected, so it's not focused on any country."
         ]
       }
     },
     {
-      "id": "50499038",
-      "title": "A family tree of software job titles",
-      "url": "https://zwischenzugs.com/2026/11/03/a-family-tree-of-software-job-titles/",
+      "id": "50509972",
+      "title": "Handwriting, as a Font",
+      "url": "https://ductus.sorenblank.com",
       "source": "Hacker News",
-      "published_at": "2026-11-14T17:45:19+00:00",
-      "summary": "A family tree of software job titles",
-      "score": 275,
-      "comments": 133,
-      "discussion_url": "https://news.ycombinator.com/item?id=50499038",
+      "published_at": "2026-11-15T19:42:13+00:00",
+      "summary": "Handwriting, as a Font",
+      "score": 145,
+      "comments": 39,
+      "discussion_url": "https://news.ycombinator.com/item?id=50509972",
       "extra": {
         "top_comments": [
-          "Recently I spoke to someone who wanted to know what they should call themselves seeing as they never learned software development, formally or otherwise, but that's not stopping them from releasing AI-powered Python projects in GitHub. I suggested Project Manager, but they took offense to that because (I think) they wanted to hear Software Engineer in order to apply to those jobs. My counter-argument was that, legal rules aside, a S.E. should be able to differentiate good code from bad, but my suggestion wasn't super well received.The point being: I'm always amazed at the cross-purpose impulse of arguing \"the title is not important\" while, simultaneously, really wanting to use the title.",
-          "Scrum and Agile seem to be dying. I had a Product Owner and Scrum Master cert for years on my resume but i've dropped it from my current. Feels now like the ancient webmaster title of the mid 90s. Made for another timeline which is not more relevant.DevOps is another sad story as it was a saner approach to get people skilled for both dev and ops but turns out people don't like learning new skills as much as they claim. So its meaning differed from org to org and even within the same company.",
-          "So far in my career:- DevOps Engineer (Junior, Senior, Staff)- Systems Development Engineer- DevOps Team Manager- Cloud Infrastructure Engineer- Site Reliability Engineer (+Lead)All have been meaningless except for Cloud Infrastructure Engineer. The rest described a generalist who knows how to deal with ambiguity and (usually) has the trust with things like AWS root account credentials. Most organisations have no idea what real DevOps is. If they did, they wouldn’t hire for a “DevOps Engineer”"
+          "This is really nice. Unfortunately it doesn't have accented characters. Thus I can't write my name using that font, which is a key thing I'd use \"my\" font for.I understand they don't want to go through all of Unicode, but a way to add custom letters would be nice.",
+          "Me to Claude: If I give you some carefully written pages of my cursive handwriting, can you make me a font of my own handwriting that I can then install on my windows machine? And can you make all the different letters connect to each other correctly? I know that will require some changes to my connection points.Claude: Yes, I can do that, including the connections. I'd build it in my workspace by tracing your scans into vector outlines, then compile an installable .otf/.ttf file. Windows installs it with a right-click and \"Install.\"How the connections would work: I'd fix two connection heights…",
+          "It needs samples, I'm not going to get out my wacom to do all that without seeing what the results will look like."
         ]
       }
     },
     {
-      "id": "50497892",
-      "title": "PyPI's redesigned project pages with clearer security signals are now live",
-      "url": "https://blog.pypi.org/posts/2026-11-06-ui-updates-complete/",
+      "id": "50510296",
+      "title": "WebGL Flight Simulator with seed generated terrain",
+      "url": "https://baron.by.dai.studio/",
       "source": "Hacker News",
-      "published_at": "2026-11-14T15:40:52+00:00",
-      "summary": "PyPI's redesigned project pages with clearer security signals are now live",
-      "score": 230,
-      "comments": 99,
-      "discussion_url": "https://news.ycombinator.com/item?id=50497892",
+      "published_at": "2026-11-15T20:20:05+00:00",
+      "summary": "WebGL Flight Simulator with seed generated terrain",
+      "score": 96,
+      "comments": 12,
+      "discussion_url": "https://news.ycombinator.com/item?id=50510296",
       "extra": {
         "top_comments": [
-          "Not very keen that the whole story of trust is basically centralisation - requiring \"big cloud\" and essentially promoting lock-in.Did I get that right? Seems a bit anti-pythonic.",
-          "Some examples:dlt (no provenance): https://pypi.org/project/dlt/#filesdatasette (yes provenance): https://pypi.org/project/datasette/#files",
-          "This is great! I want sigstore-based or at least sigstore-style \"keyless\" short lived signatures to become more and more popular, so that support gets better everywhere. In particular, if having secure OIDC handling in a CI/CD pipeline becomes something that keeps people on GHA or GitLab then I'd hope third-party hosted CI/CD services begin to take that gap seriously and work on meeting those requirements.I'm bought in on keyless signing, and I want there to be many more providers, so I like to see more adoption which builds more momentum."
+          "How funny, I have been vibe coding a little paper plane folding and flying simulator this weekend and the agent picked a very similar visual stylehttps://www.rossng.eu/paper-flight/",
+          "I think the interesting to know would be how much it cost to build and how much prompting was necessary. Overall it doesn't look like anything that I wouldn't be able to get by just prompting claude in claude code",
+          "Make rotating phone dialog skipable."
         ]
       }
     },
     {
-      "id": "50496051",
-      "title": "Project Zero will disclose vulnerabilities 90 days after reporting",
-      "url": "https://projectzero.google/2026/11/disclosure-policy.html",
+      "id": "50512235",
+      "title": "What's Next for Nvidia?",
+      "url": "https://steveblank.com/2026/11/15/whats-next-for-nvidia/",
       "source": "Hacker News",
-      "published_at": "2026-11-14T11:13:17+00:00",
-      "summary": "Project Zero will disclose vulnerabilities 90 days after reporting",
-      "score": 225,
-      "comments": 87,
-      "discussion_url": "https://news.ycombinator.com/item?id=50496051",
+      "published_at": "2026-11-15T23:55:55+00:00",
+      "summary": "What's Next for Nvidia?",
+      "score": 87,
+      "comments": 91,
+      "discussion_url": "https://news.ycombinator.com/item?id=50512235",
       "extra": {
         "top_comments": [
-          "Starting today, our policy is “Full 90”, i.e. vulnerabilities will be disclosed 90 days after they are reported to the vendor.On February 2, 2027, we will move to a “Full 60” policy where vulnerabilities are disclosed after 60 days.On January 3, 2028, we will move to a “Full 30” policy where vulnerabilities are disclosed after 30 days.",
-          "Ubuntu will need a LOT more time than that.",
-          "Unrelated, but didn't realise .google was a TLD."
+          "What made Steve Jobs great was that he would rather have Apple cannibalize its successful product lines than fall prey to a competitor. You can see this pattern with the iPod. The iPod disrupted itself many, many times. The iPod Mini then the iPod Nano. Then the iPod shuffle as the answer to the race ot the bottom.The biggest moment was partnering with Motorola as phones started becoming more capable and flash memory got cheaper to bring music to phones, which was then the prelude to the iPhone.The iPhone killed the iPod. Most companies would have never created the product, because it would have killed their golden goose, but Jobs did.Just like he went all in on the iPad which had the potential to kill the cheap student Mac.If Nvidia's next CEO is smart, they'd buy up a bunch of these companies that \"burn\" weights to silicon, make the process better, and then sell that as a service. Let it cannibalize the sales of their products. It's better for them to do it to themselves than their competitors.",
+          "As the author mentions, the biggest threat is from customers becoming competitors. The problem space is stabilizing and this allows the biggest buyers of GPUs to work with companies like broadcom to make their own chips. Thanks to agents, they can also spin up their own abstraction layers and debug tools. CUDA is becoming less relevant, and the rate at which that is happening is about to go parabolic.Surely Nvidia won’t stand still and will continue to compete, but the margins will collapse along with volumes.AMD will probably suffer less, relatively speaking. Their failure to invest in software finally seems to be paying off now that LLMs can pick up their slack. But the growth currently priced in to their stock will never materialize and they’ll be seen as arriving just in time for the lights to go out.",
+          "Jensen is a big part of the Nvidia brand. Surely the board isn't that stupid to risk losing the brand because of adultery? Why didn't Jensen fight to keep his job? There has to be something we do not know..."
         ]
       }
     },
     {
-      "id": "50497589",
-      "title": "Show HN: DeepSeek V3 in ~200 lines of pure Jax",
-      "url": "https://github.com/Vaibhaav-Tiwari/deepseek-v3-jax",
+      "id": "50511806",
+      "title": "Preserving 30 years of Salon journalism",
+      "url": "https://blog.archive.org/2026/11/12/preserving-30-years-of-salon-journalism/",
       "source": "Hacker News",
-      "published_at": "2026-11-14T15:04:15+00:00",
-      "summary": "Show HN: DeepSeek V3 in ~200 lines of pure Jax",
-      "score": 219,
-      "comments": 16,
-      "discussion_url": "https://news.ycombinator.com/item?id=50497589",
+      "published_at": "2026-11-15T23:00:11+00:00",
+      "summary": "Preserving 30 years of Salon journalism",
+      "score": 83,
+      "comments": 23,
+      "discussion_url": "https://news.ycombinator.com/item?id=50511806",
       "extra": {
         "top_comments": [
-          "I am just starting Raschka's book to write an llm from scratch in C++ with zero dependencies with avx-512 on a 9950x, and then I'd like to go through the literature for more advanced stuff.I don't know what Jax is exactly but while I am aware that the algorithm implementation is not something terribly complicated, 200 lines still sounds impressive.If anyone wants to share any tips, they're welcome.",
-          "I love this, there is nothing like recreating a model from first principles, plus makes me want to revisit Jax again (I'll do it after I spend enough time with Zig). Thanks for this!",
-          "Thanks for this! I've been trying to get local training working on Fedora with ROCm for a while now, and this is the first project that ran end-to-end on my RX 7600 XT 16GB.The whole reason for me buying the card was to play around with deep learning and models, so it's awesome to have a stepping off point now!No CUDA meant ROCm surprisingly just worked with JAX.Gotchas for anyone with a 7600 XT: it needed two env vars, HSA_OVERRIDE_GFX_VERSION=11.0.0 because JAX's plugin rejects gfx1102, and XLA_FLAGS=--xla_gpu_enable_triton_gemm=false to stop a GPU hang.I'm on Fedora 45 with the in-kernel amdgpu driver, rootless podman and AMD's rocm/jax image (ROCm 10.1, JAX 0.11.1). Nothing ROCm is installed on the host, which is nice.Container setup is in a PR if it helps anyone: https://github.com/Vaibhaav-Tiwari/deepseek-v3-jax/pull/1"
+          "I've always disliked Salon, but, even so, this is exactly why archive.org is awesome and deserves massive kudos! They save even the stuff that I don't like :)It's not too late to donate! https://archive.org/donate",
+          "Closing down discussed the other day:Goodbye from Salon (658 points, 288 comments)https://news.ycombinator.com/item?id=50383739My own reflection was remembering Salon for cavalierly disposing of its brilliant International Issues subforum, then later the whole of TableTalk with no effort to assist preservation.",
+          "Really glad this is being preserved. There’s so much internet history in those archives. Whatever people may think of Salon, keeping an online publication going for 31 years is an achievement in itself, and it’s good to know people will still be able to explore what it left behind."
         ]
       }
     }
