@@ -11,7 +11,7 @@ ITEM_BLOCK = re.compile(
     re.MULTILINE | re.DOTALL,
 )
 SUMMARY_FIELD = re.compile(
-    r"^- \*\*(核心摘要|来源摘要|来源标题|研究问题|背景|影响|后续观察|方法思路|关键结果|实验结果|局限性|工程价值|价值点)\*\*：(.+)$",
+    r"^- \*\*(核心摘要|来源摘要|来源标题|研究问题|背景|影响|后续观察|方法思路|主要结论|关键结果|实验结果|局限性|工程价值|价值点)\*\*：(.+)$",
     re.MULTILINE,
 )
 BLOCKQUOTE = re.compile(r"^> (?!来源：)(.+)$", re.MULTILINE)
@@ -28,6 +28,7 @@ def _compose_summary(fields: list[tuple[str, str]]) -> str:
     secondary_label = ""
     for field, label in (
         ("影响", "影响"),
+        ("主要结论", "结论"),
         ("关键结果", "结果"),
         ("实验结果", "结果"),
         ("工程价值", "价值"),
