@@ -1,6 +1,18 @@
 {
-  "cached_at": "2026-11-17T11:00:26.716176+08:00",
+  "cached_at": "2026-11-17T16:14:47.612918+08:00",
   "articles": [
+    {
+      "id": "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai",
+      "title": "Strengthening NATO and allied cyber defenses with AI",
+      "url": "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai",
+      "source": "OpenAI",
+      "published_at": "2026-11-17T00:00:00+00:00",
+      "summary": "How OpenAI is working with NATO and allied cyber agencies to help trusted defenders find vulnerabilities, test fixes and protect essential systems.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
     {
       "id": "https://www.microsoft.com/en-us/research/?p=1194016",
       "title": "TokenEconomizer: Learning from Experience to Make AI Coding Agents More Efficient",
@@ -50,6 +62,18 @@
       "extra": {}
     },
     {
+      "id": "https://openai.com/business/customer-stories/revolut",
+      "title": "How Revolut raises ambition without lowering the bar",
+      "url": "https://openai.com/business/customer-stories/revolut",
+      "source": "OpenAI",
+      "published_at": "2026-11-16T09:30:00+00:00",
+      "summary": "Discover how Revolut uses OpenAI models and Codex to cut coding time by 30–60%, scale financial crime investigations, and innovate without compromising security.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
       "id": "https://openai.com/index/lvmh-media-division-partnership",
       "title": "LVMH’s Media Division announces strategic partnership with OpenAI",
       "url": "https://openai.com/index/lvmh-media-division-partnership",
@@ -68,30 +92,6 @@
       "source": "OpenAI",
       "published_at": "2026-11-16T08:00:00+00:00",
       "summary": "OpenAI begins embedded assessments with Apollo Research, METR, and Transluce, and Goodfire to independently evaluate model alignment, safeguards, and monitoring systems.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
-      "title": "Advancing computer-use agents for healthcare teams",
-      "url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
-      "source": "OpenAI",
-      "published_at": "2026-11-16T06:00:00+00:00",
-      "summary": "",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
-      "title": "More ways to move care forward with ChatGPT for Healthcare",
-      "url": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
-      "source": "OpenAI",
-      "published_at": "2026-11-16T06:00:00+00:00",
-      "summary": "Introducing computer-use agents, improved clinical answers, and new healthcare plugins that work across healthcare software to get real work done.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",

@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-11-17T11:00:26.716176+08:00",
+  "cached_at": "2026-11-17T16:14:47.612918+08:00",
   "articles": [
     {
       "id": "50522980",
@@ -8,50 +8,14 @@
       "source": "Hacker News",
       "published_at": "2026-11-16T20:43:36+00:00",
       "summary": "Carnegie Mellon is putting computer science courses on YouTube for free",
-      "score": 821,
-      "comments": 136,
+      "score": 1348,
+      "comments": 188,
       "discussion_url": "https://news.ycombinator.com/item?id=50522980",
       "extra": {
         "top_comments": [
           "Hi! I'm Phillip Compeau, I teach in Carnegie Mellon's Griffin School of Computer Science, and I run CS Learn, which launched today.We're releasing full semesters of lectures from current CMU computer science courses across a variety of topics, with one course premiering each day this week. More courses come in January.Yes, MIT got here 25 years ago :). What I'm excited about is how we're doing it: a few of our students built tools that automate a lot of the production work, so a small team can get a course out quickly and still have people review every lecture.We'll have lots more coming across a wide array of subjects. I'd love to know if there are topics you would like to see us cover!",
           "To those asking why this is still valuable in the age of AI?If you learn the fundamentals properly, then AI will be a power tool for you. If you don’t, then it will replace you.I don’t mean this in an aggressive “you better get used to it” sense, I realize there’s nuance - but this is the version that fits on a T-shirt.",
-          "Very excited to see that 15-259 Probability and Computing will be available soon. That was one of my favorite classes at CMU during my undergrad."
-        ]
-      }
-    },
-    {
-      "id": "50521045",
-      "title": "Technical issue at JPMorgan Chase triggers online banking delays for US banks",
-      "url": "https://apnews.com/article/bank-outage-chase-wells-fargo-truist-50fee2693c22f597fa6ca51a97ef2cda",
-      "source": "Hacker News",
-      "published_at": "2026-11-16T18:31:30+00:00",
-      "summary": "Technical issue at JPMorgan Chase triggers online banking delays for US banks",
-      "score": 727,
-      "comments": 601,
-      "discussion_url": "https://news.ycombinator.com/item?id=50521045",
-      "extra": {
-        "top_comments": [
-          "- Cards not working.- Physical branches closed or unresponsive.- Online banking down.This exact same thing happened in Europe with Revolut late last month. It was resolved in about 12 hours: https://www.revolut.com/blog/post/20octoutagetechnicalovervi...In that case, it was a Google Cloud outage. Something similar (database outage) could be the culprit here.",
-          "My nontechnical co-workers see the Microsoft 365 outage, the FAA ground stop, and things like this as one interconnected problem. They aren't entirely wrong, but the general fear is hard to dismiss",
-          "Note than any of the core processes there likely run on very old but very reliable mainframes and associated software stacks (think COBOL, CICS, IMS, DB/2 on 390). More (non-technical): https://www.rocketsoftware.com/en-us/insights/why-financial-..."
-        ]
-      }
-    },
-    {
-      "id": "50523601",
-      "title": "BugMeNot has closed",
-      "url": "https://www.bugmenot.com/",
-      "source": "Hacker News",
-      "published_at": "2026-11-16T21:32:17+00:00",
-      "summary": "BugMeNot has closed",
-      "score": 347,
-      "comments": 176,
-      "discussion_url": "https://news.ycombinator.com/item?id=50523601",
-      "extra": {
-        "top_comments": [
-          "Not much info on this page, so here's the Wikipedia if you don't know what BugMeNot is (er, was):https://en.wikipedia.org/wiki/BugMeNot",
-          "There are a fair number of \"temporary or hidden email\" systems that can replace this. It's just the convenience factor of not having to create another stupid temp email just to log into a website for 5 minutes. Then do you save the password you had to create or create another account later.1. Search for \"temporary email\", there are zillions of these. Some services detect that they are special temporary emails, many don't. They have tons of domains, always creating new ones, then you can get a random email on that domain. Many of them even let you log back in later if you save off the password.2. Use duck duck go - Lots of folks must be using ddg to create a new email that hides their underlying email, even my non technical spouse uses it. Most sites accept this today, even reddit.3. catch all domains. If you have your own domain, you can set it up so @your_domain.com will go to you. With the latest \"advance\" from the modern world's anonymization destroying stuff, you have to figure out how to setup dkim and dmarc etc.I think we'll all be polluting our account/pw software with thousands of these. A huge hunk of junk.",
-          "I remember using this website for various things a long time ago. It was very useful."
+          "CMU Alum here. Really glad to see Tianqi Chen's ML Systems being offered up. I had just started working through their book https://mlc.ai/modern-gpu-programming-for-mlsys/ so it should complement nicely.Are requests for courses being accepted? :)If yes, may I humbly request Larry Wasserman's Intermediate Statistics, Dave Andersen's Distributed Systems and Dave Eckhardt's Operating Systems (or whoever is teaching it now)."
         ]
       }
     },
@@ -62,86 +26,122 @@
       "source": "Hacker News",
       "published_at": "2026-11-16T22:58:20+00:00",
       "summary": "Windows 11 Is Collecting Data on Which Coding Agents and Developer Tools You Use",
-      "score": 294,
-      "comments": 165,
+      "score": 542,
+      "comments": 381,
       "discussion_url": "https://news.ycombinator.com/item?id=50524736",
       "extra": {
         "top_comments": [
           "Just as AI has advanced massively in the past two years, I think a lot of gamers would be shocked at how viable Linux is as a genuine gaming platform in 2026. I already have plans to switch from Windows to Linux, I even have Linux running from an external drive to play with it.The vast vast majority of single player games are 100% perfect on Linux. Multiplayer still has lots of hiccups.",
-          "For anyone on the fence about switching from Windows to Linux: it takes about a week, if that, of adjusting. If most of what you do is on the Web already (and the services you use provide a Web-based client), you have nothing to lose but your chains.Take your pick - Ubuntu, Fedora, someone else mentioned Mint. All fine choices, no wrong answers.",
-          "Home users have zero reasons to use Windows in 2026.Skip problematic distro Linux like Ubuntu which has become evil and semi-proprietary.There are distros like Mint Cinnamon that are awesome. Based on Ubuntu but without all the mess from it with solid support and community. It has newer packages like Ubuntu but the security practices like Debian.From internet to video editing, from writing docs to playing Steam games, it just works.Office?? LibreOffice. You shouldn't be using Microsoft Office even on Windows.LibreOffice is solid, 100% offline, free, and received massive donations during Microsoft drama on Friday.The only downside is for folks who play Steam games with kernel anti-cheat, that is spyware anyway and you should not be playing such games to start with.You can isolate Steam by installing its Flatpak version, even if you installed a game found to be compromised, Flatpak sandbox isolates it. Avoid installing the native DEB package which grants full access to the system files, if you get a game compromised that way, then yeah, you are screwed.Windows is not different, if you have Steam running on your Windows PC and installed a compromised game, good luck haha"
+          "I've been a heavy macOS user for dev work since early adolescence. Before that I used FreeBSD, so I'm comfortable with the command line. (Yes, you read that right.) But it's been a while since I used anything other than macOS for serious development work. A lot of the shenanigans around macOS Tahoe made me seriously consider switching to Linux. Last month I finally got the gumption and set up a Linux desktop how I like it.I see no reason why any developer, other than someone writing something for the Windows platform specifically, should not be using Linux over Windows. MacOS has a ton of polish in so many places—but then there are all these little paper cuts that keep coming: funny little bugs that interrupt work or make you scratch your head. Peeking over the garden wall into Windows' garden only seems worse. Linux by comparison is awesome! I look forward to spending my day on my Linux desktop.Seriously, if you do dev work, do yourself a favor and boot up—I dunno, maybe Fedora Silverblue—on a separate partition and force yourself to work on it for a day or two. Use an LLM to diagnose issues as they come up. (I had some serious stability issues; Claude suggested it was a memory issue; running memtest86 told me I had bad RAM—fixing that and all problems went away.) You'll find that your system is quieter and less distracting.I still don't think Linux is for \"average users\"—even though most people probably only need a web browser. But if you have gone anywhere near a command line in your life, it will be worth the switch.",
+          "For anyone on the fence about switching from Windows to Linux: it takes about a week, if that, of adjusting. If most of what you do is on the Web already (and the services you use provide a Web-based client), you have nothing to lose but your chains.Take your pick - Ubuntu, Fedora, someone else mentioned Mint. All fine choices, no wrong answers."
         ]
       }
     },
     {
-      "id": "50522563",
-      "title": "Rust changed me as a developer",
-      "url": "https://blog.startifact.com/posts/how-rust-changed-me/",
+      "id": "50523601",
+      "title": "BugMeNot has closed",
+      "url": "https://www.bugmenot.com/",
       "source": "Hacker News",
-      "published_at": "2026-11-16T20:16:50+00:00",
-      "summary": "Rust changed me as a developer",
-      "score": 196,
-      "comments": 127,
-      "discussion_url": "https://news.ycombinator.com/item?id=50522563",
+      "published_at": "2026-11-16T21:32:17+00:00",
+      "summary": "BugMeNot has closed",
+      "score": 495,
+      "comments": 223,
+      "discussion_url": "https://news.ycombinator.com/item?id=50523601",
       "extra": {
         "top_comments": [
-          "A standard piece of advice is that every developer should do a major project in every big language family. A Lisp, an OO language, a functional language, Prolog, VHDL or Verilog, a Forth, et cetera. They'll all make you think differently and teach you lessons you will use outside of the family.",
-          "One of the things that I think makes Rust unique is that it acknowledges the possibility of human error. I think it’s also one of the most controversial too: there are certain people who get an ego hit at the insinuation that they ever could have written C code with mistakes.Instead of hoping you remember to check for NULL, Rust forces you to make a decision on how to handle the possibility of failure. Sure, you can still pick a bad decision (unwrap) but that is at least a specific decision and you can’t forget to do it.You can take it even further with things like the newtype pattern. If you have lots of numeric IDs (project ID, user ID, etc) you can give them distinct types so you don’t mix them up.So Rust taught me I can program defensively against my own brain, which sometimes gets tired or lazy or distracted.",
-          "> Any language without sum types now feels impoverished to me.I wholeheartedly agree. I learned this lesson from learning Haskell, before I was even aware of Rust and before Rust had its 1.0 release. One of the reasons I was first excited about Rust in fact was precisely that it had a type system like that of Haskell."
+          "Bevan and Guy founded that site and realized that the UX was perfect for sharing coupons and launched RetailMeNot.com from it, leveraging BMN’s crazy high PageRank to propel RMN to the top of Google. Not to mention the ease of use and social aspects way ahead of its time.They were able to join a handful of retailer affiliate programs and were probably clearing tens of millions a year in affiliate commissions with no overhead. Then they sold it to WhaleShark Media (funded by Google Ventures among others) and IPO’d it in 2016, cashing in a second time.Honestly one of the most impressive bootstrap stories you’ll ever find.",
+          "Not much info on this page, so here's the Wikipedia if you don't know what BugMeNot is (er, was):https://en.wikipedia.org/wiki/BugMeNot",
+          "There are a fair number of \"temporary or hidden email\" systems that can replace this. It's just the convenience factor of not having to create another stupid temp email just to log into a website for 5 minutes. Then do you save the password you had to create or create another account later.1. Search for \"temporary email\", there are zillions of these. Some services detect that they are special temporary emails, many don't. They have tons of domains, always creating new ones, then you can get a random email on that domain. Many of them even let you log back in later if you save off the password.2. Use duck duck go - Lots of folks must be using ddg to create a new email that hides their underlying email, even my non technical spouse uses it. Most sites accept this today, even reddit.3. catch all domains. If you have your own domain, you can set it up so @your_domain.com will go to you. With the latest \"advance\" from the modern world's anonymization destroying stuff, you have to figure out how to setup dkim and dmarc etc.I think we'll all be polluting our account/pw software with thousands of these. A huge hunk of junk."
         ]
       }
     },
     {
-      "id": "50524165",
-      "title": "United Airlines experiencing a widespread system outage, airline says",
-      "url": "https://www.cnn.com/2026/11/16/us/united-airlines-outage",
+      "id": "50519354",
+      "title": "Frame – 31.5\" color ePaper display",
+      "url": "https://trmnl.com/blog/introducing-frame",
       "source": "Hacker News",
-      "published_at": "2026-11-16T22:14:38+00:00",
-      "summary": "https://news.ycombinator.com/item?id=50524260",
-      "score": 183,
-      "comments": 98,
-      "discussion_url": "https://news.ycombinator.com/item?id=50524165",
+      "published_at": "2026-11-16T16:23:22+00:00",
+      "summary": "Frame – 31.5\" color ePaper display",
+      "score": 391,
+      "comments": 275,
+      "discussion_url": "https://news.ycombinator.com/item?id=50519354",
       "extra": {
         "top_comments": [
-          "Experienced teams gone with layoffs. AI based attacks smarter. Going forward its going to be part of life and cost of doing business. When these disruptions hit analog things (water, power, transportation) its going to be even crazier",
-          "It's whatever their integration is with a vendor that does weight and balance before the flight. Likely not the vendor, as that vendor serves many airlines.https://www.cbsnews.com/news/united-airlines-system-outage-d...",
-          "Complex systems won't survive the competency crisis."
+          "I was a huge fan of Trmnl when they first launched. I even convinced my friends to buy a few.Then the QA started to go down or the devices wouldn’t ship on time. On top of that, Ryan’s politics were a big turnoff.I would not buy another device from this company.",
+          "Yada yada 1.2k :(Man how long and often do I need to get my hopes up?You can't tell me that the company having the patent is so bad in making it cheaper and better so that the mass market would kick in?Or is there 0 mass market for things like that?Or is it really that expensive to make them bigger?Lets see who wins in a few years: The price going down or my wallet",
+          "Could this be the cheaper version directly sold by the Chinese supplier? https://www.epaperia.org/Mall/13.html Current price: $880"
+        ]
+      }
+    },
+    {
+      "id": "50519744",
+      "title": "Jiff 1.0: A datetime library for Rust",
+      "url": "https://burntsushi.net/jiff/",
+      "source": "Hacker News",
+      "published_at": "2026-11-16T16:53:39+00:00",
+      "summary": "Jiff 1.0: A datetime library for Rust",
+      "score": 370,
+      "comments": 81,
+      "discussion_url": "https://news.ycombinator.com/item?id=50519744",
+      "extra": {
+        "top_comments": [
+          "I maintained chrono for about half a decade, and the specific reason I took on maintenance was because the API sucked and I hoped I could make it better.Turns out, the reason people wanted to use it was because the API was stable and every slight step towards improvement was met with... resistance. I stopped maintaining it because the burnout from seeing what it could be and not seeing any path to get there was too much for me.I'm extremely grateful to burntsushi for writing the datetime library rust deserves. Chrono is stable and is maintained (though semi-deprecated) by an extremely reliable rustacean -- you don't need to leave, but you'll probably be happier if you do.",
+          "> When should I use Jiff? Jiff isn’t always the right thing to use.I really appreciate when a project calmly acknowledges that it's not the right tool for every use case, and is not trying to be. That's professional engineering.Especially in the AI-age, the crucial skill will be what NOT to implement.",
+          "From [0]:> Unlike “Comparison with other Rust datetime crates,” this document is opinionated. > [...] > Jiff is pronounced like “gif” with a soft “g,” as in “gem.”Burntsushi really did not hold back with this document being opinionated :-) (Though they are right, of course).[0] https://docs.rs/jiff/latest/jiff/_documentation/design/index..."
+        ]
+      }
+    },
+    {
+      "id": "50517602",
+      "title": "What is w2rt6byl5nf1opmc-a.com?",
+      "url": "https://jack.cab/blog/siterate",
+      "source": "Hacker News",
+      "published_at": "2026-11-16T13:51:38+00:00",
+      "summary": "What is w2rt6byl5nf1opmc-a.com?",
+      "score": 329,
+      "comments": 148,
+      "discussion_url": "https://news.ycombinator.com/item?id=50517602",
+      "extra": {
+        "top_comments": [
+          "This entire thing is a strange parallel universe for me. What are Tranco, Majestic, Faviconese? What is tapping on a website while forgetting it’s a website? Which 3-day exploit chain of doom?",
+          "To quote a terrific novel:\"The president of agalmic.holdings.root.184.97.AB5 is agalmic.holdings.root.184.97.201. The secretary is agalmic.holdings.root.184.D5, and the chair is agalmic.holdings.root.184.E8.FF. All the shares are owned by those companies in equal measure, and I can tell you that their regulations are written in Python. Have a nice day, now!\"",
+          "It was created 2026-11-11 at Cloudflare. Given the huge number of backlinks, I'm wondering if it's part of Cloudflare's Bot Fight mode or Cloudflare Turnstile related feature.It could be an interesting way to observe if certain crawlers are obeying robots headers by analysing scraped content, or could just be some element on the page itself and part of turnstile.If it was registered by the Cloudflare team, they might explain why."
         ]
       }
     },
     {
       "id": "50524767",
-      "title": "Optimizely Compromised, Served Malware on Zoom, GitLab",
+      "title": "Optimizely compromised, served malware on Zoom, GitLab",
       "url": "https://blog.report-uri.com/worlds-largest-brands-infected-with-malware-via-optimizely/",
       "source": "Hacker News",
       "published_at": "2026-11-16T23:00:34+00:00",
-      "summary": "Optimizely Compromised, Served Malware on Zoom, GitLab",
-      "score": 138,
-      "comments": 75,
+      "summary": "Optimizely compromised, served malware on Zoom, GitLab",
+      "score": 296,
+      "comments": 129,
       "discussion_url": "https://news.ycombinator.com/item?id=50524767",
       "extra": {
         "top_comments": [
           "The whole concept of Google Tag Manager was that you could give marketing departments the ability to add \"tags\" to the website without having to involve engineering. That's how we got 10MB of javascript with every news article.I hope folks are re-evaluating that now.",
           "This stuff is so avoidable but unless we implement meaningful reprocussions things aren't going to change. There is no accountability.In this case optimizely should have had better systems to spot a release like this (internal cool downs, check and balances, phased rolouts, automatic security checks). And sites that have massive user bases (cnn, bbc, etc..) have zero excuse to not have the same.I would go so far as to say those sites should not be serving from vendors but should be vendoring their own scripts that they also are passing through security audits and serving them selves with cool downs.How do these companies not have better dedication to protecting their users is beyond me.",
-          "This is exactly the kind of use case for NoScript - reduce exposure to potentially malicious content."
+          "Subresource Integrity has been available for over a decade. It’s time to start implementing it with these services."
         ]
       }
     },
     {
-      "id": "50523459",
-      "title": "OpenCode Browse",
-      "url": "https://opencode.ai/product/browse",
+      "id": "50520182",
+      "title": "Grazing sheep in fields with solar arrays",
+      "url": "https://news.cornell.edu/stories/2026/10/sheep-grazing-solar-fields-offers-farmers-economic-ecological-gains",
       "source": "Hacker News",
-      "published_at": "2026-11-16T21:20:37+00:00",
-      "summary": "OpenCode Browse",
-      "score": 137,
-      "comments": 62,
-      "discussion_url": "https://news.ycombinator.com/item?id=50523459",
+      "published_at": "2026-11-16T17:27:46+00:00",
+      "summary": "Grazing sheep in fields with solar arrays",
+      "score": 263,
+      "comments": 248,
+      "discussion_url": "https://news.ycombinator.com/item?id=50520182",
       "extra": {
         "top_comments": [
-          "Opencode vibe codes and releases like 3 projects a week at this points. Cool, just know its throwaway software to them. They seem really reckless when it comes to security. Opencode V2 basically threw security out the window. Theyve completely lost the plot as an org.Their CEO spends all day on twitter talking about how much better he is than everyone. And how nobody can use agents like he can. Its quite obnoxiousAlso just use CDP, way too many browser solutions for agents when chrome ships with the ability to control the browser at a low level.If you want to wrap it in a jsonrpc api for mcp, this is like 4 hrs or a work for an llm, point them at a pkg thats uses CDP like go-rod.",
-          "The functionality seems to overlap with the Playwright MCP server [0]. I've been using this instead of the built in browsers in Claude Code and Codex since it lets you grant access to pages and sessions that are already open. Of course one should be weary of the lethal trifecta when using these tools and use separate profiles for them.[0] https://playwright.dev/docs/getting-started-mcp",
-          "I was just looking into these \"chat with ai agent about a webpage\" browser extensions/projects/forks ... can someone help me sort out this field? it seems really busy.What I really want is like something that can search, use my own openai compatible server with, and I think that's it? I dunno what else these things do."
+          "There's a stretch in California Interstate 5 near the town of Coalinga where you will see acres and acres of cows baking under the naked sun in the summertime and they huddle next to each other to find a brief relief of nonexistent protection from the searing sun. You just wonder why their owners cannot come up with a single idea on how to give them shade. It's cruelty.",
+          "There are lots of use cases for solar with livestock and livestock + agriculture.China has fish farms with solar, reflection from water increases efficiency by 5%: https://www.youtube.com/watch?v=MgQVV0_75j0Livestock need shade, and grass doesn't need continuous shade grows better in shade in most tropical climates. If its too hot, grass dies off. Livestock also need ACs when temperatures reach 50+ centigrade, which can be powered by solar.Cows are ruminants, they lie down and ruminate for hours in shade.Except for goats, solar works with most animals.Solar can always be used as a fence (zero land use, zero interruption to machinery) and get paid at a higher rate in the mornings and evenings, extending solar production window by ~4 hours.Farming is tough and low status. All countries support farming with subsidies. The best use of farms is solar+ anything else. Photosynthesis is 6% efficiency (and it goes down to less than 1% when we use it for livestock feed or ethanol with conversion losses), solar is ~25%. Solar has zero opex and can run for 3 - 5 decades, output can be used directly.",
+          "The introduction of solar is something that my rural Appalachian county has dealt with recently.There was considerable pushback from the 60+ crowd and NIMBY types just like there is for everything new and different, but we got three permitted and are waiting on them to begin construction.The thing that got me was there was a lot of people that just made whatever argument they could to try and stop it. All kinds of arguments that people either didn't understand or didn't really believe in. They just knew they hated solar. I really couldn't wrap my head around it.From my perspective. It's a net good for our ranchers. We're mostly small family ranches, 200 head or less and the lease paid by the solar company helps these folks meet the bottom line. Beef prices won't stay up forever so it's a good time to diversify."
         ]
       }
     }
