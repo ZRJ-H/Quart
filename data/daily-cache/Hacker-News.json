@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-11-18T11:00:18.942951+08:00",
+  "cached_at": "2026-11-18T15:48:23.285265+08:00",
   "articles": [
     {
       "id": "50538240",
@@ -8,8 +8,8 @@
       "source": "Hacker News",
       "published_at": "2026-11-17T21:11:28+00:00",
       "summary": "Java4Shell: RCE in OpenJDK when processing Base64",
-      "score": 589,
-      "comments": 153,
+      "score": 822,
+      "comments": 214,
       "discussion_url": "https://news.ycombinator.com/item?id=50538240",
       "extra": {
         "top_comments": [
@@ -26,8 +26,8 @@
       "source": "Hacker News",
       "published_at": "2026-11-17T22:13:34+00:00",
       "summary": "Quad9's withdrawal from France: A canary in the coal mine",
-      "score": 337,
-      "comments": 95,
+      "score": 507,
+      "comments": 159,
       "discussion_url": "https://news.ycombinator.com/item?id=50538994",
       "extra": {
         "top_comments": [
@@ -38,20 +38,20 @@
       }
     },
     {
-      "id": "50535992",
-      "title": "Phrack 73 Released",
-      "url": "https://phrack.org/issues/73/introduction_md",
+      "id": "50540437",
+      "title": "ID.me terms required for IRS sign-in",
+      "url": "https://consumerrights.wiki/w/ID.me_terms_required_for_IRS_sign-in",
       "source": "Hacker News",
-      "published_at": "2026-11-17T18:31:25+00:00",
-      "summary": "Phrack 73 Released",
-      "score": 292,
-      "comments": 46,
-      "discussion_url": "https://news.ycombinator.com/item?id=50535992",
+      "published_at": "2026-11-18T00:51:45+00:00",
+      "summary": "ID.me terms required for IRS sign-in",
+      "score": 317,
+      "comments": 138,
+      "discussion_url": "https://news.ycombinator.com/item?id=50540437",
       "extra": {
         "top_comments": [
-          "The computer security space has changed quite a bit from when I first learned of Phrack in the 90s-00s and would see plenty of \"how to pwn the phone company\" type articles. So like...when I see an exploit in the latest issue of Phrack (like the docker escape in this issue)...has it already been responsibly disclosed, given a CVE, etc? Or do they just drop 'em out of nowhere?",
-          "Interesting: https://archives.phrack.org/issues/73/10.txt2600, ccc.de, astalavista sk box, spaghettihackers and warez... cool stuff. Brrr, thinking to revive emule.",
-          "Might I just add, I like how unpolished these magazines are/were; how unpolished and open expectations engendered more freedom of expression.Sometimes, comments here on HN are like resumes, makes me reticent to comment out of not wanting to seem out of touch or whatever."
+          "It is impossible to sign up for ID.me if you do not use a smartphone. I know a person who is in this situation who has bonds in Treasury Direct that they now apparently cannot cash out. It's absolutely nuts that a federal agency partnered with a disreputable third party that operates in this manner.The federal government says that all agencies need to offer logins via login.gov within two years [1]. For everyone's sake, hopefully this actually comes to fruition.[1] https://www.nextgov.com/digital-government/2026/08/white-hou...",
+          "Just a heads up, not sure when this changed, but it looks like you can login to irs.gov using login.gov.See https://sa.www4.irs.gov/ola",
+          "I was completely unable to complete ID.me verification. ID.me can't cope with the fact that the address printed on my ID is one digit different from the one on my utility bills (because logical and physical streetnumbers don't always correspond)..."
         ]
       }
     },
@@ -62,14 +62,32 @@
       "source": "Hacker News",
       "published_at": "2026-11-17T19:25:27+00:00",
       "summary": "350 years ago, Ole Rømer discovered that light has a finite speed",
-      "score": 262,
-      "comments": 78,
+      "score": 317,
+      "comments": 92,
       "discussion_url": "https://news.ycombinator.com/item?id=50536813",
       "extra": {
         "top_comments": [
           "I created a web comic based on this measurement! https://randomlyunique.com/plancky/2018/roemers-speed-of-lig...",
-          "A wonderful trilogy of sci-fi books by Greg Egan where the speed of light is not constant (a function of frequency) and how that impacts society.https://a.co/d/0fZNXGxD",
-          "I don’t quite understand this. The length of the eclipse would be the same, right? Or was it more like that the eclipse ended 10 minutes earlier on the wall clock than expected? I guess what would surprise me about that is:1. I didn’t know clocks were that good by then to make that reliably measurable.2. I didn’t realize clocks of the time could measure the period of the eclipse that accurately. Like say one took 24 hours and 7 minutes. If you’re off by 30 seconds, and you’re making a prediction today of when the eclipse would happen six months from now, you could easily be off 90 minutes just based on cumulative error.The discovery seems easy enough given today’s widespread access to atomic clocks, but extra freaking impressive with clocks from the 1600s."
+          "I don’t quite understand this. The length of the eclipse would be the same, right? Or was it more like that the eclipse ended 10 minutes earlier on the wall clock than expected? I guess what would surprise me about that is:1. I didn’t know clocks were that good by then to make that reliably measurable.2. I didn’t realize clocks of the time could measure the period of the eclipse that accurately. Like say one took 24 hours and 7 minutes. If you’re off by 30 seconds, and you’re making a prediction today of when the eclipse would happen six months from now, you could easily be off 90 minutes just based on cumulative error.The discovery seems easy enough given today’s widespread access to atomic clocks, but extra freaking impressive with clocks from the 1600s.",
+          "Lightspeed[0] is a fascinating book that documents the scientists and experiments that built up to the modern measurement of the speed of light. It's interesting to see how prevailing theories of the aether and the nature of light fall to scientific scrutiny. The author details each speed of light estimate as the book goes on, and we get to see it converging on the modern value toward the end. Highly recommend if you're into the history of science.[0]: https://www.goodreads.com/en/book/show/46179037-lightspeed"
+        ]
+      }
+    },
+    {
+      "id": "50540178",
+      "title": "Google's AI answers reducing search traffic by 40%",
+      "url": "https://revscope.co/blog/search-seo-geo-2026/",
+      "source": "Hacker News",
+      "published_at": "2026-11-18T00:17:58+00:00",
+      "summary": "Google's AI answers reducing search traffic by 40%",
+      "score": 311,
+      "comments": 243,
+      "discussion_url": "https://news.ycombinator.com/item?id=50540178",
+      "extra": {
+        "top_comments": [
+          "When you typed who is on snl tonight? You used to get 10 pages of clickbait that made you scroll down endlessly for the answer. The best product for most questions is to just give you the answer. That said, the death of discovery is worth mourning. I hope someone solves it but this was dying before ai came along. SEO killed the web, AI killed SEO, and so it goes…",
+          "If Google didn’t put those there, people would be going to other LLMs to get their answers quickly. I don’t know how this ends but I strongly doubt any unilateral effort to withhold llm service by Google changes the medium term outcome.",
+          "As someone who did a fair amount of SEO in the past - good. Search sucked so bad for the last decade and maybe AI can actually sift through all garbage better than whatever-nothing google's pagerank tried to do.The only danger right now is that people will gate information or stop creating. I think we desperately need cheap easy blogging networks like reddit where people can journal their findings and opinions without restriction because people always want to share, even without being rewarded."
         ]
       }
     },
@@ -80,14 +98,14 @@
       "source": "Hacker News",
       "published_at": "2026-11-17T19:50:40+00:00",
       "summary": "jQuery 4.1.0",
-      "score": 260,
-      "comments": 145,
+      "score": 311,
+      "comments": 160,
       "discussion_url": "https://news.ycombinator.com/item?id=50537156",
       "extra": {
         "top_comments": [
+          "The composability of jQuery has been an inspiration for the way I design my own frameworks and tools.One thing I still regularly use jQuery for, though, that's rarely mentioned, is its event model. You can put a listener on any object, not just things in the DOM. Any data object can trigger an event. This is incredibly powerful for isolating logic from DOM elements and events. A frequent use case is for DOM elements to contain a reference to a data object that may be replicated elsewhere on the page. The data object sets up and tears down visual elements, listening for interaction, then dispatches a custom event. Your core logic listens for events on the data object instead of on every individual element that might refer to it. I usually delegate the draw routine for e.g. html snippets of a card or an interactive element to the data object itself in a draw() function that returns a string which incidentally jQuery handles quite nicely inserting into the DOM without needing to explicitly call createElement.I wrote my own implementation of this a long time ago, but in the end, that feature plus the other ergonomics of jQuery still make it my go-to today over vanilla js. And pretty much everything I write is without any reactive framework (other than my own vanilla component/templating/remoting system), so the overhead is barely noticeable.",
           "Although jQuery isn't very relevant these days, I still find its pattern of chaining a sequence of methods on a set chosen by a selector to be a beautiful example of going with a language's features.",
-          "I'm a tad surprised jQuery still exists, though it's kinda neat it does. Always interesting to see historical projects with less and less modern day relevance get continued like this.And while most of the use cases for jQuery have long since died out with things like classList, querySelector, etc, I do feel there's probably value in a framework that focuses on minor enhancements to a site rather than being the backbone of the whole thing. Like if you want a React or Angular or Vue equivalent, something like jQuery would be a terrible choice, but a lot of sites are static ones where the only scripting needed would be for minor things like dropdown menus or slideshows, and I can see a modern, lean library like this being a decent choice there.",
-          "I don't think I'd reach for jQuery ever again, but I'd used it extensively fifteen years ago. I'm glad it's still alive and kicking. When it's already in a project that I'm making changes to, it's a cute way to do stuff easily that would be a pain with vanilla dom."
+          "I'm a tad surprised jQuery still exists, though it's kinda neat it does. Always interesting to see historical projects with less and less modern day relevance get continued like this.And while most of the use cases for jQuery have long since died out with things like classList, querySelector, etc, I do feel there's probably value in a framework that focuses on minor enhancements to a site rather than being the backbone of the whole thing. Like if you want a React or Angular or Vue equivalent, something like jQuery would be a terrible choice, but a lot of sites are static ones where the only scripting needed would be for minor things like dropdown menus or slideshows, and I can see a modern, lean library like this being a decent choice there."
         ]
       }
     },
@@ -98,14 +116,14 @@
       "source": "Hacker News",
       "published_at": "2026-11-17T18:56:17+00:00",
       "summary": "Solid 2.0",
-      "score": 241,
-      "comments": 63,
+      "score": 288,
+      "comments": 85,
       "discussion_url": "https://news.ycombinator.com/item?id=50536387",
       "extra": {
         "top_comments": [
           "What's amusing and/or interesting is that the stuff under \"Built to Be Written by Agents\" also would make it easier to write by hand, I imagine. It's just better debug diagnostics; nothing really to do with agentic development specifically.Maybe that's just marketing, but it's really intriguing how human best practices are also agent best practices; how, maybe, we've reached a point where even devs aren't recognizing agent best practices as human best practices anymore; and how suddenly best practices are being prioritized in a way they often weren't - humans could/would/were expected to suck it up and deal with poor devex, but agents simply can't. A strange sort of victory for us folks who cared about it.",
           "Remix originally pitched itself as solving the 'middle' layer between frontend and backend. Closing the gap. It never quite managed to do so imo.Solid's solution here is beautiful. The server RPC and 'live' and 'broadcast' are seamless, and feel much more natural to use than liveview or htmx/datastar imo.",
-          "Still waiting for Vue 3.6 Vapor to be released which is supposed to be more competitive with these frameworks like Svelte and Solid in performance. Vue 3.5 came out in Sept 2024 and I've ported a lot of code off Vue since then."
+          "A gist I wrote about my experience migrating from Solid 1.0 to Solid 2.0 (RC) a couple of months ago: https://gist.github.com/FlameWolf/7b3be7acb06775f02ea4a57297..."
         ]
       }
     },
@@ -116,32 +134,14 @@
       "source": "Hacker News",
       "published_at": "2026-11-17T23:18:49+00:00",
       "summary": "Microsoft's ONNX Runtime has disappeared from GitHub",
-      "score": 154,
-      "comments": 37,
+      "score": 274,
+      "comments": 62,
       "discussion_url": "https://news.ycombinator.com/item?id=50539610",
       "extra": {
         "top_comments": [
+          "Microsoft Agent Framework has been compromised[0]. The repo is also offline[1]. Possibly related?[0] https://socket.dev/blog/agent-framework-pypi-package-comprom...[1] https://github.com/microsoft/agent-framework",
           "Maybe related to one of their packages that was compromised? Not sure if GitHub was the attack vector, but possibly tidying stuff upSource: https://opensourcemalware.com/blog/agent-framework-pypi-comp...",
-          "FYI - ONNX will automatically exfiltrate data about your application with no way to opt out other than building it from source with telemetry disabled. Maybe you could block DNS too.",
-          "I wonder if they found new vectors that backdoor'ed models could exploit, like that discussed in the most recent Phrack [^0][0]: https://phrack.org/issues/73/backdoor-attacks-against-machin..."
-        ]
-      }
-    },
-    {
-      "id": "50540437",
-      "title": "ID.me terms required for IRS sign-in",
-      "url": "https://consumerrights.wiki/w/ID.me_terms_required_for_IRS_sign-in",
-      "source": "Hacker News",
-      "published_at": "2026-11-18T00:51:45+00:00",
-      "summary": "ID.me terms required for IRS sign-in",
-      "score": 135,
-      "comments": 48,
-      "discussion_url": "https://news.ycombinator.com/item?id=50540437",
-      "extra": {
-        "top_comments": [
-          "It is impossible to sign up for ID.me if you do not use a smartphone. I know a person who is in this situation who has bonds in Treasury Direct that they now apparently cannot cash out. It's absolutely nuts that a federal agency partnered with a disreputable third party that operates in this manner.The federal government says that all agencies need to offer logins via login.gov within two years [1]. For everyone's sake, hopefully this actually comes to fruition.[1] https://www.nextgov.com/digital-government/2026/08/white-hou...",
-          "ID.me was the only SSO service my mother could actually use, because she has a prepaid cell and VOIP for household phone, both of which login.gov rejects on principle.",
-          "Just a heads up, not sure when this changed, but it looks like you can login to irs.gov using login.gov.See https://sa.www4.irs.gov/ola"
+          "FYI - ONNX will automatically exfiltrate data about your application with no way to opt out other than building it from source with telemetry disabled. Maybe you could block DNS too."
         ]
       }
     }
