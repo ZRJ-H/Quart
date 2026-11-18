@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-11-17T16:14:47.612918+08:00",
+  "cached_at": "2026-11-18T11:00:18.942951+08:00",
   "articles": [
     {
-      "id": "50522980",
-      "title": "Carnegie Mellon is putting computer science courses on YouTube for free",
-      "url": "https://www.cs.cmu.edu/learn/",
+      "id": "50538240",
+      "title": "Java4Shell: RCE in OpenJDK when processing Base64",
+      "url": "https://calif.io/java4shell/",
       "source": "Hacker News",
-      "published_at": "2026-11-16T20:43:36+00:00",
-      "summary": "Carnegie Mellon is putting computer science courses on YouTube for free",
-      "score": 1348,
-      "comments": 188,
-      "discussion_url": "https://news.ycombinator.com/item?id=50522980",
+      "published_at": "2026-11-17T21:11:28+00:00",
+      "summary": "Java4Shell: RCE in OpenJDK when processing Base64",
+      "score": 589,
+      "comments": 153,
+      "discussion_url": "https://news.ycombinator.com/item?id=50538240",
       "extra": {
         "top_comments": [
-          "Hi! I'm Phillip Compeau, I teach in Carnegie Mellon's Griffin School of Computer Science, and I run CS Learn, which launched today.We're releasing full semesters of lectures from current CMU computer science courses across a variety of topics, with one course premiering each day this week. More courses come in January.Yes, MIT got here 25 years ago :). What I'm excited about is how we're doing it: a few of our students built tools that automate a lot of the production work, so a small team can get a course out quickly and still have people review every lecture.We'll have lots more coming across a wide array of subjects. I'd love to know if there are topics you would like to see us cover!",
-          "To those asking why this is still valuable in the age of AI?If you learn the fundamentals properly, then AI will be a power tool for you. If you don’t, then it will replace you.I don’t mean this in an aggressive “you better get used to it” sense, I realize there’s nuance - but this is the version that fits on a T-shirt.",
-          "CMU Alum here. Really glad to see Tianqi Chen's ML Systems being offered up. I had just started working through their book https://mlc.ai/modern-gpu-programming-for-mlsys/ so it should complement nicely.Are requests for courses being accepted? :)If yes, may I humbly request Larry Wasserman's Intermediate Statistics, Dave Andersen's Distributed Systems and Dave Eckhardt's Operating Systems (or whoever is teaching it now)."
+          "From the section on performing heap grooming over the network (\"Remote Heap Feng Shui\"):> The current attack is sensitive to network conditions, like RTT and jitter. Low, stable round-trip times are preferred for a more reliable attack. In our controlled environment, we performed this attack over the internet through public IP addresses instead of just assuming perfect laboratory conditions. For the current attack path to achieve optimal stability and reliability in exploitation, Calif turned to physics and utilized money to solve the problem, rather than experimenting with TCP/IP stack configuration. In other words, Calif rented another VM in the same region as our target.And the \"Limitations\" section:> There is no universal payload. Each chain needs a decoder route, a live writer, a returned reader or another feedback path, a heap layout, and an application action. Every target needs a bespoke profile. The exploit is not a universal point-and-shoot.Based on the complexity and constraints, short-term mass-exploitation seems unlikely. It will take some time before there are reliable exploits, and they may require running on infra close to the target.But a long tail of unpatched java applications/services at high-value targets getting exploited, seems plausible to me.",
+          "Super impressive work by Calif as usual.The exploit conditions are very specific but there are still going to be a lot of hosts impacted. We at Semgrep published some free detection scripts here: https://github.com/semgrep/detection-scripts/tree/main/CVE-2...They look for these five conditions: * HotSpot VM: any OpenJDK build, Oracle JDK, or GraalVM JDK. Only HotSpot generates the stub. OpenJ9 and GCJ are OK. Azul Prime (Zing), which replaces C2 with its own JIT, and any VM name not recognized as HotSpot are [?], never [!]. * x86-64 JVM on an x86-64 host. * Version 17.0.6 or later, not at or above a version listed in FIXED_IN, and no newer than the newest releases checked (see below). Newer versions are [?]: they may carry the fix. * The JVM reports avx512_vbmi and avx512bw, and UseAVX >= 3. * Base64 intrinsics are on and C2/JVMCI can compile. These turn it off: -XX:-UseBASE64Intrinsics, -XX:DisableIntrinsic=_base64_decodeBlock, -Xint, -XX:TieredStopAtLevel below 4.",
+          "What’s that old Chinese proverb? “May you live in interesting times”? It feels like we’re living in interesting times. How long will it take for a bad actor to seriously compromise critical infrastructure? My bet is within six months.The upside is that it’ll force legacy institutions and organizations with sub-par security to get good at security and modernize their legacy stacks. That, or get pwned in short order."
         ]
       }
     },
     {
-      "id": "50524736",
-      "title": "Windows 11 Is Collecting Data on Which Coding Agents and Developer Tools You Use",
-      "url": "https://xusheng.dev/posts/windows-coding-agent-telemetry/",
+      "id": "50538994",
+      "title": "Quad9's withdrawal from France: A canary in the coal mine",
+      "url": "https://blog.cloudflare.com/quad9-withdrawal-from-france/",
       "source": "Hacker News",
-      "published_at": "2026-11-16T22:58:20+00:00",
-      "summary": "Windows 11 Is Collecting Data on Which Coding Agents and Developer Tools You Use",
-      "score": 542,
-      "comments": 381,
-      "discussion_url": "https://news.ycombinator.com/item?id=50524736",
+      "published_at": "2026-11-17T22:13:34+00:00",
+      "summary": "Quad9's withdrawal from France: A canary in the coal mine",
+      "score": 337,
+      "comments": 95,
+      "discussion_url": "https://news.ycombinator.com/item?id=50538994",
       "extra": {
         "top_comments": [
-          "Just as AI has advanced massively in the past two years, I think a lot of gamers would be shocked at how viable Linux is as a genuine gaming platform in 2026. I already have plans to switch from Windows to Linux, I even have Linux running from an external drive to play with it.The vast vast majority of single player games are 100% perfect on Linux. Multiplayer still has lots of hiccups.",
-          "I've been a heavy macOS user for dev work since early adolescence. Before that I used FreeBSD, so I'm comfortable with the command line. (Yes, you read that right.) But it's been a while since I used anything other than macOS for serious development work. A lot of the shenanigans around macOS Tahoe made me seriously consider switching to Linux. Last month I finally got the gumption and set up a Linux desktop how I like it.I see no reason why any developer, other than someone writing something for the Windows platform specifically, should not be using Linux over Windows. MacOS has a ton of polish in so many places—but then there are all these little paper cuts that keep coming: funny little bugs that interrupt work or make you scratch your head. Peeking over the garden wall into Windows' garden only seems worse. Linux by comparison is awesome! I look forward to spending my day on my Linux desktop.Seriously, if you do dev work, do yourself a favor and boot up—I dunno, maybe Fedora Silverblue—on a separate partition and force yourself to work on it for a day or two. Use an LLM to diagnose issues as they come up. (I had some serious stability issues; Claude suggested it was a memory issue; running memtest86 told me I had bad RAM—fixing that and all problems went away.) You'll find that your system is quieter and less distracting.I still don't think Linux is for \"average users\"—even though most people probably only need a web browser. But if you have gone anywhere near a command line in your life, it will be worth the switch.",
-          "For anyone on the fence about switching from Windows to Linux: it takes about a week, if that, of adjusting. If most of what you do is on the Web already (and the services you use provide a Web-based client), you have nothing to lose but your chains.Take your pick - Ubuntu, Fedora, someone else mentioned Mint. All fine choices, no wrong answers."
+          "(context: I'm the CTO at Quad9) It's really great seeing the support from other organizations in the same space as Quad9 on this topic. Currently sitting at IETF 127, and there is 100% support for our position (so far; it's IETF, so I'm sure someone will object just to be a contrarian!) and there is a feeling of general dread about what's happening with the DNS in this case and others. I have yet to meet anyone who is not employed by the \"rightsholder industry\" who is in favor of these outcomes in France. Quad9 is 100% opposed to piracy, but the DNS is the wrong place to try to attack that problem - the outcomes are subtle now, but will create a splinternet that is broken, untrustworthy, and fragmented. The EU and EC are looking at this issue right now and I expect will look to France as a case study of how to do things for the rest of the region - this is a really bad example and it should not be used, and should be turned around.So you want to help? Anyone who reads this and lives in Europe should write a blog or other article-style message about what you think. In French? Not necessary, but even better. Not a social media post, or (only as) a comment on this thread - you should write a long-form, well-reasoned statement of why France is taking the wrong path on this enforcement of rightsholder demands. Make sure your post is scrape-able by search engines and AI. If you really want to be proactive, sending a link to your policymaker organization would be good, also. Post/link it here, maybe.",
+          "The 2000s era was so strong for European internet freedoms with Bittorrent/early TOR/anonymous hosting providers. It's a shame it has completely vanished, what went wrong?",
+          "The overregulation of the internet is really so horrible and shortsighted."
         ]
       }
     },
     {
-      "id": "50523601",
-      "title": "BugMeNot has closed",
-      "url": "https://www.bugmenot.com/",
+      "id": "50535992",
+      "title": "Phrack 73 Released",
+      "url": "https://phrack.org/issues/73/introduction_md",
       "source": "Hacker News",
-      "published_at": "2026-11-16T21:32:17+00:00",
-      "summary": "BugMeNot has closed",
-      "score": 495,
-      "comments": 223,
-      "discussion_url": "https://news.ycombinator.com/item?id=50523601",
+      "published_at": "2026-11-17T18:31:25+00:00",
+      "summary": "Phrack 73 Released",
+      "score": 292,
+      "comments": 46,
+      "discussion_url": "https://news.ycombinator.com/item?id=50535992",
       "extra": {
         "top_comments": [
-          "Bevan and Guy founded that site and realized that the UX was perfect for sharing coupons and launched RetailMeNot.com from it, leveraging BMN’s crazy high PageRank to propel RMN to the top of Google. Not to mention the ease of use and social aspects way ahead of its time.They were able to join a handful of retailer affiliate programs and were probably clearing tens of millions a year in affiliate commissions with no overhead. Then they sold it to WhaleShark Media (funded by Google Ventures among others) and IPO’d it in 2016, cashing in a second time.Honestly one of the most impressive bootstrap stories you’ll ever find.",
-          "Not much info on this page, so here's the Wikipedia if you don't know what BugMeNot is (er, was):https://en.wikipedia.org/wiki/BugMeNot",
-          "There are a fair number of \"temporary or hidden email\" systems that can replace this. It's just the convenience factor of not having to create another stupid temp email just to log into a website for 5 minutes. Then do you save the password you had to create or create another account later.1. Search for \"temporary email\", there are zillions of these. Some services detect that they are special temporary emails, many don't. They have tons of domains, always creating new ones, then you can get a random email on that domain. Many of them even let you log back in later if you save off the password.2. Use duck duck go - Lots of folks must be using ddg to create a new email that hides their underlying email, even my non technical spouse uses it. Most sites accept this today, even reddit.3. catch all domains. If you have your own domain, you can set it up so @your_domain.com will go to you. With the latest \"advance\" from the modern world's anonymization destroying stuff, you have to figure out how to setup dkim and dmarc etc.I think we'll all be polluting our account/pw software with thousands of these. A huge hunk of junk."
+          "The computer security space has changed quite a bit from when I first learned of Phrack in the 90s-00s and would see plenty of \"how to pwn the phone company\" type articles. So like...when I see an exploit in the latest issue of Phrack (like the docker escape in this issue)...has it already been responsibly disclosed, given a CVE, etc? Or do they just drop 'em out of nowhere?",
+          "Interesting: https://archives.phrack.org/issues/73/10.txt2600, ccc.de, astalavista sk box, spaghettihackers and warez... cool stuff. Brrr, thinking to revive emule.",
+          "Might I just add, I like how unpolished these magazines are/were; how unpolished and open expectations engendered more freedom of expression.Sometimes, comments here on HN are like resumes, makes me reticent to comment out of not wanting to seem out of touch or whatever."
         ]
       }
     },
     {
-      "id": "50519354",
-      "title": "Frame – 31.5\" color ePaper display",
-      "url": "https://trmnl.com/blog/introducing-frame",
+      "id": "50536813",
+      "title": "350 years ago, Ole Rømer discovered that light has a finite speed",
+      "url": "https://www.sciencenorway.no/culture-history-history-of-science/350-years-ago-this-man-discovered-that-light-has-a-finite-speed/2737969",
       "source": "Hacker News",
-      "published_at": "2026-11-16T16:23:22+00:00",
-      "summary": "Frame – 31.5\" color ePaper display",
-      "score": 391,
-      "comments": 275,
-      "discussion_url": "https://news.ycombinator.com/item?id=50519354",
+      "published_at": "2026-11-17T19:25:27+00:00",
+      "summary": "350 years ago, Ole Rømer discovered that light has a finite speed",
+      "score": 262,
+      "comments": 78,
+      "discussion_url": "https://news.ycombinator.com/item?id=50536813",
       "extra": {
         "top_comments": [
-          "I was a huge fan of Trmnl when they first launched. I even convinced my friends to buy a few.Then the QA started to go down or the devices wouldn’t ship on time. On top of that, Ryan’s politics were a big turnoff.I would not buy another device from this company.",
-          "Yada yada 1.2k :(Man how long and often do I need to get my hopes up?You can't tell me that the company having the patent is so bad in making it cheaper and better so that the mass market would kick in?Or is there 0 mass market for things like that?Or is it really that expensive to make them bigger?Lets see who wins in a few years: The price going down or my wallet",
-          "Could this be the cheaper version directly sold by the Chinese supplier? https://www.epaperia.org/Mall/13.html Current price: $880"
+          "I created a web comic based on this measurement! https://randomlyunique.com/plancky/2018/roemers-speed-of-lig...",
+          "A wonderful trilogy of sci-fi books by Greg Egan where the speed of light is not constant (a function of frequency) and how that impacts society.https://a.co/d/0fZNXGxD",
+          "I don’t quite understand this. The length of the eclipse would be the same, right? Or was it more like that the eclipse ended 10 minutes earlier on the wall clock than expected? I guess what would surprise me about that is:1. I didn’t know clocks were that good by then to make that reliably measurable.2. I didn’t realize clocks of the time could measure the period of the eclipse that accurately. Like say one took 24 hours and 7 minutes. If you’re off by 30 seconds, and you’re making a prediction today of when the eclipse would happen six months from now, you could easily be off 90 minutes just based on cumulative error.The discovery seems easy enough given today’s widespread access to atomic clocks, but extra freaking impressive with clocks from the 1600s."
         ]
       }
     },
     {
-      "id": "50519744",
-      "title": "Jiff 1.0: A datetime library for Rust",
-      "url": "https://burntsushi.net/jiff/",
+      "id": "50537156",
+      "title": "jQuery 4.1.0",
+      "url": "https://github.com/jquery/jquery/releases/tag/4.1.0",
       "source": "Hacker News",
-      "published_at": "2026-11-16T16:53:39+00:00",
-      "summary": "Jiff 1.0: A datetime library for Rust",
-      "score": 370,
-      "comments": 81,
-      "discussion_url": "https://news.ycombinator.com/item?id=50519744",
+      "published_at": "2026-11-17T19:50:40+00:00",
+      "summary": "jQuery 4.1.0",
+      "score": 260,
+      "comments": 145,
+      "discussion_url": "https://news.ycombinator.com/item?id=50537156",
       "extra": {
         "top_comments": [
-          "I maintained chrono for about half a decade, and the specific reason I took on maintenance was because the API sucked and I hoped I could make it better.Turns out, the reason people wanted to use it was because the API was stable and every slight step towards improvement was met with... resistance. I stopped maintaining it because the burnout from seeing what it could be and not seeing any path to get there was too much for me.I'm extremely grateful to burntsushi for writing the datetime library rust deserves. Chrono is stable and is maintained (though semi-deprecated) by an extremely reliable rustacean -- you don't need to leave, but you'll probably be happier if you do.",
-          "> When should I use Jiff? Jiff isn’t always the right thing to use.I really appreciate when a project calmly acknowledges that it's not the right tool for every use case, and is not trying to be. That's professional engineering.Especially in the AI-age, the crucial skill will be what NOT to implement.",
-          "From [0]:> Unlike “Comparison with other Rust datetime crates,” this document is opinionated. > [...] > Jiff is pronounced like “gif” with a soft “g,” as in “gem.”Burntsushi really did not hold back with this document being opinionated :-) (Though they are right, of course).[0] https://docs.rs/jiff/latest/jiff/_documentation/design/index..."
+          "Although jQuery isn't very relevant these days, I still find its pattern of chaining a sequence of methods on a set chosen by a selector to be a beautiful example of going with a language's features.",
+          "I'm a tad surprised jQuery still exists, though it's kinda neat it does. Always interesting to see historical projects with less and less modern day relevance get continued like this.And while most of the use cases for jQuery have long since died out with things like classList, querySelector, etc, I do feel there's probably value in a framework that focuses on minor enhancements to a site rather than being the backbone of the whole thing. Like if you want a React or Angular or Vue equivalent, something like jQuery would be a terrible choice, but a lot of sites are static ones where the only scripting needed would be for minor things like dropdown menus or slideshows, and I can see a modern, lean library like this being a decent choice there.",
+          "I don't think I'd reach for jQuery ever again, but I'd used it extensively fifteen years ago. I'm glad it's still alive and kicking. When it's already in a project that I'm making changes to, it's a cute way to do stuff easily that would be a pain with vanilla dom."
         ]
       }
     },
     {
-      "id": "50517602",
-      "title": "What is w2rt6byl5nf1opmc-a.com?",
-      "url": "https://jack.cab/blog/siterate",
+      "id": "50536387",
+      "title": "Solid 2.0",
+      "url": "https://www.solidjs.com/blog/solid-2-0-the-long-hold/",
       "source": "Hacker News",
-      "published_at": "2026-11-16T13:51:38+00:00",
-      "summary": "What is w2rt6byl5nf1opmc-a.com?",
-      "score": 329,
-      "comments": 148,
-      "discussion_url": "https://news.ycombinator.com/item?id=50517602",
+      "published_at": "2026-11-17T18:56:17+00:00",
+      "summary": "Solid 2.0",
+      "score": 241,
+      "comments": 63,
+      "discussion_url": "https://news.ycombinator.com/item?id=50536387",
       "extra": {
         "top_comments": [
-          "This entire thing is a strange parallel universe for me. What are Tranco, Majestic, Faviconese? What is tapping on a website while forgetting it’s a website? Which 3-day exploit chain of doom?",
-          "To quote a terrific novel:\"The president of agalmic.holdings.root.184.97.AB5 is agalmic.holdings.root.184.97.201. The secretary is agalmic.holdings.root.184.D5, and the chair is agalmic.holdings.root.184.E8.FF. All the shares are owned by those companies in equal measure, and I can tell you that their regulations are written in Python. Have a nice day, now!\"",
-          "It was created 2026-11-11 at Cloudflare. Given the huge number of backlinks, I'm wondering if it's part of Cloudflare's Bot Fight mode or Cloudflare Turnstile related feature.It could be an interesting way to observe if certain crawlers are obeying robots headers by analysing scraped content, or could just be some element on the page itself and part of turnstile.If it was registered by the Cloudflare team, they might explain why."
+          "What's amusing and/or interesting is that the stuff under \"Built to Be Written by Agents\" also would make it easier to write by hand, I imagine. It's just better debug diagnostics; nothing really to do with agentic development specifically.Maybe that's just marketing, but it's really intriguing how human best practices are also agent best practices; how, maybe, we've reached a point where even devs aren't recognizing agent best practices as human best practices anymore; and how suddenly best practices are being prioritized in a way they often weren't - humans could/would/were expected to suck it up and deal with poor devex, but agents simply can't. A strange sort of victory for us folks who cared about it.",
+          "Remix originally pitched itself as solving the 'middle' layer between frontend and backend. Closing the gap. It never quite managed to do so imo.Solid's solution here is beautiful. The server RPC and 'live' and 'broadcast' are seamless, and feel much more natural to use than liveview or htmx/datastar imo.",
+          "Still waiting for Vue 3.6 Vapor to be released which is supposed to be more competitive with these frameworks like Svelte and Solid in performance. Vue 3.5 came out in Sept 2024 and I've ported a lot of code off Vue since then."
         ]
       }
     },
     {
-      "id": "50524767",
-      "title": "Optimizely compromised, served malware on Zoom, GitLab",
-      "url": "https://blog.report-uri.com/worlds-largest-brands-infected-with-malware-via-optimizely/",
+      "id": "50539610",
+      "title": "Microsoft's ONNX Runtime has disappeared from GitHub",
+      "url": "https://github.com/microsoft/onnxruntime",
       "source": "Hacker News",
-      "published_at": "2026-11-16T23:00:34+00:00",
-      "summary": "Optimizely compromised, served malware on Zoom, GitLab",
-      "score": 296,
-      "comments": 129,
-      "discussion_url": "https://news.ycombinator.com/item?id=50524767",
+      "published_at": "2026-11-17T23:18:49+00:00",
+      "summary": "Microsoft's ONNX Runtime has disappeared from GitHub",
+      "score": 154,
+      "comments": 37,
+      "discussion_url": "https://news.ycombinator.com/item?id=50539610",
       "extra": {
         "top_comments": [
-          "The whole concept of Google Tag Manager was that you could give marketing departments the ability to add \"tags\" to the website without having to involve engineering. That's how we got 10MB of javascript with every news article.I hope folks are re-evaluating that now.",
-          "This stuff is so avoidable but unless we implement meaningful reprocussions things aren't going to change. There is no accountability.In this case optimizely should have had better systems to spot a release like this (internal cool downs, check and balances, phased rolouts, automatic security checks). And sites that have massive user bases (cnn, bbc, etc..) have zero excuse to not have the same.I would go so far as to say those sites should not be serving from vendors but should be vendoring their own scripts that they also are passing through security audits and serving them selves with cool downs.How do these companies not have better dedication to protecting their users is beyond me.",
-          "Subresource Integrity has been available for over a decade. It’s time to start implementing it with these services."
+          "Maybe related to one of their packages that was compromised? Not sure if GitHub was the attack vector, but possibly tidying stuff upSource: https://opensourcemalware.com/blog/agent-framework-pypi-comp...",
+          "FYI - ONNX will automatically exfiltrate data about your application with no way to opt out other than building it from source with telemetry disabled. Maybe you could block DNS too.",
+          "I wonder if they found new vectors that backdoor'ed models could exploit, like that discussed in the most recent Phrack [^0][0]: https://phrack.org/issues/73/backdoor-attacks-against-machin..."
         ]
       }
     },
     {
-      "id": "50520182",
-      "title": "Grazing sheep in fields with solar arrays",
-      "url": "https://news.cornell.edu/stories/2026/10/sheep-grazing-solar-fields-offers-farmers-economic-ecological-gains",
+      "id": "50540437",
+      "title": "ID.me terms required for IRS sign-in",
+      "url": "https://consumerrights.wiki/w/ID.me_terms_required_for_IRS_sign-in",
       "source": "Hacker News",
-      "published_at": "2026-11-16T17:27:46+00:00",
-      "summary": "Grazing sheep in fields with solar arrays",
-      "score": 263,
-      "comments": 248,
-      "discussion_url": "https://news.ycombinator.com/item?id=50520182",
+      "published_at": "2026-11-18T00:51:45+00:00",
+      "summary": "ID.me terms required for IRS sign-in",
+      "score": 135,
+      "comments": 48,
+      "discussion_url": "https://news.ycombinator.com/item?id=50540437",
       "extra": {
         "top_comments": [
-          "There's a stretch in California Interstate 5 near the town of Coalinga where you will see acres and acres of cows baking under the naked sun in the summertime and they huddle next to each other to find a brief relief of nonexistent protection from the searing sun. You just wonder why their owners cannot come up with a single idea on how to give them shade. It's cruelty.",
-          "There are lots of use cases for solar with livestock and livestock + agriculture.China has fish farms with solar, reflection from water increases efficiency by 5%: https://www.youtube.com/watch?v=MgQVV0_75j0Livestock need shade, and grass doesn't need continuous shade grows better in shade in most tropical climates. If its too hot, grass dies off. Livestock also need ACs when temperatures reach 50+ centigrade, which can be powered by solar.Cows are ruminants, they lie down and ruminate for hours in shade.Except for goats, solar works with most animals.Solar can always be used as a fence (zero land use, zero interruption to machinery) and get paid at a higher rate in the mornings and evenings, extending solar production window by ~4 hours.Farming is tough and low status. All countries support farming with subsidies. The best use of farms is solar+ anything else. Photosynthesis is 6% efficiency (and it goes down to less than 1% when we use it for livestock feed or ethanol with conversion losses), solar is ~25%. Solar has zero opex and can run for 3 - 5 decades, output can be used directly.",
-          "The introduction of solar is something that my rural Appalachian county has dealt with recently.There was considerable pushback from the 60+ crowd and NIMBY types just like there is for everything new and different, but we got three permitted and are waiting on them to begin construction.The thing that got me was there was a lot of people that just made whatever argument they could to try and stop it. All kinds of arguments that people either didn't understand or didn't really believe in. They just knew they hated solar. I really couldn't wrap my head around it.From my perspective. It's a net good for our ranchers. We're mostly small family ranches, 200 head or less and the lease paid by the solar company helps these folks meet the bottom line. Beef prices won't stay up forever so it's a good time to diversify."
+          "It is impossible to sign up for ID.me if you do not use a smartphone. I know a person who is in this situation who has bonds in Treasury Direct that they now apparently cannot cash out. It's absolutely nuts that a federal agency partnered with a disreputable third party that operates in this manner.The federal government says that all agencies need to offer logins via login.gov within two years [1]. For everyone's sake, hopefully this actually comes to fruition.[1] https://www.nextgov.com/digital-government/2026/08/white-hou...",
+          "ID.me was the only SSO service my mother could actually use, because she has a prepaid cell and VOIP for household phone, both of which login.gov rejects on principle.",
+          "Just a heads up, not sure when this changed, but it looks like you can login to irs.gov using login.gov.See https://sa.www4.irs.gov/ola"
         ]
       }
     }
