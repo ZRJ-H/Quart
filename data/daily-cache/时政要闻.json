@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-11-19T11:00:23.848407+08:00",
+  "cached_at": "2026-11-19T15:43:58.792213+08:00",
   "articles": [
     {
       "id": "https://www.news.cn/20261119/e13d69cbc4de450a885d7abbea95813a/c.html",
@@ -62,36 +62,36 @@
       "extra": {}
     },
     {
+      "id": "https://www.bbc.co.uk/news/articles/cm879dqn3e1jo#0",
+      "title": "Crimean Bridge attacked again, Russia says",
+      "url": "https://www.bbc.co.uk/news/articles/cm879dqn3e1jo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "published_at": "2026-11-19T07:32:06+00:00",
+      "summary": "The head of Crimea said traffic was suspended after another attack on the link between Russia and the occupied territory.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
+      "id": "https://www.bbc.co.uk/news/articles/cr9d75we51j1o#0",
+      "title": "This is a remarkable diplomatic moment for China's Xi - but it comes with pitfalls",
+      "url": "https://www.bbc.co.uk/news/articles/cr9d75we51j1o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "published_at": "2026-11-19T04:42:52+00:00",
+      "summary": "The meeting comes with challenges as there are things Xi does not appear keen to discuss with Putin and Trump.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
       "id": "https://www.bbc.co.uk/news/articles/cm9q8j2z3gg8o#1",
-      "title": "Elon Musk says record spending on US midterms was 'pretty foolish'",
+      "title": "Elon Musk says record $446m spending on US midterms was 'pretty foolish'",
       "url": "https://www.bbc.co.uk/news/articles/cm9q8j2z3gg8o?at_medium=RSS&at_campaign=rss",
       "source": "BBC World",
       "published_at": "2026-11-19T02:59:06+00:00",
       "summary": "The multi-billionaire also said he was \"not Maga\", distancing himself from the political movement linked to Trump.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://www.bbc.co.uk/news/articles/c6742m39xgzxo#0",
-      "title": "Claude-maker Anthropic poised for stock market debut worth up to $1.5tn",
-      "url": "https://www.bbc.co.uk/news/articles/c6742m39xgzxo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "published_at": "2026-11-19T02:20:15+00:00",
-      "summary": "Anthropic started just five years ago an is now one of the biggest names in artificial intelligence.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://www.bbc.co.uk/news/articles/cm879dqn3e1jo#0",
-      "title": "Crimean Bridge attacked again, Russian official says",
-      "url": "https://www.bbc.co.uk/news/articles/cm879dqn3e1jo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "published_at": "2026-11-19T01:05:03+00:00",
-      "summary": "The head of Crimea said traffic was suspended after another attack on the link between Russia and the occupied territory.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
