@@ -1,112 +1,121 @@
 {
-  "cached_at": "2026-11-18T15:48:23.285265+08:00",
+  "cached_at": "2026-11-19T11:00:23.848407+08:00",
   "articles": [
     {
-      "id": "2611.23229",
-      "title": "Ambient LLMs: Data-Efficient Supervised Fine-tuning via Temperature Matching",
-      "url": "https://arxiv.org/abs/2611.23229v1",
+      "id": "2611.23857",
+      "title": "Neural Memory Orchestration",
+      "url": "https://arxiv.org/abs/2611.23857v1",
       "source": "arXiv",
-      "published_at": "2026-11-17T18:59:37+00:00",
-      "summary": "Collecting large-scale, diverse, and high-quality post-training datasets for autoregressive language models is challenging. Consequently, Supervised Fine-Tuning (SFT) is typically applied to datasets significantly smaller than those used for pre-training, which leads to overfitting and the catastrophic forgetting of the tails of the data distribution. To prevent this collapse, we introduce Ambient SFT, a principled framework for leveraging imperfect predictions to augment the fine-tuning set. In our method, a \"frozen\" version of the pre-trained model serves as a noisy teacher that the fine-tuned model must match at a coarse level. In particular, we require that the high-temperature versions of the conditional distributions produced by the post-training model should match the high-temperature versions of the pre-training ones. The temperature hyperparameter controls the level of trust in the pre-trained model, with the limit $T\\to \\infty$ reverting back to regular SFT and $T=1$ to knowledge distillation. We demonstrate that our approach outperforms standard SFT across domain adaptation, instruction-tuning, and reasoning, leading for up to $21\\%$ average relative improvement to standard SFT.",
+      "published_at": "2026-11-18T05:02:56+00:00",
+      "summary": "Modern HPC workloads increasingly stall on the memory hierarchy rather than on compute, and page faults from mmap'd files, swap, and tiered memory are a growing fraction of wall time. Heuristic prefetchers in the kernel handle stride-like and temporally clustered patterns well but degrade sharply on the irregular, data-dependent access streams typical of these workloads. Learned prefetchers have been shown to capture such patterns in simulation but have not been taken to a deployed pipeline running against live workloads on real hardware. We present Overseer, an end-to-end learned page-prefetching system. An eBPF collector observes page faults on the target host, a transformer predictor (OverNet) runs on network-attached inference hardware and emits future page addresses, and a kernel-resident enforcer materializes those pages into the target's address space before they are demanded. OverNet encodes fault sequences through per-instance ordinal ranks over deltas, which lets a single trained model serve any target process without retraining. On two page-fault-heavy workloads, Overseer reduces runtime by roughly 35% on Hilbert-curve traversal and by roughly an order of magnitude on dense matrix multiplication, with corresponding reductions in major-fault counts.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Giannis Daras",
-          "Marios Papachristou",
-          "Adam Klivans",
-          "Antonio Torralba",
-          "Constantinos Daskalakis"
+          "Michael Zizov",
+          "Boris Morose"
         ],
         "categories": [
+          "cs.DC",
           "cs.LG",
-          "cs.AI",
-          "cs.CL"
+          "cs.OS"
         ]
       }
     },
     {
-      "id": "2611.23228",
-      "title": "Spool: Low-Latency Streaming Inference for Hybrid Vision-Language Models",
-      "url": "https://arxiv.org/abs/2611.23228v1",
+      "id": "2611.23856",
+      "title": "Beyond Cross-Modal Reconstruction: Participant-Level Evaluation of sEMG-Kinematic Coupling in Post-Stroke Gait",
+      "url": "https://arxiv.org/abs/2611.23856v1",
       "source": "arXiv",
-      "published_at": "2026-11-17T18:59:27+00:00",
-      "summary": "Applications such as visual accessibility agents and robotics require answering questions about recent video content promptly, over a bounded window of past frames (e.g., the last two minutes). Hybrid vision-language models (VLMs), which interleave attention with linear recurrent layers such as Gated DeltaNet (GDN), are attractive for this setting, but maintaining a sliding window is expensive. The reason is that recurrent layers combine all past frames into a shared state, so expiring old frames normally requires re-running the entire window through the model. We observe that the recurrent update is affine in the state with input-dependent coefficients, so the effect of each frame can be captured as a transformation that composes associatively. We present Spool, a training-free framework that caches per-frame state transformations and composes them efficiently as the window advances, removing expired frames from each recurrent layer's state without replaying frames through the backbone. Removal is exact within each layer; as with key-value eviction in attention, expired frames can retain residual influence through the cached inputs computed by earlier layers. We design a dedicated data structure and GPU kernels to achieve low caching and composition overhead. Across five open-source hybrid VLMs and four video reasoning benchmarks, Spool achieves the lowest p95 time-to-first-token in all 20 model-benchmark tests, reducing it by a geometric mean of $6.6\\times$ over the faster of two recent vLLM baselines, while improving accuracy by 2.3 percentage points on average.",
+      "published_at": "2026-11-18T05:02:17+00:00",
+      "summary": "Accurate cross-modal reconstruction is often treated as evidence of physiological coupling, although it may simply reflect temporal patterns shared across participants. We tested whether frozen bidirectional models captured subject-specific neuromuscular coupling between electromyographic activity and gait kinematics in 82 held-out able-bodied and 43 post-stroke participants. Complete source-modality removal and cross-participant source substitution, along with a cycle-position-age-sex template baseline, were applied. Learned bilateral asymmetry was also compared with transparent waveform and derivative asymmetry for predicting Performance-Oriented Mobility Assessment (POMA) scores in the case of repeated nested cross-validation. Complete source removal increased reconstruction RMSE by 6.90% for electromyography-to-kinematics and 11.38% in the reverse direction. In contrast, cross-participant substitution increased RMSE by only 1.68% and 1.67%, respectively, while the template reduced RMSE by 2.89% and 0.55%. For POMA prediction, walking speed, age, and sex achieved an MAE of 3.693, compared with 4.229 and 4.427 after adding absolute and signed learned asymmetry, respectively. In all of the 20 repeated evaluations, all asymmetry representations performed worse than the covariate baseline. No localized learned feature remained significant after covariate adjustment and false-discovery-rate correction. The model mainly relied on shared gait-phase patterns, with no clear subject-specific coupling or added clinical value. Participant-level controls are therefore needed before reconstruction accuracy is treated as evidence of individualized physiology.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Rui Ning",
-          "Om Chabra",
-          "Hari Balakrishnan"
+          "Rafsan Jany",
+          "Md Rafid Islam",
+          "Mohammad Fahim Islam",
+          "Hafiz Abdur Rahman"
+        ],
+        "categories": [
+          "cs.LG"
+        ]
+      }
+    },
+    {
+      "id": "2611.23855",
+      "title": "RoboBuilder: Agentic Robot Co-Design with Real-world Video Feedback in the Loop",
+      "url": "https://arxiv.org/abs/2611.23855v1",
+      "source": "arXiv",
+      "published_at": "2026-11-18T05:02:07+00:00",
+      "summary": "Can AI agents design robots that work in the real world? We introduce RoboBuilder, a benchmark in which coding agents co-design a robot's hardware and program from standard parts, motors and a custom 3D-printed part, and every design that passes in simulation is built and tested on a physical course. Simulation alone is not enough: under public part data, none of 15 initial passing designs crossed the real course, so an agent learns the simulator from measurements it requests and videos of real runs. Across four frontier coding agents, ten obstacles at three difficulty levels, 16,427 simulations of 12,774 distinct robots and 135 physical robots built in an estimated 240 hours, agents solve nearly all easy obstacles and invent mechanisms our search baselines do not reach, but falter at harder levels, when one robot must cross every obstacle, and in the real world, where 66% of simulated passes hold across all levels. Closing the loop helps: shown a video of its real failure, an agent redesigns the robot, sometimes correcting its simulator, and removes 72% of level-1 and level-2 failures. RoboBuilder measures progress toward agents that engineer real machines. Project Page: https://ghadinehme.com/robobuilder.github.io/",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Ghadi Nehme",
+          "Dahyun Nam",
+          "Akshay Govind Srinivasan",
+          "Faez Ahmed"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CV",
+          "cs.RO"
+        ]
+      }
+    },
+    {
+      "id": "2611.23848",
+      "title": "A Fast, Programmable GPU-to-CPU Invocation Layer for GPU-Initiated Communication",
+      "url": "https://arxiv.org/abs/2611.23848v1",
+      "source": "arXiv",
+      "published_at": "2026-11-18T04:52:50+00:00",
+      "summary": "Modern GPU workloads increasingly rely on device-initiated communication to let GPU kernels communicate directly without synchronizing with the host at kernel boundaries. Existing libraries commonly favor placing transport control on GPU threads, an approach known as GPUDirect Async (GDA), and treat reverse offload to host proxy threads as a slower fallback. We argue that reverse offload can outperform GDA and should be a first-class communication path. We further propose exposing reverse offload as a programming interface that lets users define workload-specific communication operations. We present KIWI, a programmable reverse-offload framework that achieves sub-microsecond one-way device-to-host latency and hundreds of millions of operations per second. We address practical challenges of scaling reverse offload, including contention on shared queues, polling overhead, and load imbalance across proxies. KIWI-P2P, a SHMEM-like library built on KIWI, outperforms state-of-the-art GDA implementations in both latency and bandwidth. More importantly, KIWI-EP redesigns low-latency mixture-of-experts dispatch and combine kernels around workload-defined operations, lowering expert-parallel communication latency by up to 2.3x over the best existing backend on AMD GPUs and time per output token in vLLM by up to 29%. The source code of KIWI is available at https://github.com/AMDResearch/kiwi.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Jiakun Yan",
+          "Shiksha Patel",
+          "David Sidler",
+          "Gengyu Rao",
+          "Brandon Potter",
+          "Bradford Beckmann"
+        ],
+        "categories": [
+          "cs.DC",
+          "cs.LG"
+        ]
+      }
+    },
+    {
+      "id": "2611.23845",
+      "title": "ReflectScene:MLLM-Guided Closed-Loop Diffusion for 3D Indoor Scene Generation",
+      "url": "https://arxiv.org/abs/2611.23845v1",
+      "source": "arXiv",
+      "published_at": "2026-11-18T04:50:50+00:00",
+      "summary": "Text-conditioned 3D indoor scene generation requires layouts satisfying geometric, functional, and semantic constraints. However, existing diffusion methods rely primarily on static textual conditions, limiting their ability to assess evolving scenes and translate semantic discrepancies into executable object-level corrections. MLLM-based post-hoc refinement provides semantic feedback but remains decoupled from denoising, potentially disrupting scene coherence.We propose ReflectScene, an MLLM-guided closed-loop diffusion framework. First, we introduce Hierarchical Prior-Grounded Scene Understanding that aligns structured layouts with multi-view visual evidence, to interpret object-specific context and scene global semantics via a frozen multi-modal large language model (MLLM). Second, we propose MLLM-Guided Semantic Reward Evaluation to distill MLLM's diagnoses and assessments on possible candidate corrections into a lightweight Reward Predictor, enabling correction decision making with reduced computation burden. Finally, Decision-Conditioned Trajectory-Consistent Diffusion is proposed to integrate selected corrections through transient conditioning and persistent clean-estimate projection, correcting object layout in the generated scene while preserving non-target arrangements throughout denoising.Experiments on 3D-FRONT demonstrate improved functional consistency and semantic alignment while maintaining competitive generation quality and diversity.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Jiawei Shen",
+          "Jie Feng",
+          "Junpeng Zhang",
+          "Guanbin Li",
+          "Wanyi Chen",
+          "Weisheng Dong",
+          "Guangming Shi"
         ],
         "categories": [
           "cs.CV",
-          "cs.LG"
-        ]
-      }
-    },
-    {
-      "id": "2611.23225",
-      "title": "StringQFT: A Multiuse Textbook Resource for AI-Assisted Theoretical Physics",
-      "url": "https://arxiv.org/abs/2611.23225v1",
-      "source": "arXiv",
-      "published_at": "2026-11-17T18:58:40+00:00",
-      "summary": "We present StringQFT as a textbook collection for string constructions of quantum field theory and as infrastructure for AI-assisted theoretical physics. The collection comprises 18 volumes, 190 chapters and 3,795 pages, covering brane probes, brane webs, geometric engineering, F-theory constructions, wrapped M5-branes and exact worldsheet constructions. Its open-book benchmark inventory contains 1,073 items, including 499 with automatic finite-answer checking. For retrieval-augmented generation, it provides 1,371 section records linked to textbook sources and PDF locations, together with a local lexical retriever. Training-data preparation is illustrated by 21 private, source-linked examples. For agents, it exposes 19 calculation tools with specified inputs and finite domains, connecting tool use to textbook derivations. We illustrate these uses through specific questions, retrieved passages and finite calculations. The textbook collection and accompanying resources are available at https://github.com/xingyang-yu/StringQFT.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Xingyang Yu"
-        ],
-        "categories": [
-          "hep-th",
-          "cs.AI"
-        ]
-      }
-    },
-    {
-      "id": "2611.23221",
-      "title": "An inexact stochastic variance-reduced gradient method for constrained convex finite-sum optimization",
-      "url": "https://arxiv.org/abs/2611.23221v1",
-      "source": "arXiv",
-      "published_at": "2026-11-17T18:57:16+00:00",
-      "summary": "In this paper, we study a class of constrained convex finite-sum optimization problems. In many practical applications, all or some of the constraints are hard constraints that represent imperative requirements. Consequently, any desirable approximate solution must (nearly) satisfy these constraints. Motivated by this, we focus on computing an $ε$-$surely\\ feasible\\ stochastic\\ optimal$ ($ε$-SFSO) solution, in which the constraint violation is deterministically bounded by $ε$, and the expected optimality gap is at most $ε$. While a recently proposed stochastic variance-reduced first-order penalty method can compute an $ε$-SFSO solution, there remains a significant gap between its first-order oracle complexity for computing an $ε$-SFSO solution and that for computing an $ε$-$expected\\ feasible\\ stochastic\\ optimal$ solution, where both the expected constraint violation and the expected optimality gap are bounded by $ε$. To narrow this gap, we propose an inexact stochastic variance-reduced gradient (SVRG) method that significantly improves the previously best-known first-order oracle complexity for computing an $ε$-SFSO solution. Furthermore, when the objective consists of a single function, the proposed method reduces to a novel deterministic first-order method for solving standard convex conic optimization. It achieves a significantly lower gradient evaluation complexity with respect to the objective function compared to existing methods, and can outperform them when computing constraint gradients and projections onto the associated cone is cheaper than evaluating the objective gradient. Preliminary numerical results are presented to illustrate the performance of the proposed method.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Zhaosong Lu",
-          "Yifeng Xiao"
-        ],
-        "categories": [
-          "math.OC",
-          "cs.LG"
-        ]
-      }
-    },
-    {
-      "id": "2611.23219",
-      "title": "Do LLM Agents Still Need to Be Told How to Self-Improve?",
-      "url": "https://arxiv.org/abs/2611.23219v1",
-      "source": "arXiv",
-      "published_at": "2026-11-17T18:57:10+00:00",
-      "summary": "LLM agents increasingly drive their own learning. Self-improvement methods delegate various components of model optimization to the models themselves. As models become more capable, this motivates a basic question: do these increasingly capable models still need us to specify how they should self-improve? In this paper we study an autonomous paradigm in which, given basic primitives, resources, and a general goal for self-improvement, agents construct their own self-learning algorithm for context-based optimization. Using the setting of gameplay as a testbed, a frozen LLM agent is given a compute budget and tools for collecting experience and updating text documents, and allowed to freely experiment without an externally imposed loop or access to real-world data. We find that sufficiently capable models do self-improve under these conditions, demonstrating strategies that align with classic cognitive frameworks for self-regulated learning and constructs from machine learning literature on self-generated curricula. Furthermore, we study the extent to which the learned text artifacts transfer to external benchmarks, observing improvement across different game horizons, mechanics, and 3D navigation.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Shobhita Sundaram",
-          "Cansu Sancaktar",
-          "Phillip Isola"
-        ],
-        "categories": [
-          "cs.LG",
           "cs.AI"
         ]
       }
