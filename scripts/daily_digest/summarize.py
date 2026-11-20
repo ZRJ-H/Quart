@@ -265,7 +265,7 @@ def _prompt(category: str, articles: list[Article]) -> str:
 3. 前三条保留分层深读：summary 写清主体、动作和关键细节；background、impact、watch、value 只填证据支持且不重复的信息。事实充足时合计约 350–500 字；信息较少时可以更短，不设最低字数，不为填满栏目补写套话，无内容的可选字段返回空字符串。
 4. 其余条目用 summary 概括具体事实，value 仅补充不重复的阅读价值。事实充足时合计约 220–320 字；信息较少时可以更短，事实讲完即止。
 5. AI论文日报返回 research_problem、method、results、limitations、engineering_value；只填写摘要实际支持的内容，缺失时返回空字符串。保留作者报告、测试条件、量化结果及真实局限；不要为每篇论文追加通用的复现或生产部署提醒。
-6. Hacker News 的 title/summary 是来源证据，top_comments 仅是社区发言，不能混作来源正文或已核实事实。来源只有标题时，核心摘要只复述标题明确支持的事件；评论的判断和引文放在 discussion_focus 并保留评论者归因。标题中的认输、让步、撤回或政治评价不等于法院判决，不得擅自改写为胜诉、败诉或法院裁定。Hacker News 的 discussion_focus 只概括 top_comments；没有评论输入时写“本次未采集到评论。”，不要推断社区没有讨论。
+6. Hacker News 的 title/summary 是来源证据，top_comments 仅是社区发言，不能混作来源正文或已核实事实。作者、发布账号和博客所有者不应混同。仅当 title/summary 明确署名时才在标题或摘要添加作者；未提供署名则省略作者，不从 URL、域名、账号名或 top_comments 推断作者。明确为客座文章时保留客座作者与刊载博客的区别。来源只有标题时，核心摘要只复述标题明确支持的事件；评论的判断和引文放在 discussion_focus 并保留评论者归因。标题中的认输、让步、撤回或政治评价不等于法院判决，不得擅自改写为胜诉、败诉或法院裁定。Hacker News 的 discussion_focus 只概括 top_comments；没有评论输入时写“本次未采集到评论。”，不要推断社区没有讨论。
 7. trends 恰好三条；fact 复述具体观察，inference 仅写证据支持的解释，并以“从这些信息看”等自然表述区分判断。没有实质判断时返回空字符串，不强行上升为行业趋势；页面会标注事实与编辑判断。
 8. 所有字段必须以完整句子结束，禁止使用“…”或“...”省略内容；如果需要控制长度，应删减次要信息并重写完整句子。
 
