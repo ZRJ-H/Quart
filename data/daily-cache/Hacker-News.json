@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-11-20T11:00:22.334939+08:00",
+  "cached_at": "2026-11-20T15:35:24.053106+08:00",
   "articles": [
     {
       "id": "50562754",
@@ -8,8 +8,8 @@
       "source": "Hacker News",
       "published_at": "2026-11-19T17:02:40+00:00",
       "summary": "Anthropic’s Nasdaq debut",
-      "score": 954,
-      "comments": 1872,
+      "score": 1049,
+      "comments": 2073,
       "discussion_url": "https://news.ycombinator.com/item?id=50562754",
       "extra": {
         "top_comments": [
@@ -25,33 +25,15 @@
       "url": "https://www.newscientist.com/article/2528235-pancreatic-cancer-halted-by-virus-injection-in-three-patients/",
       "source": "Hacker News",
       "published_at": "2026-11-19T17:25:33+00:00",
-      "summary": "https://archive.ph/2Et0x",
-      "score": 615,
-      "comments": 97,
+      "summary": "https://archive.ph/2Et0xhttps://clinicaltrials.gov/study/NCT06693986",
+      "score": 736,
+      "comments": 119,
       "discussion_url": "https://news.ycombinator.com/item?id=50563066",
       "extra": {
         "top_comments": [
-          "My father died from pancreatic cancer in 2016. He was 54. I don't think I'm ever going to get over it. Otherwise healthy guy starts not feeling great, goes to the doctor, gets misdiagnosed a few times. After a few months of that gets told that it's pancreatic cancer and he has 10-12 months. 15 months later he was gone. When I see news like this it gives me such hope for other people.",
-          "My wife, a marathon runner and all-around amazing person, died in 2016 five months after diagnosis at age 36. I’ve written about it here before, but the highest way I can think to honor her is to really, truly appreciate the gift of every single day that you’ve got. Life feels like inertia, that tomorrow will always be there, that you will see your plans through. It’s an illusion.It will probably take my lifetime or more to make more than incremental progress on this disease, but I welcome every step.",
+          "Is it normal to not report how many people received the treatment and just report the number of successes? Is this better than placebo or doing nothing?",
+          "I have little to say other than I'm deeply saddened by the stories in this thread and I really hope that one day this disease will be easily cured. I'm so sorry for all of your losses.",
           "I was trying to figure out what the actual intervention was, and what clinical trial this is from based on the extremely limited information, and have not been able to yet.In the mean time, here's 25 clinical trials for oncolytic viral therapies for pancreatic cancer:https://clinicaltrials.gov/search?cond=Pancreatic%20Cancer&i...And here's a review article on the general concept from the lead physician-researcher in this article:https://pmc.ncbi.nlm.nih.gov/articles/PMC6186423/Adenoviruses are very easy to make with custom contents, and are used for many many purposes. However they rarely make it all the way to become a therapy in practice.It's always fascinating what hits the front page of HN when it comes to bio!"
-        ]
-      }
-    },
-    {
-      "id": "50562113",
-      "title": "UK government forced to admit it issued Apple a secret encryption order",
-      "url": "https://macanorak.com/uk-government-forced-to-admit-it-issued-apple-a-secret-encryption-order/",
-      "source": "Hacker News",
-      "published_at": "2026-11-19T16:21:03+00:00",
-      "summary": "UK government forced to admit it issued Apple a secret encryption order",
-      "score": 535,
-      "comments": 242,
-      "discussion_url": "https://news.ycombinator.com/item?id=50562113",
-      "extra": {
-        "top_comments": [
-          "Apple has significantly weakened its security assurances in a way that is arguably deceptive. They used to say nobody can access your data, not even Apple. Now they say Apple cannot access your data. People will point out that your key is created on your device, lives on your device, and never leaves your device, but that is just your key. Your key is likely a KEK (key encryption key) that opens another key (not “your” key, let’s call it the actual key) that your data is secured with. There can be other parties (UK government) with their own KEK that opens a copy of the actual key. In this scenario, Apple can have no access to a KEK that opens the actual key, but they are forced to make the wording change they did, if they want to stay honest.I say the statement is arguably deceptive because it presents the same feel of assurance that the old one did, to most people.Note John Ternus in a recent event (WWDC keynote if I recall correctly) used the old wording. I think this was a slip-up (I’d hate to think it was a calculated lie posing as a slip-up).",
-          "Primary source: https://investigatorypowerstribunal.org.uk/judgement/1-mr-vi...The key finding seems to be that the media learned of the technical capability notice through confidential security briefings, and not a leak (“one of those irregular verbs”).The contents of the note remains secret for now.",
-          "Sorta thought this was alreay common knowledge? Unfortunately the UK has never respected privacy or free speech as a right."
         ]
       }
     },
@@ -62,32 +44,32 @@
       "source": "Hacker News",
       "published_at": "2026-11-19T17:30:44+00:00",
       "summary": "Claude solves two open problems in the physics of black holes",
-      "score": 410,
-      "comments": 187,
+      "score": 469,
+      "comments": 220,
       "discussion_url": "https://news.ycombinator.com/item?id=50563148",
       "extra": {
         "top_comments": [
           "81 comments so far (82 as of now) and I haven't found one that is actually about the papers or even TFA. What are we doing here?",
-          "It tickled me that this was a bullet point in the Fable 5.2 announcement. I like that we're now at a point where \"solved two open problems in the physics of black holes\" is the kind of thing that shows up in a frontier model launch.",
-          "\"Claude solves\" feels reflective of the constant, problematic anthropomorphizing of the machine. For how it's problematic, look at \"it broke out of the sandbox\" vs. \"we failed to build an adequate sandbox\".What does it mean for Claude to solve it? What was the prompt? I didn't read it all, but the word \"prompt\" does not appear in the blog post, either abstract, or either paper."
+          "\"Claude solves\" feels reflective of the constant, problematic anthropomorphizing of the machine. For how it's problematic, look at \"it broke out of the sandbox\" vs. \"we failed to build an adequate sandbox\".What does it mean for Claude to solve it? What was the prompt? I didn't read it all, but the word \"prompt\" does not appear in the blog post, either abstract, or either paper.",
+          "From a cursory glance the bootstrap paper is really hard to read, however the blog post is easier and seems more human written.The first result is cool (but basically a complex error-prone calculation), the second is much much cooler, Claude proved the upper limit for the mass of a black-hole which is consistent with a given central charge. (thereby making it a consistent theory of quantum gravity), any theory predicting above this is not a theory of quantum gravity of that universe. This is very exciting!"
         ]
       }
     },
     {
-      "id": "50559719",
-      "title": "Making 8-page foldable zines from a single A4 sheet in the browser",
-      "url": "https://krthr.co/paper-folds-and-whats-new-in-fanzines-app/",
+      "id": "50570479",
+      "title": "Google is pushing OEMs against GrapheneOS and bootloader unlocking",
+      "url": "https://grapheneos.social/@GrapheneOS/117645038299496084",
       "source": "Hacker News",
-      "published_at": "2026-11-19T13:18:11+00:00",
-      "summary": "Making 8-page foldable zines from a single A4 sheet in the browser",
-      "score": 254,
-      "comments": 56,
-      "discussion_url": "https://news.ycombinator.com/item?id=50559719",
+      "published_at": "2026-11-20T05:21:02+00:00",
+      "summary": "Google is pushing OEMs against GrapheneOS and bootloader unlocking",
+      "score": 265,
+      "comments": 62,
+      "discussion_url": "https://news.ycombinator.com/item?id=50570479",
       "extra": {
         "top_comments": [
-          "For the curious, the generalized process of reordering and potentially rotating pages so that when printed and folded (and optionally gathered into signatures) is called impositioning. There is specialized software with a variety of options that will do this for an input document.Bookbinder JS is a nice web-based tool that will do this for you too, though I'm not sure it covers the exact folding algorithm described in this article.https://momijizukamori.github.io/bookbinder-js/",
-          "My high school geometry teacher would let us use an index card of notes during exams.She had a student years prior show her this folding technique and asked if he could use it for the test. Not only did she allow it, but she taught it to every class going forward for those that wanted to put in the extra effort.My buddies and I spent so much time trying to come up with modifications to use more area of the page. Some of them even worked!",
-          "I’m bothered that this piece doesnt mention pocketmod, which I think is where the folding idea came from? The fold image looks very similar! I used this 20 years ago and still do sometimes:https://pocketmod.com/"
+          "Find your state attorney general [1]. Write them a letter. Calmly and dispassionately ask that they look into this from an antitrust perspective. Include a copy of this GrapheneOS thread.GrapheneOS, on its side, should publish a template letter for every state. They should also consider releasing evidence for Google \"repeatedly reaching out to OEMs to question whether they're working with us and threaten[ing] them\" [2].[1] https://www.naag.org/find-my-ag/[2] https://grapheneos.social/@GrapheneOS/117645917131936200",
+          "Keep fighting the good fight. GrapheneOS has been a breath of fresh air the past several years and I really don't want to go back to manual rooting/debloating/hardening.",
+          "Strange since Pixels allow boot loader unlocking.\"The Sherman Antitrust Act[1] (26 Stat. 209, 15 U.S.C. §§ 1–7) is a United States antitrust law which prescribes the rule of free competition among those engaged in commerce and consequently prohibits unfair monopolies. It\" Source: \"https://en.wikipedia.org/wiki/Sherman_Antitrust_Act\""
         ]
       }
     },
@@ -98,50 +80,68 @@
       "source": "Hacker News",
       "published_at": "2026-11-19T18:35:17+00:00",
       "summary": "The 98% Slot Machine: How Paid Advertising Became an Extraction Tax",
-      "score": 220,
-      "comments": 116,
+      "score": 259,
+      "comments": 143,
       "discussion_url": "https://news.ycombinator.com/item?id=50564159",
       "extra": {
         "top_comments": [
           "This analogy doesn't hold at all. Casinos are engineered for the house to win and the customer to lose because the casino is paying the customer directly. They are disincentivized to let the customer win. If the customer always won, the casino goes out of business very quickly.Ad auctions are completely different, since they are just a marketplace. A customer's (advertiser's) win comes from a third party, and the point of the ad platform is to connect that third party to the customer. The ad platform would love to be able to make every single customer win all the time. Although, if they did that, it would create a lot more demand and even out the ROI with increased ad prices. But that's not the \"evil ad platform\" engineering the customers to always lose in the way casinos do, that's simply basic supply/demand economics.COI disclaimer: My current job is a small part of an ads platform on a website you have heard of. I dislike ads but realize they are a necessity for running some parts of the internet.",
-          "I've seen some posts on X where they celebrate mobile apps making 7 digit MRR but then you look at their net profit is like only mid 5 digits after taxes and ad spend and Apple's cut.One developer in particular shared that he was spending $580k to make $650k before taxes and app store fees and you realize that apple is double dipping, it's an insane level of taxation on the developer to take on all the risk and its gamified so that you really can't penetrate big niches without it being a spending contest.",
-          "I use to think we lived in an enlightened age, where we have now learned that we need to use scientific reasoning and analysis to make decisions. It is what lifted us up from superstition and folk tales.But society, still, collectively, falls for snake oil, over and over again.This topic was talked about in 2019. https://news.ycombinator.com/item?id=21465873Freakanomics did a great podcast about if Internet Advertising actually works. https://news.ycombinator.com/item?id=47906485Anyone that has an interest in the topic should listen (or read) about what Steve Tadelis did in the 2012 timeframe. He was an economics professor at the University of California, Berkeley, and then worked at eBay, where he led the famous experiment on Google ad effectiveness."
+          "I use to think we lived in an enlightened age, where we have now learned that we need to use scientific reasoning and analysis to make decisions. It is what lifted us up from superstition and folk tales.But society, still, collectively, falls for snake oil, over and over again.This topic was talked about in 2019. https://news.ycombinator.com/item?id=21465873Freakanomics did a great podcast about if Internet Advertising actually works. https://news.ycombinator.com/item?id=47906485Anyone that has an interest in the topic should listen (or read) about what Steve Tadelis did in the 2012 timeframe. He was an economics professor at the University of California, Berkeley, and then worked at eBay, where he led the famous experiment on Google ad effectiveness.",
+          "For a long time I’ve been chewing on this…Back in the 2000’s I was involved with numerous “social” systems before there was Facebook, the thing they all had in common was that we knew we lived or died based on being viral so the most important knob we could turn in the process was the rate at which people completed the onboarding and recommended new people. So we were obsessive about plugging leaks in our funnel from both a craftsmanship and business standpoint.Today whether it is mobile games or anything else I’m often left wondering if there is anybody left who remembers what it takes to tune up a funnel. Now I am told that for western mobile games they aren’t even interested in players who would care what the game mechanics are but instead just want to filter for a handful of ‘whales’ who will start spending money when they encounter the slightest speed bump… but still!Right now I trade it back to the time when Facebook discovered its business model, made virality impossible, and convinced everybody to pay for traffic. You’d think the same motivations exist there, like you can save your money or your investors’ money if you have a good onboarding process so you should but what you find is…. People don’t.I’ve had people blame the OKR/KPI culture for this which has everybody distracted by sub optimization…. But there’s also the problem that the thing you really need to compare customer acquisition cost to is lifetime customer value. So yeah, you spend $50 to get a customer to spend $20 where your COGS is $18…. That’s the part you know about and it looks awful and you tell yourself that that LCV will be more than $2 which is true because some of those customers will come back but it’s speculative. So you think you are practicing ‘quantitative marketing’ but you are like Coca-Cola in the mid 20th century spending on every kind of advertising because you think the brand equity is worth it."
         ]
       }
     },
     {
-      "id": "50561515",
-      "title": "Show HN: Cornhole News – A Hacker News inspired site for news across the Midwest",
-      "url": "https://cornholenews.news",
+      "id": "50569226",
+      "title": "OpenSSL: Buffer overflow in EVP_EncodeBlock() (CVE-2026-121481, CVSS 9.8)",
+      "url": "https://github.com/openssl/openssl/pull/33652",
       "source": "Hacker News",
-      "published_at": "2026-11-19T15:38:32+00:00",
-      "summary": "Show HN: Cornhole News – A Hacker News inspired site for news across the Midwest",
-      "score": 193,
-      "comments": 92,
-      "discussion_url": "https://news.ycombinator.com/item?id=50561515",
+      "published_at": "2026-11-20T02:01:09+00:00",
+      "summary": "OpenSSL: Buffer overflow in EVP_EncodeBlock() (CVE-2026-121481, CVSS 9.8)",
+      "score": 176,
+      "comments": 108,
+      "discussion_url": "https://news.ycombinator.com/item?id=50569226",
       "extra": {
         "top_comments": [
-          "I love the idea because I hate news sites in general and much prefer the text-only nature of HN. A shame that the stories linked to aren't so stripped back! It's made me think about doing the same for my part of the UK.In some ways I also really like the option to hide \"politics\", although there's an interesting debate about what constitutes \"politics\" - how do you classify that?Edit: and given that it's a submissions site, how do you plan to tell people about it, beyond the HN crowd?",
-          "\"Our goal is to eventually monetize this site with two small ads on the homepage reserved exclusively for Midwestern businesses.\"Thank you for stating that. Is this for profit, or just to cover costs of hosting? Will you be self-hosting the ads, or using an ad network?On another note, what are the plans for moderation?",
-          "I feel certain that your politics filter is leaving items that people will consider political"
+          "On a very very quick read, the bug is that EVP_EncodeBlock malfunctions if the input is larger than ~1.5GB. EVP_EncodeBlock is a function that encodes base64.https://docs.openssl.org/1.0.2/man3/EVP_EncodeInit/As a seasoned C programmer, I can immediately observe that the whole API is bad: the caller is expected to calculate the buffer length on their own, using a nontrivial formula, and the caller does not pass in the output buffer length, so the implementation cannot validate it. But apparently OpenSSL 4 also implemented it wrong and wrote (possibly far) past the end of the buffer.You should probably assume that, if you are running anything that can be convinced to use this API to encode a very long blob as base64, then you are in trouble. I don’t know why a modern server would do this.BTW, OpenSSL seems to be a rather low quality implementation of a very low quality set of APIs. Stay away.edit: Fixed my size threshold, hopefully. I was thinking of unsigned ints, but this is a signed int. I have not looked at the code, just the description.",
+          "I think CVSS 9.8 is exaggerated. This is not remotely anywhere near as serious as Heartbleed. It's an internal function which will fail if its input is far too long, but exploitability rests on how untrusted input can reach it; the key word being \"untrusted\". E.g. if you operate a base64 encoding service on the Internet that just reads all the data into memory at once and calls EVP_EncodeBlock(), that's exploitable. If you have a protocol that involves a block of data with a 16-bit length field which is passed to EVP_EncodeBlock(), that's 100% safe.For those wondering about TLS: speaking as someone who has written a TLS implementation, AFAIK neither base64 encoding nor decoding occurs in the protocol itself, and the longest length field is 24 bits (Hello stream). Certificate processing involves ASN.1 which does support arbitrarily-long integers, but that's a big hint to check that they're within a sensical range.",
+          "I am not a system administrator, but I am getting a serious vulnerability fatigue, every single day there's at least two new vulnerabilities in major pieces of software, I'm just tired of seeing that everywhere and hearing that everywhere. Fellow system administrators must be having it much worse."
         ]
       }
     },
     {
-      "id": "50568130",
-      "title": "Gemini 4 Neon is the new #1 on the Models Engineering Index",
-      "url": "https://git-aarvin.github.io/mei/",
+      "id": "50562320",
+      "title": "Launch HN: Onlook (YC W25) – An open-source developer tool for designers",
+      "url": "https://github.com/onlook-dev/onlook/",
       "source": "Hacker News",
-      "published_at": "2026-11-19T23:35:35+00:00",
-      "summary": "Gemini 4 Neon is the new #1 on the Models Engineering Index",
-      "score": 177,
-      "comments": 104,
-      "discussion_url": "https://news.ycombinator.com/item?id=50568130",
+      "published_at": "2026-11-19T16:34:04+00:00",
+      "summary": "Hey HN, I'm Daniel, founder of Onlook (https://github.com/onlook-dev/onlook and onlook.com).Onlook is a desktop app that puts a canvas on top of your real codebase, letting you design directly in code with the agent you already use. Over 25,000 designers and developers have supported the project, 100+ have contributed, and it's been the #1 trending repo in the world twice. We just rebuilt the entire product as an agentic design tool, and open-sourced it to the community.Here’s a demo video: (https://youtu.be/BogcYWf4siM)If you're an engineer, traditional engineering tools are largely built for convergence, whereas designers tend to explore and diverge on ideas. Onlook gives designers a familiar canvas while managing all of the dev processes that get between them and making mind-blowing designs in code. Designers can work on a multiple simultaneous worktrees that run on the real app locally, and every change lands as a PR you can review or throw away, so there aren’t mockups to rebuild.We built Onlook because we believe there needs to be a developer tool that works the way designers do.More and more, designers are expected to work in code. Designers think by seeing, drafting, arranging variations, using references, and remixing ideas. That’s why the canvas has been the signature feature of design tools because it genuinely is useful for how messy the creative process is. Most of the challenge of using engineering tools for design work is that the first half of starting a project often takes mental bandwidth in of itself (What branch am I on? What page was that last exploration on?) and the second half is constrained by configuring your coded design to present itself (prompting design tools on top of what you’ve built or making temporary navigation for that specific state).Some of you may remember our earlier Show HNs (July 2024: https://news.ycombinator.com/item?id=40904862, August 2024: https://news.ycombinator.com/item?id=41390449, May 2025: https://news.ycombinator.com/item?id=44127653). Since then, we built a web version (too early), then a Storybook-native build (a mistake). We noticed that our desktop product from July 2024 was still getting hundreds of downloads a month despite zero promotion, so we decided to rebuild it for the new era of designers working in code.How it works…Onlook shines at exploring tons of ideas at once. Ask it to lay out every flow in your product, show every state of a component, or riff on ten versions of one screen. Your designs all show up side by side on an infinite canvas, with each frame as a real webview running your actual app with real data. Not as a mockup, but the real deal.When we built this editor, we had an epiphany that it could be a new kind of IDE for design. Design tools used to be limited to a proprietary setup or closed schema, but now you can push and pull the medium of code to get whatever result you want, so why not give agents an infinite canvas of browsers and see what they do? It turns out, the agents can figure out how to better present coded work by adjusting the urls of browser frames and arranging and resizing them on the canvas.The concept is simple, but it requires a lot of product thinking. For example, because all of the frames on the canvas share a single browser session, and Chromium only allows six connections per host per session, ten frames of the same app end up fighting over limited connections. So, we had to plan around that, and there are still tons of things we need to do to make the canvas ultra performant.Onlook is an Electron app where you can import a repo from GitHub or upload a local folder. Then, Onlook creates a git worktree, starts your dev server, and has the agent sort out missing dependencies or other requirements. You never open a terminal and everything the agent does is a normal git diff that can go to GitHub as a PR. We inject a small script into each frame that draws selection outlines and reads the page, so that way you can click an element, say \"make this a card layout,\" and the agent knows exactly what \"this\" is.This time we didn't build our own agent. Onlook runs Claude Code or Codex on your own subscription, and we turn whatever the agent emits into one typed event log and draw the UI from that in our own chat interface. On top of that we give the agent a bespoke set of design-specific tools, from arranging frames on the canvas, to making suggestions, to generating multiple iterations of a selection – which is especially useful because the agent decides how to get the app into a state that you need based on your prompt.We also have our own Artifacts which are quick HTML sketches that live in the editor, but outside your repo. They’re almost like components in other design tools in that they can be carried and edited across every project but are detached from the project with no network access. As an example, you can ask the agent to turn your interface into an Artifact, and use it as a reference for another exploration, or download it as HTML and send it to a coworker as an interactive export of something you have in progress. I frequently go back to the artifacts I’ve made as visual snippets when I need new ideas or need to borrow something that’s already been built.The desktop editor is free (you can download it from our website at onlook.com) and open source under Apache-2.0, and we'll eventually offer a paid cloud product for teams.We'd love to hear which repos work and which don't, what you try to do on the canvas, and what's missing. We’re so excited for this to be a new way for designers to work in code!The Onlook team (Joel - thebrubaker and Kris - krisodd), and I will be here all day!",
+      "score": 113,
+      "comments": 76,
+      "discussion_url": "https://news.ycombinator.com/item?id=50562320",
       "extra": {
         "top_comments": [
-          "I don’t think anyone who have yet commented has used the actual model. But, to be fair to the commenters, google has made it very hard for them to do so without spending a ton of money.Neon is a really good model. It’s currently my favorite model to use. Coding-wise, it’s equivalent to Opus 5.5/Fable. Documentation-wise, it is great. If you have access to Neon have it take a crack at simplifying your agents.md. It’s the first model I’ve run that criticized the amount of ceremony in my instructions and suggested solid simplifications. It also makes clean edits to documents without leaving scars of the previous verbiage behind.Art-wise, it’s more capable, in my experience, than Fable. I’ve been using fable/opus heavily to make art assets for my application (I shared in a previous comment that procedural art has completely obviated gpt-image art for me) and I’ve started to run into a wall with how far I could iterate with fable. I had neon take a crack at the assets I struggled to improve and it did a grand job.In terms of working together with a model and how it communicates to you, I love this model. The model knows how to clearly communicate to you. It is such a breath of fresh air over Opus and Fable which, despite the improvements, I feel is actively trying to damage my brain with its unnatural prose. It's hard to describe how it feels to have a model that you feel respects your time and energy with proper writing, and the subsequent delight that arises from the feeling of wanting to engage in smaller details again.Neon has a big model smell, but the miracle and irony is it’s supposedly based on a smaller base model than Carbon. On google’s model page, they previously wrote that Neon shares the same base model as Hydrogen! It is thought that Argon and Carbon share the same base model.My impressions will probably change as I use this for longer than a day, but my initial impression is: I don’t know how google pulled this off.",
-          "Neon is a contender. Neon \"high\" appears faster and cheaper than Opus 5.5 \"medium\" with similar results on long-running language porting work in a large monorepo.The speed is the biggest win IMO. When Carbon came out, I tried to give it a shot, but it was so slow that I went back to Opus just for productivity, nevermind quality. Today I started Neon on one worktree and Opus on another, and Neon did so well that I have now switched for both.Code quality looks great. Comment-wise it has its own Claudese(exclamations like \"this function has a concurrency bug and it's a sharp one!\"), but overall I like reading it more than Opus. Might just be because I am not yet tired of its quirks though.Oh, after a productive day on this particular work I had only spent $30 of Neon vs. $70 of Opus yesterday. YMMV",
-          "Fully agree. Neon is my main model right now. I have a pretty advanced setup with multiple agents, coordinators, etc. It's basically a \"factory\" customized for me. It ran on Claude for a long time, then on Codex for the past three months, and now it runs on Google models. Neon is good, predictable, and smarter than me :)Agy has a bunch of good slash commands for different use cases. And the biggest thing for me is that it doesn't annoy me with security refusals. It helped me with my garage door, for example, when another model refused."
+          "congrats on the launch. curious how you handle states that need login or specific data, like an admin page or an empty cart. do you seed each worktree with test data, or does the agent click through the app to get there?",
+          "How are you using a Claude Code subscription? Leveraging a Claude Code subscriptions API-key without going through the Claude Code harness can lead to a user being banned for violating terms. Are you doing anything like that, or are you directly interacting with the Claude Code harness?Edit: Aaand congrats on the launch! Also, please allow us to delete our accounts. Offering sign-up without account deletion is not nice.",
+          "The \"ten versions of one screen\" part is where I've had the most trouble with agents. When I asked for variations of one section, they'd also quietly change the header, the copy, section heights and the CTA, so the comparison stopped being about the thing I asked for. What fixed it for me was a standing rule: start every variant from the production screen and keep everything the request doesn't mention exactly as it is. Is there a way in Onlook to pin parts of a frame so variants can't touch them?"
+        ]
+      }
+    },
+    {
+      "id": "50564366",
+      "title": "Should governments slow frontier AI? Jacob Coxon and Robin Hanson debate [video]",
+      "url": "https://www.youtube.com/watch?v=lwfewYL7X0o",
+      "source": "Hacker News",
+      "published_at": "2026-11-19T18:47:16+00:00",
+      "summary": "Should governments slow frontier AI? Jacob Coxon and Robin Hanson debate [video]",
+      "score": 101,
+      "comments": 200,
+      "discussion_url": "https://news.ycombinator.com/item?id=50564366",
+      "extra": {
+        "top_comments": [
+          "It's so weird that the framing of AI is always about company vs government regulation.They're both power concentrating entities. The real danger of AI are these very entities. Both of them.When the value of labor is nil, democratic values fall away.Real AI alignment comes from individual ownership and control of that means of production.That is, if what 'alignment' means to you is compatible with human liberty.These debates should start with a statement of what exactly a good outcome would look like. It doesn't seem like any of them thought it through.",
+          "If we're going to slow AI let it be with renewable-energy only mandates for AI datacenters. It sets incentives in place for hyperscalers to prioritize energy solutions as opposed to buying politicians",
+          "I'm honest worried about alignment. It feels like human society hasn't really even figured out alignment for itself -- i.e. we don't have a good way of making sure that we organize units (businesses, politics, healthcare, etc) in ways that are aligned with 'good outcomes'. I think at least part of this is that we don't have a way to agree on what 'good' means and for who. In this scenario, I find it unlikely that we'd be able to enforce alignemnt on AI"
         ]
       }
     }

@@ -1,6 +1,18 @@
 {
-  "cached_at": "2026-11-20T11:00:22.334939+08:00",
+  "cached_at": "2026-11-20T15:35:24.053106+08:00",
   "articles": [
+    {
+      "id": "https://www.news.cn/politics/20261120/234c1ff1bc7c40a79f5ff8bb4f992ab2/c.html",
+      "title": "我国电动汽车充电基础设施（枪）总数达2539.1万个",
+      "url": "https://www.news.cn/politics/20261120/234c1ff1bc7c40a79f5ff8bb4f992ab2/c.html",
+      "source": "新华网时政",
+      "published_at": "2026-11-20T00:00:00+00:00",
+      "summary": "新华社北京11月20日电 国家能源局20日发布数据显示，根据国家充电设施监测服务平台数据，截至2026年10月底，我国电动汽车充电基础设施（枪）总数达到2539.1万个，同比增长36.2%。 其中，公共充电设施（枪）528.3万个，同比增长16.5%，额定总功率达到2.71亿千瓦，单枪平均功率约为51.37千瓦；私人充电设施（枪）2010.8万个，同比增长42.5%，私人充电设施报装用电容量达到1.71亿千伏安。",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
     {
       "id": "https://www.news.cn/politics/20261120/46ea886f8d7348a990ace72c895f99ce/c.html",
       "title": "冷空气影响趋于结束 全国大部降水缩减22日后南方降水将发展增多",
@@ -50,12 +62,12 @@
       "extra": {}
     },
     {
-      "id": "https://www.news.cn/politics/20261119/b9ab6d0425f743dd8c09621e81c55600/c.html",
-      "title": "聚焦互鉴合作 2026热带雨林生态伙伴大会在海口开幕",
-      "url": "https://www.news.cn/politics/20261119/b9ab6d0425f743dd8c09621e81c55600/c.html",
-      "source": "新华网时政",
-      "published_at": "2026-11-19T00:00:00+00:00",
-      "summary": "新华社海口11月19日电（记者陈凯姿）“全球瑰宝·共享未来”，2026热带雨林生态伙伴大会19日在海口开幕，来自20多个国家和国际组织的代表共商雨林保护大计，共谋绿色发展之路。 开幕大会上，海南省委常委、宣传部部长王斌，新华社党组成员、秘书长徐玉长共同发布了由新华社国家高端智库课题组撰写的智库报告《雨林起长歌——中国热带雨林保护的“海南样板”》。 海南省政府党组成员刘平治表示，热带雨林是海南自贸港的生态安全屏障。海南把热带雨林国家公园建设作为全面深化改革开放的先导项目、国家生态文明试验区标志性工程，将同全球伙伴在生态保护、科学研究、绿色产业、人文交流等方面深化合作，共同书写热带雨林保护与可持续发展新篇章。 这是11月19日拍摄的2026热带雨林生态伙伴大会开幕前的表演《久久不见久久见》。新华社记者 杨冠宇 摄 联合国粮农组织驻华代表卡洛斯·阿尔德科认为，热带雨林是地球上最珍贵的自然资产之一，保护热带雨林关乎保障粮食安全、增强气候韧性，以及改善人们的生计。 国家林业和草原局国家公园（自然保护地）发展中心副主任高静芳表示，雨林没有国界，生态福祉属于全人类。中国将以更大力度、更实举措推进热带雨林保护及国家公园高质量建设。 这是11月19日拍摄的2026热带雨林生态伙伴大会现场。新华社记者 杨冠宇 摄 本次大会由新华社海南分社、新华社新闻信息中心、海南省委宣传部主办。接下来，与会嘉宾将深入探讨雨林保护治理等议题。",
+      "id": "https://www.bbc.co.uk/news/articles/c623j4kpg94go#0",
+      "title": "UK and EU to agree youth mobility scheme, BBC understands",
+      "url": "https://www.bbc.co.uk/news/articles/c623j4kpg94go?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "published_at": "2026-11-20T07:14:46+00:00",
+      "summary": "The scheme is expected to be approved at Friday's UK-EU summit, with new deals on food trade and carbon emissions also on the table.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
@@ -66,7 +78,7 @@
       "title": "More climate money for Africa? Europe says use what's already pledged",
       "url": "https://www.bbc.co.uk/news/articles/c6074k5jjrzko?at_medium=RSS&at_campaign=rss",
       "source": "BBC World",
-      "published_at": "2026-11-20T00:54:50+00:00",
+      "published_at": "2026-11-20T05:03:43+00:00",
       "summary": "African countries at the UN climate summit in Turkey are demanding more funding from developed nations to help them cope with climate change.",
       "score": 0,
       "comments": 0,
@@ -74,24 +86,12 @@
       "extra": {}
     },
     {
-      "id": "https://www.bbc.co.uk/news/articles/ckzd9nln5e6go#0",
-      "title": "Europe ready for talks with Russia on ending war in Ukraine, leaders say",
-      "url": "https://www.bbc.co.uk/news/articles/ckzd9nln5e6go?at_medium=RSS&at_campaign=rss",
+      "id": "https://www.bbc.co.uk/news/articles/c61wr088jnzzo#1",
+      "title": "China issues Mount Fuji warning as family of missing climber offers reward",
+      "url": "https://www.bbc.co.uk/news/articles/c61wr088jnzzo?at_medium=RSS&at_campaign=rss",
       "source": "BBC World",
-      "published_at": "2026-11-20T00:50:24+00:00",
-      "summary": "European allies of Ukraine say they have a \"united\" negotiating position at a summit in Berlin.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://www.bbc.co.uk/news/articles/cmx2q223z1jlo#3",
-      "title": "Why Canada is embracing AI data centres while the US pushes back",
-      "url": "https://www.bbc.co.uk/news/articles/cmx2q223z1jlo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "published_at": "2026-11-20T00:13:24+00:00",
-      "summary": "Shark Tank's Kevin O'Leary is among the big investors looking to Canada as a data centre development destination, while his US project faces local opposition.",
+      "published_at": "2026-11-20T04:13:22+00:00",
+      "summary": "The $75,000 reward offered by Chen Jie's family has sparked fears of more reckless climbing attempts.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
