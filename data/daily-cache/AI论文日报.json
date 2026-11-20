@@ -1,125 +1,117 @@
 {
-  "cached_at": "2026-11-19T15:43:58.792213+08:00",
+  "cached_at": "2026-11-20T11:00:22.334939+08:00",
   "articles": [
     {
-      "id": "2611.24936",
-      "title": "Jailbreak Detection on Large Language Models via Contrastive Prototype Structures",
-      "url": "https://arxiv.org/abs/2611.24936v1",
+      "id": "2611.25492",
+      "title": "Why Do LLMs Help with Scientific Misconduct Requests and What to Do About It?: Increasing the Trustworthiness of AI for Science",
+      "url": "https://arxiv.org/abs/2611.25492v1",
       "source": "arXiv",
-      "published_at": "2026-11-18T18:56:12+00:00",
-      "summary": "Jailbreak attempts and harmful prompts remain a challenge for the safe deployment of large language models. We study whether contrastively learned representations can support safety detection without training an additional downstream classifier. We propose Jailbreak Detection with Prototype Inference (JDPI), which uses binary safety labels to construct harmful and benign prototypes and makes predictions from relative prototype distances. JDPI uses only binary safety labels for encoder adaptation, prototype construction, and validation. In our setup, it uses fewer labeled examples than the classifier baseline (Method A) by avoiding the separate split used to train the downstream classifier. Across four benchmarks covering different input formats, contrastive fine-tuning improves JDPI's detection accuracy by 9.1-18.0 percentage points. Using the same encoder, JDPI achieves slightly higher ROC-AUC on one benchmark and stays within 0.017 of the baseline across all four. With dataset-specific adaptation, JDPI exceeds the released Llama Guard 3-8B baseline by 0.173-0.310 in ROC-AUC across the four benchmarks. In multi-turn replay on TomGibbs, JDPI uses accumulated user history as the conversation unfolds, achieving higher conversation-level accuracy than when it uses the current turn alone. Across 12 directed transfers, JDPI outperforms the classifier by an average of 1.59 percentage points in accuracy, demonstrating stronger cross-dataset robustness.",
+      "published_at": "2026-11-19T04:32:25+00:00",
+      "summary": "Large language models (LLMs) support scientific research, but some of that assistance can also undermine research integrity. Existing safety evaluations in science often measure whether models refuse misconduct requests, but rarely explain whether they even recognize the problem or why they comply. We investigate this gap across 8 LLMs using SciIntBench, an existing benchmark of 1,350 prompts about scientific research integrity. We examine the reasons behind compliance in four steps. First, when asked directly whether fulfilling a request would involve misconduct, models overwhelmingly identify such requests, even in the Most Covert cases (91%), while they refuse to carry out the request in only 34% of cases. Second, we examine which request characteristics are associated with refusal using features that capture how the request is framed, how much the assistant has been told about what it is helping to hide, and how the goal and the user's stake are stated, among others. Third, we estimate that the most significant effect was to rephrase requests as questions about permissibility rather than instructions, which increased refusal from 52% to 88%. Finally, we test two system-prompt fixes: asking models to assess the request before responding and reminding them of responsible conduct of research principles. These changes increase refusal rates on adversarial requests from 58% to 87% and 86%, respectively. Our findings show that models recognize wrongful requests but still help users violate integrity. Understanding why these failures occur and testing ways to reduce them offer promising paths toward more trustworthy AI for science.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Yan Qiu",
-          "Yuanyuan Li"
+          "Almene De Meran Meguimtsop",
+          "Daniel E. Acuna"
         ],
         "categories": [
+          "cs.AI"
+        ]
+      }
+    },
+    {
+      "id": "2611.25489",
+      "title": "When Should a Voice Agent Speak? End-of-Turn Detection in Turkish",
+      "url": "https://arxiv.org/abs/2611.25489v1",
+      "source": "arXiv",
+      "published_at": "2026-11-19T04:26:13+00:00",
+      "summary": "A voice agent that waits for a fixed silence before replying either interrupts users who pause mid-utterance or responds late to users who have finished. This study examines the decision at the onset of silence, using turn ends and turn-internal pauses extracted from the Real-TurnTurk corpus of Turkish dyadic video calls. A fine-tuned Turkish TurnGPT model, a zero-shot Turkish language model and a deployed multilingual detector are compared, together with voice-activity timing and facial features, under recording-disjoint and speaker-disjoint evaluation with paired cluster bootstrap tests. On held-out recordings, the fine-tuned model separates turn ends from pauses better than both text baselines and is the best calibrated of the three. Timing features of the current speaker are similarly informative, and their combination with the fine-tuned text score gives the best timing-based results; with logistic regression, this combination also outperforms the same combination with either text baseline. In a latency simulation, adding the text score to a silence timeout shortens the mean response delay at the same interruption rate. On automatic Whisper transcripts, the fine-tuned model retains its advantage over the zero-shot model.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Ahmet Tuğrul Bayrak",
+          "Fatma Nur Korkmaz",
+          "Mustafa Sertaç Türkel",
+          "Nur Yağmur Tuncer"
+        ],
+        "categories": [
+          "cs.AI",
           "cs.CL"
         ]
       }
     },
     {
-      "id": "2611.24932",
-      "title": "Knowing What You Know: A Trait Theory of Reviewer Value in Human-AI Cognitive Systems",
-      "url": "https://arxiv.org/abs/2611.24932v1",
+      "id": "2611.25484",
+      "title": "Planning Width Is Hard to Approximate Even Given the Unique Optimal Plan",
+      "url": "https://arxiv.org/abs/2611.25484v1",
       "source": "arXiv",
-      "published_at": "2026-11-18T18:55:07+00:00",
-      "summary": "When a capable model and a human reviewer cooperate on the same decision, which human still adds value? We argue this is a question about a single cognitive trait, metacognitive calibration: the alignment between a reviewer's behavioral confidence and the actual correctness of their judgments. We develop a trait theory of reviewer value to make it precise. The theory makes five claims: value is governed by calibration rather than by activity, speed, agreement, or tenure; calibration leaves observable traces in behavioral telemetry; those traces are non-diagnostic on their own, because the fast, low-revision signature of a calibrated expert is indistinguishable from that of a confident novice until it is gated by outcomes; human calibration and a model's self-knowledge are the same construct, so the joint system should defer to whichever agent is better calibrated on each item; and individual calibration is causally identifiable only above the level of the single judgment. We ground each claim in a six-month production window of an AI-assisted accounting system (541621 reviewer events, 483 reviewers), and find that a purely behavioral expertise profile inverts the ground truth, scoring an overconfident cohort (5.2 percent correction survival) higher than genuine experts (99.2 percent); that reviewer quality is flat across tenure, so the trait is not learned on the job; and that the same calibration logic that separates good from bad reviewers, applied to the model, concentrates 92.5 percent of human effort on genuine errors. We close with the boundary the theory must respect: under majority-vote aggregation, individual causal value is unidentifiable.",
+      "published_at": "2026-11-19T04:19:23+00:00",
+      "summary": "For each fixed $k$, iterative-width search finds optimal plans in polynomial time on tasks of bounded tuple-chain width, but the approximability of planning width has remained open even when an optimal plan is supplied. When all optimal plans visit the same state sequence, we characterize set and chain width as hitting numbers of competing states. We construct positive-precondition STRIPS tasks with a supplied unique optimal plan, a single reachable goal state, binary branching, and constant-size actions. Every reachable state lies on a goal-reaching execution at most one action longer than optimal, yet distinguishing width $1$ from $Θ(N)$, where $N$ is the number of atoms, is NP-hard for set, chain, and goal-admissible width. Unless $\\mathrm{P}=\\mathrm{NP}$, no polynomial-time algorithm achieves a one-sided approximation factor $o(N)$ or a symmetric factor $o(\\sqrt{N})$, and simple estimates attain both orders. For positive-precondition tasks with a supplied unique optimal plan of length at least two, testing set or chain width against a threshold $k\\geq 1$ is coNP-complete for each fixed $k$ and $Σ_2^{\\mathrm{P}}$-complete when $k$ is part of the input. Both results also hold for goal-admissible width if only one goal state is reachable. On an explicit state graph, a greedy algorithm approximates set width within a logarithmic factor even when optimal plans branch. Thus, knowing an optimal plan does not eliminate the difficulty of certifying substantially smaller width.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Priyanka Sinha",
-          "Sugam Pandey"
+          "Viet Bac Nguyen"
         ],
         "categories": [
-          "cs.AI",
-          "cs.CE",
-          "cs.HC",
-          "cs.LG"
-        ]
-      }
-    },
-    {
-      "id": "2611.24927",
-      "title": "Mapping the AI Supply Chain: Dependencies, Vulnerabilities, and Market Concentration in the AI Ecosystem",
-      "url": "https://arxiv.org/abs/2611.24927v1",
-      "source": "arXiv",
-      "published_at": "2026-11-18T18:53:58+00:00",
-      "summary": "AI systems are built across many organizations that contribute models, data, compute, capital, talent, and other assets. While the layers of the AI stack are relatively well understood, the relationships between actors and components across layers remains sparsely documented. In this work, we focus on the organizations that make up the AI supply chain: the complex network of actors that contribute to the development and deployment of AI. We motivate the examination of the organizational AI supply chain---highlighting concerns about concentration, power, chokepoints, cascading failures, fragmented accountability, and risk---then describe our pipeline for mapping the AI supply chain. Our pipeline yields our main contribution: a multilayered, large-scale dataset of actors and relationships in the AI ecosystem, annotated with dates, descriptions, types, tags, and more. This work takes a step toward systematically mapping and measuring the AI supply chain and its properties, cataloging how models, data, chips, infrastructure, capital, and even talent flow between organizations. This data enable critical examinations of industry relationships and yield insights into the political economy of AI development and concentration. We provide several illustrative analyses, including studying the most central actors, analyzing network concentration, and identifying communities and chokepoints. While our dataset is fairly comprehensive, it is also necessarily incomplete: public documents omit private deals, and coverage is shaped by search design. Together, the approach, data, and findings aim to serve as a resource for studying the AI ecosystem. The dataset is publicly available at https://huggingface.co/datasets/sarahcen/ai-supply-chain and can be explored interactively at https://aisupplychains.org/.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Sarah H. Cen",
-          "Lindsey A. Gailmard",
-          "Joohan Kim",
-          "Rishi Bommasani",
-          "Daniel E. Ho",
-          "Percy Liang"
-        ],
-        "categories": [
-          "cs.CY",
+          "cs.DS",
           "cs.AI"
         ]
       }
     },
     {
-      "id": "2611.24924",
-      "title": "Agentic Harness Engineering Beta: Requirement-Centered Evolution of Agent Harnesses",
-      "url": "https://arxiv.org/abs/2611.24924v1",
+      "id": "2611.25477",
+      "title": "AIstatLab at BraTS-GoAT 2026 Task 3: Quality-Controlled Consensus Pseudo-Labeling and Dense Expert Adaptation",
+      "url": "https://arxiv.org/abs/2611.25477v1",
       "source": "arXiv",
-      "published_at": "2026-11-18T18:52:13+00:00",
-      "summary": "Real-world harness engineering is driven by explicit and implicit user requirements, which guide development and validation. However, existing harness evolution methods often overlook implicit requirements and interaction needs, while using a single evolution agent to modify the harness and benchmark scores to select changes. This process often produces narrow patches and leads to benchmark-specific local optima. We introduce Agentic Harness Engineering Beta (AHE-Beta), a requirement-centered loop that brings real-world engineering practices into harness evolution. The loop consists of three steps: (1) User-driven evaluation lets simulated users raise their requirements as issues while they work with the harness over multiple turns. (2) Team-based modification implements those requirements as generalizable changes rather than task-specific patches. (3) Requirement-driven selection merges a change only when it resolves a verified requirement and passes review. Empirically, on held-out tasks, AHE-Beta raises pass@1 from 21.9% to 33.3% while using 40.8% fewer tokens than Base Harness, and achieves higher pass@1 than Claude Code, Meta-Harness, and AHE. In a blind human A/B test, real users prefer AHE-Beta in 31 of 48 valid pairs and rate it higher on all five dimensions, matching the directional preference of the user simulator. The human A/B results show that AHE-Beta achieves its goal of aligning harness evolution with real-world user requirements. Without further evolution, the gains transfer to GLM-5.3 and DeepSeek-V4.1-Flash with pass@1 improvements of 15.8% and 5.3% over Base Harness. Together, these results show that requirement-centered harness evolution is a more general method for improving agent capabilities.",
+      "published_at": "2026-11-19T04:06:45+00:00",
+      "summary": "BraTS-GoAT Task 3 evaluates brain-tumor segmentation across heterogeneous entities using shared ET, TC, and WT regions. We present a 3D ResidualEncoderUNet trained with quality-controlled consensus pseudo-labels, a training-only nested-region objective, and a four-expert bottleneck adapter. Five-fold ResEnc-M/L teachers gener ated predictions for 1,138 unlabeled cases; fusion, hierarchy enforcement, and confidence-and-agreement screening retained 983 for training with 1,351 annotated cases. The final five-fold ResEnc-M entry achieved mean DSC 0.834, mean NSD 0.510, and Acalc = 0.6720 on the validation server. Component effects were modest and region-dependent, with the clearest gains on ET. Source code is available at https://github.com/HeeSeung-Shin/Brats2026-Goat-HS.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Jiahang Lin",
-          "Jiahao Chen",
-          "Yiding Wang",
-          "Shichun Liu",
-          "Chengjun Pan",
-          "Shihan Dou",
-          "Honglin Guo",
-          "Yuyang Hu",
-          "Changhao Jiang",
-          "Zhenhua Han",
-          "Hang Yan",
-          "Qi Zhang",
-          "Tao Gui",
-          "Xuanjing Huang"
+          "Heeseung Shin",
+          "Changwon Lim"
         ],
         "categories": [
-          "cs.SE",
+          "eess.IV",
           "cs.AI"
         ]
       }
     },
     {
-      "id": "2611.24908",
-      "title": "Decomposing SGD Dynamics in Neural Networks: Teacher-Induced Spikes and Variance Inflation",
-      "url": "https://arxiv.org/abs/2611.24908v1",
+      "id": "2611.25476",
+      "title": "WeightCode: Installing New Capabilities into Neural Networks via Weight-Space Programming",
+      "url": "https://arxiv.org/abs/2611.25476v1",
       "source": "arXiv",
-      "published_at": "2026-11-18T18:43:40+00:00",
-      "summary": "We study two-layer neural networks trained by stochastic gradient descent (SGD) on a multi-index teacher model, focusing on how first-layer parameters orthogonal to the teacher subspace affect generalization. We decompose the first-layer weights into a signal component aligned with the teacher and an orthogonal complement, and analyze their joint SGD dynamics together with the second layer in the proportional limit. We show that although SGD updates to the complement are initially isotropic, the training dynamics induce teacher-dependent spectral spikes in the complement Gram matrix. This emergent anisotropy provides a concrete mechanism by which representation variance is amplified, and generalization degrades. To isolate this effect, we introduce Decomposed Dynamics, an analytically tractable surrogate whose asymptotic test-error dynamics coincide with those of SGD. In simulations with a ReLU student, freezing the directions of the orthogonal complement improves generalization relative to training them. Finally, we show that the signal component rapidly aligns with the second-layer weights, revealing strong cross-layer coupling even in this shallow setting. Together, our results provide a dynamical explanation for how feature learning outside the teacher subspace harms generalization.",
+      "published_at": "2026-11-19T04:04:29+00:00",
+      "summary": "Neural networks encode learned capabilities in their weights, yet extending those capabilities with explicit task knowledge remains a fundamental challenge. Here we show that Weight-Space Programming (WSP), in which executable programs read, construct or modify a network's weights directly, can install new capabilities within trained neural networks. WeightCode, a WSP framework, uses a frozen language model to write executable weight programs that install new computations into trained neural networks using task knowledge and their existing weights, without gradient-based training. Once installed, the new capabilities run independently of the language model. Given a grammar or eight demonstrations, weight programs enable previously unseen command compositions (0% to 99.8% exact match) and a new pickup action (0% to 98.4% success), while preserving the original command and navigation capabilities. On ImageNet, four weight programs achieve net gains of 8.84-17.62 points while preserving clean accuracy, outperforming the best of eight fine-tuning methods under matched examples, checks, and retention constraints. In a Vision Transformer, causal interventions show that installed noise-correction gates drive robustness gains, while their selective activation preserves clean accuracy. Rerun on five independently trained Vision Transformers without further language model calls, ten weight programs retain 83-110% of their source-network gains on average, whereas copying their fixed weight edits yields negligible gains. Six programs written for an already edited network add 5.23-14.50 points of contrast robustness while retaining the previously installed noise gain. Together, these results establish WSP as a new route to acquiring and accumulating capabilities in trained neural networks through reusable weight programs.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Samet Demir",
-          "Zafer Dogan"
+          "Bo Li",
+          "Taoyong Cui",
+          "Bob Zhang",
+          "Mengran Li",
+          "Chengyang Zhang",
+          "Yang Zhang",
+          "Pheng Ann Heng",
+          "Wanli Ouyang",
+          "Zhenfei Yin",
+          "Yingcheng Wu",
+          "Ling Yang"
         ],
         "categories": [
-          "stat.ML",
-          "cs.LG"
+          "cs.LG",
+          "cs.AI"
         ]
       }
     }
