@@ -146,7 +146,9 @@ JSON 结构：
         url: "https://api.deepseek.com/chat/completions",
         headers: { Authorization: `Bearer ${deepseekKey}` },
         body: {
-          model: "deepseek-chat",
+          model: "deepseek-flash",
+          thinking: { type: "disabled" },
+          response_format: { type: "json_object" },
           messages: [{ role: "user", content: prompt }],
           max_tokens: 3000,
         },
