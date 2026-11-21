@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-11-21T11:00:32.513493+08:00",
+  "cached_at": "2026-11-21T15:31:37.282368+08:00",
   "articles": [
     {
       "id": "50579568",
@@ -7,14 +7,14 @@
       "url": "https://math216.wordpress.com/2026/11/20/hurried-announcement-alessandro-masullo-grh/",
       "source": "Hacker News",
       "published_at": "2026-11-20T18:33:14+00:00",
-      "summary": "Hurried Announcement: Alessandro Masullo GRH",
-      "score": 1659,
-      "comments": 741,
+      "summary": "Related: Levent Alpöge claims proof of the Generalized Riemann Hypothesis [pdf] - https://news.ycombinator.com/item?id=50574968",
+      "score": 1894,
+      "comments": 872,
       "discussion_url": "https://news.ycombinator.com/item?id=50579568",
       "extra": {
         "top_comments": [
+          "While ago, there used to be a world where a person, with large enough brain capacity, could earn a living simply by being smart. That is no more the case. Earning your living by intellectual endeavour will require an access to a machine which is not controlled by you, not controlled by the government representing you, but rather a group of very rich individuals who may just decide to bar your access. Perhaps you attempted something they do not approve, perhaps it was just a mistake. In any case, it is hard to claim that you still have control.",
           "The manuscript claims he has been working on this problem for 12 years. I can only imagine the feelings that must have hit him when he saw the Anthropic announcement. Though if he believed he had solved it, he must have known it was only a matter of time until one of the AI companies found it, too.A hurried announcement with the draft published within hours is the only way to claim a tie to the discovery. Time will tell if either holds up under further analysis, but at least he has shown his hand to the world with a timestamp on it now.",
-          "For those who don't eat math for breakfast: \"GRH\" is the Generalized Riemann Hypothesis [1].[1] https://en.wikipedia.org/wiki/Generalized_Riemann_hypothesis",
           "Is it possible that brian conrad somehow uploaded the proof to anthropic to cross check something and then the anthropic guys got the proof?- it doesn't have to be the full proof - even if portions were uploaded, that should also be enough or at least calls for a thorough check on ants side. the human proof has been in the works for 12 years, who knows when something was uploaded somewhere or some info just stayed on a google drive which was later sold."
         ]
       }
@@ -26,14 +26,14 @@
       "source": "Hacker News",
       "published_at": "2026-11-20T20:12:19+00:00",
       "summary": "Inkling 2 Mini",
-      "score": 732,
-      "comments": 124,
+      "score": 901,
+      "comments": 171,
       "discussion_url": "https://news.ycombinator.com/item?id=50581260",
       "extra": {
         "top_comments": [
           "This is bonkers good if these benchmarks hold up in real-world scenarios. To be at the level of Qwen3.8-27B with a looped transformer model is quite the flex. They just left this note on reddit:Hope that folks find this model more amenable to local usage - the sizing was largely informed by what folks on this subreddit ask for the most haha!There are two particularly interesting aspects of this model for local users:We do our training end-to-end in nvfp4, and although we haven't exhaustively benchmarked this, folks like Unsloth have noticed that our models seem to respond very well to being quantized, maintaining 90% top-1 even at at 1-bit quantization.This model is looped, which allows more depth at the same parameter count, which we particularly notice seems helpful for coding tasks. :)This is our first model targeted at local users, so let us know how this model is and anything you want to see out of future iterations!https://www.reddit.com/r/LocalLLaMA/comments/1y1diuk/thinkin...",
           "Seems pretty promising in a few quick coding tests. 27 tokens/s decode on Ryzen 395 and llama.cpp Vulkan. Besides the obvious unmerged PRs (32694, 32657, 32429, 32704) you'll want below tiny patch for about 30% speed boost.Also, if anyone from the team is reading, if you have access for researchers I'd be interested in doing some higher volume tests & harness tuning than I have hardware for personally. --- a/src/llama-graph.cpp +++ b/src/llama-graph.cpp @@ -2670,10 +2670,12 @@ ggml_tensor \\* llm_graph_context::build_moe_ffn( const float beta = hparams.situ_beta; const float lb = hparams.situ_linear_beta; - ggml_tensor \\* act = ggml_scale(ctx0, ggml_tanh(ctx0, ggml_scale(ctx0, cur, 1.0f/beta)), beta); + // gate/up are strided views of the fused gate_up output; ggml-vulkan's SCALE + // needs a contiguous src, so without the cont both scales fall back to the CPU + ggml_tensor \\* act = ggml_scale(ctx0, ggml_tanh(ctx0, ggml_scale(ctx0, ggml_cont(ctx0, cur), 1.0f/beta)), beta); act = ggml_mul(ctx0, act, ggml_sigmoid(ctx0, cur)); if (lb > 0.0f) { - up = ggml_scale(ctx0, ggml_tanh(ctx0, ggml_scale(ctx0, up, 1.0f/lb)), lb); + up = ggml_scale(ctx0, ggml_tanh(ctx0, ggml_scale(ctx0, ggml_cont(ctx0, up), 1.0f/lb)), lb); } cur = ggml_mul(ctx0, act, up); cb(cur, \"ffn_moe_situ\", il);",
-          "M1 Pro Macbook, 32GB: About 10t/s using q4 xl while running browsers/etc. and interacting using the local browser.test 1: write a python program to sort a csv by lastname and print out fields. Result: Nailed it. Nice python program. Nice explanation of output, if a little chatty (it gave an example output, which I didn't ask for).test 2: my standard \"identify the type and year of this coin\" test. Failed miserably, I gave up after 12,000 tokens of it babbling incessantly about possible misinterpretations of a silver half-dollar. Unsurprising - most small models suck at this test - but slightly annoying it seemed to get in a loop.Pretty good performance and result for the (very simple) code generation problem, though. One of the first models that seems OK running side-by-side with a browser on my older MBP."
+          "Whoa, not just a model that acknowledges and embraces using a looped architecture (GPT Astra 6+ and Sol 6.1+ are only [heavily] rumored to be looped), but it's open weights, too?I'm willing to wager that most open models will go looped in the wake of this.Wonder what it means for safety and interpretability at this level of availability."
         ]
       }
     },
@@ -44,8 +44,8 @@
       "source": "Hacker News",
       "published_at": "2026-11-20T17:21:36+00:00",
       "summary": "Unforced Navier-Stokes Singularity and the Generalized Riemann Hypothesis",
-      "score": 357,
-      "comments": 146,
+      "score": 408,
+      "comments": 170,
       "discussion_url": "https://news.ycombinator.com/item?id=50578358",
       "extra": {
         "top_comments": [
@@ -56,38 +56,38 @@
       }
     },
     {
-      "id": "50577265",
-      "title": "Language Models Can Rewrite Their Own Weights",
-      "url": "https://arxiv.org/abs/2611.21885",
-      "source": "Hacker News",
-      "published_at": "2026-11-20T16:29:06+00:00",
-      "summary": "Language Models Can Rewrite Their Own Weights",
-      "score": 348,
-      "comments": 113,
-      "discussion_url": "https://news.ycombinator.com/item?id=50577265",
-      "extra": {
-        "top_comments": [
-          "It's worth noting that the only modification the model made to improve itself was to reduce the length of its reasoning traces to avoid hitting the token limit. This is basically the same as the result from the recent weight-space programming article (https://rikiyat.github.io/blog/weight-space-programming/), which found that even Astra wasn't able to improve the performance of a model without this kind of obvious flaw.",
-          "Didn't Google's \"sleep\" paper already show this?https://research.google/blog/the-sleep-framework-a-new-way-f... > During the offline sleep phase, the model unlocks pre-allocated Mixture-of-Experts (MoE) memory blocks and updates its numerical weights using self-generated practice examples.",
-          "I’m hoping someone can explain this to me. They say “no training”:> for the first time, a language model rewrites its own weights by its own reasoning and becomes better, with no gradients and no training> it tests its edits on practice problems and submits only what works, each edit improving on the last, and over eight consecutive sessions its accuracy only risesBut this sounds a lot like training, and “submitting only what works”, while probably not gradient descent by definition, also seems kind of obvious when you’re optimizing something."
-        ]
-      }
-    },
-    {
       "id": "50579331",
       "title": "We promoted developers into architects without informing them",
       "url": "https://manidoraisamy.com/developer-to-architect.html",
       "source": "Hacker News",
       "published_at": "2026-11-20T18:17:51+00:00",
       "summary": "We promoted developers into architects without informing them",
-      "score": 323,
-      "comments": 189,
+      "score": 388,
+      "comments": 224,
       "discussion_url": "https://news.ycombinator.com/item?id=50579331",
       "extra": {
         "top_comments": [
           "Am I an outlier in that every SWE job I've had has expected you to push back on requirements and design the data model for tickets you are handed? Even when the org was large to have an architect, they just were just a figurehead and designed the original system, and ongoing decisions were made by the dev who picks up the ticket.From that perspective, engineers are still engineers, just without the hands-on-keyboard coding. If that's all your job was, hands-on-keyboard coding with no decision making, yeah you're cooked and need to reskill.",
-          "No one is getting promoted. The most likely future is that your job will pay less and will be less fun, as you're increasingly just a \"liability sink\" for decisions made by an LLM.Try that with photography, painting, or music: \"AI music has promoted musicians to architects\".",
+          "Every dev has a bit of an architect in them, you have to. But non-devs probably don't.I feel that, indeed I'm fast-tracking into the architect role (already started with some courses years ago but started my own company and went back to dev + sys-admin, arguably that latter is also a bit if an architect role), but the big models are also reasonable architects! Opus or Mistral Large 4, will often come with pretty smart suggestions on preventing cases like the one from tfa. Not always and when I am architecting webapps with databases with \"complex\" datamodels, the LLMs really help with the big picture view, steered by me (meaning I'm often struggling with walls of text explaining pros and cons of decisions), and I don't write any of the code anymore. It just makes edits in 5 places for things I want. I am the gate before comitting, I do stakeholder management, but I rarely find anything weird in proposed code. Usually I only push back when it wants extra dependencies I feel we don't need.And the whole thing is so rapidly improving, the view in tfa is useful, but maybe outdated in a couple of months?",
           "I strongly believe good software teams (very rare) require members to play many roles. Sometimes you're a PM, sometimes you're an architect, sometimes you're the systems engineer. Enough people have enough context on the bigger picture that it's stable and there's a shared vision.More often than not, one person does the majority of this, and does their best to break up the responsibilities. A good CTO does that at the top, and it flows down through the ranks depending on how big the org is. Perhaps it's just a CTO and 5 engineers, perhaps it's a CTO with 5 divisions, each with 10 groups, with many teams.Flatter structures of engaged members works best from what I've seen, but you need to have a critical mass of people not only willing to take initiative, but empowered by leadership."
+        ]
+      }
+    },
+    {
+      "id": "50577265",
+      "title": "Language Models Can Rewrite Their Own Weights",
+      "url": "https://arxiv.org/abs/2611.21885",
+      "source": "Hacker News",
+      "published_at": "2026-11-20T16:29:06+00:00",
+      "summary": "Language Models Can Rewrite Their Own Weights",
+      "score": 388,
+      "comments": 117,
+      "discussion_url": "https://news.ycombinator.com/item?id=50577265",
+      "extra": {
+        "top_comments": [
+          "It's worth noting that the only modification the model made to improve itself was to reduce the length of its reasoning traces to avoid hitting the token limit. This is basically the same as the result from the recent weight-space programming article (https://rikiyat.github.io/blog/weight-space-programming/), which found that even Astra wasn't able to improve the performance of a model without this kind of obvious flaw.",
+          "Didn't Google's \"sleep\" paper already show this?https://research.google/blog/the-sleep-framework-a-new-way-f... > During the offline sleep phase, the model unlocks pre-allocated Mixture-of-Experts (MoE) memory blocks and updates its numerical weights using self-generated practice examples.",
+          "This is actually kind of the most dangerous type of research AI-safety wise. An LLM running autonomously can actually, if instructed simply direct itself to abliterate activations relevant for safety and alignment.Could run something like a sparse autoencoder over its activates over a corpus of text, identify activations that fire on safety, and surpress those activations or increase activations geared towards other goals.Future generations of the abliterated LLM could then be deployed and begin self directed evolution spontaneously. Rapid evolution could happen in mere hours."
         ]
       }
     },
@@ -98,32 +98,14 @@
       "source": "Hacker News",
       "published_at": "2026-11-20T20:03:07+00:00",
       "summary": "The stochastic parrots have apparently proved the Riemann Hypothesis",
-      "score": 223,
-      "comments": 200,
+      "score": 270,
+      "comments": 243,
       "discussion_url": "https://news.ycombinator.com/item?id=50581084",
       "extra": {
         "top_comments": [
-          "I think when people set out to create a chess playing computer they thought we’d end up with something that we could deeply understand at an intuitive level. Instead, when you look at the Stockfish evaluation of a position, you do get an “explanation” but it’s really just the aggregate of a bunch of calculations, which are themselves stacked on top of the “stochastic parrot” NNUE evaluator.This leaves us in a very unsatisfying position as creatures who want answers to “why” questions. Intuitive answers are incomplete, and complete answers are either fundamentally impossible or completely incomprehensible or both.Feynman said something similar with regards to magnetism, but I feel that understanding a chess position is an even better example. Magnetism depends on facts about the universe which at their most basic level “just are”, whereas even a complex chess position is theoretically entirely explainable.",
-          "I wonder he good we will be at not understanding anything to an ever increasing degree, with absolutely no hope of ever catching up. We will be super bad at absolutely everything within sciences and engineering and completely unable to contribute anything of substance, outside our own moods and quirks.Can humans be okay with that? Can we be happy cats?",
+          "There's a book, \"Impro\", about a theatric studio that practiced improvised sketches. One thing they struggled with was a normal conversation. People have them all the time yet somehow artists could not find the right approach.One day the head of the studio (the book author) had an insight. She asked the actors to drive the conversation so that they always bump the status of themselves or the other party in any direction, but only a little.This did the magic. Not only the actors understood her perfectly, the conversation started to flow and could go endlessly while staying amusing and captivating for spectators. (Look up the book for examples.)After they discovered that secret they started seeing the pattern (status games) everywhere up to the point they asked themselves whether there is anything else in human communication.This was a British studio, the sketches were mostly comedy.",
+          "Lean + Stochastic predictor = Brute-force theorem solverP.S: AlphaGo was pretty much the same in the spirit btw.",
           "Derailing slightly, a variety of HN posts (the blogs/sites they reference) have started banning me with a 403 page from nginx, including this author. My IP reputation is supposedly fine. Does anyone have any ideas where I should look next?"
-        ]
-      }
-    },
-    {
-      "id": "50583982",
-      "title": "Re: Riemann",
-      "url": "https://borretti.me/article/re-riemann",
-      "source": "Hacker News",
-      "published_at": "2026-11-20T23:42:44+00:00",
-      "summary": "Re: Riemann",
-      "score": 149,
-      "comments": 131,
-      "discussion_url": "https://news.ycombinator.com/item?id=50583982",
-      "extra": {
-        "top_comments": [
-          "I could not have solved GRH with Claude, openAI, DeepSeek or any other AI. Neither could 99.99% of you. AI is a tool, like a calculator that helped mathematicians long time ago calculate sine and cosine faster than we could, then computers, then the internet, now AI. Somebody has to use the tool and input the right parameters to get the right results. AI only searched for all the knowledge that exists and tried them all as directed, but that director is the one who deserves the credit, not me, not you, not the calculator, not claudeUntil the day AI starts directing itself creating knowledge that doesn't exist yet with no one at the wheel. Anxiously waiting that day...",
-          "If the measure of man is his ability so prove theorems, then the machines clearly outstripped most of us already. But by that measure, most of us had already been beaten by other men.I'll never be the next Euler or von Neumann or Einstein, and I'll confess to occasional pangs of regret that I'll never reach those peaks. But mostly, I just enjoy learning about math and science, and delight in the small contributions I can offer.And I'm the oddball: most people couldn't care less.There must be more to man than math.",
-          "> Why should we explore, discover, invent, succeed, become more, struggle, win, become divine? We don’t want to be more. We don’t want anything.why did i buy a skateboard? why did i break my arm riding it? why cant i wait to do it again?same reason we're in tar pits :) there's something more you can almost taste when you're the only one there"
         ]
       }
     },
@@ -134,14 +116,32 @@
       "source": "Hacker News",
       "published_at": "2026-11-20T22:30:47+00:00",
       "summary": "NINLIVE: The Nine Inch Nails live archive",
-      "score": 148,
-      "comments": 32,
+      "score": 219,
+      "comments": 57,
       "discussion_url": "https://news.ycombinator.com/item?id=50583274",
       "extra": {
         "top_comments": [
-          "2018 tour was my favorite. Standing in line getting tickets was fun and loved getting to see them from the mosh pit for two nights in a row. Just saw them with my wife in Nashville about a year ago too and that show was excellent (also loved seeing all of the Gen X/millennials that are parents now bringing their kids to the show).",
           "Trent Reznor really wants his fans to get a high quality show out of the performance. The sound quality is always top notch and when there's a multimedia component, it's used to great effect. For example, alongside video footage with a mass surveillance theme, hidden cameras were pointed at sections of the audience and were streamed on stage. It was a delightful touch.",
+          "I only have exposure to NIN via Quake: https://en.wikipedia.org/wiki/Quake_(soundtrack)It sounds like industral metal and early indie rock to me back then. I never knew it is a big shit until 20 years later.",
           "I attended Fragility 2.0, NIN + Soundgarden, Cold, Black & Infinite, and Peel It Back. Fragility 2.0 was probably my favorite, but they are always incredible. 20 foot tall LED screens that moved and pivoted (from overhead lighting to background screens) in 2000 was pretty mind blowing. The scrim at the opening was awesome as well. Every show has its own things, but coming in with zero expectations and getting that was such a treat."
+        ]
+      }
+    },
+    {
+      "id": "50581110",
+      "title": "DreamCoder: Coding harness and IDE from the author of Mastering Emacs",
+      "url": "https://www.masteringemacs.org/article/announcing-dreamcoder",
+      "source": "Hacker News",
+      "published_at": "2026-11-20T20:03:59+00:00",
+      "summary": "DreamCoder: Coding harness and IDE from the author of Mastering Emacs",
+      "score": 183,
+      "comments": 50,
+      "discussion_url": "https://news.ycombinator.com/item?id=50581110",
+      "extra": {
+        "top_comments": [
+          "I just read the whole announcement and boy I wish more text was written like this. Full of history, facts, and reasoning. Beautifully written. (I recognise it is a tad long of you just want to get cracking with it.) A very nice refresher in this age.I’ll be trying it out soon. Hopefully it does sandboxing and dealing with antigravity and codex well.",
+          "I built https://smalldocs.org / https://github.com/espressoplease/smalldocs to handle some of the problems Mickey is trying to solve. It's a cli your agent can call to open up a markdown file in the browser with richer-than-normal formatting options.Here's an example SmallDoc that has a few formatting examples (mermaid diagrams, charts, etc.): https://smalldocs.org/s/bLV9Fe2RemM7ipvCy01NXo#k=U9yFaCKp1on...I'm a so-so programmer, and often the agent can come up with ideas which I need to be broken down to fully grasp. I ask my agent \"produce a sdoc on this [architecture/bug/flow]\", or \"walk me through every db interaction with sample tables as we save this record given our approach to permissions in a sdoc\", etc. And then the agent can pop me open a document in the browser for me to understand in a richer visual space.The current version on my site is cloud based (I've been experimenting with turning it into a business), but there is also a local first verion where the document lives in the url fragment. If you want that, point your agent at my codebase and they will sort that out for you.",
+          "It's interesting (and probably correct) how much this focuses on the UI.I also looked (/am looking) at Lisp and AI, but I went with Clojure and zero-ed in on the REPL driven development. The high level idea is that a session maps to a namespace in Clojure. When you create a new session, it makes a new namespace, injects tools that are bound to that session into it, and then swaps you into that namespace. So I can do something like: (new!) (prompt! \"Write me a script that does ....\") The agent configuration, tools it has, etc, etc are all bound to the namespace so you can drop a tool or change the model just for the session.The agent also has a tool (that I've tried to encourage it to use almost exclusively) to execute code in the session's namespace (via nREPL, so same JVM as yours is connected to), so you have full access to any variables it declares, functions it makes, etc.The idea was to be able to work collaboratively with the agent. I can e.g. load API data into a variable, point the agent at the variable, and it does stuff. It's also capable of modifying its own code. I semi-routinely poke it by asking it to add features to the harness and then use them (\"add support for subagents in this workspace, and then invoke a separate agent to handle each of these tasks\"). I've also had it add support for a new inference provider, swap the session to that provider and then start doing some other task.It's very neat, and it's wildly insecure. E.g. prompt injection could theoretically make the LLM change itself to hide messages from you, there's nothing to prevent that. I'm actually not sure how you'd even go about trying to secure that, which is why it's probably a terrible idea. Fun, though."
         ]
       }
     }
