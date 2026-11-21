@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-11-20T15:35:24.053106+08:00",
+  "cached_at": "2026-11-21T11:00:32.513493+08:00",
   "articles": [
     {
-      "id": "50562754",
-      "title": "Anthropic’s Nasdaq debut",
-      "url": "https://www.reuters.com/business/finance/anthropics-historic-debut-put-ais-promise-peril-wall-st-test-2026-11-19/",
+      "id": "50579568",
+      "title": "Hurried Announcement: Alessandro Masullo GRH",
+      "url": "https://math216.wordpress.com/2026/11/20/hurried-announcement-alessandro-masullo-grh/",
       "source": "Hacker News",
-      "published_at": "2026-11-19T17:02:40+00:00",
-      "summary": "Anthropic’s Nasdaq debut",
-      "score": 1049,
-      "comments": 2073,
-      "discussion_url": "https://news.ycombinator.com/item?id=50562754",
+      "published_at": "2026-11-20T18:33:14+00:00",
+      "summary": "Hurried Announcement: Alessandro Masullo GRH",
+      "score": 1659,
+      "comments": 741,
+      "discussion_url": "https://news.ycombinator.com/item?id=50579568",
       "extra": {
         "top_comments": [
-          "Genuinely a massive moment in human history. I'm nervous about what comes. as a SWE the gravy train is basically over in my view. they figured out how to make a program that does the job. Always thought i was set for life. difficult to grasp how much life will change in the coming years.",
-          "It’s been dropping ever since the first trade and appears to be down at $1.26T now. The fact that just a few weeks ago folks wanted $2T plus tells you how far off the original valuations really were.And with this now below where OpenAI has been trying to value itself on the private markets that doesn’t bode well for OpenAI. If I was at OpenAI I’d be very worried about the picture today paints.",
-          "I started programming 50 years ago. At one stage early in my career this mysterious new language C was the thing, and I went on an all expenses paid 2 week course in Singapore where they flew attendees in from around the world to learn this language. Software has been good to me.Now it seems like it's the sunset of this way of making a living. I think people who manage to move up the food chain a bit will succeed but its hard to advise any junior in the industry exactly what that looks like."
+          "The manuscript claims he has been working on this problem for 12 years. I can only imagine the feelings that must have hit him when he saw the Anthropic announcement. Though if he believed he had solved it, he must have known it was only a matter of time until one of the AI companies found it, too.A hurried announcement with the draft published within hours is the only way to claim a tie to the discovery. Time will tell if either holds up under further analysis, but at least he has shown his hand to the world with a timestamp on it now.",
+          "For those who don't eat math for breakfast: \"GRH\" is the Generalized Riemann Hypothesis [1].[1] https://en.wikipedia.org/wiki/Generalized_Riemann_hypothesis",
+          "Is it possible that brian conrad somehow uploaded the proof to anthropic to cross check something and then the anthropic guys got the proof?- it doesn't have to be the full proof - even if portions were uploaded, that should also be enough or at least calls for a thorough check on ants side. the human proof has been in the works for 12 years, who knows when something was uploaded somewhere or some info just stayed on a google drive which was later sold."
         ]
       }
     },
     {
-      "id": "50563066",
-      "title": "Pancreatic cancer halted by virus injection in three patients",
-      "url": "https://www.newscientist.com/article/2528235-pancreatic-cancer-halted-by-virus-injection-in-three-patients/",
+      "id": "50581260",
+      "title": "Inkling 2 Mini",
+      "url": "https://thinkingmachines.ai/news/inkling-2-mini/",
       "source": "Hacker News",
-      "published_at": "2026-11-19T17:25:33+00:00",
-      "summary": "https://archive.ph/2Et0xhttps://clinicaltrials.gov/study/NCT06693986",
-      "score": 736,
-      "comments": 119,
-      "discussion_url": "https://news.ycombinator.com/item?id=50563066",
+      "published_at": "2026-11-20T20:12:19+00:00",
+      "summary": "Inkling 2 Mini",
+      "score": 732,
+      "comments": 124,
+      "discussion_url": "https://news.ycombinator.com/item?id=50581260",
       "extra": {
         "top_comments": [
-          "Is it normal to not report how many people received the treatment and just report the number of successes? Is this better than placebo or doing nothing?",
-          "I have little to say other than I'm deeply saddened by the stories in this thread and I really hope that one day this disease will be easily cured. I'm so sorry for all of your losses.",
-          "I was trying to figure out what the actual intervention was, and what clinical trial this is from based on the extremely limited information, and have not been able to yet.In the mean time, here's 25 clinical trials for oncolytic viral therapies for pancreatic cancer:https://clinicaltrials.gov/search?cond=Pancreatic%20Cancer&i...And here's a review article on the general concept from the lead physician-researcher in this article:https://pmc.ncbi.nlm.nih.gov/articles/PMC6186423/Adenoviruses are very easy to make with custom contents, and are used for many many purposes. However they rarely make it all the way to become a therapy in practice.It's always fascinating what hits the front page of HN when it comes to bio!"
+          "This is bonkers good if these benchmarks hold up in real-world scenarios. To be at the level of Qwen3.8-27B with a looped transformer model is quite the flex. They just left this note on reddit:Hope that folks find this model more amenable to local usage - the sizing was largely informed by what folks on this subreddit ask for the most haha!There are two particularly interesting aspects of this model for local users:We do our training end-to-end in nvfp4, and although we haven't exhaustively benchmarked this, folks like Unsloth have noticed that our models seem to respond very well to being quantized, maintaining 90% top-1 even at at 1-bit quantization.This model is looped, which allows more depth at the same parameter count, which we particularly notice seems helpful for coding tasks. :)This is our first model targeted at local users, so let us know how this model is and anything you want to see out of future iterations!https://www.reddit.com/r/LocalLLaMA/comments/1y1diuk/thinkin...",
+          "Seems pretty promising in a few quick coding tests. 27 tokens/s decode on Ryzen 395 and llama.cpp Vulkan. Besides the obvious unmerged PRs (32694, 32657, 32429, 32704) you'll want below tiny patch for about 30% speed boost.Also, if anyone from the team is reading, if you have access for researchers I'd be interested in doing some higher volume tests & harness tuning than I have hardware for personally. --- a/src/llama-graph.cpp +++ b/src/llama-graph.cpp @@ -2670,10 +2670,12 @@ ggml_tensor \\* llm_graph_context::build_moe_ffn( const float beta = hparams.situ_beta; const float lb = hparams.situ_linear_beta; - ggml_tensor \\* act = ggml_scale(ctx0, ggml_tanh(ctx0, ggml_scale(ctx0, cur, 1.0f/beta)), beta); + // gate/up are strided views of the fused gate_up output; ggml-vulkan's SCALE + // needs a contiguous src, so without the cont both scales fall back to the CPU + ggml_tensor \\* act = ggml_scale(ctx0, ggml_tanh(ctx0, ggml_scale(ctx0, ggml_cont(ctx0, cur), 1.0f/beta)), beta); act = ggml_mul(ctx0, act, ggml_sigmoid(ctx0, cur)); if (lb > 0.0f) { - up = ggml_scale(ctx0, ggml_tanh(ctx0, ggml_scale(ctx0, up, 1.0f/lb)), lb); + up = ggml_scale(ctx0, ggml_tanh(ctx0, ggml_scale(ctx0, ggml_cont(ctx0, up), 1.0f/lb)), lb); } cur = ggml_mul(ctx0, act, up); cb(cur, \"ffn_moe_situ\", il);",
+          "M1 Pro Macbook, 32GB: About 10t/s using q4 xl while running browsers/etc. and interacting using the local browser.test 1: write a python program to sort a csv by lastname and print out fields. Result: Nailed it. Nice python program. Nice explanation of output, if a little chatty (it gave an example output, which I didn't ask for).test 2: my standard \"identify the type and year of this coin\" test. Failed miserably, I gave up after 12,000 tokens of it babbling incessantly about possible misinterpretations of a silver half-dollar. Unsurprising - most small models suck at this test - but slightly annoying it seemed to get in a loop.Pretty good performance and result for the (very simple) code generation problem, though. One of the first models that seems OK running side-by-side with a browser on my older MBP."
         ]
       }
     },
     {
-      "id": "50563148",
-      "title": "Claude solves two open problems in the physics of black holes",
-      "url": "https://www.anthropic.com/research/claude-black-hole-physics",
+      "id": "50578358",
+      "title": "Unforced Navier-Stokes Singularity and the Generalized Riemann Hypothesis",
+      "url": "https://terrytao.wordpress.com/2026/11/20/unforced-euler-singularity-unforced-navier-stokes-singularity-and-the-generalized-riemann-hypothesis/",
       "source": "Hacker News",
-      "published_at": "2026-11-19T17:30:44+00:00",
-      "summary": "Claude solves two open problems in the physics of black holes",
-      "score": 469,
-      "comments": 220,
-      "discussion_url": "https://news.ycombinator.com/item?id=50563148",
+      "published_at": "2026-11-20T17:21:36+00:00",
+      "summary": "Unforced Navier-Stokes Singularity and the Generalized Riemann Hypothesis",
+      "score": 357,
+      "comments": 146,
+      "discussion_url": "https://news.ycombinator.com/item?id=50578358",
       "extra": {
         "top_comments": [
-          "81 comments so far (82 as of now) and I haven't found one that is actually about the papers or even TFA. What are we doing here?",
-          "\"Claude solves\" feels reflective of the constant, problematic anthropomorphizing of the machine. For how it's problematic, look at \"it broke out of the sandbox\" vs. \"we failed to build an adequate sandbox\".What does it mean for Claude to solve it? What was the prompt? I didn't read it all, but the word \"prompt\" does not appear in the blog post, either abstract, or either paper.",
-          "From a cursory glance the bootstrap paper is really hard to read, however the blog post is easier and seems more human written.The first result is cool (but basically a complex error-prone calculation), the second is much much cooler, Claude proved the upper limit for the mass of a black-hole which is consistent with a given central charge. (thereby making it a consistent theory of quantum gravity), any theory predicting above this is not a theory of quantum gravity of that universe. This is very exciting!"
+          "Something I don’t quite know, maybe someone closer to math can answer this questionIt seems we’re making tremendous progress on the back of existing abstractions and concepts with the brute force ability to generate language and verify proofs.For example, Tao says about the Riemann proof:> appears to use the full power of modern developments on the Langlands program and arithmetic geometryWhat I wonder: how do we create new abstractions and concepts? Like whatever “Langlands program” is? That then feedback into the system, and allow for even more sophisticated mathematics.Are we assuming AI will do this? Or does this still need to be something at least agreed-upon by a mathematics community - in the same way programmers talk about a “linked list” without having an hour long conversation to define it axiomatically? And without that social aspect, without breaking down long proofs into Lego block common abstractions, math may plateau? In part because we lose the ability to ask meaningful questions?",
+          "https://leanprover.zulipchat.com/#narrow/channel/113488-gene...It looks like two independent kernels accept the result, which means its likely that there are no kernel bug exploitations in the proof.",
+          "Is anyone else struggling with feelings of both excitement and terror? I haven't felt this much personal uncertainty about my career/life since I was an L1 MLE (10 years ago)."
         ]
       }
     },
     {
-      "id": "50570479",
-      "title": "Google is pushing OEMs against GrapheneOS and bootloader unlocking",
-      "url": "https://grapheneos.social/@GrapheneOS/117645038299496084",
+      "id": "50577265",
+      "title": "Language Models Can Rewrite Their Own Weights",
+      "url": "https://arxiv.org/abs/2611.21885",
       "source": "Hacker News",
-      "published_at": "2026-11-20T05:21:02+00:00",
-      "summary": "Google is pushing OEMs against GrapheneOS and bootloader unlocking",
-      "score": 265,
-      "comments": 62,
-      "discussion_url": "https://news.ycombinator.com/item?id=50570479",
+      "published_at": "2026-11-20T16:29:06+00:00",
+      "summary": "Language Models Can Rewrite Their Own Weights",
+      "score": 348,
+      "comments": 113,
+      "discussion_url": "https://news.ycombinator.com/item?id=50577265",
       "extra": {
         "top_comments": [
-          "Find your state attorney general [1]. Write them a letter. Calmly and dispassionately ask that they look into this from an antitrust perspective. Include a copy of this GrapheneOS thread.GrapheneOS, on its side, should publish a template letter for every state. They should also consider releasing evidence for Google \"repeatedly reaching out to OEMs to question whether they're working with us and threaten[ing] them\" [2].[1] https://www.naag.org/find-my-ag/[2] https://grapheneos.social/@GrapheneOS/117645917131936200",
-          "Keep fighting the good fight. GrapheneOS has been a breath of fresh air the past several years and I really don't want to go back to manual rooting/debloating/hardening.",
-          "Strange since Pixels allow boot loader unlocking.\"The Sherman Antitrust Act[1] (26 Stat. 209, 15 U.S.C. §§ 1–7) is a United States antitrust law which prescribes the rule of free competition among those engaged in commerce and consequently prohibits unfair monopolies. It\" Source: \"https://en.wikipedia.org/wiki/Sherman_Antitrust_Act\""
+          "It's worth noting that the only modification the model made to improve itself was to reduce the length of its reasoning traces to avoid hitting the token limit. This is basically the same as the result from the recent weight-space programming article (https://rikiyat.github.io/blog/weight-space-programming/), which found that even Astra wasn't able to improve the performance of a model without this kind of obvious flaw.",
+          "Didn't Google's \"sleep\" paper already show this?https://research.google/blog/the-sleep-framework-a-new-way-f... > During the offline sleep phase, the model unlocks pre-allocated Mixture-of-Experts (MoE) memory blocks and updates its numerical weights using self-generated practice examples.",
+          "I’m hoping someone can explain this to me. They say “no training”:> for the first time, a language model rewrites its own weights by its own reasoning and becomes better, with no gradients and no training> it tests its edits on practice problems and submits only what works, each edit improving on the last, and over eight consecutive sessions its accuracy only risesBut this sounds a lot like training, and “submitting only what works”, while probably not gradient descent by definition, also seems kind of obvious when you’re optimizing something."
         ]
       }
     },
     {
-      "id": "50564159",
-      "title": "The 98% Slot Machine: How Paid Advertising Became an Extraction Tax",
-      "url": "https://globalcommercegraph.com/writing/the-ninety-eight-percent-slot-machine",
+      "id": "50579331",
+      "title": "We promoted developers into architects without informing them",
+      "url": "https://manidoraisamy.com/developer-to-architect.html",
       "source": "Hacker News",
-      "published_at": "2026-11-19T18:35:17+00:00",
-      "summary": "The 98% Slot Machine: How Paid Advertising Became an Extraction Tax",
-      "score": 259,
-      "comments": 143,
-      "discussion_url": "https://news.ycombinator.com/item?id=50564159",
+      "published_at": "2026-11-20T18:17:51+00:00",
+      "summary": "We promoted developers into architects without informing them",
+      "score": 323,
+      "comments": 189,
+      "discussion_url": "https://news.ycombinator.com/item?id=50579331",
       "extra": {
         "top_comments": [
-          "This analogy doesn't hold at all. Casinos are engineered for the house to win and the customer to lose because the casino is paying the customer directly. They are disincentivized to let the customer win. If the customer always won, the casino goes out of business very quickly.Ad auctions are completely different, since they are just a marketplace. A customer's (advertiser's) win comes from a third party, and the point of the ad platform is to connect that third party to the customer. The ad platform would love to be able to make every single customer win all the time. Although, if they did that, it would create a lot more demand and even out the ROI with increased ad prices. But that's not the \"evil ad platform\" engineering the customers to always lose in the way casinos do, that's simply basic supply/demand economics.COI disclaimer: My current job is a small part of an ads platform on a website you have heard of. I dislike ads but realize they are a necessity for running some parts of the internet.",
-          "I use to think we lived in an enlightened age, where we have now learned that we need to use scientific reasoning and analysis to make decisions. It is what lifted us up from superstition and folk tales.But society, still, collectively, falls for snake oil, over and over again.This topic was talked about in 2019. https://news.ycombinator.com/item?id=21465873Freakanomics did a great podcast about if Internet Advertising actually works. https://news.ycombinator.com/item?id=47906485Anyone that has an interest in the topic should listen (or read) about what Steve Tadelis did in the 2012 timeframe. He was an economics professor at the University of California, Berkeley, and then worked at eBay, where he led the famous experiment on Google ad effectiveness.",
-          "For a long time I’ve been chewing on this…Back in the 2000’s I was involved with numerous “social” systems before there was Facebook, the thing they all had in common was that we knew we lived or died based on being viral so the most important knob we could turn in the process was the rate at which people completed the onboarding and recommended new people. So we were obsessive about plugging leaks in our funnel from both a craftsmanship and business standpoint.Today whether it is mobile games or anything else I’m often left wondering if there is anybody left who remembers what it takes to tune up a funnel. Now I am told that for western mobile games they aren’t even interested in players who would care what the game mechanics are but instead just want to filter for a handful of ‘whales’ who will start spending money when they encounter the slightest speed bump… but still!Right now I trade it back to the time when Facebook discovered its business model, made virality impossible, and convinced everybody to pay for traffic. You’d think the same motivations exist there, like you can save your money or your investors’ money if you have a good onboarding process so you should but what you find is…. People don’t.I’ve had people blame the OKR/KPI culture for this which has everybody distracted by sub optimization…. But there’s also the problem that the thing you really need to compare customer acquisition cost to is lifetime customer value. So yeah, you spend $50 to get a customer to spend $20 where your COGS is $18…. That’s the part you know about and it looks awful and you tell yourself that that LCV will be more than $2 which is true because some of those customers will come back but it’s speculative. So you think you are practicing ‘quantitative marketing’ but you are like Coca-Cola in the mid 20th century spending on every kind of advertising because you think the brand equity is worth it."
+          "Am I an outlier in that every SWE job I've had has expected you to push back on requirements and design the data model for tickets you are handed? Even when the org was large to have an architect, they just were just a figurehead and designed the original system, and ongoing decisions were made by the dev who picks up the ticket.From that perspective, engineers are still engineers, just without the hands-on-keyboard coding. If that's all your job was, hands-on-keyboard coding with no decision making, yeah you're cooked and need to reskill.",
+          "No one is getting promoted. The most likely future is that your job will pay less and will be less fun, as you're increasingly just a \"liability sink\" for decisions made by an LLM.Try that with photography, painting, or music: \"AI music has promoted musicians to architects\".",
+          "I strongly believe good software teams (very rare) require members to play many roles. Sometimes you're a PM, sometimes you're an architect, sometimes you're the systems engineer. Enough people have enough context on the bigger picture that it's stable and there's a shared vision.More often than not, one person does the majority of this, and does their best to break up the responsibilities. A good CTO does that at the top, and it flows down through the ranks depending on how big the org is. Perhaps it's just a CTO and 5 engineers, perhaps it's a CTO with 5 divisions, each with 10 groups, with many teams.Flatter structures of engaged members works best from what I've seen, but you need to have a critical mass of people not only willing to take initiative, but empowered by leadership."
         ]
       }
     },
     {
-      "id": "50569226",
-      "title": "OpenSSL: Buffer overflow in EVP_EncodeBlock() (CVE-2026-121481, CVSS 9.8)",
-      "url": "https://github.com/openssl/openssl/pull/33652",
+      "id": "50581084",
+      "title": "The stochastic parrots have apparently proved the Riemann Hypothesis",
+      "url": "https://scottaaronson.blog/?p=10344",
       "source": "Hacker News",
-      "published_at": "2026-11-20T02:01:09+00:00",
-      "summary": "OpenSSL: Buffer overflow in EVP_EncodeBlock() (CVE-2026-121481, CVSS 9.8)",
-      "score": 176,
-      "comments": 108,
-      "discussion_url": "https://news.ycombinator.com/item?id=50569226",
-      "extra": {
-        "top_comments": [
-          "On a very very quick read, the bug is that EVP_EncodeBlock malfunctions if the input is larger than ~1.5GB. EVP_EncodeBlock is a function that encodes base64.https://docs.openssl.org/1.0.2/man3/EVP_EncodeInit/As a seasoned C programmer, I can immediately observe that the whole API is bad: the caller is expected to calculate the buffer length on their own, using a nontrivial formula, and the caller does not pass in the output buffer length, so the implementation cannot validate it. But apparently OpenSSL 4 also implemented it wrong and wrote (possibly far) past the end of the buffer.You should probably assume that, if you are running anything that can be convinced to use this API to encode a very long blob as base64, then you are in trouble. I don’t know why a modern server would do this.BTW, OpenSSL seems to be a rather low quality implementation of a very low quality set of APIs. Stay away.edit: Fixed my size threshold, hopefully. I was thinking of unsigned ints, but this is a signed int. I have not looked at the code, just the description.",
-          "I think CVSS 9.8 is exaggerated. This is not remotely anywhere near as serious as Heartbleed. It's an internal function which will fail if its input is far too long, but exploitability rests on how untrusted input can reach it; the key word being \"untrusted\". E.g. if you operate a base64 encoding service on the Internet that just reads all the data into memory at once and calls EVP_EncodeBlock(), that's exploitable. If you have a protocol that involves a block of data with a 16-bit length field which is passed to EVP_EncodeBlock(), that's 100% safe.For those wondering about TLS: speaking as someone who has written a TLS implementation, AFAIK neither base64 encoding nor decoding occurs in the protocol itself, and the longest length field is 24 bits (Hello stream). Certificate processing involves ASN.1 which does support arbitrarily-long integers, but that's a big hint to check that they're within a sensical range.",
-          "I am not a system administrator, but I am getting a serious vulnerability fatigue, every single day there's at least two new vulnerabilities in major pieces of software, I'm just tired of seeing that everywhere and hearing that everywhere. Fellow system administrators must be having it much worse."
-        ]
-      }
-    },
-    {
-      "id": "50562320",
-      "title": "Launch HN: Onlook (YC W25) – An open-source developer tool for designers",
-      "url": "https://github.com/onlook-dev/onlook/",
-      "source": "Hacker News",
-      "published_at": "2026-11-19T16:34:04+00:00",
-      "summary": "Hey HN, I'm Daniel, founder of Onlook (https://github.com/onlook-dev/onlook and onlook.com).Onlook is a desktop app that puts a canvas on top of your real codebase, letting you design directly in code with the agent you already use. Over 25,000 designers and developers have supported the project, 100+ have contributed, and it's been the #1 trending repo in the world twice. We just rebuilt the entire product as an agentic design tool, and open-sourced it to the community.Here’s a demo video: (https://youtu.be/BogcYWf4siM)If you're an engineer, traditional engineering tools are largely built for convergence, whereas designers tend to explore and diverge on ideas. Onlook gives designers a familiar canvas while managing all of the dev processes that get between them and making mind-blowing designs in code. Designers can work on a multiple simultaneous worktrees that run on the real app locally, and every change lands as a PR you can review or throw away, so there aren’t mockups to rebuild.We built Onlook because we believe there needs to be a developer tool that works the way designers do.More and more, designers are expected to work in code. Designers think by seeing, drafting, arranging variations, using references, and remixing ideas. That’s why the canvas has been the signature feature of design tools because it genuinely is useful for how messy the creative process is. Most of the challenge of using engineering tools for design work is that the first half of starting a project often takes mental bandwidth in of itself (What branch am I on? What page was that last exploration on?) and the second half is constrained by configuring your coded design to present itself (prompting design tools on top of what you’ve built or making temporary navigation for that specific state).Some of you may remember our earlier Show HNs (July 2024: https://news.ycombinator.com/item?id=40904862, August 2024: https://news.ycombinator.com/item?id=41390449, May 2025: https://news.ycombinator.com/item?id=44127653). Since then, we built a web version (too early), then a Storybook-native build (a mistake). We noticed that our desktop product from July 2024 was still getting hundreds of downloads a month despite zero promotion, so we decided to rebuild it for the new era of designers working in code.How it works…Onlook shines at exploring tons of ideas at once. Ask it to lay out every flow in your product, show every state of a component, or riff on ten versions of one screen. Your designs all show up side by side on an infinite canvas, with each frame as a real webview running your actual app with real data. Not as a mockup, but the real deal.When we built this editor, we had an epiphany that it could be a new kind of IDE for design. Design tools used to be limited to a proprietary setup or closed schema, but now you can push and pull the medium of code to get whatever result you want, so why not give agents an infinite canvas of browsers and see what they do? It turns out, the agents can figure out how to better present coded work by adjusting the urls of browser frames and arranging and resizing them on the canvas.The concept is simple, but it requires a lot of product thinking. For example, because all of the frames on the canvas share a single browser session, and Chromium only allows six connections per host per session, ten frames of the same app end up fighting over limited connections. So, we had to plan around that, and there are still tons of things we need to do to make the canvas ultra performant.Onlook is an Electron app where you can import a repo from GitHub or upload a local folder. Then, Onlook creates a git worktree, starts your dev server, and has the agent sort out missing dependencies or other requirements. You never open a terminal and everything the agent does is a normal git diff that can go to GitHub as a PR. We inject a small script into each frame that draws selection outlines and reads the page, so that way you can click an element, say \"make this a card layout,\" and the agent knows exactly what \"this\" is.This time we didn't build our own agent. Onlook runs Claude Code or Codex on your own subscription, and we turn whatever the agent emits into one typed event log and draw the UI from that in our own chat interface. On top of that we give the agent a bespoke set of design-specific tools, from arranging frames on the canvas, to making suggestions, to generating multiple iterations of a selection – which is especially useful because the agent decides how to get the app into a state that you need based on your prompt.We also have our own Artifacts which are quick HTML sketches that live in the editor, but outside your repo. They’re almost like components in other design tools in that they can be carried and edited across every project but are detached from the project with no network access. As an example, you can ask the agent to turn your interface into an Artifact, and use it as a reference for another exploration, or download it as HTML and send it to a coworker as an interactive export of something you have in progress. I frequently go back to the artifacts I’ve made as visual snippets when I need new ideas or need to borrow something that’s already been built.The desktop editor is free (you can download it from our website at onlook.com) and open source under Apache-2.0, and we'll eventually offer a paid cloud product for teams.We'd love to hear which repos work and which don't, what you try to do on the canvas, and what's missing. We’re so excited for this to be a new way for designers to work in code!The Onlook team (Joel - thebrubaker and Kris - krisodd), and I will be here all day!",
-      "score": 113,
-      "comments": 76,
-      "discussion_url": "https://news.ycombinator.com/item?id=50562320",
-      "extra": {
-        "top_comments": [
-          "congrats on the launch. curious how you handle states that need login or specific data, like an admin page or an empty cart. do you seed each worktree with test data, or does the agent click through the app to get there?",
-          "How are you using a Claude Code subscription? Leveraging a Claude Code subscriptions API-key without going through the Claude Code harness can lead to a user being banned for violating terms. Are you doing anything like that, or are you directly interacting with the Claude Code harness?Edit: Aaand congrats on the launch! Also, please allow us to delete our accounts. Offering sign-up without account deletion is not nice.",
-          "The \"ten versions of one screen\" part is where I've had the most trouble with agents. When I asked for variations of one section, they'd also quietly change the header, the copy, section heights and the CTA, so the comparison stopped being about the thing I asked for. What fixed it for me was a standing rule: start every variant from the production screen and keep everything the request doesn't mention exactly as it is. Is there a way in Onlook to pin parts of a frame so variants can't touch them?"
-        ]
-      }
-    },
-    {
-      "id": "50564366",
-      "title": "Should governments slow frontier AI? Jacob Coxon and Robin Hanson debate [video]",
-      "url": "https://www.youtube.com/watch?v=lwfewYL7X0o",
-      "source": "Hacker News",
-      "published_at": "2026-11-19T18:47:16+00:00",
-      "summary": "Should governments slow frontier AI? Jacob Coxon and Robin Hanson debate [video]",
-      "score": 101,
+      "published_at": "2026-11-20T20:03:07+00:00",
+      "summary": "The stochastic parrots have apparently proved the Riemann Hypothesis",
+      "score": 223,
       "comments": 200,
-      "discussion_url": "https://news.ycombinator.com/item?id=50564366",
+      "discussion_url": "https://news.ycombinator.com/item?id=50581084",
       "extra": {
         "top_comments": [
-          "It's so weird that the framing of AI is always about company vs government regulation.They're both power concentrating entities. The real danger of AI are these very entities. Both of them.When the value of labor is nil, democratic values fall away.Real AI alignment comes from individual ownership and control of that means of production.That is, if what 'alignment' means to you is compatible with human liberty.These debates should start with a statement of what exactly a good outcome would look like. It doesn't seem like any of them thought it through.",
-          "If we're going to slow AI let it be with renewable-energy only mandates for AI datacenters. It sets incentives in place for hyperscalers to prioritize energy solutions as opposed to buying politicians",
-          "I'm honest worried about alignment. It feels like human society hasn't really even figured out alignment for itself -- i.e. we don't have a good way of making sure that we organize units (businesses, politics, healthcare, etc) in ways that are aligned with 'good outcomes'. I think at least part of this is that we don't have a way to agree on what 'good' means and for who. In this scenario, I find it unlikely that we'd be able to enforce alignemnt on AI"
+          "I think when people set out to create a chess playing computer they thought we’d end up with something that we could deeply understand at an intuitive level. Instead, when you look at the Stockfish evaluation of a position, you do get an “explanation” but it’s really just the aggregate of a bunch of calculations, which are themselves stacked on top of the “stochastic parrot” NNUE evaluator.This leaves us in a very unsatisfying position as creatures who want answers to “why” questions. Intuitive answers are incomplete, and complete answers are either fundamentally impossible or completely incomprehensible or both.Feynman said something similar with regards to magnetism, but I feel that understanding a chess position is an even better example. Magnetism depends on facts about the universe which at their most basic level “just are”, whereas even a complex chess position is theoretically entirely explainable.",
+          "I wonder he good we will be at not understanding anything to an ever increasing degree, with absolutely no hope of ever catching up. We will be super bad at absolutely everything within sciences and engineering and completely unable to contribute anything of substance, outside our own moods and quirks.Can humans be okay with that? Can we be happy cats?",
+          "Derailing slightly, a variety of HN posts (the blogs/sites they reference) have started banning me with a 403 page from nginx, including this author. My IP reputation is supposedly fine. Does anyone have any ideas where I should look next?"
+        ]
+      }
+    },
+    {
+      "id": "50583982",
+      "title": "Re: Riemann",
+      "url": "https://borretti.me/article/re-riemann",
+      "source": "Hacker News",
+      "published_at": "2026-11-20T23:42:44+00:00",
+      "summary": "Re: Riemann",
+      "score": 149,
+      "comments": 131,
+      "discussion_url": "https://news.ycombinator.com/item?id=50583982",
+      "extra": {
+        "top_comments": [
+          "I could not have solved GRH with Claude, openAI, DeepSeek or any other AI. Neither could 99.99% of you. AI is a tool, like a calculator that helped mathematicians long time ago calculate sine and cosine faster than we could, then computers, then the internet, now AI. Somebody has to use the tool and input the right parameters to get the right results. AI only searched for all the knowledge that exists and tried them all as directed, but that director is the one who deserves the credit, not me, not you, not the calculator, not claudeUntil the day AI starts directing itself creating knowledge that doesn't exist yet with no one at the wheel. Anxiously waiting that day...",
+          "If the measure of man is his ability so prove theorems, then the machines clearly outstripped most of us already. But by that measure, most of us had already been beaten by other men.I'll never be the next Euler or von Neumann or Einstein, and I'll confess to occasional pangs of regret that I'll never reach those peaks. But mostly, I just enjoy learning about math and science, and delight in the small contributions I can offer.And I'm the oddball: most people couldn't care less.There must be more to man than math.",
+          "> Why should we explore, discover, invent, succeed, become more, struggle, win, become divine? We don’t want to be more. We don’t want anything.why did i buy a skateboard? why did i break my arm riding it? why cant i wait to do it again?same reason we're in tar pits :) there's something more you can almost taste when you're the only one there"
+        ]
+      }
+    },
+    {
+      "id": "50583274",
+      "title": "NINLIVE: The Nine Inch Nails live archive",
+      "url": "https://ninlive.com/",
+      "source": "Hacker News",
+      "published_at": "2026-11-20T22:30:47+00:00",
+      "summary": "NINLIVE: The Nine Inch Nails live archive",
+      "score": 148,
+      "comments": 32,
+      "discussion_url": "https://news.ycombinator.com/item?id=50583274",
+      "extra": {
+        "top_comments": [
+          "2018 tour was my favorite. Standing in line getting tickets was fun and loved getting to see them from the mosh pit for two nights in a row. Just saw them with my wife in Nashville about a year ago too and that show was excellent (also loved seeing all of the Gen X/millennials that are parents now bringing their kids to the show).",
+          "Trent Reznor really wants his fans to get a high quality show out of the performance. The sound quality is always top notch and when there's a multimedia component, it's used to great effect. For example, alongside video footage with a mass surveillance theme, hidden cameras were pointed at sections of the audience and were streamed on stage. It was a delightful touch.",
+          "I attended Fragility 2.0, NIN + Soundgarden, Cold, Black & Infinite, and Peel It Back. Fragility 2.0 was probably my favorite, but they are always incredible. 20 foot tall LED screens that moved and pivoted (from overhead lighting to background screens) in 2000 was pretty mind blowing. The scrim at the opening was awesome as well. Every show has its own things, but coming in with zero expectations and getting that was such a treat."
         ]
       }
     }
