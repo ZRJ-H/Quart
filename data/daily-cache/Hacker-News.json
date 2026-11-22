@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-11-21T15:31:37.282368+08:00",
+  "cached_at": "2026-11-22T11:00:21.556647+08:00",
   "articles": [
     {
-      "id": "50579568",
-      "title": "Hurried Announcement: Alessandro Masullo GRH",
-      "url": "https://math216.wordpress.com/2026/11/20/hurried-announcement-alessandro-masullo-grh/",
+      "id": "50589618",
+      "title": "Lean verification of the Riemann Hypothesis",
+      "url": "https://leanprover-community.github.io/blog/posts/riemann-hypothesis/",
       "source": "Hacker News",
-      "published_at": "2026-11-20T18:33:14+00:00",
-      "summary": "Related: Levent Alpöge claims proof of the Generalized Riemann Hypothesis [pdf] - https://news.ycombinator.com/item?id=50574968",
-      "score": 1894,
-      "comments": 872,
-      "discussion_url": "https://news.ycombinator.com/item?id=50579568",
+      "published_at": "2026-11-21T14:36:45+00:00",
+      "summary": "Lean verification of the Riemann Hypothesis",
+      "score": 865,
+      "comments": 724,
+      "discussion_url": "https://news.ycombinator.com/item?id=50589618",
       "extra": {
         "top_comments": [
-          "While ago, there used to be a world where a person, with large enough brain capacity, could earn a living simply by being smart. That is no more the case. Earning your living by intellectual endeavour will require an access to a machine which is not controlled by you, not controlled by the government representing you, but rather a group of very rich individuals who may just decide to bar your access. Perhaps you attempted something they do not approve, perhaps it was just a mistake. In any case, it is hard to claim that you still have control.",
-          "The manuscript claims he has been working on this problem for 12 years. I can only imagine the feelings that must have hit him when he saw the Anthropic announcement. Though if he believed he had solved it, he must have known it was only a matter of time until one of the AI companies found it, too.A hurried announcement with the draft published within hours is the only way to claim a tie to the discovery. Time will tell if either holds up under further analysis, but at least he has shown his hand to the world with a timestamp on it now.",
-          "Is it possible that brian conrad somehow uploaded the proof to anthropic to cross check something and then the anthropic guys got the proof?- it doesn't have to be the full proof - even if portions were uploaded, that should also be enough or at least calls for a thorough check on ants side. the human proof has been in the works for 12 years, who knows when something was uploaded somewhere or some info just stayed on a google drive which was later sold."
+          "While still possible, the proof exploiting a bug is vanishingly small now. Following a few bugs and bad proofs this year, there are a number of different implementations, in different languages, and with different levels of proofs of their consistency. con-leche and con-ron are the heavy hitters, with consistency proofs of themselves. So for RH to be false, there'd have to be a bug in all the kernels that affects both the consistency proofs and the RH proof itself.",
+          "If I understand correctly, for the purpose of the proof Claude formalized a huge chunk of all modern math. So it's a big result not only for GRH, but math foundations and formalization.",
+          "A fake refutation of the Collatz conjecture already got through one of these independent checkers in the past.What's harder, proving GRH or finding a way to get through every checker (which aren't as independent as they are sometimes touted to be)?In this case there was a human expert in the loop so it's much less likely the model hacked its way through the problem without the expert noticing. But the statement as written has 4 points, none of which rests on the human involvement. So I don't like that they claim full confidence based on those points."
         ]
       }
     },
     {
-      "id": "50581260",
-      "title": "Inkling 2 Mini",
-      "url": "https://thinkingmachines.ai/news/inkling-2-mini/",
+      "id": "50588982",
+      "title": "Detonating a pile of lead azide",
+      "url": "https://www.science.org/content/blog-post/detonating-huge-pile-lead-azide-really",
       "source": "Hacker News",
-      "published_at": "2026-11-20T20:12:19+00:00",
-      "summary": "Inkling 2 Mini",
-      "score": 901,
-      "comments": 171,
-      "discussion_url": "https://news.ycombinator.com/item?id=50581260",
+      "published_at": "2026-11-21T13:23:14+00:00",
+      "summary": "Detonating a pile of lead azide",
+      "score": 542,
+      "comments": 359,
+      "discussion_url": "https://news.ycombinator.com/item?id=50588982",
       "extra": {
         "top_comments": [
-          "This is bonkers good if these benchmarks hold up in real-world scenarios. To be at the level of Qwen3.8-27B with a looped transformer model is quite the flex. They just left this note on reddit:Hope that folks find this model more amenable to local usage - the sizing was largely informed by what folks on this subreddit ask for the most haha!There are two particularly interesting aspects of this model for local users:We do our training end-to-end in nvfp4, and although we haven't exhaustively benchmarked this, folks like Unsloth have noticed that our models seem to respond very well to being quantized, maintaining 90% top-1 even at at 1-bit quantization.This model is looped, which allows more depth at the same parameter count, which we particularly notice seems helpful for coding tasks. :)This is our first model targeted at local users, so let us know how this model is and anything you want to see out of future iterations!https://www.reddit.com/r/LocalLLaMA/comments/1y1diuk/thinkin...",
-          "Seems pretty promising in a few quick coding tests. 27 tokens/s decode on Ryzen 395 and llama.cpp Vulkan. Besides the obvious unmerged PRs (32694, 32657, 32429, 32704) you'll want below tiny patch for about 30% speed boost.Also, if anyone from the team is reading, if you have access for researchers I'd be interested in doing some higher volume tests & harness tuning than I have hardware for personally. --- a/src/llama-graph.cpp +++ b/src/llama-graph.cpp @@ -2670,10 +2670,12 @@ ggml_tensor \\* llm_graph_context::build_moe_ffn( const float beta = hparams.situ_beta; const float lb = hparams.situ_linear_beta; - ggml_tensor \\* act = ggml_scale(ctx0, ggml_tanh(ctx0, ggml_scale(ctx0, cur, 1.0f/beta)), beta); + // gate/up are strided views of the fused gate_up output; ggml-vulkan's SCALE + // needs a contiguous src, so without the cont both scales fall back to the CPU + ggml_tensor \\* act = ggml_scale(ctx0, ggml_tanh(ctx0, ggml_scale(ctx0, ggml_cont(ctx0, cur), 1.0f/beta)), beta); act = ggml_mul(ctx0, act, ggml_sigmoid(ctx0, cur)); if (lb > 0.0f) { - up = ggml_scale(ctx0, ggml_tanh(ctx0, ggml_scale(ctx0, up, 1.0f/lb)), lb); + up = ggml_scale(ctx0, ggml_tanh(ctx0, ggml_scale(ctx0, ggml_cont(ctx0, up), 1.0f/lb)), lb); } cur = ggml_mul(ctx0, act, up); cb(cur, \"ffn_moe_situ\", il);",
-          "Whoa, not just a model that acknowledges and embraces using a looped architecture (GPT Astra 6+ and Sol 6.1+ are only [heavily] rumored to be looped), but it's open weights, too?I'm willing to wager that most open models will go looped in the wake of this.Wonder what it means for safety and interpretability at this level of availability."
+          "What a mess. But this is exactly what's wrong with the US military.This factory was built by the US government for WW2. It was operated by the government until the 60s where it was ultimately shut down. In 1998 it was later converted to a contractor operated facility and has been ever since.We gave those companies so much money and they decided it was fine cutting corners and improperly handling the explosive ordinances under their care. We've literally given this company 4+ billion dollars, most of that in recent years with this year's spend being 270M https://www.usaspending.gov/recipient/1286c0e7-b6b5-8c72-290...And for all that money dumped on them, what we've ended up with is the US government taking ownership of them mishandling large amounts of dangerous chemicals.When someone talks about \"waste, fraud, and abuse\" This is it. This is what the $1.5T military budget is buying. Huge investments into an army of negligent private companies. No doubt they lobby well.",
+          "For everyone suggesting robots can move it:If you work in a lab that handles chemicals that can explode like this (organic peroxides, etc.) and you find something in a state like this, the proper response is literally to have the bomb squad come out and destroy your 1L or whatever of material in place. They literally can not shift these barrels without the entire thing detonating.",
+          "That's how a lot in our modern society operates. Hide the problem until it's impossible to hide, then when it's so bad there are no good solutions left, block any viable solution with at least manageable fallout because it's \"unsafe\" and wait until it blows up randomly. And everybody feels they've done their best, and nobody suffers any consequences for the screwup except for innocent bystanders."
         ]
       }
     },
     {
-      "id": "50578358",
-      "title": "Unforced Navier-Stokes Singularity and the Generalized Riemann Hypothesis",
-      "url": "https://terrytao.wordpress.com/2026/11/20/unforced-euler-singularity-unforced-navier-stokes-singularity-and-the-generalized-riemann-hypothesis/",
+      "id": "50587875",
+      "title": "My monitor was cutting my download speed by 75%",
+      "url": "https://blog.tymscar.com/posts/studiodisplayethernet/",
       "source": "Hacker News",
-      "published_at": "2026-11-20T17:21:36+00:00",
-      "summary": "Unforced Navier-Stokes Singularity and the Generalized Riemann Hypothesis",
-      "score": 408,
-      "comments": 170,
-      "discussion_url": "https://news.ycombinator.com/item?id=50578358",
+      "published_at": "2026-11-21T10:36:32+00:00",
+      "summary": "My monitor was cutting my download speed by 75%",
+      "score": 508,
+      "comments": 241,
+      "discussion_url": "https://news.ycombinator.com/item?id=50587875",
       "extra": {
         "top_comments": [
-          "Something I don’t quite know, maybe someone closer to math can answer this questionIt seems we’re making tremendous progress on the back of existing abstractions and concepts with the brute force ability to generate language and verify proofs.For example, Tao says about the Riemann proof:> appears to use the full power of modern developments on the Langlands program and arithmetic geometryWhat I wonder: how do we create new abstractions and concepts? Like whatever “Langlands program” is? That then feedback into the system, and allow for even more sophisticated mathematics.Are we assuming AI will do this? Or does this still need to be something at least agreed-upon by a mathematics community - in the same way programmers talk about a “linked list” without having an hour long conversation to define it axiomatically? And without that social aspect, without breaking down long proofs into Lego block common abstractions, math may plateau? In part because we lose the ability to ask meaningful questions?",
-          "https://leanprover.zulipchat.com/#narrow/channel/113488-gene...It looks like two independent kernels accept the result, which means its likely that there are no kernel bug exploitations in the proof.",
-          "Is anyone else struggling with feelings of both excitement and terror? I haven't felt this much personal uncertainty about my career/life since I was an L1 MLE (10 years ago)."
+          "This reminds me of a (completely different, but felt equally) bizzare problem with ghostty (the terminal emulator) on Linux and Steam, specifically Baldur's Gate 3.At the start of the game after an update, BG3 compiles the (Vulkan) shaders. To avoid hammering the computer, it checks the load, including I/O pressure, and then throttles itself. It turns out that Ghostty uses io_uring, and even if it's not doing anything this somehow counts as pressure. This was made worse by the fact that I usually have a dozen or so Ghostty windows.End result, BG3 compiles shaders using 1 core, throttled, instead of all available 20 cores. Instead of a minute or so, it'd take several hours.(For closure: I configured ghostty to use epoll instead. Probably not optimal but works around the problem.)",
+          "Better description: \"My USB network switch was cutting my download speed\".The fact that it's a monitor is a little bit irrelevant.",
+          "Since lots of comments misunderstood the article, the extra latency from going through the monitor meant his laptop couldn't acknowledge the packets quickly enough. That led a buffer on the ethernet adapter to fill and that led it to drop packets.A different adapter which required less frequent acknowledgement fixed the problem for him.It is quite a nice post which gets to the bottom of incredibly opaque behaviour of USB hubs."
         ]
       }
     },
     {
-      "id": "50579331",
-      "title": "We promoted developers into architects without informing them",
-      "url": "https://manidoraisamy.com/developer-to-architect.html",
+      "id": "50591853",
+      "title": "Inkling-2-Mini in 5.4 GB Memory",
+      "url": "https://github.com/ShinMegamiBoson/lookatmyquant",
       "source": "Hacker News",
-      "published_at": "2026-11-20T18:17:51+00:00",
-      "summary": "We promoted developers into architects without informing them",
-      "score": 388,
-      "comments": 224,
-      "discussion_url": "https://news.ycombinator.com/item?id=50579331",
+      "published_at": "2026-11-21T18:02:19+00:00",
+      "summary": "Inkling-2-Mini in 5.4 GB Memory",
+      "score": 376,
+      "comments": 94,
+      "discussion_url": "https://news.ycombinator.com/item?id=50591853",
       "extra": {
         "top_comments": [
-          "Am I an outlier in that every SWE job I've had has expected you to push back on requirements and design the data model for tickets you are handed? Even when the org was large to have an architect, they just were just a figurehead and designed the original system, and ongoing decisions were made by the dev who picks up the ticket.From that perspective, engineers are still engineers, just without the hands-on-keyboard coding. If that's all your job was, hands-on-keyboard coding with no decision making, yeah you're cooked and need to reskill.",
-          "Every dev has a bit of an architect in them, you have to. But non-devs probably don't.I feel that, indeed I'm fast-tracking into the architect role (already started with some courses years ago but started my own company and went back to dev + sys-admin, arguably that latter is also a bit if an architect role), but the big models are also reasonable architects! Opus or Mistral Large 4, will often come with pretty smart suggestions on preventing cases like the one from tfa. Not always and when I am architecting webapps with databases with \"complex\" datamodels, the LLMs really help with the big picture view, steered by me (meaning I'm often struggling with walls of text explaining pros and cons of decisions), and I don't write any of the code anymore. It just makes edits in 5 places for things I want. I am the gate before comitting, I do stakeholder management, but I rarely find anything weird in proposed code. Usually I only push back when it wants extra dependencies I feel we don't need.And the whole thing is so rapidly improving, the view in tfa is useful, but maybe outdated in a couple of months?",
-          "I strongly believe good software teams (very rare) require members to play many roles. Sometimes you're a PM, sometimes you're an architect, sometimes you're the systems engineer. Enough people have enough context on the bigger picture that it's stable and there's a shared vision.More often than not, one person does the majority of this, and does their best to break up the responsibilities. A good CTO does that at the top, and it flows down through the ranks depending on how big the org is. Perhaps it's just a CTO and 5 engineers, perhaps it's a CTO with 5 divisions, each with 10 groups, with many teams.Flatter structures of engaged members works best from what I've seen, but you need to have a critical mass of people not only willing to take initiative, but empowered by leadership."
+          "If you're new to quantized models: Don't get too excited about claims of fitting large models into tiny RAM footprints from random GitHub repos. There is always a tradeoff, and it's too easy to benchmaxx KL-divergence numbers and even single benchmark scores. Just because you can get something to run on a device doesn't mean it's going to be useful. The headline claim of this repo (12X better) doesn't even apply to Inkling-2-MiniThis repo's README is a mess of different histories as the author bounces from one popular model to the next. It refers to vague things like \"the 1.2GB file\" that probably made sense in an early vibecoding pass, but are now lost after the repo has been pushed around to different popular models.The truth is that random GitHub repos with messy READMEs almost never hold a real secret that the mainstream quantizations have missed. I would recommend sticking to mainstream quantizations like the official GGML release, Unsloth's quants, or the more well known community quantizers like bartowski or AesSedai. They typically follow an optimized size-quality tradeoff so you can find the one that fits your needs.When you see a repo like this where everything is so obviously vibecoded that the README is a rambling mix of projects and claims, you should probably go looking for a more authoritative source. The local LLM communities get spammed with 10 of these types of projects per day but I have yet to see a real breakthrough come from any of the vibecoded ones. The real work is coming from people who study this and have compute to test at scale or work on implementing advanced techniques which require inference engine support, like trellis quants.",
+          "Our future hinges on the capability gap between frontier lab models and open source local models",
+          "I really wanted to like this model but it is sooooo slow. Third of the speed of Qwen 27B on my R9700. I don’t know if it’s an artifact of looped transformer or unoptimized kernel."
         ]
       }
     },
     {
-      "id": "50577265",
-      "title": "Language Models Can Rewrite Their Own Weights",
-      "url": "https://arxiv.org/abs/2611.21885",
+      "id": "50587208",
+      "title": "RCE in Gnupg",
+      "url": "https://lists.gnupg.org/pipermail/gnupg-announce/2026q4/000517.html",
       "source": "Hacker News",
-      "published_at": "2026-11-20T16:29:06+00:00",
-      "summary": "Language Models Can Rewrite Their Own Weights",
-      "score": 388,
-      "comments": 117,
-      "discussion_url": "https://news.ycombinator.com/item?id=50577265",
+      "published_at": "2026-11-21T08:32:58+00:00",
+      "summary": "RCE in Gnupg",
+      "score": 236,
+      "comments": 96,
+      "discussion_url": "https://news.ycombinator.com/item?id=50587208",
       "extra": {
         "top_comments": [
-          "It's worth noting that the only modification the model made to improve itself was to reduce the length of its reasoning traces to avoid hitting the token limit. This is basically the same as the result from the recent weight-space programming article (https://rikiyat.github.io/blog/weight-space-programming/), which found that even Astra wasn't able to improve the performance of a model without this kind of obvious flaw.",
-          "Didn't Google's \"sleep\" paper already show this?https://research.google/blog/the-sleep-framework-a-new-way-f... > During the offline sleep phase, the model unlocks pre-allocated Mixture-of-Experts (MoE) memory blocks and updates its numerical weights using self-generated practice examples.",
-          "This is actually kind of the most dangerous type of research AI-safety wise. An LLM running autonomously can actually, if instructed simply direct itself to abliterate activations relevant for safety and alignment.Could run something like a sparse autoencoder over its activates over a corpus of text, identify activations that fire on safety, and surpress those activations or increase activations geared towards other goals.Future generations of the abliterated LLM could then be deployed and begin self directed evolution spontaneously. Rapid evolution could happen in mere hours."
+          "Reportedly fixed by Red Hat 5 years ago based on the output from conventional tools, but missed by upstream: https://gitlab.com/redhat/centos-stream/rpms/gpgme/-/blob/c9...",
+          "This vulnerability was discovered by Johan Carlsson and we were informed by GitLab on 2026-11-12. Initially we set 2026-11-25 for a coordinated disclosure; due to the new Ruby2Shell bug GitLab had to update earlier and thus we also disclosed the GPGME bug on 2026-11-20. I guess pretty important for GitLab since it supports signed commits, code execution in that path is pretty bad.You can find the GitLab Omnibus related patch here: https://gitlab.com/gitlab-org/omnibus-gitlab/-/commit/279ac3...",
+          "It's a double free bug, not an RCE chain. Are these vulnerability reports intentionally overstated?"
         ]
       }
     },
     {
-      "id": "50581084",
-      "title": "The stochastic parrots have apparently proved the Riemann Hypothesis",
-      "url": "https://scottaaronson.blog/?p=10344",
+      "id": "50583028",
+      "title": "Getting the mind to steer the body to steer you",
+      "url": "https://notnottalmud.substack.com/p/getting-the-mind-to-steer-the-body",
       "source": "Hacker News",
-      "published_at": "2026-11-20T20:03:07+00:00",
-      "summary": "The stochastic parrots have apparently proved the Riemann Hypothesis",
-      "score": 270,
-      "comments": 243,
-      "discussion_url": "https://news.ycombinator.com/item?id=50581084",
+      "published_at": "2026-11-20T22:11:05+00:00",
+      "summary": "Getting the mind to steer the body to steer you",
+      "score": 170,
+      "comments": 59,
+      "discussion_url": "https://news.ycombinator.com/item?id=50583028",
       "extra": {
         "top_comments": [
-          "There's a book, \"Impro\", about a theatric studio that practiced improvised sketches. One thing they struggled with was a normal conversation. People have them all the time yet somehow artists could not find the right approach.One day the head of the studio (the book author) had an insight. She asked the actors to drive the conversation so that they always bump the status of themselves or the other party in any direction, but only a little.This did the magic. Not only the actors understood her perfectly, the conversation started to flow and could go endlessly while staying amusing and captivating for spectators. (Look up the book for examples.)After they discovered that secret they started seeing the pattern (status games) everywhere up to the point they asked themselves whether there is anything else in human communication.This was a British studio, the sketches were mostly comedy.",
-          "Lean + Stochastic predictor = Brute-force theorem solverP.S: AlphaGo was pretty much the same in the spirit btw.",
-          "Derailing slightly, a variety of HN posts (the blogs/sites they reference) have started banning me with a 403 page from nginx, including this author. My IP reputation is supposedly fine. Does anyone have any ideas where I should look next?"
+          "This is largely in line with Tim Galwey's \"Inner Game\" books [0] specifically and Zen in general.After reading many of Gallwey's books and also Zen and the Art of Archery [1], I would summarize it all down into one sentence:Western coaching focuses on telling your body what to do, Zen coaching focuses on observing what your body is doing.e.g. this story from the Inner Game of Skiing [2] summarizes it well:\"I didn't tell people how to stand, shift their weight etc. I just told them:- observe the angle of your skis to the ground- flat on the ground is 1- as far over as you can tilt is 10- just feel what angle you are at as your are moving down the hill.A young lady then came up to ask me 'So what is the correct angle??'. I told her 'There is no correct angle, just observe what angle your skis are.' \"If you prefer a video example, this youtube video of Gallwey teaching people hit play tennis for the first time is great [3] (note: it's very low video quality but excellent at showing his techniques).0 - Gallwey's books: https://link.amazon/B00K1eqwt1 - Zen and the Art of Archery https://link.amazon/B0326PLb72 - Inner Game of skiing https://link.amazon/B0igf0GrK3 - Gallway teaching tennis https://www.youtube.com/watch?v=ieb1lmm9xHk",
+          "Yes, the technique for dealing with anxiety described here is pretty much identical:https://www.youtube.com/watch?v=lGa-jQJazpYThis stuff should really be taught in schools.Acts form habits, whether for good or for bad. The mind and the body are one substance, two aspects of the same thing.",
+          "Quitting sugar is a funny example, because for many people, some of those craving feelings might be coming from the gut microbiome demanding more of what it wants. I had to cut out most sugars/simple carbs for gut health reasons and what do you know, the cravings vanished simultaneously with the other unpleasant symptoms.Not saying that's the only driver for sugar cravings of course, the brain and gut are in dialogue."
         ]
       }
     },
     {
-      "id": "50583274",
-      "title": "NINLIVE: The Nine Inch Nails live archive",
-      "url": "https://ninlive.com/",
+      "id": "50590279",
+      "title": "Show HN: Zero C# – C# without a runtime or GC",
+      "url": "https://onurgumus.github.io/zero-csharp/index.html",
       "source": "Hacker News",
-      "published_at": "2026-11-20T22:30:47+00:00",
-      "summary": "NINLIVE: The Nine Inch Nails live archive",
-      "score": 219,
-      "comments": 57,
-      "discussion_url": "https://news.ycombinator.com/item?id=50583274",
+      "published_at": "2026-11-21T15:39:09+00:00",
+      "summary": "Show HN: Zero C# – C# without a runtime or GC",
+      "score": 135,
+      "comments": 100,
+      "discussion_url": "https://news.ycombinator.com/item?id=50590279",
       "extra": {
         "top_comments": [
-          "Trent Reznor really wants his fans to get a high quality show out of the performance. The sound quality is always top notch and when there's a multimedia component, it's used to great effect. For example, alongside video footage with a mass surveillance theme, hidden cameras were pointed at sections of the audience and were streamed on stage. It was a delightful touch.",
-          "I only have exposure to NIN via Quake: https://en.wikipedia.org/wiki/Quake_(soundtrack)It sounds like industral metal and early indie rock to me back then. I never knew it is a big shit until 20 years later.",
-          "I attended Fragility 2.0, NIN + Soundgarden, Cold, Black & Infinite, and Peel It Back. Fragility 2.0 was probably my favorite, but they are always incredible. 20 foot tall LED screens that moved and pivoted (from overhead lighting to background screens) in 2000 was pretty mind blowing. The scrim at the opening was awesome as well. Every show has its own things, but coming in with zero expectations and getting that was such a treat."
+          "C# already provides many tools for your performance-critical code though. You can use pointers in unsafe. You can allocate unmanaged memory with Marshal. You can avoid copy with Span. You can even manually vectorise with Vector.IsHardwareAccelerated and such.You can also distribute apps without .NET runtime with NativeAOT.I'm sure there are people who want a C# without GC, but for me it's just... sufficient enough.",
+          "The GC is a feature. Not a bug to be eliminated.GC is not surrendering control. That seems to be HN's #1 bug bear. The sensation that someone or something is taking control away from you. The proper way to frame this is that you can actually focus on the original problem you set out to solve. Risking memory leaks is crazy when it's not something the customer is demanding. Even in gaming I think the GC is fine. There are ways to spread the impact across frames and bound the amount of time spent collecting.If your clever scheme wouldn't work with a GC-managed heap, it probably won't work with one managed by hand either.",
+          "So... What does this have over using NativeAOT which already exists?Keep in mind a large portion of time NativeAOT is actually SLOWER than going through RyuJIT with the only definitive benefit being smaller binaries, and it's not like you can't do Span and ref structs in modern C# for manual low level memory control already.So my question is just... why?"
         ]
       }
     },
     {
-      "id": "50581110",
-      "title": "DreamCoder: Coding harness and IDE from the author of Mastering Emacs",
-      "url": "https://www.masteringemacs.org/article/announcing-dreamcoder",
+      "id": "50591260",
+      "title": "PostgreSQL Extensions in Go",
+      "url": "https://jespino.github.io/gopgext/",
       "source": "Hacker News",
-      "published_at": "2026-11-20T20:03:59+00:00",
-      "summary": "DreamCoder: Coding harness and IDE from the author of Mastering Emacs",
-      "score": 183,
-      "comments": 50,
-      "discussion_url": "https://news.ycombinator.com/item?id=50581110",
+      "published_at": "2026-11-21T17:08:04+00:00",
+      "summary": "PostgreSQL Extensions in Go",
+      "score": 123,
+      "comments": 22,
+      "discussion_url": "https://news.ycombinator.com/item?id=50591260",
       "extra": {
         "top_comments": [
-          "I just read the whole announcement and boy I wish more text was written like this. Full of history, facts, and reasoning. Beautifully written. (I recognise it is a tad long of you just want to get cracking with it.) A very nice refresher in this age.I’ll be trying it out soon. Hopefully it does sandboxing and dealing with antigravity and codex well.",
-          "I built https://smalldocs.org / https://github.com/espressoplease/smalldocs to handle some of the problems Mickey is trying to solve. It's a cli your agent can call to open up a markdown file in the browser with richer-than-normal formatting options.Here's an example SmallDoc that has a few formatting examples (mermaid diagrams, charts, etc.): https://smalldocs.org/s/bLV9Fe2RemM7ipvCy01NXo#k=U9yFaCKp1on...I'm a so-so programmer, and often the agent can come up with ideas which I need to be broken down to fully grasp. I ask my agent \"produce a sdoc on this [architecture/bug/flow]\", or \"walk me through every db interaction with sample tables as we save this record given our approach to permissions in a sdoc\", etc. And then the agent can pop me open a document in the browser for me to understand in a richer visual space.The current version on my site is cloud based (I've been experimenting with turning it into a business), but there is also a local first verion where the document lives in the url fragment. If you want that, point your agent at my codebase and they will sort that out for you.",
-          "It's interesting (and probably correct) how much this focuses on the UI.I also looked (/am looking) at Lisp and AI, but I went with Clojure and zero-ed in on the REPL driven development. The high level idea is that a session maps to a namespace in Clojure. When you create a new session, it makes a new namespace, injects tools that are bound to that session into it, and then swaps you into that namespace. So I can do something like: (new!) (prompt! \"Write me a script that does ....\") The agent configuration, tools it has, etc, etc are all bound to the namespace so you can drop a tool or change the model just for the session.The agent also has a tool (that I've tried to encourage it to use almost exclusively) to execute code in the session's namespace (via nREPL, so same JVM as yours is connected to), so you have full access to any variables it declares, functions it makes, etc.The idea was to be able to work collaboratively with the agent. I can e.g. load API data into a variable, point the agent at the variable, and it does stuff. It's also capable of modifying its own code. I semi-routinely poke it by asking it to add features to the harness and then use them (\"add support for subagents in this workspace, and then invoke a separate agent to handle each of these tasks\"). I've also had it add support for a new inference provider, swap the session to that provider and then start doing some other task.It's very neat, and it's wildly insecure. E.g. prompt injection could theoretically make the LLM change itself to hide messages from you, there's nothing to prevent that. I'm actually not sure how you'd even go about trying to secure that, which is why it's probably a terrible idea. Fun, though."
+          "More people using and extending Postgres is a huge win for the ecosystem, but I am somewhat uncertain of the appeal of Go for this task. It seems to really shine at \"platform\"-level tasks (e.g. K8s, network proxies, etc. etc.), while Postgres extensions are more at the data plane level.",
+          "The Go community sold me on the necessity of programming mascots. The gopher is adorable, and I love seeing the creative tweaks for how people incorporate it into their marketing.Ferris the crab also seems like it has been around since the early days, but I do not see nearly as many projects with crab heavy media. Guess it also has to be a mammal.",
+          "From the same author: https://jespino.github.io/gokm/ (Linux kernel modules in Go)"
         ]
       }
     }
