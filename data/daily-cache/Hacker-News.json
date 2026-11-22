@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-11-22T11:00:21.556647+08:00",
+  "cached_at": "2026-11-22T15:12:56.525884+08:00",
   "articles": [
     {
       "id": "50589618",
@@ -8,8 +8,8 @@
       "source": "Hacker News",
       "published_at": "2026-11-21T14:36:45+00:00",
       "summary": "Lean verification of the Riemann Hypothesis",
-      "score": 865,
-      "comments": 724,
+      "score": 956,
+      "comments": 812,
       "discussion_url": "https://news.ycombinator.com/item?id=50589618",
       "extra": {
         "top_comments": [
@@ -26,12 +26,12 @@
       "source": "Hacker News",
       "published_at": "2026-11-21T13:23:14+00:00",
       "summary": "Detonating a pile of lead azide",
-      "score": 542,
-      "comments": 359,
+      "score": 589,
+      "comments": 379,
       "discussion_url": "https://news.ycombinator.com/item?id=50588982",
       "extra": {
         "top_comments": [
-          "What a mess. But this is exactly what's wrong with the US military.This factory was built by the US government for WW2. It was operated by the government until the 60s where it was ultimately shut down. In 1998 it was later converted to a contractor operated facility and has been ever since.We gave those companies so much money and they decided it was fine cutting corners and improperly handling the explosive ordinances under their care. We've literally given this company 4+ billion dollars, most of that in recent years with this year's spend being 270M https://www.usaspending.gov/recipient/1286c0e7-b6b5-8c72-290...And for all that money dumped on them, what we've ended up with is the US government taking ownership of them mishandling large amounts of dangerous chemicals.When someone talks about \"waste, fraud, and abuse\" This is it. This is what the $1.5T military budget is buying. Huge investments into an army of negligent private companies. No doubt they lobby well.",
+          "Have worked with primary explosives like lead azide. Blame and criminal liability should be allocated to the idiots who allowed an enormous amount to sit uninspected for 20 years.Degraded primaries (dried, recrystallized - so many ways to be super-sensitized) can detonate in response to a loud noise. Forget sending in robotics to move drums of this anywhere. An effector touching a drum can cause container flexure sufficient to detonate the material.This is a horrific hazmat problem. There's no safe solution, only those with lower probability of bad outcomes. I wish them well.",
           "For everyone suggesting robots can move it:If you work in a lab that handles chemicals that can explode like this (organic peroxides, etc.) and you find something in a state like this, the proper response is literally to have the bomb squad come out and destroy your 1L or whatever of material in place. They literally can not shift these barrels without the entire thing detonating.",
           "That's how a lot in our modern society operates. Hide the problem until it's impossible to hide, then when it's so bad there are no good solutions left, block any viable solution with at least manageable fallout because it's \"unsafe\" and wait until it blows up randomly. And everybody feels they've done their best, and nobody suffers any consequences for the screwup except for innocent bystanders."
         ]
@@ -44,8 +44,8 @@
       "source": "Hacker News",
       "published_at": "2026-11-21T10:36:32+00:00",
       "summary": "My monitor was cutting my download speed by 75%",
-      "score": 508,
-      "comments": 241,
+      "score": 555,
+      "comments": 265,
       "discussion_url": "https://news.ycombinator.com/item?id=50587875",
       "extra": {
         "top_comments": [
@@ -62,86 +62,86 @@
       "source": "Hacker News",
       "published_at": "2026-11-21T18:02:19+00:00",
       "summary": "Inkling-2-Mini in 5.4 GB Memory",
-      "score": 376,
-      "comments": 94,
+      "score": 432,
+      "comments": 109,
       "discussion_url": "https://news.ycombinator.com/item?id=50591853",
       "extra": {
         "top_comments": [
           "If you're new to quantized models: Don't get too excited about claims of fitting large models into tiny RAM footprints from random GitHub repos. There is always a tradeoff, and it's too easy to benchmaxx KL-divergence numbers and even single benchmark scores. Just because you can get something to run on a device doesn't mean it's going to be useful. The headline claim of this repo (12X better) doesn't even apply to Inkling-2-MiniThis repo's README is a mess of different histories as the author bounces from one popular model to the next. It refers to vague things like \"the 1.2GB file\" that probably made sense in an early vibecoding pass, but are now lost after the repo has been pushed around to different popular models.The truth is that random GitHub repos with messy READMEs almost never hold a real secret that the mainstream quantizations have missed. I would recommend sticking to mainstream quantizations like the official GGML release, Unsloth's quants, or the more well known community quantizers like bartowski or AesSedai. They typically follow an optimized size-quality tradeoff so you can find the one that fits your needs.When you see a repo like this where everything is so obviously vibecoded that the README is a rambling mix of projects and claims, you should probably go looking for a more authoritative source. The local LLM communities get spammed with 10 of these types of projects per day but I have yet to see a real breakthrough come from any of the vibecoded ones. The real work is coming from people who study this and have compute to test at scale or work on implementing advanced techniques which require inference engine support, like trellis quants.",
           "Our future hinges on the capability gap between frontier lab models and open source local models",
-          "I really wanted to like this model but it is sooooo slow. Third of the speed of Qwen 27B on my R9700. I don’t know if it’s an artifact of looped transformer or unoptimized kernel."
+          "I had a rough time with llama.cpp so fixed the bugs in it for performance some notes you need a minimum of 12gb of vram for credible performance with decent context length above 100k...The best I could do with established techniques and staying at nvfp4 levels of quant, is around 40-45 toks/s on 5070 Ti with 800 toks/s prefill around 128k kv cache... with the kernels matching output byte for byte and basic manual verification of the patched code.3060 sits around 20-25 toks/s with prefill around 350-400 toks/s i think maybe it can be improved but my 3060 system was ddr4 so not the greatest.Either way at below 6gb you cant run beyond q4 quants at above 10-20 tok/s with pretty small context size, afaik that gets awfully close to the roofline depending on expert cache hit rate... unless you quant the logits into the ground."
         ]
       }
     },
     {
-      "id": "50587208",
-      "title": "RCE in Gnupg",
-      "url": "https://lists.gnupg.org/pipermail/gnupg-announce/2026q4/000517.html",
+      "id": "50596133",
+      "title": "Toyota, Nissan, and Honda to standardize parts to lower costs",
+      "url": "https://www.caranddriver.com/news/a74490092/toyota-nissan-honda-standardize-parts-lower-costs/",
       "source": "Hacker News",
-      "published_at": "2026-11-21T08:32:58+00:00",
-      "summary": "RCE in Gnupg",
-      "score": 236,
-      "comments": 96,
-      "discussion_url": "https://news.ycombinator.com/item?id=50587208",
+      "published_at": "2026-11-22T04:04:56+00:00",
+      "summary": "Toyota, Nissan, and Honda to standardize parts to lower costs",
+      "score": 284,
+      "comments": 141,
+      "discussion_url": "https://news.ycombinator.com/item?id=50596133",
       "extra": {
         "top_comments": [
-          "Reportedly fixed by Red Hat 5 years ago based on the output from conventional tools, but missed by upstream: https://gitlab.com/redhat/centos-stream/rpms/gpgme/-/blob/c9...",
-          "This vulnerability was discovered by Johan Carlsson and we were informed by GitLab on 2026-11-12. Initially we set 2026-11-25 for a coordinated disclosure; due to the new Ruby2Shell bug GitLab had to update earlier and thus we also disclosed the GPGME bug on 2026-11-20. I guess pretty important for GitLab since it supports signed commits, code execution in that path is pretty bad.You can find the GitLab Omnibus related patch here: https://gitlab.com/gitlab-org/omnibus-gitlab/-/commit/279ac3...",
-          "It's a double free bug, not an RCE chain. Are these vulnerability reports intentionally overstated?"
+          "They’re (the Japanese makers) are getting cooked by the Chinese makers like BYD who make 75%-85% of their parts in-house[1].Depending on the car, some estimates say that only the windows and tires are the only pieces that come from outside suppliers.[1] https://www.electrichybridvehicletechnology.com/features/fea...",
+          "Ford and GM have been doing this since 2002 with the GM–Ford 6-speed automatic transmission [0]. The companies worked together on the design and ultimately worked with Allison Transmission on its manufacture.One key difference between each company's implementation had to do with the shifting solenoids and the electronics. But as far as I know the actual clutch pads and gearing were the same.[0]: https://en.wikipedia.org/wiki/GM%E2%80%93Ford_6-speed_automa...",
+          "Makes sense, it's probably the only way they can actually compete with Chinese car manufacturers.I feel like the title is misleading on the impact, it's actually all of the big players> The push to simplify and lower costs comes as Japan’s seven automakers, including Toyota, Nissan, Honda, Mazda, Subaru, Mitsubishi, and Suzuki, work to fend off the increasingly competitive list of Chinese automaker"
         ]
       }
     },
     {
-      "id": "50583028",
-      "title": "Getting the mind to steer the body to steer you",
-      "url": "https://notnottalmud.substack.com/p/getting-the-mind-to-steer-the-body",
+      "id": "50594911",
+      "title": "Sandwich Simulator",
+      "url": "https://stulle.app/",
       "source": "Hacker News",
-      "published_at": "2026-11-20T22:11:05+00:00",
-      "summary": "Getting the mind to steer the body to steer you",
-      "score": 170,
-      "comments": 59,
-      "discussion_url": "https://news.ycombinator.com/item?id=50583028",
+      "published_at": "2026-11-22T00:07:59+00:00",
+      "summary": "Sandwich Simulator",
+      "score": 151,
+      "comments": 56,
+      "discussion_url": "https://news.ycombinator.com/item?id=50594911",
       "extra": {
         "top_comments": [
-          "This is largely in line with Tim Galwey's \"Inner Game\" books [0] specifically and Zen in general.After reading many of Gallwey's books and also Zen and the Art of Archery [1], I would summarize it all down into one sentence:Western coaching focuses on telling your body what to do, Zen coaching focuses on observing what your body is doing.e.g. this story from the Inner Game of Skiing [2] summarizes it well:\"I didn't tell people how to stand, shift their weight etc. I just told them:- observe the angle of your skis to the ground- flat on the ground is 1- as far over as you can tilt is 10- just feel what angle you are at as your are moving down the hill.A young lady then came up to ask me 'So what is the correct angle??'. I told her 'There is no correct angle, just observe what angle your skis are.' \"If you prefer a video example, this youtube video of Gallwey teaching people hit play tennis for the first time is great [3] (note: it's very low video quality but excellent at showing his techniques).0 - Gallwey's books: https://link.amazon/B00K1eqwt1 - Zen and the Art of Archery https://link.amazon/B0326PLb72 - Inner Game of skiing https://link.amazon/B0igf0GrK3 - Gallway teaching tennis https://www.youtube.com/watch?v=ieb1lmm9xHk",
-          "Yes, the technique for dealing with anxiety described here is pretty much identical:https://www.youtube.com/watch?v=lGa-jQJazpYThis stuff should really be taught in schools.Acts form habits, whether for good or for bad. The mind and the body are one substance, two aspects of the same thing.",
-          "Quitting sugar is a funny example, because for many people, some of those craving feelings might be coming from the gut microbiome demanding more of what it wants. I had to cut out most sugars/simple carbs for gut health reasons and what do you know, the cravings vanished simultaneously with the other unpleasant symptoms.Not saying that's the only driver for sugar cravings of course, the brain and gut are in dialogue."
+          "Toast Bär-Kiwi: https://stulle.app/16617In honor of my favourite Wikipedia photo: https://en.wikipedia.org/wiki/Toast_Hawaii",
+          "I wish you could make the complete sandwich with bread on top, and then allow you to cut it in two.",
+          "The tomato is so unnerving. Watching it slide over things before eventually vacuum-sealing itself to whatever is underneath. I think it's the slimey, bumpy testure and the pliability."
         ]
       }
     },
     {
-      "id": "50590279",
-      "title": "Show HN: Zero C# – C# without a runtime or GC",
-      "url": "https://onurgumus.github.io/zero-csharp/index.html",
+      "id": "50593737",
+      "title": "Advice for the next 100 Rust GUIs",
+      "url": "https://linebender.org/blog/next-100-guis/",
       "source": "Hacker News",
-      "published_at": "2026-11-21T15:39:09+00:00",
-      "summary": "Show HN: Zero C# – C# without a runtime or GC",
-      "score": 135,
-      "comments": 100,
-      "discussion_url": "https://news.ycombinator.com/item?id=50590279",
+      "published_at": "2026-11-21T21:17:53+00:00",
+      "summary": "Advice for the next 100 Rust GUIs",
+      "score": 137,
+      "comments": 37,
+      "discussion_url": "https://news.ycombinator.com/item?id=50593737",
       "extra": {
         "top_comments": [
-          "C# already provides many tools for your performance-critical code though. You can use pointers in unsafe. You can allocate unmanaged memory with Marshal. You can avoid copy with Span. You can even manually vectorise with Vector.IsHardwareAccelerated and such.You can also distribute apps without .NET runtime with NativeAOT.I'm sure there are people who want a C# without GC, but for me it's just... sufficient enough.",
-          "The GC is a feature. Not a bug to be eliminated.GC is not surrendering control. That seems to be HN's #1 bug bear. The sensation that someone or something is taking control away from you. The proper way to frame this is that you can actually focus on the original problem you set out to solve. Risking memory leaks is crazy when it's not something the customer is demanding. Even in gaming I think the GC is fine. There are ways to spread the impact across frames and bound the amount of time spent collecting.If your clever scheme wouldn't work with a GC-managed heap, it probably won't work with one managed by hand either.",
-          "So... What does this have over using NativeAOT which already exists?Keep in mind a large portion of time NativeAOT is actually SLOWER than going through RyuJIT with the only definitive benefit being smaller binaries, and it's not like you can't do Span and ref structs in modern C# for manual low level memory control already.So my question is just... why?"
+          "I am constantly surprised how few mentions of Slint there are in these sorts of articles. It's written by a team of funded ex-Qt alumni, is incredibly fast, and their DSL approach, while having a bit of a learning curve, makes laying out apps and managing data binding incredibly easy.They also bypass a big part of the issues mentioned in the article by just straight up using skia as a renderer on desktop (you can use others if you want) which gives software and gpu accelerated paths.I'm not associated with the project at all, but have been using it on and off for a couple years and have been quite satisfied.It's main weakness is rich text rendering which lacks maturity for complex layouts, but it is getting better all the time.",
+          "The \"2026 Survey of Rust GUI Libraries\" does not include Native Shell (nsh) [1] which is retained-mode and based on gpui-fast.Maybe because the code repository was started on October 11th, just 1.5 months ago. More than 2,000 commits later it already looks great. I think, they do the (AI) software engineering part very well [2].After using GTK and JavaFX, and React for a decade, Native Shell makes me really excited. I never got warm with Flutter, the desktop applications were very slow on my MacBook. So I've been doing frontend development for more than 25 years, and I'm completely mind-blown for the last few weeks.Having a React background this feels very familiar, without the annoyances. Reactivity is inspired by Solid, styling by CSS (optionally with Tailwind syntax), the UI primitives are native views with layouting done by Taffy [3]. If you target web, the UI will be HTML. You can write the UI screens and components in Rust, but you can also use TypeScript/JSX, it will transpile and interpret it using Rolldown and QuickJS.It includes some components which are difficult to get right. A data table component, a rich-text editor component, and a plot component. As far as I can tell, they chose the currently best-known approach for them.[1] https://nsh.dev/ [2] https://github.com/longbridge/nsh/commits/main [3] https://nsh.dev/elements/",
+          "I'm building a custom GUI in Rust and it is such a slow process to build out. I find bits of the end result to be amazing, but it's all in the details that look like nothing compared to using something more \"complete\" with a larger UI community.I have some nice markdown rendering and phenomenally fast smooth scrolling - but I look at everything ahead of me, I don't even have text selection implemented yet, text wrapping and input cursor placement implementation wasn't that smooth to begin with. I have some amazing shader based animations, but the amount of effort that went into far exceed anything else I could have picked for a foundation.I started with Typescript and kept running into performance issues - it was fast to build and easy to scale, but kept becoming harder to maintain. With Rust it feels hard to build, hard to scale, but it feels like scaling and maintaining might be starting to get easier. The performance ceiling is a night a day difference though."
         ]
       }
     },
     {
-      "id": "50591260",
-      "title": "PostgreSQL Extensions in Go",
-      "url": "https://jespino.github.io/gopgext/",
+      "id": "50595168",
+      "title": "Leonida – PC Recompilation of the Xbox Version of GTA 6",
+      "url": "https://github.com/ItsNotRexed/Leonida",
       "source": "Hacker News",
-      "published_at": "2026-11-21T17:08:04+00:00",
-      "summary": "PostgreSQL Extensions in Go",
-      "score": 123,
-      "comments": 22,
-      "discussion_url": "https://news.ycombinator.com/item?id=50591260",
+      "published_at": "2026-11-22T00:57:26+00:00",
+      "summary": "Leonida – PC Recompilation of the Xbox Version of GTA 6",
+      "score": 125,
+      "comments": 91,
+      "discussion_url": "https://news.ycombinator.com/item?id=50595168",
       "extra": {
         "top_comments": [
-          "More people using and extending Postgres is a huge win for the ecosystem, but I am somewhat uncertain of the appeal of Go for this task. It seems to really shine at \"platform\"-level tasks (e.g. K8s, network proxies, etc. etc.), while Postgres extensions are more at the data plane level.",
-          "The Go community sold me on the necessity of programming mascots. The gopher is adorable, and I love seeing the creative tweaks for how people incorporate it into their marketing.Ferris the crab also seems like it has been around since the early days, but I do not see nearly as many projects with crab heavy media. Guess it also has to be a mammal.",
-          "From the same author: https://jespino.github.io/gokm/ (Linux kernel modules in Go)"
+          "Why the hell does it need to scan your computer for where the game is? Two directories deep in every drive?\"It finds your copy of the game by itself: it looks in Downloads, Desktop, Documents, Games, your home folder and the top of every drive, two folders deep. It recognises the version from a few file sizes, without reading anything large.\"Just ask me where the game is.This feels like really stupid behavior and I feel like anyone running this is asking for trouble.",
+          "Interesting to see how they're attempting to implement this. Basically a crowdsourced agent swarm coordinated via GitHub issues, where people claim features to work on: https://github.com/ItsNotRexed/Leonida/issues/634",
+          "This is based on a leak of the Xbox version of GTA 6, per Reddit.I saw the file manifest and it looked like any other appx package, what’s the big difference between Xbox apps and Windows msix (modern) apps? Are there tons of custom Xbox frameworks?"
         ]
       }
     }
