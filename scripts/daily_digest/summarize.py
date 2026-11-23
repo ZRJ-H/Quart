@@ -229,6 +229,17 @@ def _fallback(category: str, articles: list[Article]) -> DigestSummary:
                 is_source_excerpt=True,
             )
         if category == "Hacker News":
+            source_summary = re.sub(r"\s+", " ", article.summary or "").strip()
+            source_title = re.sub(r"\s+", " ", article.title).strip()
+            # Only the collector can establish that the original text fragments
+            # contain links alone. Legacy flattened summaries lack boundaries;
+            # do not guess whether a URL-looking suffix was actually prose.
+            if (
+                not source_summary
+                or source_summary == source_title
+                or article.extra.get("hn_summary_is_link_only") is True
+            ):
+                common.update(summary=source_title, is_source_excerpt=True)
             comments = [re.sub(r"\s+", " ", str(comment)).strip() for comment in article.extra.get("top_comments", [])]
             focus = "；".join(comment for comment in comments if comment)
             common["discussion_focus"] = _clip(

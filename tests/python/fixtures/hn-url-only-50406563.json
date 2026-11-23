@@ -1,0 +1,18 @@
+{
+  "id": "50406563",
+  "title": "The end of Microsoft Research's AI Frontiers group",
+  "url": "https://hunch.net/?p=13764006",
+  "source": "Hacker News",
+  "published_at": "2026-11-07T18:02:17+00:00",
+  "summary": "https://archive.is/AaY5Ohttps://businessexaminer.ca/victoria-articles/item/microsoft...",
+  "score": 433,
+  "comments": 259,
+  "discussion_url": "https://news.ycombinator.com/item?id=50406563",
+  "extra": {
+    "top_comments": [
+      "This is true in every large company right now.The transformer based approach is seen as a highway to race down in terms of training and building better models with minimal organizational distractions allowed while every company puts its foot down on this highway. Exploratory research into other AI methods is highly discouraged for now and organizations are encouraging transformer based scale out and iteration as a top priority.As an example Meta literally fired it's previously head of AI who held views that transformers won't scale. He wanted to veer off the highway and heavily fund exploratory new types of models. They got someone willing to scale the current method out. Essentially the messaging it \"Foot down, there's a straight highway ahead don't divert\".I have the view this makes sense too. Current top models are mere (mere in big datacenter terms) trillions of parameters right now. We definitely haven't hit the ceiling and everyone's noticing \"Hey this Opus 5.5 with the increased parameters seems much better than the last one\". Well that's a trillion parameter model. We'll soon start hitting 10's of trillions and 100's of trillions of parameter models. Unless there's a ceiling which nobody expects they should keep scaling just as they have been. I really do agree that it'd be insane to veer off this highway with exploratory research at this particular point in time. Foot down, get to 10 trillion parameters, see if the scaling holds, if so off to 100 trillion parameters. If the scaling continues to hold we'll be asking the AI to do the exploratory research for us soon enough.",
+      "This refers specifically to \"AI Frontiers\", a research group within Microsoft Research that focuses on fundamental advances in AI. There is no end in sight to real AI frontiers.Perhaps \"The End of Microsoft Research's AI Frontiers Group\" would be a less ambiguous title.",
+      "It makes me sad because there are so many unexplored areas of AI research, even on text generation. Billions are invested in almost one idea, which very realistically isn't the most optimal way to do text generation, but a lot of companies are afraid of taking risks. I still wouldn't put $1b on JEPA but I prefer a world where we can try things like that."
+    ]
+  }
+}
