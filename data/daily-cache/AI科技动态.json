@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-11-24T11:00:22.817872+08:00",
+  "cached_at": "2026-11-24T18:12:20.207926+08:00",
   "articles": [
     {
       "id": "https://openai.com/index/introducing-shirudo",
@@ -32,18 +32,6 @@
       "source": "Hugging Face",
       "published_at": "2026-11-23T17:20:37+00:00",
       "summary": "",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/",
-      "title": "Finding faster quantum algorithms with agents and formal verification",
-      "url": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/",
-      "source": "Google DeepMind",
-      "published_at": "2026-11-23T16:59:40+00:00",
-      "summary": "Using agent teams and formal verification to improve quantum algorithms for fusion and chemistry.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",

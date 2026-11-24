@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-11-24T11:00:22.817872+08:00",
+  "cached_at": "2026-11-24T18:12:20.207926+08:00",
   "articles": [
     {
       "id": "50611576",
@@ -8,14 +8,14 @@
       "source": "Hacker News",
       "published_at": "2026-11-23T14:00:18+00:00",
       "summary": "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-j...https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-congress...",
-      "score": 2201,
-      "comments": 3230,
+      "score": 2565,
+      "comments": 3483,
       "discussion_url": "https://news.ycombinator.com/item?id=50611576",
       "extra": {
         "top_comments": [
-          "“ In the process of reaching its decision, the Board received input from senior levels of the United States government, and based on that input, the Board is confident that Mr. Huang’s reinstatement poses no national security risk.”Feels like the most operative part of the statement.",
           "Some takes (and from talking to nvidia people):- Delaware precedent in Caremark has a very high bar for culpability of boards in matters like this. So I suspect the combination of DoJ saying they won't prosecute combined with this standard will successfully remove their individual liability.- I'm surprised this decision was completely unanimous at the board level, considering how they quickly forced him out. Full 180 in under two weeks.- The news media is really confusing selling chips to Megaspeed then hosting them in Malaysia (giving chinese companies access - afaik still legal under the old export regime) and Megaspeed smuggling these physical chips for hosting in Chinese data centers. Former was legal and second was not.- I would not be surprised if a pardon was mentioned at some point. Will be watching how state AGs end up getting involved. CA has already subpoenaed Nvidia for this.- There was a drum circle at Nvidia from employees who were petitioning to get him backDisclosure: I co-host a podcast that talks about this. More discussion if anyone is interested: https://www.youtube.com/watch?v=t8nLiELIhwA",
-          "Many people here are assuming Nvidia committed some kind of crime that would've been exposed if not for government intervention. Yes the US govt is corrupt but they're likely right that there's no actual evidence. If there was, it would've already leaked from whoever's been leaking all the intelligence so far.All of the stuff coming out has been pointing the other way. CIA/AG have both said they're unsure if the woman is a spy, US politicians briefed by intelligence have all said the same. Nvidia followed normal diligence in selling GPUs to a cloud provider in Southeast Asia (including visiting their data centers), then banned Megaspeed per government request in 2025. The idea that Nvidia knew they were smuggling hasn't been suggested by anyone involved in the actual investigations. Do people think Megaspeed told Jensen they were going to smuggle chips? What would be the possible benefit of this?The Congressional committees will be about Nvidia did enough extra diligence. And there's no criminal investigation of Nvidia, only against Megaspeed, contrary to what everyone's saying.The realistic risk for Nvidia isn't that executives get hauled off to jail for arguably weak diligence, it'd be more like Seagate's export control penalty (civil fine + audit requirements). But even then Seagate's case was way more clear cut."
+          "Many people here are assuming Nvidia committed some kind of crime that would've been exposed if not for government intervention. Yes the US govt is corrupt but they're likely right that there's no actual evidence. If there was, it would've already leaked from whoever's been leaking all the intelligence so far.All of the stuff coming out has been pointing the other way. CIA/AG have both said they're unsure if the woman is a spy, US politicians briefed by intelligence have all said the same. Nvidia followed normal diligence in selling GPUs to a cloud provider in Southeast Asia (including visiting their data centers), then banned Megaspeed per government request in 2025. The idea that Nvidia knew they were smuggling hasn't been suggested by anyone involved in the actual investigations. Do people think Megaspeed told Jensen they were going to smuggle chips? What would be the possible benefit of this?The Congressional committees will be about Nvidia did enough extra diligence. And there's no criminal investigation of Nvidia, only against Megaspeed, contrary to what everyone's saying.The realistic risk for Nvidia isn't that executives get hauled off to jail for arguably weak diligence, it'd be more like Seagate's export control penalty (civil fine + audit requirements). But even then Seagate's case was way more clear cut.",
+          "“ In the process of reaching its decision, the Board received input from senior levels of the United States government, and based on that input, the Board is confident that Mr. Huang’s reinstatement poses no national security risk.”Feels like the most operative part of the statement."
         ]
       }
     },
@@ -26,14 +26,14 @@
       "source": "Hacker News",
       "published_at": "2026-11-23T16:13:12+00:00",
       "summary": "Ladybird is now in alpha",
-      "score": 1504,
-      "comments": 347,
+      "score": 1954,
+      "comments": 459,
       "discussion_url": "https://news.ycombinator.com/item?id=50614249",
       "extra": {
         "top_comments": [
           "This actually worked amazingly well.I tested a lot of sites.. a few that were already opened in my firefox, and a few many others.. Every single one of them rendered correctly.This is truly amazing.. a new browser written from scratch that actually works!The only minor issue: page scrolling is a bit jerky.. not much.. just a little bit.. it's noticeable.A huge lots of congratulations to the Ladybird team. What a wonderful accomplishment truly this is.",
-          "I am seriously impressed, BRAVO for this! I have tried a few websites that I considered tricky (from overloaded news websites to some more esoteric like ProxMox) and all seems to be in order. I am seriously impressed by the latter, I honestly didn't expect NoVNC [web view for remote virtual display] to be even snappier than it is in Firefox.I don't know of course if this ever becomes my daily driver, but I am surely giving it a serious try starting now. I am super excited and supportive of the idea of a true alternative browser, that alone is my motivation.P.S. Scrolling feels strange. I think FF smooths the movement, whereas in Ladybird it follows my scrolling precisely and interprets my finger jitter too just :) And some fonts look a bit blurry. None of these will stop me from me trying it out.",
-          "Ladybird ditching a bunch of self developed libraries for production grade ones (like sqlite or skia) helped them immensely improve their browser.But I can't help but feel nostalgic at the original hacker spirit of LB+SerenityOS."
+          "I really do hope that, down the road, Ladybird will take the fingerprinting problem seriously. What a modern browser truly needs IMO is a non-compliant JS mode that returns spoofed or randomized values across the entire userbase to effectively make identifying unique users far harder. Permissions should also be far more granular, and a website should not be allowed to know if the window or tab is active, and things like disabling selection or paste should not be allowed by default. In short, the browser should assume that all websites are hostile and present a very minimal and uniform surface by default.",
+          "I am seriously impressed, BRAVO for this! I have tried a few websites that I considered tricky (from overloaded news websites to some more esoteric like ProxMox) and all seems to be in order. I am seriously impressed by the latter, I honestly didn't expect NoVNC [web view for remote virtual display] to be even snappier than it is in Firefox.I don't know of course if this ever becomes my daily driver, but I am surely giving it a serious try starting now. I am super excited and supportive of the idea of a true alternative browser, that alone is my motivation.P.S. Scrolling feels strange. I think FF smooths the movement, whereas in Ladybird it follows my scrolling precisely and interprets my finger jitter too just :) And some fonts look a bit blurry. None of these will stop me from me trying it out."
         ]
       }
     },
@@ -44,14 +44,14 @@
       "source": "Hacker News",
       "published_at": "2026-11-23T17:07:26+00:00",
       "summary": "\"Dario is hyping the dangers so OSS models are illegal and he stays in control\"",
-      "score": 1256,
-      "comments": 694,
+      "score": 1673,
+      "comments": 939,
       "discussion_url": "https://news.ycombinator.com/item?id=50615308",
       "extra": {
         "top_comments": [
-          "The full comment is worth reposting here in its entirety:> Dario's spiel since GPT-2 has always been about hyping the dangers so that open models would be made illegal and *he* would stay in control.> He left OpenAI because he wasn't going to have control.> It's like the Ottoman Empire banning the printing press for Arabic so they would keep in control of the dogma.> It stops the population from freely accessing diverse knowledge.> It's a new form of medieval obscurantism.Agree or disagree with LeCun, he doesn't mince words!",
-          "They're getting everybody on subsidized plans and making everybody dependent and hoping to pull the rug out and force everybody to API pricing and finally make a profit. If there's open model alternatives, they're screwed.",
-          "I work with and am friends with people who are in the regulatory space that would intersect with AI.There are some interesting conversations about how'd you ban open weight models and so far the emerging consensus is that if you can't ban the bullets, then you ban the guns. Ideas floated range from requiring companies like AMD and Nvidia to push microcode updates that limit consumer grade GPUs abilities to work with LLMs, to require some kind of registration for privately owned compute, to even just requiring that GPUs are just outright surrendered.It sounds crazy, but then I was pointed to Executed Order 6102 which is the Gold Confiscation act by FDR and opens a pathway to some kind of asset seizure. I think a lof of those in the \"AI Safety-ist\" camp realize that the toothpaste is out of the tube and that something that feels \"draconian\" in the name of state security may be needed."
+          "> The widespread use of robust non-recovery encryption ultimately will devastate our ability to fight crime and terrorism.-- Louis Freeh, FBI director, in front of the senate, January 28th, 1998That was when he tried to outlaw open-source encryption. We're here all over again. What certainly does not change is how a lot of people are scared of users freedom.",
+          "Polarized group signaling makes everything into a false dichotomy. AI is not particularly dangerous _yet_. It probably will become increasingly dangerous though, especially if we don't take potential risks seriously.On the other hand, there is no urgent need to shut all of the research down. And AI is not against humans at all at this point. It's still a tool. I would argue the most powerful tool for potentially decreasing inequality and dramatically improving quality of life for the average person. But also could be used for oppression.So I say, let's have a culture of caution, but also focus on coming up with a system where the power of AI and robotics really benefits everyone and we avoid giving it more intelligence and autonomy than we can handle.",
+          "The most important thing to discuss in advocating for open-weight models is how to address their safety concerns. Highlighting e.g. the obvious conflicts of interest that Dario has is not enough to convince people to ignore the safety risks. We need a concrete counterproposal for how open-source models can proceed while mitigating these risks to acceptable levels.For example:1. Supposing that at some point in the future, open-source models can find and exploit software vulnerabilities, how do we e.g. protect critical infrastructure around the world?2. Supposing that at some point in the future, open-source models can walk a non-chemist through the process of making nerve gas, how do we prevent nerve agent attacks?3. Supposing that at some point in the future, open-source models can help a non-biologist design a novel pathogen, how do we prevent the resulting pandemic?These are not meant as rhetorical questions. They are real questions that need real answers. Personally I have no clue what the answer is, and would love to read some serious answers. I tried to order them from most to least imminent."
         ]
       }
     },
@@ -62,8 +62,8 @@
       "source": "Hacker News",
       "published_at": "2026-11-23T19:17:55+00:00",
       "summary": "Per Arm's request, this site will be discontinued on 4 December 2026 :(",
-      "score": 883,
-      "comments": 203,
+      "score": 1042,
+      "comments": 238,
       "discussion_url": "https://news.ycombinator.com/item?id=50617499",
       "extra": {
         "top_comments": [
@@ -74,74 +74,74 @@
       }
     },
     {
-      "id": "50615481",
-      "title": "Kagi Mail (public beta)",
-      "url": "https://blog.kagi.com/kagi-mail-public-beta",
-      "source": "Hacker News",
-      "published_at": "2026-11-23T17:17:01+00:00",
-      "summary": "Kagi Mail (public beta)",
-      "score": 369,
-      "comments": 278,
-      "discussion_url": "https://news.ycombinator.com/item?id=50615481",
-      "extra": {
-        "top_comments": [
-          "I'm a Kagi customer, but thoroughly uninterested in this. Fastmail is not just good enough, but good. Fastmail has been stable for decades, with a comfortable pace of progress/changes.AI is Kagi Mail's biggest selling point, but I won't ever let a cloud LLM access my emails whatsoever.",
-          "Kagi duo subscriber. Love the service and have evangelized about it to others, but worried about the feature creep and how it will affect core services. I used to love kagi translate but the quality has suffered significantly lately. And to add insult to injury, it is now capped and a separate subscription in the setting of falling quality. My s/o who used it extensively has virtually stopped due to bugs. And her search use has dropped precipitously. Before kagi, I had a proton account. I was happy with their email for years, then they added a ton of features in a short time and I was having email send and receive problems in the midst of a job hunt that reflected very poorly on my basic competence. Canceled shortly after.The point is, please don't over extend. Response time for support tickets is already in months.",
-          "Not sure I like it. What bugs me is that Kagi - in my perception - ran on the idea they don't really store user data (no search history, assistant conversations expire by default, all that's persisted there is basic user account data), and this seem to be a major paradigm change. While I trust them to not pull any switcheroos and not abuse this, that's still a notable change that may affect how Kagi sees themselves.Plus, if you don't have the data you can't be even tempted to do anything its owners wouldn't enjoy. If you do have the data...Either way, while I'm a very happy Kagi Search user, I self-host my mail, so I'm not a target audience for this product."
-        ]
-      }
-    },
-    {
-      "id": "50620102",
-      "title": "VP ≠ VNP over Every Field",
-      "url": "https://github.com/anthropics/formal-math/tree/main/vp-vnp",
-      "source": "Hacker News",
-      "published_at": "2026-11-23T22:09:10+00:00",
-      "summary": "Paper: https://github.com/anthropics/formal-math/blob/11b6c7e3c927d...",
-      "score": 264,
-      "comments": 228,
-      "discussion_url": "https://news.ycombinator.com/item?id=50620102",
-      "extra": {
-        "top_comments": [
-          "It’s pretty obvious that they are throwing the kitchen sink at the Holy Grail (P vs NP), and that this was a partial result they judged to be worth publishing along the way.",
-          "I’ve never looked at LEAN and I don’t really plan to as I have zero use for it. But when humans write proofs using LEAN how long are they generally?Edit: haha found my answer seconds later on page 2 of HN. Disregard this comment. https://news.ycombinator.com/item?id=50607668",
-          "If you’re a grad student studying math right now… do you just quit? Any problem that you could pick to work on will be solved (or solvable by Claude) in another year with a single prompt."
-        ]
-      }
-    },
-    {
       "id": "50620349",
       "title": "Stalwart is now a drop-in replacement for Microsoft Exchange",
       "url": "https://stalw.art/blog/microsoft-exchange-replacement/",
       "source": "Hacker News",
       "published_at": "2026-11-23T22:32:29+00:00",
       "summary": "Stalwart is now a drop-in replacement for Microsoft Exchange",
-      "score": 246,
-      "comments": 129,
+      "score": 473,
+      "comments": 250,
       "discussion_url": "https://news.ycombinator.com/item?id=50620349",
       "extra": {
         "top_comments": [
-          "The only issue is regulatory: As a freelancer or company in Germany, you have to archive mail in a way that can’t be deleted or altered and store it for access by the tax authorities for up to 10 years (“GoBD”). Stalwart does not have this feature in their regular plans (or the OSS variants)",
-          "Stalwart is the mail server Mozilla’s Thundermail uses.",
-          "The lock-in effect is inherent to the protocol and the clients. Furthermore, supporting MAPI and similar standards merely buys time and saves on licensing costs when your target is OSS.While I recognize the practical benefit for an administrator, in my view, anything that expands the protocol stack surrounding Microsoft email ultimately does a disservice to the remainder of the still-existing, open email ecosystem."
+          "> the new Outlook sends the IMAP server name, the user name and the password to MicrosoftThis is... incredible. To say the least.",
+          "Organizations using Exchange Server out there in the world. That cannot use US public cloud due to regulation. What is your plan for the future?",
+          "I don't get it. They say that Outlook will no longer support Exchange on premise, only Cloud. So how will all their customers use Stalwart then, which is a drop-in replacement? Shouldn't they first switch to another client (Outlook copy or Thunderbird)?"
         ]
       }
     },
     {
-      "id": "50620822",
-      "title": "Huang's Return Is the Biggest National Security Scandal in U.S. History",
-      "url": "https://foreignpolicy.com/2026/11/23/jensen-huang-nvidia-return-ceo-national-security-scandal/",
+      "id": "50622774",
+      "title": "New York Bans Subscription and Post-Purchase Fees on Cars",
+      "url": "https://www.governor.ny.gov/news/money-your-pockets-governor-hochul-signs-bill-restricting-exploitative-vehicle-subscription",
       "source": "Hacker News",
-      "published_at": "2026-11-23T23:11:38+00:00",
-      "summary": "Huang's Return Is the Biggest National Security Scandal in U.S. History",
-      "score": 227,
-      "comments": 170,
-      "discussion_url": "https://news.ycombinator.com/item?id=50620822",
+      "published_at": "2026-11-24T02:27:02+00:00",
+      "summary": "New York Bans Subscription and Post-Purchase Fees on Cars",
+      "score": 360,
+      "comments": 109,
+      "discussion_url": "https://news.ycombinator.com/item?id=50622774",
       "extra": {
         "top_comments": [
-          "Interesting; I would have thought this case was orders of magnitude worse: https://en.wikipedia.org/wiki/Julius_and_Ethel_Rosenberg",
-          "Assuming that China can make better economic use of GPU chips, due to the size of its industrial base and trained workforce, the writing is on the wall, no matter what restrictive policies the US tries to enact, and under what banner. In practice, we're going to observe strategic incoherence, which will only prove counterproductive.",
-          "It wasn't \"Doge\"?"
+          "This trend drives me nuts! I've bought a VW Multivan T7, second hand, amazing vehicle for my family. It comes with a set of options you can purchase, for example, extra LED colors for the interiors or Auto headlights, which I find it insane! So you are telling me this vehicle has the tech to auto regulate it's headlights but it sits behind me shelling out +€200 for it? This needs to be made illegal; Also, having lock in on where my data goes, effectively needing to pay VW to keep track of my vehicle position or battery status is just crazy; Europe needs to make mandatory all this data to be exposed internally to the user and let him decide what to do with it, either use VW services for convenience or ship it to some third party or self hosted open source service (along with choosing who provides Internet to your vehicle).",
+          "To answer parallel questions, this appears to not impact either SiriusXM or Tesla's enhanced cruise control.The senate bill[1] specifically exempts \"navigation system updates, infotainment features, satellite radio, in-vehicle Wi-Fi, telematics services, roadside assistance, software-dependent driver assistance or driver automation features, or vehicle-connected services that rely on cellular or other data networks for continued operation\"This is pretty clearly aimed at the German automakers who were trying to put stuff like heated seats behind a subscription.1 - https://legislation.nysenate.gov/pdf/bills/2025/S9348A",
+          "Any car feature that doesn’t incur an ongoing cost to the manufacturer to maintain should be available post-purchase without any kind of subscription, this should be a federal law with back breaking financial penalties if they’re broken."
+        ]
+      }
+    },
+    {
+      "id": "50619103",
+      "title": "GPUI is getting its own repository",
+      "url": "https://github.com/zed-industries/gpui",
+      "source": "Hacker News",
+      "published_at": "2026-11-23T20:52:54+00:00",
+      "summary": "GPUI is getting its own repository",
+      "score": 259,
+      "comments": 99,
+      "discussion_url": "https://news.ycombinator.com/item?id=50619103",
+      "extra": {
+        "top_comments": [
+          "I've been blown away by how rich the gpui-kit componentry is: https://gpui-kit.com/component/ I recently wrote a Rust desktop app using iced, and now look at gpui[-kit] with envy ;)",
+          "Finally, I have wanted to use it but felt awkward that it was inside the editors repo.",
+          "I don't really understand the negative views towards egui in this thread. It works great. In my spare time I've been building an open source little harness thing ( https://www.byob.chat/ ) as a fun side project and egui is an absolute blast when it comes to functionality. It so far has behaved as an open canvas, I can press F2, and click and drag any components on my native desktop app to rearrange them, I can also theme it with anything, including live shaders."
+        ]
+      }
+    },
+    {
+      "id": "50619207",
+      "title": "Bored.com: Fun, interesting and cool websites to explore when bored",
+      "url": "https://www.bored.com/",
+      "source": "Hacker News",
+      "published_at": "2026-11-23T21:01:16+00:00",
+      "summary": "Bored.com: Fun, interesting and cool websites to explore when bored",
+      "score": 243,
+      "comments": 52,
+      "discussion_url": "https://news.ycombinator.com/item?id=50619207",
+      "extra": {
+        "top_comments": [
+          "Some of the games created for Bored.com appear to be clones of other games on the site, which is a bit strange to me.\"Chat Pester\" [1] is similar to R74n's \"RageBait Simulator\" [2], \"Bottomless\" [3] is similar to Neal Agarwal's \"The Deep Sea\" [4], and \"Spend It All\" [5] is similar to Neal Agarwal's \"Spend Bill Gates' Money\" [6]. \"Daily word\" [7] is nearly identical to Josh Wardle's \"Wordle\" [8].They have tweaked these games somewhat (except for \"Daily word\"), but since the point of the site is to be a link aggregator, I am not particularly impressed by Chat Pester being ranked much higher than its source material [9] that used to be ranked #2 [10].[1] https://www.bored.com/arcade/chat-pester [2] https://r74n.com/mini/ragebait [3] https://www.bored.com/arcade/bottomless [4] https://neal.fun/deep-sea [5] https://www.bored.com/arcade/spend-it-all [6] https://neal.fun/spend [7] https://www.bored.com/arcade/word [8] https://www.nytimes.com/games/wordle [9] https://web.archive.org/web/20261124013147/https://www.bored... [10] https://web.archive.org/web/20261108013344/https://www.bored...",
+          "I remember the original bored.com: https://web.archive.org/web/20040708064338/http://bored.com/ primarily because of The Death Clock being linked there: http://www.deathclock.com/",
+          "Also, Url Roulette would fit this category of stumbleupon-like sites!https://urlroulette.net/"
         ]
       }
     }
