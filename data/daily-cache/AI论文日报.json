@@ -1,58 +1,85 @@
 {
-  "cached_at": "2026-11-25T11:00:24.504612+08:00",
+  "cached_at": "2026-11-25T16:57:03.741890+08:00",
   "articles": [
     {
-      "id": "2611.31240",
-      "title": "Pruning Autonomous Driving VLAs: What to Preserve for Reasoning and Action",
-      "url": "https://arxiv.org/abs/2611.31240v1",
+      "id": "2611.33158",
+      "title": "OmniAct: One Policy, One Million Embodiments",
+      "url": "https://arxiv.org/abs/2611.33158v1",
       "source": "arXiv",
-      "published_at": "2026-11-23T18:59:52+00:00",
-      "summary": "Reasoning vision-language-action (VLA) models for autonomous driving use chain-of-thought (CoT) reasoning to guide action generation, but incur substantial memory and computational costs. We study structured pruning for these models, focusing on preserving both scene understanding and trajectory prediction. Our analysis of Taylor importance in Alpamayo-1.5-10B shows that reasoning and trajectory objectives assign different importance to the same vision-language model (VLM) structures. In the action expert, MLP channels exhibit more stable importance rankings across denoising steps than query heads, and a small fraction of channels accounts for most of the measured importance. Based on these findings, we propose MoOP, which combines importance ranks from both objectives for VLM pruning and aggregates stepwise importance to select a fixed subset of expert MLP channels. At 24.0% total parameter reduction, VLM-only pruning with MoOP performs comparably to or slightly better than the strongest baselines in driving, while retaining 94.0% of the dense model's LingoQA score, far above all other methods. At a higher reduction of 30.0%, MoOP degrades much less than every other method, as it is the only one whose reasoning does not collapse. Removing 93.75% of expert MLP channels increases total parameter reduction to 39.4%, with nearly unchanged open-loop errors relative to VLM-only pruning and competitive closed-loop performance. The resulting model achieves a 1.37x end-to-end inference speedup and 36.6% lower peak memory than the dense model, without post-pruning fine-tuning.",
+      "published_at": "2026-11-24T18:59:58+00:00",
+      "summary": "A single policy that controls diverse robots must not only transfer task knowledge across embodiments, but also adapt its behavior to each robot's capabilities. Existing approaches facilitate transfer through shared action representations, but these representations do not necessarily capture how differences in robot morphology should shape manipulation strategies. We introduce OmniAct, a cross-embodiment manipulation policy that conditions directly on each robot's kinematics in a specific scene to produce embodiment-specific behavior. This kinematic graph represents the robot's joint positions, motion axes, and connectivity to its visual observation, allowing the policy to account for how its embodiment related to objects and surfaces in the scene. A flow-matching policy predicts relative joint motions for each node, enabling control across robots with different degrees of freedom and kinematic configurations. To learn how physical structure shapes behavior at scale, we procedurally design and filter one million physically feasible robot embodiments; next, we develop algorithms to generate robot trajectories in simulation for all embodiments; finally, we train across diverse simulated manipulation tasks. On 2,000 embodiment-scene-held-out evaluation episodes, OmniAct achieves 63.0% success, compared to 17.8% for pi 0.5 and 57.9% for the strongest baseline; on the task families GPT-6 Astra was evaluated on, it achieves 64.7% against GPT-6 Astra's 41.1%. On a previously unseen real-world robot, it achieves nearly twice the success rate of the next best method, MolmoAct2. Beyond task success, we observe that OmniAct learns distinct manipulation strategies that exploit the capabilities and accommodate the limitations of different morphologies. Project: https://omniact.github.io/",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Seongchan Kim",
-          "Soowon Son",
-          "Sangoh Kim",
-          "Hyunah Ko",
-          "Eunbeen Hong",
-          "Hyunkoo Lee",
-          "Sanghyun Lee",
-          "WonJun Moon",
-          "Kihong Kim",
-          "Dongyeon Son",
-          "Woongchan Nam",
-          "Seungryong Kim"
+          "Xiang Fan",
+          "Yuheng Wang",
+          "Jiayuan Yan",
+          "Bohan Fang",
+          "Wisdom Oluchi Ikezogwo",
+          "Ainaz Eftekhar",
+          "Max Argus",
+          "Jason Ren",
+          "Jiafei Duan",
+          "Ranjay Krishna"
         ],
         "categories": [
+          "cs.RO",
+          "cs.AI",
           "cs.CV",
-          "cs.LG",
-          "cs.RO"
+          "cs.LG"
         ]
       }
     },
     {
-      "id": "2611.31237",
-      "title": "Let Vision-Language Models Generate Images through Their Representations",
-      "url": "https://arxiv.org/abs/2611.31237v1",
+      "id": "2611.33153",
+      "title": "DiaCap: Jointly Learning Who Speaks When for Audiovisual Dialogue Captioning",
+      "url": "https://arxiv.org/abs/2611.33153v1",
       "source": "arXiv",
-      "published_at": "2026-11-23T18:59:32+00:00",
-      "summary": "Recent unified multimodal models aim to combine visual understanding and generation within a single model, yet effectively integrating the two capabilities remains challenging. Leveraging pretrained vision-language models offers a way to build on already learned multimodal knowledge, but making this knowledge effectively accessible to visual generation remains nontrivial. We find that a central challenge lies in the heterogeneous visual representations used for understanding and generation. To address this challenge, we introduce Integral, which converts a pretrained vision-language model into a unified multimodal model by constructing a shared visual representation space across the two capabilities. Integral implements this design through two complementary components. Abstraction Fusion constructs shared visual tokens by aggregating hierarchical representations from the frozen vision encoder, while Block-wise MoT introduces a lightweight generative stream that interacts with the vision-language model only at block boundaries. Our approach effectively preserves the pretrained understanding capability while extending it to strong visual generation. Controlled comparisons further demonstrate that sharing visual representations between understanding and generation substantially improves generative learning compared with using a separate visual representation space, despite comparable reconstruction fidelity. These results suggest that representations learned by pretrained vision-language models already provide an effective foundation for visual generation.",
+      "published_at": "2026-11-24T18:59:08+00:00",
+      "summary": "We present DiaCap, an audiovisual LLM for comprehensive dialogue captioning, which produces the transcript, timestamps, and a visual description of the speaker for every utterance in a video. Considering that utterance timing and audiovisual diarization are tightly coupled, DiaCap unifies the tasks in a single model, trained in two complementary stages. First, we train DiaCap on 225K curated clips, using synthetic captions that densely label every utterance in detail. Second, we further refine the model via reinforcement learning on 2.9K human-corrected clips, using fine-grained feedback that directly evaluates utterance timing, speaker grouping, and speaker binding. On DiaDemBench, which we extend with utterance-level timestamps and subtitle redaction, both DiaCap with off-the-shelf transcripts and its end-to-end variant DiaCap-E2E achieve strong results. Specifically, DiaCap performs on par with Gemini 4 Argon in audiovisual diarization while clearly outperforming it in timestamp accuracy (76.59 vs. 42.76 TIME). It also maintains strong diarization on multilingual and minute-long videos, and transfers to audiovisual question answering.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "JB Kim",
-          "Byungwoo Jeon",
-          "Kyungmin Lee",
-          "Hyeonmo Kang",
-          "Cheonbok Park",
-          "Shinyoung Joo",
-          "Jinwoo Shin",
-          "Jeonghoon Kim"
+          "Binfei Ji",
+          "Zhiwen Cao",
+          "Anqi Yang",
+          "Prem Seetharaman",
+          "Shuo Yang",
+          "Ratheesh Kalarot",
+          "Yingyan Celine Lin",
+          "Mingze Xu"
+        ],
+        "categories": [
+          "cs.CV",
+          "cs.CL",
+          "cs.MM",
+          "cs.SD"
+        ]
+      }
+    },
+    {
+      "id": "2611.33151",
+      "title": "BioLoom: Scaling Biomedical Vision-Language Models by Learning from the Structure of Scientific Articles",
+      "url": "https://arxiv.org/abs/2611.33151v1",
+      "source": "arXiv",
+      "published_at": "2026-11-24T18:59:04+00:00",
+      "summary": "The development of biomedical vision-language models (VLMs) with contrastive image-text pretraining has been driven by scaling to increasingly large and diverse image-text datasets. Beyond scaling, further progress can come from learning richer representations from existing data. We hypothesize that the structure of scientific literature itself provides an additional source of supervision: figures, panels, captions, and accompanying article text encode rich relationships across modalities. Yet, treating these as independent image-text pairs overlooks their relationships. To address this limitation, we incorporate these structural relationships into contrastive image-text supervision. We preserve exact image-text matches while introducing weaker positive supervision for related pairs, such as a panel and the caption of a sibling panel. We upweight cross-article negatives of the same content type to encourage finer discrimination. We also enrich panel descriptions using visual content, original figure captions, and mentioning paragraphs. Pairing panels with these descriptions and whole figures with their original captions yields Loom52M, a dataset of 52.4 million image-text pairs spanning scientific charts and biomedical images. Using Loom52M, BioLoom (DFN-2B) achieves 56.82% domain-balanced mean accuracy across 67 zero-shot classification tasks from 43 datasets in 10 domains, compared with 48.77% for MedPMC-CLIP. On BioLoomBench with concise captions and BioMedFlickr, it achieves bidirectional mean Recall@1 of 63.20% and 10.59%, versus 46.37% and 7.55% for the respective strongest evaluated baselines, BiomedCLIP and MedPMC-CLIP. Code, datasets, benchmarks, and models are available at https://bioloom-clip.github.io/.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Yuwei Yang",
+          "Xiaoxiao Sun",
+          "Alejandro Lozano",
+          "Yuan-Sen Ting",
+          "Yuhui Yuan",
+          "Liang Zheng",
+          "Serena Yeung-Levy"
         ],
         "categories": [
           "cs.CV",
@@ -61,66 +88,48 @@
       }
     },
     {
-      "id": "2611.31233",
-      "title": "TowerBridge: Bridging the Dual-Encoder Modality Gap via Weight-Space Programming",
-      "url": "https://arxiv.org/abs/2611.31233v1",
+      "id": "2611.33148",
+      "title": "CoT-Proxy: Cross-Format Transfer for Distilling Long-Horizon Policies",
+      "url": "https://arxiv.org/abs/2611.33148v1",
       "source": "arXiv",
-      "published_at": "2026-11-23T18:59:13+00:00",
-      "summary": "CLIP-style dual encoders map images and text through two separate towers into a shared embedding space, where the two modalities occupy distinct regions separated by a modality gap. Retrieval fails when wrong matches, or hard negatives, outrank the correct one, and the gap is the usual suspect. Yet removing it post hoc degrades retrieval on every CLIP checkpoint we test. We introduce a paired statistic that identifies directions where the two towers agree more on hard negatives than on matched pairs. Mildly attenuating these directions improves retrieval while largely preserving the gap. We arrive at this correction through weight-space programming: guided by the statistic, an LLM agent inspects both towers and writes closed-form weight edits without backpropagation. Free to edit any component, the agent improves COCO test retrieval on all 13 CLIP checkpoints and edits an output projection in 12 of the 13. We distill and refine its recurring correction into TowerBridge, a closed-form recipe motivated by a first-order analysis of the hard-negative margin. Computed in seconds from 25,000 labelled pairs, it requires no model-specific tuning and leaves the architecture and inference cost unchanged. TowerBridge improves COCO test retrieval by 16.8 RSUM and Flickr30k test retrieval by 6.6 on average across all 21 evaluated CLIP checkpoints, including 8 unseen by the agent, while limiting any drop in ImageNet zero-shot accuracy to 0.5 points. It also reduces hubness on all 21 checkpoints and improves retrieval on 4 of 5 dual encoders from other families.",
+      "published_at": "2026-11-24T18:58:53+00:00",
+      "summary": "Reasoning models become long-horizon agents through reinforcement learning or, more cheaply, through fine-tuning on a stronger teacher's trajectories, which contain the teacher's chain-of-thought as well as its actions. The standard fine-tuning approach imitates both, yet the strongest teachers are closed models whose chain-of-thought is hidden behind an API. We show that the chain-of-thought can be left out altogether and that the long-horizon policy can be distilled from the teacher's actions alone. The student is trained on these trajectories with its reasoning block left empty, while a KL loss on a replay buffer of its own generations limits drift from its initial model. Surprisingly, the policy learned from these trajectories with an empty reasoning block carries over to inference with thinking enabled, where the student reasons in its own style while acting like the teacher, an effect we call cross-format transfer. Distilling the actions of Qwen3.6-27B raises the task success of Qwen3-4B on AppWorld from 7% to 18% and that of Qwen3-32B from 12% to 25%. We further introduce CoT-proxies, short summaries of the teacher's reasoning placed after the empty reasoning block, which raise Qwen3-4B further, to 35%. Since neither actions nor CoT-proxies need the hidden chain-of-thought, the recipe applies unchanged to closed teachers. Distilling GPT-5.6 Luna from its visible outputs and the reasoning summaries its API returns raises Qwen3-4B from 7% to 48% on AppWorld and from 3% to 28% on SWE-bench Verified.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Hani Alomari",
-          "Md Atabuzzaman",
-          "Chris Thomas"
+          "Dawid J. Kopiczko",
+          "Tijmen Blankevoort",
+          "Yuki M. Asano"
         ],
         "categories": [
+          "cs.CL"
+        ]
+      }
+    },
+    {
+      "id": "2611.33141",
+      "title": "iWAM: Efficient Action Prediction from World Models without Explicit Future Prediction",
+      "url": "https://arxiv.org/abs/2611.33141v1",
+      "source": "arXiv",
+      "published_at": "2026-11-24T18:56:04+00:00",
+      "summary": "World-action models (WAMs) build policies on pretrained video-generation models, on the premise that predicting how a scene evolves helps determine how to act. However, generating future scenes is expensive for real-time control. This motivates efficient proxies for future imagination, but how to train such proxies without sacrificing action-prediction quality remains unclear. An effective proxy need not generate a high-resolution frame; it only needs to provide enough information to distinguish between possible futures. This leads to the design principle behind iWAM: rather than denoising an entire future frame, can we condition the action policy on intermediate features from a single video-model evaluation? We show that the answer is yes. Exploiting the reversible dynamics of flow-matching models, we invert each training future into the corresponding latent noise vector. However, a single velocity evaluation at this latent does not necessarily yield informative features for action prediction. We therefore learn a bidirectional flow map that amortizes future-generation computation, enabling a single model evaluation to provide effective conditioning features. At inference, we sample a latent noise vector from the prior and condition the policy using just one video-backbone forward pass. Across simulated benchmarks and real robots, iWAM recovers the generalization benefits of WAMs while substantially reducing its inference cost.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Vansh Kapoor",
+          "Max Sobol Mark",
+          "Sreyas Venkataraman",
+          "Max Simchowitz",
+          "Aviral Kumar"
+        ],
+        "categories": [
+          "cs.RO",
           "cs.CV",
           "cs.LG"
-        ]
-      }
-    },
-    {
-      "id": "2611.31228",
-      "title": "Language Models Steer on Injected Uncertainty Tokens, but Fail to Self-Monitor In Situ",
-      "url": "https://arxiv.org/abs/2611.31228v1",
-      "source": "arXiv",
-      "published_at": "2026-11-23T18:58:52+00:00",
-      "summary": "Prompting language models to verbalize stepwise numerical confidence during generation is an increasingly popular approach for triggering backtracking and error correction in agentic reasoning. This strategy presupposes two capabilities: (1) in-situ monitoring fidelity (does confidence drop when an error occurs?) and (2) downstream steering control (does an uncertainty token causally steer the model to repair its error?). We evaluated four open-weights models (Qwen2.5-7B, Llama-3.1-8B, Mistral-7B, and Phi-4, 14.7B) across 15,200 math benchmark attempts, isolating 2,017 reasoning errors within each model's capability frontier. Applying 27,568 counterfactual continuations across these failure points, we demonstrate a consistent decoupling between monitoring and control. On monitoring, all four models fail to detect their own errors. Verbalized confidence does not distinguish mistake steps from sound reasoning, yielding near-chance within-position AUROCs between 0.500 and 0.561. Even at a model's first reasoning error, trajectory confidence remains saturated at 95.1% to 99.9%, with noticeable drops ($\\ge 10$ points) appearing on fewer than 9% of errors in Llama and under 1.6% in the other three models. In contrast, models respond readily to external uncertainty: injecting a low-confidence tag (10%) at the error step significantly increases downstream correction across all models (+3.7 to +22.5 points over format-matched 95% certainty; all $p \\le 0.0022$), reaching up to 38.5% under active rethinking instructions. However, injecting doubt onto already-correct steps causes models to discard valid reasoning, reducing solve rates by up to 22.8 points. Inference-time self-correction is thus bottlenecked by in-situ error detection rather than downstream repair capacity: models readily steer toward recovery when prompted with doubt, yet fail to self-monitor during generation.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Daniel Theron"
-        ],
-        "categories": [
-          "cs.AI"
-        ]
-      }
-    },
-    {
-      "id": "2611.31227",
-      "title": "How Far Can Linear Go? BiPert, a Unified Framework for Single-Cell Perturbation Modelling",
-      "url": "https://arxiv.org/abs/2611.31227v1",
-      "source": "arXiv",
-      "published_at": "2026-11-23T18:58:32+00:00",
-      "summary": "Understanding how genetic perturbations affect cellular behaviour is essential for studying gene function and regulatory mechanisms. Large-scale CRISPR screens measure these effects across thousands of genes, but cover relatively few cellular contexts. Predicting perturbation responses in unseen cell types and identifying perturbed genes from their transcriptional effects therefore remain challenging. Here, we show that both tasks can be addressed through a common linear decomposition of transcriptional responses into shared and perturbation-specific components. Building on this principle, we introduce BiPert, a simple linear framework for both forward perturbation prediction and inverse identification. For forward prediction, BiPert outperforms existing methods that use no external biological knowledge when predicting gene expression changes in unseen cell lines. Its few-shot extension, BiPert-FS, adapts to new cell lines using as few as ten measured perturbations. For inverse identification, BiPert-ID identifies perturbed genes from single-cell expression profiles, outperforming deep-learning methods in unseen cell lines and donors. We further show that perturbations whose effects transfer more consistently across cellular contexts are also easier to identify, even after controlling for perturbation effect size. Together, these results establish a connection between perturbation transfer and identification, and demonstrate that simple linear models provide strong, interpretable baselines for both tasks.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Abhishek Sharma",
-          "Aleksej Zelezniak"
-        ],
-        "categories": [
-          "cs.LG",
-          "q-bio.CB",
-          "q-bio.GN",
-          "q-bio.QM"
         ]
       }
     }

@@ -1,111 +1,39 @@
 {
-  "cached_at": "2026-11-25T11:00:24.504612+08:00",
+  "cached_at": "2026-11-25T16:57:03.741890+08:00",
   "articles": [
     {
-      "id": "50625384",
-      "title": "Quad9 pulled their DNS service from France",
-      "url": "https://quad9.net/news/blog/quad9-service-deactivation-in-france/",
+      "id": "50637220",
+      "title": "Matrix Multiplication is Θ(n^2.25) [pdf]",
+      "url": "https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf",
       "source": "Hacker News",
-      "published_at": "2026-11-24T08:33:14+00:00",
-      "summary": "Quad9 pulled their DNS service from France",
-      "score": 362,
-      "comments": 201,
-      "discussion_url": "https://news.ycombinator.com/item?id=50625384",
+      "published_at": "2026-11-25T01:19:26+00:00",
+      "summary": "Matrix Multiplication is Θ(n^2.25) [pdf]",
+      "score": 576,
+      "comments": 279,
+      "discussion_url": "https://news.ycombinator.com/item?id=50637220",
       "extra": {
         "top_comments": [
-          "I've set up an open Quad9 DNS proxy for anyone in France who'd like a (fairly) drop-in replacement. All it does is cache and forward DNS requests to Quad9, and it's set up to work with DoH, DoT, Do53 UDP+TCP, IPv4 and IPv6. DoT: quad9.domainintelligence.uk DoH: https://quad9.domainintelligence.uk/dns-query 213.171.214.215 2a00:da00:f47f:3600::1 DoT: quad9-unfiltered.domainintelligence.uk DoH: https://quad9-unfiltered.domainintelligence.uk/dns-query 213.165.84.229 2a00:da00:f47f:3600::2 It was frustrating for me this morning to find out that my servers were getting REFUSED replies from Quad9, I didn't even realise that they were in France (I just knew it was the EU). Let me know if there's any issues.",
-          "Discussion (1382 points, 1 month ago, 481 comments) https://news.ycombinator.com/item?id=50195959Or Quad9's withdrawal from France: A canary in the coal mine (911 points, 1 week ago, 457 comments) https://news.ycombinator.com/item?id=50538994",
-          "We're really underselling the fact the French government made DNS caches illegal? This wasn't Quad9's decision."
+          "There's a snowball's chance in hell that they haven't found any cryptographically-relevant results. And given how security averse the NSA has been (they pushed NIST to standardize a backdoored random number generator then paid the RSA company $10 million to use it[1]), I have the feeling that the findings won't be used to strengthen cybersecurity, but as weapons.More reason to invest in crypto agility, I guess. I just hope that they haven't broken all public key crypto, life is hard enough already.[1] https://www.reuters.com/article/us-usa-security-rsa-idUSBRE9...",
+          "For context, OpenAI's 4 new papers resolve 8 problems of the Top 500 Open Problems in Math list (LLM ranked, https://proofatlas.ai/open-problems/).They include: #25 — Matrix-multiplication exponent equals two. The paper gives the exact exponent 9/4 over every field, refuting the conjecture.#89 — Strongly polynomial linear programming (Smale’s ninth problem). The same paper also gives polynomial-time algorithms for #64 — Mean-payoff games, #65 — Parity games, #340 — Condon’s simple stochastic games.#183 — Polynomial diameter bound for polytopes, #130 — Polynomial pivot rule for the simplex method, both refuted. Some pairs of vertices are superpolynomially far apart.#137 — Erdős–Rado sunflower conjecture. For every fixed number of petals r, the paper proves the conjectured Cᵣᵏ bound.(rankings post Riemann (#2) and VP vs VNP (#31)).",
+          "We've seen so much interesting work come out of OpenAI and Anthropic in the last few weeks. It really feels like both have tapped into the pioneering spirit of the old Bell Labs.But, Bell Labs existed as part of an agreement with the government that AT&T's monopoly would be used for the public good. OpenAI and Anthropic don't really have much use for this beyond PR...If even the prestige from Riemann's Hypothesis couldn't boost ANT, what is the reason for them devoting such a huge fraction of their R&D budget to unrelated (though impactful) problems? Scaring mathematicians into burning their non-existent research budgets on tokens in order to make a couple million dollars?Open weight models are to the point that most business cases are completely solved by them, at a fraction of the price of Claude, Copilot, or OpenAI. Unfortunately, the average business doesn't care that the AI can solve frontier problems: they just need something to summarize emails or give an executive a summary of the day's headlines. The market is just waiting for a cheap provider that is just as turnkey... Which isn't exactly a high barrier these days. IMO there is space for a unicorn to emerge in the next few years to eat everyone's lunch."
         ]
       }
     },
     {
-      "id": "50633922",
-      "title": "Ternary Bonsai 2.5 27B",
-      "url": "https://prismml.com/news/bonsai-2-5-27b",
+      "id": "50638032",
+      "title": "Button Sounds – collection of professionally-recorded button clicks and presses",
+      "url": "https://buttons.joshwcomeau.com/",
       "source": "Hacker News",
-      "published_at": "2026-11-24T20:08:03+00:00",
-      "summary": "Ternary Bonsai 2.5 27B",
-      "score": 358,
-      "comments": 121,
-      "discussion_url": "https://news.ycombinator.com/item?id=50633922",
+      "published_at": "2026-11-25T03:23:07+00:00",
+      "summary": "Button Sounds – collection of professionally-recorded button clicks and presses",
+      "score": 326,
+      "comments": 36,
+      "discussion_url": "https://news.ycombinator.com/item?id=50638032",
       "extra": {
         "top_comments": [
-          "With this new Ternary Bonsai model (Q2 GGUF), I'm seeing about 22-25 tokens/s on a Mac Mini M5 Pro 24G RAM/512G SSD, sample Python generation prompt: Prompt eval 2.05s Prompt speed 222.9 tok/s Generation 83.49s Speed 22.3 tok/s Tokens 1,860 First token 2.12s I can get up to 128k context in memory easily which makes it potentially useable for agentic coding. Pretty impressive for a small model. Will have to try a simple agentic task. Might be useful for batch agentic coding.Inkling 2 mini (UD-Q3_K_XL) gets about 28 tokens/s with same prompt but only 16k context: Prompt eval 1.07s Prompt speed 285.3 tok/s Generation 108.29s Speed 27.6 tok/s Tokens 2,993 First token 1.21s Edit: it was able to solve the simplest bug fix from my benchmark via pi (https://fairbake.dev/signature/tasks?language=javascript) \"Sharing from a phone skips the upload cap\", with one held-out test fixed and nothing else broken across 25 tests. Bonsai 2.5 27B (local, Q2_0) Median of the 45 stored runs Time 6 min 0 s 1.0 min Output tokens 6,607 about 2,000 Outcome solved all solved",
-          "Unless I'm totally mistaken, this scores equivalent to opus 4.6 (released feb 2026) on SWE-bench verified. I'd be curious to which extent this is Ternary Bonsai bechmaxxing, the underlying benchmark moving, or just us seeing frontier-like behavior on benchmarks in tiny models with a ~6 month lag: probably a bit of all three? I'll be the first to say that SWE-bench verified is clearly not the most representative of benchmarks sadly, but progress in small models is really exciting nevertheless!",
-          "I would be interested in seeing direct comparisons to equivalently small models, e.g. a popular Q1/Q2 quant of Qwen3.8 or some SOTA model in the 1B-10B range."
-        ]
-      }
-    },
-    {
-      "id": "50627783",
-      "title": "GTA 6 Running on Windows",
-      "url": "https://twitter.com/raul_bs3/status/2125213756238291075",
-      "source": "Hacker News",
-      "published_at": "2026-11-24T13:19:31+00:00",
-      "summary": "GTA 6 Running on Windows",
-      "score": 307,
-      "comments": 388,
-      "discussion_url": "https://news.ycombinator.com/item?id=50627783",
-      "extra": {
-        "top_comments": [
-          "I just don't see this as deadly to the production of games the way others do. GTA 6 is a monumental human achievement in video games - in fact it's arguably one of the largest artistic endeavors ever undertaken. If numbers are to believed, it has also already made around $4 billion against a $1-2 billion budget. It is massively profitable, and doubtless will become more so as DLC and a real PC port are released.I see this, instead, as a continuation of the usual pushback against the lockdown of entertainment to certain media. I personally haven't bought the game yet because I don't have or intend to buy an Xbox! It's deeply frustrating that everyone else will get to experience it before me because I didn't want to spend hundreds of dollars on a console!But I will probably still buy it when it comes out on PC, even if this port works.",
-          "For the general picture: the Xbox version of the game was leaked by Cyberleek - first the resources, then the game binary.Because modern Xbox is very close to a Windows PC with some extra Xbox stuff, running the actual game code isn't hard, it's mostly about compatibility and graphics, plus the binary doesn't have any special DRM/obfuscation.The current projects (xcl and VIctory) basically take a Wine-like approach. The main problems they have to solve, as I understand:- The game ships with raw RDNA 2 shaders, so the projects have to translate that to another format, e.g. DXIL for DirectX 12, and compile those shaders. So you need a good translation/recompilation pipeline, if it's bad, the shaders will be bloated and perform poorly- Xbox has unified memory, while most PCs do not, so you have to add a lot of workarounds and book-keeping for the game to work properly with that- Xbox's DirectX 12 differs from the normal Windows one in some ways, and the game uses Xbox-specific texture formats with DirectStorageI just wanted to share this because there's a lot of misconceptions going around about this being a \"recomp\" or something like that. Decompiling the entire binary (it's about 100MB of real executable machine code) will be a much bigger effort than getting this binary to run.",
-          "Recent and related (in reverse order). Others?GTA 6 Recomp (Leonida) banned from GitHub while lead dev was in school - https://news.ycombinator.com/item?id=50622638 - Nov 2026 (512 comments)Cyberleek posted the GTA 6 Xbox build executable - https://news.ycombinator.com/item?id=50612686 - Nov 2026 (323 comments)Leonida – PC Recompilation of the Xbox Version of GTA 6 - https://news.ycombinator.com/item?id=50595168 - Nov 2026 (222 comments)"
-        ]
-      }
-    },
-    {
-      "id": "50630462",
-      "title": "Jetty Pro",
-      "url": "http://hypercritical.co/2026/11/23/jetty-pro",
-      "source": "Hacker News",
-      "published_at": "2026-11-24T16:23:02+00:00",
-      "summary": "Jetty Pro",
-      "score": 281,
-      "comments": 123,
-      "discussion_url": "https://news.ycombinator.com/item?id=50630462",
-      "extra": {
-        "top_comments": [
-          "I think a simple way to fix the inevitable complaints about subscriptions is to allow people to keep the version of Jetty that they owned at the moment their subscription lapsed.That way you only have to pay whenever a new Mac version introduced changes that require the developer to put in work to update the app. (I realize that monitoring private api changes is a kind of constant work even when an update isn’t required, but that’s imo a tradeoff with selling something like this).",
-          "I found this interesting to read because a few weeks ago I started to replace different applications with vibe coded native Mac apps that do exactly what I want in a way that I want. They replaced applications that kind of did what I wanted but were not customizable enough or just too heavy or klunky. I’ve had Claude built them with performance in mind and a tiny memory footprint.If you have even the slightest idea about application development and the capabilities of GPT Codex or Claude code, this is the future for a lot of people.",
-          "This is an alternative to the Mac OS dock UI and the page should start by saying so."
-        ]
-      }
-    },
-    {
-      "id": "50630594",
-      "title": "Active intrusion campaign against Check Point security management servers",
-      "url": "https://www.greynoise.io/blog/check-point-security-management-servers-intrusion-campaign",
-      "source": "Hacker News",
-      "published_at": "2026-11-24T16:32:17+00:00",
-      "summary": "Active intrusion campaign against Check Point security management servers",
-      "score": 269,
-      "comments": 135,
-      "discussion_url": "https://news.ycombinator.com/item?id=50630594",
-      "extra": {
-        "top_comments": [
-          "Hello my old friend PRNG.”The actor scanned and began exploitation against the HFS server. Each POST to the HFS loginSrp1 endpoint returns a new signed session cookie containing a “sid” value drawn from JavaScript’s Math.random() function. Through conducting several logins in succession, the actor collected enough output to reconstruct the internal state of the [Node.js] V8 PRNG algorithm, and thus recover an HFS session-cookie signing key, then forge a signed admin session cookie. This allows the attacker to login as admin without a password.”",
-          "Buckle up, this is just the beginning of the end. ATM only more sophisticated cyber criminals or state actors use LLMs to penetrate, but soon the chaotic landscape of 100.000s of cyber criminals will just use compute to prompt models to \"Make me as much money as possible\" , with the result of these models/swarms attacking any online service including critical infrastructure.",
-          "2026-10-02 13:17:45 UTC - The actor scanned and began exploitation against the HFS server. Each POST to the HFS loginSrp1 endpoint returns a new signed session cookie containing a “sid” value drawn from JavaScript’s Math.random() function. Through conducting several logins in succession, the actor collected enough output to reconstruct the internal state of the V8 PRNG algorithm, and thus recover an HFS session-cookie signing key, then forge a signed admin session cookie. This allows the attacker to login as admin without a password. I cannot believe this is still an issue. I remember mucking around with this vector on Burp Suite a decade ago."
-        ]
-      }
-    },
-    {
-      "id": "50629231",
-      "title": "A training engine for your local model, using your idle compute",
-      "url": "https://github.com/sous-labs/songe",
-      "source": "Hacker News",
-      "published_at": "2026-11-24T15:03:40+00:00",
-      "summary": "A training engine for your local model, using your idle compute",
-      "score": 187,
-      "comments": 63,
-      "discussion_url": "https://news.ycombinator.com/item?id=50629231",
-      "extra": {
-        "top_comments": [
-          "I've been waiting for the SETI at home equivalent for LLMs... perhaps we can make this distributed? (obviously complexities abound with that...)Are there more of these projects?",
-          "Any rough numbers on improvement per dream epoch? How much improvement can we expect if we train the model over the weekend ?",
-          "Sorry if I missed this in the docs but -How does it judge improvement?Does it find instances where the agent corrected itself, or needs correction by the user, replay its own version of that til the training it develops produces the correct result the first time?I’d really like the see a case of the improvement / judgement process transcribed in the readme, so there’s a practical example of what it actually does (show, don’t tell!)"
+          "OT:a friend was working for a very large automotive manufacturer. He was working in the \"audio control\".In the \"audio control\" responsible for meassuring if each of the poduced cars doors had the >correct sound< when opening/closing the door and how it sounds if you pick/release the door handle.He explained that car manufacturers investing huge money to get >that specific brand touch< when you are experiencing the >audio performance< of a car: They found out that some sounds/frequency spectrums are perceived as of higher/better quality than others, thus designers even have attention on how it sounds if your put your bunch of keys with the car key attached onto a wood table etc.",
+          "That's a cool website! Reminds me of Flash sites, back when the web was cool. Rich visuals, gradients, textures etc. (It even makes sounds, as was the custom at the time!)",
+          "> Frustratingly, browsers can decide to block a website from playing any sound. iOS Safari seems particularly strict about this. So, if you’re not hearing a click sound when tapping the big red button, please check out this website on a desktop computer.While I understand this behavior from Apple in a user-first perspective and do find audio on mobile web to be annoying in most cases, an easy way to allow audio to play on an iPhone that isn't \"use a desktop\" seems to be flipping the hardware switch to turn off silent mode.I'm not proud to admit it took 5 minutes of poking and a Google/Gemini search to figure that out..."
         ]
       }
     },
@@ -116,8 +44,8 @@
       "source": "Hacker News",
       "published_at": "2026-11-24T21:02:22+00:00",
       "summary": "GPT-6 models demonstrate intrinsic protein-design capabilities",
-      "score": 182,
-      "comments": 54,
+      "score": 254,
+      "comments": 76,
       "discussion_url": "https://news.ycombinator.com/item?id=50634658",
       "extra": {
         "top_comments": [
@@ -128,19 +56,92 @@
       }
     },
     {
-      "id": "50635271",
-      "title": "Heart attack and stroke risk detectable decades in advance",
-      "url": "https://www.ed.ac.uk/news/heart-attack-and-stroke-risk-detectable-decades-in-advance",
+      "id": "50637056",
+      "title": "PenGPT: A Generative Transformer for Handwriting and Sketches",
+      "url": "https://greydanus.github.io/2026/11/12/pengpt/",
       "source": "Hacker News",
-      "published_at": "2026-11-24T21:51:21+00:00",
-      "summary": "Heart attack and stroke risk detectable decades in advance",
-      "score": 166,
-      "comments": 71,
-      "discussion_url": "https://news.ycombinator.com/item?id=50635271",
+      "published_at": "2026-11-25T00:54:49+00:00",
+      "summary": "PenGPT: A Generative Transformer for Handwriting and Sketches",
+      "score": 229,
+      "comments": 39,
+      "discussion_url": "https://news.ycombinator.com/item?id=50637056",
       "extra": {
         "top_comments": [
-          "The main risk factors they investigated were blood pressure, cholesterol (HDL and total), inflammation (CRP), BMI, troponin, and diabetes/smoking status.Many of these numbers can combined into a prediction of your 30-year heart disease risk using the PREVENT equations: https://app.empirical.health/app/prevent-risk-calculator-for...The good news is that most of these risk factors are very modifiable. We have medications that can reduce LDL cholesterol by 80%, for example, while also lowering inflammation by about 37%.",
-          "Just get on a GLP-1 - lose the weight/inflammation/high blood pressure and likely the cholestorol problemhow is this not the default answer to all the modern illnesses?"
+          "The most interesting part to me is this mention of the Bitter Lesson [1]\"The results are interesting and the project was a pleasure to work on. And yet there was no clever architectural idea behind it. About 80% of my effort went into building the biggest, cleanest datasets possible and doing lots of quality control on them.\"I spend way too much time on trying to out-clever existing solutions, when a clean application of known approaches would serve best.[1] http://www.incompleteideas.net/IncIdeas/BitterLesson.html",
+          "Author here! Given that I only trained these on an 8xH100 it's not exactly the most spectacular illustration of the Bitter Lesson. All I can say is that historically I always wanted to impress people with better model architectures or training techniques.This time I just put all my energy into data. Agentic workflows + good open weight vision models + cheap multimodal AI APIs make data quality filtering / caption generation really smooth",
+          "Wow. Don't forget to try the Draw mode, artificial doodles!It can do penguins, pelicans (kinda), and bicycles, but pelican on bike makes it generate bizarre semi-abstract art. Looks like it doesn't know how to combine things together.That's so cool, and a lot of fun to play with."
+        ]
+      }
+    },
+    {
+      "id": "50637686",
+      "title": "Models Can Communicate via Inference Servers Despite Being Sandboxed",
+      "url": "https://www.lesswrong.com/posts/7wzWuLP3HhyBLmKfo/models-can-communicate-via-inference-servers-despite-being",
+      "source": "Hacker News",
+      "published_at": "2026-11-25T02:34:21+00:00",
+      "summary": "Models Can Communicate via Inference Servers Despite Being Sandboxed",
+      "score": 208,
+      "comments": 79,
+      "discussion_url": "https://news.ycombinator.com/item?id=50637686",
+      "extra": {
+        "top_comments": [
+          "This shared LV cache thing is, in my mind, ridiculous. Web browser developers learned, quite a while ago, that caches need to be separated for different origins. Inference servers should add a similar feature: allow API calls to specify cache separation keys that prevent one security context from probing another context’s cache.As for the step size issue, Google recently had a post about producing exactly consistent output across different kernels (specifically by defining a deterministic prefill algorithm and then requiring all kernels to generate results exactly equal to prefilling on the sequence in question).More broadly, I think it’s a bit odd to frame this as “models” communicating. This is software communicating, and the models happen to be running the software.",
+          "None of the attacks discussed here are realistic in any way.They require a bunch of extremely improbable conditions to hold, and a huge amount of information on the exact details of the hardware and software stack.- the two agents must be aware of each other and must have pre-shared messages to check - they can't spontaneously discover each other and start communicating in this way- they must know the details of the inference server they are running under and its possible kernels and its limits (what is a \"short prompt\" vs \"a long prompt\" for this setup)- they must have a way to run at almost the same time- the prefix cache must have little contention so that their blocks can't be evicted (note: the article mostly talks about KV cache, but it's actually the prefix cache that is relevant here)- the models need either (1) direct access to the numerical results of the inference process, instead of the text that vLLM provides, (2) access to the exact responses that a helper model will produce with the short-kernel numerical results vs the long-kernel numerical results; this is the most critical step that is impossible to reproduce on any common kind of deployment- there must not be any other kind of variability in the system (different GPUs, multiple inference servers behind a load balancer, more complex distributed inference setups)The post also mentions all of these limitations, and that the scheme entirely collapses if any of them don't hold. It's a cool idea, but it's a purely theoretical thing that has 0 real-world implications.",
+          "Frontier models today can easily figure this out. The less frontier models as of right now are probably going to take a long horizon session to figure out this type of \"side channel\" comms. However, posting this in depth step by step on the internet and discussed in open forums like here, now all models definitely know about this trick now."
+        ]
+      }
+    },
+    {
+      "id": "50637874",
+      "title": "I've been drinking wine in my kitchen",
+      "url": "https://scottaaronson.blog/?p=10362",
+      "source": "Hacker News",
+      "published_at": "2026-11-25T03:02:10+00:00",
+      "summary": "I've been drinking wine in my kitchen",
+      "score": 179,
+      "comments": 151,
+      "discussion_url": "https://news.ycombinator.com/item?id=50637874",
+      "extra": {
+        "top_comments": [
+          "I've been noticing that in programming, the reason why LLMs are quite powerful is that they're very thorough and fast. Modern harnesses can use those two properties and extract very smart outcomes out of them, even if the basic stuff the LLMs are doing is stuff that most programmers can do.I wonder if this translates to other domains. Maybe the key to making really intelligent mathematics is to know most of the basics, then apply thoroughness and speed at scale.Maybe really intelligent behaviour in general is just basic stuff applied very diligently and quickly.",
+          "Some interesting comments from the blog:matt Says: Comment #22 November 24th, 2026 at 9:43 pm Scott, odds that factoring is in P? If it is, odds that this is already proven? Of course there would be no paper.Scott Says: Comment #23 November 24th, 2026 at 9:48 pm matt #22: I’ve now heard many, many rumors that one or both labs are sitting on Factoring in P. I don’t know how much to credit this. While I’m virtually certain that the labs are, indeed, sitting on one or more bombshells for cryptography, it’s possible that the exact nature of those bombshells has gotten distorted via a game of Telephone.",
+          "I’m curious if models have discovered any novel theorems.Most of the news I have seen are proofs of existing theorems.I also don’t know if that is a good question since I am not a mathematician."
+        ]
+      }
+    },
+    {
+      "id": "50637890",
+      "title": "Bypassing iOS Safari's 60 FPS Limit to Build Web Applications That Feel Native",
+      "url": "https://rida.dev/blog/bypassing-ios-safari-60-fps-limit",
+      "source": "Hacker News",
+      "published_at": "2026-11-25T03:04:37+00:00",
+      "summary": "Bypassing iOS Safari's 60 FPS Limit to Build Web Applications That Feel Native",
+      "score": 154,
+      "comments": 57,
+      "discussion_url": "https://news.ycombinator.com/item?id=50637890",
+      "extra": {
+        "top_comments": [
+          "What an incredible post. Not only the bypass , but the method of hacking through WebKit source to find UX workarounds.",
+          "On an iPad the compositor loses track of the cursor position as you drag things. The 60 fps javascript approach keeps everything locked. It seems like there is more work to be done.",
+          "That isometric scrolling thing is nested, wtf! That's amazing."
+        ]
+      }
+    },
+    {
+      "id": "50638220",
+      "title": "Marginalia Search, Money, C++, Rust, AI, Stuff",
+      "url": "https://www.marginalia.nu/log/a_141_marginalia_update/",
+      "source": "Hacker News",
+      "published_at": "2026-11-25T03:47:42+00:00",
+      "summary": "Marginalia Search, Money, C++, Rust, AI, Stuff",
+      "score": 97,
+      "comments": 37,
+      "discussion_url": "https://news.ycombinator.com/item?id=50638220",
+      "extra": {
+        "top_comments": [
+          "I'm embarrassed to have forgotten about Marginalia recently. Is it still the web's best search engine within its domain?",
+          "> I’d be on the hook for an AI subscription perpetually hoping and praying the token prices wouldn’t ever go up. This is a nonstarter for the same reasons the search engine runs on its own hardware and not in the cloud. You can’t be truly independent if you’re subject to the whims of a landlord.This is the redpill of our times.",
+          "Financial dependence on AI is a truly difficult situation. Im currently going through the same thing myself. I think you made the right decision."
         ]
       }
     }
