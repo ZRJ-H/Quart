@@ -1,147 +1,146 @@
 {
-  "cached_at": "2026-11-24T18:12:20.207926+08:00",
+  "cached_at": "2026-11-25T11:00:24.504612+08:00",
   "articles": [
     {
-      "id": "50611576",
-      "title": "Nvidia Reinstates Jensen Huang as CEO",
-      "url": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html",
+      "id": "50625384",
+      "title": "Quad9 pulled their DNS service from France",
+      "url": "https://quad9.net/news/blog/quad9-service-deactivation-in-france/",
       "source": "Hacker News",
-      "published_at": "2026-11-23T14:00:18+00:00",
-      "summary": "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-j...https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-congress...",
-      "score": 2565,
-      "comments": 3483,
-      "discussion_url": "https://news.ycombinator.com/item?id=50611576",
+      "published_at": "2026-11-24T08:33:14+00:00",
+      "summary": "Quad9 pulled their DNS service from France",
+      "score": 362,
+      "comments": 201,
+      "discussion_url": "https://news.ycombinator.com/item?id=50625384",
       "extra": {
         "top_comments": [
-          "Some takes (and from talking to nvidia people):- Delaware precedent in Caremark has a very high bar for culpability of boards in matters like this. So I suspect the combination of DoJ saying they won't prosecute combined with this standard will successfully remove their individual liability.- I'm surprised this decision was completely unanimous at the board level, considering how they quickly forced him out. Full 180 in under two weeks.- The news media is really confusing selling chips to Megaspeed then hosting them in Malaysia (giving chinese companies access - afaik still legal under the old export regime) and Megaspeed smuggling these physical chips for hosting in Chinese data centers. Former was legal and second was not.- I would not be surprised if a pardon was mentioned at some point. Will be watching how state AGs end up getting involved. CA has already subpoenaed Nvidia for this.- There was a drum circle at Nvidia from employees who were petitioning to get him backDisclosure: I co-host a podcast that talks about this. More discussion if anyone is interested: https://www.youtube.com/watch?v=t8nLiELIhwA",
-          "Many people here are assuming Nvidia committed some kind of crime that would've been exposed if not for government intervention. Yes the US govt is corrupt but they're likely right that there's no actual evidence. If there was, it would've already leaked from whoever's been leaking all the intelligence so far.All of the stuff coming out has been pointing the other way. CIA/AG have both said they're unsure if the woman is a spy, US politicians briefed by intelligence have all said the same. Nvidia followed normal diligence in selling GPUs to a cloud provider in Southeast Asia (including visiting their data centers), then banned Megaspeed per government request in 2025. The idea that Nvidia knew they were smuggling hasn't been suggested by anyone involved in the actual investigations. Do people think Megaspeed told Jensen they were going to smuggle chips? What would be the possible benefit of this?The Congressional committees will be about Nvidia did enough extra diligence. And there's no criminal investigation of Nvidia, only against Megaspeed, contrary to what everyone's saying.The realistic risk for Nvidia isn't that executives get hauled off to jail for arguably weak diligence, it'd be more like Seagate's export control penalty (civil fine + audit requirements). But even then Seagate's case was way more clear cut.",
-          "“ In the process of reaching its decision, the Board received input from senior levels of the United States government, and based on that input, the Board is confident that Mr. Huang’s reinstatement poses no national security risk.”Feels like the most operative part of the statement."
+          "I've set up an open Quad9 DNS proxy for anyone in France who'd like a (fairly) drop-in replacement. All it does is cache and forward DNS requests to Quad9, and it's set up to work with DoH, DoT, Do53 UDP+TCP, IPv4 and IPv6. DoT: quad9.domainintelligence.uk DoH: https://quad9.domainintelligence.uk/dns-query 213.171.214.215 2a00:da00:f47f:3600::1 DoT: quad9-unfiltered.domainintelligence.uk DoH: https://quad9-unfiltered.domainintelligence.uk/dns-query 213.165.84.229 2a00:da00:f47f:3600::2 It was frustrating for me this morning to find out that my servers were getting REFUSED replies from Quad9, I didn't even realise that they were in France (I just knew it was the EU). Let me know if there's any issues.",
+          "Discussion (1382 points, 1 month ago, 481 comments) https://news.ycombinator.com/item?id=50195959Or Quad9's withdrawal from France: A canary in the coal mine (911 points, 1 week ago, 457 comments) https://news.ycombinator.com/item?id=50538994",
+          "We're really underselling the fact the French government made DNS caches illegal? This wasn't Quad9's decision."
         ]
       }
     },
     {
-      "id": "50614249",
-      "title": "Ladybird is now in alpha",
-      "url": "https://ladybird.org/posts/alpha/",
+      "id": "50633922",
+      "title": "Ternary Bonsai 2.5 27B",
+      "url": "https://prismml.com/news/bonsai-2-5-27b",
       "source": "Hacker News",
-      "published_at": "2026-11-23T16:13:12+00:00",
-      "summary": "Ladybird is now in alpha",
-      "score": 1954,
-      "comments": 459,
-      "discussion_url": "https://news.ycombinator.com/item?id=50614249",
+      "published_at": "2026-11-24T20:08:03+00:00",
+      "summary": "Ternary Bonsai 2.5 27B",
+      "score": 358,
+      "comments": 121,
+      "discussion_url": "https://news.ycombinator.com/item?id=50633922",
       "extra": {
         "top_comments": [
-          "This actually worked amazingly well.I tested a lot of sites.. a few that were already opened in my firefox, and a few many others.. Every single one of them rendered correctly.This is truly amazing.. a new browser written from scratch that actually works!The only minor issue: page scrolling is a bit jerky.. not much.. just a little bit.. it's noticeable.A huge lots of congratulations to the Ladybird team. What a wonderful accomplishment truly this is.",
-          "I really do hope that, down the road, Ladybird will take the fingerprinting problem seriously. What a modern browser truly needs IMO is a non-compliant JS mode that returns spoofed or randomized values across the entire userbase to effectively make identifying unique users far harder. Permissions should also be far more granular, and a website should not be allowed to know if the window or tab is active, and things like disabling selection or paste should not be allowed by default. In short, the browser should assume that all websites are hostile and present a very minimal and uniform surface by default.",
-          "I am seriously impressed, BRAVO for this! I have tried a few websites that I considered tricky (from overloaded news websites to some more esoteric like ProxMox) and all seems to be in order. I am seriously impressed by the latter, I honestly didn't expect NoVNC [web view for remote virtual display] to be even snappier than it is in Firefox.I don't know of course if this ever becomes my daily driver, but I am surely giving it a serious try starting now. I am super excited and supportive of the idea of a true alternative browser, that alone is my motivation.P.S. Scrolling feels strange. I think FF smooths the movement, whereas in Ladybird it follows my scrolling precisely and interprets my finger jitter too just :) And some fonts look a bit blurry. None of these will stop me from me trying it out."
+          "With this new Ternary Bonsai model (Q2 GGUF), I'm seeing about 22-25 tokens/s on a Mac Mini M5 Pro 24G RAM/512G SSD, sample Python generation prompt: Prompt eval 2.05s Prompt speed 222.9 tok/s Generation 83.49s Speed 22.3 tok/s Tokens 1,860 First token 2.12s I can get up to 128k context in memory easily which makes it potentially useable for agentic coding. Pretty impressive for a small model. Will have to try a simple agentic task. Might be useful for batch agentic coding.Inkling 2 mini (UD-Q3_K_XL) gets about 28 tokens/s with same prompt but only 16k context: Prompt eval 1.07s Prompt speed 285.3 tok/s Generation 108.29s Speed 27.6 tok/s Tokens 2,993 First token 1.21s Edit: it was able to solve the simplest bug fix from my benchmark via pi (https://fairbake.dev/signature/tasks?language=javascript) \"Sharing from a phone skips the upload cap\", with one held-out test fixed and nothing else broken across 25 tests. Bonsai 2.5 27B (local, Q2_0) Median of the 45 stored runs Time 6 min 0 s 1.0 min Output tokens 6,607 about 2,000 Outcome solved all solved",
+          "Unless I'm totally mistaken, this scores equivalent to opus 4.6 (released feb 2026) on SWE-bench verified. I'd be curious to which extent this is Ternary Bonsai bechmaxxing, the underlying benchmark moving, or just us seeing frontier-like behavior on benchmarks in tiny models with a ~6 month lag: probably a bit of all three? I'll be the first to say that SWE-bench verified is clearly not the most representative of benchmarks sadly, but progress in small models is really exciting nevertheless!",
+          "I would be interested in seeing direct comparisons to equivalently small models, e.g. a popular Q1/Q2 quant of Qwen3.8 or some SOTA model in the 1B-10B range."
         ]
       }
     },
     {
-      "id": "50615308",
-      "title": "\"Dario is hyping the dangers so OSS models are illegal and he stays in control\"",
-      "url": "https://twitter.com/ylecun/status/2124550037912920090",
+      "id": "50627783",
+      "title": "GTA 6 Running on Windows",
+      "url": "https://twitter.com/raul_bs3/status/2125213756238291075",
       "source": "Hacker News",
-      "published_at": "2026-11-23T17:07:26+00:00",
-      "summary": "\"Dario is hyping the dangers so OSS models are illegal and he stays in control\"",
-      "score": 1673,
-      "comments": 939,
-      "discussion_url": "https://news.ycombinator.com/item?id=50615308",
+      "published_at": "2026-11-24T13:19:31+00:00",
+      "summary": "GTA 6 Running on Windows",
+      "score": 307,
+      "comments": 388,
+      "discussion_url": "https://news.ycombinator.com/item?id=50627783",
       "extra": {
         "top_comments": [
-          "> The widespread use of robust non-recovery encryption ultimately will devastate our ability to fight crime and terrorism.-- Louis Freeh, FBI director, in front of the senate, January 28th, 1998That was when he tried to outlaw open-source encryption. We're here all over again. What certainly does not change is how a lot of people are scared of users freedom.",
-          "Polarized group signaling makes everything into a false dichotomy. AI is not particularly dangerous _yet_. It probably will become increasingly dangerous though, especially if we don't take potential risks seriously.On the other hand, there is no urgent need to shut all of the research down. And AI is not against humans at all at this point. It's still a tool. I would argue the most powerful tool for potentially decreasing inequality and dramatically improving quality of life for the average person. But also could be used for oppression.So I say, let's have a culture of caution, but also focus on coming up with a system where the power of AI and robotics really benefits everyone and we avoid giving it more intelligence and autonomy than we can handle.",
-          "The most important thing to discuss in advocating for open-weight models is how to address their safety concerns. Highlighting e.g. the obvious conflicts of interest that Dario has is not enough to convince people to ignore the safety risks. We need a concrete counterproposal for how open-source models can proceed while mitigating these risks to acceptable levels.For example:1. Supposing that at some point in the future, open-source models can find and exploit software vulnerabilities, how do we e.g. protect critical infrastructure around the world?2. Supposing that at some point in the future, open-source models can walk a non-chemist through the process of making nerve gas, how do we prevent nerve agent attacks?3. Supposing that at some point in the future, open-source models can help a non-biologist design a novel pathogen, how do we prevent the resulting pandemic?These are not meant as rhetorical questions. They are real questions that need real answers. Personally I have no clue what the answer is, and would love to read some serious answers. I tried to order them from most to least imminent."
+          "I just don't see this as deadly to the production of games the way others do. GTA 6 is a monumental human achievement in video games - in fact it's arguably one of the largest artistic endeavors ever undertaken. If numbers are to believed, it has also already made around $4 billion against a $1-2 billion budget. It is massively profitable, and doubtless will become more so as DLC and a real PC port are released.I see this, instead, as a continuation of the usual pushback against the lockdown of entertainment to certain media. I personally haven't bought the game yet because I don't have or intend to buy an Xbox! It's deeply frustrating that everyone else will get to experience it before me because I didn't want to spend hundreds of dollars on a console!But I will probably still buy it when it comes out on PC, even if this port works.",
+          "For the general picture: the Xbox version of the game was leaked by Cyberleek - first the resources, then the game binary.Because modern Xbox is very close to a Windows PC with some extra Xbox stuff, running the actual game code isn't hard, it's mostly about compatibility and graphics, plus the binary doesn't have any special DRM/obfuscation.The current projects (xcl and VIctory) basically take a Wine-like approach. The main problems they have to solve, as I understand:- The game ships with raw RDNA 2 shaders, so the projects have to translate that to another format, e.g. DXIL for DirectX 12, and compile those shaders. So you need a good translation/recompilation pipeline, if it's bad, the shaders will be bloated and perform poorly- Xbox has unified memory, while most PCs do not, so you have to add a lot of workarounds and book-keeping for the game to work properly with that- Xbox's DirectX 12 differs from the normal Windows one in some ways, and the game uses Xbox-specific texture formats with DirectStorageI just wanted to share this because there's a lot of misconceptions going around about this being a \"recomp\" or something like that. Decompiling the entire binary (it's about 100MB of real executable machine code) will be a much bigger effort than getting this binary to run.",
+          "Recent and related (in reverse order). Others?GTA 6 Recomp (Leonida) banned from GitHub while lead dev was in school - https://news.ycombinator.com/item?id=50622638 - Nov 2026 (512 comments)Cyberleek posted the GTA 6 Xbox build executable - https://news.ycombinator.com/item?id=50612686 - Nov 2026 (323 comments)Leonida – PC Recompilation of the Xbox Version of GTA 6 - https://news.ycombinator.com/item?id=50595168 - Nov 2026 (222 comments)"
         ]
       }
     },
     {
-      "id": "50617499",
-      "title": "Per Arm's request, this site will be discontinued on 4 December 2026 :(",
-      "url": "https://arm.jonpalmisc.com/",
+      "id": "50630462",
+      "title": "Jetty Pro",
+      "url": "http://hypercritical.co/2026/11/23/jetty-pro",
       "source": "Hacker News",
-      "published_at": "2026-11-23T19:17:55+00:00",
-      "summary": "Per Arm's request, this site will be discontinued on 4 December 2026 :(",
-      "score": 1042,
-      "comments": 238,
-      "discussion_url": "https://news.ycombinator.com/item?id=50617499",
+      "published_at": "2026-11-24T16:23:02+00:00",
+      "summary": "Jetty Pro",
+      "score": 281,
+      "comments": 123,
+      "discussion_url": "https://news.ycombinator.com/item?id=50630462",
       "extra": {
         "top_comments": [
-          "Hi, didn't expect to see this here, so adding a bit of info:They are requesting removal stating that I am using their trademarks and IP by hosting their documentation, which seems hard to work around while still keeping the site useful.People have contacted me offering to host mirrors, or suggesting I lawyer up or release the source code (sans Arm IP) to generate the same site for personal use. I'll be looking into all of these options.For those unfamiliar with this site until now: it's the ISA documentation, but with search and without all the popups and bloat. The aim has always been to make it the most comfortable and bullshit-free browsing experience for people who need these docs daily.Thanks for the support, everyone! :)",
-          "This is why in most companies lawyers should report to an engineer (or someone who understands the business) who signs off on these things.Going after this merely makes life harder for people ultimately providing value/income to ARM.",
-          "Why would they threaten legal action over this? Surely documenting hardware should be fair use, right? Or are we somehow at the point where companies can decide who can even know how their publicly sold/release tech works?"
+          "I think a simple way to fix the inevitable complaints about subscriptions is to allow people to keep the version of Jetty that they owned at the moment their subscription lapsed.That way you only have to pay whenever a new Mac version introduced changes that require the developer to put in work to update the app. (I realize that monitoring private api changes is a kind of constant work even when an update isn’t required, but that’s imo a tradeoff with selling something like this).",
+          "I found this interesting to read because a few weeks ago I started to replace different applications with vibe coded native Mac apps that do exactly what I want in a way that I want. They replaced applications that kind of did what I wanted but were not customizable enough or just too heavy or klunky. I’ve had Claude built them with performance in mind and a tiny memory footprint.If you have even the slightest idea about application development and the capabilities of GPT Codex or Claude code, this is the future for a lot of people.",
+          "This is an alternative to the Mac OS dock UI and the page should start by saying so."
         ]
       }
     },
     {
-      "id": "50620349",
-      "title": "Stalwart is now a drop-in replacement for Microsoft Exchange",
-      "url": "https://stalw.art/blog/microsoft-exchange-replacement/",
+      "id": "50630594",
+      "title": "Active intrusion campaign against Check Point security management servers",
+      "url": "https://www.greynoise.io/blog/check-point-security-management-servers-intrusion-campaign",
       "source": "Hacker News",
-      "published_at": "2026-11-23T22:32:29+00:00",
-      "summary": "Stalwart is now a drop-in replacement for Microsoft Exchange",
-      "score": 473,
-      "comments": 250,
-      "discussion_url": "https://news.ycombinator.com/item?id=50620349",
+      "published_at": "2026-11-24T16:32:17+00:00",
+      "summary": "Active intrusion campaign against Check Point security management servers",
+      "score": 269,
+      "comments": 135,
+      "discussion_url": "https://news.ycombinator.com/item?id=50630594",
       "extra": {
         "top_comments": [
-          "> the new Outlook sends the IMAP server name, the user name and the password to MicrosoftThis is... incredible. To say the least.",
-          "Organizations using Exchange Server out there in the world. That cannot use US public cloud due to regulation. What is your plan for the future?",
-          "I don't get it. They say that Outlook will no longer support Exchange on premise, only Cloud. So how will all their customers use Stalwart then, which is a drop-in replacement? Shouldn't they first switch to another client (Outlook copy or Thunderbird)?"
+          "Hello my old friend PRNG.”The actor scanned and began exploitation against the HFS server. Each POST to the HFS loginSrp1 endpoint returns a new signed session cookie containing a “sid” value drawn from JavaScript’s Math.random() function. Through conducting several logins in succession, the actor collected enough output to reconstruct the internal state of the [Node.js] V8 PRNG algorithm, and thus recover an HFS session-cookie signing key, then forge a signed admin session cookie. This allows the attacker to login as admin without a password.”",
+          "Buckle up, this is just the beginning of the end. ATM only more sophisticated cyber criminals or state actors use LLMs to penetrate, but soon the chaotic landscape of 100.000s of cyber criminals will just use compute to prompt models to \"Make me as much money as possible\" , with the result of these models/swarms attacking any online service including critical infrastructure.",
+          "2026-10-02 13:17:45 UTC - The actor scanned and began exploitation against the HFS server. Each POST to the HFS loginSrp1 endpoint returns a new signed session cookie containing a “sid” value drawn from JavaScript’s Math.random() function. Through conducting several logins in succession, the actor collected enough output to reconstruct the internal state of the V8 PRNG algorithm, and thus recover an HFS session-cookie signing key, then forge a signed admin session cookie. This allows the attacker to login as admin without a password. I cannot believe this is still an issue. I remember mucking around with this vector on Burp Suite a decade ago."
         ]
       }
     },
     {
-      "id": "50622774",
-      "title": "New York Bans Subscription and Post-Purchase Fees on Cars",
-      "url": "https://www.governor.ny.gov/news/money-your-pockets-governor-hochul-signs-bill-restricting-exploitative-vehicle-subscription",
+      "id": "50629231",
+      "title": "A training engine for your local model, using your idle compute",
+      "url": "https://github.com/sous-labs/songe",
       "source": "Hacker News",
-      "published_at": "2026-11-24T02:27:02+00:00",
-      "summary": "New York Bans Subscription and Post-Purchase Fees on Cars",
-      "score": 360,
-      "comments": 109,
-      "discussion_url": "https://news.ycombinator.com/item?id=50622774",
+      "published_at": "2026-11-24T15:03:40+00:00",
+      "summary": "A training engine for your local model, using your idle compute",
+      "score": 187,
+      "comments": 63,
+      "discussion_url": "https://news.ycombinator.com/item?id=50629231",
       "extra": {
         "top_comments": [
-          "This trend drives me nuts! I've bought a VW Multivan T7, second hand, amazing vehicle for my family. It comes with a set of options you can purchase, for example, extra LED colors for the interiors or Auto headlights, which I find it insane! So you are telling me this vehicle has the tech to auto regulate it's headlights but it sits behind me shelling out +€200 for it? This needs to be made illegal; Also, having lock in on where my data goes, effectively needing to pay VW to keep track of my vehicle position or battery status is just crazy; Europe needs to make mandatory all this data to be exposed internally to the user and let him decide what to do with it, either use VW services for convenience or ship it to some third party or self hosted open source service (along with choosing who provides Internet to your vehicle).",
-          "To answer parallel questions, this appears to not impact either SiriusXM or Tesla's enhanced cruise control.The senate bill[1] specifically exempts \"navigation system updates, infotainment features, satellite radio, in-vehicle Wi-Fi, telematics services, roadside assistance, software-dependent driver assistance or driver automation features, or vehicle-connected services that rely on cellular or other data networks for continued operation\"This is pretty clearly aimed at the German automakers who were trying to put stuff like heated seats behind a subscription.1 - https://legislation.nysenate.gov/pdf/bills/2025/S9348A",
-          "Any car feature that doesn’t incur an ongoing cost to the manufacturer to maintain should be available post-purchase without any kind of subscription, this should be a federal law with back breaking financial penalties if they’re broken."
+          "I've been waiting for the SETI at home equivalent for LLMs... perhaps we can make this distributed? (obviously complexities abound with that...)Are there more of these projects?",
+          "Any rough numbers on improvement per dream epoch? How much improvement can we expect if we train the model over the weekend ?",
+          "Sorry if I missed this in the docs but -How does it judge improvement?Does it find instances where the agent corrected itself, or needs correction by the user, replay its own version of that til the training it develops produces the correct result the first time?I’d really like the see a case of the improvement / judgement process transcribed in the readme, so there’s a practical example of what it actually does (show, don’t tell!)"
         ]
       }
     },
     {
-      "id": "50619103",
-      "title": "GPUI is getting its own repository",
-      "url": "https://github.com/zed-industries/gpui",
+      "id": "50634658",
+      "title": "GPT-6 models demonstrate intrinsic protein-design capabilities",
+      "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/",
       "source": "Hacker News",
-      "published_at": "2026-11-23T20:52:54+00:00",
-      "summary": "GPUI is getting its own repository",
-      "score": 259,
-      "comments": 99,
-      "discussion_url": "https://news.ycombinator.com/item?id=50619103",
+      "published_at": "2026-11-24T21:02:22+00:00",
+      "summary": "GPT-6 models demonstrate intrinsic protein-design capabilities",
+      "score": 182,
+      "comments": 54,
+      "discussion_url": "https://news.ycombinator.com/item?id=50634658",
       "extra": {
         "top_comments": [
-          "I've been blown away by how rich the gpui-kit componentry is: https://gpui-kit.com/component/ I recently wrote a Rust desktop app using iced, and now look at gpui[-kit] with envy ;)",
-          "Finally, I have wanted to use it but felt awkward that it was inside the editors repo.",
-          "I don't really understand the negative views towards egui in this thread. It works great. In my spare time I've been building an open source little harness thing ( https://www.byob.chat/ ) as a fun side project and egui is an absolute blast when it comes to functionality. It so far has behaved as an open canvas, I can press F2, and click and drag any components on my native desktop app to rearrange them, I can also theme it with anything, including live shaders."
+          "> We gave GPT‑6.2 the three-dimensional structures of five target proteins and marked where we wanted a minibinder to attach. It then wrote code to create three-dimensional designs for potential minibinders, without using specialized protein AI models.The ability to write code is basically the superpower for these models.As long as what you need to do to make progress is write better code, they will do better at the task.The last 30 years has been making more and more things run using code instead of any other mechanism (music, illustration, vfx).Even math, the models were worse off before Lean was accepted as output.",
+          "> To turn GPT‑6.2’s three-dimensional designs into proteins we could test in the lab, we needed amino acid sequences that would fold into the proposed structures. We used a specialized AI model called SolubleMPNN to suggest sequences for each design. Other specialized protein models helped us select candidates predicted to fold as designed and bind at the intended site on the target.I don't get it. What did GTP-6.2 actually design here? The sequence is the structure for proteins. So did the model output a sequence here as answer to a question like \"design a protein for target X\" or not?To me, \"protein design\" means you have a goal and you create a sequence that achieves that goal. I'm also not sure what a \"three-dimensional design\" would be in this case. Charges matter a lot for binding, as do hydrophobic areas. At sufficient resolution you're again at an amino acid sequence in a specific fold with that. Or did GPT-6.2 just design a rough tertiary structure here (helices, beta sheets and loops) and the details were filled in by the specialized model?",
+          "Someone claims having a superior free open weights in biology: https://hugston.com/news/dangerous-enoughI have tested the S2 and Chatgpt, both are good but GPT keeps flagging and is annoying. It shouyld be interesting to bench them agains eachother."
         ]
       }
     },
     {
-      "id": "50619207",
-      "title": "Bored.com: Fun, interesting and cool websites to explore when bored",
-      "url": "https://www.bored.com/",
+      "id": "50635271",
+      "title": "Heart attack and stroke risk detectable decades in advance",
+      "url": "https://www.ed.ac.uk/news/heart-attack-and-stroke-risk-detectable-decades-in-advance",
       "source": "Hacker News",
-      "published_at": "2026-11-23T21:01:16+00:00",
-      "summary": "Bored.com: Fun, interesting and cool websites to explore when bored",
-      "score": 243,
-      "comments": 52,
-      "discussion_url": "https://news.ycombinator.com/item?id=50619207",
+      "published_at": "2026-11-24T21:51:21+00:00",
+      "summary": "Heart attack and stroke risk detectable decades in advance",
+      "score": 166,
+      "comments": 71,
+      "discussion_url": "https://news.ycombinator.com/item?id=50635271",
       "extra": {
         "top_comments": [
-          "Some of the games created for Bored.com appear to be clones of other games on the site, which is a bit strange to me.\"Chat Pester\" [1] is similar to R74n's \"RageBait Simulator\" [2], \"Bottomless\" [3] is similar to Neal Agarwal's \"The Deep Sea\" [4], and \"Spend It All\" [5] is similar to Neal Agarwal's \"Spend Bill Gates' Money\" [6]. \"Daily word\" [7] is nearly identical to Josh Wardle's \"Wordle\" [8].They have tweaked these games somewhat (except for \"Daily word\"), but since the point of the site is to be a link aggregator, I am not particularly impressed by Chat Pester being ranked much higher than its source material [9] that used to be ranked #2 [10].[1] https://www.bored.com/arcade/chat-pester [2] https://r74n.com/mini/ragebait [3] https://www.bored.com/arcade/bottomless [4] https://neal.fun/deep-sea [5] https://www.bored.com/arcade/spend-it-all [6] https://neal.fun/spend [7] https://www.bored.com/arcade/word [8] https://www.nytimes.com/games/wordle [9] https://web.archive.org/web/20261124013147/https://www.bored... [10] https://web.archive.org/web/20261108013344/https://www.bored...",
-          "I remember the original bored.com: https://web.archive.org/web/20040708064338/http://bored.com/ primarily because of The Death Clock being linked there: http://www.deathclock.com/",
-          "Also, Url Roulette would fit this category of stumbleupon-like sites!https://urlroulette.net/"
+          "The main risk factors they investigated were blood pressure, cholesterol (HDL and total), inflammation (CRP), BMI, troponin, and diabetes/smoking status.Many of these numbers can combined into a prediction of your 30-year heart disease risk using the PREVENT equations: https://app.empirical.health/app/prevent-risk-calculator-for...The good news is that most of these risk factors are very modifiable. We have medications that can reduce LDL cholesterol by 80%, for example, while also lowering inflammation by about 37%.",
+          "Just get on a GLP-1 - lose the weight/inflammation/high blood pressure and likely the cholestorol problemhow is this not the default answer to all the modern illnesses?"
         ]
       }
     }
