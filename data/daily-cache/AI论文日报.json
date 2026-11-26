@@ -1,107 +1,70 @@
 {
-  "cached_at": "2026-11-25T16:57:03.741890+08:00",
+  "cached_at": "2026-11-26T11:00:36.342066+08:00",
   "articles": [
     {
-      "id": "2611.33158",
-      "title": "OmniAct: One Policy, One Million Embodiments",
-      "url": "https://arxiv.org/abs/2611.33158v1",
+      "id": "2611.33749",
+      "title": "Teaching Students to Stand on Their Own: Distilling Vision Foundation Models for Fine-Grained Few-Shot Class-Incremental Learning",
+      "url": "https://arxiv.org/abs/2611.33749v1",
       "source": "arXiv",
-      "published_at": "2026-11-24T18:59:58+00:00",
-      "summary": "A single policy that controls diverse robots must not only transfer task knowledge across embodiments, but also adapt its behavior to each robot's capabilities. Existing approaches facilitate transfer through shared action representations, but these representations do not necessarily capture how differences in robot morphology should shape manipulation strategies. We introduce OmniAct, a cross-embodiment manipulation policy that conditions directly on each robot's kinematics in a specific scene to produce embodiment-specific behavior. This kinematic graph represents the robot's joint positions, motion axes, and connectivity to its visual observation, allowing the policy to account for how its embodiment related to objects and surfaces in the scene. A flow-matching policy predicts relative joint motions for each node, enabling control across robots with different degrees of freedom and kinematic configurations. To learn how physical structure shapes behavior at scale, we procedurally design and filter one million physically feasible robot embodiments; next, we develop algorithms to generate robot trajectories in simulation for all embodiments; finally, we train across diverse simulated manipulation tasks. On 2,000 embodiment-scene-held-out evaluation episodes, OmniAct achieves 63.0% success, compared to 17.8% for pi 0.5 and 57.9% for the strongest baseline; on the task families GPT-6 Astra was evaluated on, it achieves 64.7% against GPT-6 Astra's 41.1%. On a previously unseen real-world robot, it achieves nearly twice the success rate of the next best method, MolmoAct2. Beyond task success, we observe that OmniAct learns distinct manipulation strategies that exploit the capabilities and accommodate the limitations of different morphologies. Project: https://omniact.github.io/",
+      "published_at": "2026-11-25T04:10:53+00:00",
+      "summary": "Fine-grained few-shot class-incremental learning (FG-FSCIL) aims to incrementally learn visually similar new classes from limited images without catastrophic forgetting. Prior work typically learns strong representations on base classes or leverages vision foundation models (VFMs) directly as backbones or via knowledge distillation. However, VFM backbones incur high computational costs and do not guarantee fine-grained recognition. Although knowledge distillation reduces inference cost, our preliminary experiments reveal that distilled students still lag substantially behind their VFM teachers, particularly on new classes. To address this limitation, we propose STAND, a systematic VFM-to-student distillation design tailored for FG-FSCIL. Specifically, STAND connects the teacher and student by equipping the student with a fixed copy of the teacher's classifier, aligning their outputs via projectors, and feeding both models composite images that combine different training images. On these composite images, relation distillation matches how the teacher and the student relate each image to other images, while difference distillation matches how this relation changes between two composite images. Finally, we freeze the student and classify new classes using length-calibrated prototypes, which restore the reduced similarity of few-shot prototypes. Extensive evaluations demonstrate that STAND achieves state-of-the-art performance across FG-FSCIL datasets at low computational cost, while generalizing across student backbones and broader datasets.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Xiang Fan",
-          "Yuheng Wang",
-          "Jiayuan Yan",
-          "Bohan Fang",
-          "Wisdom Oluchi Ikezogwo",
-          "Ainaz Eftekhar",
-          "Max Argus",
-          "Jason Ren",
-          "Jiafei Duan",
-          "Ranjay Krishna"
+          "Junsu Kim",
+          "Seungryul Baek"
         ],
         "categories": [
-          "cs.RO",
+          "cs.CV",
+          "cs.AI"
+        ]
+      }
+    },
+    {
+      "id": "2611.33748",
+      "title": "REFORGE: LLM-Assisted RTL Bug Repair with Structured Context and Verification Feedback",
+      "url": "https://arxiv.org/abs/2611.33748v1",
+      "source": "arXiv",
+      "published_at": "2026-11-25T04:08:43+00:00",
+      "summary": "Large language models (LLMs) can write and repair RTL, but successful compilation or testbench execution does not establish defect removal, behavioral preservation, security, or implementation feasibility. Existing LLM-based RTL repair methods often report a single repair rate without retaining separate evidence for these properties, limiting reproducible comparison and integration into hardware design flows. We present REFORGE, which, to our knowledge, is the first LLM-assisted RTL repair framework that maintains and accumulates structured repair evidence across iterations, allowing it to generate fixes that satisfy multiple objectives simultaneously, including functionality, behavioral equivalence, security, and cost efficiency. REFORGE profiles buggy RTL, identifies structural and security-relevant features, localizes failing behavior, and uses verification-guided diagnosis to generate complete RTL repair variants. Each variant undergoes syntax checking, simulation, formal analysis, off-trigger preservation, security re-scan, and synthesis-based power, performance, and area analysis. We implement REFORGE as a backend-independent repair-and-verification flow and evaluate it in 288 runs across three LLM backends and three benchmark suites. On CirFix, the proposed context and diagnosis increase runs delivering a checked repair from 32/63 to 51/63, while every configuration repairs the Hack@DAC OpenTitan defect. Evidence records also show that a testbench-only criterion reports 3.9 times more repairs than the full set of applicable checks, security-clean outputs may lack functional verification, and different RTL repairs can implement equivalent hardware. These results show that LLM-generated RTL repairs require explicit multi-stage verification evidence rather than a single pass/fail outcome.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Tanvir Hossain",
+          "Sudipta Paria",
+          "Aidan Gleason Myers",
+          "Swarup Bhunia",
+          "Tamzidul Hoque"
+        ],
+        "categories": [
           "cs.AI",
-          "cs.CV",
-          "cs.LG"
+          "cs.SE"
         ]
       }
     },
     {
-      "id": "2611.33153",
-      "title": "DiaCap: Jointly Learning Who Speaks When for Audiovisual Dialogue Captioning",
-      "url": "https://arxiv.org/abs/2611.33153v1",
+      "id": "2611.33747",
+      "title": "Tells of a Lying Machine: Analyzing LLM-Generated Strategic Dialogue in Chinese Werewolf",
+      "url": "https://arxiv.org/abs/2611.33747v1",
       "source": "arXiv",
-      "published_at": "2026-11-24T18:59:08+00:00",
-      "summary": "We present DiaCap, an audiovisual LLM for comprehensive dialogue captioning, which produces the transcript, timestamps, and a visual description of the speaker for every utterance in a video. Considering that utterance timing and audiovisual diarization are tightly coupled, DiaCap unifies the tasks in a single model, trained in two complementary stages. First, we train DiaCap on 225K curated clips, using synthetic captions that densely label every utterance in detail. Second, we further refine the model via reinforcement learning on 2.9K human-corrected clips, using fine-grained feedback that directly evaluates utterance timing, speaker grouping, and speaker binding. On DiaDemBench, which we extend with utterance-level timestamps and subtitle redaction, both DiaCap with off-the-shelf transcripts and its end-to-end variant DiaCap-E2E achieve strong results. Specifically, DiaCap performs on par with Gemini 4 Argon in audiovisual diarization while clearly outperforming it in timestamp accuracy (76.59 vs. 42.76 TIME). It also maintains strong diarization on multilingual and minute-long videos, and transfers to audiovisual question answering.",
+      "published_at": "2026-11-25T04:08:20+00:00",
+      "summary": "Social-deduction games give models opposing objectives, but they also give roles different information and speaking obligations. We analyze 5,404 public utterances from 150 Chinese Werewolf games played by 12 models, comparing ordinary wolves with ordinary villagers so that special roles are excluded. Private knowledge and goals still differ, and no utterance is verified as true or false. After model and length adjustment, wolf utterances score higher on both certainty and uncertainty (coefficients +0.074 and +0.072). Emotional intensification has the largest rank-biserial effect (r = .145), but it depends on a single degree marker and correlates weakly with human-rated affect. Three annotators' ratings of 392 utterances show higher wolf scores on four behavioral dimensions, and five LLM judges reach 60.8%-70.2% accuracy on a shared evaluation set. In a generation probe that prompts six models with a wolf identity but a villager speaking goal under fixed public context, certainty (+0.164) and emotional intensification (+0.095) increase. These findings describe role-associated language rather than verified lying, and they argue for explicit comparison groups and lexicon sensitivity checks in game-based deception evaluation. Data and code are available at https://github.com/justinchoi929/Tells-of-a-Lying-Machine",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Binfei Ji",
-          "Zhiwen Cao",
-          "Anqi Yang",
-          "Prem Seetharaman",
-          "Shuo Yang",
-          "Ratheesh Kalarot",
-          "Yingyan Celine Lin",
-          "Mingze Xu"
-        ],
-        "categories": [
-          "cs.CV",
-          "cs.CL",
-          "cs.MM",
-          "cs.SD"
-        ]
-      }
-    },
-    {
-      "id": "2611.33151",
-      "title": "BioLoom: Scaling Biomedical Vision-Language Models by Learning from the Structure of Scientific Articles",
-      "url": "https://arxiv.org/abs/2611.33151v1",
-      "source": "arXiv",
-      "published_at": "2026-11-24T18:59:04+00:00",
-      "summary": "The development of biomedical vision-language models (VLMs) with contrastive image-text pretraining has been driven by scaling to increasingly large and diverse image-text datasets. Beyond scaling, further progress can come from learning richer representations from existing data. We hypothesize that the structure of scientific literature itself provides an additional source of supervision: figures, panels, captions, and accompanying article text encode rich relationships across modalities. Yet, treating these as independent image-text pairs overlooks their relationships. To address this limitation, we incorporate these structural relationships into contrastive image-text supervision. We preserve exact image-text matches while introducing weaker positive supervision for related pairs, such as a panel and the caption of a sibling panel. We upweight cross-article negatives of the same content type to encourage finer discrimination. We also enrich panel descriptions using visual content, original figure captions, and mentioning paragraphs. Pairing panels with these descriptions and whole figures with their original captions yields Loom52M, a dataset of 52.4 million image-text pairs spanning scientific charts and biomedical images. Using Loom52M, BioLoom (DFN-2B) achieves 56.82% domain-balanced mean accuracy across 67 zero-shot classification tasks from 43 datasets in 10 domains, compared with 48.77% for MedPMC-CLIP. On BioLoomBench with concise captions and BioMedFlickr, it achieves bidirectional mean Recall@1 of 63.20% and 10.59%, versus 46.37% and 7.55% for the respective strongest evaluated baselines, BiomedCLIP and MedPMC-CLIP. Code, datasets, benchmarks, and models are available at https://bioloom-clip.github.io/.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Yuwei Yang",
-          "Xiaoxiao Sun",
-          "Alejandro Lozano",
-          "Yuan-Sen Ting",
-          "Yuhui Yuan",
-          "Liang Zheng",
-          "Serena Yeung-Levy"
-        ],
-        "categories": [
-          "cs.CV",
-          "cs.LG"
-        ]
-      }
-    },
-    {
-      "id": "2611.33148",
-      "title": "CoT-Proxy: Cross-Format Transfer for Distilling Long-Horizon Policies",
-      "url": "https://arxiv.org/abs/2611.33148v1",
-      "source": "arXiv",
-      "published_at": "2026-11-24T18:58:53+00:00",
-      "summary": "Reasoning models become long-horizon agents through reinforcement learning or, more cheaply, through fine-tuning on a stronger teacher's trajectories, which contain the teacher's chain-of-thought as well as its actions. The standard fine-tuning approach imitates both, yet the strongest teachers are closed models whose chain-of-thought is hidden behind an API. We show that the chain-of-thought can be left out altogether and that the long-horizon policy can be distilled from the teacher's actions alone. The student is trained on these trajectories with its reasoning block left empty, while a KL loss on a replay buffer of its own generations limits drift from its initial model. Surprisingly, the policy learned from these trajectories with an empty reasoning block carries over to inference with thinking enabled, where the student reasons in its own style while acting like the teacher, an effect we call cross-format transfer. Distilling the actions of Qwen3.6-27B raises the task success of Qwen3-4B on AppWorld from 7% to 18% and that of Qwen3-32B from 12% to 25%. We further introduce CoT-proxies, short summaries of the teacher's reasoning placed after the empty reasoning block, which raise Qwen3-4B further, to 35%. Since neither actions nor CoT-proxies need the hidden chain-of-thought, the recipe applies unchanged to closed teachers. Distilling GPT-5.6 Luna from its visible outputs and the reasoning summaries its API returns raises Qwen3-4B from 7% to 48% on AppWorld and from 3% to 28% on SWE-bench Verified.",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {
-        "authors": [
-          "Dawid J. Kopiczko",
-          "Tijmen Blankevoort",
-          "Yuki M. Asano"
+          "Xian Cui",
+          "Gan Yang",
+          "Dongqi Han",
+          "Han Zhu",
+          "Bo Zheng",
+          "Jianhui Zheng",
+          "Xiaoyong Li"
         ],
         "categories": [
           "cs.CL"
@@ -109,27 +72,45 @@
       }
     },
     {
-      "id": "2611.33141",
-      "title": "iWAM: Efficient Action Prediction from World Models without Explicit Future Prediction",
-      "url": "https://arxiv.org/abs/2611.33141v1",
+      "id": "2611.33745",
+      "title": "WhatIf: Counterfactual World Models over Action-Grounded Causal Graphs for Robotic Manipulation",
+      "url": "https://arxiv.org/abs/2611.33745v1",
       "source": "arXiv",
-      "published_at": "2026-11-24T18:56:04+00:00",
-      "summary": "World-action models (WAMs) build policies on pretrained video-generation models, on the premise that predicting how a scene evolves helps determine how to act. However, generating future scenes is expensive for real-time control. This motivates efficient proxies for future imagination, but how to train such proxies without sacrificing action-prediction quality remains unclear. An effective proxy need not generate a high-resolution frame; it only needs to provide enough information to distinguish between possible futures. This leads to the design principle behind iWAM: rather than denoising an entire future frame, can we condition the action policy on intermediate features from a single video-model evaluation? We show that the answer is yes. Exploiting the reversible dynamics of flow-matching models, we invert each training future into the corresponding latent noise vector. However, a single velocity evaluation at this latent does not necessarily yield informative features for action prediction. We therefore learn a bidirectional flow map that amortizes future-generation computation, enabling a single model evaluation to provide effective conditioning features. At inference, we sample a latent noise vector from the prior and condition the policy using just one video-backbone forward pass. Across simulated benchmarks and real robots, iWAM recovers the generalization benefits of WAMs while substantially reducing its inference cost.",
+      "published_at": "2026-11-25T04:06:11+00:00",
+      "summary": "World models predict what happens under an action, but choosing between actions requires comparing their outcomes in the same physical situation. Factual transitions alone determine action-wise marginal futures and average effects, but not individual effects or the probability that switching actions causes harm. We introduce WhatIf, a counterfactual world model for manipulation that couples candidate futures through shared latent physics and transition noise inferred from factual history. Each candidate action induces a sparse object-factor causal graph describing the physical pathways it activates. Rolling out these graphs under the shared situation anchors predictions to observed outcomes and confines action contrasts to the objects each action reaches. Shared type-conditioned functions support varying numbers of objects, while a round-trip loss enforces action-invariant abduction without counterfactual labels. We show that replacing an individual effect with its conditional mean incurs mean-squared error equal to its conditional variance, motivating comparisons between coupled futures. Building on these comparisons, Counterfactual Advantage Planning (CAP) ranks plans by their advantage over an incumbent within shared situations and constrains the probability of harm. Paired advantages reduce estimator variance by a factor of $1-ρ$, where $ρ$ is the correlation between branch outcomes, and cancel model errors shared by both branches. Each executed transition provides hindsight advantages to update the physics posterior, the next plan, and an amortized policy without a learned critic. We further establish when observational transitions identify interventional dynamics. Paired simulator interventions evaluate counterfactual accuracy, graph recovery, compositional generalization, and decision quality.",
       "score": 0,
       "comments": 0,
       "discussion_url": "",
       "extra": {
         "authors": [
-          "Vansh Kapoor",
-          "Max Sobol Mark",
-          "Sreyas Venkataraman",
-          "Max Simchowitz",
-          "Aviral Kumar"
+          "Xu Yang",
+          "Kailai Sun",
+          "Qianchuan Zhao"
         ],
         "categories": [
-          "cs.RO",
-          "cs.CV",
-          "cs.LG"
+          "cs.AI"
+        ]
+      }
+    },
+    {
+      "id": "2611.33743",
+      "title": "OrbACE: Orbital and Atomic Cluster Expansion",
+      "url": "https://arxiv.org/abs/2611.33743v1",
+      "source": "arXiv",
+      "published_at": "2026-11-25T04:04:44+00:00",
+      "summary": "Accurate electronic-structure reference data are expensive, motivating interatomic potentials that learn effectively from limited training sets. We introduce OrbACE (Orbital and Atomic Cluster Expansion), a framework that supplements an E(3)-equivariant cluster-expansion backbone with inexpensive electronic-structure descriptors. On ANI-1x at the $ω$B97X/6-31G* level, its atom-centered variant, OrbACE-A, trained on 10,000 configurations and evaluated on 442,000 held-out configurations, achieves energy and force mean absolute errors of 3.16 meV/atom and 76 meV/angstrom in direct learning, compared with 9.61 meV/atom and 146 meV/angstrom for MACE with matched backbone settings. This reduces the energy error by a factor of three and approximately halves the force error. Its energy error is also below that of the best delta-corrected MACE baseline, 5.00 meV/atom, although its force error is slightly higher. Combining OrbACE-A with a Hartree-Fock delta baseline further reduces the errors to 1.48 meV/atom and 35 meV/angstrom. OrbACE-A builds atom- and pair-resolved invariants from a non-self-consistent extended-Hueckel model evaluated within the differentiable forward pass, yielding forces consistent with the predicted energy. The orbital variant, OrbACE-O, instead uses localized Hartree-Fock orbitals as graph nodes, with scalar and equivariant electronic descriptors. Its forces are evaluated at fixed descriptors, omitting their response to nuclear motion. In direct learning on ANI-1x, its energy error is approximately three times that of OrbACE-A. The three benchmarks considered (ANI-1x, revised MD17, and 3BPA) cover neutral, closed-shell, non-periodic molecules containing H, C, N, and O. Performance outside this domain remains to be established.",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {
+        "authors": [
+          "Etinosa Osaro",
+          "Dario Rocca"
+        ],
+        "categories": [
+          "physics.chem-ph",
+          "cs.LG",
+          "physics.comp-ph"
         ]
       }
     }

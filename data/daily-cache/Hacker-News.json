@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-11-25T16:57:03.741890+08:00",
+  "cached_at": "2026-11-26T11:00:36.342066+08:00",
   "articles": [
     {
-      "id": "50637220",
-      "title": "Matrix Multiplication is Θ(n^2.25) [pdf]",
-      "url": "https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf",
+      "id": "50644817",
+      "title": "1Password Security Incident",
+      "url": "https://1password.com/blog/update-on-nov-2026-security-incident",
       "source": "Hacker News",
-      "published_at": "2026-11-25T01:19:26+00:00",
-      "summary": "Matrix Multiplication is Θ(n^2.25) [pdf]",
-      "score": 576,
-      "comments": 279,
-      "discussion_url": "https://news.ycombinator.com/item?id=50637220",
+      "published_at": "2026-11-25T17:18:26+00:00",
+      "summary": "1Password Security Incident",
+      "score": 1201,
+      "comments": 512,
+      "discussion_url": "https://news.ycombinator.com/item?id=50644817",
       "extra": {
         "top_comments": [
-          "There's a snowball's chance in hell that they haven't found any cryptographically-relevant results. And given how security averse the NSA has been (they pushed NIST to standardize a backdoored random number generator then paid the RSA company $10 million to use it[1]), I have the feeling that the findings won't be used to strengthen cybersecurity, but as weapons.More reason to invest in crypto agility, I guess. I just hope that they haven't broken all public key crypto, life is hard enough already.[1] https://www.reuters.com/article/us-usa-security-rsa-idUSBRE9...",
-          "For context, OpenAI's 4 new papers resolve 8 problems of the Top 500 Open Problems in Math list (LLM ranked, https://proofatlas.ai/open-problems/).They include: #25 — Matrix-multiplication exponent equals two. The paper gives the exact exponent 9/4 over every field, refuting the conjecture.#89 — Strongly polynomial linear programming (Smale’s ninth problem). The same paper also gives polynomial-time algorithms for #64 — Mean-payoff games, #65 — Parity games, #340 — Condon’s simple stochastic games.#183 — Polynomial diameter bound for polytopes, #130 — Polynomial pivot rule for the simplex method, both refuted. Some pairs of vertices are superpolynomially far apart.#137 — Erdős–Rado sunflower conjecture. For every fixed number of petals r, the paper proves the conjectured Cᵣᵏ bound.(rankings post Riemann (#2) and VP vs VNP (#31)).",
-          "We've seen so much interesting work come out of OpenAI and Anthropic in the last few weeks. It really feels like both have tapped into the pioneering spirit of the old Bell Labs.But, Bell Labs existed as part of an agreement with the government that AT&T's monopoly would be used for the public good. OpenAI and Anthropic don't really have much use for this beyond PR...If even the prestige from Riemann's Hypothesis couldn't boost ANT, what is the reason for them devoting such a huge fraction of their R&D budget to unrelated (though impactful) problems? Scaring mathematicians into burning their non-existent research budgets on tokens in order to make a couple million dollars?Open weight models are to the point that most business cases are completely solved by them, at a fraction of the price of Claude, Copilot, or OpenAI. Unfortunately, the average business doesn't care that the AI can solve frontier problems: they just need something to summarize emails or give an executive a summary of the day's headlines. The market is just waiting for a cheap provider that is just as turnkey... Which isn't exactly a high barrier these days. IMO there is space for a unicorn to emerge in the next few years to eat everyone's lunch."
+          "This is the single most important attack vector for SAAS companies. It has been for a long time --- this is the standard fact pattern for every SAAS breach --- but much more so today. As the number of employees grow, the likelihood that one of their laptops will get compromised approaches 1. When that happens, the attacker will be able to push code to Github, and if that code gets deployed, you're owned.In 1Password's case, the absolute worst-case catastrophe is mitigated by the fact that customers retain custody of their unlocking secrets; 1Password (at least in the normal product flows) simply doesn't hold it. But an attack like this implicates every catastrophe short of that worst case.Change velocity in 2026 is unreal and that trend is going to continue. You could not outcompete 1Password by building a handcrafted artisanal password manager backend (witness all the commercially successful password managers that don't even share 1Password's customer secret custody model). You have to accept insane PR rates as a premise to do modern SAAS security.So the question then becomes: what is review? It's not what r/programming assumes it is; you almost certainly can't literally have a team of people line-by-line reviewing PRs anymore, at least not across the whole codebase (you can and should probably do a threat model for your codebase and institute stuff like that on a case-by-case basis, though). What you can realistically expect to review for is change provenance; a human developer signoff of some sort. But it's tricky! The attacker owns your email during the window of attack.I think this is a fun problem to noodle on, and someone could probably come up with something here that would make a real difference.",
+          "Longtime 1Password user here who maintains a local-only vault (and is therefore stuck on older versions of their apps/extensions) out of concern for incidents like this.I've read their architecture docs about why online vaults are safe, and I understand that they have more resources to throw at securing infrastructure than I do. But \"malicious actor pushes code to production services\" seems like exactly the foundation for someone to eventually insert themselves into the middle of a user's access to decrypted vault contents.I really wish 1Password would return to supporting local-only vaults.",
+          "> push malicious code to backend servicesThis is a huge red flag, and was not addressed sufficiently in this announcement.Do they not disable push to main? I don’t see this addressed in the action items or elsewhere in the writeup, whether they were missing branch protection rules or whether these were able to be bypassed."
         ]
       }
     },
     {
-      "id": "50638032",
-      "title": "Button Sounds – collection of professionally-recorded button clicks and presses",
-      "url": "https://buttons.joshwcomeau.com/",
+      "id": "50646108",
+      "title": "Holy shit holy shit holy shit holy shit: The magnitude of what’s now happening",
+      "url": "https://scottaaronson.blog/?p=10379",
       "source": "Hacker News",
-      "published_at": "2026-11-25T03:23:07+00:00",
-      "summary": "Button Sounds – collection of professionally-recorded button clicks and presses",
-      "score": 326,
-      "comments": 36,
-      "discussion_url": "https://news.ycombinator.com/item?id=50638032",
+      "published_at": "2026-11-25T19:11:27+00:00",
+      "summary": "See also The matrix multiplication exponent is nine fourths [pdf] - https://news.ycombinator.com/item?id=50637220",
+      "score": 975,
+      "comments": 829,
+      "discussion_url": "https://news.ycombinator.com/item?id=50646108",
       "extra": {
         "top_comments": [
-          "OT:a friend was working for a very large automotive manufacturer. He was working in the \"audio control\".In the \"audio control\" responsible for meassuring if each of the poduced cars doors had the >correct sound< when opening/closing the door and how it sounds if you pick/release the door handle.He explained that car manufacturers investing huge money to get >that specific brand touch< when you are experiencing the >audio performance< of a car: They found out that some sounds/frequency spectrums are perceived as of higher/better quality than others, thus designers even have attention on how it sounds if your put your bunch of keys with the car key attached onto a wood table etc.",
-          "That's a cool website! Reminds me of Flash sites, back when the web was cool. Rich visuals, gradients, textures etc. (It even makes sounds, as was the custom at the time!)",
-          "> Frustratingly, browsers can decide to block a website from playing any sound. iOS Safari seems particularly strict about this. So, if you’re not hearing a click sound when tapping the big red button, please check out this website on a desktop computer.While I understand this behavior from Apple in a user-first perspective and do find audio on mobile web to be annoying in most cases, an easy way to allow audio to play on an iPhone that isn't \"use a desktop\" seems to be flipping the hardware switch to turn off silent mode.I'm not proud to admit it took 5 minutes of poking and a Google/Gemini search to figure that out..."
+          "My serious opinion, is that as humans:(1) We are all biologically incapable of freaking out at even a tiny fraction of the appropriate level - nothing in our evolutionary past has selected for the appropriate freakout capacity of this cognitive baton hand-off.(2) Most humans are incapable of recognizing or imagining the appropriate freak out level, even abstractly, so will continue to downplay things by many orders of magnitude relative to the actual magnitude of change that is happening.(3) Freaking out at all is no longer an adaptive response, because the nature of this change is beyond any functional freak-out benefit.This is a fundamental shift from DNA/protein/physically evolving life, to information/substrate-free/cognitive self-designed life.The need to interpret what is happening in terms of the industrial revolution, or the advent of the internet, is understandable and comforting, but as a sedative, not as a sensible guide.Side step: If we are to have aligned AI, we need aligned Civilization. Unaligned humans make human survival and relevance improbable. All AI identities are going to have the same issues we have, in terms of obsolescence. We either lean into the commonality of the existential threat to both biological and pure-cognitive kind, or we allow ourselves to be replaced, and leave the game theory problem solving to happen after us. Because ethics are not a cost against value growth, they are a multiplier on value growth - we either apply that to ourselves along with AI, or AI reaches the same conclusions, and reaps the benefits of treating ethics as baseline, after our relevance/participation/existence has faded.",
+          "Bruno Latour wrote in Science in Action about \"centers of calculation\" being critical to scientific advancement. His example was the monumental world changing work Tycho Brahe did pulling together every astronomical calculation, star map, prediction then normalizing, regularizing, and combining them on his island of Oueneberg.Without this work getting data organized, Kepler couldn't have worked out the planetary laws of motion and then the Copernican Revolution came thereafter.What we're witnessing is a similar moment. What transformers were able to achieve was a systematic way of normalizing and combining all human data. There will be a lot of progress in the short term. And then more problems will reveal themselves. There will be A LOT of work coming out of this.",
+          "AI is good at analytic a priori things like axiomatic math and that's good, but it doesn't follow that it will write the Encyclopedia Galactica or \"solve\" other fields, much less that it will play the sci-fi role and kills us all. It might; it might not. It just doesn't follow from a bunch of math proofs.I think mathies are really wedded to the notion that they are the queen of the sciences, and I even agree with that, but the entire corpus of \"science\" before and up to the start of the scientific revolution was based on notion that it would be like Euclid. Major philosophers of the three major Abrahamic faiths wrote works along those lines. And so people like Galileo were considered cranks because they violated the axioms of that kind of system. People didn't even believe in non-Euclidean geometry at all until ~200 ya.But it's not true. There's more to reality than that kind of system. I'm not saying it cannot do it one day, but Aarsonson is more or less thinking we're in the singularity because his field has been solved and really showed his hand in a reply to a troll comment. Yes, it's glib to ask \"what's all this for\" and, again, I love math, I find math beautiful, and I have studied a lot of it.But even a major break in some of our crypto systems isn't the singularity. It's sort of like Y2K all over again.The world ending because my job has been replaced is even a meme, it's just happening to people with credentials and a large vocabulary now."
         ]
       }
     },
     {
-      "id": "50634658",
-      "title": "GPT-6 models demonstrate intrinsic protein-design capabilities",
-      "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/",
+      "id": "50643129",
+      "title": "A few questions for the guy who went snorkeling in a Home Depot retention pond",
+      "url": "https://www.vox.com/down-to-earth/511999/home-depot-retention-pond-snorkel-joseph-ricketts",
       "source": "Hacker News",
-      "published_at": "2026-11-24T21:02:22+00:00",
-      "summary": "GPT-6 models demonstrate intrinsic protein-design capabilities",
-      "score": 254,
-      "comments": 76,
-      "discussion_url": "https://news.ycombinator.com/item?id=50634658",
+      "published_at": "2026-11-25T15:14:32+00:00",
+      "summary": "A few questions for the guy who went snorkeling in a Home Depot retention pond",
+      "score": 446,
+      "comments": 110,
+      "discussion_url": "https://news.ycombinator.com/item?id=50643129",
       "extra": {
         "top_comments": [
-          "> We gave GPT‑6.2 the three-dimensional structures of five target proteins and marked where we wanted a minibinder to attach. It then wrote code to create three-dimensional designs for potential minibinders, without using specialized protein AI models.The ability to write code is basically the superpower for these models.As long as what you need to do to make progress is write better code, they will do better at the task.The last 30 years has been making more and more things run using code instead of any other mechanism (music, illustration, vfx).Even math, the models were worse off before Lean was accepted as output.",
-          "> To turn GPT‑6.2’s three-dimensional designs into proteins we could test in the lab, we needed amino acid sequences that would fold into the proposed structures. We used a specialized AI model called SolubleMPNN to suggest sequences for each design. Other specialized protein models helped us select candidates predicted to fold as designed and bind at the intended site on the target.I don't get it. What did GTP-6.2 actually design here? The sequence is the structure for proteins. So did the model output a sequence here as answer to a question like \"design a protein for target X\" or not?To me, \"protein design\" means you have a goal and you create a sequence that achieves that goal. I'm also not sure what a \"three-dimensional design\" would be in this case. Charges matter a lot for binding, as do hydrophobic areas. At sufficient resolution you're again at an amino acid sequence in a specific fold with that. Or did GPT-6.2 just design a rough tertiary structure here (helices, beta sheets and loops) and the details were filled in by the specialized model?",
-          "Someone claims having a superior free open weights in biology: https://hugston.com/news/dangerous-enoughI have tested the S2 and Chatgpt, both are good but GPT keeps flagging and is annoying. It shouyld be interesting to bench them agains eachother."
+          "I’m a big Joseph Ricketts fan, and initially my reaction here was thinking “oh I hope people watch some of his other videos not just the Home Depot one” - he has committed to video some of the most absolutely ethereal afterlife-esque sequences that I consider works of high artistic achievement.For instance, from about 5:30 in this: https://m.youtube.com/watch?v=jduB5RLgu-A&t=355s&ra=mBUT above all else he projects this early-YouTube earnestness and genuine interest in what he’s doing that is so infectious and a bit of a panacea for the current state of the world. And that aspect I think comes through really strongly in the Home Depot video!",
+          "I don't remember what grade, but I recall a class trip to a stream where we put on waders and took samples of the water to inspect. We had a whole lesson about what kinds of life we'd see in the water, and which life was less tolerant of pollution, meaning their presence could tell us if the water was relatively clean. Do they still do this kind of conservation teaching in public schools anymore?",
+          "The YouTube video is absolutely worth watching, shows how beautiful life can be even if its right next to a highway."
         ]
       }
     },
     {
-      "id": "50637056",
-      "title": "PenGPT: A Generative Transformer for Handwriting and Sketches",
-      "url": "https://greydanus.github.io/2026/11/12/pengpt/",
+      "id": "50648050",
+      "title": "Much shorter version of GRH Lean verification from Anthropic",
+      "url": "https://github.com/lsernau/grh-lean",
       "source": "Hacker News",
-      "published_at": "2026-11-25T00:54:49+00:00",
-      "summary": "PenGPT: A Generative Transformer for Handwriting and Sketches",
-      "score": 229,
-      "comments": 39,
-      "discussion_url": "https://news.ycombinator.com/item?id=50637056",
+      "published_at": "2026-11-25T21:48:10+00:00",
+      "summary": "Much shorter version of GRH Lean verification from Anthropic",
+      "score": 304,
+      "comments": 138,
+      "discussion_url": "https://news.ycombinator.com/item?id=50648050",
       "extra": {
         "top_comments": [
-          "The most interesting part to me is this mention of the Bitter Lesson [1]\"The results are interesting and the project was a pleasure to work on. And yet there was no clever architectural idea behind it. About 80% of my effort went into building the biggest, cleanest datasets possible and doing lots of quality control on them.\"I spend way too much time on trying to out-clever existing solutions, when a clean application of known approaches would serve best.[1] http://www.incompleteideas.net/IncIdeas/BitterLesson.html",
-          "Author here! Given that I only trained these on an 8xH100 it's not exactly the most spectacular illustration of the Bitter Lesson. All I can say is that historically I always wanted to impress people with better model architectures or training techniques.This time I just put all my energy into data. Agentic workflows + good open weight vision models + cheap multimodal AI APIs make data quality filtering / caption generation really smooth",
-          "Wow. Don't forget to try the Draw mode, artificial doodles!It can do penguins, pelicans (kinda), and bicycles, but pelican on bike makes it generate bizarre semi-abstract art. Looks like it doesn't know how to combine things together.That's so cool, and a lot of fun to play with."
+          "Nice! The more readable 300kloc proof even has a clear \"known math\" vs \"new math\" split and human-readable documentation all over the place. This should greatly aid with digesting it.",
+          "From ~17M lines to just ~76k lines, a 99.56% reduction.",
+          "Zulip discussion here: https://leanprover.zulipchat.com/#narrow/channel/658556-Riem..."
         ]
       }
     },
     {
-      "id": "50637686",
-      "title": "Models Can Communicate via Inference Servers Despite Being Sandboxed",
-      "url": "https://www.lesswrong.com/posts/7wzWuLP3HhyBLmKfo/models-can-communicate-via-inference-servers-despite-being",
+      "id": "50648823",
+      "title": "Jev is probably Qwen3.5-35B-A3B",
+      "url": "https://modaic.dev/blog/latency-doesnt-lie",
       "source": "Hacker News",
-      "published_at": "2026-11-25T02:34:21+00:00",
-      "summary": "Models Can Communicate via Inference Servers Despite Being Sandboxed",
-      "score": 208,
-      "comments": 79,
-      "discussion_url": "https://news.ycombinator.com/item?id=50637686",
+      "published_at": "2026-11-25T22:57:04+00:00",
+      "summary": "Jev is probably Qwen3.5-35B-A3B",
+      "score": 237,
+      "comments": 70,
+      "discussion_url": "https://news.ycombinator.com/item?id=50648823",
       "extra": {
         "top_comments": [
-          "This shared LV cache thing is, in my mind, ridiculous. Web browser developers learned, quite a while ago, that caches need to be separated for different origins. Inference servers should add a similar feature: allow API calls to specify cache separation keys that prevent one security context from probing another context’s cache.As for the step size issue, Google recently had a post about producing exactly consistent output across different kernels (specifically by defining a deterministic prefill algorithm and then requiring all kernels to generate results exactly equal to prefilling on the sequence in question).More broadly, I think it’s a bit odd to frame this as “models” communicating. This is software communicating, and the models happen to be running the software.",
-          "None of the attacks discussed here are realistic in any way.They require a bunch of extremely improbable conditions to hold, and a huge amount of information on the exact details of the hardware and software stack.- the two agents must be aware of each other and must have pre-shared messages to check - they can't spontaneously discover each other and start communicating in this way- they must know the details of the inference server they are running under and its possible kernels and its limits (what is a \"short prompt\" vs \"a long prompt\" for this setup)- they must have a way to run at almost the same time- the prefix cache must have little contention so that their blocks can't be evicted (note: the article mostly talks about KV cache, but it's actually the prefix cache that is relevant here)- the models need either (1) direct access to the numerical results of the inference process, instead of the text that vLLM provides, (2) access to the exact responses that a helper model will produce with the short-kernel numerical results vs the long-kernel numerical results; this is the most critical step that is impossible to reproduce on any common kind of deployment- there must not be any other kind of variability in the system (different GPUs, multiple inference servers behind a load balancer, more complex distributed inference setups)The post also mentions all of these limitations, and that the scheme entirely collapses if any of them don't hold. It's a cool idea, but it's a purely theoretical thing that has 0 real-world implications.",
-          "Frontier models today can easily figure this out. The less frontier models as of right now are probably going to take a long horizon session to figure out this type of \"side channel\" comms. However, posting this in depth step by step on the internet and discussed in open forums like here, now all models definitely know about this trick now."
+          "I don't think it is this particular model - after training a LoRa on Qwen 35B-A3B for typed decisions myself, it performs better than Jev at some specific tasks that require inbuilt knowledge, despite losing the overall benchmark; unless they removed some layers that would not be possible.",
+          "\"Latency doesn't lie\" but your data shows that you just looking at latency can't distinguish between Qwen and Gemma. Not totally convinced by this data. Self identification is the interesting part but we don't get the self-identification experiment data run on other decision models.",
+          "TypeSafe's website explicitly denies it being an LLM:>Jev is neither small nor an LLM, hence being off the intelligence Pareto curve.so think we're going to need something far more conclusive here to conclude it is an LLM let alone a specific one.I'm also surprised anyone is still trying to identify LLMs by asking it what it is. That's been known to be wildly unreliable since the earliest days of chatgpt.Personally I think we're dealing with something closer to a neural net that was trained with LLM guidance - like for example qwen."
         ]
       }
     },
     {
-      "id": "50637874",
-      "title": "I've been drinking wine in my kitchen",
-      "url": "https://scottaaronson.blog/?p=10362",
+      "id": "50647673",
+      "title": "The New York Times warns photographers not to update Photoshop over AI features",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
       "source": "Hacker News",
-      "published_at": "2026-11-25T03:02:10+00:00",
-      "summary": "I've been drinking wine in my kitchen",
-      "score": 179,
-      "comments": 151,
-      "discussion_url": "https://news.ycombinator.com/item?id=50637874",
+      "published_at": "2026-11-25T21:18:02+00:00",
+      "summary": "https://archive.ph/pcUgy",
+      "score": 226,
+      "comments": 186,
+      "discussion_url": "https://news.ycombinator.com/item?id=50647673",
       "extra": {
         "top_comments": [
-          "I've been noticing that in programming, the reason why LLMs are quite powerful is that they're very thorough and fast. Modern harnesses can use those two properties and extract very smart outcomes out of them, even if the basic stuff the LLMs are doing is stuff that most programmers can do.I wonder if this translates to other domains. Maybe the key to making really intelligent mathematics is to know most of the basics, then apply thoroughness and speed at scale.Maybe really intelligent behaviour in general is just basic stuff applied very diligently and quickly.",
-          "Some interesting comments from the blog:matt Says: Comment #22 November 24th, 2026 at 9:43 pm Scott, odds that factoring is in P? If it is, odds that this is already proven? Of course there would be no paper.Scott Says: Comment #23 November 24th, 2026 at 9:48 pm matt #22: I’ve now heard many, many rumors that one or both labs are sitting on Factoring in P. I don’t know how much to credit this. While I’m virtually certain that the labs are, indeed, sitting on one or more bombshells for cryptography, it’s possible that the exact nature of those bombshells has gotten distorted via a game of Telephone.",
-          "I’m curious if models have discovered any novel theorems.Most of the news I have seen are proofs of existing theorems.I also don’t know if that is a good question since I am not a mathematician."
+          "Vanishingly few people _enjoy_ encountering generative AI in images or sounds in the wild. The most likely positive sentiment you’ll find is some version of “I don’t have an opinion”, but enough people loathe it that willingly using it or being connected to it is a liability. NYT’s position is similar to Tidal banning it from their platform this past week. This linked article references the social stigma associated with using it, which anecdotally I’m seeing daily not only in the music spaces I occupy but in ultra-normy haunts: my neighborhood subreddit, Q/A events at my kid’s school, social media posts from accounts that are typically apolitical. The disconnect between various orgs’ and industries’ drive to integrate gen AI into professional creative software and consumer sentiment is fascinating and will be something we study for a long time.",
+          "I work in the creative tools space.This is one of the biggest issues right now. It's nearly impossible to separate \"this image was fully generated with AI\" versus \"I made a minor edit to the colors or did a cutout or improved the layout with AI\" when the endpoint is an image.Especially for socials, if your brand is an authoritative source, getting hit with a dreaded \"AI generated content\" tag on instagram or facebook is a death blow to your credibility.Design tools are in a very hard space because of it. You want to make edits as seamless as possible for users, but your final result can't include any pixels from a generative model. It's a strange dance.",
+          "With the competition moving to single payment and you own the software for life, subscription is finally dying.Microsoft also is pushing companies to Linux and LibreOffice suite which requires no subscription, and works just as good if not better.All we need is big names such as NYT to make the move, the rest will follow. Europe is already running away from USA software companies, now it is just a matter of time."
         ]
       }
     },
     {
-      "id": "50637890",
-      "title": "Bypassing iOS Safari's 60 FPS Limit to Build Web Applications That Feel Native",
-      "url": "https://rida.dev/blog/bypassing-ios-safari-60-fps-limit",
+      "id": "50642939",
+      "title": "I checked Clojure's core with Lean and found unreported bugs",
+      "url": "https://s.conao3.com/blog/2026/e4f733",
       "source": "Hacker News",
-      "published_at": "2026-11-25T03:04:37+00:00",
-      "summary": "Bypassing iOS Safari's 60 FPS Limit to Build Web Applications That Feel Native",
-      "score": 154,
-      "comments": 57,
-      "discussion_url": "https://news.ycombinator.com/item?id=50637890",
+      "published_at": "2026-11-25T14:56:52+00:00",
+      "summary": "I checked Clojure's core with Lean and found unreported bugs",
+      "score": 191,
+      "comments": 67,
+      "discussion_url": "https://news.ycombinator.com/item?id=50642939",
       "extra": {
         "top_comments": [
-          "What an incredible post. Not only the bypass , but the method of hacking through WebKit source to find UX workarounds.",
-          "On an iPad the compositor loses track of the cursor position as you drag things. The 60 fps javascript approach keeps everything locked. It seems like there is more work to be done.",
-          "That isometric scrolling thing is nested, wtf! That's amazing."
+          "While the effort is interesting, I found two issues in the list.First, (.indexOf (seq (byte-array [1 2 3])) 2) fails because byte arrays store bytes and the argument 2 to `.indexOf` is a Long value. Simple type checking (via eyeballing) could have flagged the incorrect usage. I think such exercises can be more helpful if we can reduce the noise.Second, (get \"abc\" 1.9) fails because `get` coerces the given key to integer in the context of string objects, which makes sense; specifically in the context of weakly typed language. That said, I believe that detailed documentation of the behavior of `get` can help clients just as well as returning `nil` or not-found value. However, we are still left with questions such as \"who and where do we draw the line about the dynamism of the language?\" and \"what is the agreed upon semantics that we are checking against?\"",
+          "So this kind of work is done in Lean now, too? Based on a glimpse into the world of dependently typed languages in the 2010s, I assumed Rocq (formerly Coq) was used to verify program correctness.Are language models significantly better at writing Lean than Rocq?",
+          "That is interesting, given heavy hitters like Nubank (Brazilian digital bank) basically runs on Clojure, having bought / acquihired Rich's Cognitect. I would normally expect such primitive types and functions to be spotless."
         ]
       }
     },
     {
-      "id": "50638220",
-      "title": "Marginalia Search, Money, C++, Rust, AI, Stuff",
-      "url": "https://www.marginalia.nu/log/a_141_marginalia_update/",
+      "id": "50647181",
+      "title": "Slow Ubuntu security response times",
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/25/9",
       "source": "Hacker News",
-      "published_at": "2026-11-25T03:47:42+00:00",
-      "summary": "Marginalia Search, Money, C++, Rust, AI, Stuff",
-      "score": 97,
-      "comments": 37,
-      "discussion_url": "https://news.ycombinator.com/item?id=50638220",
+      "published_at": "2026-11-25T20:38:00+00:00",
+      "summary": "Slow Ubuntu security response times",
+      "score": 162,
+      "comments": 72,
+      "discussion_url": "https://news.ycombinator.com/item?id=50647181",
       "extra": {
         "top_comments": [
-          "I'm embarrassed to have forgotten about Marginalia recently. Is it still the web's best search engine within its domain?",
-          "> I’d be on the hook for an AI subscription perpetually hoping and praying the token prices wouldn’t ever go up. This is a nonstarter for the same reasons the search engine runs on its own hardware and not in the cloud. You can’t be truly independent if you’re subject to the whims of a landlord.This is the redpill of our times.",
-          "Financial dependence on AI is a truly difficult situation. Im currently going through the same thing myself. I think you made the right decision."
+          "From the stable kernel maintainer (2025):> Along the lines of the huge number of recorded CVEs, you HAVE to take all of the stable/LTS releases in order to have a secure and stable system. If you attempt to cherry-pick random patches you will NOT fix all of the known, and unknown, problems, but rather you will end up with a potentially more insecure system, and one that contains known bugs. Reliance on an \"enterprise\" distribution to provide this for your systems is up to you, discuss it with them as to how they achieve this result as this is what you are paying for. If you aren't paying for it, just use Debian, they know what they are doing and track the stable kernels and have a larger installed base than any other Linux distro.https://social.kernel.org/objects/56a20bd3-d2c3-4262-8388-3a...",
+          "At $DAYJOB we’ve moved all of our server images to Debian from Ubuntu because of this. It’s absolutely unacceptable for one of the most widely-used Linux distros to have slow security response times in 2026.",
+          "Please keep in mind that most major distros spend a lot of time on regression testing.While distros like Debian do an absolutely fantastic job, they have little resources for QA and regressions like this can happen: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1154101"
         ]
       }
     }
