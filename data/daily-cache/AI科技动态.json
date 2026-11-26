@@ -1,6 +1,18 @@
 {
-  "cached_at": "2026-11-26T11:00:36.342066+08:00",
+  "cached_at": "2026-11-26T16:43:27.868918+08:00",
   "articles": [
+    {
+      "id": "https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin",
+      "title": "Building on Nemotron 3.5 Parse: Open Data, Fine-Tuning, and Faster Inference",
+      "url": "https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin",
+      "source": "Hugging Face",
+      "published_at": "2026-11-26T05:05:36+00:00",
+      "summary": "",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
     {
       "id": "https://huggingface.co/blog/allenai/where-scientists-draw-the-line-on-ai-agents",
       "title": "Where scientists draw the line on AI agents",
@@ -43,18 +55,6 @@
       "url": "https://huggingface.co/blog/inkling-2-mini-inference-hillclimb",
       "source": "Hugging Face",
       "published_at": "2026-11-25T00:00:00+00:00",
-      "summary": "",
-      "score": 0,
-      "comments": 0,
-      "discussion_url": "",
-      "extra": {}
-    },
-    {
-      "id": "https://huggingface.co/blog/nvidia/microduck-obstacle-avoidance",
-      "title": "Microduck Obstacle Avoidance: A Sim2Real Workflow with Isaac Lab and Newton",
-      "url": "https://huggingface.co/blog/nvidia/microduck-obstacle-avoidance",
-      "source": "Hugging Face",
-      "published_at": "2026-11-24T16:34:13+00:00",
       "summary": "",
       "score": 0,
       "comments": 0,

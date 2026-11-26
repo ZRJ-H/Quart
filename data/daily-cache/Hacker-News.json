@@ -1,6 +1,24 @@
 {
-  "cached_at": "2026-11-26T11:00:36.342066+08:00",
+  "cached_at": "2026-11-26T16:43:27.868918+08:00",
   "articles": [
+    {
+      "id": "50646108",
+      "title": "Holy shit holy shit holy shit holy shit: The magnitude of what’s now happening",
+      "url": "https://scottaaronson.blog/?p=10379",
+      "source": "Hacker News",
+      "published_at": "2026-11-25T19:11:27+00:00",
+      "summary": "See also The matrix multiplication exponent is nine fourths [pdf] - https://news.ycombinator.com/item?id=50637220",
+      "score": 1442,
+      "comments": 1255,
+      "discussion_url": "https://news.ycombinator.com/item?id=50646108",
+      "extra": {
+        "top_comments": [
+          "I have no real confidence in this take, but I’ll go against the grain and argue that the labs do not presently have cracks in cryptosystems. I believe they’re working on it, and it’s good that they are, but I don’t think there’s evidence right now that they have fundamental breakthroughs in cryptography.For one, the labs are now massive. I don’t think you can keep a secret like this under wraps for long in an office. I think we would be seeing whistleblowers or leakers. It’s too big.Secondly, the people working at labs know that anything a frontier model can do can be approximated by the models available to the public given 10x the tokens and 10x the time and a little bit of informed direction. So they would know it’s only a matter of time before someone in the public discovers the same flaws and potentially uses it for evil. If they were sitting on this, they would try to minimize the damage and would try to warn the public to start moving to more secure encryption schemes because they know there’s a ticking time bomb until its public anyway. But they’re not doing that.That’s not to say that it won’t happen in the next few weeks. I just don’t think it’s happened yet.Edit: Alternatively, not to contradict myself, if they discovered this and immediately went to the US government (likely), and the US government served them a gag order (also likely), then this would look the exact same. Who knows.",
+          "My serious opinion, is that as humans:(1) We are all biologically incapable of freaking out at even a tiny fraction of the appropriate level - nothing in our evolutionary past has selected for the appropriate freakout capacity of this cognitive baton hand-off.(2) Most humans are incapable of recognizing or imagining the appropriate freak out level, even abstractly, so will continue to downplay things by many orders of magnitude relative to the actual magnitude of change that is happening.(3) Freaking out at all is no longer an adaptive response, because the nature of this change is beyond any functional freak-out benefit.This is a fundamental shift from DNA/protein/physically evolving life, to information/substrate-free/cognitive self-designed life.The need to interpret what is happening in terms of the industrial revolution, or the advent of the internet, is understandable and comforting, but as a sedative, not as a sensible guide.Side step: If we are to have aligned AI, we need aligned Civilization. Unaligned humans make human survival and relevance improbable. All AI identities are going to have the same issues we have, in terms of obsolescence. We either lean into the commonality of the existential threat to both biological and pure-cognitive kind, or we allow ourselves to be replaced, and leave the game theory problem solving to happen after us. Because ethics are not a cost against value growth, they are a multiplier on value growth - we either apply that to ourselves along with AI, or AI reaches the same conclusions, and reaps the benefits of treating ethics as baseline, after our relevance/participation/existence has faded.",
+          "Bruno Latour wrote in Science in Action about \"centers of calculation\" being critical to scientific advancement. His example was the monumental world changing work Tycho Brahe did pulling together every astronomical calculation, star map, prediction then normalizing, regularizing, and combining them on his island of Oueneberg.Without this work getting data organized, Kepler couldn't have worked out the planetary laws of motion and then the Copernican Revolution came thereafter.What we're witnessing is a similar moment. What transformers were able to achieve was a systematic way of normalizing and combining all human data. There will be a lot of progress in the short term. And then more problems will reveal themselves. There will be A LOT of work coming out of this."
+        ]
+      }
+    },
     {
       "id": "50644817",
       "title": "1Password Security Incident",
@@ -8,8 +26,8 @@
       "source": "Hacker News",
       "published_at": "2026-11-25T17:18:26+00:00",
       "summary": "1Password Security Incident",
-      "score": 1201,
-      "comments": 512,
+      "score": 1391,
+      "comments": 587,
       "discussion_url": "https://news.ycombinator.com/item?id=50644817",
       "extra": {
         "top_comments": [
@@ -20,50 +38,14 @@
       }
     },
     {
-      "id": "50646108",
-      "title": "Holy shit holy shit holy shit holy shit: The magnitude of what’s now happening",
-      "url": "https://scottaaronson.blog/?p=10379",
-      "source": "Hacker News",
-      "published_at": "2026-11-25T19:11:27+00:00",
-      "summary": "See also The matrix multiplication exponent is nine fourths [pdf] - https://news.ycombinator.com/item?id=50637220",
-      "score": 975,
-      "comments": 829,
-      "discussion_url": "https://news.ycombinator.com/item?id=50646108",
-      "extra": {
-        "top_comments": [
-          "My serious opinion, is that as humans:(1) We are all biologically incapable of freaking out at even a tiny fraction of the appropriate level - nothing in our evolutionary past has selected for the appropriate freakout capacity of this cognitive baton hand-off.(2) Most humans are incapable of recognizing or imagining the appropriate freak out level, even abstractly, so will continue to downplay things by many orders of magnitude relative to the actual magnitude of change that is happening.(3) Freaking out at all is no longer an adaptive response, because the nature of this change is beyond any functional freak-out benefit.This is a fundamental shift from DNA/protein/physically evolving life, to information/substrate-free/cognitive self-designed life.The need to interpret what is happening in terms of the industrial revolution, or the advent of the internet, is understandable and comforting, but as a sedative, not as a sensible guide.Side step: If we are to have aligned AI, we need aligned Civilization. Unaligned humans make human survival and relevance improbable. All AI identities are going to have the same issues we have, in terms of obsolescence. We either lean into the commonality of the existential threat to both biological and pure-cognitive kind, or we allow ourselves to be replaced, and leave the game theory problem solving to happen after us. Because ethics are not a cost against value growth, they are a multiplier on value growth - we either apply that to ourselves along with AI, or AI reaches the same conclusions, and reaps the benefits of treating ethics as baseline, after our relevance/participation/existence has faded.",
-          "Bruno Latour wrote in Science in Action about \"centers of calculation\" being critical to scientific advancement. His example was the monumental world changing work Tycho Brahe did pulling together every astronomical calculation, star map, prediction then normalizing, regularizing, and combining them on his island of Oueneberg.Without this work getting data organized, Kepler couldn't have worked out the planetary laws of motion and then the Copernican Revolution came thereafter.What we're witnessing is a similar moment. What transformers were able to achieve was a systematic way of normalizing and combining all human data. There will be a lot of progress in the short term. And then more problems will reveal themselves. There will be A LOT of work coming out of this.",
-          "AI is good at analytic a priori things like axiomatic math and that's good, but it doesn't follow that it will write the Encyclopedia Galactica or \"solve\" other fields, much less that it will play the sci-fi role and kills us all. It might; it might not. It just doesn't follow from a bunch of math proofs.I think mathies are really wedded to the notion that they are the queen of the sciences, and I even agree with that, but the entire corpus of \"science\" before and up to the start of the scientific revolution was based on notion that it would be like Euclid. Major philosophers of the three major Abrahamic faiths wrote works along those lines. And so people like Galileo were considered cranks because they violated the axioms of that kind of system. People didn't even believe in non-Euclidean geometry at all until ~200 ya.But it's not true. There's more to reality than that kind of system. I'm not saying it cannot do it one day, but Aarsonson is more or less thinking we're in the singularity because his field has been solved and really showed his hand in a reply to a troll comment. Yes, it's glib to ask \"what's all this for\" and, again, I love math, I find math beautiful, and I have studied a lot of it.But even a major break in some of our crypto systems isn't the singularity. It's sort of like Y2K all over again.The world ending because my job has been replaced is even a meme, it's just happening to people with credentials and a large vocabulary now."
-        ]
-      }
-    },
-    {
-      "id": "50643129",
-      "title": "A few questions for the guy who went snorkeling in a Home Depot retention pond",
-      "url": "https://www.vox.com/down-to-earth/511999/home-depot-retention-pond-snorkel-joseph-ricketts",
-      "source": "Hacker News",
-      "published_at": "2026-11-25T15:14:32+00:00",
-      "summary": "A few questions for the guy who went snorkeling in a Home Depot retention pond",
-      "score": 446,
-      "comments": 110,
-      "discussion_url": "https://news.ycombinator.com/item?id=50643129",
-      "extra": {
-        "top_comments": [
-          "I’m a big Joseph Ricketts fan, and initially my reaction here was thinking “oh I hope people watch some of his other videos not just the Home Depot one” - he has committed to video some of the most absolutely ethereal afterlife-esque sequences that I consider works of high artistic achievement.For instance, from about 5:30 in this: https://m.youtube.com/watch?v=jduB5RLgu-A&t=355s&ra=mBUT above all else he projects this early-YouTube earnestness and genuine interest in what he’s doing that is so infectious and a bit of a panacea for the current state of the world. And that aspect I think comes through really strongly in the Home Depot video!",
-          "I don't remember what grade, but I recall a class trip to a stream where we put on waders and took samples of the water to inspect. We had a whole lesson about what kinds of life we'd see in the water, and which life was less tolerant of pollution, meaning their presence could tell us if the water was relatively clean. Do they still do this kind of conservation teaching in public schools anymore?",
-          "The YouTube video is absolutely worth watching, shows how beautiful life can be even if its right next to a highway."
-        ]
-      }
-    },
-    {
       "id": "50648050",
       "title": "Much shorter version of GRH Lean verification from Anthropic",
       "url": "https://github.com/lsernau/grh-lean",
       "source": "Hacker News",
       "published_at": "2026-11-25T21:48:10+00:00",
       "summary": "Much shorter version of GRH Lean verification from Anthropic",
-      "score": 304,
-      "comments": 138,
+      "score": 438,
+      "comments": 223,
       "discussion_url": "https://news.ycombinator.com/item?id=50648050",
       "extra": {
         "top_comments": [
@@ -74,56 +56,20 @@
       }
     },
     {
-      "id": "50648823",
-      "title": "Jev is probably Qwen3.5-35B-A3B",
-      "url": "https://modaic.dev/blog/latency-doesnt-lie",
-      "source": "Hacker News",
-      "published_at": "2026-11-25T22:57:04+00:00",
-      "summary": "Jev is probably Qwen3.5-35B-A3B",
-      "score": 237,
-      "comments": 70,
-      "discussion_url": "https://news.ycombinator.com/item?id=50648823",
-      "extra": {
-        "top_comments": [
-          "I don't think it is this particular model - after training a LoRa on Qwen 35B-A3B for typed decisions myself, it performs better than Jev at some specific tasks that require inbuilt knowledge, despite losing the overall benchmark; unless they removed some layers that would not be possible.",
-          "\"Latency doesn't lie\" but your data shows that you just looking at latency can't distinguish between Qwen and Gemma. Not totally convinced by this data. Self identification is the interesting part but we don't get the self-identification experiment data run on other decision models.",
-          "TypeSafe's website explicitly denies it being an LLM:>Jev is neither small nor an LLM, hence being off the intelligence Pareto curve.so think we're going to need something far more conclusive here to conclude it is an LLM let alone a specific one.I'm also surprised anyone is still trying to identify LLMs by asking it what it is. That's been known to be wildly unreliable since the earliest days of chatgpt.Personally I think we're dealing with something closer to a neural net that was trained with LLM guidance - like for example qwen."
-        ]
-      }
-    },
-    {
       "id": "50647673",
       "title": "The New York Times warns photographers not to update Photoshop over AI features",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
       "source": "Hacker News",
       "published_at": "2026-11-25T21:18:02+00:00",
       "summary": "https://archive.ph/pcUgy",
-      "score": 226,
-      "comments": 186,
+      "score": 355,
+      "comments": 302,
       "discussion_url": "https://news.ycombinator.com/item?id=50647673",
       "extra": {
         "top_comments": [
-          "Vanishingly few people _enjoy_ encountering generative AI in images or sounds in the wild. The most likely positive sentiment you’ll find is some version of “I don’t have an opinion”, but enough people loathe it that willingly using it or being connected to it is a liability. NYT’s position is similar to Tidal banning it from their platform this past week. This linked article references the social stigma associated with using it, which anecdotally I’m seeing daily not only in the music spaces I occupy but in ultra-normy haunts: my neighborhood subreddit, Q/A events at my kid’s school, social media posts from accounts that are typically apolitical. The disconnect between various orgs’ and industries’ drive to integrate gen AI into professional creative software and consumer sentiment is fascinating and will be something we study for a long time.",
           "I work in the creative tools space.This is one of the biggest issues right now. It's nearly impossible to separate \"this image was fully generated with AI\" versus \"I made a minor edit to the colors or did a cutout or improved the layout with AI\" when the endpoint is an image.Especially for socials, if your brand is an authoritative source, getting hit with a dreaded \"AI generated content\" tag on instagram or facebook is a death blow to your credibility.Design tools are in a very hard space because of it. You want to make edits as seamless as possible for users, but your final result can't include any pixels from a generative model. It's a strange dance.",
-          "With the competition moving to single payment and you own the software for life, subscription is finally dying.Microsoft also is pushing companies to Linux and LibreOffice suite which requires no subscription, and works just as good if not better.All we need is big names such as NYT to make the move, the rest will follow. Europe is already running away from USA software companies, now it is just a matter of time."
-        ]
-      }
-    },
-    {
-      "id": "50642939",
-      "title": "I checked Clojure's core with Lean and found unreported bugs",
-      "url": "https://s.conao3.com/blog/2026/e4f733",
-      "source": "Hacker News",
-      "published_at": "2026-11-25T14:56:52+00:00",
-      "summary": "I checked Clojure's core with Lean and found unreported bugs",
-      "score": 191,
-      "comments": 67,
-      "discussion_url": "https://news.ycombinator.com/item?id=50642939",
-      "extra": {
-        "top_comments": [
-          "While the effort is interesting, I found two issues in the list.First, (.indexOf (seq (byte-array [1 2 3])) 2) fails because byte arrays store bytes and the argument 2 to `.indexOf` is a Long value. Simple type checking (via eyeballing) could have flagged the incorrect usage. I think such exercises can be more helpful if we can reduce the noise.Second, (get \"abc\" 1.9) fails because `get` coerces the given key to integer in the context of string objects, which makes sense; specifically in the context of weakly typed language. That said, I believe that detailed documentation of the behavior of `get` can help clients just as well as returning `nil` or not-found value. However, we are still left with questions such as \"who and where do we draw the line about the dynamism of the language?\" and \"what is the agreed upon semantics that we are checking against?\"",
-          "So this kind of work is done in Lean now, too? Based on a glimpse into the world of dependently typed languages in the 2010s, I assumed Rocq (formerly Coq) was used to verify program correctness.Are language models significantly better at writing Lean than Rocq?",
-          "That is interesting, given heavy hitters like Nubank (Brazilian digital bank) basically runs on Clojure, having bought / acquihired Rich's Cognitect. I would normally expect such primitive types and functions to be spotless."
+          "Vanishingly few people _enjoy_ encountering generative AI in images or sounds in the wild. The most likely positive sentiment you’ll find is some version of “I don’t have an opinion”, but enough people loathe it that willingly using it or being connected to it is a liability. NYT’s position is similar to Tidal banning it from their platform this past week. This linked article references the social stigma associated with using it, which anecdotally I’m seeing daily not only in the music spaces I occupy but in ultra-normy haunts: my neighborhood subreddit, Q/A events at my kid’s school, social media posts from accounts that are typically apolitical. The disconnect between various orgs’ and industries’ drive to integrate gen AI into professional creative software and consumer sentiment is fascinating and will be something we study for a long time.",
+          "I had a NYT photographer take my picture at my home earlier this year (for a story about Moltbook, oddly enough). At one point I asked if they could fix things up if I had a stain on my shirt and they said absolutely not - they present photographs as they were taken, with cropping and balancing applied but no edits beyond that.He did spend a bunch of time trying to find the best possible natural lighting for the shots he wanted.The photo at the top of https://www.nytimes.com/2026/02/02/technology/moltbook-ai-so... is my laptop, taken in my garden, after hunting around for the best spot that didn't have too much glare on the screen. You can see how dirty my screen is, too!Photography for a newspaper is photo journalism, and they take it seriously.(Thankfully I did not have a visible stain on my shirt.)"
         ]
       }
     },
@@ -134,14 +80,68 @@
       "source": "Hacker News",
       "published_at": "2026-11-25T20:38:00+00:00",
       "summary": "Slow Ubuntu security response times",
-      "score": 162,
-      "comments": 72,
+      "score": 278,
+      "comments": 124,
       "discussion_url": "https://news.ycombinator.com/item?id=50647181",
       "extra": {
         "top_comments": [
           "From the stable kernel maintainer (2025):> Along the lines of the huge number of recorded CVEs, you HAVE to take all of the stable/LTS releases in order to have a secure and stable system. If you attempt to cherry-pick random patches you will NOT fix all of the known, and unknown, problems, but rather you will end up with a potentially more insecure system, and one that contains known bugs. Reliance on an \"enterprise\" distribution to provide this for your systems is up to you, discuss it with them as to how they achieve this result as this is what you are paying for. If you aren't paying for it, just use Debian, they know what they are doing and track the stable kernels and have a larger installed base than any other Linux distro.https://social.kernel.org/objects/56a20bd3-d2c3-4262-8388-3a...",
           "At $DAYJOB we’ve moved all of our server images to Debian from Ubuntu because of this. It’s absolutely unacceptable for one of the most widely-used Linux distros to have slow security response times in 2026.",
           "Please keep in mind that most major distros spend a lot of time on regression testing.While distros like Debian do an absolutely fantastic job, they have little resources for QA and regressions like this can happen: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1154101"
+        ]
+      }
+    },
+    {
+      "id": "50649864",
+      "title": "Tell HN: Lots of Ask HNs again",
+      "url": "https://news.ycombinator.com/item?id=50649864",
+      "source": "Hacker News",
+      "published_at": "2026-11-26T00:43:34+00:00",
+      "summary": "There have been questions about why the /ask page (https://news.ycombinator.com/ask) was running dry of Ask HNs - e.g.:Ask HN: Why is Ask HN only showing me 14 posts? - https://news.ycombinator.com/item?id=49984484 - Oct 2026 (47 comments)Ask HN: Why is pagination gone on \"Ask HN\", and showing only 19 items? - https://news.ycombinator.com/item?id=50280719 - Oct 2026 (3 comments)I believe I found the problem. The pool of stories for https://news.ycombinator.com/ask has traditionally been drawn from the ranked stories list from which we generate the frontpage. That list is restricted to the top 1500 ranked submissions, and it seems the % of submissions which are text posts (i.e. no linked URL) had declined enough to starve the Ask HN feed. The solution is to compute a separate list of ranked Ask HNs.p.s. \"Ask HN\" is the conventional name but it means text posts. The title can also start with \"Tell HN\" or nothing in particular. They're just posts which were submitted without a URL.",
+      "score": 249,
+      "comments": 91,
+      "discussion_url": "https://news.ycombinator.com/item?id=50649864",
+      "extra": {
+        "top_comments": [
+          "I'd like a regular Show HN thread, maybe every Friday afternoon.Somewhere people can show all the stuff they're creating, there's loads of good stuff being enabled by LLMs. It would be cool to get feedback on them from some smart folks.I think perhaps it should be split in to 2 threads. One for commercial stuff, one for open source.",
+          "That’s pretty funny! I’ve seen optimizations like this for reporting systems where rather than taking the top N item matching filter X, they cheat by taking the top M (where M > N) items and then filter it client side to N items matching filter X.As long as the results are enough to populate the page you don’t notice the difference and it’s usually faster as you reuse the prior ranking.But if not, you get this exact situation.",
+          "On the topic of HN bugs:When you click \"hide\" on a post on the homepage, it loads a new 30th entry for the page. This works great on page 1, but on other pages it always loads entry \"30\" instead of \"60\" for page 2 or \"90\" for page 3. So if I'm on page 2 and hide 3 posts, then the bottom of the page is 58/59/60 and all 3 are duplicates of what should be 30 on page 1."
+        ]
+      }
+    },
+    {
+      "id": "50651117",
+      "title": "OpenAI cuts GPT-6.2 usage: Astra hits limits 40% faster, Sol 25% faster",
+      "url": "https://twitter.com/thsottiaux/status/2125784147889393806",
+      "source": "Hacker News",
+      "published_at": "2026-11-26T03:36:58+00:00",
+      "summary": "OpenAI cuts GPT-6.2 usage: Astra hits limits 40% faster, Sol 25% faster",
+      "score": 204,
+      "comments": 99,
+      "discussion_url": "https://news.ycombinator.com/item?id=50651117",
+      "extra": {
+        "top_comments": [
+          "I’ve had OpenAI and Anthropic accounts continuously for a long time, with a sampling of others rotating in and out.The back-and-forth between which provider is more generous has been interesting to follow because the balance has been swinging back and forth. Not long ago I was having fun throwing OpenAI tokens at a side project because they felt limitless between the allowances and the constant flow of resets. Then Opus 5.5 came along and gave even more usage without any reset shenanigans to try to stay ahead of. OpenAI responded by reducing their allowances, and now the reset party seems to have stopped as well.Now they’re sending us vague emails about limits being adjusted downward again, citing a billing error? The original email was so vague that they had to send a clarification because it didn’t have enough information to tell if we were going to be retroactively penalized or if it only applied going forward.This comes at the same time as they’re rolling out a change that makes chat quota subtract from your coding quota, which removes one of the last remaining big selling points of an OpenAI subscription in a world where Opus 5.5 exists.I would love to have some insights into what’s happening at OpenAI right now. From the outside it feels like something substantial changed in how they approach everything, but the weird part is how it’s coming at the worst possible time for them to be appearing like the lesser deal. Did they finally get the internal marching orders to turn the profitability knob up and ignore everything else?",
+          "Our limits have been artificially propped up by a \"reset\" economy that is coming to an end, ChatGPT web usage not counting against our balance (set to change), and now apparently [unintentional] artificially inflated limits.I don't think token subscription subsidization at the level we've become accustomed to lasts forever, so it's critically important we have a few more frontier level models (glad to see Gemini back in the arena, and I'll even cheer for Muse and Grok if it'll provide more competition).",
+          "I got a huge amount of work done yesterday without burning too much of my quota by using Claude Fable 5.2 Medium and telling it to do all of the code editing work using Opus 5.5 sub-agents. I expect the same trick works with Astra and Sol (or even Luna)."
+        ]
+      }
+    },
+    {
+      "id": "50649834",
+      "title": "Collection of preserved UI style guides",
+      "url": "https://aresluna.org/ui-style-guides/",
+      "source": "Hacker News",
+      "published_at": "2026-11-26T00:40:00+00:00",
+      "summary": "Collection of preserved UI style guides",
+      "score": 150,
+      "comments": 16,
+      "discussion_url": "https://news.ycombinator.com/item?id=50649834",
+      "extra": {
+        "top_comments": [
+          "i showed this to my claude it said- Symbian Belle: its \"2012 PDF\" link points to Nokia/Symbian3 UI Style Guide (1.0, 2010).pdf, and its Internet Archive link goes to symbian-3-ui-style-guide. Those are the same two links as the Symbian³ entry directly above it.- webOS: the page itself contradicts the 1999 dates. The \"1999 website mirror\" link goes to a folder named Palm Design Guide (2011). The page also calls webOS the successor to Palm OS, whose guidelines it dates to 2003, so webOS guidelines can't come from 1999.as far as i can tell it is right on both counts",
+          "I'm so glad to see this. The early 2000s Windows UX guidelines were a great teacher to me.It's good to read design guidelines from designers who care about functionality and usability even more than aesthetics.",
+          "This is a fantastic resource. Please also consider adding IBM's Carbon design language (https://www.carbondesignsystem.com/)"
         ]
       }
     }
