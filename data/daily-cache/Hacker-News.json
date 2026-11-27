@@ -1,147 +1,147 @@
 {
-  "cached_at": "2026-11-26T16:43:27.868918+08:00",
+  "cached_at": "2026-11-27T11:00:24.129493+08:00",
   "articles": [
     {
-      "id": "50646108",
-      "title": "Holy shit holy shit holy shit holy shit: The magnitude of what’s now happening",
-      "url": "https://scottaaronson.blog/?p=10379",
+      "id": "50655664",
+      "title": "Tell HN: Happy Thanksgiving",
+      "url": "https://news.ycombinator.com/item?id=50655664",
       "source": "Hacker News",
-      "published_at": "2026-11-25T19:11:27+00:00",
-      "summary": "See also The matrix multiplication exponent is nine fourths [pdf] - https://news.ycombinator.com/item?id=50637220",
-      "score": 1442,
-      "comments": 1255,
-      "discussion_url": "https://news.ycombinator.com/item?id=50646108",
+      "published_at": "2026-11-26T14:26:54+00:00",
+      "summary": "Hopefully it’s a great day spent with your friends and family. And if it’s not, make it a great day anyway!",
+      "score": 625,
+      "comments": 138,
+      "discussion_url": "https://news.ycombinator.com/item?id=50655664",
       "extra": {
         "top_comments": [
-          "I have no real confidence in this take, but I’ll go against the grain and argue that the labs do not presently have cracks in cryptosystems. I believe they’re working on it, and it’s good that they are, but I don’t think there’s evidence right now that they have fundamental breakthroughs in cryptography.For one, the labs are now massive. I don’t think you can keep a secret like this under wraps for long in an office. I think we would be seeing whistleblowers or leakers. It’s too big.Secondly, the people working at labs know that anything a frontier model can do can be approximated by the models available to the public given 10x the tokens and 10x the time and a little bit of informed direction. So they would know it’s only a matter of time before someone in the public discovers the same flaws and potentially uses it for evil. If they were sitting on this, they would try to minimize the damage and would try to warn the public to start moving to more secure encryption schemes because they know there’s a ticking time bomb until its public anyway. But they’re not doing that.That’s not to say that it won’t happen in the next few weeks. I just don’t think it’s happened yet.Edit: Alternatively, not to contradict myself, if they discovered this and immediately went to the US government (likely), and the US government served them a gag order (also likely), then this would look the exact same. Who knows.",
-          "My serious opinion, is that as humans:(1) We are all biologically incapable of freaking out at even a tiny fraction of the appropriate level - nothing in our evolutionary past has selected for the appropriate freakout capacity of this cognitive baton hand-off.(2) Most humans are incapable of recognizing or imagining the appropriate freak out level, even abstractly, so will continue to downplay things by many orders of magnitude relative to the actual magnitude of change that is happening.(3) Freaking out at all is no longer an adaptive response, because the nature of this change is beyond any functional freak-out benefit.This is a fundamental shift from DNA/protein/physically evolving life, to information/substrate-free/cognitive self-designed life.The need to interpret what is happening in terms of the industrial revolution, or the advent of the internet, is understandable and comforting, but as a sedative, not as a sensible guide.Side step: If we are to have aligned AI, we need aligned Civilization. Unaligned humans make human survival and relevance improbable. All AI identities are going to have the same issues we have, in terms of obsolescence. We either lean into the commonality of the existential threat to both biological and pure-cognitive kind, or we allow ourselves to be replaced, and leave the game theory problem solving to happen after us. Because ethics are not a cost against value growth, they are a multiplier on value growth - we either apply that to ourselves along with AI, or AI reaches the same conclusions, and reaps the benefits of treating ethics as baseline, after our relevance/participation/existence has faded.",
-          "Bruno Latour wrote in Science in Action about \"centers of calculation\" being critical to scientific advancement. His example was the monumental world changing work Tycho Brahe did pulling together every astronomical calculation, star map, prediction then normalizing, regularizing, and combining them on his island of Oueneberg.Without this work getting data organized, Kepler couldn't have worked out the planetary laws of motion and then the Copernican Revolution came thereafter.What we're witnessing is a similar moment. What transformers were able to achieve was a systematic way of normalizing and combining all human data. There will be a lot of progress in the short term. And then more problems will reveal themselves. There will be A LOT of work coming out of this."
+          "I do the following Thanksgiving assignment each year, and find it really fulfilling. Passing this on from my wonderful college professor Danny Warshay. Copy-pasted-with-some-bits-added:Think of your supporters:Think of all of the people who have helped you get to where you are today. All of the coaches, advisers, supporters, teachers, employers, mentors, relatives and friends.All the people who helped you in the early days of your career, or in your life, or recently. All of the references who spoke on your behalf for jobs. Even the categories, let alone all of the individual supporters, are endless for all of us. That person you meant to thank a decade ago for something they probably forgot by now.Your Assignment:Select one or two, and write them a handwritten note to let them know how you are doing and to thank them for helping you get here.We are all on both sides of this equation from time to time, and we all know how much we enjoy hearing from those whose lives we have influenced, especially hearing those simple and magical words, “Thank you.” To me, it feels like more than ever, we need to find moments of gratitude.I hope your doing this adds a little extra meaning to your Thanksgiving and to the Thanksgiving of those who will be hearing from you! Based on the moving experiences many of you have shared with me that resulted from this simple gesture, I am confident that you will find this rewarding.For those of you who will be celebrating American Thanksgiving, I hope you enjoy what I know is a much-needed break. And for those of you who are not, I hope you will join me in a few moments of gratitude.",
+          "Happy Thanksgiving!Improvised some music to the Haudenosaunee Thanksgiving Address:https://americanindian.si.edu/environment/pdf/01_02_Thanksgi...https://www.youtube.com/watch?v=rcYcSh3IJ4wWishing everyone on Earth well.Peace",
+          "Happy Thanksgiving HN!Grateful for the people who have made little tools and big tools and charming little projects, and insightful posts, and anything in between. Tech opens new opportunities like maps in broad dark space and the tinkerers light the way and show what’s newly possible.Also grateful to the gadgets and environments and people around tinkerers who take care of the meat-space parts to free up more time for research and insights.The world is full of distractions and it takes a special kind of person to ignore those and dig down into obscure API or fight through the last 20% to take a project to production. The latest numbers I read show AI has helped people who already publish to publish more, but I think those works may inspire more people to make new things as well.Here is a little game I made with the kids to be played with friends and family in person around the holidays. https://santawho.com Cheers to more giggles and less social media doom and gloom!"
         ]
       }
     },
     {
-      "id": "50644817",
-      "title": "1Password Security Incident",
-      "url": "https://1password.com/blog/update-on-nov-2026-security-incident",
+      "id": "50653667",
+      "title": "Intel One Mono font (2023)",
+      "url": "https://github.com/intel/intel-one-mono",
       "source": "Hacker News",
-      "published_at": "2026-11-25T17:18:26+00:00",
-      "summary": "1Password Security Incident",
-      "score": 1391,
-      "comments": 587,
-      "discussion_url": "https://news.ycombinator.com/item?id=50644817",
+      "published_at": "2026-11-26T10:11:01+00:00",
+      "summary": "Intel One Mono font (2023)",
+      "score": 476,
+      "comments": 242,
+      "discussion_url": "https://news.ycombinator.com/item?id=50653667",
       "extra": {
         "top_comments": [
-          "This is the single most important attack vector for SAAS companies. It has been for a long time --- this is the standard fact pattern for every SAAS breach --- but much more so today. As the number of employees grow, the likelihood that one of their laptops will get compromised approaches 1. When that happens, the attacker will be able to push code to Github, and if that code gets deployed, you're owned.In 1Password's case, the absolute worst-case catastrophe is mitigated by the fact that customers retain custody of their unlocking secrets; 1Password (at least in the normal product flows) simply doesn't hold it. But an attack like this implicates every catastrophe short of that worst case.Change velocity in 2026 is unreal and that trend is going to continue. You could not outcompete 1Password by building a handcrafted artisanal password manager backend (witness all the commercially successful password managers that don't even share 1Password's customer secret custody model). You have to accept insane PR rates as a premise to do modern SAAS security.So the question then becomes: what is review? It's not what r/programming assumes it is; you almost certainly can't literally have a team of people line-by-line reviewing PRs anymore, at least not across the whole codebase (you can and should probably do a threat model for your codebase and institute stuff like that on a case-by-case basis, though). What you can realistically expect to review for is change provenance; a human developer signoff of some sort. But it's tricky! The attacker owns your email during the window of attack.I think this is a fun problem to noodle on, and someone could probably come up with something here that would make a real difference.",
-          "Longtime 1Password user here who maintains a local-only vault (and is therefore stuck on older versions of their apps/extensions) out of concern for incidents like this.I've read their architecture docs about why online vaults are safe, and I understand that they have more resources to throw at securing infrastructure than I do. But \"malicious actor pushes code to production services\" seems like exactly the foundation for someone to eventually insert themselves into the middle of a user's access to decrypted vault contents.I really wish 1Password would return to supporting local-only vaults.",
-          "> push malicious code to backend servicesThis is a huge red flag, and was not addressed sufficiently in this announcement.Do they not disable push to main? I don’t see this addressed in the action items or elsewhere in the writeup, whether they were missing branch protection rules or whether these were able to be bypassed."
+          "> Identifying the typographically underserved low-vision developer audience…Very strong recommendation for [Atkinson Hyperlegible Mono](https://www.brailleinstitute.org/freefont/) (and Next for that matter) which is easily the most legible font I’ve ever used. The Atkinson Hyperlegible family is an incredible OSS font (with source files available!) that IMO doesn’t get enough attention.",
+          "Fonts is an ever welcome topic of discussion and exchange of opinions.Me, I've got to admit that I have worked on many different computer systems since the 80s, with many different fonts that for a long time you could not even change or customize. And you know what, it all worked. It was fine. And thus I really don't care too much what font I'm using - usually the preinstalled one.Sure, the small l might look like a 1, the O like a 0. But in all these years I've been using a computer, of which a great percentage was spend in an editor writing code, these things - for me! - have never once been an issue.That doesn't mean you have to be like me! I know that fonts are a great thing to get nerd sniped over. But for me, personally, I consider it mostly bikeshedding.",
+          "I liked the way this font looks in the preview image in this repository, but after discovering Iosevka [0] I can't go back to \"regular\" monospaced fonts. At first I was only able to use the 548-width version and it already improved code reading ergonomics/comfort, but after ~1 month out of curiosity I switched to the normal/500 width version and I was surprised how \"normal\" it looked to my eyes while being even more space-efficient. After a few days I got used to it even more. As of now it's my #1 programming font.[0] https://github.com/be5invis/Iosevka"
         ]
       }
     },
     {
-      "id": "50648050",
-      "title": "Much shorter version of GRH Lean verification from Anthropic",
-      "url": "https://github.com/lsernau/grh-lean",
+      "id": "50660180",
+      "title": "AI made self-hosting fun again",
+      "url": "https://janlukas.blog/posts/ai-self-hosting",
       "source": "Hacker News",
-      "published_at": "2026-11-25T21:48:10+00:00",
-      "summary": "Much shorter version of GRH Lean verification from Anthropic",
-      "score": 438,
-      "comments": 223,
-      "discussion_url": "https://news.ycombinator.com/item?id=50648050",
+      "published_at": "2026-11-26T21:47:45+00:00",
+      "summary": "AI made self-hosting fun again",
+      "score": 366,
+      "comments": 204,
+      "discussion_url": "https://news.ycombinator.com/item?id=50660180",
       "extra": {
         "top_comments": [
-          "Nice! The more readable 300kloc proof even has a clear \"known math\" vs \"new math\" split and human-readable documentation all over the place. This should greatly aid with digesting it.",
-          "From ~17M lines to just ~76k lines, a 99.56% reduction.",
-          "Zulip discussion here: https://leanprover.zulipchat.com/#narrow/channel/658556-Riem..."
+          "> When implementing an idea becomes so easy, it’s perhaps more important than ever to occasionally ask myself whether it’s actually worth implementing in the first place.Wish I had this restraint. I’ve been vibing everything I can think of. It’s got to the point I made a small platform on top of k3s so that the agent can yolo deploy into a homeserver behind Tailscale. Once deployed it becomes natural selection for which vibes live and which die.Solo vibey self hosting llm usage - bliss.Corporate agentic engineering working with others - soul crushing.",
+          "I built a completely custom deployment pipeline to bare metal servers for this product I am currently working on - https://padar.ai.The idea is that I have a fleet of these bare metal machines which run my workspaces in Qemu microVMs with k8 and kata container (kata is a container runtime k8 hooks up to).So the pipeline is essentially a fully custom ansible pipeline which configures each node and essentially onboards new ones in the fleet fully automatically.Ansible sets up everything from firewalls, to dependencies, to propagating the latest builds to each target thru the internal fleet network. But it’s pretty much a joy to use - incredibly stable CI experience.And the best part is I’m planning on buying and self hosting servers racks in a data center as the product hopefully grows so that i can afford to offer better compute runtime rates.",
+          "In some ways it's better, in some ways it's worse.It's certainly easier than ever to spin up a VPS/cloudflare proxy and deploy. Agents can pretty much do that end to end.The bigger issue is you're then accountable for keeping up with security. Previously that meant using fail2ban and running a system update every few months. Now it means patching within 24hrs of a CVE9+ dropping, which is happening at an accelerated rate.It got so bad during October I made https://firefighter.sh/ as a joke (a root-permissioned agent that continuously monitors for CVEs and patches your system live as soon as they drop - it's a security nightmare given the nondeterministic aspect of AI), but I'm actually starting to come around to the idea for my non-critical servers."
         ]
       }
     },
     {
-      "id": "50647673",
-      "title": "The New York Times warns photographers not to update Photoshop over AI features",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
+      "id": "50657265",
+      "title": "AMD-specific fork of llama.cpp",
+      "url": "https://devnull.land/amd-specific-llama-cpp",
       "source": "Hacker News",
-      "published_at": "2026-11-25T21:18:02+00:00",
-      "summary": "https://archive.ph/pcUgy",
-      "score": 355,
-      "comments": 302,
-      "discussion_url": "https://news.ycombinator.com/item?id=50647673",
+      "published_at": "2026-11-26T17:11:29+00:00",
+      "summary": "AMD-specific fork of llama.cpp",
+      "score": 295,
+      "comments": 73,
+      "discussion_url": "https://news.ycombinator.com/item?id=50657265",
       "extra": {
         "top_comments": [
-          "I work in the creative tools space.This is one of the biggest issues right now. It's nearly impossible to separate \"this image was fully generated with AI\" versus \"I made a minor edit to the colors or did a cutout or improved the layout with AI\" when the endpoint is an image.Especially for socials, if your brand is an authoritative source, getting hit with a dreaded \"AI generated content\" tag on instagram or facebook is a death blow to your credibility.Design tools are in a very hard space because of it. You want to make edits as seamless as possible for users, but your final result can't include any pixels from a generative model. It's a strange dance.",
-          "Vanishingly few people _enjoy_ encountering generative AI in images or sounds in the wild. The most likely positive sentiment you’ll find is some version of “I don’t have an opinion”, but enough people loathe it that willingly using it or being connected to it is a liability. NYT’s position is similar to Tidal banning it from their platform this past week. This linked article references the social stigma associated with using it, which anecdotally I’m seeing daily not only in the music spaces I occupy but in ultra-normy haunts: my neighborhood subreddit, Q/A events at my kid’s school, social media posts from accounts that are typically apolitical. The disconnect between various orgs’ and industries’ drive to integrate gen AI into professional creative software and consumer sentiment is fascinating and will be something we study for a long time.",
-          "I had a NYT photographer take my picture at my home earlier this year (for a story about Moltbook, oddly enough). At one point I asked if they could fix things up if I had a stain on my shirt and they said absolutely not - they present photographs as they were taken, with cropping and balancing applied but no edits beyond that.He did spend a bunch of time trying to find the best possible natural lighting for the shots he wanted.The photo at the top of https://www.nytimes.com/2026/02/02/technology/moltbook-ai-so... is my laptop, taken in my garden, after hunting around for the best spot that didn't have too much glare on the screen. You can see how dirty my screen is, too!Photography for a newspaper is photo journalism, and they take it seriously.(Thankfully I did not have a visible stain on my shirt.)"
+          "Early in 2025 a bunch of folks realized that AMD made a bunch of cards with mediocre compute but incredibly fast HBM2 memory in their circa 2018 gfx906 datacenter series, so you could get 32GB VRAM capable of incredible 1 TB / s bandwidth for $200 (the closest in today’s cards is north of $3000)There has been a rich little ecosystem of folks optimizing llama.cpp for these odd cards (no tensor cores, no native bf16 etc.) including my little personal repo https://github.com/kinchahoy/llama-of-vega.cpp. Stuff like this focused on more modern RDNA doesn’t help us at all.It’s been interesting to see how much each new frontier model can figure out in terms of optimizing for these GPUs and what they can’t!Fable and Astra will regularly run out of ideas until I point them to someone’s actually thoughtful repo and then they’ll diligently incorporate ideas.The optimization wins are huge (I was initially skeptical that per model kernel optimizations would be worth much). 27B at a pristine Q8 quant goes from base llama.cpp at some 250 pp / 25 tg to 600 pp / 40 tg even before speculative decoding.",
+          "I saw some blurb a while ago that described llama.cpp as a “model zoo”, which is a great description of its utility and generality.In the last couple of days I have been playing with Erik Paperniuk’s M1 port of Inco’s Splash, which has completely transformed the speed of Qwen 3.8 27B and Inkling 2 Mini; it has essentially tripled the speed of the former and more than doubled the speed of the latter.This means the Qwen model is fully viable on an M1 Max, where before I had found it a bit of a waiting game. And it arguably transforms the utility of Inkling 2 Mini; extra speed means it can be left to reason for longer, the downside of needing to do more tool use for search to patch its knowledge is reduced, and it provides a good rough chat model (though this is not its area of greatest strength).I have not yet found anything that can boost Muse Glimmer to the same extent; I would still prefer that.But for me I now find that only the rather slow prefill speed really holds the M1 Max back; I suspect these new custom kernels have made the M5 Pro Mac Mini a really cost-effective option if you want to tinker with local AI.",
+          "I have a r9700 card and I highly recommend the radiance engine. With a single card it processes (prefill) at 2400 tok/s and decodes at 150 tok/s. With a 4-bit model that is intelligently quantised to have a KLD of 0.006 and top-1 of 0.972 I have been working this engine for a month, throwing a lot of agentic and coding work and it has been doing great! I can run 3 concurrent agent streams all with a 200k context, entirely in vram. EDIT: model: Qwen3.8-27b - https://codeberg.org/StillDeadcode/radiance"
         ]
       }
     },
     {
-      "id": "50647181",
-      "title": "Slow Ubuntu security response times",
-      "url": "https://www.openwall.com/lists/oss-security/2026/11/25/9",
+      "id": "50657530",
+      "title": "YouTube Ad Punisher – Auto-reloads YouTube pages when an ad plays",
+      "url": "https://github.com/antonpictures/youtube-punisher",
       "source": "Hacker News",
-      "published_at": "2026-11-25T20:38:00+00:00",
-      "summary": "Slow Ubuntu security response times",
-      "score": 278,
-      "comments": 124,
-      "discussion_url": "https://news.ycombinator.com/item?id=50647181",
+      "published_at": "2026-11-26T17:36:47+00:00",
+      "summary": "YouTube Ad Punisher – Auto-reloads YouTube pages when an ad plays",
+      "score": 284,
+      "comments": 360,
+      "discussion_url": "https://news.ycombinator.com/item?id=50657530",
       "extra": {
         "top_comments": [
-          "From the stable kernel maintainer (2025):> Along the lines of the huge number of recorded CVEs, you HAVE to take all of the stable/LTS releases in order to have a secure and stable system. If you attempt to cherry-pick random patches you will NOT fix all of the known, and unknown, problems, but rather you will end up with a potentially more insecure system, and one that contains known bugs. Reliance on an \"enterprise\" distribution to provide this for your systems is up to you, discuss it with them as to how they achieve this result as this is what you are paying for. If you aren't paying for it, just use Debian, they know what they are doing and track the stable kernels and have a larger installed base than any other Linux distro.https://social.kernel.org/objects/56a20bd3-d2c3-4262-8388-3a...",
-          "At $DAYJOB we’ve moved all of our server images to Debian from Ubuntu because of this. It’s absolutely unacceptable for one of the most widely-used Linux distros to have slow security response times in 2026.",
-          "Please keep in mind that most major distros spend a lot of time on regression testing.While distros like Debian do an absolutely fantastic job, they have little resources for QA and regressions like this can happen: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1154101"
+          "Is this actually an issue? Using uBlock Origin on firefox I don't think I have seen a youtube-forced ad in YEARS. And then adding in the SponsorBlock extension gets me around anything embedded into the video itself.SponsorBlock is actually awesome, and for those that like to see internet numbers go up, it tells you how much your own submissions have saved other users over the years (the 11 snippets I've added have helped others skip 20d of ads).",
+          "The amount of effort people will go to avoid paying for content they spend hours watching is fascinating.YouTube is the #1 streaming video service in the world. Bigger than Disney, bigger than HBO, bigger than Netflix. I say this not to point out that Google needs your money as obviously they don’t, but I say this to point out that it’s a treasure trove of content.YouTube Premium is absolutely worth the asking price. They’ve also got student plans and a new lite plan for cheaper.Is $9 a month really too much if you really watch YouTube enough for ads to bother you?",
+          "I’m all for ad blockers in most places but I have completely caved in on YouTube.My reasons are1. YouTube seems to pay creators reasonably2. Being able to use the YT app without the crippling of things like background playback and downloads is very useful.3. YouTube seems get YouTube music free, so cancelled Spotify with more or less paid for it.I know I’ve given in. And I accept it"
         ]
       }
     },
     {
-      "id": "50649864",
-      "title": "Tell HN: Lots of Ask HNs again",
-      "url": "https://news.ycombinator.com/item?id=50649864",
+      "id": "50659841",
+      "title": "Kamil Khan Mumtaz: Pakistani architect, admired at home, almost invisible abroad",
+      "url": "https://worksinprogress.co/issue/the-greatest-architect-youve-never-heard-of-is-in-pakistan/",
       "source": "Hacker News",
-      "published_at": "2026-11-26T00:43:34+00:00",
-      "summary": "There have been questions about why the /ask page (https://news.ycombinator.com/ask) was running dry of Ask HNs - e.g.:Ask HN: Why is Ask HN only showing me 14 posts? - https://news.ycombinator.com/item?id=49984484 - Oct 2026 (47 comments)Ask HN: Why is pagination gone on \"Ask HN\", and showing only 19 items? - https://news.ycombinator.com/item?id=50280719 - Oct 2026 (3 comments)I believe I found the problem. The pool of stories for https://news.ycombinator.com/ask has traditionally been drawn from the ranked stories list from which we generate the frontpage. That list is restricted to the top 1500 ranked submissions, and it seems the % of submissions which are text posts (i.e. no linked URL) had declined enough to starve the Ask HN feed. The solution is to compute a separate list of ranked Ask HNs.p.s. \"Ask HN\" is the conventional name but it means text posts. The title can also start with \"Tell HN\" or nothing in particular. They're just posts which were submitted without a URL.",
-      "score": 249,
-      "comments": 91,
-      "discussion_url": "https://news.ycombinator.com/item?id=50649864",
+      "published_at": "2026-11-26T21:08:05+00:00",
+      "summary": "Kamil Khan Mumtaz: Pakistani architect, admired at home, almost invisible abroad",
+      "score": 265,
+      "comments": 51,
+      "discussion_url": "https://news.ycombinator.com/item?id=50659841",
       "extra": {
         "top_comments": [
-          "I'd like a regular Show HN thread, maybe every Friday afternoon.Somewhere people can show all the stuff they're creating, there's loads of good stuff being enabled by LLMs. It would be cool to get feedback on them from some smart folks.I think perhaps it should be split in to 2 threads. One for commercial stuff, one for open source.",
-          "That’s pretty funny! I’ve seen optimizations like this for reporting systems where rather than taking the top N item matching filter X, they cheat by taking the top M (where M > N) items and then filter it client side to N items matching filter X.As long as the results are enough to populate the page you don’t notice the difference and it’s usually faster as you reuse the prior ranking.But if not, you get this exact situation.",
-          "On the topic of HN bugs:When you click \"hide\" on a post on the homepage, it loads a new 30th entry for the page. This works great on page 1, but on other pages it always loads entry \"30\" instead of \"60\" for page 2 or \"90\" for page 3. So if I'm on page 2 and hide 3 posts, then the bottom of the page is 58/59/60 and all 3 are duplicates of what should be 30 on page 1."
+          "Lahore is beautiful. I was spending a lot of time in India for work, Delhi and Hyderabad. You get used to the pollution and garbage everywhere.My wife had a business meeting in Lahore so I went to Amritsar and crossed on foot (I don't think you can do this anymore). I spent a couple of hours being interrogated by border agents before I realized I wasn't even out of India yet. They made me exchange all of my Indian money back to dollars because it's illegal to take Indian money out of India?I eventually made it to the actual border. I was pulling my suitcase through what seemed like an abandoned village and parade grounds when I heard someone laughing. I stopped and looked around and saw a giant, maybe 6'7\" soldier carrying a big machine gun coming out from what looked like a bunker. He was clearly happy to see me and asked for my passport. His accent sounded like he was from New Jersey. We talked a bit and he told me how to get to the customs building.It was maybe another twenty minutes of walking to the customs building. They didn't process me but had me wait on a bench. After awhile a guy in street clothes sat with me and started asking casual questions about my job, what I'm doing here, etc. when I told him I'm meeting my wife who had business meetings his demeanor changed completely \"oh you're with \" and he personally escorted me through customs and his driver gave me a ride to my hotel. I later found out he was head of Punjabi region secret intelligence and the people my wife was meeting informed him ahead-of-time of my visit.Driving to the hotel I immediately noticed how clean it was. Shopkeepers were outside their shops sweeping. There was no garbage in the street. The air was clean. It was worlds of difference from where I had just been in Delhi and Hyderabad.",
+          "Iranian art, architecture, and culture in general are truly slept on. I was blown away when I visited in 2008.Here are some samples:Shiraz - https://www.flickr.com/photos/pazimzadeh/albums/721576150553...Esfahan - https://www.flickr.com/photos/pazimzadeh/albums/721576150562...",
+          "Hear me out: there are hints of brutalism in his work. He trained at the AA in the early 60s, when New Brutalism was big in London, and his early buildings were modernist. To me the heavy massing and honesty about materials carried over, even though his later work brings back the ornament brutalism threw out."
         ]
       }
     },
     {
-      "id": "50651117",
-      "title": "OpenAI cuts GPT-6.2 usage: Astra hits limits 40% faster, Sol 25% faster",
-      "url": "https://twitter.com/thsottiaux/status/2125784147889393806",
+      "id": "50657645",
+      "title": "CTO of 'RansomwareHelp' indicted for wire fraud",
+      "url": "https://krebsonsecurity.com/2026/11/cto-of-ransomwarehelp-indicted-for-wire-fraud/",
       "source": "Hacker News",
-      "published_at": "2026-11-26T03:36:58+00:00",
-      "summary": "OpenAI cuts GPT-6.2 usage: Astra hits limits 40% faster, Sol 25% faster",
-      "score": 204,
-      "comments": 99,
-      "discussion_url": "https://news.ycombinator.com/item?id=50651117",
+      "published_at": "2026-11-26T17:47:45+00:00",
+      "summary": "CTO of 'RansomwareHelp' indicted for wire fraud",
+      "score": 224,
+      "comments": 95,
+      "discussion_url": "https://news.ycombinator.com/item?id=50657645",
       "extra": {
         "top_comments": [
-          "I’ve had OpenAI and Anthropic accounts continuously for a long time, with a sampling of others rotating in and out.The back-and-forth between which provider is more generous has been interesting to follow because the balance has been swinging back and forth. Not long ago I was having fun throwing OpenAI tokens at a side project because they felt limitless between the allowances and the constant flow of resets. Then Opus 5.5 came along and gave even more usage without any reset shenanigans to try to stay ahead of. OpenAI responded by reducing their allowances, and now the reset party seems to have stopped as well.Now they’re sending us vague emails about limits being adjusted downward again, citing a billing error? The original email was so vague that they had to send a clarification because it didn’t have enough information to tell if we were going to be retroactively penalized or if it only applied going forward.This comes at the same time as they’re rolling out a change that makes chat quota subtract from your coding quota, which removes one of the last remaining big selling points of an OpenAI subscription in a world where Opus 5.5 exists.I would love to have some insights into what’s happening at OpenAI right now. From the outside it feels like something substantial changed in how they approach everything, but the weird part is how it’s coming at the worst possible time for them to be appearing like the lesser deal. Did they finally get the internal marching orders to turn the profitability knob up and ignore everything else?",
-          "Our limits have been artificially propped up by a \"reset\" economy that is coming to an end, ChatGPT web usage not counting against our balance (set to change), and now apparently [unintentional] artificially inflated limits.I don't think token subscription subsidization at the level we've become accustomed to lasts forever, so it's critically important we have a few more frontier level models (glad to see Gemini back in the arena, and I'll even cheer for Muse and Grok if it'll provide more competition).",
-          "I got a huge amount of work done yesterday without burning too much of my quota by using Claude Fable 5.2 Medium and telling it to do all of the code editing work using Opus 5.5 sub-agents. I expect the same trick works with Astra and Sol (or even Luna)."
+          "Initially he only included a 2% margin - $260 over the around $13,000 requested by the fake ransomware group as the lowest possible price. And that $260 might have been just to account for bitcoin volatility.Only after this was comminicated to the fake victim, the fake ransomware group agreed to reduce the price. What should have he done, tell the customer that his yesterday's quote was a mistake?As for the initial $2,750 diagnostic fee, why can't he charge that, he did perform some initial study of the case.> The government said Palacio soon after contacted the fake ransomware group run by the FBI and requested the lowest possible price for the decryptor. FBI investigators responded with a price of .2 bitcoin, or around $13,000 at the time. Less than 48 hours later, Palacio allegedly told agents acting as the victim company that the diagnostic assessment was successful and that the cost of decrypting the files would be $13,260.> The following day, the government alleges, Palacio messaged the fictitious ransomware group operated by the feds and asked to reduce the ransom demand to $4,000 for the purchase of a decryption tool. The indictment states that the agreed upon price was around $6,000 in bitcoin, and that Palacio charged the FBI’s fake victim firm $16,010, including an initial $2,750 diagnostic fee and the full fee of $13,260.",
+          "That's an interesting case. It's not immediately clear to me that this even is wire fraud. There is material deception (they claim \"We never promote, intermediate or pay ransom to threat actors on behalf of our clients\", while paying ransom). But is there intent to defraud here? The customer does get what they asked for after all: they get their data back, at the price they were willing to payThat that price was substantially higher than what the ransomware groups were charging RansomwareHelp seems inconsequential, every business has markups. And RansomwareHelp might have been able to get substantial discounts by being a trusted repeat customer for those ransomware groups",
+          "I wonder if you could write the contracts so it isn't fraud? Just put \"let us do whatever we need to do, including paying the ransom\" in the contracts, and tell people that's just a break-glass that will not normally be needed.Because the way it's described, it definitely seems like fraud to market the thing as \"won't pay the ransom\" when you actually just do that."
         ]
       }
     },
     {
-      "id": "50649834",
-      "title": "Collection of preserved UI style guides",
-      "url": "https://aresluna.org/ui-style-guides/",
+      "id": "50659640",
+      "title": "Company Culture = Slack Emoji ÷ √Headcount",
+      "url": "https://lia.mg/posts/measuring-company-culture-with-slack-emoji/",
       "source": "Hacker News",
-      "published_at": "2026-11-26T00:40:00+00:00",
-      "summary": "Collection of preserved UI style guides",
-      "score": 150,
-      "comments": 16,
-      "discussion_url": "https://news.ycombinator.com/item?id=50649834",
+      "published_at": "2026-11-26T20:49:49+00:00",
+      "summary": "Company Culture = Slack Emoji ÷ √Headcount",
+      "score": 135,
+      "comments": 42,
+      "discussion_url": "https://news.ycombinator.com/item?id=50659640",
       "extra": {
         "top_comments": [
-          "i showed this to my claude it said- Symbian Belle: its \"2012 PDF\" link points to Nokia/Symbian3 UI Style Guide (1.0, 2010).pdf, and its Internet Archive link goes to symbian-3-ui-style-guide. Those are the same two links as the Symbian³ entry directly above it.- webOS: the page itself contradicts the 1999 dates. The \"1999 website mirror\" link goes to a folder named Palm Design Guide (2011). The page also calls webOS the successor to Palm OS, whose guidelines it dates to 2003, so webOS guidelines can't come from 1999.as far as i can tell it is right on both counts",
-          "I'm so glad to see this. The early 2000s Windows UX guidelines were a great teacher to me.It's good to read design guidelines from designers who care about functionality and usability even more than aesthetics.",
-          "This is a fantastic resource. Please also consider adding IBM's Carbon design language (https://www.carbondesignsystem.com/)"
+          "It says a lot about how caught off guard we were that :corona-virus: (a ball of beer bottles) predates :coronavirus: (a viral capsid) by about 30 days.",
+          "This is fun and actually well thought through, but remember Goodhart's law comes for all advertised metrics, silly or not.",
+          "emoticons > emojiyou'll take my \">:)\" only from my cold-cold hands"
         ]
       }
     }
