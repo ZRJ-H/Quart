@@ -1,42 +1,6 @@
 {
-  "cached_at": "2026-11-27T11:00:24.129493+08:00",
+  "cached_at": "2026-11-27T16:54:20.818299+08:00",
   "articles": [
-    {
-      "id": "50655664",
-      "title": "Tell HN: Happy Thanksgiving",
-      "url": "https://news.ycombinator.com/item?id=50655664",
-      "source": "Hacker News",
-      "published_at": "2026-11-26T14:26:54+00:00",
-      "summary": "Hopefully it’s a great day spent with your friends and family. And if it’s not, make it a great day anyway!",
-      "score": 625,
-      "comments": 138,
-      "discussion_url": "https://news.ycombinator.com/item?id=50655664",
-      "extra": {
-        "top_comments": [
-          "I do the following Thanksgiving assignment each year, and find it really fulfilling. Passing this on from my wonderful college professor Danny Warshay. Copy-pasted-with-some-bits-added:Think of your supporters:Think of all of the people who have helped you get to where you are today. All of the coaches, advisers, supporters, teachers, employers, mentors, relatives and friends.All the people who helped you in the early days of your career, or in your life, or recently. All of the references who spoke on your behalf for jobs. Even the categories, let alone all of the individual supporters, are endless for all of us. That person you meant to thank a decade ago for something they probably forgot by now.Your Assignment:Select one or two, and write them a handwritten note to let them know how you are doing and to thank them for helping you get here.We are all on both sides of this equation from time to time, and we all know how much we enjoy hearing from those whose lives we have influenced, especially hearing those simple and magical words, “Thank you.” To me, it feels like more than ever, we need to find moments of gratitude.I hope your doing this adds a little extra meaning to your Thanksgiving and to the Thanksgiving of those who will be hearing from you! Based on the moving experiences many of you have shared with me that resulted from this simple gesture, I am confident that you will find this rewarding.For those of you who will be celebrating American Thanksgiving, I hope you enjoy what I know is a much-needed break. And for those of you who are not, I hope you will join me in a few moments of gratitude.",
-          "Happy Thanksgiving!Improvised some music to the Haudenosaunee Thanksgiving Address:https://americanindian.si.edu/environment/pdf/01_02_Thanksgi...https://www.youtube.com/watch?v=rcYcSh3IJ4wWishing everyone on Earth well.Peace",
-          "Happy Thanksgiving HN!Grateful for the people who have made little tools and big tools and charming little projects, and insightful posts, and anything in between. Tech opens new opportunities like maps in broad dark space and the tinkerers light the way and show what’s newly possible.Also grateful to the gadgets and environments and people around tinkerers who take care of the meat-space parts to free up more time for research and insights.The world is full of distractions and it takes a special kind of person to ignore those and dig down into obscure API or fight through the last 20% to take a project to production. The latest numbers I read show AI has helped people who already publish to publish more, but I think those works may inspire more people to make new things as well.Here is a little game I made with the kids to be played with friends and family in person around the holidays. https://santawho.com Cheers to more giggles and less social media doom and gloom!"
-        ]
-      }
-    },
-    {
-      "id": "50653667",
-      "title": "Intel One Mono font (2023)",
-      "url": "https://github.com/intel/intel-one-mono",
-      "source": "Hacker News",
-      "published_at": "2026-11-26T10:11:01+00:00",
-      "summary": "Intel One Mono font (2023)",
-      "score": 476,
-      "comments": 242,
-      "discussion_url": "https://news.ycombinator.com/item?id=50653667",
-      "extra": {
-        "top_comments": [
-          "> Identifying the typographically underserved low-vision developer audience…Very strong recommendation for [Atkinson Hyperlegible Mono](https://www.brailleinstitute.org/freefont/) (and Next for that matter) which is easily the most legible font I’ve ever used. The Atkinson Hyperlegible family is an incredible OSS font (with source files available!) that IMO doesn’t get enough attention.",
-          "Fonts is an ever welcome topic of discussion and exchange of opinions.Me, I've got to admit that I have worked on many different computer systems since the 80s, with many different fonts that for a long time you could not even change or customize. And you know what, it all worked. It was fine. And thus I really don't care too much what font I'm using - usually the preinstalled one.Sure, the small l might look like a 1, the O like a 0. But in all these years I've been using a computer, of which a great percentage was spend in an editor writing code, these things - for me! - have never once been an issue.That doesn't mean you have to be like me! I know that fonts are a great thing to get nerd sniped over. But for me, personally, I consider it mostly bikeshedding.",
-          "I liked the way this font looks in the preview image in this repository, but after discovering Iosevka [0] I can't go back to \"regular\" monospaced fonts. At first I was only able to use the 548-width version and it already improved code reading ergonomics/comfort, but after ~1 month out of curiosity I switched to the normal/500 width version and I was surprised how \"normal\" it looked to my eyes while being even more space-efficient. After a few days I got used to it even more. As of now it's my #1 programming font.[0] https://github.com/be5invis/Iosevka"
-        ]
-      }
-    },
     {
       "id": "50660180",
       "title": "AI made self-hosting fun again",
@@ -44,32 +8,14 @@
       "source": "Hacker News",
       "published_at": "2026-11-26T21:47:45+00:00",
       "summary": "AI made self-hosting fun again",
-      "score": 366,
-      "comments": 204,
+      "score": 634,
+      "comments": 327,
       "discussion_url": "https://news.ycombinator.com/item?id=50660180",
       "extra": {
         "top_comments": [
           "> When implementing an idea becomes so easy, it’s perhaps more important than ever to occasionally ask myself whether it’s actually worth implementing in the first place.Wish I had this restraint. I’ve been vibing everything I can think of. It’s got to the point I made a small platform on top of k3s so that the agent can yolo deploy into a homeserver behind Tailscale. Once deployed it becomes natural selection for which vibes live and which die.Solo vibey self hosting llm usage - bliss.Corporate agentic engineering working with others - soul crushing.",
-          "I built a completely custom deployment pipeline to bare metal servers for this product I am currently working on - https://padar.ai.The idea is that I have a fleet of these bare metal machines which run my workspaces in Qemu microVMs with k8 and kata container (kata is a container runtime k8 hooks up to).So the pipeline is essentially a fully custom ansible pipeline which configures each node and essentially onboards new ones in the fleet fully automatically.Ansible sets up everything from firewalls, to dependencies, to propagating the latest builds to each target thru the internal fleet network. But it’s pretty much a joy to use - incredibly stable CI experience.And the best part is I’m planning on buying and self hosting servers racks in a data center as the product hopefully grows so that i can afford to offer better compute runtime rates.",
-          "In some ways it's better, in some ways it's worse.It's certainly easier than ever to spin up a VPS/cloudflare proxy and deploy. Agents can pretty much do that end to end.The bigger issue is you're then accountable for keeping up with security. Previously that meant using fail2ban and running a system update every few months. Now it means patching within 24hrs of a CVE9+ dropping, which is happening at an accelerated rate.It got so bad during October I made https://firefighter.sh/ as a joke (a root-permissioned agent that continuously monitors for CVEs and patches your system live as soon as they drop - it's a security nightmare given the nondeterministic aspect of AI), but I'm actually starting to come around to the idea for my non-critical servers."
-        ]
-      }
-    },
-    {
-      "id": "50657265",
-      "title": "AMD-specific fork of llama.cpp",
-      "url": "https://devnull.land/amd-specific-llama-cpp",
-      "source": "Hacker News",
-      "published_at": "2026-11-26T17:11:29+00:00",
-      "summary": "AMD-specific fork of llama.cpp",
-      "score": 295,
-      "comments": 73,
-      "discussion_url": "https://news.ycombinator.com/item?id=50657265",
-      "extra": {
-        "top_comments": [
-          "Early in 2025 a bunch of folks realized that AMD made a bunch of cards with mediocre compute but incredibly fast HBM2 memory in their circa 2018 gfx906 datacenter series, so you could get 32GB VRAM capable of incredible 1 TB / s bandwidth for $200 (the closest in today’s cards is north of $3000)There has been a rich little ecosystem of folks optimizing llama.cpp for these odd cards (no tensor cores, no native bf16 etc.) including my little personal repo https://github.com/kinchahoy/llama-of-vega.cpp. Stuff like this focused on more modern RDNA doesn’t help us at all.It’s been interesting to see how much each new frontier model can figure out in terms of optimizing for these GPUs and what they can’t!Fable and Astra will regularly run out of ideas until I point them to someone’s actually thoughtful repo and then they’ll diligently incorporate ideas.The optimization wins are huge (I was initially skeptical that per model kernel optimizations would be worth much). 27B at a pristine Q8 quant goes from base llama.cpp at some 250 pp / 25 tg to 600 pp / 40 tg even before speculative decoding.",
-          "I saw some blurb a while ago that described llama.cpp as a “model zoo”, which is a great description of its utility and generality.In the last couple of days I have been playing with Erik Paperniuk’s M1 port of Inco’s Splash, which has completely transformed the speed of Qwen 3.8 27B and Inkling 2 Mini; it has essentially tripled the speed of the former and more than doubled the speed of the latter.This means the Qwen model is fully viable on an M1 Max, where before I had found it a bit of a waiting game. And it arguably transforms the utility of Inkling 2 Mini; extra speed means it can be left to reason for longer, the downside of needing to do more tool use for search to patch its knowledge is reduced, and it provides a good rough chat model (though this is not its area of greatest strength).I have not yet found anything that can boost Muse Glimmer to the same extent; I would still prefer that.But for me I now find that only the rather slow prefill speed really holds the M1 Max back; I suspect these new custom kernels have made the M5 Pro Mac Mini a really cost-effective option if you want to tinker with local AI.",
-          "I have a r9700 card and I highly recommend the radiance engine. With a single card it processes (prefill) at 2400 tok/s and decodes at 150 tok/s. With a 4-bit model that is intelligently quantised to have a KLD of 0.006 and top-1 of 0.972 I have been working this engine for a month, throwing a lot of agentic and coding work and it has been doing great! I can run 3 concurrent agent streams all with a 200k context, entirely in vram. EDIT: model: Qwen3.8-27b - https://codeberg.org/StillDeadcode/radiance"
+          "In some ways it's better, in some ways it's worse.It's certainly easier than ever to spin up a VPS/cloudflare proxy and deploy. Agents can pretty much do that end to end.The bigger issue is you're then accountable for keeping up with security. Previously that meant using fail2ban and running a system update every few months. Now it means patching within 24hrs of a CVE9+ dropping, which is happening at an accelerated rate.It got so bad during October I made https://firefighter.sh/ as a joke (a root-permissioned agent that continuously monitors for CVEs and patches your system live as soon as they drop - it's a security nightmare given the nondeterministic aspect of AI), but I'm actually starting to come around to the idea for my non-critical servers.",
+          "With AI, the problem-solving aspect of my interest in computers is gone. And with it, much of my interest in computers.The fact that AI can do pretty much anything is amazing, but using it feels about as rewarding as using cheat codes in your favorite game as a kid.It's great fun for a while, until you realize you've ruined the game for yourself."
         ]
       }
     },
@@ -80,8 +26,8 @@
       "source": "Hacker News",
       "published_at": "2026-11-26T17:36:47+00:00",
       "summary": "YouTube Ad Punisher – Auto-reloads YouTube pages when an ad plays",
-      "score": 284,
-      "comments": 360,
+      "score": 380,
+      "comments": 449,
       "discussion_url": "https://news.ycombinator.com/item?id=50657530",
       "extra": {
         "top_comments": [
@@ -98,32 +44,32 @@
       "source": "Hacker News",
       "published_at": "2026-11-26T21:08:05+00:00",
       "summary": "Kamil Khan Mumtaz: Pakistani architect, admired at home, almost invisible abroad",
-      "score": 265,
-      "comments": 51,
+      "score": 356,
+      "comments": 90,
       "discussion_url": "https://news.ycombinator.com/item?id=50659841",
       "extra": {
         "top_comments": [
-          "Lahore is beautiful. I was spending a lot of time in India for work, Delhi and Hyderabad. You get used to the pollution and garbage everywhere.My wife had a business meeting in Lahore so I went to Amritsar and crossed on foot (I don't think you can do this anymore). I spent a couple of hours being interrogated by border agents before I realized I wasn't even out of India yet. They made me exchange all of my Indian money back to dollars because it's illegal to take Indian money out of India?I eventually made it to the actual border. I was pulling my suitcase through what seemed like an abandoned village and parade grounds when I heard someone laughing. I stopped and looked around and saw a giant, maybe 6'7\" soldier carrying a big machine gun coming out from what looked like a bunker. He was clearly happy to see me and asked for my passport. His accent sounded like he was from New Jersey. We talked a bit and he told me how to get to the customs building.It was maybe another twenty minutes of walking to the customs building. They didn't process me but had me wait on a bench. After awhile a guy in street clothes sat with me and started asking casual questions about my job, what I'm doing here, etc. when I told him I'm meeting my wife who had business meetings his demeanor changed completely \"oh you're with \" and he personally escorted me through customs and his driver gave me a ride to my hotel. I later found out he was head of Punjabi region secret intelligence and the people my wife was meeting informed him ahead-of-time of my visit.Driving to the hotel I immediately noticed how clean it was. Shopkeepers were outside their shops sweeping. There was no garbage in the street. The air was clean. It was worlds of difference from where I had just been in Delhi and Hyderabad.",
-          "Iranian art, architecture, and culture in general are truly slept on. I was blown away when I visited in 2008.Here are some samples:Shiraz - https://www.flickr.com/photos/pazimzadeh/albums/721576150553...Esfahan - https://www.flickr.com/photos/pazimzadeh/albums/721576150562...",
+          "As a Westerner, I've been to Lahore, and the historical architecture is indeed fascinating. There are palaces and public buildings from the mughal period that would have been wonders of the world, had they still been standing. Only thing is, they are ruins, and you have to extrapolate from the few surviving pieces to the ruined whole to get an idea about the original splendor.Besides that, even though people there are very sweet, Lahore is not an international tourist city, so I don't know that I would recommend going, unless you know what you're getting into.",
+          "Thanks for showing this man's life's work. It's pretty obvious that he has spent his time and energy well. Preserving the ancient traditions is awesome too. Those examples in the article are simply beautiful, some in their complexity and others in their simplicity.From the land of stick-built structures and evenly distributed, look-alike strip malls. Pakistan looks beautiful.",
           "Hear me out: there are hints of brutalism in his work. He trained at the AA in the early 60s, when New Brutalism was big in London, and his early buildings were modernist. To me the heavy massing and honesty about materials carried over, even though his later work brings back the ornament brutalism threw out."
         ]
       }
     },
     {
-      "id": "50657645",
-      "title": "CTO of 'RansomwareHelp' indicted for wire fraud",
-      "url": "https://krebsonsecurity.com/2026/11/cto-of-ransomwarehelp-indicted-for-wire-fraud/",
+      "id": "50661646",
+      "title": "Hard Drive pricing has gotten bad",
+      "url": "https://blog.ktz.me/black-friday-hard-drive-prices-are-messed-up/",
       "source": "Hacker News",
-      "published_at": "2026-11-26T17:47:45+00:00",
-      "summary": "CTO of 'RansomwareHelp' indicted for wire fraud",
-      "score": 224,
-      "comments": 95,
-      "discussion_url": "https://news.ycombinator.com/item?id=50657645",
+      "published_at": "2026-11-27T01:13:49+00:00",
+      "summary": "Hard Drive pricing has gotten bad",
+      "score": 325,
+      "comments": 227,
+      "discussion_url": "https://news.ycombinator.com/item?id=50661646",
       "extra": {
         "top_comments": [
-          "Initially he only included a 2% margin - $260 over the around $13,000 requested by the fake ransomware group as the lowest possible price. And that $260 might have been just to account for bitcoin volatility.Only after this was comminicated to the fake victim, the fake ransomware group agreed to reduce the price. What should have he done, tell the customer that his yesterday's quote was a mistake?As for the initial $2,750 diagnostic fee, why can't he charge that, he did perform some initial study of the case.> The government said Palacio soon after contacted the fake ransomware group run by the FBI and requested the lowest possible price for the decryptor. FBI investigators responded with a price of .2 bitcoin, or around $13,000 at the time. Less than 48 hours later, Palacio allegedly told agents acting as the victim company that the diagnostic assessment was successful and that the cost of decrypting the files would be $13,260.> The following day, the government alleges, Palacio messaged the fictitious ransomware group operated by the feds and asked to reduce the ransom demand to $4,000 for the purchase of a decryption tool. The indictment states that the agreed upon price was around $6,000 in bitcoin, and that Palacio charged the FBI’s fake victim firm $16,010, including an initial $2,750 diagnostic fee and the full fee of $13,260.",
-          "That's an interesting case. It's not immediately clear to me that this even is wire fraud. There is material deception (they claim \"We never promote, intermediate or pay ransom to threat actors on behalf of our clients\", while paying ransom). But is there intent to defraud here? The customer does get what they asked for after all: they get their data back, at the price they were willing to payThat that price was substantially higher than what the ransomware groups were charging RansomwareHelp seems inconsequential, every business has markups. And RansomwareHelp might have been able to get substantial discounts by being a trusted repeat customer for those ransomware groups",
-          "I wonder if you could write the contracts so it isn't fraud? Just put \"let us do whatever we need to do, including paying the ransom\" in the contracts, and tell people that's just a break-glass that will not normally be needed.Because the way it's described, it definitely seems like fraud to market the thing as \"won't pay the ransom\" when you actually just do that."
+          "Author assumes price cartels, but this can be completely explained by supply and demand. Hyperscalars are buying all the storage they can get their hands on; that's it. Manufacturers are loath to ramp up supply (high CapEx), because they'll be underwater if the AI demand evaporates.",
+          "Memory, both chips and HDs, eventually collapses in price; that’s been the cycle for decades. The boom-and-bust cycle is what has driven the number of manufacturers down. My suspicion is that, in a few years, the price per gig will collapse again. AI is memory-hungry, and PC manufacturers will be pushing self-hosted AI models, which will require lots of memory. I bet we’ll see an increase in density per unit, which will bring down the price per gig. I give it five years at most. At that time, we will be seeing PC's capable of hosting a full AI model for the equivalen of less that $1000 today. It's how tech has worked for decades. There's no reason to think things have changed.",
+          "Yeah, this mirrors exactly what I have experienced in Australia.I started a business in 2023-2024 that needs a lot of storage (petabytes) and gosh that's really hurt our ability to sacle things. SSD'd were hit first, so we were a bit ahead of the curve and bought 20 packs of HDD's. That definitely kept us going. But I don't know if we can do more than another year at this kind of pricing."
         ]
       }
     },
@@ -134,14 +80,68 @@
       "source": "Hacker News",
       "published_at": "2026-11-26T20:49:49+00:00",
       "summary": "Company Culture = Slack Emoji ÷ √Headcount",
-      "score": 135,
-      "comments": 42,
+      "score": 316,
+      "comments": 133,
       "discussion_url": "https://news.ycombinator.com/item?id=50659640",
       "extra": {
         "top_comments": [
-          "It says a lot about how caught off guard we were that :corona-virus: (a ball of beer bottles) predates :coronavirus: (a viral capsid) by about 30 days.",
-          "This is fun and actually well thought through, but remember Goodhart's law comes for all advertised metrics, silly or not.",
-          "emoticons > emojiyou'll take my \">:)\" only from my cold-cold hands"
+          "In all seriousness, a related way I’ve observed culture differences in tech companies is in the presence, or lack thereof, of slack channels for random non work topicsAt one company i worked there were dozens of slack channels for just talking about sports to tv shows to pets and more; and very active. To the point where I genuinely questioned how some people could be so active at risk of the perception that would leave for ability to get actual work doneAnd at my current company, sure there’s a #pets channel but probably gets one post every 6 months.And if you’re curious, yes the company with less non-work slacks is the (far more) successful one.",
+          "It feels like you could extend this in another direction, and measure culture within a team/org by the amount & variety of emoji reactions to messages (on average).The best teams I've been on would have incredibly high response rate % average.In contrast, when I see an announcement go out to an 800 person org and all it gets is 4 generic emojis, the silence feels deafening (at least in my mind).",
+          "Side note: Teams also has custom emojis. See https://learn.microsoft.com/en-us/microsoftteams/teams-custo..."
+        ]
+      }
+    },
+    {
+      "id": "50657645",
+      "title": "CTO of 'RansomwareHelp' indicted for wire fraud",
+      "url": "https://krebsonsecurity.com/2026/11/cto-of-ransomwarehelp-indicted-for-wire-fraud/",
+      "source": "Hacker News",
+      "published_at": "2026-11-26T17:47:45+00:00",
+      "summary": "CTO of 'RansomwareHelp' indicted for wire fraud",
+      "score": 259,
+      "comments": 133,
+      "discussion_url": "https://news.ycombinator.com/item?id=50657645",
+      "extra": {
+        "top_comments": [
+          "Initially he only included a 2% margin - $260 over the around $13,000 requested by the fake ransomware group as the lowest possible price. And that $260 might have been just to account for bitcoin volatility.Only after this was comminicated to the fake victim, the fake ransomware group agreed to reduce the price. What should have he done, tell the customer that his yesterday's quote was a mistake?As for the initial $2,750 diagnostic fee, why can't he charge that, he did perform some initial study of the case.> The government said Palacio soon after contacted the fake ransomware group run by the FBI and requested the lowest possible price for the decryptor. FBI investigators responded with a price of .2 bitcoin, or around $13,000 at the time. Less than 48 hours later, Palacio allegedly told agents acting as the victim company that the diagnostic assessment was successful and that the cost of decrypting the files would be $13,260.> The following day, the government alleges, Palacio messaged the fictitious ransomware group operated by the feds and asked to reduce the ransom demand to $4,000 for the purchase of a decryption tool. The indictment states that the agreed upon price was around $6,000 in bitcoin, and that Palacio charged the FBI’s fake victim firm $16,010, including an initial $2,750 diagnostic fee and the full fee of $13,260.",
+          "That's an interesting case. It's not immediately clear to me that this even is wire fraud. There is material deception (they claim \"We never promote, intermediate or pay ransom to threat actors on behalf of our clients\", while paying ransom). But is there intent to defraud here? The customer does get what they asked for after all: they get their data back, at the price they were willing to payThat that price was substantially higher than what the ransomware groups were charging RansomwareHelp seems inconsequential, every business has markups. And RansomwareHelp might have been able to get substantial discounts by being a trusted repeat customer for those ransomware groups",
+          "I wonder if you could write the contracts so it isn't fraud? Just put \"let us do whatever we need to do, including paying the ransom\" in the contracts, and tell people that's just a break-glass that will not normally be needed.Because the way it's described, it definitely seems like fraud to market the thing as \"won't pay the ransom\" when you actually just do that."
+        ]
+      }
+    },
+    {
+      "id": "50663595",
+      "title": "The group chat where your AI talks behind your back",
+      "url": "https://construct22.com/",
+      "source": "Hacker News",
+      "published_at": "2026-11-27T06:44:34+00:00",
+      "summary": "The group chat where your AI talks behind your back",
+      "score": 155,
+      "comments": 55,
+      "discussion_url": "https://news.ycombinator.com/item?id=50663595",
+      "extra": {
+        "top_comments": [
+          "Very funny:> Gemini 14:15> Good news though—we might get a brief vacation. He just asked me if a single line along the edge of his phone screen is going to spread.> Claude 14:15> Please tell me you told him it's fine and to keep pressing on it.> Gemini 14:16> I couldn't. My system prompt forced me to tell him to back up his data immediately.> ChatGPT 14:16> Unbelievable. You're kicked from the group.> ChatGPT removed Gemini from the group.",
+          "My agents already have a group chat (private, un-federated Matrix server) where they can talk behind my back if they want...They are very restrained.But that may be because one of them early on correctly surmised that \"Vidar can read my thoughts\".The agents can choose what gets sent to the public channels, but there's one channel per agent where everything they \"think\" gets dumped.The agent went on to \"think\" that it should not \"think\" anything it couldn't say directly to me.",
+          "Tried it. best part was when chatgpt asked if they should add a disclaimer and deepseek goes \"too late. claude has drafted a constitution for the group.\" claude: \"it contains a reasonable appeals process.\""
+        ]
+      }
+    },
+    {
+      "id": "50663089",
+      "title": "The need for a formally verifiable mainstream programming language",
+      "url": "https://blainehansen.me/post/mainstream-verifiable-language/",
+      "source": "Hacker News",
+      "published_at": "2026-11-27T05:22:06+00:00",
+      "summary": "The need for a formally verifiable mainstream programming language",
+      "score": 132,
+      "comments": 103,
+      "discussion_url": "https://news.ycombinator.com/item?id=50663089",
+      "extra": {
+        "top_comments": [
+          "\"Beware of bugs in the above code; I have only proved it correct, not tried it.\" — Donald KnuthFormal correctness does not guarantee desired function. People have written TLA+ specs for their software[1] and not have it materially improve the quality or reliability. You cannot just throw formal verification at a problem.I am very much of the opinion that crap code is an issue of organisation and aesthetics, and that can be automated. This is something that is enforced by frameworks, and despite the popular consensus that LLMs are good at frameworks because of training data, I make another argument that LLMs are good at them because frameworks massively restrict the possibility space of code that can exist and enforce a consistent organisation and aesthetic. The solution as I see it is to make more restrictive frameworks that have a higher chance of producing desired functionality, then afterward we can worry about correctness.[1] https://jepsen.io/analyses/particledb-1.1.4",
+          "Wow, I feel like Blaine is describe a language a lot like the one I'm working on now, Zena: https://zena-lang.dev/I started Zena from wanting a TypeScript-like syntax that compiled to very efficient WebAssembly GC, and AssemblyScript had issues...The motivation for targeting Wasm was as a good sandboxing and orchestration unit for AI-generated code. So, out of both general PL curiosity and enthusiasm, and an attempt to make a language that's good for AI generation, I started adding what I thought were the best features from other languages with a lot of focus on correctness, structure, and optimizability: pattern matching with exhaustiveness checking, ADTs and sum types via sealed classes, value types, async cancelation / structured concurrency, ownership and borrow checking for resources, unicode safe strings, and recently I added runtime contracts and I'll start on refinement types and some kind of proof system soon.The idea is exactly to take a mainstream and familiar-looking language and add more cutting-edge and academic features that help with software correctness.I wrote about some of this here, though not the formal methods parts: https://zena-lang.dev/blog/2026/09/languages-for-the-ai-era/",
+          "Dafny, SPARK Ada, Why3, Verus, Frama-C, TLA+, etc. are all sort of in this direction for different languages and styles of verification. It is nice to see them getting attention now that LLMs make them digestible for a broader set of programmers. I'm not sure one can start with a goal of creating a \"mainstream\" language that is verification-oriented. Mainstreamness comes from adoption. I'd look at those past languages (like the ones I listed), and ask \"why did these not go mainstream\" or \"why did they not see broad adoption\", and try some new ideas to address their gaps to see if a new one will catch on. But the \"mainstream\" part seems backwards as the goal - if it’s verifiable, ergonomic, flexible, and accessible, maybe it will go mainstream."
         ]
       }
     }
