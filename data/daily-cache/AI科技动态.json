@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-11-28T11:00:26.497258+08:00",
+  "cached_at": "2026-11-28T16:14:06.039898+08:00",
   "articles": [
     {
       "id": "https://huggingface.co/blog/video-trainium3",
@@ -31,6 +31,54 @@
       "url": "https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin",
       "source": "Hugging Face",
       "published_at": "2026-11-26T05:05:36+00:00",
+      "summary": "",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
+      "id": "https://huggingface.co/blog/training-swarms",
+      "title": "Swarms, Flocks, Gangs: How to build, train, and evaluate multi-agent systems",
+      "url": "https://huggingface.co/blog/training-swarms",
+      "source": "Hugging Face",
+      "published_at": "2026-11-26T00:00:00+00:00",
+      "summary": "",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
+      "id": "https://huggingface.co/blog/allenai/where-scientists-draw-the-line-on-ai-agents",
+      "title": "Where scientists draw the line on AI agents",
+      "url": "https://huggingface.co/blog/allenai/where-scientists-draw-the-line-on-ai-agents",
+      "source": "Hugging Face",
+      "published_at": "2026-11-25T18:52:55+00:00",
+      "summary": "",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
+      "id": "https://research.google/blog/verifiable-social-reasoning-for-llm-assistants/",
+      "title": "Verifiable Social Reasoning for LLM Assistants",
+      "url": "https://research.google/blog/verifiable-social-reasoning-for-llm-assistants/",
+      "source": "Google Research",
+      "published_at": "2026-11-25T17:10:27+00:00",
+      "summary": "Generative AI",
+      "score": 0,
+      "comments": 0,
+      "discussion_url": "",
+      "extra": {}
+    },
+    {
+      "id": "https://huggingface.co/blog/ibm-research/an-indic-voice-agent-with-cuga",
+      "title": "An Indic Voice Agent with CUGA",
+      "url": "https://huggingface.co/blog/ibm-research/an-indic-voice-agent-with-cuga",
+      "source": "Hugging Face",
+      "published_at": "2026-11-25T10:22:09+00:00",
       "summary": "",
       "score": 0,
       "comments": 0,
