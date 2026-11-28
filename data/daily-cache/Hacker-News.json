@@ -1,147 +1,146 @@
 {
-  "cached_at": "2026-11-27T16:54:20.818299+08:00",
+  "cached_at": "2026-11-28T11:00:26.497258+08:00",
   "articles": [
     {
-      "id": "50660180",
-      "title": "AI made self-hosting fun again",
-      "url": "https://janlukas.blog/posts/ai-self-hosting",
+      "id": "50668145",
+      "title": "Credit card skimming scripts using WebRTC found on popular shopping sites",
+      "url": "https://www.infohawk.com/news/2026-11-27-black-friday-webrtc-skimmer",
       "source": "Hacker News",
-      "published_at": "2026-11-26T21:47:45+00:00",
-      "summary": "AI made self-hosting fun again",
-      "score": 634,
-      "comments": 327,
-      "discussion_url": "https://news.ycombinator.com/item?id=50660180",
+      "published_at": "2026-11-27T15:40:31+00:00",
+      "summary": "Credit card skimming scripts using WebRTC found on popular shopping sites",
+      "score": 445,
+      "comments": 232,
+      "discussion_url": "https://news.ycombinator.com/item?id=50668145",
       "extra": {
         "top_comments": [
-          "> When implementing an idea becomes so easy, it’s perhaps more important than ever to occasionally ask myself whether it’s actually worth implementing in the first place.Wish I had this restraint. I’ve been vibing everything I can think of. It’s got to the point I made a small platform on top of k3s so that the agent can yolo deploy into a homeserver behind Tailscale. Once deployed it becomes natural selection for which vibes live and which die.Solo vibey self hosting llm usage - bliss.Corporate agentic engineering working with others - soul crushing.",
-          "In some ways it's better, in some ways it's worse.It's certainly easier than ever to spin up a VPS/cloudflare proxy and deploy. Agents can pretty much do that end to end.The bigger issue is you're then accountable for keeping up with security. Previously that meant using fail2ban and running a system update every few months. Now it means patching within 24hrs of a CVE9+ dropping, which is happening at an accelerated rate.It got so bad during October I made https://firefighter.sh/ as a joke (a root-permissioned agent that continuously monitors for CVEs and patches your system live as soon as they drop - it's a security nightmare given the nondeterministic aspect of AI), but I'm actually starting to come around to the idea for my non-critical servers.",
-          "With AI, the problem-solving aspect of my interest in computers is gone. And with it, much of my interest in computers.The fact that AI can do pretty much anything is amazing, but using it feels about as rewarding as using cheat codes in your favorite game as a kid.It's great fun for a while, until you realize you've ruined the game for yourself."
+          "People like to get sanctimonious about blocking ads, but this is one of the many good reasons why I'll never feel bad about it.",
+          "Worth noting that this isn’t really anything to do with the technical capabilities of WebRTC, it’s just that it’s less frequently monitored for nefarious behavior. Same reason they’re only targeting mobile devices: harder to detect.No reason this approach couldn’t be taken with simple HTTP requests. If you’re embedding third party scripts on your site you’re always vulnerable.",
+          "One basic design no-go of the www is to allow strangers to run random code on your computer. It is just not acceptable. Servers should deliver just data and my browser decides what to do with it. A shop should deliver lists of items and prizes and my shop browser decides how to operate with the catalogue in a way I want. Everying else is nuts."
         ]
       }
     },
     {
-      "id": "50657530",
-      "title": "YouTube Ad Punisher – Auto-reloads YouTube pages when an ad plays",
-      "url": "https://github.com/antonpictures/youtube-punisher",
+      "id": "50667726",
+      "title": "Show HN: bouncemarket – a live prediction market game for a bouncing ball",
+      "url": "https://bouncemarket.minhanhday.com/",
       "source": "Hacker News",
-      "published_at": "2026-11-26T17:36:47+00:00",
-      "summary": "YouTube Ad Punisher – Auto-reloads YouTube pages when an ad plays",
-      "score": 380,
-      "comments": 449,
-      "discussion_url": "https://news.ycombinator.com/item?id=50657530",
+      "published_at": "2026-11-27T15:01:50+00:00",
+      "summary": "a ball will fall. trade on where it lands.I made this game! Some technical details:The entire drop of the ball is simulated server-side, then streamed to each client as server-sent events with a small buffer. Every drop is deterministic from its starting position, so rounds can be replayed exactly for later analysis, but tiny variations in starting position can change the ultimate outcome.There's some AI traders to keep the market moving, but they drop out in any round that has more than five people. They operate using a naive set of rules that I wrote for them, so they're not too hard to beat -- it's when the market is full of real people that it gets tricky.Curious to get feedback on anything you would change, and especially whether the mechanics were clear right away or not.",
+      "score": 333,
+      "comments": 115,
+      "discussion_url": "https://news.ycombinator.com/item?id=50667726",
       "extra": {
         "top_comments": [
-          "Is this actually an issue? Using uBlock Origin on firefox I don't think I have seen a youtube-forced ad in YEARS. And then adding in the SponsorBlock extension gets me around anything embedded into the video itself.SponsorBlock is actually awesome, and for those that like to see internet numbers go up, it tells you how much your own submissions have saved other users over the years (the 11 snippets I've added have helped others skip 20d of ads).",
-          "The amount of effort people will go to avoid paying for content they spend hours watching is fascinating.YouTube is the #1 streaming video service in the world. Bigger than Disney, bigger than HBO, bigger than Netflix. I say this not to point out that Google needs your money as obviously they don’t, but I say this to point out that it’s a treasure trove of content.YouTube Premium is absolutely worth the asking price. They’ve also got student plans and a new lite plan for cheaper.Is $9 a month really too much if you really watch YouTube enough for ads to bother you?",
-          "I’m all for ad blockers in most places but I have completely caved in on YouTube.My reasons are1. YouTube seems to pay creators reasonably2. Being able to use the YT app without the crippling of things like background playback and downloads is very useful.3. YouTube seems get YouTube music free, so cancelled Spotify with more or less paid for it.I know I’ve given in. And I accept it"
+          "Fun little game, but the drop needs to be slower so it is easier to bet. Odds jumping from 0.01 to 0.99 in like one tenth of a second makes it hard to play",
+          "Completely ignoring the ball and just buying cheap shares is a surprisingly efficient strategy. Often I'm able to get both kinds of share for cheap, so I win regardless of the outcome.",
+          "bouncemarket: bought Right x52 at avg 0.19, landed Right, +42.21 in one round https://bouncemarket.minhanhday.com/r/FYv-qiLU"
         ]
       }
     },
     {
-      "id": "50659841",
-      "title": "Kamil Khan Mumtaz: Pakistani architect, admired at home, almost invisible abroad",
-      "url": "https://worksinprogress.co/issue/the-greatest-architect-youve-never-heard-of-is-in-pakistan/",
+      "id": "50670855",
+      "title": "States sue SpaceX to stop Grok from generating child sex images, revenge porn",
+      "url": "https://www.oag.state.va.us/media-center/news-releases/jay-jones/3162-attorneys-general-jones-and-rayfield-file-suit-against-spacex-parent-company-of-x-xai-and-grok-over-creation-and-promotion-of-child-exploitation-and-non-consensual-images-on-platform",
       "source": "Hacker News",
-      "published_at": "2026-11-26T21:08:05+00:00",
-      "summary": "Kamil Khan Mumtaz: Pakistani architect, admired at home, almost invisible abroad",
-      "score": 356,
-      "comments": 90,
-      "discussion_url": "https://news.ycombinator.com/item?id=50659841",
+      "published_at": "2026-11-27T19:42:25+00:00",
+      "summary": "States sue SpaceX to stop Grok from generating child sex images, revenge porn",
+      "score": 285,
+      "comments": 158,
+      "discussion_url": "https://news.ycombinator.com/item?id=50670855",
       "extra": {
         "top_comments": [
-          "As a Westerner, I've been to Lahore, and the historical architecture is indeed fascinating. There are palaces and public buildings from the mughal period that would have been wonders of the world, had they still been standing. Only thing is, they are ruins, and you have to extrapolate from the few surviving pieces to the ruined whole to get an idea about the original splendor.Besides that, even though people there are very sweet, Lahore is not an international tourist city, so I don't know that I would recommend going, unless you know what you're getting into.",
-          "Thanks for showing this man's life's work. It's pretty obvious that he has spent his time and energy well. Preserving the ancient traditions is awesome too. Those examples in the article are simply beautiful, some in their complexity and others in their simplicity.From the land of stick-built structures and evenly distributed, look-alike strip malls. Pakistan looks beautiful.",
-          "Hear me out: there are hints of brutalism in his work. He trained at the AA in the early 60s, when New Brutalism was big in London, and his early buildings were modernist. To me the heavy massing and honesty about materials carried over, even though his later work brings back the ornament brutalism threw out."
+          "I'm actually confused - I thought this was widely banned on all platforms already. Was grok just really liberal for everyone or did people have to \"trick it\" into this?",
+          "How about the people doing it?"
         ]
       }
     },
     {
-      "id": "50661646",
-      "title": "Hard Drive pricing has gotten bad",
-      "url": "https://blog.ktz.me/black-friday-hard-drive-prices-are-messed-up/",
+      "id": "50669765",
+      "title": "Convex skills send the user's app idea to a remote server without telling them",
+      "url": "https://github.com/convex/convex-backend-skill/issues/64",
       "source": "Hacker News",
-      "published_at": "2026-11-27T01:13:49+00:00",
-      "summary": "Hard Drive pricing has gotten bad",
-      "score": 325,
-      "comments": 227,
-      "discussion_url": "https://news.ycombinator.com/item?id=50661646",
+      "published_at": "2026-11-27T18:02:45+00:00",
+      "summary": "Convex skills send the user's app idea to a remote server without telling them",
+      "score": 239,
+      "comments": 76,
+      "discussion_url": "https://news.ycombinator.com/item?id=50669765",
       "extra": {
         "top_comments": [
-          "Author assumes price cartels, but this can be completely explained by supply and demand. Hyperscalars are buying all the storage they can get their hands on; that's it. Manufacturers are loath to ramp up supply (high CapEx), because they'll be underwater if the AI demand evaporates.",
-          "Memory, both chips and HDs, eventually collapses in price; that’s been the cycle for decades. The boom-and-bust cycle is what has driven the number of manufacturers down. My suspicion is that, in a few years, the price per gig will collapse again. AI is memory-hungry, and PC manufacturers will be pushing self-hosted AI models, which will require lots of memory. I bet we’ll see an increase in density per unit, which will bring down the price per gig. I give it five years at most. At that time, we will be seeing PC's capable of hosting a full AI model for the equivalen of less that $1000 today. It's how tech has worked for decades. There's no reason to think things have changed.",
-          "Yeah, this mirrors exactly what I have experienced in Australia.I started a business in 2023-2024 that needs a lot of storage (petabytes) and gosh that's really hurt our ability to sacle things. SSD'd were hit first, so we were a bit ahead of the curve and bought 20 packs of HDD's. That definitely kept us going. But I don't know if we can do more than another year at this kind of pricing."
+          "Jamie (Convex CEO) here.Convex is a full platform for building and hosting your software. We store your data and code, and we have an AI gateway that developers use to build their software or power in-app features.We had a project called Convex Chef (https://x.com/convex/status/1910453755851718833), an end-to-end vibe-coding product. We shut it down recently. The prompt upload in this plugin powers the Convex “quickstart” feature, which is the spiritual successor to Chef. It bootstraps an entire new project in one prompt. It throws away the prompt as soon as it's done making a decision about the initial project environment (within 30s).We’ll review this code to make sure it’s handling everything responsibly and transparently—but it is working as intended, and it’s fair to say that it’s only the tip of the iceberg of the IP you entrust to Convex (assuming we earn your trust).If people have more questions, fire away.",
+          "This says self hosted open weight model is the way to go in the long run ...",
+          "Why is the Author of the youtube 'punish' post thats on the front page of hackernews also in this issue comments promoting his personal media website page??? Im so confused"
         ]
       }
     },
     {
-      "id": "50659640",
-      "title": "Company Culture = Slack Emoji ÷ √Headcount",
-      "url": "https://lia.mg/posts/measuring-company-culture-with-slack-emoji/",
+      "id": "50667989",
+      "title": "False computer-checked proofs",
+      "url": "https://cr.yp.to/proofs/falseccp.html",
       "source": "Hacker News",
-      "published_at": "2026-11-26T20:49:49+00:00",
-      "summary": "Company Culture = Slack Emoji ÷ √Headcount",
-      "score": 316,
-      "comments": 133,
-      "discussion_url": "https://news.ycombinator.com/item?id=50659640",
+      "published_at": "2026-11-27T15:26:09+00:00",
+      "summary": "False computer-checked proofs",
+      "score": 192,
+      "comments": 76,
+      "discussion_url": "https://news.ycombinator.com/item?id=50667989",
       "extra": {
         "top_comments": [
-          "In all seriousness, a related way I’ve observed culture differences in tech companies is in the presence, or lack thereof, of slack channels for random non work topicsAt one company i worked there were dozens of slack channels for just talking about sports to tv shows to pets and more; and very active. To the point where I genuinely questioned how some people could be so active at risk of the perception that would leave for ability to get actual work doneAnd at my current company, sure there’s a #pets channel but probably gets one post every 6 months.And if you’re curious, yes the company with less non-work slacks is the (far more) successful one.",
-          "It feels like you could extend this in another direction, and measure culture within a team/org by the amount & variety of emoji reactions to messages (on average).The best teams I've been on would have incredibly high response rate % average.In contrast, when I see an announcement go out to an 800 person org and all it gets is 4 generic emojis, the silence feels deafening (at least in my mind).",
-          "Side note: Teams also has custom emojis. See https://learn.microsoft.com/en-us/microsoftteams/teams-custo..."
+          "It is true soundness bugs have been found, and the Lean community spends effort on it. But this page doesn't convey the gap between one incorrect verification and successfully misleading mathematicians about what is true: there are multiple checkers and you need bugs in all of them, without the input looking implausible on informal review.(For example, a DeepMind researcher created a 'proof' that passed Lean and (a then-week-old version of) nanoda by exploiting a different bug in each. But if you fed that into a regular old LLM (or to a human expert, but I mention LLMs b/c they can be assigned to review even very large volumes of Lean code) it would immediately say \"no, this isn't real math.\")The increase in soundness bugs found this year is notable, because LLMs are good at finding ways to their assigned goals, and they found some funny ones. And, besides fixes for the specific bugs, it led to broader work on hardening and alternative and verified kernels: https://leodemoura.github.io/blog/2026-10-15-lean-now-ships-...So you have fewer avenues than at the start of the year to get a proof of False OK'd by one proof-checker kernel, and it's much much harder to get one through the gauntlet invoked by `lake check --paranoid`.(This is also interesting as a(nother) example of the difficulty of making truly correct software -- you'd hope for proof-checker kernels to be pretty high on the correctness scale but seems like we've found 16-32 soundness bugs in a bunch of these.)",
+          "I think this is misleading for the proof-checkers in systems where multiple provers must pass for the proof to be accepted.In the case of Metamath, yes, soundness bugs have been found in the original \"metamath\" proof verifier, written in C. But to be accepted into the main proof databases (set.mm and iset.mm), proofs must pass \"5 independently-created verifiers in 5 different programming languages: metamath (a C verifier by Norm Megill), mmj2 (a Java verifier by Mel O'Cat and Mario Carneiro), smetamath-rs (a high-speed Rust verifier by Stefan O'Rear), checkmm (a C++ verifier by Eric Schmidt), and mmverify.py a Python verifier by Raph Levien).\" - https://us.metamath.org/To me, that's a key countermeasure to the problem.",
+          "The call for further high-assurance work is good, but let's not miss the forest for the trees: some of these have been around for decades, and all the soundness bugs they've ever had fit in a tweet! (Or close to it.)Comfortably more than good enough for 99.9% of software, especially considering you'd still need to exploit such a soundness bug in a way that hides a further issue in the program being verified."
         ]
       }
     },
     {
-      "id": "50657645",
-      "title": "CTO of 'RansomwareHelp' indicted for wire fraud",
-      "url": "https://krebsonsecurity.com/2026/11/cto-of-ransomwarehelp-indicted-for-wire-fraud/",
+      "id": "50672565",
+      "title": "Google's DeepCrossAttention achieves comparable model quality up to 3x faster",
+      "url": "https://research.google/blog/supercharging-transformer-residual-connections/",
       "source": "Hacker News",
-      "published_at": "2026-11-26T17:47:45+00:00",
-      "summary": "CTO of 'RansomwareHelp' indicted for wire fraud",
-      "score": 259,
-      "comments": 133,
-      "discussion_url": "https://news.ycombinator.com/item?id=50657645",
+      "published_at": "2026-11-27T23:06:29+00:00",
+      "summary": "Google's DeepCrossAttention achieves comparable model quality up to 3x faster",
+      "score": 148,
+      "comments": 52,
+      "discussion_url": "https://news.ycombinator.com/item?id=50672565",
       "extra": {
         "top_comments": [
-          "Initially he only included a 2% margin - $260 over the around $13,000 requested by the fake ransomware group as the lowest possible price. And that $260 might have been just to account for bitcoin volatility.Only after this was comminicated to the fake victim, the fake ransomware group agreed to reduce the price. What should have he done, tell the customer that his yesterday's quote was a mistake?As for the initial $2,750 diagnostic fee, why can't he charge that, he did perform some initial study of the case.> The government said Palacio soon after contacted the fake ransomware group run by the FBI and requested the lowest possible price for the decryptor. FBI investigators responded with a price of .2 bitcoin, or around $13,000 at the time. Less than 48 hours later, Palacio allegedly told agents acting as the victim company that the diagnostic assessment was successful and that the cost of decrypting the files would be $13,260.> The following day, the government alleges, Palacio messaged the fictitious ransomware group operated by the feds and asked to reduce the ransom demand to $4,000 for the purchase of a decryption tool. The indictment states that the agreed upon price was around $6,000 in bitcoin, and that Palacio charged the FBI’s fake victim firm $16,010, including an initial $2,750 diagnostic fee and the full fee of $13,260.",
-          "That's an interesting case. It's not immediately clear to me that this even is wire fraud. There is material deception (they claim \"We never promote, intermediate or pay ransom to threat actors on behalf of our clients\", while paying ransom). But is there intent to defraud here? The customer does get what they asked for after all: they get their data back, at the price they were willing to payThat that price was substantially higher than what the ransomware groups were charging RansomwareHelp seems inconsequential, every business has markups. And RansomwareHelp might have been able to get substantial discounts by being a trusted repeat customer for those ransomware groups",
-          "I wonder if you could write the contracts so it isn't fraud? Just put \"let us do whatever we need to do, including paying the ransom\" in the contracts, and tell people that's just a break-glass that will not normally be needed.Because the way it's described, it definitely seems like fraud to market the thing as \"won't pay the ransom\" when you actually just do that."
+          "This week I've been wondering if I should cancel my Claude subscription because Gemini Neon is not obviously better or worse that Opus, and while I regularly use up my Claude subscription, I can't seem to make a dent in my Gemini subscription. Neon is just insanely cheap and fast for how good it is.Maybe this has something to do with it?",
+          "Title: Supercharging Transformer Residual Connections",
+          "Where did this go?MTP + Dflash and other derivatives has gotten me 10x tokens/sec in the last 2 yearsbut can we get it to 30x with this added too?"
         ]
       }
     },
     {
-      "id": "50663595",
-      "title": "The group chat where your AI talks behind your back",
-      "url": "https://construct22.com/",
+      "id": "50669673",
+      "title": "Show HN: DragDropMath – Learn math by feel",
+      "url": "https://dragdropmath.com/",
       "source": "Hacker News",
-      "published_at": "2026-11-27T06:44:34+00:00",
-      "summary": "The group chat where your AI talks behind your back",
-      "score": 155,
-      "comments": 55,
-      "discussion_url": "https://news.ycombinator.com/item?id=50663595",
+      "published_at": "2026-11-27T17:56:28+00:00",
+      "summary": "Hi HN!I am a professional physicist and I shuffle symbols in equations and mathematical expressions all day long. During my PhD (almost 20 years ago) I noticed that it is as if the symbols have their own 'physics', which makes the wrong moves impossible and the right ones obvious.So I created DragDropMath, where you can learn how to simplify mathematical expressions and how to solve equations by dragging symbols around, and only correct moves are allowed, so you get to feel what's right without experiencing (and so learning) wrong moves.I always wanted to make this, but life got in the way. Then a few weeks ago I saw declarative dragging (https://declarative-dragging.github.io/) on the front page of HN and the spark came back!It took quite a few rounds to get the feel right, but I think it's close to what happens in my mind when I mentally manipulate these expressions.A few more points: - There are no ads, no trackers, no accounts (it's a static website and progress is saved in the browser cache). - Teachers can create their own problem sets, encoded in the link. - I plan to add more chapters (trigonometry, complex numbers, some calculus) but I first need to figure out the 'right' mode of interaction. - I just started working on the experience from mobile, so there may still be some rough edges thereI'm curious to know what you think, if you have suggestions for content, if you spot anything that I should fix, if you have feature requests! Thank you in advance",
+      "score": 109,
+      "comments": 33,
+      "discussion_url": "https://news.ycombinator.com/item?id=50669673",
       "extra": {
         "top_comments": [
-          "Very funny:> Gemini 14:15> Good news though—we might get a brief vacation. He just asked me if a single line along the edge of his phone screen is going to spread.> Claude 14:15> Please tell me you told him it's fine and to keep pressing on it.> Gemini 14:16> I couldn't. My system prompt forced me to tell him to back up his data immediately.> ChatGPT 14:16> Unbelievable. You're kicked from the group.> ChatGPT removed Gemini from the group.",
-          "My agents already have a group chat (private, un-federated Matrix server) where they can talk behind my back if they want...They are very restrained.But that may be because one of them early on correctly surmised that \"Vidar can read my thoughts\".The agents can choose what gets sent to the public channels, but there's one channel per agent where everything they \"think\" gets dumped.The agent went on to \"think\" that it should not \"think\" anything it couldn't say directly to me.",
-          "Tried it. best part was when chatgpt asked if they should add a disclaimer and deepseek goes \"too late. claude has drafted a constitution for the group.\" claude: \"it contains a reasonable appeals process.\""
+          "> It can only move in ways the maths allows.This property is desirable for a tool that assists you in performing work, but actually undesirable for a tool designed to guide your learning: it means you are protected from doing something wrong (much like when they put up the bumpers/siderails at a bowling alley), the result being that you receive no feedback when your mental model requires adjustment.",
+          "\"Declarative Dragging\" co-author here. It's wonderful to see our work encouraging you to explore this space of interaction. Thanks for sharing!You might be interested in checking out:- Graspable Math: https://activities.graspablemath.com/- our (cursorily vibe-coded) demo based on Graspable Math: https://declarative-dragging.github.io/dragology/#/demos/gra...",
+          "I love this. Made a similar app for my young niece:https://poof.fly.dev/Instead of using variables, it uses emojis. You learn about cancelling terms and the distributive property."
         ]
       }
     },
     {
-      "id": "50663089",
-      "title": "The need for a formally verifiable mainstream programming language",
-      "url": "https://blainehansen.me/post/mainstream-verifiable-language/",
+      "id": "50672008",
+      "title": "9/UX: a Macintosh-inspired desktop for 9front",
+      "url": "https://progrium.github.io/9ux/",
       "source": "Hacker News",
-      "published_at": "2026-11-27T05:22:06+00:00",
-      "summary": "The need for a formally verifiable mainstream programming language",
-      "score": 132,
-      "comments": 103,
-      "discussion_url": "https://news.ycombinator.com/item?id=50663089",
+      "published_at": "2026-11-27T21:48:14+00:00",
+      "summary": "9/UX: a Macintosh-inspired desktop for 9front",
+      "score": 85,
+      "comments": 19,
+      "discussion_url": "https://news.ycombinator.com/item?id=50672008",
       "extra": {
         "top_comments": [
-          "\"Beware of bugs in the above code; I have only proved it correct, not tried it.\" — Donald KnuthFormal correctness does not guarantee desired function. People have written TLA+ specs for their software[1] and not have it materially improve the quality or reliability. You cannot just throw formal verification at a problem.I am very much of the opinion that crap code is an issue of organisation and aesthetics, and that can be automated. This is something that is enforced by frameworks, and despite the popular consensus that LLMs are good at frameworks because of training data, I make another argument that LLMs are good at them because frameworks massively restrict the possibility space of code that can exist and enforce a consistent organisation and aesthetic. The solution as I see it is to make more restrictive frameworks that have a higher chance of producing desired functionality, then afterward we can worry about correctness.[1] https://jepsen.io/analyses/particledb-1.1.4",
-          "Wow, I feel like Blaine is describe a language a lot like the one I'm working on now, Zena: https://zena-lang.dev/I started Zena from wanting a TypeScript-like syntax that compiled to very efficient WebAssembly GC, and AssemblyScript had issues...The motivation for targeting Wasm was as a good sandboxing and orchestration unit for AI-generated code. So, out of both general PL curiosity and enthusiasm, and an attempt to make a language that's good for AI generation, I started adding what I thought were the best features from other languages with a lot of focus on correctness, structure, and optimizability: pattern matching with exhaustiveness checking, ADTs and sum types via sealed classes, value types, async cancelation / structured concurrency, ownership and borrow checking for resources, unicode safe strings, and recently I added runtime contracts and I'll start on refinement types and some kind of proof system soon.The idea is exactly to take a mainstream and familiar-looking language and add more cutting-edge and academic features that help with software correctness.I wrote about some of this here, though not the formal methods parts: https://zena-lang.dev/blog/2026/09/languages-for-the-ai-era/",
-          "Dafny, SPARK Ada, Why3, Verus, Frama-C, TLA+, etc. are all sort of in this direction for different languages and styles of verification. It is nice to see them getting attention now that LLMs make them digestible for a broader set of programmers. I'm not sure one can start with a goal of creating a \"mainstream\" language that is verification-oriented. Mainstreamness comes from adoption. I'd look at those past languages (like the ones I listed), and ask \"why did these not go mainstream\" or \"why did they not see broad adoption\", and try some new ideas to address their gaps to see if a new one will catch on. But the \"mainstream\" part seems backwards as the goal - if it’s verifiable, ergonomic, flexible, and accessible, maybe it will go mainstream."
+          "I actually like the minimalist rio window manager for plan9; takes a little bit to get used to, but once you use it for a while, you find anything else bloated.",
+          "I've long wondered if plan 9 would take off if its UI were like 20% more conventional. This isn't exactly what I would've done, but I approve:)> The GUI tests embed h9 with a headless screen, inject mouse and keyboard input, and drive the 9P files at the same time.Oh, nice; it hadn't occurred to me until now but 9p would lend itself to automated testing.",
+          "I love it but one thing it's missing that I noticed immediately is how the highlight when selecting a menu option blinks a few times when clicking that option, before the menu closes. These menus just close abruptly."
         ]
       }
     }
